@@ -1,0 +1,37 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+}
+
+/* Estilos en header */
+
+h1 {
+    text-align: center;
+    color: rgb(45, 182, 45);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+    font-size: large;
+}
+
+a:visited {
+    color: blue;
+}
+
+/* Estilos contenido principal */
+
+.cont-img {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}

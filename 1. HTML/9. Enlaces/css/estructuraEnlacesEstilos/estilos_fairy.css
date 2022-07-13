@@ -1,0 +1,30 @@
+body {
+    font-family: sans-serif;
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+}
+
+h1 {
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 7px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid white;
+    width: 35%;
+}
+
+a {
+    margin-left: 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+#cont-imagen {
+    margin: 20px auto;
+    text-align: center;
+}
+
+p {
+    margin-top: 20px;
+    color: #fff;
+}

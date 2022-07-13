@@ -1,0 +1,6 @@
+En esta sección podemos visualizar las primeras notas a la introducción a HTML. Se describe que es HTML y que funcionamiento
+tiene en los navegadores, como por ejemplo, con este lenguaje se pueden crear listas, tablas, párrafos entre otros contenidos.
+
+Tomé la decición de hacer estas notas en una página para poner en práctica el uso de las etiquetas que tiene como ejemplo
+la página y además, dejar un enlace para visualizar el primer hola mundo en HTML. También, realice algunos estilos
+básicos en css para seguir sumando práctica con esta herramienta visual.

@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif;
+    width: 70%;
+    margin: 30px auto;
+    background-color: aliceblue;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(137, 190, 50);
+}
+
+h2 {
+    color: rgb(57, 135, 199);
+}
+
+h3 {
+    color: orange;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.volver {
+    width: 50%;
+    text-align: center;
+}
+  
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
+p {
+    text-align: justify;
+}
+
+input {
+    margin-top: 5px;
+}

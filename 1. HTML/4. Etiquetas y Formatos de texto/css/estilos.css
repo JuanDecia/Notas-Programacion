@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(194, 189, 173);
+}
+
+main {
+    margin: auto;
+    width: 75%;
+}
+
+header {
+    text-align: center;
+}
+
+li {
+    padding: 0.5%;
+}
+
+
+/* ========== Estilos de texto */
+
+#title {
+    color: rgb(86, 129, 16);
+    text-decoration: underline;
+}
+
+.sub {
+    color: blue;
+}
+
+b {
+    color: rgb(115, 37, 170);
+}

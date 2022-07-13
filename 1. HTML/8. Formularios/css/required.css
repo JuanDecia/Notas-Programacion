@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+    width: 70%;
+    margin: 20px auto;
+    background-color: rgb(194, 189, 173);
+}
+
+h1 {
+    color: rgb(57, 148, 57);
+    text-align: center;
+    text-decoration: underline;
+}
+
+legend {
+    color: rgb(85, 129, 211);
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    font-size: large;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="keywords" content="formulario, etiquetas, form">
+    <meta name="author" content="Juan Decia">
+    <title>Etiqueta Label</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 20px auto;
+        padding: 15px;
+        width: 70%;
+        background-color: rgb(194, 189, 173);
+        border: 1px solid black;
+      }
+
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+        color: rgb(86, 129, 16);
+      }
+
+      a {
+        text-decoration: none;
+        font-size: large;
+      }
+
+      b {
+        color: rgb(115, 37, 170);
+      }
+    </style>
+</head>
+<body>
+
+  <header>
+
+    <h1>Etiqueta Label</h1>
+
+    <div class="cont-link">
+      <a href="../index.html">Volver a Inicio</a>
+    </div>
+
+  </header>
+
+  <p>
+    La etiqueta <b>label</b> cuenta con un <b>atributo</b> que es fundamental <b>para asociarla</b> 
+    a la <b>etiqueta input</b>, esta se llama <b>for</b> y el <b>valor</b> que le debemos especificar 
+    es el correspondiente al <b>nombre del dato</b> que se ingresa o al <b>id</b> que le pondremos 
+    al <b>input</b>.
+  </p>
+
+  <p>
+    Su funcionalidad está relacionada al trabajo con <b>JavaScript</b> ya que nos otorga la posibilidad
+    de crear un contenedor a parte y mejora la manipulación del mismo, gracias a la propiedad que 
+    anteriormente hemos nombrado como <b>for</b>.
+  </p>
+
+  <p>
+    A continuación crearemos un ejemplo con un label con valor "Ingrese su nombre" el cual estará 
+    conectado con la etiqueta de "input". Donde <b>Ingrese su nombre</b> estará dentro de la etiqueta
+    <b>label</b> y se conectará con el campo de <b>input</b> gracias al atributo <b>for.</b>.
+  </p>
+
+  <label for="nombre">Ingrese su nombre: </label> <!-- Colocamos "nombre" en la propiedad "for" -->
+  <input type="text" name="nombre" id="nombre" placeholder="Ej: Juan"> <!-- Conectamos <label> llamando el mismo valor en el "id" que "for", en este caso "nombre" -->
+
+</body>
+</html>

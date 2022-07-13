@@ -1,0 +1,27 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin-left: 5px;
+}
+
+.link {
+    text-decoration: none;
+    padding: 5px;
+}
+
+.subTitulo {
+    margin-left: 10px;
+    color: rgb(106, 146, 231);
+    font-size: 1.7em;
+}
+
+a {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    padding: 10px;
+}

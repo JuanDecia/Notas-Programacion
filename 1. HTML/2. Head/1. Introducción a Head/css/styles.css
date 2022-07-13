@@ -1,0 +1,29 @@
+body {
+    margin: auto;
+    width: 75%;
+    font-family: sans-serif;
+    background-color: aliceblue;
+}
+
+header {
+    text-align: center;
+    color: rgb(42, 182, 77);
+}
+
+.img {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+img {
+    width: 50%;
+}
+
+h2 {
+  color: rgb(66, 127, 219);  
+}
+
+b {
+    color: rgb(115, 37, 170);
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="charset" content="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+    <title>Atributos en Enlaces</title>
+
+    <link rel="stylesheet" href="../css/atributosEnEnlaces.css" />
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+            <h1>Atributos en los Enlaces</h1>
+
+            <nav>
+                <a href="../index.html">Volver a Inicio</a>
+            </nav>
+        </header>
+
+        <section>
+
+            <article>
+
+                <h2>Atributo Download</h2>
+
+                <p>
+                    El atributo download de la etiqueta <b>"a"</b>, nos permite descargar el contenido en el caso que 
+                    sea una imagen, video o audio.
+                </p>
+
+                <figure>
+                    <img src="../img/download.png" alt="download" />
+                </figure>
+
+                <p>
+                    Para la construcción de este atributo debemos declararlo dentro de la etiqueta <b>"a"</b> 
+                    con su palabra clave download y como valor le pasamos la ruta del archivo que el usuario va a descargar.
+                </p>
+            </article>
+
+            <article>
+
+                <h2>Atributo Mailto</h2>
+
+                <p>
+                    Cuando usamos en una etiqueta de enlace <b>"a"</b> el atributo mailto estamos redireccionando al 
+                    usuario a su casilla de correo electrónico instalada por defecto para que envie un mail.
+                </p>
+
+                <figure>
+                    <img src="../img/mailto.png" alt="mailto" />
+                </figure>
+
+                <p>
+                    Como podemos ver en la imagen, la construcción de este atributo esta dentro de la propiedad href 
+                    y la estructura es la siguiente:
+                </p>
+
+                <p>
+                    Primero, declaramos con la palabra clave mailto, seguido de la casilla de correo a quien le vamos a 
+                    mandar un mail en nuestro ejemplo es juan.decia@gmail.com. En el caso que tengamos que agregar un 
+                    asunto (subject) al correo debemos partir con un “?” seguido de la palabra clave Subject y seguido 
+                    de “=”. A partir de este punto, debemos poner el asunto del mail, si son una cadena de palabras 
+                    cada una debe estar separada por %20 que representa un espacio.
+                </p>
+
+                <p>
+                    En el caso que debamos agregar un cuerpo al mail, luego de terminar de agregar el asunto debemos continuar 
+                    con “&” seguido de la palabra body, seguido de “=”. Luego, agregamos el cuerpo del mail con la misma regla 
+                    de separación de espacios de %20.
+                </p>
+
+            </article>
+
+        </section>
+
+    </main>
+        
+
+
+</body>
+
+</html>

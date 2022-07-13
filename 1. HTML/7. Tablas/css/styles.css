@@ -1,0 +1,41 @@
+body {
+    width: 85%;
+    margin: 15px auto;
+    font-family: sans-serif;
+    background-color: aliceblue;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    color: rgb(45, 161, 45);
+}
+
+h2 {
+    color: rgb(57, 135, 199);
+}
+
+h3 {
+    color: orange;
+}
+
+main {
+    margin-left: 0 auto;
+}
+
+p {
+    width: 95%;
+    margin: 10px auto;
+    font-size: large;
+}
+
+table {
+    margin: 20px auto;
+    width: 50%;
+}
+
+tr > td {
+    text-align: center;
+}

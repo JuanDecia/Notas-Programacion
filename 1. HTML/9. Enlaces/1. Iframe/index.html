@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    
+    <main>
+        <header>
+            <h1>Introducción etiqueta Iframe</h1>
+
+            <nav>
+                <a href="./html/ejemploIframe.html">Ir a Ejemplo práctico</a>
+            </nav>
+        </header>
+
+        <section>
+            <article>
+                <p>
+                    En esta ocasión vamos a aprender a incrustar paginas externas o internas a nuestra propia página, el método
+                    para hacerlo es usando una etiqueta que crea un “marco” dentro de nuestra página y hacer que, en el interior
+                    de ese marco, muestre otro sitio Web que puede ser externo.
+                </p>
+
+                <figure>
+                    <img src="./img/ejemplo.png" alt="Ejemplo Iframe" />
+                </figure>
+
+                <p>
+                    Insertamos la etiqueta <b>"Iframe"</b> con el atributo src, que contendrá la ruta absoluta o relativa donde se 
+                    encuentre el sitio que queremos cargar. En este caso, vamos a escribir la ruta relativa de la página "anime.flv".
+                </p>
+
+                <p>
+                    Para dimensionar el marco en general, dispondremos de los atributos width y height para ponerlo en el tamaño 
+                    que deseamos. Antes de cerrar la etiqueta <b>iframe</b>, escribiremos una frase que se muestra si el 
+                    navegador no renderiza el <b>iframe</b> (No se puede cargar el iframe).
+                </p>
+
+                <figure>
+                    <img src="./img/sintaxis.png" alt="sintaxis" />
+                </figure>
+
+                <p>
+                    Cuando usamos <b>iframe</b> debemos tener cuidado que el sitio no tenga pop-up, que son las páginas que 
+                    se abren automáticamente en el navegador y ofrecen interacciones con el cliente, por medio de javascript 
+                    o solicitan datos a través de formularios. Para evitar esto, debemos agregar el atributo <b>sandbox</b> el 
+                    cual nos permite generar restricciones para los contenidos que se cargan en el <b>iframe</b>.
+                </p>
+
+            </article>
+
+            <article>
+                <h2>Atributo Sandbox</h2>
+
+                <p>
+                    El atributo <b>sandbox</b> tiene los siguientes valores posibles:
+                </p>
+
+                <ul>
+                    <li>
+                        <b>Allow-forms:</b> permite que los formularios en el interior del <b>iframe</b>, envíen datos si el 
+                        cliente envia la información que allí le solicite. En caso de no indicar este atributo, el cliente 
+                        puede diligenciar el formulario que se encuentra en el iframe, pero cuando envie los datos el formulario 
+                        no enviará ninguna información ingresada.
+                    </li>
+                    <li>
+                        <b>allow-popups:</b> permite que se ejecuten ventanas emergentes en caso que el sitio que se carga las 
+                        contenga. De esta manera si el sitio tiene ventanas emergentes, el navegador las ejecuta sin inconvenientes. 
+                        Si no indicamos este atributo y la página alojada en el iframe tiene pop-ups, el navegador las bloqueará y 
+                        las ejecutará.
+                    </li>
+                    <li>
+                        <b>allow-scripts:</b> Permite que el sitio Web ejecute códigos Javascripts del lado del cliente y la 
+                        posibilidad de acceder a la web cam, nuestros archivos y demás dispositivos que tengamos conectados 
+                        al pc. En caso de no indicar este el atributo, el sitio alojado no ejecuta los códigos de este tipo.
+                    </li>
+                    <li>
+                        <b>allow-top-navigation: </b> se usa para permitir que el sitio alojado en el iframe a través de uno de 
+                        sus enlaces puede reemplazar nuestro contenido por otro propuesto por el mismo, es decir, contenido 
+                        diferente al nuestro. Si omitimos esta línea, evitamos este inconveniente.
+                    </li>
+                </ul>
+            </article>
+
+            <article>
+                <p>
+                    Finalmente recordemos que el atributo src especifica la ruta de lo que deseamos mostrar. Junto a este 
+                    atributo tenemos el "srcdoc" que permite agregar directamente el <b>iframe</b> código HTML.
+                </p>
+                <p>
+                    Una de las formas más comunes de usar el iframe es usando los contenidos de youtube, Google maps o 
+                    Facebook entre otras. Por ejemplo si queremos insertar un <b>iframe</b> para Google maps, debemos 
+                    buscar en Google maps iframe para agregar Google maps y a partir de esta búsqueda, nos salen las 
+                    instrucciones para generar el iframe y agregarlo a nuestro sitio web.
+                </p>
+                <p>
+                    Para finalizar debemos saber que la etiqueta <b>iframe</b> puede contener el atributo <b>allow=”fullscreen”</b> que 
+                    en los casos que el contenido lo permita, activa la opción “pantalla completa”.
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

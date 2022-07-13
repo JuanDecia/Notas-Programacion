@@ -1,0 +1,5 @@
+En este directorio se encuentran las notas de como comenzar a crear nuestra página Web, comenzando con el tipo de versión en
+HTML y luego con la construcción del documento HTML. Adicionalmente, se agrega un tema más a tener en cuenta que son los
+formatos de los textos en HTML.
+
+Están en una página para continuar con las prácticas en HTML y también, para continuar con las prácticas en CSS.

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="keywords" content="listas, ordenadas, sin oredenar">
+    <meta name="author" content="Juan Decia">
+    <title>Etiquetas para listas</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+
+    <main>
+
+      <header>
+        <h1>Listas</h1>
+      </header>
+
+      <section>
+
+        <!-- Listas no ordenadas -->
+        <article>
+
+          <h2>Listas no ordenadas</h2>
+
+          <p>
+            Las etiquetas <b>unordered list</b> (listas no ordenadas) son 
+            útiles cuando necesitamos describir una lista sin orden numérico.
+          </p>
+
+          <p>
+            Por defecto estas listas traen un estilo que al 
+            comienzo de cada ítem de la lista se les coloca un 
+            círculo negro, esto de todas maneras podemos modificarlo 
+            en nuestra hoja de estilos con una propiedad específica.
+          </p>
+
+          <p>
+            Para crear una lista no ordenada necesitamos abrir y 
+            cerrar la etiqueta <b>"ul"</b>, pero para declarar los 
+            ítems que componen la lista debemos usar la 
+            etiqueta <b>"li"</b> con su respectivo cierre par.
+          </p>
+
+          <figure>
+            <img src="./img/sintaxisUl.png" alt="sintaxis" />
+            <img src="./img/listaUl.png" alt="lista" />
+          </figure>
+
+          <p>
+            Las listas no organizadas son útiles para formar una barra de 
+            navegación <b>nav</b>.
+          </p>
+
+          <p>
+            También es necesario mencionar que dentro de las listas en los 
+            elementos <b>"li"</b> podemos volver a crear otra <b>"ul"</b> 
+            o una <b>"ol"</b> con los elementos que necesitemos para nuestra 
+            página web.
+          </p>
+
+          <h3>Ejemplo en la web</h3>
+
+          <div class="lista">
+
+            <ul>
+              <li>Llantas</li>
+              <li>Puertas</li>
+              <li>Motor</li>
+              <li>Asientos</li>
+              <li>Carrocería</li>
+            </ul>
+
+          </div>
+
+        </article>
+
+        <hr />
+
+        <!-- Listas Ordenadas -->
+        <article>
+
+          <h2>Listas ordenadas</h2>
+
+          <p>
+            Las etiquetas <b>ordened list</b> nos son útiles para
+            crear listas con un <b>orden numérico</b>. Para la creación de
+            este tipo de lista debemos seguir los pasos como una lista "ul"
+            . Solo que a diferencia, en esta ocasión en vez de utilizar "ul"
+            vamos a declarar la etiqueta <b>"ol"</b> que es la que representa
+            la <b>lista ordenada</b>. Luego, por cada elemento de dicha lista
+            , si debemos aplicar la etiqueta <b>"li"</b>.
+          </p>
+
+          <h3>Ejemplo en la web</h3>
+
+          <ol>
+            <li>Llantas</li>
+            <li>Puertas</li>
+            <li>Motor</li>
+            <li>Asientos</li>
+            <li>Carrocería</li>
+          </ol>
+
+        </article>
+
+        <hr />
+
+        <!-- Listas anidadas -->
+        <article>
+
+          <h2>Listas Anidadas</h2>
+
+          <p>
+            Las listas anidadas son <b>listas dentro de otras listas.</b> 
+          </p>
+
+          <p>
+            Utilizaremos como ejemplo los transportes (Aéreo, Terrestre y 
+            Marítimo) cada uno de los términos está separado por 
+            clasificaciones.
+          </p>
+
+          <div>
+            <ul>
+              <li>En el caso de los terrestres estarán los autos y las motos.</li>
+              <li>En el caso de los aéreos estarán los aviones y los helicópteros.</li>
+              <li>En el caso de los marítimos estarán los barcos y las canoas.</li>
+            </ul>
+          </div>
+
+          <p>
+            Construiremos una lista ordenada de transporte y una lista no 
+            ordenada con las características: terrestre, aéreo y marítimo. 
+            Dentro de aéreo construimos una lista ordenada al igual que en 
+            marítimo y en terrestre la lista no será ordenada con las 
+            variables carro y moto. 
+          </p>
+
+          <p>
+            El código que vamos a construir debe quedarnos similar al que se 
+            presenta en la siguiente imagen.
+          </p>
+
+          <figure>
+            <img src="./img/listaAnidada.png" alt="listaAnidada" />
+          </figure>
+
+          <div>
+            <ol>
+              <li>Transporte</li>
+                <ul>
+                  <li>Terrestre</li>
+                    <ul>
+                      <li>Carro</li>
+                      <li>Moto</li>
+                    </ul>
+                  <li>Aéreo</li>
+                    <ol>
+                      <li>Avión</li>
+                      <li>Helicóptero</li>
+                    </ol>
+                  <li>Marítimo</li>
+                    <ol>
+                      <li>Barco</li>
+                      <li>Canoa</li>
+                    </ol>
+                </ul>
+            </ol>
+          </div>
+
+        </article>
+
+        <hr />
+
+        <!-- Lista con definiciones y términos -->
+        <article>
+
+          <h2>Definiciones y Términos</h2>
+
+          <p>
+            Este tipo de lista asemeja a un diccionario utilizando las 
+            etiquetas <b>"dl"</b> para determinar que es una lista de 
+            definición y término, la etiqueta <b>"dt"</b> donde se 
+            escribe el nombre de la definición y la etiqueta <b>"dd"</b>
+            que se encuentra el contenido de la definición.
+          </p>
+
+          <h2>Canopy</h2>
+
+          <dl>
+            <dt>Tirolesa</dt>
+              <dd>Una <strong>tirolesa, tirolina, dosel, canopi, canopy, cable o zip line1</strong>​ <em>(según la región de Latinoamérica o el mundo)</em>, consiste en una polea suspendida por cables montados en un declive o inclinación.<br/> Están diseñados de modo que una o varias personas se impulsan por gravedad, y pueden deslizarse desde la parte superior hasta el fondo mediante un cable, usualmente de acero inoxidable.<br/> Es una práctica común en ejercicios militares, y también se le utiliza por campesinos de regiones montañosas escarpadas.</dd>
+          </dl>
+
+        </article>
+
+        <hr />
+
+        <!-- Type -->
+        <article>
+
+          <h2>Type</h2>
+
+          <p>
+            Si utilizamos la propiedad <b>type</b> en la lista ordenada 
+            tendremos la opción de cambiar el estilo de conteo de la lista 
+            esta puede ser con números romanos en mayúscula o minúscula.
+          </p>
+
+        </article>
+
+      </section>
+
+    </main> 
+  
+  </body>
+</html>

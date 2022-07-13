@@ -1,0 +1,1 @@
+En esta práctica se conocen las etiquetas de texto y algunos de los formatos que podemos aplicarles a las mismas.

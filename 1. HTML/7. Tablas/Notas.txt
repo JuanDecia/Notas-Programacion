@@ -1,0 +1,1 @@
+Se crea práctica en html con algunos estilos en CSS para las notas de las tablas. 

@@ -1,0 +1,32 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(194, 188, 166);
+}
+
+main {
+    margin: auto;
+    width: 75%;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(104, 150, 30);
+}
+
+h2 {
+    margin-top: 30px;
+    color: blue;
+}
+
+div {
+    text-align: center;
+}
+
+b {
+    color: rgb(115, 37, 170);
+}
+
+li {
+    margin-top: 10px;
+}

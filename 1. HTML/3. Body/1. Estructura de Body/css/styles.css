@@ -1,0 +1,36 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+}
+
+main {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Header */
+
+h1 {
+    color: rgb(45, 182, 45);
+    text-align: center;
+}
+
+/* Contenido Principal */
+
+h2 {
+    color: rgb(57, 135, 199);
+}
+
+h3 {
+    color: orange;
+    text-align: center;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}

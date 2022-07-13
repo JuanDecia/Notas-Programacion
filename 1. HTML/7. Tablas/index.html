@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="keywords" content="table, tabla, celdas, usodetablas, html">
+    <meta name="author" content="Juan Decia">
+    <title>Manejo de Tablas</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body>
+
+    <main>
+
+      <header>
+        <h1>Tablas: Etiquetas y Atributos</h1>
+      </header>
+
+      <section>
+
+        <!-- Introducción -->
+        <article>
+
+          <p>
+            Las tablas son muy útiles cuando necesitamos mostrar datos bajo un orden específico. Son un conjunto de 
+            <b>celdas</b> organizadas en <b>filas</b> (rows) y <b>columnas</b> (cols). Las <b>filas</b> son horizontales
+            y las <b>columnas</b> son <b>verticales</b>. La <b>intersección</b> entre una <b>fila y columna</b> se llama <b>celda</b>.
+          </p>
+  
+          <p>
+            Para hacer su llamado en un sitio web, es necesario hacer uso de sus etiquetas: <b>"talbe"</b> es la 
+            etiqueta principal para declarar la construcción de una tabla, dentro de ella debemos construir las filas
+            y las columnas. Las etiquetas de estas últimas nombradas son: <b>"tr"</b> y <b>"td"</b>, todas con sus 
+            respectivos cierres.
+          </p>
+
+          <p>
+            Para indicar al navegador que haremos uso de una tabla, usaremos la etiqueta <b>"table"</b> y en el caso 
+            de ser necesario agregaremos al atributo <b>border=”1”</b> que, este atributo define el <b>grosor</b> 
+            de las celdas de la tabla. Cuando no se indica este valor el navegador toma como valor predeterminado “0”,
+            es decir, que no será visible.
+          </p>
+
+          <figure>
+            <img src="./img/tabla.png" alt="tabla" width="100%"/>
+          </figure>
+
+          <p>
+            Para comenzar con la creación de una tabla luego de usar la etiqueta <b>"table"</b> seguimos con las 
+            etiquetas <b>"tr"</b> que harán creación de las filas y para formas las celdas usamos las etiquetas
+            <b>"td"</b> que representan las columnas siempre deben estar en el interior de las etiquetas <b>"tr"</b>.
+          </p>
+
+          <p>
+            Los <b>textos</b> que están <b>dentro de las celdas</b> deben escribirse dentro de las etiquetas
+            <b>"td"</b>:
+          </p>
+
+        </article>
+
+        <hr />
+
+        <!-- Semántica de Table-->
+        <article>
+
+          <h2>Semántica en una tabla</h2>
+
+          <p>
+            Para dar un mejor orden a las tablas, existen etiquetas que <b>encuadran el contenido</b>, 
+            para un código más ordenado. Estas etiquetas son:
+          </p>
+
+          <ul>
+
+            <li>
+              <b>thead</b>: en esta etiqueta se colocará solo el encabezado de la tabla. En nuestro caso del 
+              ejemplo: Código, Producto y Valor. 
+            </li>
+
+            <li>
+              <b>tbody</b>: en esta etiqueta colocaremos todo el <b>contenido o cuerpo de la tabla</b>, 
+              en nuestro ejemplo: los componentes del pc, su código y su valor.
+            </li>
+
+            <li>
+              <b>tfoot</b>: en esta etiqueta ubicaremos el <b>resultado del contenido</b> de la tabla en caso de 
+              ser necesario. En nuestro ejemplo: Total y valor total.
+            </li>
+
+          </ul>
+
+          <p>
+            Cabe destacar que no notaremos cambios en la tabla que se renderiza en el navegador, pero son 
+            útiles cuando trabajamos en el proceso del diseño de la página. Esto permite manipular mejor 
+            la tabla y su estructura dentro del código. 
+          </p>
+
+        </article>
+
+        <hr />
+
+        <!-- Estilos -->
+        <article>
+
+          <h2>Estilos en las tablas</h2>
+
+          <p>
+            Para que los textos de las tablas aparezcan resaltados debemos intercambiar la etiqueta <b>"td"</b> 
+            por <b>"th"</b>, esta última cumple la función del formato de texto <b>"strong"</b>. Pero, la etiqueta
+            <b>"th"</b> corresponde a las tablas y <b>"strong"</b> a los párrafos.
+          </p>
+
+          <p>
+            Podemos realizar una unificación de celdas con un atributo llamado <b>colspan=””</b> que sirve para 
+            combinar columnas y estas deben estar dentro del mismo <b>"td"</b> o <b>"th"</b>.
+          </p>
+
+          <p>
+            Dentro de las <b>comillas (“ ”)</b> ubicaremos el <b>número de la combinación de columnas</b> que 
+            realizaremos (Caso del ejemplo = 2).
+          </p>
+
+          <p>
+            También, existe el atributo <b>rowspan=” ”</b>  que sirve para hacer <b>combinación de las filas</b>. 
+            Podemos hacer tantas combinaciones posibles sin superar el número de la cantidad de filas o 
+            columnas existentes.
+          </p>
+
+        </article>
+
+        <hr />
+        
+        <!-- Tablas anidadas -->
+        <article>
+
+          <h2>Tablas anidadas</h2>
+
+          <p>
+            En ocasiones posiblemente tendremos que hacer uso de una tabla dentro del contenedor de otra tabla, 
+            esto es posible maquetando una tabla como <b>contenedora principal</b> sin el uso de rows y cols. 
+            Dentro de ella, podremos construir <b>sub-contenedores de tablas</b> que ocupen el espacio del 
+            contenedor principal.
+          </p>
+
+          <p>
+            En la actualidad este proceso se consigue construyendo un contenedor principal (para este caso "div") 
+            y gracias a los estilos de <b>flexbox</b> podremos disponer de este contenedor como si fuese una tabla
+            esto lo logramos declarando el contenedor principal “div” que tenga un “display” con valor “table”.
+          </p>
+
+        </article>
+
+        <hr />
+
+        <article>
+
+          <h2>Fondo en la tabla</h2>
+
+          <p>
+            En el caso que quisiéramos agregar una imagen de fondo a nuestra tabla podemos 
+            llegar a ese objetivo de dos maneras.
+          </p>
+
+          <p>
+            La primera manera es directamente desde nuestro HTML usando la propiedad <b>background dentro de la 
+            etiqueta principal del contenedor de la tabla</b> (table) y haciendo uso de una ruta relativa o absoluta 
+            de donde se encuentre la imagen que estamos deseando colocar.
+          </p>
+
+          <p>
+            La segunda manera es trabajando desde nuestra hoja de estilos CSS. Debemos hacer uso del selector del 
+            contenedor principal donde esta alojada la tabla y, usando la misma propiedad en CSS "background"
+            agregamos como valor la imagen que estamos deseando colocarle.
+          </p>
+
+          <p>
+            Debemos tener en cuenta que también podemos colocar un fondo a rows (filas) aplicando el background a
+            <b>"td"</b> o a las columnas cols aplicando el background a <b>"tr"</b>.
+          </p>
+
+        </article>
+
+      </section>
+
+      <!-- Ejemplo -->
+      <section>
+
+        <h2>Ejemplo práctico de una tabla</h2>
+
+        <p>
+          Tomemos un ejemplo que estamos construyendo una factura, vamos a necesitar: una columna para los códigos,
+          una para los productos y una para el valor.
+    
+          Podemos estructurar nuestra tabla para tener un mayor orden con las etiquetas: "thead", "tbody", "tfoot". 
+        </p>
+
+        <table border="1">  <!-- El valor de BORDER aumenta el grosor de las celdas.-->
+
+          <!-- Encabezado -->
+          <thead>
+      
+            <tr> <!--Fila #1 etiqueta <tr>-->
+                
+              <th>Código</th> <!-- Columnas etiqueta <th> o <td> -->
+              <th>Producto</th>
+              <th>Valor</th>
+    
+            </tr> 
+          </thead>
+    
+          <!-- Cuerpo -->
+          <tbody>
+    
+            <tr> <!--Fila #2-->
+              <td>com001</td>
+              <td>Computador</td>
+              <td>100.000</td>
+            </tr>
+    
+            <tr> <!--Fila #3-->
+              <td>mou001</td>
+              <td>Mouse</td>
+              <td>20.000</td>
+            </tr>
+            
+            <tr> <!--Fila #4-->
+              <td>tec001</td>
+              <td>Teclado</td>
+              <td>15.000</td>
+            </tr>
+          </tbody>
+    
+          <!--Pie-->
+          <tfoot>
+    
+            <tr> <!--Fila #5-->
+              <th colspan="2">Total</th>
+              <td>135.000</td>
+            </tr>
+          </tfoot>
+          
+        </table>
+
+      </section>
+
+    </main>
+  </body>
+</html>

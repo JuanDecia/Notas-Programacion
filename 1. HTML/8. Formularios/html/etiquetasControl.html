@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="keywords" content="formulario, etiquetas, form">
+    <meta name="author" content="Juan Decia">
+    <title>Etiquetas de control</title>
+
+  <!-- 
+    Crear los estilos dentro de nuestro HTML no es una buena práctica, esto se hizo por cuestiones
+    de practicidad para detalles de estilos pequeños dentro del documento.
+  -->
+
+    <style>
+      body {
+        font-family: sans-serif;
+        width: 70%;
+        margin: 20px auto;
+        background-color: rgb(194, 189, 173);
+      }
+
+      div {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid rgb(63, 63, 124);
+      }
+
+      legend {
+        color: rgb(85, 129, 211);
+        font-weight: 600;
+      }
+
+      select {
+        margin: 0 0 10px 10px;
+      }
+
+      .campo {
+        display: flex;
+        flex-direction: column; 
+      }
+
+      .textArea {
+        display: flex;
+        justify-content: center;
+      }
+
+      #textarea {
+        height: 100px;
+        width: 50vw;
+        align-items: center;
+        justify-content: center;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: large;
+      }
+
+      b {
+        color: rgb(115, 37, 170);
+      }
+
+      .cont-link {
+        border: none;
+        margin-bottom: 20px;
+      }
+
+      .titulo {
+        color: blue;
+        
+      }
+    </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <div class="cont-link">
+      <a href="../index.html">Volver a Inicio</a>
+    </div>
+
+  </header>
+
+ <form autocomplete="on" name="Etiquetas de control">
+    <fieldset>
+      <legend>Formulario con controles</legend>
+
+      <div>
+
+        <p>
+          <b class="titulo">Select:</b> Nos sirve para crear una <b>lista desplegable de opciones</b>, por ejemplo, cuando el navegador te pide que ingreses la cuidad donde vivís y el buscador despliega una lista de las ciudades disponibles. <br />
+          Para agregar opciones a esa lista, <b>debemos definir dentro de la etiqueta "select" la etiqueta option</b>, osea, select > option.
+        </p>
+
+        <select>
+        <option>Ciudad 1</option>
+        <option>Ciudad 2</option>
+        <option>Ciudad 3</option>
+        </select>
+      </div>
+
+      <div class="campo">
+
+        <p>
+          <b class="titulo">Textarea:</b> Es un <b>área de texto</b> que tiene un tamaño mucho más grande que un input tipo texto y <b>sirve para ingresar párrafos, comentarios u observaciones largas</b>. Este <b>tiene 2 atributos especiales</b>, que sirven para <b>definir el tamaño (cols; rows)</b> ambos reciben <b>valores numéricos y representan el número de filas y columnas</b> que puede tener el textarea.
+        </p>
+
+        <article class="textArea">
+          <textarea id="textarea" name="area_texto" placeholder="Coloque una descripción"></textarea>
+        </article>
+      </div>
+      
+    </fieldset>
+ </form>
+</body>
+</html>

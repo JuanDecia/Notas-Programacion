@@ -1,0 +1,70 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+}
+
+main {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Header */
+
+h1 {
+    color: rgb(45, 182, 45);
+    text-align: center;
+}
+
+nav {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.tilde {
+    margin-right: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 20px;
+}
+
+/* Contenido Principal */
+
+h2 {
+    color: rgb(57, 135, 199);
+}
+
+h3 {
+    color: orange;
+    text-align: center;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    font-weight: 600;
+}
+
+.cont-link {
+    width: 55%;
+    margin: 40px auto;
+    border: 1px solid black;
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

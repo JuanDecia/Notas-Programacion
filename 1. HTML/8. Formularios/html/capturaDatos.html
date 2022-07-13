@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="keywords" content="formulario, etiquetas, form">
+    <meta name="author" content="Juan Decia">
+    <title>Tipos de inputs</title>
+
+    <link rel="stylesheet" href="../css/capturaDatos.css" />
+  </head>
+
+  <body>
+
+    <header>
+
+      <h1>Captura de Datos y tipos de Inputs</h1>
+
+      <nav>
+        <div class="volver">
+          <a href="../index.html">Volver a Inicio</a>
+        </div>
+  
+        <div class="volver">
+          <a href="./propiedadesInput.html">Ir a las propiedades de la etiqueta Input</a>
+        </div>
+      </nav>
+
+    </header>
+
+    <p>
+      La etiqueta <b>input</b> es una importante herramienta que nos permite <b>capturar distintos tipos de datos</b>. Funciona para capturar: <b>texto, números, e-mails, direcciones, fechas, horas, etc</b>. Estos son los diferentes tipos de input que existen con su respectiva función en el navegador:
+    </p>
+
+    <p>
+      Estos tipos de datos deben ser especificados en un <b>atributo llamado type</b> que es propio de la etiqueta input y solo <b>puede recibir 1 valor</b>, es decir, el dato solo <b>solo puede ser de 1 solo tipo</b>.
+    </p>
+
+    <form autocomplete="on" name="Tipos de inputs"> 
+      <fieldset>
+        <p>Selección de color:
+          <input type="color">
+        </p>
+        <p>Fecha <br/>
+          <input type="date">
+        </p>
+        <p>Fecha Hora <br/>
+          <input type="datetime">
+        </p>
+        <p>Fecha Hora Local <br/>
+          <input type="datetime-local">
+        </p>
+        <p>Archivos Planos, Word, Excel y Otros <br/>
+          <input type="file">
+        </p>
+        <p>Email <br/>
+          <input type="email">
+        </p>
+        <p>Mes <br/>
+          <input type="month">
+        </p>
+        <p>Números <br/>
+          <input type="number">
+        </p>
+        <p>Rango de Números <br/>
+          <input type="range" min="0" max="10">
+        </p>
+        <p>Búsqueda <br/>
+          <input type="search">
+        </p>
+        <p>Teléfono <br/>
+          <input type="tel">
+        </p>
+        <p>Hora <br/>
+          <input type="time">
+        </p>
+        <p>Dirección URL <br/>
+          <input type="url">
+        </p>
+        <p>Semana <br/>
+          <input type="week">
+        </p>
+        <p>Reset <br/>
+          <input type="reset">
+        </p>
+        <p>Botón HTML <br/>
+          <input type="button" value="Botón HTML">
+        </p>
+        <p>Envío del Formulario <br/>
+          <input type="submit">
+        </p>
+      </fieldset>
+    </form>
+
+    <p>
+      El <b>tipo de dato RESET</b> sirve para <b>limpiar el formulario</b> que hemos completado.
+    </p>
+
+    <h2>Captura de datos especiales</h2>
+
+    <p>
+        En algunos casos debemos capturar datos especiales como contraseñas, selecciones especiales o listas. 
+    </p>
+
+    <h3>Contraseña</h3>
+
+    <p>
+
+        Para las contraseñas usamos la etiqueta <b>"input"</b> con el atributo <b>type=”password”</b>, lo que hará que no se muestren 
+        los caracteres cuando el usuario escribe. <br /> <br />
+    
+        <label for="contraseña">Contraseña: </label>
+        <input name="contraseña" type="password" />
+
+    </p>
+
+    <hr />
+
+    <h3>Checkbox</h3>
+
+    <p>
+
+        El checkbox es una caja le permite al usuario activar una opción o no. Para crear un checkbox empleamos la etiqueta "input" con el atributo 
+        type=”Checkbox”. Es importante colocar una etiqueta (label) y enlazarla con el atributo for al checkbox a través de su id, donde el valor for 
+        y el valor del id deben coincidir. <br /> <br />
+    
+        <label for="terminos">Checkbox: Acepto los Términos y Condiciones</label>
+        <input id="terminos" type="checkbox" value="yes" required/>
+    
+    </p>
+
+    <hr />
+
+    <h3>Radio</h3>
+
+    <p>
+
+        El radio o radio button es una entrada que permite seleccionar exclusivamente entre un conjunto de alternativas. Para crear un radio button
+        usamos la etiqueta <b>"input"</b> con el atributo <b>type=”radio”</b>. Es importante colocar una etiqueta (label) y enlazarla con el atributo for al 
+        checkbox con el id, donde el valor for y el valor del id deben coincidir. También, es importante colocar la propiedad
+        de <b>value</b> ya que va a contener el valor de la casilla que marque el usuario. <br /> <br />
+    
+        <label for="mañana">Mañana</label>
+        <input id="mañana" name="horario" type="radio" value="M" />
+        <label for="tarde">Tarde</label>
+        <input id="tarde" name="horario" type="radio" value="T" />
+    
+    </p>
+
+    <hr />
+
+    <h3>Lista con grupos</h3>
+    
+    <p>
+        Para crear una lista con grupos utilizamos la etiqueta <b>select</b> y dentro de ella, 
+        la etiqueta <b>otpgroup</b> para definir el grupo, por cada etiqueta otpgroup es un grupo 
+        diferente. Para definir las opciones debemos utilizar la etiqueta <b>option</b> y agregar el 
+        atributo value que les dará un valor único a la opción que le corresponda, dentro de las 
+        etiquetas de <option> agregaremos el valor que aparecerá en la lista de grupos. También, es importante agregar
+        la propiedad de <b>value</b> ya que la casilla seleccionada contendrá el valor que el usuario ha elegido.
+    </p>
+    
+    <label for="ciudades">Lista con Grupos: Ciudad</label>
+    <select name="ciudades">
+        <optgroup label="Latinoamerica">
+            <option value="caracas">Caracas</option>
+            <option value="bogota">Bogotá</option>
+        </optgroup>
+        <optgroup label="Europa">
+            <option name="europa" value="madrid">Madrid</option>
+            <option name="europa" value="londres">Londres</option>
+        </optgroup>
+    </select>
+
+    <hr />
+
+    <h3>Lista de selección múltiple</h3>
+
+    <p>
+        Para crear una lista de selección múltiple usamos la etiqueta <b>select</b> que permite 
+        seleccionar múltiples elementos. El primer elemento se selecciona con un click, pero los 
+        adicionales se seleccionan usando (ctrl+click) ó (cmd+click) según el navegador y sistema operativo. 
+    </p>
+  
+    <p>
+        <label for="tipo">Tipo</label>
+        <select name="tipo" multiple="true">
+          <option value="musico">Músico</option>
+          <option value="pintor">Pintor</option>
+          <option value="actor">Actor</option>
+          <option value="escultor">Escultor</option>
+        </select>
+    </p>
+
+  </body>
+</html>

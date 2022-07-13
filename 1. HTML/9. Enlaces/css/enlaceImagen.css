@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+#sub-naruto {
+    text-align: center;
+}
+
+div {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+a {
+    height: 300px;
+    
+}
+
+#sinopsis {
+    margin: 10px auto;
+    width: 50%;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+p {
+    text-align: justify;
+}

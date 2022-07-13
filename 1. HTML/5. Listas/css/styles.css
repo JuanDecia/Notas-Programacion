@@ -1,0 +1,21 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(194, 189, 173);
+}
+
+main {
+    margin: auto;
+    width: 75%;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    color: rgb(121, 187, 15);
+}
+
+h2 {
+    color: blue;
+}

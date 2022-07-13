@@ -1,0 +1,44 @@
+body {
+    width: 85%;
+    margin: 15px auto;
+    font-family: sans-serif;
+    background-color: aliceblue;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    color: rgb(45, 161, 45);
+}
+
+h2 {
+    color: rgb(57, 135, 199);
+}
+
+h3 {
+    color: orange;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+li {
+    margin: 5px 0;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(224, 162, 90);
+}
+
+.tilde {
+    margin-right: 20px;
+}

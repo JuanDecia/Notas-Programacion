@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+    width: 85%;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(86, 129, 16);
+}
+
+h2 {
+    color: rgb(57, 135, 199);
+}
+
+#codigo {
+    border: 1px solid black;
+    margin-bottom: 30px;
+}
+

@@ -1,0 +1,37 @@
+/* Estilos Generales y Principales */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+}
+
+main {
+    width: 85%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+
+h1 {
+    color: rgb(45, 182, 45);
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: purple;
+}
+
+.flecha {
+    margin-top: 5px;
+}
