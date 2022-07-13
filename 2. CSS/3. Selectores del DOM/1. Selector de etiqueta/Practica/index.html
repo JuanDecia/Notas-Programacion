@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de etiqueta</title>
+
+    <style>
+
+        body {
+            font-family: sans-serif;
+            background-color: rgb(194, 189, 173);
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            color: rgb(86, 129, 16);
+        }
+
+        main {
+            width: 70%;
+            margin: auto;
+        }
+
+        footer {
+            border-top: 1px solid black;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        div {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Selector de Etiqueta</h1>
+
+        <section>
+            <p>
+                Cuando trabajamos con CSS <b>es necesario identificar el elemento del DOM al que se le aplicaran los estilos o propiedades</b> necesarias para nuestra página.
+            </p>
+
+            <p>
+                Los <b>selectores son un conjunto de expresiones que sirven para referirnos a los elementos</b> que mencionábamos. Existen muchos tipos de selectores que son una poderosa característica que ofrece CSS.
+            </p>
+
+            <p>
+                Los <b>selectores de etiqueta</b> son aquellos que <b>buscan directamente un elemento en el DOM con el nombre de la etiqueta</b>. Para ver como funciona el <b>selector de etiqueta</b> cambiaremos el <b>"background" (fondo)</b> de la página web. Para ello, aplicaremos un <b>selector de etiqueta "body</b>, lo cual basta con <b>escribir el nombre de la etiqueta</b> en nuestra hoja o sección de estilos de CSS. <br>
+                Al tener la etiqueta seleccionada aplicar el siguiente estilo: <b>background: rgb(194, 189, 173)</b>.
+            </p>
+
+            <p>
+                Al igual que con body <b>podemos hacer referencia a cualquier etiqueta con su nombre</b> y de esta manera se le aplicarán los estilos correctamente.
+            </p>
+
+            <p>
+                Aplicaremos estilos a la etiqueta <b>“footer”</b> para que nuestro pie de página se separe un poco del resto del contenido. Llamaremos a la etiqueta por su nombre y en el contenido agregaremos:<b> margin-top: 20px.</b> <br>
+                Una breve explicación sobre margin es el espacio que existe entre los contenedores de la página web.
+            </p>
+
+            <p>
+                Este tipo de selector tiene una desventaja importante y es que cuando tenemos una Web Page con 
+                mucho contenido y nuestro documento HTML tiene muchas veces la misma etiqueta 
+                donde las etiquetas pueden repetirse muchas veces, no podremos aplicarle los estilos 
+                a una etiqueta en específico, ya que estos harán efectos en todas las etiquetas con ese 
+                mismo selector.
+            </p>
+        </section>
+
+        <!--Se aplica el selector a la etiqueta "footer"-->
+        <footer>
+            <div>Soy el footer</div>
+        </footer>
+    </main>
+</body>
+</html>
