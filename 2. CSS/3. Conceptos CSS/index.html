@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascada</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Concepto de Cascada</h1>
+        </header>
+
+        <section>
+            <article>
+                <p>
+                    Este concepto se refiere a la posibilidad de especificar <b>cuál estilo tiene prioridad jerárquica</b>. 
+                    Por ejemplo, si tenemos <b>“color: red”</b> en una etiqueta “style” y <b>“color: blue”</b> en un 
+                    “archivo externo” y ambos están aplicados a la etiqueta <b>"p"</b> ¿Cuál debería mostrar el navegador?
+                </p>
+
+                <p>
+                    Para renderizarse en el navegador, nuestra Web tiene varias fuentes de estilos que se van calcando una 
+                    después de la otra. De ahí viene el término Cascade Style Sheet, debemos tener en cuenta que si tenemos 
+                    un proyecto web que aún no tiene estilos definidos, prevalecerá la hoja de estilos que viene por defecto 
+                    en el navegador.
+                </p>
+
+                <p>
+                    Por ejemplo, cuando creamos un enlace si ya lo hemos visitado, este se pone de un color específico 
+                    (según los estilos predefinidos del navegador). Actualmente, algunos navegadores permiten que carguemos 
+                    en su configuración hojas de estilo personalizadas. Este archivo tendrá prioridad sobre los propios del 
+                    browser intervenido y se conoce como: hojaDeEstilosDeUsuario.css 
+                </p>
+
+                <p>
+                    Existe otra fuente de estilos css llamada: hojaDeEstilosDelAutor que es propiamente la que hemos estado 
+                    trabajando hasta el momento en un archivo externo del tipo css. Este archivo tendrá prioridad sobre las 
+                    fuentes de estilos anteriores.
+                </p>
+            </article>
+            
+            <hr>
+
+            <article>
+
+                <h2>
+                    ¿Qué pasaría si quisiéramos obligar al navegador a mostrar un estilo exacto que sea prioritario
+                    sobre los demás estilos?
+                </h2>
+
+                <p>
+                    Existe una práctica que no es altamente recomendada que es usar la siguiente palabra clave <b>!important</b>
+                    sobre dicha etiqueta.
+                </p>
+
+            </article>
+
+            <hr>
+
+            <article>
+
+                <h2>Jerarquía Style en etiqueta</h2>
+
+                <p>
+                    Recordemos que con esta etiqueta también podemos especificar propiedades de estilo y si la hemos empleado 
+                    en algún archivo HTML tendrá prioridad sobre cualquier tipo de CSS exceptuando las propiedades que tengan 
+                    el valor !important¡
+                </p>
+
+            </article>
+
+            <hr>
+
+            <article>
+
+                <h2>jerarquía Style en atributo</h2>
+
+                <p>
+                    Emplear style como atributo tiene <b>mayor jerarquía</b> que cualquier otra declaración
+                    de estilos, es decir, se mostrará el atributo sobreescribiendo los estilos de la posible
+                    etiqueta style o el archivo externo style
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
