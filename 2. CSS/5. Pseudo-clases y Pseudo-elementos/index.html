@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Clase y Elemento</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    
+    <main>
+
+        <header>
+            <h1>Las pseudo clases y los pseudo elementos</h1>
+        </header>
+        
+        <section>
+
+            <article>
+
+                <h2>Pseudoclases</h2>
+
+                <p>
+                    Las Pseudoclases son palabras clave que representan <b>el estado</b> en el que se puede encontrar un 
+                    elemento HTML. En otras palabras, los que son el primer elemento de su tipo, o aquellos por 
+                    los que el cursor les pasa por encima. Las Pseudoclases son palabras clave que comienzan con 
+                    dos puntos:
+                </p>
+
+                <code>
+                    :pseudo-class-name
+                </code>
+                
+                <p>
+                    A continuación, realizaremos un ejemplo práctico para mejorar su entendimiento. Si queremos el primer 
+                    párrafo de un artículo en letra más grande y en negrita, podemos añadir una clase a ese párrafo y luego 
+                    añadirle CSS a esa clase, como se muestra en este ejemplo:
+                </p>
+
+                <p class="parrafo">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut placeat cum quasi odit recusandae. Magni 
+                    expedita laudantium, aut ea deserunt autem eligendi similique omnis dolor est, commodi rerum placeat 
+                    inventore.
+                </p>
+
+                <p>
+                    Sin embargo, podría ser complicado de mantener. ¿Y si añadiésemos un párrafo nuevo en la parte superior del 
+                    documento? Habría que mover la clase para que quede antes del nuevo párrafo. En lugar de añadir la clase, 
+                    podríamos utilizar el selector de pseudoclase :first-child, que siempre seleccionará el primer elemento 
+                    hijo del artículo, y de esta forma no tendremos que editar el código HTML (esto no siempre es posible, 
+                    tal vez debido a que lo genera un CMS).
+                </p>
+
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dolor a nulla tenetur quisquam reiciendis 
+                        atque, commodi et soluta voluptatum enim delectus ad, itaque magni inventore! Dolor quia nihil sit!
+                    </p>
+                </div>
+
+                <p>
+                    En el caso del ejemplo anterior aplicamos la <b>pseudoclase</b> | <span><code>div :first-child</code></span> |
+                    y como podemos observar, el contenedor seleccionado se le aplican los cambios. Para una traducción a 
+                    entender esta declaración, estamos diciendo que todos los elementos que sean <b>primer hijo</b> del
+                    contenedor <b>div</b>, tendrán esos cambios.
+                </p>
+
+                <p>
+                    Todas las pseudoclases se comportan del mismo modo. Seleccionan un fragmento del documento que está en un 
+                    estado determinado y se comportan como si se hubiera añadido una clase a su HTML.
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>first-child</h3>
+
+                <p>
+                    Siempre seleccionará el primer elemento hijo del articulo seleccionado en el DOM. A continuación, 
+                    visualizaremos una imagen en donde el selector es “p” y con la referencia de first-child estamos 
+                    seleccionando al primer elemento hijo del dom de “p”.
+                </p>
+
+                <p>
+                    En el ejemplo podría escribirse “article:first-child” y la regla se aplicaría a cualquier elemento 
+                    que sea primer hijo de un elemento “article”, no solo un párrafo primer hijo.
+                </p>
+
+                <figure>
+                    <img src="./img/firstChild.png" alt="first child" />
+                </figure>
+
+            </article>
+
+            <article>
+
+                <h3>last-child</h3>
+
+                <p>
+                    La Pseudoclase “:last-child” representa el último elemento entre un grupos de elementos hermanos.
+                </p>
+
+                <p>
+                    A continuación, veremos un ejemplo en donde aplicaremos esta Pseudoclase a 3 hermanos “p” el cual 
+                    estamos seleccionando el último de ellos para aplicarle los estilos.
+                </p>
+
+                <figure>
+                    <img src="./img/lastChild.png" alt="last child" />
+                </figure>
+
+            </article>
+
+            <article>
+
+                <h3>only-child</h3>
+
+                <p>
+                    Esta pseudoclase hace selección a un único hijo que no tenga hermanos. En la siguiente imagen podemos ver 
+                    un ejemplo en donde tenemos dos contenedores padres, en el primero con un único div hijo y el segundo con 
+                    varios elementos hijos, esta regla aplicaría al primero por ser único hijo.
+                </p>
+
+                <figure>
+                    <img src="./img/onlyChild.png" alt="only child" />
+                </figure>
+
+            </article>
+
+            <article>
+
+                <h3>Invalid</h3>
+
+                <p>
+                    Esta pseudo clase es útil para trabajar con los formularios que representa a cualquier elemento input cuyos 
+                    contenidos no se puedan validar. Esta pseudo clase es útil para resaltar errores de campo para el usuario. 
+                    En el siguiente ejemplo colorea los elementos en verde cuando son válidos y en rojo cuando no lo son. La 
+                    sintaxis es como las demás pseudo clases “:invalid”.
+                </p>
+
+                <figure>
+                        <img src="./img/invalidHtml.png" alt="invalid html" />
+                </figure>
+
+                <figure>
+                    <img src="./img/invalidCss.png" alt="invalid css" />
+                </figure>
+
+                <figure>
+                    <img src="./img/invalidResultado.png" alt="invalid resultado" />
+                </figure>
+
+            </article>
+
+        </section>
+
+        <hr />
+
+        <section>
+
+            <article>
+
+                <h2>Pseudoclases de acción de usuario</h2>
+
+                <p>
+                    Algunas pseudoclases solo intervienen cuando el usuario interactúa con el documento de alguna manera. 
+                    Estas pseudoclases de acción de usuario, que también reciben el nombre de pseudoclases dinámicas, actúan 
+                    como si se añadiese una clase al elemento cuando el usuario interactúa con él. Algunos ejemplos son:
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>hover</h3>
+
+                <p>
+                    La pseudoclase “:hover” es considerada dinámica, solo interviene si el usuario pasa el cursor sobre 
+                    un elemento. Cuando esto ocurre hover aplica una acción de diseño.
+                </p>
+
+                <code class="code-hover">
+                    A :hover { color: green;} 
+                </code>
+
+                <p>
+                    Cambiará el elemento a color green cuando el usuario pase el cursor por encima. 
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>Focus</h3>
+
+                <p>
+                    La pseudoclase “:focus” es considerada dinámica y solo interviene si el usuario selecciona el elemento 
+                    con los controles del teclado.
+                </p>
+
+                <code>
+                    Input:focus{ width: 160px; height: 140px;} 
+                </code>
+
+                <form action="">
+                    <input class="focus-text" type="text" />
+                </form>
+
+            </article>
+
+            <article>
+                
+                <h3>Visited</h3>
+
+                <p>
+                    La pseudoclase “:visited” es considerada dinámica y generalmente se aplica a links ya que tomará el estilo 
+                    luego de que el usuario haya hecho “click” en el elemento que tenga esta pseudo clase especificada.
+                </p>
+
+                <code>
+                    A[href^ = ’http://’]: visited{ color: red;} 
+                </code>
+
+                <p>
+                    Esto retornara que el link luego de visitar la página externa, quedará en color rojo.
+                </p>
+
+            </article>
+        </section>
+
+        <section>
+
+            <h2>Pseudoelementos</h2>
+
+            <p>
+                Los pseudoelementos se comportan de manera similar. Sin embargo, actúan como si hubieras añadido un elemento 
+                HTML totalmente nuevo en el marcado, en lugar de haber aplicado una clase nueva a los elementos presentes. 
+                Los pseudoelementos comienzan con un doble signo de dos puntos “::”
+            </p>
+
+            <p>
+                Supongamos que se desea seleccionar la primera línea de un párrafo simplemente se puede delimitar con el 
+                elemento span y utilizar un selector de elementos. Sin embargo, esto fallará si el número de palabras que 
+                se delimitó resulta ser más largo o más corto que el ancho del elemento padre. Ya que normalmente no 
+                sabemos cuántas palabras caben en una línea porque esto cambia con el ancho de pantalla o con los cambios 
+                de tamaño de letra, no es posible hacer esto introduciendo solo HTML.
+            </p>
+
+            <p>
+                A continuación, vamos a ver un ejemplo de como trabaja un pseudoelemento:
+            </p>
+
+            <h3>first line</h3>
+
+            <p>
+                Para el ejemplo nombrado anteriormente podemos aplicarlo con el pseudo elemento “::first-name”, ya que, 
+                no importa si el número de palabras aumenta o disminuye, siempre se seleccionará la primer línea.
+            </p>
+
+            <p class="pseudoElemento">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores expedita, sed pariatur et 
+                voluptates molestias voluptatem incidunt rerum obcaecati ducimus, voluptas quaerat numquam? Obcaecati 
+                fugit consectetur corrupti. Iure, quidem facilis.
+            </p>
+
+            <figure>
+                <img src="./img/firstLine.png" alt="first line" />
+            </figure>
+
+            <p>
+                Como vemos en el ejemplo anterior le hemos aplicado solamente estilos a la <b>primer línea</b>
+                del párrafo. Le hemos cambiado el color a verde para que se puedan visualizar los cambios con
+                mejor claridad.
+            </p>
+
+            <hr>
+
+            <article>
+
+                <h2>Pseudoelementos y pseudoclases</h2>
+
+                <p>
+                    Podemos hacer uso de ambos cuando sea necesario. En el ejemplo anterior, en el caso de tener 2 etiquetas de 
+                    párrafo, podemos usar una pseudoclase para seleccionar el primer hijo del primer párrafo.
+                </p>
+
+                <p>
+                    A continuación, vamos a ver un ejemplo en donde se selecciona la primera línea del primer elemento “p” 
+                    que esté dentro de un elemento “article”.
+                </p>
+
+                <figure>
+                    <img src="./img/combinado.png" alt="pseudos" />
+                </figure>
+
+            </article>
+
+            <hr>
+
+            <article>
+
+                <h2>Generar contenido con before y after</h2>
+
+                <p>
+                    Hay un par de pseudoelementos especiales que se utilizan junto con la propiedad de <b>content</b> para 
+                    introducir contenido en el documento usando el CSS.
+                </p>
+
+                <p>
+                    Los usos más habituales son los iconos dentro de cadenas de texto los cuales se pueden cambiar la posición. 
+                    En la siguiente imagen podemos ver un ejemplo en el que tenemos en el content una imagen en la que el 
+                    pseudoelemento lo coloca luego del contenedor “box” por declararse “after”. Si el pseudoelemento es “before” 
+                    lo colocaría antes de “box”.
+                </p>
+
+                <figure>
+                    <img src="./img/beforeAfter.png" alt="before y after" />
+                </figure>
+            </article>
+
+        </section>
+
+        <footer>
+
+        </footer>
+    </main>
+</body>
+</html>

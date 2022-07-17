@@ -1,0 +1,65 @@
+body {
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: aliceblue;
+}
+
+main {
+    width: 85%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(55, 185, 55);
+}
+
+h2 {
+    color: rgb(59, 124, 184);
+}
+
+h3 {
+    color: rgb(204, 135, 7);
+}
+
+p {
+    text-align: justify;
+}
+
+.cont-links {
+    display: flex;
+    justify-content: center;
+}
+
+
+ul {
+    list-style: none;
+    font-size: large;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(224, 162, 90);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.tilde {
+    margin-right: 20px;
+}
+
+
+/*============================= Estilos Selector de id ============================= */
+
+#parrafo {
+    color: blue;
+}
+
+.subtitle {
+    color: orangered;
+}

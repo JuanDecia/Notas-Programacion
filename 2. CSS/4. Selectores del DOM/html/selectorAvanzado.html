@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Avanzado</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Selectores avanzados</h1>
+
+            <nav>
+                <a href="../index.html">Volver</a>
+            </nav>
+        </header>
+        
+        <section>
+
+            <article>
+                <p>
+                    El selector universal asterisco <b>"*"</b>, hace parte de los otros selectores que hemos visto anteriormente.
+                    Pero, no depende de ningún otro para funcionar. Cuando se define una regla usando solamente el selector 
+                    universal se aplicará a <b>todos los elementos de un documento HTML</b>.
+                </p>
+
+                <figure>
+                    <img src="../img/SelectorUniversal2.png" alt="Selector Universal" />
+                </figure>
+            </article>
+
+            <hr>
+
+            <article>
+
+                <h2>Selector adyacente</h2>
+
+                <p>
+                    El selector adyacente <b>"+"</b> sirve para referenciar <b>un elemento con la condición estricta que el 
+                    segundo elemento debe estar precedido del primer elemento</b>, es decir, si ponemos el selector <b>h1 + h2</b> 
+                    unicamente seleccionará el elemento <b>"h2" que esté precedido</b> por un elemento <b>h1</b>.
+                </p>
+
+                <code>
+                    h1 + h2{ text-decoration: underline; }
+                </code>
+
+            </article>
+
+            <hr>
+
+            <article>
+
+                <h2>Selector de hermanos</h2>
+
+                <p>
+                    En esta ocasión se repite el símbolo <b>~</b> pero lo aplicaremos de manera diferente. Además,
+                    su trabajo en este caso consiste en <b>seleccionar elementos del mismo nivel</b>.
+                </p>
+
+                <code>
+                    h2 ~ p
+                </code>
+
+                <p>
+                    Seleccionará <b>todas las etiquetas p que esten en el nivel de h2</b>.
+                </p>
+
+            </article>
+
+            <hr>
+
+            <article>
+
+                <h2>Selector de hijo directo</h2>
+
+                <p>
+                    El selector de hijos directo <b>":"</b> hará referencia a <b>todos los elementos que sean hijos directos</b>
+                    de la etiqueta o elementos que especifiquemos. Recuerda que el hijo de un elemento es aquel que está 
+                    contenido dentro de dicho elemento, es decir, si tenemos un elemento <b>"section"</b> y dentro tenemos
+                    varios <b>"article"</b> seleccionará a todos. 
+                </p>
+
+                <code>
+                    article > h2{ text-decoration: underline; }
+                </code>
+
+                <p>
+                    En el caso de la sintaxis se seleccionan todos los elementos h2 que sean hijos de article.
+                </p>
+
+            </article>
+
+            <hr>
+
+            <article>
+
+                <h2>Selector descendente</h2>
+
+                <p>
+                    El selector descendente funciona parecido al selector de hijos, la diferencia está en que el selector 
+                    descendente <b>no es estricto</b>. No exige que sea el primero hijo directo y se pueden referenciar 
+                    muchos elementos. En este caso lo : 
+                </p>
+
+                <code>
+                    ul li{ list-style-type: circle; }
+                </code>
+
+                <p>
+                    En el caso de la sintaxis, aplicaremos a todos los <b>"li"</b> que estén dentro de
+                    la estructura de <b>"ul"</b>.
+                </p>
+                
+            </article>
+
+        </section>
+
+        <footer>
+            Derechos Reservados.
+        </footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id y Clase</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Selectores de Id y Clase</h1>
+
+            <nav>
+                <a href="../index.html">Volver a inicio</a>
+            </nav>
+        </header>
+        <section>
+
+            <article>
+
+                <p>
+                    Este tipo de selectores ayudan a filtrar los elementos y son más específicos con los elementos que
+                    queremos estilizar por medio de CSS.
+                </p>
+
+                <h2 class="subtitle">Selector ID</h2>
+                
+                <p>
+                    Una forma fácil de agregar una <b>"identificación única" o ID</b> a un elemento del DOM es 
+                    a través del atributo <b>"ID"</b>.
+                </p>
+            
+                <p id="parrafo">
+                    Como ejemplo le agregaremos un <b>ID</b> a este mismo párrafo. Para realizar 
+                    buenas prácticas se recomienda usar nombres acordes con el contenido, en este caso pondremos
+                    como ejemplo "parrafo". Una vez hecho asignamos los estilos para el atributo, colocaremos
+                    El color de este párrafo en azul.
+                </p>
+
+                <p>
+                    <b>El selector de "ID" se representa con el signo numeral (#)</b> en la hoja de estilos 
+                    <b>seguido del nombre que le hemos dado al "ID"</b>, en nuestro caso es "#parrafo".
+                </p>
+
+                <p>
+                    Es muy importante saber que no debemos aplicar <b>un mismo id</b> a diferentes elementos,
+                    porque, se considera una mala práctica y además, puede generar un conflicto en los estilos
+                    de nuestro sitio.
+                </p>
+
+            </article>
+
+            <article>
+
+                <h2 class="subtitle">Selector Class</h2>
+
+                <p>
+                    Cuando queremos darles estilos a <b>múltiples elementos</b>, pero no queremos llenar nuestro 
+                    código de id porque podría llegar a ser inmanejable. En la construcción de un proyecto grande 
+                    podemos utilizar otro tipo de selector llamado <b>selector de clase</b>, a diferencia del id,
+                    <b>este selector puede localizar un número de elementos en el DOM y aplicarles las reglas 
+                    o estilos que definamos</b>. Es útil en muchos casos en los que tenemos el mismo 
+                    componente y en todos debe aparecer el mismo aspecto y presentación dentro de la página. 
+                    Para hacer uso del selector de clase debemos incluir el atributo <b>class</b> a nuestros 
+                    elementos HTML y darles un nombre para identificarlos.
+                </p>
+
+                <p>
+                    Si quisiéramos hacer esto con el selector id, tendríamos que generar un id diferente para 
+                    cada elemento y luego referenciar cada uno de ellos en la hoja de estilos ocasionando 
+                    pérdida de mucho tiempo y escritura de código que no necesitamos.
+                </p>
+
+                <p>
+                    Para este ejemplo colocaremos este selector a las etiquetas h2 de esta página y cambiaremos
+                    el estilo del color de las letras a naranja.
+                </p>
+
+                <p>
+                    Luego, en la <b>sección de estilos</b> se selecciona con <b>un punto (.)</b> seguido del nombre
+                    que le hemos dado a la clase, en nuestro caso va a ser <b>.subtitle</b>, y le aplicamos 
+                    los estilos que la página requiera.
+                </p>
+            </article>
+
+        </section>
+        <footer>
+
+        </footer>
+    </main>
+</body>
+</html>

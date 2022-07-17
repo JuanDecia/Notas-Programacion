@@ -1,0 +1,50 @@
+body {
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: aliceblue;
+}
+
+main {
+    width: 85%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(55, 185, 55);
+}
+
+h2 {
+    color: rgb(59, 124, 184);
+}
+
+h3 {
+    color: rgb(204, 135, 7);
+}
+
+.parrafo {
+    font-weight: bold;
+}
+
+    /* EJEMPLOS */
+
+div :first-child {
+    font-weight: bold;
+    color: rgb(165, 138, 106);
+}
+
+.code-hover:hover {
+    color: green;
+    font-size: large;
+}
+
+.focus-text:focus {
+    margin-top: 20px;
+    width: 160px;
+    height: 140px;
+}
+
+.pseudoElemento::first-line {
+    font-weight: bold;
+    color: green;
+}
