@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos para texto</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    
+    <main>
+
+        <header>
+            <h1>Estilos para textos</h1>
+        </header>
+
+        <section>
+
+            <article>
+
+                <p>
+                    Cuando estamos trabajando en CSS tenemos la posibilidad de cambiar el formato estándar del texto que 
+                    nos ofrece el navegador, estos estilos pueden ser la posición, diseño y propiedades.
+                </p>
+
+                <p>
+                    Es importante saber que las fuentes varían mucho en los diferentes sistemas operativos y que puede ser 
+                    posible que una fuente no esté disponible de un sistema operativo a otro. Hay un conjunto de tipografías 
+                    mínimas existentes (Arial, Georgia y Verdana) son los estándares de internet y están soportadas para todos 
+                    los S.O del mundo.
+                </p>
+
+                <p>
+                    Para acceder a estos cambios debemos utilizar las palabras claves dentro de los selectores de los elementos 
+                    que nos ofrece CSS. Para estos cambios podemos aplicar:
+                </p>
+
+            </article>
+
+            <article>
+
+                <h2>Text Align</h2>
+
+                <p>
+                    Esta propiedad de texto nos permite alinear el texto en el contenedor donde se encuentra. 
+                    La propiedad cuenta con los siguientes valores a aplicar:
+                </p>
+
+                <ul>
+                    <li>
+                        <b>Left</b>: Alinea el texto a la izquierda del contenedor.
+                    </li>
+                    <li>
+                        <b>Right</b>: Alinea el texto a la derecha del contenedor.
+                    </li>
+                    <li>
+                        <b>Center</b>: Alinea el texto al centro del contenedor.
+                    </li>
+                    <li>
+                        <b>Justify</b>: Justifica el texto en el contenedor.
+                    </li>
+                </ul>
+
+                <p>
+                    Por ejemplo, si tenemos un contenedor de h3 que ocupa el 100% del su contenedor padre, el text align 
+                    desplaza el texto que contiene el h3 a lo largo de su "width". En el siguiente ejemplo centraremos
+                    el texto segun el ancho del contenedor que lo contiene.
+                </p>
+
+                <h3 class="ejemploAlign">Soy un subtitulo h3</h3>
+
+            </article>
+
+            <article>
+
+                <h2>Text decoration</h2>
+
+                <p>
+                    Esta propiedad de texto nos permite decorar el texto al que estamos seleccionando, estas decoraciones son 
+                    las siguientes y se describen con estos valores:
+                </p>
+
+                <ul>
+                    <li>
+                        <b>Underline</b>: Subraya el texto del contenedor seleccionado con una línea recta.
+                    </li>
+                    <li>
+                        <b>Overline</b>: Subraya la parte superior del texto seleccionado con una línea recta.
+                    </li>
+                    <li>
+                        <b>Line-through</b>: Tacha el texto del contenedor seleccionado.
+                    </li>
+                </ul>
+
+                <p>
+                    Para demostrar un ejemplo de la teoría anterior vamos a subrayar un texto corto con una propiedad
+                    <b>underline</b>. Adenás, lo centraremos con <b>text align</b>.
+                </p>
+
+                <h3 class="subrayado">Soy un h3 subrayado</h3>
+
+            </article>
+            
+            <article>
+
+                <h2>Text transform</h2>
+
+                <p>
+                    Esta propiedad especifica el cambio entre mayúsculas y minúsculas del texto de un elemento. Puede ser usada 
+                    para que un texto aparezca completamente en mayúsculas, en minúsculas o con la primera letra de cada en 
+                    mayúscula. Los valores para estos cambios son los siguientes:
+                </p>
+
+                <ul>
+                    <li>
+                        <b>Capitalize</b>: Fuerza a que la primera letra de cada palabra sea convertida a mayúscula.
+                    </li>
+                    <li>
+                        <b>Uppercase</b>: Fuerza a que todos los caracteres sean convertidos a mayúscula.
+                    </li>
+                    <li>
+                        <b>Lowercase</b>: Fuerza a todos los caracteres a convertirse en minúscula.
+                    </li>
+                    <li>
+                        <b>None</b>: previene a que sea cambiado el tamaño de los caracteres.
+                    </li>
+                </ul>
+
+                <p>
+                    Para el ejemplo anterior modificaremos todas los comienzo de palabras en mayúsculas utilizando
+                    la propiedad <b>text transform</b>. Además, centraremos el texto con <b>text align</b>.
+                </p>
+
+                <h3 class="capitalize">Soy un h3 con mayúsculas en cada palabra</h3>
+            </article>
+
+        </section>
+
+        <hr />
+
+        <section>
+
+            <article>
+
+                <h2>Font Properties</h2>
+
+                <p>
+                    Las propiedades de las fuentes son las que permiten controlar el tamaño, tipo, grosor o estilo de las 
+                    letras entre otras cosas.
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>Font Family</h3>
+
+                <p>
+                    Comenzamos por la propiedad font-family que define una fuente o familia de fuentes, con un orden de 
+                    prioridad, para utilizar en un elemento seleccionado. En el caso de aplicar más de un valor se separa 
+                    por “,” (comas).
+                </p>
+
+                <p class="verdana">
+                    Para ejemplificar la teoría anterior aplicaremos otra fuente de letras a este mismo párrafo
+                    utilizando esta respectiva propiedad. Vamos a colocar la fuente <b>arial o verdana</b>
+                    que son las más utilizadas en la web.
+                </p>
+
+                <p>
+                    Cuando creamos el ejemplo podemos observar que automáticamente se colocan las siguientes fuentes
+                    <b>Verdana, Geneva, Tahoma, sans-serif</b>. Esto sucede por si algún navegador no lee la que está
+                    declarada en primer lugar, pasa a la segunda y así sucesivamente hasta poder renderizar una fuente
+                    disponible.
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>Font Style</h3>
+
+                <p>
+                    Esta propiedad permite definir el aspecto de una familia tipográfica entre los valores:
+                    <b>normal, italic, oblique, entre otros</b>.
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>Font Weight</h3>
+
+                <p>
+                    Esta propiedad agrega una anchura a los caracteres, por defecto, el valor de esta propiedad es de <b>400</b> 
+                    en el caso que deseemos convertir las letras a “negrita” con esta propiedad podemos usar el valor 
+                    recomendado de <b>600 o 700</b>. También, podemos usar el valor de “bold”.
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>Font size</h3>
+
+                <p>
+                    Esta propiedad modifica el tamaño de la fuente, los valores que puede recibir son en <b>pixeles, em, tallas o porcentaje</b>
+                    . Debemos tener en cuenta que en MAC la tipografía se renderiza más pequeña que en Windows. Es importante 
+                    cuando trabajamos en diseños adaptativos colocar los valores de las letras en em ya que siempre se 
+                    adaptarán a su viewport.
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>Letter Spacing</h3>
+
+                <p>
+                    Para controlar el <b>espacio existente entre las letras</b> se usa la propiedad <b>letter-spacing</b> y su 
+                    medida debe entregarse en píxeles (5px).
+                </p>
+
+                <p>
+                    Si queremos controlar el espacio que existe entre las palabras debemos utilizar Word-spacing de 
+                    manera similar a la propiedad anterior.  
+                </p>
+            </article>
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>Sombras y Efectos</h2>
+
+            <p>
+                La <b>sombra de texto</b> en CSS es una repetición o copia del texto, pero con un leve desplazamiento para 
+                generar el efecto usando preferiblemente un tono de color distinto del original. Este efecto se crea a 
+                través de la propiedad CSS llamada <b>text-shadow</b> y viene acompañada de varios parámetros:
+            </p>
+
+            <code>
+                Text-shadow: 1px 2px 3px red;
+            </code>
+
+            <p>
+                Para que esta copia generada sea visible debemos desplazarla hacia algún sentido y lo haremos con 
+                los dos primeros argumentos que tiene esta propiedad. Si escribimos <b>1px</b> en <b>primer parámetro</b>
+                la copia generada se <b>desplazará hacia la derecha</b>. En <b>2px</b> (segundo) se generará un 
+                desplazamiento <b>vertical hacia abajo</b>. El <b>3px</b> hace referencia al <b>blur o desenfoque</b> que en este 
+                caso será de 3px. El argumento final (red) especifica un argumento para la copia. Cabe destacar que si 
+                queremos más copias del argumento principal (ej: 5.), no será necesario agregar la propiedad <b>text-shadow</b>  
+                5 veces. Solamente colocaremos una coma después de los valores de la primera sombra y repetiremos 
+                los argumentos tantas veces como se requiera.
+            </p>
+
+            <p>
+                A continuación, aplicaremos a un texto de ejemplo la propiedad nombrada anteriormente.
+            </p>
+
+            <p class="sombraEfecto">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos expedita libero magnam, vitae aut 
+                iusto harum blanditiis consectetur iure labore, nulla provident odit molestias at? Perspiciatis rerum 
+                sit eveniet quis.
+            </p>
+        </section>
+    </main>
+</body>
+</html>

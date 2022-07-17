@@ -22,6 +22,10 @@ h3 {
     color: rgb(204, 135, 7);
 }
 
+p {
+    text-align: justify;
+}
+
 .parrafo {
     font-weight: bold;
 }
