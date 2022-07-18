@@ -1,0 +1,42 @@
+body {
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: aliceblue;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(55, 185, 55);
+}
+
+h2 {
+    color: rgb(59, 124, 184);
+}
+
+.caja {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+.color-color {
+    background-color: aqua;
+}
+
+.color-rgb {
+    background-color: rgb(70, 70, 194);
+}
+
+.color-rgba{
+    background-color: rgba(70, 70, 194, 0.404);
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores Digitales</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    
+    <main>
+
+        <header>
+            <h1>Colores Digitales</h1>
+        </header>
+
+        <section>
+
+            <article>
+                <p>
+                    El color digital son números en computadores ordenados de tal forma que al ser representados en dispositivos 
+                    como monitores (RGB) o dispositivos de saluda como impresoras (CMYK) los percibimos como color.
+                </p>
+            </article>
+
+            <article>
+                <h2>Color</h2>
+
+                <p>
+                    Cuando trabajamos con los colores en CSS tenemos diferentes propiedades las cuales le aplican estilo de 
+                    colores a estas mismas. Generalmente la propiedad color se encuentra con las propiedades avanzadas en las 
+                    que no hay que dar muchos detalles para aplicarlos.
+                </p>
+
+                <p>
+                    En el caso que utilicemos colores sencillos debemos llamarlo por su nombre (en inglés). También podemos 
+                    buscar páginas online en donde encontraremos el nombre de todos los colores que podamos aplicar, son 140 
+                    colores que podemos aplicar con nombre.
+                </p>
+
+                <p>
+                    Para ejemplificar esta teoría, crearemos un contenedor con una estructura cuadrada y le aplicaremos un
+                    color base de fondo.
+                </p>
+
+                <div class="caja color-color" ></div>
+
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>RGB</h2>
+
+                <p>
+                    Cuando aplicamos un color en RGB estamos aplicando una combinación de colores que estos colores son 
+                    (en inglés) red, green, blue. La medición de estos colores es numérica y dependiendo el valor numérico 
+                    que le demos a estos valores es la graduación que aplica a la combinación. 
+                </p>
+
+                <p>
+                    Para aplicar esta propiedad debemos colocar la palabra clave rgb() y dentro los paréntesis colocaremos 
+                    los valores numéricos separados por “,” (coma). Debemos tener en cuenta que los colores respetan el orden 
+                    del nombre de la propiedad (red, green, blue).
+                </p>
+
+                <p>
+                    En el caso que tengamos el valor (0, 0, 0) estamos diciendo que no hay combinaciones de colores y por 
+                    ende nos retornaría el color “negro”, es decir, estamos aplicando una ausencia de color. Debemos saber 
+                    que estos colores van de 0 hasta el 255 siendo el 255 la tonalidad más fuerte, es decir, que si colocamos 
+                    este valor a uno de RGB y los demás los dejamos en 0 nos retornaría el color natural que lo representa. 
+                    Ejemplo: 0, 0, 255 (retorna blue).
+                </p>
+
+                <p>
+                    Para ejemplificar esta teoría, crearemos un contenedor con una estructura cuadrada y le aplicaremos un
+                    color base de fondo en RGB.
+                </p>
+
+                <div class="caja color-rgb"></div>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>RGBA</h2>
+
+                <p>
+                    Esta propiedad de color que puede ser implementada en la hoja de estilos CSS permite añadirle trasparencia 
+                    (representa la letra a “Alpha”) al texto en el último valor agregado con “.”.
+                </p>
+
+                <p>
+                    Ejemplo: rgba(68, 241, 15, 0.5) el último valor puede ser de 0 a 1. Teniendo en cuenta que 0 es totalmente 
+                    trasparente (el texto no se va a ver) y 1 no hay trasparencia (se ve igual). Los valores que deberíamos 
+                    manejar son decimales como por ejemplo 0.5 que es una trasparencia media.
+                </p>
+
+                <p>
+                    Para ejemplificar esta teoría, aplicaremos el mismo color que el ejemplo anterior, pero en este caso
+                    colocaremos una trasparencia.
+                </p>
+
+                <div class="caja color-rgba"></div>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Formato de colores</h2>
+
+                <div class="contenedor">    
+                    <figure>
+                        <img src="./img/espacioColor.jpg" alt="espacioColor" />
+                    </figure>
+                    <figure>
+                        <img src="./img/lab.png" alt="lab" />
+                    </figure>
+                    <figure>
+                        <img src="./img/colores.jpg" alt="colores" />
+                    </figure>
+                    <figure>
+                        <img src="./img/hexa.jpg" alt="hexadecimal" />
+                    </figure>
+                </div>
+            </article>
+        </section>
+
+        <footer>
+
+        </footer>
+    </main>
+</body>
+</html>
