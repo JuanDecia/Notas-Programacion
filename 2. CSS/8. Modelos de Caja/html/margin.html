@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    
+    <main>
+
+        <header>
+            <h1>Margin</h1>
+
+            <nav>
+                <a href="../index.html">Volver a inicio</a>
+            </nav>
+        </header>
+
+        <section>
+
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    Es el <b>espacio</b> que existe del <b>borde de la caja</b> hacia afuera. Margin tiene un comportamiento especial, 
+                    recibe mínimo un valor y máximo cuatro. Los <b>valores</b> de margin pueden estar en px, vw/ vh 
+                    (escala de viewport) o porcentaje (%). La sintaxis sería la siguiente:
+                </p>
+
+                <figure>
+                    <img src="../img/margin.jpg" alt="margin" />
+                </figure>
+
+                <p>
+                    Como podemos observar en la sintaxis están declarados los <b>cuatro valores</b> de margin los cuales
+                    comienzan desde <b>top</b> y siguiendo la <b>orientación del reloj</b> hacia la izquierda.
+                </p>
+
+                <p>
+                    A continuación, podemos ver una imagen descriptiva en donde podemos encontrar a margin en nuestra
+                    caja contenedora:
+                </p>
+
+                <figure>
+                    <img src="../img/margin2.png" alt="margin 2" />
+                </figure>
+
+                <p>
+                    La caja contenedora tiene lugar desde el <b>borde de “padding”</b> (amarillo) siendo que <b>margin</b> (celeste)
+                    es el espacio que este nos ofrece para <b>separar los bordes</b> de los elementos que se encuentren
+                    agrupados alrededor.
+                </p>
+
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Valor Auto</h2>
+
+                <p>
+                    Entre los valores numéricos que puede recibir margin también nos encontramos con <b>“auto”</b> que toma como 
+                    referencia las posiciones <b>“right” y “left”</b> del <b>viewport</b> para <b>centrar el contenedor</b>, 
+                    cabe mencionar que en este aspecto no estamos utilizando los valores “top” y “bottom”. En el caso de que
+                    deseemos especificar la posición <b>“vertical”</b> del contenedor debemos aplicar los valores respectivos
+                    que anteriormente mencionamos (top y bottom).
+                </p>
+
+                <p>
+                    Si deseamos aplicar estos nuevos valores, debemos declarar dos valores dentro del contenido que le
+                    estamos dando a margin. Es decir, primero colocaremos las posiciones top y bottom y luego rigth y left. 
+                    Nos quedaría una sintaxis como la siguiente:
+                </p>
+
+                <code>Margin: 15px auto</code>
+
+                <p>
+                    Donde, 15px representa el espaciado de top y bottom y auto representa el espaciado de right y left.
+                    Si prestamos atención a la teoría anterior podemos usar los 4 valores en 2 declaraciones.
+                </p>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Margin con un valor</h2>
+
+                <p>
+                    Si colocamos un <b>único valor</b> en margin este tomara el mismo para todas las coordenadas
+                    que contiene.
+                </p>
+
+                <p>
+                    Existen tres maneras diferentes para colocar un valor a una coordenada. La primera es como explicamos
+                    anteriormente, solo aplicando el valor modificará el espacio en cada uno de los lados. La segunda es
+                    utilizando el método de aplicar las 4 coordenadas en la que solo a una le pasaremos el valor a modificar
+                    y las demás tienen que estar en 0 y la tercera, podemos utilizar el nombre de la coordenada seguido de
+                    margin, en estos nombres son: top, right, bottom y left.
+                </p>
+
+                <ul>
+                    <li>Margin: 10px (aplica 10px en todos los bordes).</li>
+                    <li>Margin: 0 10px 0 0 (aplica solo 10px en el borde derecho).</li>
+                    <li>Margin-bottom: 10px (aplica solo 10px en el borde inferior).</li>
+                </ul>
+
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Margin con dos valores</h2>
+
+                <p>
+                    Si hacemos el uso de dos valores en margin las coordenadas especificadas son: primero “vertical” 
+                    (top y bottom) y segundo “horizontal” (right y left). Ambas posiciones toman la posición especificada
+                    en el margin por igual tanto en la posición vertical como horizontal, es decir, si tenemos margin 20px
+                    40px la posición vertical separa los contenidos (top y bottom) en 20px y la posición horizontal
+                    (right y left) separa los contenidos en 40px.
+                </p>
+
+                <p>
+                    También, tenemos la posibilidad o podemos encontrarnos con el valor “auto” en uno de los dos valores
+                    lo cual centraría el contenido en el que especifiquemos.
+                </p>
+
+                <h3>Ejemplo</h3>
+
+                <p>
+                    Contenedores sin margin aplicado:
+                </p>
+
+                <figure>
+                    <img src="../img/sinMargin.png" alt="sin margin" />
+                </figure>
+
+                <p>
+                    A continuación, vamos a ver el mismo ejemplo, pero le hemos aplicado a los contenedores un margin
+                    left de 20px para correr los márgenes exteriores a la izquierda y también le hemos agregado un 
+                    margin top de 20 px para darle un espaciado en la parte superior. Para ver los cambios que estamos 
+                    relizando hemos colocado un border de 1px solid black al contendor principal que es body.
+                </p>
+
+                <figure>
+                    <img src="../img/margin aplicado.png" alt="margin aplicado" />
+                </figure>
+
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Ver más ejemplos de margin</h2>
+
+                <a class="margin-ejemplo" href="../../8. Modelos de Caja/html/ejemplosMargin/ejemploMarginUno.html">Ejemplo #1</a>
+                <a class="margin-ejemplo" href="../../8. Modelos de Caja/html/ejemplosMargin/ejemploMarginDos.html">Ejemplo #2</a>
+
+            </article>
+
+        </section>
+
+        <footer>
+
+        </footer>
+    </main>
+
+</body>
+</html>

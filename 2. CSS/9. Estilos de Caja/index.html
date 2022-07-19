@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos en contenedores</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Estilos en los contenedores</h1>
+        </header>
+
+        <section>
+
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    En la teoría del tema anterior habiamos visto como manipular los <b>espacios</b> entre y
+                    dentro de los contenedores. Esto se lograba gracias a las propiedades de <b>margin</b> y
+                    <b>padding</b>. Ahora, vamos a ver como aplicar <b>estilos</b> a los bordes de los contenedores. Esta
+                    práctica nos va a resultar muy útil a la hora de manipular el espacio en el DOM, ya que,
+                    gracias a los estilos que le daremos a los bordes de los contenedores, vamos a poder visualizar
+                    el tamaño que ocupa el mismo dentro del sitio.
+                </p>
+
+                <p>
+                    Adicionalmente, vamos a ver como aplicar estilos de sombreados a los contenedores para que 
+                    podamos embellecer los estilos que le damos a los mismos y nuestro sitio quede mucho más
+                    agradable a la vista del usuario.
+                </p>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Border</h2>
+
+                <p>
+                    Esta propiedad establece el <b>estilo de línea para los cuatro lados del borde de un elemento</b>. 
+                    Debemos saber que cuando estamos haciendo referencia a la porpiedad <b>"border"</b> estamos hablando de 
+                    una <b>“propiedad abreviada”</b>. Esto se debe a que border puede aplicar muchos estilos en una sola declaración. Pero, en este 
+                    caso puntual vamos a hacer referencia a <b>“border-style”</b> que es enmarcado que nosotros les damos a 
+                    los contenedores para visualizarlos.
+                </p>
+
+                <p>
+                    Esta propiedad puede recibir hasta 4 valores comenzando siempre desde la parte top siguiendo el sentido
+                    del reloj hacia la derecha, es decir: right, bottom y por último left. Esto debemos saberlo para manipular 
+                    los bordes cuando no es necesario que todos tengan el mismo valor.
+                </p>
+
+                <h3>Sintaxis</h3>
+
+                <p>
+                    El siguiente ejemplo visualizaremos la <b>sintaxis de border</b>, recordemos que border es una propiedad
+                    abreviada en la misma podemos darle diferentes tipos de argumentos como “tamaño” “tipo” y “color”. 
+                    Como podemos ver, puede recibir una de estas o como máximo las 3.
+                </p>
+
+                <p>
+                    Primero hacemos el llamado del uso de la propiedad <b>“border”</b>. Luego es recomendable determinar
+                    el <b>“tamaño”</b> del borde en "px" para visualizar el contenedor (el valor por defecto de este estilo 
+                    es “none”) recordemos que si no lo hacemos no podemos visualizar el contorno del contenedor.
+                </p>
+
+                <p>
+                    Seguido, debemos especificar el tipo de <b>“border”</b> que vamos a utilizar para visualizar el contorno, 
+                    recordemos que para este estilo tenemos diferentes valores. Usualmente se suele trabajar para visualizar 
+                    el contorno es <b>“solid”</b>.
+                </p>
+
+                <p>
+                    El ultimo valor que podemos utilizar en esta propiedad es <b>“color”</b>, que al aplicar este estilo es el 
+                    color que visualizaremos el contorno. Su valor por defecto es <b>“black”</b>, pero, si estamos trabajando 
+                    con varios contornos al mismo tiempo es recomendable usar otros colores para manipular mejor el 
+                    moldeado de las cajas.
+                </p>
+
+                <figure>
+                    <img src="./img/sinaxisBorderUno.jpg" alt="sintaxis uno" />
+                    <img src="./img/sintaxisDos.jpg" alt="Sintaxis dos" />
+                </figure>
+
+                <h3>Valores en los tipos de bordes</h3>
+
+                <p>
+                    Anteriormente nombramos que los bordes podían tener <b>diferentes estilos</b> y estos podían ser
+                    <b>declarados</b> y <b>manipulados</b> con la propiedad de <b>"style"</b>. A continuación,
+                    vamos a visualizar algunos de los estilos que podemos usar con esta propiedad:
+                </p>
+
+                <ul>
+                    <li>
+                        <b>None</b>: es el valor que viene por defecto en el navegador en el cual no podemos visualizar los 
+                        bordes de los contenedores.
+                    </li>
+                    <li>
+                        <b>Dotted</b>: este valor aplica al borde una línea punteada.
+                    </li>
+                    <li>
+                        <b>Inset</b>: este valor crea un sombreado en la parte superior e izquierda del contenedor ancho.
+                    </li>
+                    <li>
+                        <b>Outset</b>: crea un sombreado ancho en la parte derecha e inferior del contenedor.
+                    </li>
+                    <li>
+                        <b>Dashed</b>: este valor crea un borde entre líneas.
+                    </li>
+                    <li>
+                        <b>Double</b>: este valor crea una doble línea solida en el contorno del contenedor.
+                    </li>
+                    <li>
+                        <b>Solid</b>: este valor crea una línea solida en el contorno del contenedor.
+                    </li>
+                    <li>
+                        <b>Grove</b>: este valor crea un efecto como “inset” pero en todo el contorno del contenedor.
+                    </li>
+                    <li>
+                        <b>Grovegrove o doublegrove</b>: crea un contorno solido ancho enmarcado en todo el contorno del contenedor.
+                    </li>
+                    <li>
+                        <b>Ridge</b>: crea un contorno sombreado en todo el contenedor.
+                    </li>
+                </ul>
+
+                <h3>A tener en cuenta</h3>
+
+                <ul>
+                    <li>
+                        Cuando se especifica un valor, se aplica el mismo estilo a los cuatro lados.
+                    </li>
+                    <li>
+                        Cuando se especifican dos valores, el primer estilo se aplica a la parte superior e inferior, 
+                        el segundo a la izquierda y a la derecha.
+                    </li>
+                    <li>
+                        Cuando se especifican tres valores, el primer estilo se aplica a la parte superior, el segundo a la
+                        izquierda y derecha y el tercero a la parte inferior.
+                    </li>
+                    <li>
+                        Cuando se especifican cuatro valores, los estilos se aplican a la parte superior, derecha, inferior e
+                        izquierda en ese orden.
+                    </li>
+                </ul>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Efectos en Contenedores</h2>
+
+                <h3>Border Radius</h3>
+
+                <p>
+                    Vamos a comenzar con el efecto de esquinas redondas para las cajas. Este efecto se logra con la 
+                    propiedad border-radius. A continuación, conoceremos un poco de su sintaxis:
+                </p>
+
+                <code>
+                    border-radius: 5px; <span>en Chrome</span>
+                </code>
+
+                <p>
+                    Como esta propiedad <b>no es accesible a los diferentes navegadores</b>, debemos agregar manuealmente
+                    a nuestra hoja CSS las propiedades para los diferentes navegadores:
+                </p>
+
+                <code>{-moz-border-radius: 5px; } (Firefox)</code> <br />
+                <code>{-webkit-border-radius: 5px; } (Safari)</code>
+
+                <p>
+                    Además, la propiedad <b>border-radius</b> puede especificarse en cuatro formas:
+                </p>
+
+                <ul>
+                    <li>
+                        <b>Un valor</b>: todas las esquinas tienen el mismo radio.
+                    </li>
+                    <li>
+                        <b>Dos valores</b>: el primero se utiliza para el radio de las esquinas superior izquierda e 
+                        inferior derecha. El segundo valor se aplica al radio de las esquinas.
+                    </li>
+                    <li>
+                        <b>Tres valores</b>: el primero se aplica al radio de la esquina superior izquierda, el segundo valor 
+                        a la esquina superior derecha y la esquina inferior izquierda, el tercero se aplica al radio inferior 
+                        de la esquina derecha.
+                    </li>
+                    <li>
+                        <b>Cuatro Valores</b>:  el primer valor se aplica al radio de la esquina superior izquierda, el segundo 
+                        al borde superior derecho, el tercero al borde inferior derecho y, el cuarto al borde inferior izquierdo.
+                    </li>
+                </ul>
+
+                <figure>
+                    <img src="./img/estilosBordes.png" alt="Estilos bordes" />
+                </figure>
+
+                <h3>Box Shadow</h3>
+
+                <p>
+                    La propiedad CSS <b>"box-shadow"</b> añade efectos de <b>sombra</b> alrededor del marco de un elemento. Se pueden 
+                    definir múltiples efectos separados por comas. La caja de la sombra se describe por los desplazamientos 
+                    en <b>X e Y</b>, los radios de desenfoque y dispersión, y el color relativos al elemento.
+                </p>
+
+                <p>
+                    La propiedad box-shadow permite proyectar una <b>sombra difuminada</b> desde el marco de casi cualquier elemento. 
+                    Si border-radius es especificado en un elemento con la propiedad box-shadow, la sombra adopta la misma 
+                    curva en las esquinas. El z-orden de múltiples cajas de sombra es la misma que de múltiples sombras de 
+                    texto (la primera sombra definida se ubica hasta arriba).
+                </p>
+
+                <figure>
+                    <img src="./img/tiposShadow.png" alt="tipos shadow" />
+                </figure>
+
+                <h4>Sintaxis: </h4>
+
+                <figure>
+                    <img src="./img/sintaxisShadow.png" alt="sintaxis shadow" />
+                </figure>
+
+                <ul>
+                    <li>
+                        Dos, tres, o cuatro valores <b>"lenght"</b>.
+                        <ul>
+                            <li>
+                                Si solo dos valores son definidos, son interpretados como valores offset-x y offset-y.
+                            </li>
+                            <li>
+                                Si un tercer valor es dado, es interpretado como un blur-radius.
+                            </li>
+                            <li>
+                                Si un cuarto valor es dado, es interpretado como un spread-radius.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Opcionalmente, la palabra clave inset.
+                    </li>
+                    <li>
+                        Opcionalmente, el valor color.
+                    </li>
+                </ul>
+
+            </article>
+
+        </section>
+
+        <footer>
+
+        </footer>
+    </main>
+</body>
+</html>

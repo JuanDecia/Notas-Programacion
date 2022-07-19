@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos de Cajas</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    
+    <main>
+
+        <header>
+            <h1>Introducción a modelos de cajas</h1>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    Uno de los conceptos fundamentales del lenguaje CSS es el <b>modelo de caja</b> (Box Model), debido a que todos 
+                    los elementos HTML <b>son tratados como si fueran cajas</b>  que se organizan jerárquicamente unas dentro de otras, 
+                    siendo la caja principal la que corresponde a la etiqueta <b>html</b> del documento web.
+                </p>
+
+                <p>
+                    Cada etiqueta HTML representa una caja con propiedades especiales que son fundamentales a la hora de 
+                    realizar posicionamientos. Estas propiedades son: 
+                </p>
+
+                <ul>
+                    <li>
+                        <b>Margin</b>: Es el espacio que se genera desde el borde de la caja hacia afuera.
+                    </li>
+                    <li>
+                        <b>Border</b>: Es la línea que se genera alrededor de la caja. En orden jerárquico, border se 
+                        encuentra más abajo que margin.
+                    </li>
+                    <li>
+                        <b>Padding</b>: El padding o relleno es el espacio que se genera dentro de la caja, entre el borde y el contenido.
+                    </li>
+                    <li>
+                        <b>Width & Height</b>: representan el ancho y alto de la caja respectivamente.
+                    </li>
+                </ul>
+
+                <figure>
+                    <img src="./img/modeloCaja1.jpg" alt="Modelo Caja" />
+                    <img src="./img/modeloCaja2.jpg" alt="Modelo Caja 2" />
+                </figure>
+
+                <p>
+                    Estas propiedades son útiles para <b>separar y unir elementos</b>, para <b>agregar espacios</b> entre el
+                    <b>contenido de una caja de su borde</b> y para <b>configurar sus bordes de las cajas</b> con el 
+                    fin de mejorar su visualización.
+                </p>
+
+                <p>
+                    Algunos modelos de cajas tienen su tamaño <b>pre visualizado</b> como etiquetas <b>p</b>, <b>h1</b>, en sí son 
+                    las <b>etiquetas que ya tienen un contenido dentro</b>, es decir, con un width y height por defecto que establece el 
+                    navegador.
+                </p>
+
+                <p>
+                    En el caso que tengamos una etiqueta sin contenido como <b>div</b>, <b>section</b>, <b>footer</b>, y 
+                    tenemos la necesidad de visualizarlas <b>debemos obligatoriamente agregarle un width y height</b> para establecer 
+                    una forma que contendrá ese contenedor y así poder visualizarla, sin hacer estos pasos el navegador no 
+                    mostrará ningún detalle.
+                </p>
+
+                <figure>
+                    <img src="./img/modeloCaja3.jpg" alt="Modelo Caja 3" />
+                </figure>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Suma de valores del contenido de la caja</h2>
+
+                <p>
+                    Según el modelo de caja, el width (ancho) y el alto (height) de un elemento no corresponden solamente al 
+                    valor de las propiedades width y height, sino que están determinados por la <b>suma de los valores</b> del margen, 
+                    el relleno, los bordes y el ancho o el alto, según el caso.
+                </p>
+
+                <p>
+                    Así, por ejemplo, el <b>ancho total</b> del elemento será:
+                </p>
+
+                <code>
+                    margin-left: 30px + border: 10px + padding-left: 50px + width: 300px + padding-right:  50px + border: 10px + margin-right: 30px = 480px
+                </code>
+
+                <p>
+                    El valor del alto de la caja se determina de la misma manera.
+                </p>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Más acerca de los modelos de caja</h2>
+
+                <ul>
+                    <li>
+                        <a href="../8. Modelos de Caja/html/margin.html">
+                            <img class="tilde" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALVJREFUSEvtlNENgzAMBY8NugkdgU7UEWg3YCM6QtmkI6AngeQGGhsKf8kXKOFOfnaoOHlVJ/MpAjfhEtEc0QW4A880syMiErwHrpPgYSX/Cix8ABrgc5TAhUu0t4IQ3BMoyy4tGQjDcwLBW+AN3IxkEzwnEOgF1Eai8/O0rDZ07VrnepBK9L1GMQz3eqB9K9H7JnhEYCV6Xsy597eLjqkq0fq6RB48WkGE8/NMtILdkiJwoxsBhvUmGXE1+WEAAAAASUVORK5CYII=" />
+                            Ver conceptos de Margin
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../8. Modelos de Caja/html/padding.html">
+                            <img class="tilde" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALVJREFUSEvtlNENgzAMBY8NugkdgU7UEWg3YCM6QtmkI6AngeQGGhsKf8kXKOFOfnaoOHlVJ/MpAjfhEtEc0QW4A880syMiErwHrpPgYSX/Cix8ABrgc5TAhUu0t4IQ3BMoyy4tGQjDcwLBW+AN3IxkEzwnEOgF1Eai8/O0rDZ07VrnepBK9L1GMQz3eqB9K9H7JnhEYCV6Xsy597eLjqkq0fq6RB48WkGE8/NMtILdkiJwoxsBhvUmGXE1+WEAAAAASUVORK5CYII=" />
+                            Ver conceptos de Padding
+                        </a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
