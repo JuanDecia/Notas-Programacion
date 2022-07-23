@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outside</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <article>
+                <h1>Display Outside</h1>
+
+                <nav>
+                    <a href="../index.html">Volver a Inicio</a>
+                </nav>
+            </article>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+            </article>
+            <article>
+                <p>
+                    Cuando nos estamos refiriendo a “display outside” nos referimos al diseño fuera del contenedor, 
+                    generalmente estos diseños se les da a los contenedores principales o contenedores padres, porque, es como 
+                    sus hijos van a ocupar el espacio dentro del contenedor. Cuando nos referimos a contenedores padres nos 
+                    referimos a las etiquetas body, section, main, footer o algún div que esté cumpliendo con esta función.
+                </p>
+            </article>
+        </section>
+
+        <hr />
+
+        <section>
+            <article>
+                <h2>Valores Outside</h2>
+            </article>
+
+            <article>
+                <h3>Block</h3>
+
+                <div>
+                    <p>
+                        El valor block es el valor por defecto del navegador a declarar un contenedor. Este valor genera un 
+                        cuadro de elemento de bloque. Es decir, el valor block aplicado a un elemento hace que se ocupe todo 
+                        el espacio disponible hasta el final de su línea, aunque sus contenidos no ocupen todo el espacio.
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="../img/block.png" alt="block" />
+                </figure>
+
+                <div>
+                    <p>
+                        Como podemos observar en el ejemplo, el elemento block es el que esta con el border black ocupando 
+                        todo el ancho del contenedor hasta el final.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Inline</h3>
+
+                <div>
+                    <p>
+                        Este valor hace generar al elemento uno o más cuadros de elemento en línea. Es decir, solo ocupa el 
+                        espacio necesario para mostrar los contenidos. En el ejemplo de la imagen anterior, los contenedores 
+                        ocupados con “border dashed red” tienen como valor en su elemento padre “display inline”.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h2>Ejemplos y Comparaciones</h2>
+            </article>
+
+            <div>
+                <p>
+                    Tengamos en cuenta que para los siguientes ejemplos y comparaciones como la ilustración anteriormente 
+                    mostrada hacemos uso de un contenedor principal seguido de dos contenedores hijos que uno representa un 
+                    párrafo y los siguientes unos links.
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    Si se aplica la propiedad display: inline al párrafo del ejemplo anterior, su caja se convierte en un 
+                    elemento en línea y por tanto sólo ocupa el espacio necesario para mostrar sus contenidos. Observemos 
+                    el ejemplo a continuación:
+                </p>
+            </div>
+
+            <figure>
+                <img src="../img/inline.png" alt="Inline" />
+            </figure>
+
+            <div>
+                Para visualizar más claramente el cambio en el tipo de caja, el siguiente ejemplo, muestra un mismo 
+                párrafo más largo con display: block y display: inline en diferentes contenedores:
+            </div>
+
+            <figure>
+                <img src="../img/comparacion.png" alt="Comparacion" />
+            </figure>
+
+            <div>
+                <p>
+                    De la misma forma, si en los enlaces del ejemplo anterior se emplea la propiedad display: block se 
+                    transforman en elementos de bloque, por lo que siempre empiezan en una nueva línea y siempre ocupan 
+                    todo el espacio disponible en la línea, aunque sus contenidos no ocupen todo el sitio:
+                </p>
+            </div>
+
+            <figure>
+                <img src="../img/displayBlock.png" alt="Display Block" />
+            </figure>
+        </section>
+
+        <footer>
+
+        </footer>
+    </main>
+</body>
+</html>
