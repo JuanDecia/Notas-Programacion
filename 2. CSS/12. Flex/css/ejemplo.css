@@ -1,0 +1,100 @@
+/*
+
+    Los contenedores de este estilo estan con display: block y tienen un 100px de alto, lo que, el ancho lo ocuparan
+    hasta donde termine el vw.
+
+    El contenedor principal tiene un fondo gris que estará tapado por los demas colores de los items que este 
+    compone.
+
+section {
+    background: grey;
+}
+
+div {
+    height: 100px;
+}
+
+.rojo {
+    background: red;
+}
+
+.azul {
+    background: blue;
+}
+
+.verde {
+    background: green;
+}
+
+.negro {
+    background: black;
+}
+
+*/
+
+/* ==================================================================== */
+
+/* 
+
+    En este fragmento de código aplicamos la propiedad flex e intercambiamos el valor del height en vez de que los contengan
+    los items (div) se los pusimos al contenedor padre ya que los "divs" automaticamente ocuparán el ancho del 
+    contenedor padre.
+
+    En cambio, le dimos un valor de width del 25% a cada uno ya que solo iban a ocupar el ancho de su contenido.
+
+*/
+
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: aliceblue;
+    max-width: 80%;
+    margin: auto;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(55, 185, 55);
+}
+
+a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(224, 162, 90);
+}
+
+a:hover {
+    font-size: large;
+    text-decoration: underline;
+}
+
+section {
+    display: flex;
+    height: 100px;
+    background: grey;
+    color: white;
+}
+
+div {
+    width: 25%;
+}
+
+.rojo {
+    background: red;
+}
+
+.azul {
+    background: blue;
+}
+
+.verde {
+    background: green;
+}
+
+.negro {
+    background: black;
+}

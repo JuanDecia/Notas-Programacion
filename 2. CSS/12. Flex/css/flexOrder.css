@@ -1,0 +1,78 @@
+body {
+    max-width: 80%;
+    margin: auto;
+    font-family: helvetica;
+}
+
+header {
+    margin: 0 0 20px 0 ;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(55, 185, 55);
+}
+
+a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(224, 162, 90);
+}
+
+a:hover {
+    font-size: large;
+    text-decoration: underline;
+}
+
+div [class*="bloque"] {
+    min-height: 200px;
+    flex: 1 2 40%;
+}
+
+.bloque1 {
+    color: #ddd;
+    background-color: #FF0000;
+    order: 2;
+}
+
+.bloque2 {
+    color: #333;
+    background-color: #00FF99;
+    order: 3;
+}
+
+.bloque3 {
+    color: #333;
+    background-color: #00FFFF;
+    order: 4;
+}
+
+.bloque4 {
+    color: #333;
+    background-color: #FFFF00;
+    order: 5;
+}
+
+.bloque5 {
+    color: #ddd;
+    background-color: #000000;
+    order: 1;
+}
+
+.bloque6 {
+    color: #333;
+    background-color: #0Fd000;
+    order: 6;
+}
+
+.bloque7 {
+    color: #ddd;
+    background-color: #0000F0;
+    order: 7;
+}
+
+.contenedor {
+    display: flex;
+    flex-flow: row wrap;
+}

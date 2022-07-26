@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+
+    <main>
+
+        <header>
+            <h1>Propiedad Flex</h1>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+            </article>
+
+            <article>
+                <p>
+                    El elemento se comporta como un elemento de bloque y establece su contenido con el modelo de flexbox.
+                </p>
+
+                <p>
+                    Permite la distribución de las cajas de manera fluida y dinámica de tal manera que los contenidos 
+                    se ajusten a los cambios en el tamaño de la ventana. Esta propiedad permite generar el tipo de 
+                    distribución flexbox.
+                </p>
+            </article>
+
+            <figure>
+                <img src="./img/ejemploFlex.png" alt="ejemplo" />
+            </figure>
+
+            <article>
+
+                <p>
+                    En nuestro código de ejemplo vamos a definir la propiedad display con el valor “flex”. La distribución 
+                    flexbox ubica los elementos en el contenedor uno seguido de otro. Para determinar en que dirección se 
+                    realiza esta agrupación utilizamos la propiedad “flex direction”.
+                </p>
+
+                <p>
+                    En el diseño “flex”, los nodos hijo se pueden distribuir en dirección vertical u horizontal y se 
+                    pueden "flexibilizar" sus tamaños, bien sea rellenando el espacio disponible o encogiéndose para 
+                    evitar salirse del contorno del nodo padre.
+                </p>
+
+                <p>
+                    El valor por defecto que tiene el flujo de un contenedor padre es de arriba hacia abajo 
+                    (segunda imagen del ejemplo). Si el contenedor padre es body todos los elementos dentro de él tendrán 
+                    esa disposición, ocupando en bloque el ancho del viewport. De igual manera si tenemos un contenedor 
+                    padre, los hijos o items estarán en la misma disposición, el alto (height) es determinado hasta el 
+                    último item del contenedor. Debemos tener en cuenta que si no declaramos un width y height estos se 
+                    acomodarán en todo el contenedor padre y no tendremos visualización del mismo si este tiene un background.
+                </p>
+
+                <p>
+                    Al aplicar la propiedad “display: flex” los ítems de un contenedor padre tomarán el flujo de izquierda a 
+                    derecha (tercer flujo de la imagen), debemos tener en cuenta que los hijos de los contenedores “item” no 
+                    heredarán este flujo. Es decir, si declaramos el flujo flex en body los ítems de body tendrán el display 
+                    flex (de izquierda a derecha), pero, los ítems de esos contenedores tendrán el display por defecto “block”.
+                </p>
+
+            </article>
+
+            <figure>
+                <img src="./img/flex.png" alt="flex" />
+            </figure>
+
+            <article>
+
+                <p>
+                    Debemos tener en cuenta que al aplicar esta propiedad si nuestros ítems no tienen un height ocurriría 
+                    algo parecido cuando tenemos la disposición block, es decir, en este caso los ítems tendrán el ancho 
+                    del contenido que componen y no rellenaría todo el ancho del contenedor padre (width), pero, si 
+                    estarán ocupando todo el height del contenedor padre. Este ejemplo podemos visualizarlo en la 
+                    siguiente imagen en donde vemos que los contenedores están agrupados por el ancho de su contenido.
+                </p>
+
+            </article>
+
+            <figure>
+                <img src="./img/numerosEjemplo.png" alt="Numeros Ejemplo" />
+            </figure>
+
+            <article>
+
+                <p>
+                    Al aplicar la propiedad “display: flex” los ítems tienen un flujo por defecto que es el que 
+                    anteriormente hemos mencionado como ejemplo, en el caso de que deseemos que vuelvan a tener la 
+                    disponibilidad de “block” debemos aplicar la propiedad de “flex-direction” con el valor de “column” 
+                    (columna), así, los ítems del contenedor padre volverán a tener el flujo de “bloque”.
+                </p>
+
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+            </article>
+
+            <article>
+                A continuación, estará una imagen describiendo la sintaxis de los explicado declarando primero 
+                “display: flex” y luego la dirección de este mismo.
+            </article>
+            
+            <figure>
+                <img src="./img/sintaxis.png" alt="sintaxis" /> <br>
+                <img src="./img/resultado.png" alt="resultado" />
+            </figure>
+
+        </section>
+
+        <hr />
+
+        <section>
+
+            <article>
+                <h2>Flex Flow: Flex Direction</h2>
+            </article>
+
+            <article>
+
+                <p>
+                    Anteriormente hemos hablado sobre la propiedad “display: flex” en este caso hablaremos sobre 
+                    la propiedad “flex-direction”. 
+                </p>
+
+                <p>
+                    La propiedad “display: flex” apila los ítems o contenedores hijos uno encima de otro y para controlar 
+                    esta dirección y orden en que los ubica vamos a utilizar la propiedad “flex-direction”.
+                </p>
+
+                <p>
+                    Los valores de esta propiedad “flex-direction” pueden ser: column, columna-revers, row, row-reverse.
+                </p>
+
+            </article>
+            
+            <figure>
+                <img src="./img/direcciones.png" alt="direcciones" />
+            </figure>
+
+            <article>
+                <h3>Direcciones</h3>
+            </article>
+
+            <article>
+                <ul>
+                    <li>
+                        <b>Row</b>: El eje principal del contenedor flexible esta definido para ser el mismo que la dirección 
+                        del texto, ósea, de izquierda a derecha (opción 3 de la imagen).
+                    </li>
+                    <li>
+                        <b>Row-reverse</b>: Se comporta igual que row pero los puntos principales de inicio y final son 
+                        intercambiados, ósea, de derecha a izquierda (opción 4 de la imagen).
+                    </li>
+                    <li>
+                        <b>Column</b>: El eje principal del contenedor flexible es el mismo que el eje del “bloque”, ósea, de 
+                        arriba hacia abajo (opción 2 de la imagen).
+                    </li>
+                    <li>
+                        <b>Column-reverse</b>: Se comporta igual que column pero los puntos principales de inicio y final 
+                        son intercambiados, ósea, de abajo hacia arriba (opción 1 de la imagen).
+                    </li>
+                </ul>
+            </article>
+            
+        </section>
+
+        <hr />
+
+        <section>
+
+            <article>
+                <h2>Flex Wrap</h2>
+            </article>
+            
+            <article>
+                <p>
+                    Esta propiedad especifica si los elementos “hijos” son obligados a permanecer en una misma línea o 
+                    pueden fluir en varias líneas. Si la cobertura (wrap) está permitida, esta propiedad también permite 
+                    controlar la dirección en la cual serán aplicados los elementos.
+                </p>
+
+                <p>
+                    Debemos tener en cuenta que su valor inicial es “nowrap” y solo es aplicable a los contenedores “flex”. 
+                </p>
+            </article>
+
+            <article>
+                <h3>Valores</h3>
+            </article>
+
+            <article>
+                <ul>
+                    <li>
+                        <b>Nowrap</b>: Los elementos flex son distribuidos en una sola línea, lo cual puede llevar a que se 
+                        desborde el contenedor flex, es decir, los elementos se adaptan a una sola fila según el tamaño de la 
+                        pantalla y a pesar de tener propiedades de medidas específicas en el contenedor no serán respetadas ya 
+                        que se están adaptando a la flexibilidad del contenedor padre.
+                    </li>
+                    <li>
+                        <b>Wrap</b>: Los elementos flex son colocados en varias líneas. Esta propiedad es muy útil cuando es 
+                        necesario que los “ítems” de un contenedor no cambien los valores al adaptarse al viewport, es decir, 
+                        que en el caso de que estemos necesitando que nuestro contenedor sea más grande para que respete la medida 
+                        de un item en un viewport pequeño con esta propiedad es posible.
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <hr />
+
+        <section>
+            <article>
+                <h2>Flex Order</h2>
+            </article>
+
+            <article>
+                <p>
+                    La propiedad order especifica el orden utilizado para disponer los elementos en su contenedor flexible. 
+                    Los elementos estarán dispuestos en orden ascendente según el valor de order. Los elementos con el mismo 
+                    valor de order se dispondrán en el orden en el cual aparecen en el código fuente.
+                </p>
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+            </article>
+
+            <figure>
+                <img src="./img/order.png" alt="flex order" />
+            </figure>
+
+            <article>
+                <a href="../12. Flex/html/flexOrder.html">Ir a Ejemplo "Flex Order"</a>
+            </article>
+        </section>
+
+        <hr />
+
+        <section>
+
+            <article>
+                <h2>Ejemplo Práctico</h2>
+            </article>
+
+            <article>
+                <a href="../12. Flex/html/ejemplo.html">
+                        Ir al Ejemplo Práctico
+                </a>
+            </article>
+            
+        </section>
+        <footer>
+
+        </footer>
+    </main>
+</body>
+</html>
