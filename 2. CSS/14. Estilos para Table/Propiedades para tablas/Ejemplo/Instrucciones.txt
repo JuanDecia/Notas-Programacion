@@ -1,0 +1,19 @@
+Alinearemos el texto de las etiquetas th hacia la derecha y verticalmente hacia arriba con las siguientes líneas:
+
+Th {
+text-align: right;
+vertical-align: top;
+}
+
+Y a la etiqueta td los siguientes parámetros:
+
+Td {
+text-align: left;
+vertical-align: bottom;
+}
+
+Ahora cambiaremos el fondo de manera alterna de cada columna, lo cual es útil para visualizar la información para el usuario. Esto lo realizaremos 
+con el selector avanzado tr:nth-child este selector puede recibir 2 parametros even para las filas pared y odd para las impares. 
+Para nuestro ejemplo aplicaremos un color gris a las filas impares:
+
+Background-color: #D1D1D1
