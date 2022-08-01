@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Adaptativo</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Diseño Adaptativo</h1>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        Esta estación es un paso inicial por el concepto y características del Diseño Web Adaptativo o Responsive 
+                        y la introducción del término Viewport. Esto trata de que las imágenes y videos se vean a una forma 
+                        proporcional a la dimensión de las pantallas de nuestros equipos.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Hablaremos de la media queries, que se usan para adaptar el formato de los contenidos a las 
+                        características de los dispositivos. Asociados a la media queries están los media types que 
+                        describen la categoría de un dispositivo.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Finalizaremos estudiando diversos Patrones de Diseño Web que ayudan a definir las características de 
+                        una página web, tanto lo que corresponde con la distribución de sus elementos, como su adaptabilidad a 
+                        diversos dispositivos. Entre los patrones que exploraremos están: Tiny Tweaks, Mostly Fluid, Column Drop, 
+                        Layout Shifter y Off Canvas.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Objetivos de aprendizaje</h3>
+
+                <div>
+                    <ol>
+                        <li>
+                            Interpretar el concepto y las características del Diseño Web Adaptativo con la finalidad de poder 
+                            aplicarlo a los contenidos Web Responsive.
+                        </li>
+                        <li>
+                            Aplicar el concepto de viewport con la finalidad de especificar el área disponible para renderizar una 
+                            página web.
+                        </li>
+                        <li>
+                            Usar los media queries y media types para adaptar el formato de los contenidos a las características de 
+                            los dispositivos.
+                        </li>
+                        <li>
+                            Aplicar patrones de Diseño Web Adaptativo para la creación de contenidos Web Responsive.
+                        </li>
+                    </ol>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <section>
+            <article>
+                <h2>Diseño Adaptativo</h2>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        Responsive Web Design es una técnica que permite desarrollar paginas web que se adapten a cualquier 
+                        dispositivo. Consiste en usar HTML y CSS3 con el fin de acomodar los contenidos de una página para 
+                        que se vean bien en cualquier tipo de plataforma.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Para lograr que un proyecto web sea adaptativo, debemos determinar el viewport, o el área de la página 
+                        web que será visible para el usuario, y definir un conjunto de condiciones (media queries) y reglas CSS3 
+                        de acuerdo con cada tamaño de pantalla. Estableciendo las características de los elementos para que puedan 
+                        verse correctamente en cada dispositivo.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Existe una amplia gama de frameworks CSS para diseños web de este tipo, cuenta con herramientas muy útiles 
+                        al momento de desarrollar proyectos que requieran adaptabilidad.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <section>
+            <article>
+                <h2>Ventajas del diseño web adaptativo</h2>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        Cuando creamos una página web es importante pensar en los dispositivos de los usuarios que usan al 
+                        ingresar a ella. El Diseño Web Adaptativo permite que los proyectos puedan verse bien en los diferentes 
+                        dispositivos.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>¿Por qué es importante?</h3>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        La primera razón es la compatibilidad visual con los diferentes dispositivos. Si una página web no 
+                        cuenta con este diseño al acceder a ella desde un dispositivo móvil el navegador mostraría una versión 
+                        reducida de lo que sería una versión de escritorio.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Otra de las ventajas es la codificación de un solo sitio web para los diferentes dispositivos. Si 
+                        nuestra página no cuenta con esta característica deberemos hacer un código para cada una de las versiones 
+                        incrementando la dificultad al momento de realizar cambios o actualizaciones.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Por último, también contamos que nuestras paginas sean encontradas con más facilidad en los portales web 
+                        porque cuando alguien está buscando información en un navegador (ej: Google) este retornara resultados con 
+                        prioridad a las páginas que cuentan con diseño adaptativo.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <section>
+            <article>
+                <h2>Media adaptativa</h2>
+            </article>
+
+            <article>
+                <h3>Imágenes Adaptativas</h3>
+
+                <div>
+                    <p>
+                        Cuando colocamos las imágenes a nuestro sitio web, siempre debemos realizar la revisación de la 
+                        visualización en los diferentes dispositivos con la herramienta de desarrolladores del explorador. 
+                        Con este paso podemos notar si la imagen se adapta a la pantalla de cierto dispositivo, el error más 
+                        común es que el tamaño excede a del dispositivo.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Ya hemos trabajado con la etiqueta img con el atributo width o height aplicando medidas en pixeles. 
+                        Ahora, vamos a cambiar la medida para que las imágenes realmente sean adaptativas y para ello debemos 
+                        manejar las medidas en porcentaje. Recordemos de ahora en adelante que el tamaño máximo será de 100% 
+                        para que la imagen no se salga de la pantalla o del contenedor donde se encuentre. Si mermamos o aumentamos 
+                        el tamaño del navegador, la imagen se adaptará a esta modificación y siempre ocupará el 100% del espacio 
+                        donde se encuentra. Recordemos hacer la prueba con la resolución de móvil y Tablet.
+                    </p>
+                </div>
+
+                <div>
+                    <a href="../15. Diseño Adaptativo/html/imagenAdaptativa.html">Ir a ejemplo de imágenes adaptativas</a>
+                </div>
+            </article>
+
+            <article>
+
+                <h3>Videos Adaptativos</h3>
+
+                <div>
+                    <p>
+                        Luego agregamos el video a nuestra hoja html con la etiqueta video. El problema que puede existir en un 
+                        video que además sea más ancho que la pantalla, solo se puede reproducir a 360px. Para modificar esto vamos 
+                        a crear unos selectores en nuestro archivo CSS que nos permiten cambiar el tamaño del video. Debemos tener 
+                        en cuenta que en la etiqueta video debemos sacar la etiqueta width.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        En nuestra hoja de estilos, seleccionaremos la etiqueta de nuestro ejemplo video y le agregaremos ahí 
+                        mismo el width. Para cuando se agrande la pantalla del video y no exceda el máximo de pantalla se 
+                        recomienda agregar también el estilo max-width con un valor 100%. Con esta regla el video no superara el 
+                        máximo de ancho del browser cuando se maximice el video.
+                    </p>
+                </div>
+
+                <div>
+                    <a href="../15. Diseño Adaptativo/html/videoAdaptativo.html">Ir a ejemplo de video adaptativo</a>
+                </div>
+            </article>
+
+        </section>
+
+        <footer></footer>
+    </main>
+</body>
+</html>

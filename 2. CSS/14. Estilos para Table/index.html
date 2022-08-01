@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos en Tablas</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Estilos para Tablas</h1>
+        </header>
+
+        <section>
+            <article>
+                <h2>Propiedades para tablas: Introducción</h2>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        Por defecto, las tablas no tienen border en el navegador y con CSS podemos darle diseño a nuestra tabla 
+                        maquetada en HTML. Para eso añadimos la propiedad border al selector table {} añadiendo la siguiente 
+                        línea: border: 1px solid black.
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/ejemploEstilo.png" alt="Estilo base" />
+                </figure>
+
+                <div>
+                    <p>
+                        Vamos a notar que solo el borde exterior de la tabla se ha remarcado. Si queremos remarcar el borde de 
+                        cada una de las celdas debemos aplicar esta propiedad a los selectores td {}: border 1px solid black.
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/ejemploEstilo2.png" alt="Estilo bordes" />
+                </figure>
+
+                <div>
+                    <p>
+                        Aún no se han asignado bordes a las celdas código, producto, valor y total porque estas están definidas 
+                        con la etiqueta "th"
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Para aplicar el borde a todas las celdas, las agrupamos en un solo selector table, td, th {}. 
+                        Podemos notar que se han repetido los bordes, para que esto no suceda debemos usar la propiedad 
+                        border-collapse con el atributo collapse. El ejemplo quedaría de la siguiente manera:
+                    </p>
+                </div>
+
+                <div>
+                    <code>
+                        Table { border-collapse: collapse; }
+                    </code>
+                </div>
+
+                <figure>
+                    <img src="./img/ejemploEstilo3.png" alt="Bordes" />
+                </figure>
+
+                <div>
+                    <p>
+                        Podemos hacer uso de la pseudoclase tr:nth-child(even) para hacer selección de todos los renglones o filas 
+                        pares (even) y darle un estilo específico. En el caso que deseemos utilizar los renglones impares debemos 
+                        hacer el mismo uso de la pseudoclase, pero entre los paréntesis debemos colocar “odd” (impares).
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        La manera de manejar el ancho y el alto de cada celda, así como, la alineación del texto para añadir un 
+                        ancho específico también utilizaremos la propiedad width y height utilizando los selectores de etiqueta 
+                        td y th. 
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        La manera de manejar el ancho y el alto de cada celda, así como, la alineación del texto para añadir un 
+                        ancho específico también utilizaremos la propiedad width y height utilizando los selectores de etiqueta 
+                        td y th. 
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Si pasamos un porcentaje a cualquiera de las propiedades width y height el navegador asigna un porcentaje 
+                        del contenedor de la etiqueta. Vamos a asignar un 100% a la propiedad width del contenedor table {}.
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/ejemploEstilo4.png" alt="estilo 4" />
+                </figure>
+
+                <div>
+                    <p>
+                        Si queremos alinear el texto horizontalmente utilizaremos la propiedad text-align o si queremos alinear 
+                        el texto verticalmente utilizaremos la propiedad vertical-align siempre que no estemos utilizando flexbox, 
+                        sino, las propiedades serían las de flexbox.
+                    </p>
+                </div>
+
+            </article>
+        </section>
+
+        <hr />
+
+        <section>
+            <article>
+                <h2>Propiedades que se pueden aplicar a un elemento table</h2>
+            </article>
+
+            <article>
+
+                <div>
+                    <p>
+                        Las propiedades que puede recibir un elemento table son las siguientes:
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/propiedadesTable.png" alt="propiedades table" />
+                </figure>
+
+            </article>
+        </section>
+
+        <hr />
+
+        <section>
+            <article>
+                <h2>Ejemplo Práctico en una tabla</h2>
+            </article>
+
+            <article>
+                <a href="../14. Estilos para Table/html/ejemplo.html">Ir al ejemplo</a>
+            </article>
+        </section>
+
+        <footer>
+
+        </footer>
+    </main>
+</body>
+</html>
