@@ -18,7 +18,7 @@ h2 {
 }
 
 h3 {
-    color: orange;
+    color: rgb(224, 54, 11);
 }
 
 main {
@@ -31,11 +31,44 @@ p {
     font-size: large;
 }
 
+/* Estilos para tablas */
+
 table {
     margin: 20px auto;
     width: 50%;
 }
 
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
 tr > td {
     text-align: center;
+}
+
+/* 
+    con nth-child seleccionamos los renglones "pares" o "impares".
+    
+    even = par / odd = impar
+*/
+
+tr:nth-child(even) {
+    background-color: #f1faee ;
+}
+
+tr:nth-child(odd) {
+    background-color: #a8dadc;
+}
+
+th {
+    color: #fff;
+    background-color: #1d3557;
+}
+
+caption {
+    color: #e63946;
+    font-size: large;
+    line-height: 50px;
 }
