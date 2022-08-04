@@ -1,0 +1,11 @@
+/* Resultado Inicial */
+#container img {
+    width: 100%;
+}
+
+/* Resultado Aplicando el filtro */
+#container img {
+    width: 100%;
+    -webkit-filter: grayscale(80%);
+    filter: grayscale(80%);
+}

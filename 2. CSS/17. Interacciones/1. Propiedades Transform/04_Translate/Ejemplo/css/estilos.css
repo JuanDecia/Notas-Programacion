@@ -1,0 +1,33 @@
+div {
+    border: 1px solid black;
+}
+
+#contenedor {
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 300px;
+    height: 300px;
+    perspective: 50px;
+}
+
+#transformado {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    transform: translate3d(-10px, 20px, 15px); /*Traslada el elemento simultaneamente en los 3 ejes (x, y, z) */
+    /* transform: translateZ(50px); Traslada el elemento alejandolo o arcercandolo en modo 3D */
+    /* transform: translateY(50px); Traslada el objeto verticalmente */
+    /* transform: translateX(); Traslada el objeto horizontalmente */
+    /* transform: translate(-80px, -120px); Traslada hacia arriba a la izquierda (diagonal) */
+    /* transform: translate(80px, 120px); Traslada hacia abajo a la derecha (diagonal) */ 
+}
+
+/* Para reestablecer un objeto a la posición original borramos transform */
+
+/* transform: translate(none); no tendrá ningún tipo de transformación */
+
+/* 
+transform: translateZ(); traslada en 3D, si el número es positivo acerca el elemento a la pantalla, si es negativo lo aleja 
+*/

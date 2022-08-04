@@ -1,0 +1,60 @@
+body {
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    background-color: aliceblue;
+    max-width: 85%;
+    margin: auto;
+}
+
+div {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    margin-left: 10px;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(224, 162, 90);
+}
+
+a:hover {
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+
+/* 
+    Propiedad "scale" el primer valor representa cuantas veces se aumentará el ancho y el segundo valor 
+    cuantas veces aumentará el alto
+
+    #transformado1 {
+        transform: scale(45,8);
+    }
+
+    El # "1" no modifica el parámetro: el ancho es igual que el original pero la altura aumentará 4 veces
+
+    #transformado1 {
+        transform: scale(1,4);
+    }
+
+    Para reducir el tamaño debemos aplicar un numero entre "0" y "1", con el fin que la multiplicación arroje 
+    un valor menor al original
+*/
+
+#transformado1 {
+    transform: scale(0.5,0.5);
+}
+
+#transformado2 {
+    transform: scale(0.3,2.5);
+}
+
+#original {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}

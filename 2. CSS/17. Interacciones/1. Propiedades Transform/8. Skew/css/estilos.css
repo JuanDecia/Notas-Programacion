@@ -1,0 +1,26 @@
+div {
+    width: 300px;
+    height: 100px;
+    background-color: purple;
+    border: 1px solid black;
+    margin-left: 100px;
+    color: white;
+}
+
+#original {
+    margin-top: 60px;
+    margin-bottom: 90px;
+}
+
+    /* Metodo skew */
+#transformado {
+    /* transform: skewX(30deg); Solo modifica un lado (horizontal) */
+    /* transform: skewY(30deg); Solo modifica un lado (vertical) */
+    transform: skew(20deg, 15deg);
+}
+
+/* 
+    Si deseamos alterar un solo lado podemos dejar en (0deg) uno de los dos parametros o escribir X o Y despues de Skew indicando que sesgaremos solo uno de los lados.
+
+    Utilizando números positivos obtendremos inclinaciones hacia abajo o hacia la derecha para inclinaciones hacia la izquierda o hacia arriba usamos números negativos. 
+*/

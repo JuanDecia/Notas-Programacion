@@ -1,0 +1,61 @@
+body {
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    background-color: aliceblue;
+    max-width: 85%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(55, 185, 55);
+}
+
+a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: rgb(224, 162, 90);
+}
+
+a:hover {
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+
+section {
+    display: flex;
+}
+
+div {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+#original {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 100px;
+}
+
+/* Propiedad "rotate", rota una elemento. El valor va dentro de los parentesis */
+#transformado {
+    transform: rotate(50deg);
+    margin-top: 150px;
+}
+
+/* Numeros Negativos van en contra de la hora del reloj */
+#transformado2 {
+    transform: rotate(-50deg);
+    margin-top: 200px;
+}
+
+/* Transformación 3D, agregamos "x, y, z" despues de "rotate" */
+#transformado3d {
+    transform: rotatez(180deg);
+}

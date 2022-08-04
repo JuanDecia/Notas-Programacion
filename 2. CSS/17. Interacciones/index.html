@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interacciones</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Interacciones</h1>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+            </article>
+
+            <article>
+                <p>
+                    Esta unidad esta separada en dos secciones lógicas; una dedicada a la forma en que podemos hacer 
+                    nuestros contenidos HTML más dinámicos, a través del uso de transformaciones y animaciones. La 
+                    otra es una visión a ciertas características avanzadas del lenguaje.
+                </p>
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+            </article>
+
+            <article>
+                <p>
+                    Con la finalidad de proporcionar más dinamismo a las páginas, CSS provee ciertas propiedades para la 
+                    rotación, escalamiento, incorporación de perspectiva, sesgado y traslado de los elementos HTML. 
+                    Adicionalmente, a través de la propiedad transition y el uso de @keyframes es posible animar nuestros 
+                    contenidos vía el cambio de estilos, aplicados a un objeto de forma gradual y periódica. Otro componente 
+                    de CSS son los filtros empleados para las aplicaciones de efectos especiales, en particular a las imágenes.
+                </p>
+            </article>
+
+            <article>
+                <p>
+                    En esta unidad revisamos los conceptos avanzados de funciones en CSS, para facilitar la asignación 
+                    de valores a las propiedades. Hasta el momento se han definido un conjunto limitado de ellas, pero 
+                    actualmente están soportadas en la mayoría de los navegadores. El otro aspecto avanzado de CSS 
+                    son los grids que ayudan al posicionamiento de los elementos HTML en nuestros sitios web.
+                </p>
+            </article>
+
+            <article>
+                <h3>Objetivos de Aprendizaje</h3>
+            </article>
+
+            <article>
+                <ol>
+                    <li>
+                        Aplicar las propiedades de transformación CSS para proporcionar movimiento y cambio de aspecto a los 
+                        elementos HTML.
+                    </li>
+                    <li>
+                        Usar las reglas de CSS para animar los elementos HTML.
+                    </li>
+                    <li>
+                        Usar las funciones de CSS en la especificación de las propiedades para facilitar el proceso de aplicación 
+                        de formato a los elementos HTML.
+                    </li>
+                    <li>
+                        Describir el concepto de grid en el contexto del desarrollo de contenido HTML/CSS.
+                    </li>
+                </ol>
+            </article>
+        </section>
+
+        <hr>
+
+        <section>
+
+            <article>
+                <h2>Propiedades Transform</h2>
+            </article>
+
+            <article>
+                <h3>Rotate</h3>
+
+                <div>
+                    <p>
+                        Las transformaciones son efectos CSS3 que permiten modificar la forma, tamaño y posición de un elemento.
+                    </p>
+                </div>
+
+                <h4>Sintaxis</h4>
+
+                <div>
+                    <p>
+                        Para realizar una transformación debemos agregar el atributo transform en el CSS correspondiente al 
+                        elemento que se desea transformar, seguido del método de transformación que usaremos.
+                    </p>
+
+                    <p>
+                        En este ejemplo comenzaremos con rotate. Este método permite rotar un elemento, podemos girarlo según 
+                        los ejes que se indiquen en los paréntesis, seguido de la palabra “deg”.
+                    </p>
+
+                    <figure>
+                        <img src="./img/rotateSintaxis.png" alt="rotate sintaxis" />
+                    </figure>
+
+                    <p>
+                        Para obtener una rotación en contra de las agujas del reloj utilizaremos valores negativos dentro 
+                        del paréntesis.
+                    </p>
+
+                    <p>
+                        Las rotaciones que realizamos recientemente son en 2D, CSS3 también nos permite hacer rotaciones 3D. 
+                        Para esto debemos comprender el concepto de eje/rotación (x/ y/ z).
+                    </p>
+
+                    <figure>
+                        <img src="./img/rotateEjemplo.png" alt="rotate ejemplo" />
+                    </figure>
+
+                    <p>
+                        Un Cubo tiene estas propiedades y pueden rotar en esos tres sentidos. Para realizar una rotación en 3D 
+                        debemos añadir la letra X, Y o Z al final de la palabra rotate. Este indica el eje de rotación del elemento.
+                    </p>
+                </div>
+
+                <div>
+                    <a href="../17. Interacciones/html/rotate.html">Ir a ejemplo: "Rotate"</a>
+                </div>
+
+            </article>
+
+            <article>
+                <h3>Scale</h3>
+
+                <div>
+                    <p>
+                        Este es otro elemento de la propiedad transform que permite modificar el tamaño de un elemento HTML 
+                        según los cambios que se realizan en sus dimensiones.
+                    </p>
+                </div>
+
+                <h4>Sintaxis</h4>
+
+                <div>
+                    <p>
+                        Para asignar este elemento debemos asignar la propiedad transform en el bloque correspondiente al elemento 
+                        a modificar y después de los dos puntos escribimos scale y dentro del paréntesis definimos dos valores 
+                        numéricos separados por una coma el primer valor indicará el numero de veces en el que se aumentará el 
+                        ancho del elemento y el segundo indica el aumento en su altura, el tamaño que se obtiene es multiplicar 
+                        el ancho x altura del elemento original.
+                    </p>
+
+                    <figure>
+                        <img src="./img/sintaxisScale.png" alt="sintaxis scale" />
+                    </figure>
+                </div>
+
+                <h4>Scale: Una dimensión</h4>
+
+                <div>
+                    <p>
+                        Si no queremos modificar el tamaño de alguna de las dimensiones utilizamos el numero “1”.
+                    </p>
+
+                    <figure>
+                        <img src="./img/unaDimensionScale.png" alt="Scale una dimensión" />
+                    </figure>
+                </div>
+
+                <h4>Reducir tamaño</h4>
+
+                <div>
+                    <p>
+                        Para reducir el tamaño de una dimensión debemos elegir un tamaño entre 0 y 1, con el fin que la 
+                        multiplicación arroje un valor menor al original
+                    </p>
+
+                    <figure>
+                        <img src="./img/reducirTamañoScale.png" alt="reducir tamaño" />
+                    </figure>
+                </div>
+
+                <h4>Combinado</h4>
+
+                <div>
+                    <p>
+                        La ventaja de este método es que nos sirve para formar cada dimensión de manera individual. Como 
+                        ejemplo final vamos a reducir el ancho del elemento y vamos a aumentar la altura
+                    </p>
+
+                    <figure>
+                        <img src="./img/combinadoScale.png" alt="combinado scale" />
+                    </figure>
+                </div>
+
+                <div>
+                    <a href="../17. Interacciones/html/scale.html">Ir a ejemplo: "Scale"</a>
+                </div>
+            </article>
+
+            <article>
+                <h3>Perspective</h3>
+
+                <div>
+                    <p>
+                        Esta propiedad nos ayuda a mejorar la visualización 3D, tiene que estar establecida antes de la 
+                        propiedad que le da forma a 3D (rotate).
+                    </p>
+
+                    <p>
+                        Esta propiedad define la perspectiva de un elemento HTML ubicándolo en un espacio tridimensional. 
+                        Comúnmente se conoce como la distancia que hay de un elemento y la pantalla donde se renderiza la página. 
+                        En la Gráfica, perspective representa la distancia entre la persona enfrente de su computador y un elemento 
+                        determinado, se recomienda usar esta propiedad para que las transformaciones 3d cobren el efecto de espacio 
+                        adecuado.
+                    </p>
+
+                    <p>
+                        Existen dos formas distintas de definir perspectiva en CCS3. Podemos asignar la perspectiva directamente 
+                        al elemento con la propiedad transform y su método perspective () o incuir el elemento al contenedor padre 
+                        al que se le define la perspectiva con la propiedad perspective 
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/perspective.png" alt="Perspective" />
+                </figure>
+
+                <div>
+                    <p>
+                        Las diferencias entre estas formas de definir la perspectiva se evidencian al tener más de un elemento 3d 
+                        en nuestra página.
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/perspectivaElementos.png" alt="perspectiva elementos" />
+                </figure>
+
+                <div>
+                    <p>
+                        Los elementos en rojo tienen perspectiva individual y los azules la perspectiva fue definida en el elemento 
+                        padre. En estos casos se recomienda el segundo método ya que se genera una perspectiva uniforme para todos 
+                        los elementos.
+                    </p>
+                </div>
+
+                <h4>Perspectiva Individual</h4>
+
+                <figure>
+                    <img src="./img/perspectiveIndividual.png" alt="perspective individual" />
+                </figure>
+
+                <div>
+                    <p>
+                        La imagen representa la definición de la perspectiva individual para el rectángulo. Podemos ver que luego 
+                        de transform se indica la palabra perspective como método y entre los () se determina la distancia que 
+                        tendrá la perspectiva. Luego están indicadas dos transformaciones de tipo rotate en el eje X y Y para darle 
+                        un aspecto 3D al elemento. Si reducimos la distancia del elemento indicamos que nos acercamos y por ende se 
+                        verá más grande.
+                    </p>
+                </div>
+
+                <h4>Perspectiva Padre</h4>
+
+                <figure>
+                    <img src="./img/perspectivePadre.png" alt="perspective padre" />
+                </figure>
+
+                <div>
+                    <p>
+                        Tenemos una clase llamada contenedor que define las propiedades del elemento padre, podemos observar que 
+                        la perspectiva se define como una propiedad donde la distancia se indica luego de los dos puntos (:).
+                    </p>
+
+                    <p>
+                        En el id #elemento solo deben definirse las transformaciones “rotate”.
+                    </p>
+
+                    <p>
+                        Para definir una perspectiva en CSS3 se debe Incluir en la propiedad transform el método perspective 
+                        ( ) del elemento 3D.
+                    </p>
+
+                    <p>
+                        CSS3 nos permite manipular el origen o fondo de la perspectiva, es decir, desde la posición en la que 
+                        el usuario esta viendo el objeto, por defecto el origen de la perspectiva es el centro del elemento.
+                    </p>
+
+                    <p>
+                        Para modificar el origen de la perspectiva usaremos la propiedad perspective-origin, esta propiedad tiene 
+                        2 parámetros un valor para el eje X y uno para el Y. Para el eje X podemos usar la palabra left para ubicar 
+                        el punto de origen a la izquierda del elemento, center para ubicarlo en el centro, rigth para ubicarlo a la 
+                        derecha o también podemos especificar el valor en pixeles, milímetros o porcentajes. En el eje Y podemos 
+                        usar la palabra top para ubicar el origen de la parte superior del elemento, center para ubicarlo en el
+                        centro, bottom para ubicarlo en la parte inferior o indicar el valor mediante unidades de medida.
+                    </p>
+
+                    <p>
+                        Para entender el origen de la perspectiva construiremos un cubo, y nos centraremos a como cambia la 
+                        perspectiva del objeto al introducir perspective-origin:
+                    </p>
+                </div>
+
+                <h4>HTML</h4>
+
+                <figure>
+                    <img src="./img/perspectiveHtml.png" alt="construcción html" />
+                </figure>
+
+                <h4>CSS</h4>
+
+                <figure>
+                    <img src="./img/perspective css.png" alt="perspective css" />
+                </figure>
+
+                <div>
+                    <a href="">Ir a ejemplo: "Perspective"</a>
+                </div>
+            </article>
+
+            <article>
+                <h3>Translate</h3>
+            </article>
+            
+
+        </section>
+    </main>
+</body>
+</html>
