@@ -1,11 +1,11 @@
 body {
     font-family: sans-serif;
-    background-color: rgb(194, 189, 173);
+    background-color: aliceblue;
 }
 
 main {
     margin: auto;
-    width: 75%;
+    max-width: 75%;
 }
 
 header {
@@ -20,14 +20,34 @@ li {
 /* ========== Estilos de texto */
 
 #title {
-    color: rgb(86, 129, 16);
-    text-decoration: underline;
+    color: rgb(55, 185, 55);
 }
 
 .sub {
-    color: blue;
+    color: rgb(59, 124, 184);
+}
+
+h3 {
+    color: rgb(224, 54, 11);
 }
 
 b {
     color: rgb(115, 37, 170);
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(224, 162, 90);
+}
+
+a:hover {
+    font-size: 1.3em;
+    text-decoration: underline;
 }

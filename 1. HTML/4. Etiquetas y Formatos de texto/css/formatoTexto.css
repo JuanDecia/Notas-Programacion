@@ -1,13 +1,12 @@
 body {
     font-family: sans-serif;
-    width: 85%;
+    max-width: 85%;
     margin: 0 auto;
     background-color: aliceblue;
 }
 
 h1 {
     text-align: center;
-    text-decoration: underline;
     color: rgb(86, 129, 16);
 }
 
@@ -18,5 +17,22 @@ h2 {
 #codigo {
     border: 1px solid black;
     margin-bottom: 30px;
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(224, 162, 90);
+}
+
+a:hover {
+    font-size: 1.3em;
+    text-decoration: underline;
 }
 
