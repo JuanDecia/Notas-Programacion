@@ -48,3 +48,7 @@ code {
     border: 3px solid black;
     background-color: antiquewhite;
 }
+
+.borde-punteado {
+    border-style: dotted;
+}
