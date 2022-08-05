@@ -131,6 +131,41 @@
             <hr />
 
             <article>
+                <h2>Collapse</h2>
+
+                <div>
+                    <p>
+                        Esta propiedad es muy importante tenerla en cuenta, ya que, en muchas ocasiones los contenedores pueden estar
+                        superpuestos si no la declaramos como <b>no-collapse</b>. Solamente los casos de que los contenedores
+                        se superpongan pueden ocurrir en la orientación <b>vertical</b>, no en horizontal.
+                    </p>
+                </div>
+
+                <div class="contenedor-parrafo">
+                    <p>Contenido 1</p>
+                </div>
+                <div class="contenedor-parrafo">
+                    <p>Contenido 2</p>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar estan separados los elementos, pero debemos prestar mucha atención a este detalle:
+                        Anteriormente habíamos nombrado que los márgenes entre los elementos se sumaban, es decir, que en esta ocasión
+                        deberíamos tener una separación de 40px pero no es el caso (ver con el inspector). 
+                    </p>
+                    <p>
+                        En este caso solo tenemos una separación de 20px colapsada, es decir, que predomina el margen de un solo
+                        contenedor. Si tuvieramos más elementos dentro del ejemplo, también estarían colapsados. Es muy importante
+                        aclarar que el <b>margen que predomina es el margen más grande</b>
+                    </p>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <article>
                 <h2>Más acerca de los modelos de caja</h2>
 
                 <ul>

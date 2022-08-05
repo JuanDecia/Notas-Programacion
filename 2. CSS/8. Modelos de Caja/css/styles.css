@@ -63,3 +63,9 @@ p {
 .aplicar-inherit {
     margin: inherit;
 }
+
+/* ========== EJEMPLO COLLAPSE ========== */
+
+.contenedor-parrafo > p {
+    margin-left: 15px;
+}
