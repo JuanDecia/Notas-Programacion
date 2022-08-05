@@ -52,3 +52,14 @@ p {
 .margin-ejemplo:hover {
     font-size: large;
 }
+
+/* ========== EJEMPLO INHERIT ========== */
+
+.contenedor-parrafo {
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.aplicar-inherit {
+    margin: inherit;
+}
