@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Position: Fixed</h1>
+
+            <nav>
+                <a href="../index.html">Volver a inicio</a>
+            </nav>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        Si traducimos este valor de position podemos decir que es el valor “ajustado”. Este valor no se adapta 
+                        perfectamente a un entorno responsive, así que, debemos tener mucha atención cuando lo usamos.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Generalmente es usado cuando se necesitan ventanas fijas en el viewport del navegador, por ejemplo, 
+                        una ventana de chat. Como nombramos anteriormente, esta propiedad es fija en relación al viewport y 
+                        no a los contenedores.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Debemos tener en cuenta que esta propiedad puede superponer a los contenedores según la posición de z-index, 
+                        por eso es que se dice que no es una propiedad responsive. También, es importante saber que al estar fijo 
+                        en la pantalla siempre aparecerá en el mismo lugar por más que utilicemos zoom o scroll.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Este valor podemos manipularlo con las propiedades top, right, bottom y left. Generalmente esta es una 
+                        propiedad que se usa para ventanas de chat, al estar siempre disponible en la pantalla, es muy útil para 
+                        los usuarios que estén en el sitio porque tienen un acceso rápido para poder comunicarse.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Para lograr una óptima posición para una ventana de chat generalmente se coloca en el inferior derecho, 
+                        es decir, debemos usar las propiedades de bottom y right. Ambas deben tener el valor de “0”, para que el 
+                        elemento se coloque respectivamente donde escogimos el valor (esquina inferior derecha).
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Ejemplo práctico</h3>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        Para el ejemplo de esta posición, podremos observar un elemento en la parte inferior derecha de la pantalla que
+                        está simulando una ventana de chat. Para ello debemos crear un contenedor con medidas de ancho y alto para que
+                        pueda ser visible, agregar un redondeo en los bordes y un sombreado en la parte superior para embellecer el respectivo
+                        elemento.
+                    </p>
+                </div>
+
+                <!-- Ventana de chat -->
+
+                <div class="cont-fixed">Ventana de chat</div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

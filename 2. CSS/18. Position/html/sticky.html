@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Position: Sticky</h1>
+
+            <nav>
+                <a href="../index.html">Volver a inicio</a>
+            </nav>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        El valor de Sticky trabaja parecido a fixed, la diferencia entre ellos es que el movimiento de sticky 
+                        se realiza cuando el scroll llega a un limite donde el elemento podría no visualizarse.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Este valor utiliza las propiedades de top, right, bottom y left, los valores indicados son los que luego 
+                        tomaran esta posición de fixed en la pantalla. Generalmente es usado en los headers o elementos en el que 
+                        deseemos que siempre esté y para ofrecerle una comodidad al usuario. Por eso, al tener el header con el menú 
+                        de opciones en sticky, este podrá siempre estar a disposición en el viewport del usuario.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Es decir, este elemento funciona de manera relativa hasta que sale de pantalla. Luego, tomará los valores 
+                        y se posicionará según le declaremos a las propiedades de posición (top. . .).
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Ejemplo Práctico</h3>
+
+                <div class="cont-sticky">
+                    Elemento <b>Sticky</b>
+                </div>
+
+                <div>
+                    <p>
+                        A continuación, se creará un parrafo para generar contenido en el sitio. Así de esta forma lograremos
+                        crear un scroll a lo alto del viewport. Esto tiene una finalidad para poder presentar el efecto de la posición
+                        de <b>sticky</b> la cual se quedará en la parte superior de la pantalla al comenzar el scroll.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, mollitia dolorem, excepturi exercitationem
+                        labore reprehenderit architecto quia sequi deleniti in expedita laborum quo nisi eveniet qui quasi 
+                        fugiat quidem autem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis laudantium repellat 
+                        laboriosam dolores nobis, sequi excepturi enim, quisquam esse eius necessitatibus labore voluptatum earum, 
+                        impedit praesentium ipsam distinctio adipisci a.
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="../img/madara.jpg" alt="madara">
+                </figure>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

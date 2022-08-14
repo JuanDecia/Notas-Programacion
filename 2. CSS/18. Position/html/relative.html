@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    
+    <main>
+
+        <header>
+            <h1>Position: Relative</h1>
+
+            <nav>
+                <a href="../index.html">Volver a inicio</a>
+            </nav>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        Cuando trabajamos con la position relative, sí debemos especificar las propiedades de top, right, bottom y 
+                        left. Es decir, dependiendo de los valores que agreguemos es como se moverá el elemento y se moverá de 
+                        manera relativa según al padre que lo contiene.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Primero debemos indicar position: relative y luego las propiedades de ubicación nombradas anteriormente.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Si en el caso que tenemos un div centrado y le agregamos una position relative con un top de 100px y un 
+                        left de 50px, este se moverá hacia abajo 100px y 50px hacia la derecha. Prestemos atención que los elemento 
+                        son empujados desde la posición que se está indicando. No es que se mueven hacía donde se indica.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Ejemplo Práctico</h3>
+
+                <div class="cont-static">
+                    <p>
+                        Elemento Static
+                    </p>
+                </div>
+
+                <div class="cont-relative">
+                    <p>
+                        Elemento Relative (50px de top)
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

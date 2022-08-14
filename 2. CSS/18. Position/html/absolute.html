@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    
+    <main>
+        <header>
+            <h1>Position: Absolute</h1>
+
+            <nav>
+                <a href="../index.html">Volver a inicio</a>
+            </nav>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        El valor absoluto se posiciona tomando en cuenta el contenedor que lo contiene, este posicionamiento 
+                        justamente es absoluto. Es decir, si tenemos un elemento de tipo “div” padre, el elemento “div” hijo 
+                        es el que contendrá el valor absoluto. Podemos decir que es un valor que trabaja fuera del elemento.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Absolute se maneja con las propiedades de top, right, bottom y left. A diferencia de “fixed” este valor 
+                        se queda en la posición establecida en el contenedor y no en el viewport.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Cuando estamos trabajando con el valor absolute es muy importante que al elemento padre debemos 
+                        declararle que su posición es relative.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Ejemplo práctico</h3>
+
+                <div class="cont-padre">
+                    Elemento Padre
+
+                    <div class="cont-absolute">
+                        Elemento hijo
+                    </div>
+                </div>
+
+                <div>
+                    <p>
+                        En este ejemplo, podemos observar como el elemento padre (bordes negros) tiene una posición relativa, mientras,
+                        el elemento hijo (bordes azules) tiene una <b>posición absoluta</b> dentro del contenedor padre. Los valores
+                        del mismo son: <b>bottom: 0px</b> y <b>right: 0px</b>. Además, tiene un poco de espacio en los bordes
+                        para ofrecer una armonía visual entre ellos.
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
