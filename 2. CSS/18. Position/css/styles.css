@@ -110,6 +110,7 @@ p {
     border-radius: 0 0 10px 10px;
     height: 30px;
     position: sticky;
+    position: -webkit-sticky;
     top: 0;
     background-color: beige;
     box-shadow: 

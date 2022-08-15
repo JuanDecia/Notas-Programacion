@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Propiedad Z-index</h1>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        Esta propiedad de CSS es útil cuando necesitamos superponer un contenedor sobre otro, haciendo que el 
+                        contenedor con z-index más elevado siempre esté visible por encima de todos los demás elementos.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Esto es posible ya que podemos manejar los <b>ejes</b> que posicionan los elementos. Por ejemplo, el eje <b>horizontal</b>
+                        es el eje <b>x-axis</b>; el eje <b>vertical</b> corresponde a <b>y-axis</b> y finalizando tenemos el eje
+                        <b>z-index</b>.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Para utilizar esta propiedad debemos tener en cuenta de un concepto que es llamado <b>elementos posicionados</b>.
+                        Cuando utilizamos elementos como <b>divs</b> o <b>párrafos</b> son elementos que tienen la propiedad de 
+                        <b>static</b> y corresponden a los <b>elementos no posicionados</b>. A partir de esta base, si en otro caso
+                        utlizamos elementos que tienen una propiedad de <b>position</b> diferente se les llama <b>elementos posicionados</b>.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Entonces al utilizar la propiedad de <b>z-index</b> estamos utilizando la posición en relación de 3d
+                        del elemento. Esta propiedad recibe un valor numérico y mientras <b>más grande</b> sea este valor, estará el elemento
+                        más <b>superpuesto a los demás</b>. Es decir, el valor de <b>z-index</b> más alto es el que se va a mostrar
+                        por encima de los demás. El valor por defecto de esta propiedad es de <b>0</b> o auto el siguiente valor sería <b>1</b>.
+                        Esto no significa que podemos también colocar valores como <b>-1</b>. Estos elementos estarían por detrás de
+                        los elementos posicionados con el valor de <b>z-index</b> por defecto, es decir, estarán ocultos.
+                    </p>
+                </div>
+
+            </article>
+        </section>
+        <section>
+            <article>
+                <h3>Ejemplo práctico</h3>
+            </article>
+
+            <article>
+                <div class="estatico">
+                    Elemento no posicionado (static)
+                </div>
+
+                <div class="relativo">
+                    Elemento Relativo (relative) + z-index
+                </div>
+
+
+            </article>
+        </section>
+    </main>
+</body>
+</html>
