@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a JS</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Javascript</h1>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        Es un lenguaje de alto nivel interpretado, es decir, no necesita un compilador para poder ejecutarse, sino 
+                        que existe un programa que se llama interprete que lee línea a línea el código y lo va traduciendo a 
+                        medida que lo va leyendo
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/js.png" alt="js" />
+                </figure>
+
+                <div>
+                    <p>
+                        Es un lenguaje dinámico, significa que sus instrucciones se pueden generar en tiempo de ejecución. El 
+                        lenguaje es débilmente tipado por lo cual no es necesario declarar los tipos de las variables explícitamente,
+                        no es necesario declarar si es de tipo entero o string, el tipo de variable es asignado a medida que se 
+                        ejecuta el programa.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Es un lenguaje multiparadigma, tiene instrucciones para trabajar como un lenguaje funcional, tiene 
+                        instrucciones para funcionar como un lenguaje orientado a objetos mezclando varios modelos de programación 
+                        incluyendo la programación imperativa, por eso se analizarán diferentes formas de programar.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        JavaScript se usa para agregar dinamismo a las páginas Web. Principalmente este lenguaje fue formulado 
+                        para validar formularios, es decir, dado un formulario y dando instrucciones de JavaScript podemos validar 
+                        los campos (que un campo obligatorio no está vacio). También tiene el propósito de poder interactuar con 
+                        las páginas a través del uso de botones que al presionarlo generen una acción, tal como el despliegue de 
+                        una caja de diálogo o la ejecución de una operación llamado a otro procedimiento o función.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        JavaScript se usa como un lenguaje de programación para las aplicaciones corriendo en el navegador Web, 
+                        por lo tanto, se considera una tecnología Front End. Esto significa que cuando se corre un código escrito 
+                        en JS, el navegador a través del interprete del lenguaje, ejecuta ese código.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        También, puede utilizarse en aplicaciones híbridas que se pueden programar con varias tecnologías. La 
+                        importancia de JS recae en el hecho que utiliza ampliamente en una basta cantidad de páginas Web, sobre 
+                        todo aquellas que son dinámicas convirtiéndose en el lenguaje que proporciona dinamismo a la web.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        El Frontend es la principal función del lenguaje, y como JS no es compatible con todos los navegadores 
+                        se ha desarrollado estándares que indican el conjunto de indicaciones a ejecutar, las cuales deben ser 
+                        implementadas por todos los navegadores o mejor dicho por todos los interpretadores del lenguaje.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <section>
+            <article>
+                <h2>Integrar JS a nuestro sitio web</h2>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        Existen dos maneras de integrar JS en HTML. Estas maneras son muy similares a las que conocemos en
+                        CSS, una es a traves del código HTML y otra es utilizando un archivo externo de tipo <b>js</b>.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Etiqueta Script</h3>
+
+                <div>
+                    <p>
+                        El primer ejemplo es enlazando el código dentro de las etiquetas <b>script</b>. Dentro de la primera 
+                        etiqueta debemos escribir type=”text/javascript” (indicamos que es un tipo de texto JS). Podemos colocar 
+                        nuestro código JS dentro de este elemento. A manera de ejemplo, insertemos un mensaje con una funcion llamada
+                        <b>alert()</b>. Lo que hace es mostrar una caja de diálogo con el string (cadena de caracteres) que 
+                        le pasemos como argumento (dentro de los paréntesis).
+                    </p>
+
+                    <p>
+                        Debemos saber que el elemento de script debe <b>estar al final del código HTML</b> justo antes de donde se cierra
+                        la etiqueta de <b>body</b>.
+                    </p>
+
+                    <p>
+                        A continuación, agregaremos una variable “nombre” con valor “Juan”, esta variable vamos a concatenarla en 
+                        los parámetros de la función de alert.
+                    </p>
+                </div>
+
+                <div>
+                    <a href="../1. Introducción/html/alert.html">Ir a ejemplo</a>
+                </div>
+            </article>
+
+            <article>
+
+                <h3>Página Externa de Script</h3>
+
+                <div>
+                    <p>
+                        Las buenas prácticas de JS dicen que es más legible y ordenado tener el código de JS a parte de la hoja de 
+                        HTML. Para ello veremos la segunda manera de integrar nuestro código JS a HTML, vamos a necesitar las 
+                        etiquetas de <b>script</b> pero, vamos a incluir el atributo <b>src</b>, que se refiere donde esta la 
+                        fuente de nuestro archivo. Entre las comillas (valor del atributo) vamos a indicar la ruta del código JS 
+                        que vamos a utilizar.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Vamos a crear un archivo dentro de una carpeta llamada JS o Scripts donde van a estar alojados todos 
+                        los archivos JS que nuestro código necesite. El archivo principal va a tener el nombre main.js.
+                    </p>
+
+                    <p>
+                        Es importante declarar las etiquetas de JS al final de nuestro código HTML, es decir, antes de que se cierre 
+                        el body de HTML. Debemos tener en cuenta que los archivos cargados se ejecutarán en el orden ingresado 
+                        (linea 1 y luego linea 2). La razón de ello es porque la página se va dibujando a medida que se va 
+                        ejecutando de arriba hacia abajo, siendo mejor para el usuario ver la pagina y luego tener el 
+                        comportamiento que definimos en nuestros archivos JS.                     
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <section>
+            <article>
+                <h2>Ambiente y Depuración</h2>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        El ambiente de desarrollo de Js nos permite manejar y detectar errores al tiempo que nos facilita la 
+                        tarea de creación de contenido de nuestro código.
+                    </p>
+
+                    <p>
+                        Usualmente se desean ver las variables o el estado de la aplicación en determinado momento, para esto 
+                        podemos usar la función console.log() que nos imprime los mensajes en la consola. Para usar la consola 
+                        dentro del navegador podemos apretar F12 o hacer click derecho y luego seleccionar la opción inspeccionar. 
+                        Al aparecer la consola, podemos ver el mensaje que hemos hecho imprimir con console.log ().
+                    </p>
+
+                    <p>
+                        Como podremos ver en la siguiente imagen, nos vamos a encontrar que al final de la consola, nos informa en 
+                        qué línea se está haciendo la impresión del código:
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/console log.png" alt="console log" />
+                </figure>
+
+                <div>
+                    <p>
+                        A continuación, se puede acceder a un ejemplo para visualizar en limpio el funcionamiento de console.log.
+                    </p>
+                </div>
+
+                <div>
+                    <a href="../1. Introducción/html/consoleLog.html">Ir a ejemplo de console.log</a>
+                </div>
+            </article>
+
+            <article>
+                <h3>Ambiente "source" en navegadores</h3>
+
+                <div>
+                    <p>
+                        Los navegadores también cuentan con una ventana llamada source que nos muestra los códigos donde están 
+                        siendo llamados desde el archivo actual que se está ejecutando.
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/source.png" alt="source" />
+                </figure>
+
+                <div>
+                    <p>
+                        En el caso de la imagen tenemos “main.js”, en esta ventana podemos colocar un punto de parada en el código, 
+                        de forma de que el programa se ejecute hasta dicho punto. Cuando refrescamos el programa se detiene en el 
+                        punto de parada y a partir de allí se puede ejecutar el mismo paso a paso utilizando las flechas de la 
+                        derecha:
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/sourceDos.png" alt="source dos" />
+                </figure>
+                
+            </article>
+        </section>
+
+    </main>
+</body>
+</html>
