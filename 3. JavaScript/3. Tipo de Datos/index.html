@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo de Datos</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Tipos de datos</h1>
+        </header>
+
+        <section>
+
+            <article>
+
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        Cuando estamos usando variables o estructuras de control estamos guardando “datos” y estos datos
+                        pueden tener diferentes “tipos” por eso la palabra compuesta es “tipo de datos”.
+                    </p>
+
+                    <p>
+                        Los tipos de datos que podemos encontrar en nuestro código son los siguientes:
+                    </p>
+                </div>
+
+            </article>
+
+            <article>
+                <h3>Int</h3>
+
+                <p>
+                    Los datos de tipo entero son los datos numéricos que no poseen decimales, estos datos pueden ser tanto 
+                    positivos como negativos. Por ejemplo: 3, 15, -20, etc.
+                </p>
+            </article>
+
+            <article>
+                <h3>Float</h3>
+
+                <p>
+                    Los datos de tipo float son los datos numéricos con decimales, cabe destacar, que los decimales son 
+                    separados por un punto “.”, ya que si usamos una coma no lo tomará como decimal. Dentro de este tipo 
+                    entran todos los números que contengan un “.” En su estructura.
+                </p>
+            </article>
+
+            <article>
+                <h3>String</h3>
+
+                <div>
+                    <p>
+                        Los tipos de datos Sring son cadenas de caracteres los cuales al declarar let o const seguido de un 
+                        “=” los strings van encerrados entre comillas (“”). Las comillas pueden ser dobles o simples y si comenzamos 
+                        un string con comillas dobles debemos cerrar el mismo con las mismas comillas dobles. Debemos saber que si 
+                        pasamos un valor numérico a una estructura string el código a este lo leerá como un carácter y no como un 
+                        número. Por ejemplo:
+                    </p>
+
+                    <div class="cont-code">
+                        <code>let = “Juan”;</code>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>List o Array</h3>
+
+                <div>
+                    <p>
+                        Los tipos de datos de listas o arreglos son llamados estructuras de control ya que dentro de estos 
+                        pueden almacenar varias variables de diferentes tipos de datos. Específicamente las listas son 
+                        declaradas como una variable y sus valores están encerrados entre [] corchetes. Debemos destacar que 
+                        si los valores son de tipo string deben estar encerrados entre comillas. Además, cada uno de los valores
+                        sean string o de otro tipo deben estar separados por comas.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Diccionario y objeto</h3>
+
+                <div>
+                    <p>
+                        Los tipos de dato diccionarios u objetos son otro tipo de estructuras de control, pero estos almacenan 
+                        los datos de manera diferente. Como ya hemos mencionado el diccionario cuando se declara estamos 
+                        creando un objeto el cual tiene diferentes características o tipos de datos, es decir, estamos 
+                        declarando una variable que dentro tiene una sub variable y esta tiene una lista con uno o más 
+                        valores.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Para ser más claro en el ejemplo, supongamos que declaramos un objeto con nombre “persona” y los 
+                        valores que le corresponden a persona son “altura” con valor: 160 y “colorDeOjos” con valor “café”.
+                        Como podemos notar persona tiene dentro dos variables con sus respectivos valores cada uno.
+                    </p>
+
+                    <div class="cont-code">
+                        <code>var persona = {"altura": 160, colorDeOjos: "café"};</code>
+                    </div>
+
+                    <p>
+                        La estructura de los diccionarios se declara entre {} llaves y por cada clave – valor que tenga debe estar 
+                        separado por coma. También debemos saber que los strings llevan las “” comillas.
+                    </p>
+
+                    <p>
+                        Los diccionarios comienzan con claves las que les siguen “:” dos puntos para luego colocar el valor de 
+                        dicha clave.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Boolean</h3>
+
+                <div>
+                    <p>
+                        Otro tipo de dato que podemos utilizar es el Boolean el cual recibe solo 2 valores: True or False.
+                    </p>
+
+                    <p>
+                        <b>Debemos saber que mientras estamos trabajando en nuestro código podemos utilizar en una misma línea muchos tipos de datos.</b>
+                    </p>
+                </div>
+            </article>
+
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Datos Compuestos</h2>
+
+            <div>
+                <p>
+                    Vamos a elaborar el ejemplo con tipo de datos compuestos redefiniendo la variable “persona” agregándole 
+                    una variable de tipo arreglo con sus números de teléfonos representados como strings.
+                </p>
+            </div>
+
+            <figure>
+                <img src="./img/datoCompuesto.png" alt="dato compuesto" />
+            </figure>
+
+            <div>
+                <p>
+                    Consultamos las propiedades de “persona” utilizando “persona.telefonos[0]” que nos retorna el primer 
+                    teléfono en el arreglo “123123”. En una segunda línea imprimimos “persona.telefonos.length”, es decir, 
+                    el tamaño del arreglo de “teléfonos” esto nos retornará el primer número del arreglo “123123” y 
+                    la cantidad de elementos que hay dentro de él o la longitud del arreglo: “2”.
+                </p>
+
+                <p>
+                    Podemos anidar objetos más complejos dentro de otros objetos:
+                </p>
+            </div>
+
+            <figure>
+                <img src="./img/datoCompuestoDos.png" alt="dato compuesto 2" />
+            </figure>
+
+            <div>
+                <p>
+                    En este caso tenemos un atributo de “dirección” que, a su vez es otro objeto. Ahora tenemos un objeto 
+                    dentro de otro objeto que, adicionalmente también podría usar estructuras mas complejas como arreglos.
+                    La manera de acceder a las propiedades es similar a lo anteriormente realizado, para ilustrar el 
+                    proceso podemos imprimir:
+                </p>
+
+                <div class="cont-code">
+                    <code>console.log(persona.direccion.estado);</code>
+                </div>
+
+                <p>
+                    Esto nos retornará <b>“principal”</b>.
+                </p>
+
+                <p>
+                    Cuando trabajamos con objetos podemos preguntar por chances que no existen como (persona.edad), esto nos retornará “undefined”, es decir no existe.
+                    Cuando usamos un condicional “no definido” se toma como valor “false”.
+                    Podemos asignar de forma dinámica sin alterar la estructura a “persona.edad” de la siguiente manera:
+                </p>
+            </div>
+
+            <figure>
+                <img src="./img/onjeto.png" alt="objeto" />
+            </figure>
+
+            <div>
+                <p>
+                    Le decimos a “persona.edad” que le asignamos el valor “20” a la variable “persona”.
+                    Si tenemos esta variable declarada pero hacemos una impresión en una línea anterior a la 
+                    declaración (ej: 15) nos seguirá retornando “undefined”:
+                </p>
+            </div>
+
+            <figure>
+                <img src="./img/undefined.png" alt="undefined" />
+            </figure>
+        </section>
+
+        <hr>
+
+        <section>
+            <article>
+                <h2>Cambiar el tipo de dato</h2>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        En algunas ocasiones deberemos pasar algún valor de un dato a otro, generalmente esto ocurre cuando 
+                        tenemos un valor numérico en str “25” y lo queremos pasar como valor “int”. Esto puede lograrse con la 
+                        función parseInt(). Para lograr el funcionamiento correcto de esta función debemos crear una nueva 
+                        variable o renombrar la ya existente y luego hacer el llamado de esta función y dentro de sus parámetros 
+                        colocar la variable a la que deseamos cambiar su tipo de dato.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Undefined & Null</h2>
+
+            <article>
+
+                <h3>Undefined</h3>
+
+                <div>
+                    <p>
+                        Cuando nos aparece un valor undefined pueden ser dos aspectos:
+                    </p>
+
+                    <p>
+                        La variable que estamos especificando "no existe", es decir, no está declarada en el código que estamos 
+                        utilizando. Otra ventana que nos puede salir que tiene el mismo resultado es "not defined". Puede ser 
+                        probable que este cartel salga cuando estamos utilizando variables que no tienen valores dentro de funciones,
+                        bucles, etc.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Null</h3>
+
+                <div>
+                    <p>
+                        La diferencia de Null y Undefined es que Null si reconoce la variable y su valor es Null, es decir, vacío.
+                    </p>
+
+                    <p>
+                        Este tipo de dato es muy útil cuando no tenemos un valor inicial para una variable que luego la completamos 
+                        con el valor del algoritmo que estemos creando. Por ejemplo:
+                    </p>
+
+                    <p>
+                        Primero podemos declarar que el botón de encendido de un programa es null y luego de un par de procesos 
+                        ese botón de encendido cambie a True y el funcionamiento arranque.
+                    </p>
+
+                    <p>
+                        <b>Conclusión: </b>El valor null es voluntario lo cual es implementado por el programador, cuando estamos 
+                        hablando de un valor undefined es un error que estamos cometiendo en nuestro código.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <section>
+            <article>
+                <h2>TypeOf</h2>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        Este método (TypeOf) nos permite saber que tipo de dato es el valor de la variable que lo está conteniendo. 
+                        Si declaramos una variable tipo "array" y luego la hacemos pasar por typeof nos retornará el tipo de valor:
+                    </p>
+
+                    <div class="cont-code">
+                        <code>let elementos = ["Tierra", "Fuego", "Agua", "Aire"];</code>
+                    </div>
+
+                    <div class="cont-code">
+                        <code>console.log(typeof elementos)</code>
+                    </div>
+
+                    <p>Retorna en consola de JS: <code>Object</code></p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <section>
+            <article>
+                <h2>Tipo de datos: Estructuras</h2>
+            </article>
+
+            <article>
+                <h3>Variables simples y variables complejas</h3>
+
+                <div>
+                    <p>
+                        Las variables simples son los strings, int, float. Las variables complejas están compuestas por más de 
+                        un valor tales como los arrays y objetos.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Copiando Valores</h3>
+
+                <div>
+                    <p>
+                        En el ejemplo más adelante, declaramos una variable con nombre color que tiene asignado “blanco” y otra 
+                        llamada color2 que tiene asignado “color”. En este caso JS crea una copia del contenido de “color” y se 
+                        lo coloca a “color2”. Por lo que si imprimimos ambas variables nos retornará “blanco”.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Variables Complejas</h3>
+
+                <div>
+                    <p>
+                        Cuando tenemos variables complejas no se copia el contenido, sino que se les asigna la misma referencia 
+                        en memoria.
+                    </p>
+
+                    <p>
+                        Tenemos una variable “personas” que es un array que contiene un objeto y dentro tiene un “hash” cuyo 
+                        nombre es “Luis”.
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/ejemploLuis.png" alt="ejemplo luis" />
+                </figure>
+
+                <div>
+                    <p>
+                        Ahora vamos a agregar otro elemento objeto al array con ”push”:
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/push.png" alt="push" />
+                </figure>
+
+                <div>
+                    <p>Esto nos retornará: </p>
+
+                    <div class="cont-code">
+                        <code>[{"nombre":"luis"},{"nombre":"marcos","edad": 10}]</code>
+                    </div>
+
+                    <p>
+                        Agregamos al objeto nuevo creado (que se encuentra en la posición [1]) del array, una lista 
+                        llamada “amigos” y con valor “Roberto” y “ana”.
+                    </p>
+
+                    <figure>
+                        <img src="./img/position1.png" alt="position1" />
+                    </figure>
+
+                    <p>
+                        Al correrlo podemos observar que la segunda posición del objeto que se encuentra en [1], tiene un 
+                        atributo que se llama “amigos” con valores “Roberto” y “Ana”.
+                    </p>
+
+                    <figure>
+                        <img src="./img/diccionarioCompuesto.png" alt="diccionario compuesto" />
+                    </figure>
+
+                    <p>
+                        Asignemos otra variable con nombre “usuarios” y el valor le pasamos el contenido de lo que tiene “personas”.
+                        Entonces a la nueva variable “usuarios” le asignamos “personas” y si imprimimos “usarios” este tendrá los 
+                        mismos valores que “personas”.
+                    </p>
+
+                    <figure>
+                        <img src="./img/logUsuarios.png" alt="log usuarios" />
+                        <img src="./img/usuariosNuevos.png" alt="usuarios nuevos" />
+                    </figure>
+
+                    <p>
+                        Podemos modificar uno de los elementos dentro de “personas” con “usuario” por ejemplo, el nombre de “Marcos”. 
+                        Para ello en usuarios[1] (segundo elemento del arreglo) .nombre le asignamos “Pedro”.
+                    </p>
+
+                    <figure>
+                        <img src="./img/consoleLogFinal.png" alt="" />
+                    </figure>
+                </div>
+
+            </article>
+        </section>
+
+        <hr>
+
+        <section>
+            <article>
+                <h2>Ejemplos</h2>
+
+                <div>
+                    <p>
+                        A continuación, el siguiente link nos lleva a una página donde podremos encontrar todos los Ejemplos
+                        prácticos que tenemos en la teoría de este sitio.
+                    </p>
+                </div>
+
+                <div>
+                    <a href="../3. Tipo de Datos/html/ejemplos.html">Ir a Ejemplos Prácticos</a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+</body>
+
+</html>
