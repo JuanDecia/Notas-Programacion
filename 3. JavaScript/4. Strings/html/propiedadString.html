@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srings: Propiedades</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Strings: Propiedades</h1>
+        </header>
+
+        <section>
+            <article>
+                <h2>Length</h2>
+
+                <div>
+                    <p>
+                        Length es una propiedad de todos los objetos de tipo String, que nos retorna un valor numérico del tamaño 
+                        de la cadena de caracteres que estamos almacenando en la variable de tipo string. Como es una propiedad 
+                        no se requiere accederla finalizando con paréntesis; para acceder a esta propiedad ponemos el nombre de la 
+                        variable o el valor del string y finalizamos con un punto y a continuación sin ningún espacio extra la 
+                        palabra length.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <p>
+                        <code>"Primer nombre".length;</code>
+                    </p>
+                    <p><code>var nombre = "Primer nombre";</code></p>
+                    <p><code>nombre.length;</code></p>
+                    <p><code>Resultado= 13</code></p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <section>
+            <article>
+
+                <h2>toLowerCase</h2>
+
+                <div>
+                    <p>
+                        El método toLowerCase de los objetos tipo string, nos permite obtener la cadena de caracteres convertida a 
+                        caracteres en minúscula; los números, símbolos y otros caracteres no se ven afectados. Recordemos que la 
+                        manera de llamar un método o una función es el nombre de la función finalizado con los parámetros que 
+                        recibe el método, separados por comas y encerrados entre paréntesis.
+                    </p>
+
+                    <p>
+                        Para nuestro caso, ponemos el valor del string, continuamos con un punto, seguido de apertura y cierre de 
+                        los paréntesis (esta función no recibe ningún parámetro, con lo cual dejamos este espacio vacío) y 
+                        terminamos con un punto y coma. A continuación, puedes ver un ejemplo:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <p><code>"CURSO DE JAVASCRIPT" .toLowerCase ();</code></p>
+                    <p><code>Resultado= "curso de javascript"</code></p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- toUpperCase -->
+        <section>
+            <article>
+                <h2>toUpperCase</h2>
+
+                <div>
+                    <p>
+                        El método toUpperCase nos devuelve el contenido del string en mayúsculas.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <p><code>"estoy aprendiendo javascript". ToUpperCase ();</code></p>
+                    <p><code>Resultado= "ESTOY APRENDIENDO JAVASCRIPT"</code></p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Split -->
+        <section>
+            <article>
+                <h2>Split</h2>
+
+                <p>
+                    Vamos a utilizar el procesamiento de strings llamado Split el cual crea un arreglo nuevo y nos permite 
+                    dividir un string en función de un carácter divisor. Entonces, por cada división que crea este “caracter 
+                    divisor” se crea una posición en el arreglo.
+                </p>
+
+                <h3>Parámetros</h3>
+
+                <h4>split.(separador)</h4>
+
+                <div>
+                    <p>
+                        Especifica el carácter a usar para la separación de la cadena. El separador es tratado como una cadena o 
+                        como una expresión regular. Si se omite el separador, el array devuelto contendrá un sólo elemento con la 
+                        cadena completa. 
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Cuando se encuentra, el separador es eliminado de la cadena y las subcadenas obtenidas se devuelven en un 
+                        array. Si el separador no es encontrado o se omite, el array contendrá un único elemento con la cadena 
+                        original completa. Si el separador es una cadena vacía la cadena es convertida en un array de carácteres.
+                    </p>
+
+                    <p>
+                        Es recomendable crear una variable para usar con el separador, es decir:
+                    </p>
+
+                    <div class="fondo-codigo">
+                        <p><code>const separadorEspacio = (‘ ‘);</code></p>
+                        <p><code>const separadorComa = (‘,’);</code></p>
+                    </div>
+                    
+                </div>
+
+                <div>
+                    <a href="../html/stringPropiedades/ejemploSplit.html">Ir a Ejemplos Split</a>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Trim -->
+        <section>
+            <article>
+                <h2>Trim</h2>
+
+                <div>
+                    <p>
+                        El método trim devuelve el valor del string, eliminando los caracteres en blanco que estén al <b>inicio</b> y al 
+                        <b>final</b> de la cadena, sin importar la cantidad de caracteres en blanco que contenga. Por ejemplo:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <p><code>let frase = '     eliminando espacios en blanco        ';</code></p>
+                    <p><code>console.log(frase.trim());</code></p>
+                    <p><code>Resultado= "eliminando espacios en blanco"</code></p>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar no necesitamos especificar un argumento en los parámetros de este método para 
+                        que funcione.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        También, es importante destacar que, de esta manera sólo estamos “mostrando” el resultado con la función 
+                        de trim() pero, no lo estamos guardando. Para guardar el resultado, debemos instanciarlo en una nueva 
+                        variable, es decir, en vez de utilizar console.log() lo que debemos hacer es crear una variable con nombre 
+                        “resultado” y en su valor aplicar el método trim.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <p><code>let resultado = frase.trim();</code></p>
+                    <p><code>console.log(resultado);</code></p>
+                </div>
+
+                <div>
+                    <a href="../html/stringPropiedades/trimEjemplo.html">Ir a ejemplo de "Trim"</a>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <section>
+            <article>
+                <h2>charAt</h2>
+
+                <div>
+                    <p>
+                        El método CharAt selecciona una posición en una cadena de caracteres para devolver un nuevo string.
+                    </p>
+                </div>
+
+                <h3>Parámetros</h3>
+
+                <h4>Índice: charAt(indice)</h4>
+
+                <div>
+                    <p>
+                        Un entero entre 0 y 1 menos que la longitud de la cadena. Si no se proporciona ningún índice charAt() 
+                        utilizará 0.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Los caracteres de una cadena se indexan de izquierda a derecha. El índice del primer carácter es 0, y el 
+                        índice del último carácter en una cadena es - 1. Si el índice que usted proporciona está fuera del rango, 
+                        JavaScript devuelve una cadena vacía.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        La función CharAt es útil cuando estamos trabajando con un procesamiento de líneas y debemos crear una 
+                        función para cambiar algún carácter específico de alguna palabra ingresada por un usuario.
+                    </p>
+                </div>
+
+                <div>
+                    <a href="../html/stringPropiedades/charAtEjemplo.html">Ir a ejemplo "charAt"</a>
+                </div>
+
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Slice -->
+        <section>
+            <article>
+                <h2>Slice</h2>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        El método slice() devuelve una <b>copia</b> de una parte del array dentro de un nuevo array empezando por inicio 
+                        hasta fin (fin no incluido). El array original <b>no</b> se modificará.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+
+                <div>
+                    <p><code>arr.slice([inicio [, fin]]);</code></p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Parámetros</h3>
+
+                <h4>Inicio</h4>
+
+                <div>
+                    <p>
+                        Índice donde empieza la extracción. El primer elemento corresponde con el índice 0. Si inicio es omitido 
+                        el valor por defecto es 0. Si inicio es mayor a la longitud del array, se devuelve un array vacío.
+                    </p>
+                </div>
+
+                <h4>Fin</h4>
+
+                <div>
+                    <p>
+                        Índice que marca el final de la extracción. Slice() extrae hasta el índice indicado, pero sin incluir el 
+                        final. Osea que, si slice indica (1,4), extrae desde el segundo elemento hasta el cuarto (los elementos 
+                        con índices 1, 2,  y 3) recordemos que el último no entra.
+                    </p>
+                </div>
+
+            </article>
+
+            <article>
+                <div>
+                    <a href="../html/stringPropiedades/sliceEjemplo.html">Ir a ejemplo "Slice()"</a>
+                </div>
+            </article>
+        </section>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Ejemplo: Concatenando Strings</h1>
+
+            <nav>
+                <a href="../index.html">Volver a inicio</a>
+            </nav>
+        </header>
+
+        <section>
+
+            <article>
+                <h2>Concatenando Simple</h2>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        En este ejemplo tenemos que:
+                    </p>
+                </div>
+
+                <ol>
+                    <li>
+                        Definir 3 variables string. Las variables deben estar con nombre: "nombre", "apellido" y "curso".
+                    </li>
+
+                    <li>
+                        Definir un mensaje de saludo con la siguiente estructura: Hola Juan Decia, bienvenido al curso de JavaScript.
+                    </li>
+
+                    <li>
+                        Darle los valores correspondientes a las variables para que se puedan mostrar correctamente la frase al concatenerlas.
+                    </li>
+                </ol>
+
+                <div>
+                    <p>
+                        Las variables deben quedar de la siguiente manera:
+                    </p>
+
+                    <p><code>let nombre = 'Juan';</code></p>
+                    <p><code>let apellido = 'Decia';</code></p>
+                    <p><code>let curso = 'JavaScript';</code></p>
+
+                    <p>
+                        Para concatenar las variables usamos la función avanzada de JS colocando los símbolos `` (alt + 96) y luego,
+                        debemos utilizar el signo <b>$</b> seguido de <b>llaves</b> ({}) que es donde vamos a colocar el nombre de la
+                        variable que mostrará el valor que corresponda, es decir:
+                    </p>
+
+                    <p><code>console.log(`Hola ${nombre} ${apellido}, bienvenido al curso de ${curso}`)</code></p>
+
+                    <p>
+                        Esta declaración nos retorna el siguiente mensaje:
+                    </p>
+
+                </div>
+            </article>
+
+            <article>
+                <div class="cont-frase fondo-color"></div>
+            </article>
+
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Concatenando con función</h2>
+
+            <article>
+                <div>
+                    <p>
+                        Opcionalmente podemos realizar este proceso construyendo una función, que luego tome los tres parámetros
+                        que contienen los valores que necesitamos, es decir: nombre, apellido y curso. Los pasos a seguir son similares,
+                        en esta ocasión, debemos hacer lo siguiente:
+                    </p>
+                </div>
+
+                <ol>
+                    <li>
+                        Definir una función con nombre "saludar" que reciba 3 parametros (nombre, apellido y curso).
+                    </li>
+                    <li>
+                        Invocar la función para que retorne el saludo.
+                    </li>
+                </ol>
+
+                <div>
+                    <p>
+                        La función debería quedar de la siguiente manera: 
+                    </p>
+
+                    <div class="fondo-codigo">
+                        <p><code>function saludar(nombre, apellido, curso) {</code></p>
+                        <p class="margen-funcion"><code>let saludo = `Hola ${nombre} ${apellido}, bienvenido al curso de ${curso}.`;</code></p>
+                        <p class="margen-funcion"><code>return saludo;</code></p>
+                        <p><code>}</code></p>
+                    </div>
+
+                    <p>
+                        Para mostrar los resultados obtenidos debemos realiar la siguiente declaración: 
+                    </p>
+
+                    <p><code>console.log(saludar("Marcelo", "Decia", "Python"));</code></p>
+
+                    <p>
+                        Donde primero llamamos a la función para mostrar en consola <b>console.log</b>. Luego, realizamos la 
+                        llamada de la función <b><code>saludar()</code></b> y dentro de los parámetros (parentesis) utilizamos
+                        directamete los valores que necesitamos.
+                    </p>
+
+                    <p>
+                        Como podemos notar en esta ocasión no hicimos uso de las variables, sino, que directamente colocamos
+                        los valores dentro de la función que hemos creado con anterioridad.
+                    </p>
+                    
+                    <p>
+                        El resultado debería ser el siguiente: 
+                    </p>
+
+                    <div class="cont-frase fondo-color"></div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>
