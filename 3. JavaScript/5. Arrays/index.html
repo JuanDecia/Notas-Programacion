@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+
+        <header>
+            <h1>Arrays</h1>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        Los tipos de datos de listas o arreglos son llamados estructuras de control, ya que, dentro de estos 
+                        pueden almacenar varias variables de diferentes tipos de datos. Específicamente las listas son declaradas 
+                        como una variable y sus valores están encerrados entre corchetes (“[]”). Los valores son de tipo string 
+                        deben estar encerrados entre comillas. Además, cada uno de los valores sean string o de otro tipo deben 
+                        estar separados por comas.
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/list.png" alt="list" />
+                </figure>
+            </article>
+
+            <hr />
+
+            <!-- Índice -->
+            <article>
+                <h2>Índice</h2>
+
+                <div>
+                    <p>
+                        Para acceder a las ubicaciones de los elementos dentro del arreglo debemos indicar su respectivo índice. 
+                        En el caso que deseemos acceder solo a la primera posición y nos muestre en pantalla “Juan” debemos colocar 
+                        la variable del arreglo seguido de [] y la posición “0”. Esto, nos retorna “Juan”. En los arreglos las 
+                        posiciones comienzan a contarse desde 0 hasta el último índice de forma creciente.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Podemos acceder desde la última posición si colocamos el índice [-1]. Haciendo este paso recorremos el 
+                        arreglo de derecha a izquierda, el conteo siempre debe ser creciente, es decir: -2, -3, etc.
+                    </p>
+                </div>
+
+                <div>
+                    <p><code>nombres[0] // Juan //</code></p>
+                </div>
+
+                <div>
+                    <p>
+                        En el caso que deseemos visualizar la cantidad elementos de un array y al mismo tiempo visualizar cuales 
+                        son los elementos tenemos que simplemente hacer la llamada de la variable que lo contiene, luego en la 
+                        consola nos quedaría un ejemplo parecido a este:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <p><code>console.log(nombres);</code></p>
+                    <p><code>(5) ['Juan', 'Sol', 'Joan', 'Abril', 'Virginia']</code></p>
+                </div>
+
+                <div>
+                    <p>
+                        Si visualizamos en la consola del navegador también nos especifica con más precisión los detalles:
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/consoleList.png" alt="consoleLog list" />
+                </figure>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Arrays Integrados</h2>
+
+                <div>
+                    <p>
+                        A las listas en JavaScript también podemos reconocerlas como matriz. Un detalle que no destacamos y es muy 
+                        importante es que, cada elemento de la matriz es una cadena, pero ten en cuenta que puedes almacenar 
+                        cualquier elemento en una matriz — cadena, número, objeto, otra variable, incluso otra matriz. También, 
+                        puedes mezclar y combinar tipos de elementos — no todos tienen que ser números, cadenas, etc.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <p><code>let random = ['tree', 795, [0, 1, 2]];</code></p>
+                </div>
+
+                <div>
+                    <p>
+                        Como vemos en el ejemplo anterior una lista dentro de otra lista también debe estar encerrada entre los 
+                        corchetes (“[]”) y en el caso de que integre a la lista padre debe estar separada por coma con los demás 
+                        elementos hermanos.
+                    </p>
+
+                    <p>
+                        Para acceder a la lista integrada debemos escoger su posición índice, en el caso del ejemplo anterior es: 
+                        [2]. Esto nos retornaría [0, 1, 2].
+                    </p>
+
+                    <p>
+                        En el caso que deseemos acceder a la posición donde se encuentra estos números luego del primer índice 
+                        donde seleccionamos esta posición, debemos seleccionar la posición específica que queremos acceder, 
+                        supongamos que elegimos 1, el ejemplo sería el siguiente:
+                    </p>
+
+                    <p><code>console.log(random[2][1]); // 1 //</code></p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Recorriendo arrays -->
+            <article>
+                <h2>Recorriendo arrays con ciclos</h2>
+
+                <div>
+                    <p>
+                        Más adelante vamos a ver que son los ciclos iteradores con más especificidad. Pero, ahora lo vamos a 
+                        utilizar para recorrer el arreglo y nos retorne por consola cada uno de los elementos que este contiene.
+                        A este proceso lo podemos lograr con un iterador llamado  “for” y la sintaxis es la siguiente:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <p><code>let personas = ['Juan','Joan','Sol','Abril'];</code></p>
+
+                    <p><code>for (let i = 0 i "menor que" personas.lenght; i++) {</code></p>
+                    <p><code>console.log(personas.[i])</code></p>
+                    <p><code>};</code></p>
+                </div>
+
+                <div>
+                    <p>
+                        Donde estamos declarando que por cada posición, es decir, por cada [i] en la longitud (lenght) del arreglo, 
+                        nos imprima dicha posición. Esto nos retornaría en la consola:
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Existe otra manera similar en JavaScript que es utilizando el mismo proceso pero con una nueva función 
+                        llamada  “for of”. Cambia la sintaxis pero el resultado es el mismo.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <p><code>for (nombre of personas) {</code></p>
+                    <p><code>console.log(nombre);</code></p>
+                    <p><code>};</code></p>
+                </div>
+
+                <div>
+                    <p>
+                        En este caso estamos diciendo al sistema que nos imprima la variable nombre del arreglo de personas.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Array destructuring -->
+
+            <article>
+                <h2>Array destructuring</h2>
+
+                <div>
+                    <p>
+                        A continuación veremos como <b>destructurar un array</b> esto es funcional para poder acceder a los 
+                        elementos del array de manera más sencilla.
+                    </p>
+
+                    <p>
+                        Para hacer el <b>destructuring</b> debemos pasarle los <b>valores</b> (sin las comillas) porque estos 
+                        tienen que estar como <b>valores</b> al <b>nombre del array</b>, este último como instancia.
+                    </p>
+
+                    <p>
+                        Cuando trabajamos con <b>destructuring</b> debemos prestar mucha atencion de poner los elementos en el 
+                        mismo orden para no alterar sus índices.
+                    </p>
+                </div>
+
+                <h3>Sintaxis y ejemplo</h3>
+
+                <div>
+                    <p>
+                        Array de nombres: <br>
+                        <code>const nombres = ['Juan', 'Sol', 'Joan', 'Abril'];</code>
+                    </p>
+
+                    <p>
+                        Destructuring: <br>
+                        <code>const[Juan, Sol, Joan, Abril] = nombres;</code>
+                    </p>
+
+                    <p>
+                        Al realizar esto aplicamos un <b>console.log</b> del elemento, nos tendria que devolver
+                        <b>su mismo valor</b>.
+                    </p>
+
+                    <p>
+                        <code>console.log(Juan); // Juan</code>
+                    </p>
+
+                    <p>
+                        Realizando este ejercicio no debemos <b>llamar al array</b> ni <b>colocar la posición del elemento</b> 
+                        que deseamos seleccionar.
+                    </p>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <article>
+                <div>
+                    <a href="../5. Arrays/html/arrayEjemplos.html">Ir a ejemplos de "Arrays"</a>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+</body>
+</html>
