@@ -86,6 +86,7 @@
 
             <hr />
 
+            <!-- Arrays Integrados -->
             <article>
                 <h2>Arrays Integrados</h2>
 
@@ -126,6 +127,83 @@
 
             <hr />
 
+            <article>
+                <h2>Agregando elementos al array</h2>
+
+                <div>
+                    <p>
+                        Uno de los conocimientos básicos que debemos saber para manejar arrays es el de <b>agregar elementos</b> a un
+                        array <b>existente</b>. Tenemos diferentes formas de realizar este proceso y vamos a conocer cada uno de 
+                        ellos. Para los ejemplos prácticos los vamos a poder encontrar en la <b><a href="../5. Arrays/html/arrayEjemplos.html" id="ejemplo-agregar">Página de ejemplos</a></b>.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>1. Push</h4>
+
+                    <div>
+                        <p>
+                            Una de las formas que podemos usar para agregar un elemento a un arreglo es usando el método <b>push()</b>
+                            , donde vamos a agregar el elemento que se encuentre dentro de sus parámetros al final de la posición del arreglo.
+                            Su sintaxis sería la siguiente: 
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo">
+                        <code>arregloExistente.push(elementoNuevo);</code>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>2. Lenght</h4>
+
+                    <div>
+                        <p>
+                            Otra manera que tenemos para agregar un elemento al arreglo es utilizando el largo del mismo. Esto sucede porque
+                            el metodo lenght toma siempre el <b>largo del arreglo</b>. Para poder aplicar este concepto debemos saber cual
+                            es el último índice de nuestro arreglo porque al elemento que vamos a agregar le debemos pasar el que sería el
+                            siguiente.
+                        </p>
+
+                        <p>
+                            La sintaxis para este método sería la siguiente: 
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo">
+                        <code>arreglo[arreglo.lenght] = 'Lucas';</code>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>3. Índice</h4>
+
+                    <div>
+                        <p>
+                            Otra forma que podemos agregar elementos a un arreglo es utilizando la posición del <b>índice</b> que a este le 
+                            correspondería. Para esta manera, debemos conocer cual es la última posición del arreglo, en el caso de que la
+                            ultima posición sea "3", nosotros debemos pasar como parámetro "4" y este ocuparía esa respectiva posición.
+                        </p>
+
+                        <p>
+                            Primero seleccionaremos el arreglo que vamos a agregar el elemento, seguido de <b>corchetes</b> ([]), 
+                            colocaremos el número del indice correspondiente. La sintaxis quedaría como el siguiente ejemplo: 
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo">
+                        <code>let personas = ['Juan','Joan','Sol','Abril'];</code> <br />
+                        <code>personas[4] = 'Lucas';</code>
+                    </div>
+
+                    <div>
+                        <code class="fondo-codigo"></code>
+                    </div>
+                </div>
+            </article>
+
+            <hr />
+
             <!-- Recorriendo arrays -->
             <article>
                 <h2>Recorriendo arrays con ciclos</h2>
@@ -149,9 +227,10 @@
                 <div>
                     <p>
                         Donde estamos declarando que por cada posición, es decir, por cada [i] en la longitud (lenght) del arreglo, 
-                        nos imprima dicha posición. Esto nos retornaría en la consola:
+                        nos imprima dicha posición.
                     </p>
                 </div>
+
 
                 <div>
                     <p>
@@ -231,12 +310,13 @@
 
             <article>
                 <div>
-                    <a href="../5. Arrays/html/arrayEjemplos.html">Ir a ejemplos de "Arrays"</a>
+                    <a href="../5. Arrays/html/arrayEjemplos.html" class="pagina-ejemplos">Ir a ejemplos de "Arrays"</a>
                 </div>
             </article>
 
         </section>
 
     </main>
+
 </body>
 </html>

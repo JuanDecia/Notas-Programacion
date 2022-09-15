@@ -1,21 +1,88 @@
-let personas = ["Juan ", "Joan ", "Sol ", "Abril"];
-document.querySelector('.cont-personas').innerHTML += `${personas}.`;
+let personas = ["Juan", "Joan", "Sol", "Abril"];
+let contResultado = document.getElementsByClassName("cont-resultado");
+document.querySelector('.cont-personas').innerHTML += `${personas.join(", ")}.`;
 
-    // Seleccionando un elemento de la lista con su posición índice.
+// #################### VISUALIZAR ELEMENTOS DE UNA LISTA #################### //
+console.log(`%c#################### VISUALIZAR ELEMENTOS DE UNA LISTA: `, "color: #71B1C1");
+
+contResultado[0].innerHTML += personas.join(", ");
+console.log(personas);
+
+console.log("");
+
+// #################### SELECCIONANDO UN ELEMENTO DE LA LISTA #################### //
+console.log(`%c#################### SELECCIONANDO UN ELEMENTO DE LA LISTA: `, "color: #71B1C1");
 
 console.log(`Seleccionando un solo índice de la lista: ${personas[0]}`) 
 document.querySelector('.cont-indiceCero').innerHTML += `${personas[0]}`; // Juan
 
-
 console.log(" ")
 
-    // RECORRIENDO LISTA CON "FOR".
+// #################### AGREGAR ELEMENTOS #################### //
+console.log(`%c#################### AGREGANDO ELEMENTOS: `, "color: #71B1C1");
 
-console.log("Recorriendo la lista con for:")
+console.log("Lista anterior: " + personas.join(", "));
+
+    // Resultado DOM
+personas.push("Lucas");
+contResultado[1].innerHTML += "Resultado esperado: " +  personas.join(", ");
+
+    // Resultado en consola
+console.log("Lista usando Push(): " + personas.join(", "));
+console.log("");
+
+personas.pop();
+console.log("Lista anterior: " + personas.join(", "));
+
+personas[personas.length] = 'Lucas';
+
+    // Resultado en DOM
+contResultado[2].innerHTML += "Resultado esperado: " + personas.join(", ");
+
+    // Resultado en consola
+console.log("Lista usando length: " + personas.join(", "));
+
+console.log("");
+personas.pop();
+
+console.log("Lista anterior: " + personas.join(", "));
+personas[4] = 'Lucas';
+
+    // Resultado en DOM
+contResultado[3].innerHTML += "Resultado esperado: " + personas.join(", ");
+
+    // Resultado en consola
+console.log("Resultado con índice: " + personas.join(", "));
+
+
+console.log("");
+
+// #################### RECORRER LISTA CON FOR #################### //
+console.log(`%c#################### RECORRIENDO LISTA CON FOR: `, "color: #71B1C1");
+
 for (let i=0; i < personas.length; i++ ) {
 
-    document.querySelector('.cont-personasCiclo').innerHTML += `${personas[i]}`;
-    console.log(personas[i]); // Nos retorna en consola todos los elementos de la lista
+    //  Resultado en DOM
+    document.querySelector('.cont-personasCiclo').innerHTML += `${personas[i]}, `;
+
+    // Resultado en consola
+    console.log(personas[i]);
+
+    // Ambas muestran los elementos que componen la lista.
+};
+
+console.log("");
+
+console.log("Mostramos solo los índices: ");
+for (let i=0; i < personas.length; i++ ) {
+
+    //  Resultado en DOM
+    contResultado[4].innerHTML += `${i}, `;
+
+    // Resultado en consola
+    console.log(i); 
+
+    // Ambas muestran solo los índices.
 };
 
 console.log(" ")
@@ -26,7 +93,7 @@ console.log(`Recorremos el arreglo pero con el metodo "for of":`)
 
 for (nombre of personas) {   // Por cada variable local del arreglo retornar en consola
     
-    document.querySelector('.cont-personasForOf').innerHTML += `${nombre}`;
+    document.querySelector('.cont-personasForOf').innerHTML += `${nombre}, `;
     console.log(nombre);
 }
 

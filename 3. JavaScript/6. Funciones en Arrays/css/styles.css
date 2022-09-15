@@ -27,7 +27,7 @@ h4 {
     color: rgb(134, 93, 231);
 }
 
-.pagina-ejemplos {
+a {
     display: flex;
     align-items: center;
     padding: 10px;
@@ -35,14 +35,13 @@ h4 {
     color: rgb(224, 162, 90);
 }
 
-.pagina-ejemplos {
+a:hover {
     font-size: 1.3em;
     text-decoration: underline;
 }
 
 code:hover {
     font-size: 1.3em;
-    color: rgb(247, 43, 16);
 }
 
 .fondo-codigo {
@@ -63,15 +62,26 @@ p {
 
 /* ESTILOS ESPECÍFICOS */
 
-#ejemplo-agregar {
-    text-decoration: none;
-    color: rgb(90, 90, 236);
-}
-
 div[class~="fondo-codigo"] {
     margin-bottom: 5px;
 }
 
+div[class~="cont-codigo"] {
+    padding-bottom: 10px;
+}
+
 code[class~="cont-codigo"] {
-    padding-bottom: 20px;
+    display: block;
+    padding-bottom: 15px;
+}
+
+code[class~="cont-funcion"] {
+    margin-left: 15px;
+}
+
+    /* ESTILOS PARA TABLA */
+
+.cont-table {
+    border: 1px solid black;
+    width: 100%;
 }

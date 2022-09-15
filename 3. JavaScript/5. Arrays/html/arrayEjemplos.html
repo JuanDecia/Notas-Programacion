@@ -30,8 +30,21 @@
 
                 <hr>
 
-                <!-- Capturando índice -->
-                <h3>Capturando un índice del arreglo</h3>
+                <!-- VER ELEMENTOS DE LA LISTA -->
+                <h3>1. Ver elementos de la lista</h3>
+
+                <div>
+                    <p>
+                        Si queremos saber la posicion de los elementos y que contiene la posicion debemos hacer "console.log(nombres)" 1 {Juan}, 2{Sol}...
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <!-- CAPTURANDO ÍNDICE -->
+                <h3>2. Capturando un índice del arreglo</h3>
 
                 <div>
                     <p>
@@ -41,18 +54,98 @@
 
                 <div class="cont-indiceCero fondo-codigo"></div>
 
+                <hr />
+
+                <!-- Agregando elementos al arreglo -->
+                <h3>3. Agregando elementos al arreglo</h3>
+
+                <div>
+                    <p>
+                        A continuación, vamos a describir cuales son las siguientes maneras de agregar elementos a un arreglo
+                        que ya tiene elementos.
+                    </p>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>Push</li>
+                    </ul>
+
+                    <div>
+                        <p>
+                            Si estamos trabajando con el arreglo de nombres de los ejemplos anteriores, podemos pasar en los parámetros de
+                            <b>push()</b> un nombre nuevo (ej: Lucas) y este se agrega al final de la lista. Ejemplo: 
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo">
+                        <code class="cont-codigo">let personas = ["Juan", "Joan", "Sol", "Abril"];</code> <br />
+                        <code>personas.push("Lucas");</code> <br />
+                        <code class="cont-resultado"></code>
+                    </div>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>Lenght</li>
+                    </ul>
+
+                    <div>
+                        <p>
+                            Con este método, también vamos a poder agregar un elemento a la útima posición. La construcción y el resultado
+                            sería el siguiente: 
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo">
+                        <code>let personas = ["Juan", "Joan", "Sol", "Abril"];</code> <br />
+                        <code>personas[personas.lenght] = 'Lucas';</code> <br />
+                        <code class="cont-resultado"></code>
+                    </div>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>Índice</li>
+                    </ul>
+
+                    <div>
+                        <p>
+                            A continuación, vamos a agregar un elemento en la útima posición utilizando su índice:
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo">
+                        <code>let personas = ["Juan", "Joan", "Sol", "Abril"];</code> <br />
+                        <code>personas[4] = 'Lucas';</code> <br />
+                        <code class="cont-resultado"></code>
+                    </div>
+                </div>
                 <hr>
 
                 <!-- Recorriendo arreglo con for -->
 
-                <h3>Recorriendo arreglo con 'for'</h3>
+                <h3>4. Recorriendo arreglo con 'for'</h3>
                 <div>
                     <p>
-                        Ahora, mostraremos con un ciclo cada uno de los valores del arreglo
+                        Ahora, mostraremos con un ciclo cada uno de los valores del arreglo. Si queremos imprimir el contenido de 
+                        cada posición debemos escribir "console.log(nombres[i])" "Juan", "Sol"...
                     </p>
                 </div>
 
                 <div class="cont-personasCiclo fondo-codigo"></div>
+
+                <div>
+                    <ul>
+                        <li>
+                            Console.log(i) muestra en pantalla la cantidad de elementos.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
 
                 <hr>
 
