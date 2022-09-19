@@ -60,6 +60,14 @@ p {
     text-align: justify;
 }
 
+ul {
+    display: flex;
+}
+
+ul > div {
+    width: 50%
+}
+
 /* ESTILOS ESPECÍFICOS */
 
 div[class~="fondo-codigo"] {
@@ -84,4 +92,13 @@ code[class~="cont-funcion"] {
 .cont-table {
     border: 1px solid black;
     width: 100%;
+}
+
+.inicio {
+    color: rgb(135, 135, 221);
+}
+
+.cont-inicio {
+    display: flex;
+    justify-content: center;
 }

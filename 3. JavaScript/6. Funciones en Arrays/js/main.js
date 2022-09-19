@@ -405,3 +405,63 @@ for(i=0;i<empresa.length;i++) {
     console.log(empresa[i].id);
 }
 */
+
+console.log(" ");
+
+// #################### EJEMPLO REDUCE #################### //
+console.log("%c#################### EJEMPLO REDUCE(): ", "color: #71B1C1");
+
+const numerosLista = [175, 50, 25];
+
+let totalResta = numerosLista.reduce((acomulador, indice) => {return acomulador - indice} );
+let totalSuma = numerosLista.reduce((acomulador, indice) => acomulador + indice, 20);
+
+    // Resultado en DOM
+contResultado[19].innerHTML += `Resultado esperado: ${totalResta}.`;
+contResultado[20].innerHTML += `Resultado esperado: ${totalSuma}.`;
+
+    // Resultado en consola
+console.log("Tenemos el siguiente arreglo para aplicar el método reduce: " + numerosLista.join(", ") + ".");
+console.log(`Aplicamos el method reduce para restar los valores desde el primer indice: ${totalResta}.`);
+
+console.log("");
+
+console.log("Tenemos el siguiente arreglo para aplicar el método reduce: " + numerosLista.join(", ") + ".");
+console.log(`Aplicamos el method reduce para sumar los valores con un valor inicial de 20: ${totalSuma}.`);
+
+console.log(" ");
+
+// #################### EJEMPLO REVERSE #################### //
+console.log("%c#################### EJEMPLO REVERSE(): ", "color: #71B1C1");
+
+let listaReverse = elementos;
+console.log(`Lista de elementos actual: ${listaReverse.join(", ")}.`);
+
+listaReverse.reverse();
+
+    // Ejemplo en DOM
+contResultado[21].innerHTML += `Resultado esperado: ${listaReverse.join(", ")}.`;
+
+    // Ejemplo en consola
+console.log("Resultado esperado: " + listaReverse.join(", ") + ".");
+console.log(" ");
+
+// #################### EJEMPLO JOIN #################### //
+console.log("%c#################### EJEMPLO JOIN(): ", "color: #71B1C1");
+
+let listaJoin = elementos;
+let tipoLista = listaJoin.join(", ");
+
+    // Resultado DOM
+contResultado[22].innerHTML += `La lista con nombre 'listaJoin' es de tipo: ${typeof listaJoin}.`;
+contResultado[23].innerHTML += `La lista con nombre 'tipoLista' con el method join() es de tipo ${typeof tipoLista}.`
+
+    // Resultado consola
+console.log(`Lista 'listaJoin': `);
+console.log(listaJoin);
+console.log(`'listaJoin' es de tipo: ${typeof listaJoin}.`);
+console.log(" ");
+
+console.log(`Usamos el method join() para separar los elementos de la lista: `);
+console.log(listaJoin.join(", ") + ".");
+console.log(`Ahora la lista se convirtió en: ${typeof tipoLista}.`);
