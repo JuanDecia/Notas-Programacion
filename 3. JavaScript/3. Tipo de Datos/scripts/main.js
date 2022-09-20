@@ -81,14 +81,17 @@ console.log('');
 // CAMBIAR TIPO DE DATO CON PARSEINT()
 
 let numeroTipoLetra = '25';
+let numeroLetra = '19';
 document.getElementById('tipoLetra').innerHTML += `${numeroTipoLetra} es tipo ${typeof(numeroTipoLetra)} <br /> <br />`;
 
 let numeroTipoNumero = parseInt(numeroTipoLetra);
+const edad = Number(numeroLetra);
 document.getElementById('tipoNumero').innerHTML += `${numeroTipoNumero} es tipo ${typeof(numeroTipoNumero)}`;
 
 console.log(`CAMBIAR TIPOS DE DATOS: `);
 console.log(`${numeroTipoLetra} es de tipo: '${typeof numeroTipoLetra}'.`);
 console.log(`${numeroTipoNumero} es de tipo '${typeof numeroTipoNumero}'.`);
+console.log(typeof edad);
 
 console.log('');
 

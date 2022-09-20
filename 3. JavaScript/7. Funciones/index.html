@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    
+    <main>
+        <header>
+            <h1>Funciones</h1>
+
+            <nav></nav>
+        </header>
+
+        <section>
+
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        Son un conjunto de instrucciones que al ser ejecutadas realizan las instrucciones especificadas dentro de 
+                        su campo. Esta puede retornar en la finalización de la instrucción, un valor específico para luego 
+                        utilizarlo en algún fragmento de nuestro código. Como ejemplo, podemos tomar los methods de los arreglos 
+                        en el que construímos una función para una tarea determinada, en algunos casos necesitamos que nos devuelva 
+                        el valor y en otros que sencillamente se ejecute la instrucción.
+                    </p>
+                
+                    <p>
+                        Una función puede requerir ser llamada pasándole cierta información o no requerir información. 
+                        Esto quiere decir que algunas pueden llevar parámetros (requiere información) y otras que no 
+                        llevan parámetros (no requieren información).
+                    </p>
+                
+                    <p>
+                        Una función puede recibir tantos parámetros como sea necesario, aunque no es buena práctica que la misma 
+                        lleve 4 o más parámetros.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Parámetros -->
+            <article>
+                <h2>Parámetros</h2>
+
+                <div>
+                    <p>
+                        Cuando una función recibe un parámetro, dicho parámetro funciona como si se tratara de una variable 
+                        disponible para la función (variable de ámbito local). Los parámetros predeterminados de función, 
+                        permiten que los parámetros con nombre se inicien con valores predeterminados si no se pasa ningún valor. 
+                        En JavaScript, los parámetros de función están predeterminados en undefined cuando estos no están declarados 
+                        explícitamente. Sin embargo, a menudo es útil establecer un valor predeterminado diferente.                        
+                    </p>
+
+                    <p>
+                        En el siguiente ejemplo, si no se proporciona ningún valor para  ”b” cuando se llama a ”multiply”, el valor 
+                        de ”b” sería undefined, al evaluar ”a * b”  y multiply devolvería NaN.
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/functionMultiply.png" alt="function" />
+                </figure>
+
+                <div>
+                    <p>
+                        Con los parámetros predeterminados en EC2015, puedes asignar 1 como valor predeterminado para b en el 
+                        encabezado de la función lo cual en esta ocasión de multiplicar si solo pasamos un parámetro nos puede 
+                        retornar de todas maneras el resultado:
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/functionMultiply2.png" alt="function 2" />
+                </figure>
+
+                <div>
+                    <p>
+                        Cuando una función tiene varios parámetros, se debe invocar escribiendo su nombre seguido de los parámetros
+                        en el orden adecuado.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Return -->
+            <article>
+                <h2>Return</h2>
+
+                <div>
+                    <p>
+                        Una función en JavaScript puede devolver un resultado si se le introduce la palabra clave return, donde 
+                        return es aquello que queremos sacar de la función. Una vez se llega a la sentencia return se produce la 
+                        devolución del resultado y se interrumpe la ejecución (finaliza) de la función. Por ello, estructuralmente 
+                        return es la última instrucción dentro de la función. En JS una variable puede tener el valor de una función. 
+                    </p>
+                </div>
+
+            <article>
+
+            <hr />
+
+            <!-- Sintaxis -->
+            </article>
+                <h2>Sintaxis</h2>
+
+                <div>
+                    <p>
+                        Primero, debemos declarar la palabra reservada “function” seguida del nombre que le daremos a la función. 
+                        Luego, de ser necesario colocaremos los paréntesis en donde se encuentran los parámetros de la función y 
+                        si son más de uno, estos deben estar separados por coma. Por último, debemos saber que las declaraciones 
+                        que definen la función deben estar encerradas entre {}.
+                    </p>
+
+                    <p>
+                        En el caso que necesitemos que la función nos retorne un resultado en específico, en la última línea de 
+                        la construcción de la misma debemos declarar la palabra clave reservada  “return”, seguido del valor que 
+                        necesitemos que nos tiene que dar.
+                    </p>
+                </div>
+
+                <!-- Ejemplos sintaxis -->
+                <div class="">
+                    <h3>Ejemplos: </h3>
+
+                    <div>
+                        <p>
+                            Crearemos una variable con el nombre “resultado”, el valor que le agregaremos a la variable es el
+                            nombre de nuestra función “sumar()” dentro de los paréntesis pondremos los parámetros que vamos a 
+                            desear sumar.
+                        </p>
+
+                        <figure>
+                            <img src="./img/sintaxis 1.png" alt="sintaxis" />
+                        </figure>
+
+                        <p>
+                            Vamos a crear una variable add con el valor de la función “sumar”, es decir, la variable contiene el valor 
+                            de esa función. Para finalizar este paso debemos ingresar la palabra clave “return” con la operación de la 
+                            suma. 
+                        </p>
+
+                        <figure>
+                            <img src="./img/sintaxis2.png" alt="sintaxis 2" />
+                        </figure>
+
+                        <p>
+                            Luego, podemos usar add definiendo la variable “d” que tendrá el resultado de “add” con parámetros 
+                            (5 , 2). Al imprimir el valor de “d” observamos que tenemos como resultado 7.
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo">
+                        <code>let d = add(5, 2);</code> <br />
+                        <code>console.log(d);</code>
+                    </div>
+
+                    <div>
+                        <p>
+                            Una variable también puede ser de tipo función la cual podemos usar posteriormente en cualquier 
+                            parte del código, pudiendo ser esta variable asignada a otras variables o ser colocada como argumento 
+                            en otra función.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Ambito -->
+            <article>
+                <h2>Ámbito</h2>
+
+                <div>
+                    <p>
+                        Trabajemos ahora con ámbito. Vamos a extender el ejemplo de la función anterior para obtener el resultado 
+                        antes de retornar un valor. Esto lo vamos a hacer declarando la variable “suma” dentro de la función, a la 
+                        cual le asignaremos el resultado de adicionar “a y b”. En vez de retornar (a + b), la función ahora retorna 
+                        el valor de suma.
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/ambito.png" alt="ambito" />
+                </figure>
+
+                <div>
+                    <p>
+                        En JS el alcance de las variables se determina desde las definiciones más internas hacia la más externa. 
+                        Por ejemplo, la variable suma solo existe dentro de la función “sumar” dentro del ámbito de las llaves “{}”. 
+                        Si queremos hacer el llamado de la variable suma nos retornará un error ya que no existe en el ámbito global 
+                        del código.
+                    </p>
+
+                    <p>
+                        Pero, si asignamos una variable antes y fuera de function esta si podrá ser retornada si realizamos el 
+                        llamado.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Self Invoking-->
+            <article>
+                <h2>Self Invoking</h2>
+
+                <div>
+                    <p>
+                        Este tipo de función puede llamarse con tan solo poner los parámetros luego de terminar de construir 
+                        la función.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>(function (a, b){</code> <br />
+                    <code style="margin-left: 10px;">console.log(`Ejecutando la función: ${a + b}.`);</code> <br />
+                    <code>}) (3, 4); // Resultado 7</code>
+                </div>
+            </article>
+        </section>
+
+        <footer>
+
+        </footer>
+    </main>
+    <script src="./js/main.js"></script>
+</body>
+</html>
