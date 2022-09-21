@@ -6,9 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sentencia if y else</title>
 
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
-    
+    <main>
+        <header>
+            <h1>Sentencia if y else</h1>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        Las expresiones de if y else son expresiones booleanas, es decir, puede retornar el valor de verdadero o 
+                        falso. Esto lo podemos graficar como un camino para if y otro camino para else, si la condición es 
+                        verdadera para if se tomará el camino del mismo ejecutando el fragmento construído en el ámbito de if. 
+                        En el caso contrario, se tomará el camino de else y se ejecutará el fragmento construído ahí mismo.
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/ifelse.gif" alt="if else" width="400px">
+                </figure>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Sintaxis</h2>
+
+                <div>
+                    <p>
+                        A continuación, crearemos un ejemplo de los condicionales. Tenemos los siguientes datos: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-persona"></code>
+                </div>
+
+                <div>
+                    <p>
+                        Para el condicional vamos a crear un ejemplo donde nos va a filtrar los mayores de edad y los menores de edad:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>for (i = 0; i < personas.length; i++) {</code> <br />
+                    <code style="margin-left: 15px;">if (personas[i].edad > 18 ) {</code> <br />
+                    <code style="margin-left: 30px;">contPersonas[1].innerHTML += `El usuario es mayor de edad: ${personas[i].nombre}, tiene ${personas[i].edad} años.`;</code>
+                    <code style="margin-left: 15px;">}</code> <br />
+                    <code style="margin-left: 15px;">else {</code> <br />
+                    <code style="margin-left: 30px;">contPersonas[1].innerHTML += `El usuario es menor de edad: ${personas[i].nombre}, tiene ${personas[i].edad} años.`;</code> <br />
+                    <code style="margin-left: 15px;">}</code> <br />
+                    <code>}</code>
+                </div>
+
+                <div class="fondo-codigo" style="margin-top: 30px;">
+                    <code class="cont-persona"></code>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>
