@@ -68,6 +68,47 @@
                     <code class="cont-persona"></code>
                 </div>
             </article>
+
+            <hr />
+
+            <article>
+                <h2>Else if</h2>
+
+                <div>
+                    <p>
+                        En ocasiones, vamos a necesitar <b>más de una condición</b> para efectuar la sentencia. Es decir,
+                        no nos alcanzará con declarar solo un <b>if</b> y un <b>else</b>, en este caso tendremos que usar
+                        la sentencia <b>else if (condición) {resultado si es posivito}</b>. Esta sentencia nos otorga una 
+                        ruta adicional a la primera condición efectuada, en el caso de que la primera sea <b>false</b>, llegará
+                        la oportunidad de comprobar la sentencia de si <b>else if</b> es <b>true</b> y así sucesivamente si llegaramos
+                        a tener más de una sentencia de <b>else if</b>. A continuación, veremos un ejemplo de su sintaxis: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>if ((mes == 11 && day >= 21) || mes == 0 || mes == 1 || (mes == 2 && day < 21)) {</code> <br />
+                    <code style="margin-left: 20px;">estacion = 'Verano';</code> <br />
+                    <code>}</code> <br />
+                    <code>else if ((mes == 2 && day >= 21) || mes == 3 || mes == 4 || (mes == 5 && day < 21)) {</code> <br />
+                    <code style="margin-left: 20px;">estacion = 'Otoño';</code> <br />
+                    <code>}</code> <br />
+                    <code>else if ((mes == 5 && day >= 21) || mes == 6 || mes == 7 || (mes == 8 && day < 21)) {</code> <br />
+                    <code style="margin-left: 20px;">estacion = 'Invierno';</code> <br />
+                    <code>}</code> <br />
+                    <code>else if ((mes == 8 && day >= 21) || mes == 9 || mes == 10 || (mes == 11 & day < 21)){</code> <br />
+                    <code style="margin-left: 20px;">estacion = 'Primavera';</code> <br />
+                    <code>}</code>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar en el ejemplo, tenemos una sentencia para todas las condiciones que pueden 
+                        efectuarse si desde la primera <b>no es correcta</b>. En resumen, lo que trata de buscar este fragmento de código
+                        es que según la fecha dada nos retorne la estación del año en la que nos encontramos.
+                    </p>
+                </div>
+
+            </article>
         </section>
     </main>
 

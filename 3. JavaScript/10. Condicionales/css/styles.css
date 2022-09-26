@@ -40,10 +40,6 @@ a:hover {
     text-decoration: underline;
 }
 
-code:hover {
-    font-size: 1.3em;
-}
-
 .fondo-codigo {
     background-color: bisque;
 }

@@ -1,0 +1,72 @@
+body {
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    background-color: aliceblue;
+}
+
+main {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(55, 185, 55);
+}
+
+h2 {
+    color: rgb(59, 124, 184);
+}
+
+h3 {
+    color: rgb(224, 54, 11);
+}
+
+p {
+    text-align: justify;
+}
+
+span {
+    background-color: bisque;
+}
+
+.cont-ejemplos {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.cont-ejemplos > a {
+    text-decoration: none;
+    color: rgb(146, 102, 187);
+}
+
+.fondo-codigo {
+    background-color: bisque;
+}
+
+.code-margin-left {
+    margin-left: 20px;
+}
+
+/* ESTILOS TABLA */
+
+table {
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+tr, td {
+    border: 1px solid black;
+}
+
+th {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+}

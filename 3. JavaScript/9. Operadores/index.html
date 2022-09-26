@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Operadores</h1>
+        </header>
+
+        <section>
+
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        En programación debemos conocer los distintos tipos de operadores que pueden utilizarse, ya que, a la hora de 
+                        la construcción de nuestro código son sumamente importantes y debemos saber con exactitud la definición y la 
+                        función de cada uno de ellos.
+                    </p>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Operadores Aritméticos</h2>
+
+                <div>
+                    <p>
+                        Los operadores aritméticos son utilizados generalmente para cuentas matemáticas, de concatenación y para los 
+                        contadores en los ciclos de los bucles.
+                    </p>
+                </div>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Significado</th>
+                            <th>Ejemplo</th>
+                            <th>Es igual a</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>+</td>
+                            <td>Suma</td>
+                            <td>20 + 2</td>
+                            <td>22</td>
+                        </tr>
+
+                        <tr>
+                            <td>-</td>
+                            <td>Resta</td>
+                            <td>20 - 2</td>
+                            <td>18</td>
+                        </tr>
+
+                        <tr>
+                            <td>*</td>
+                            <td>Producto/ Multiplicar</td>
+                            <td>20 * 2</td>
+                            <td>40</td>
+                        </tr>
+
+                        <tr>
+                            <td>/</td>
+                            <td>División</td>
+                            <td>20 / 2</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>%</td>
+                            <td>Módulo</td>
+                            <td>20 % 2</td>
+                            <td>0</td>
+                        </tr>
+
+                        <tr>
+                            <td>++</td>
+                            <td>Incremento</td>
+                            <td>variable ++ ó ++ variable</td>
+                            <td>variable = variable + 1</td>
+                        </tr>
+
+                        <tr>
+                            <td>--</td>
+                            <td>Decremento</td>
+                            <td>variable -- ó -- variable</td>
+                            <td>variable = variable - 1</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="cont-ejemplos">
+                    <a href="../9. Operadores/html/operadoresAritmeticos.html">Ir a ejemplos</a>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- OPERADOR AND -->
+            <article>
+                <h2>Operador "&&" (and)</h2>
+
+                <div>
+                    <p>
+                        Podemos hacer condiciones anidadas con los operadores “and” (&&). Todas las funciones que están unidas por 
+                        && se tienen que cumplir. El intérprete de JS verifica si la primera condición se cumple y luego chequea la segunda 
+                        pudiendo tener nosotros más de un “&&”. Si en este proceso se consigue alguna que no se cumpla ya la condición 
+                        completa es falsa.
+                    </p>
+                </div>
+
+                <h3>Sintaxis y ejemplo</h3>
+
+                <p>
+                    Generalmente usamos estos operadores en bucles o sentencias de if - else. Para este ejemplo, lo aplicaremos dentro
+                    de una sentecia if. Para el ejemplo, tenndremos una variable con nombre "lucas" y un valor de tipo int asignado de 15.
+                    También, tenemos una variable llamada "abril" con otro valor de tipo int de 11.
+                </p>
+
+                <div class="fondo-codigo">
+                    <code>if (lucas && abril < 18) {</code> <br />
+                    <code class="code-margin-left">console.log(`Los chicos son menores de edad.`);</code> <br />
+                    <code class="code-margin-left">contResultado[0].innerHTML += "Los chicos son menores de edad.";</code> <br />
+                    <code>} else {</code> <br />
+                    <code class="code-margin-left">console.log(`Los chicos son mayores de edad.`);</code> <br />
+                    <code class="code-margin-left">contResultado[0].innerHTML += "Uno o ambos de los chicos no es menor de edad.";</code> <br />
+                    <code>};</code>
+                </div>
+
+                <p>
+                    En este caso tenemos una condición <b>and</b> que nos retorna <b>true</b>, porque, lucas y abril tienen
+                    un valor menor a 18 (15 y 11 respectivamente). Por lo que la consola nos retornó: 
+                </p>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div>
+                    <p>
+                        Recordemos que para que esta sentencia pueda ser verdadera, ambas condiciones nos deben retornar en <b>true</b>.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+
+        </section>
+    </main>
+    <script src="./js/main.js"></script>
+</body>
+</html>
