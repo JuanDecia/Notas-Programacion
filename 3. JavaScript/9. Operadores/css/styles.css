@@ -27,6 +27,10 @@ p {
     text-align: justify;
 }
 
+code {
+    display: block;
+}
+
 span {
     background-color: bisque;
 }
@@ -43,11 +47,15 @@ span {
 
 .fondo-codigo {
     background-color: bisque;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .code-margin-left {
     margin-left: 20px;
 }
+
 
 /* ESTILOS TABLA */
 

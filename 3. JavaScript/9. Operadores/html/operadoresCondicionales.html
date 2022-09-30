@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Condicionales</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <h1>Ejemplos: Operadores Condicionales</h1>
+
+            <nav class="cont-ejemplos">
+                <a href="../index.html">Volver a inicio</a>
+            </nav>
+        </header>
+
+        <section>
+            <article>
+                <h2>Ejemplo es igual (==)</h2>
+
+                <div>
+                    <p>
+                        El operador "==" compara si los dos elementos son del mismo valor o si son iguales.
+                    </p>
+                </div>
+
+                <h3>Sintaxis</h3>
+
+                <div class="fondo-codigo">
+                    <code>if (lucas == abril) {</code> <br />
+                    <code
+                        class="code-margin-left">console.log(`Lucas tiene ${lucas}, Abril tiene ${abril}. El operador == dice que tienen la misma edad.`);</code>
+                    <br />
+                    <code>} else {</code> <br />
+                    <code
+                        class="code-margin-left">console.log(`Lucas tiene ${lucas}, Abril tiene ${abril}. El operador == dice que tienen diferente edad.`);</code>
+                    <br />
+                    <code>}</code>
+                </div>
+
+                <h4>Resultado</h4>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div>
+                    <p>
+                        Si el valor de “lucas” es igual al valor de “abril” la condición nos retorna true lo que
+                        entraría en la primera
+                        sentencia donde el resultado nos daría “ambos tienen la misma edad”. Como la edad es diferente
+                        la condición nos
+                        retorna false y la condición entra en la sentencia de else donde el cuerpo dice que las edades
+                        son “diferentes”.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <article>
+
+                <h2>Ejemplo es igual (===)</h2>
+
+                <div>
+                    <p>
+                        El operador "===" no solo compara si es del mismo tipo, sino que también compara si es del mismo
+                        valor.
+                        Es muy recomendado usar esta expresión ya que, si tenemos que comparar entre un “4 int” y un “4
+                        str” esta
+                        condición nos retornará “false”, ya que, si utilizamos la condición anterior nos retornará true
+                        porque “==”
+                        solo compara el valor.
+                    </p>
+                </div>
+
+                <h3>Sintaxis</h3>
+
+                <div class="fondo-codigo">
+                    <code>if (lucas === edadLucas) {</code> <br />
+                    <code class="code-margin-left">console.log("La edad es del mismo tipo");</code> <br />
+                    <code>} else {</code> <br />
+                    <code
+                        class="code-margin-left">console.log("La edad es de distinto tipo (false), porque, 'lucas' es de tipo int y 'edadLucas' es de tipo str.");</code>
+                    <br />
+                    <code>};</code>
+                </div>
+
+                <h4>Resultado</h4>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Operador =!</h2>
+
+                <div>
+                    <p>
+                        Compara dos variables y retorna <b>true</b> si son diferentes.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>if (lucas != abril) {</code>
+                    <code
+                        class="code-margin-left">contResultado[2].innerHTML += `Las edades de Lucas y Abril son diferentes.`;</code>
+                    <code class="code-margin-left">console.log(`Las edades de Lucas y Abril son diferentes.`);</code>
+                    <code>} else {</code>
+                    <code
+                        class="code-margin-left">contResultado[2].innerHTML += `Las edades de Lucas y Abril son iguales.`;</code>
+                    <code class="code-margin-left">console.log(`Las edades de Lucas y Abril son iguales.`);</code>
+                    <code>};</code>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <!-- MAYOR QUE -->
+            <article>
+                <h2>Operador ">" (Mayor que)</h2>
+
+                <div>
+                    <p>
+                        Compara variables numéricas, si la primera es mayor que la segunda retorna true.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>if (lucas > abril) {</code>
+                    <code>console.log(`Lucas es mayor que abril.`);</code>
+                    <code>} else {</code>
+                    <code>console.log(`Lucas no es mayor que abril.`);</code>
+                    <code>};</code>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- MENOR QUE -->
+            <article>
+                <h2>Operador "<" (Menor que)</h2>
+                    <div>
+                        <p>
+                            Compara variables numéricas, si la primera es menor que la segunda retorna true. Si no,
+                            retorna false.
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo">
+                        <code>if (lucas < abril) {</code>
+                        <code>console.log(`Lucas es menor que abril.`);</code>
+                        <code>} else {</code>
+                        <code>console.log(`Abril es menor que Lucas.`);</code>
+                        <code>};</code>
+                    </div>
+
+                    <div class="fondo-codigo">
+                        <code class="cont-resultado"></code>
+                    </div>
+            </article>
+
+            <hr />
+
+            <!-- MAYOR O IGUAL -->
+            <article>
+                <h2>Operador ">=" (Mayor o igual que)</h2>
+
+                <div>
+                    <p>
+                        Compara variables numéricas, si la primera es <b>mayor o igual</b> que la segunda retorna true.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>if (lucas >= abril) {</code>
+                    <code>console.log(`Lucas es mayor que abril.`);</code>
+                    <code>} else {</code>
+                    <code>console.log(`Lucas no es mayor que abril.`);</code>
+                    <code>};</code>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <!-- MENOR O IGUAL -->
+            <article>
+                <h2>Operador "<=" (Menor o igual que)</h2>
+
+                <div>
+                    <p>
+                        Compara variables numéricas, si la primera es <b>menor o igual</b> que la segunda retorna true.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>if (lucas <= abril) {</code>
+                    <code>console.log(`Lucas es menor que abril.`);</code>
+                    <code>} else {</code>
+                    <code>console.log(`Abril es menor que Lucas.`);</code>
+                    <code>};</code>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+                
+            </article>
+        </section>
+    </main>
+    <script src="../js/ejemplos/operadoresCondicionales.js"></script>
+</body>
+
+</html>
