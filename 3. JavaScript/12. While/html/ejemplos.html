@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos While</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Ejemplos prácticos: Bucle While</h1>
+
+            <nav>
+                <a href="../index.html">Volver a Inicio</a>
+            </nav>
+        </header>
+
+        <section>
+            <article>
+                <h2>Ejemplo While</h2>
+
+                <div>
+                    <p>Resultado de la condición del bucle: 'n <= 10': </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <p>Guardamos el resultado del contador en un arreglo para mostrar en una linea en el DOM: </p>
+
+                    <div class="bloque-codigo">
+                        <code>let n = 0;</code>
+                        <code>let arregloNumeros = [];</code>
+                        <code><b>while (n <= 10) {</b></code>
+                        <code class="indentacion">arregloNumeros.push(n);</code>
+                        <code class="indentacion">n++;</code>
+                        <code><b>};</b></code>
+                    </div>
+                    
+                    <div class="cont-resultado"></div>
+                </div>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Ejemplo While 2</h2>
+
+                <div>
+                    <p>
+                        Resutado de la condición del bucle <b>"x += n"</b>.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <p>Creamos el acomulador "x" y luego mostramos el resultado: </p>
+
+                    <div class="bloque-codigo">
+                        <code>let numero = 0;</code>
+                        <code>let x = 0;</code>
+                        <code>let arregloAcomulador = [];</code>
+                        <hr>
+                        <code><b>while (numero < 3) {</b></code>
+                        <code class="indentacion">numero++;</code>
+                        <code class="indentacion">x += numero</code>
+                        <code class="indentacion">arregloAcomulador.push(x)</code>
+                        <code><b>};</b></code>
+                    </div>
+
+                    <div class="cont-resultado"></div>
+                    <div class="bloque-codigo">
+                        <code class="cont-resultado"></code>
+                    </div>
+                </div>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Ejemplo ciclo While con Break</h2>
+
+                <div>
+                    <p>El ciclo se termina luego de que nos retorne un numero impar</p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <div class="bloque-codigo">
+                        <code>let contador = 0;</code>
+                        <hr>
+                        <code><b>while (contador < 10) {</b></code>
+                        <code class="indentacion">if (contador % 2 == 0) {</code>
+                        <code class="indentacion-30">console.log("Se encontró el primer número impar y se corta el bucle.");</code>
+                        <code class="indentacion-30">break;</code>
+                        <code class="indentacion">} else {</code>
+                        <code class="indentacion">console.log("El contador está en: " + contador + ".");</code>
+                        <code class="indentacion">}</code>
+                        <code class="indentacion">contador++;</code>
+                        <code>};</code>
+                    </div>
+                </div>
+
+                <div class="cont-resultado"></div>
+            </article>
+        </section>
+    </main>
+    
+    <script src="../script/main.js"></script>
+</body>
+</html>

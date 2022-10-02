@@ -28,30 +28,40 @@ h4 {
 }
 
 a {
-    display: flex;
-    align-items: center;
-    padding: 10px;
     text-decoration: none;
-    color: rgb(224, 162, 90);
-}
-
-a:hover {
-    font-size: 1.3em;
-    text-decoration: underline;
-}
-
-.fondo-codigo {
-    background-color: bisque;
-}
-
-li {
-    padding: 5px 0;
-}
-
-figure {
-    text-align: center;
 }
 
 p {
     text-align: justify;
+}
+
+li {
+    padding: 10px 0px;
+}
+
+    /* ESTILOS A CONTENEDORES */
+.cont-ejemplos {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.bloque-codigo > code {
+    display: block;
+    padding: 5px 0;
+}
+
+.bloque-codigo > code:last-child {
+    margin-bottom: 15px;
+}
+
+.indentacion {
+    margin-left: 20px;
+}
+
+.indentacion-30 {
+    margin-left: 30px;
+}
+
+.fondo-codigo {
+    background-color: bisque;
 }

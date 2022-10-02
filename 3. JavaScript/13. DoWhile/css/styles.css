@@ -23,35 +23,19 @@ h3 {
     color: rgb(224, 54, 11);
 }
 
-h4 {
-    color: rgb(134, 93, 231);
-}
-
-a {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    text-decoration: none;
-    color: rgb(224, 162, 90);
-}
-
-a:hover {
-    font-size: 1.3em;
-    text-decoration: underline;
+p {
+    text-align: justify;
 }
 
 .fondo-codigo {
     background-color: bisque;
 }
 
-li {
+.bloque-codigo > code {
+    display: block;
     padding: 5px 0;
 }
 
-figure {
-    text-align: center;
-}
-
-p {
-    text-align: justify;
+.indentacion {
+    margin-left: 20px;
 }

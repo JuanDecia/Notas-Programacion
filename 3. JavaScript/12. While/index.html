@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12. While</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>While</h1>
+
+            <nav class="cont-ejemplos">
+                <a href="../12. While/html/ejemplos.html">Ir a ejemplo</a>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Introducción</h2>
+
+            <div>
+                <p>
+                    Para ejecutar ciertas partes de nuestro programa varias veces necesitamos de los bucles, una de las 
+                    cláusulas para hacer esto en JS es el “while”. Su funcionamiento se basa en realizar un conjunto 
+                    de instrucciones mientras una condición se cumpla:
+                </p>
+            </div>
+
+            <h2>Sintaxis</h2>
+
+            <div>
+                <figure>
+                    <img src="./img/sintaxisBucle.png" alt="sintaxis" />
+                </figure>
+            </div>
+
+            <div>
+                <p>
+                    En el ejemplo vemos que primero definimos la variable “n” con un valor inicial de “0”. En el ciclo se va a leer 
+                    “mientras “n” sea menor que 10” imprimimos el valor de “n”. Si ejecutamos en este momento como la variable no 
+                    cambia “n” se queda en “1”, es decir, se trata de un bucle infinito.                    
+                </p>
+
+                <p>
+                    Para que salgamos del bucle debemos incrementar “n”, por ejemplo, usando el operador de adición “++” para que se 
+                    incremente la variable “n” en “1”, cada vez que pasemos por allí. De esta manera el resultado incluye una 
+                    secuencia de números del 0 al 9. Se acaba en 9 porque cuando el contador llega a 10, no se cumple la condición y 
+                    ocasionando que salgamos del bucle. Si deseamos que aparezca el “10” debemos poner el operador condicional “<=”. 
+                </p>
+
+                <p>
+                    La declaración del operador “++” es como poner: <span><b>n = n + 1;</b></span>
+                </p>
+
+                <p>
+                    Es decir, “n” tiene el valor de “n” y se le suma “1” cada vez que se repita la sentencia. Otro ejemplo que 
+                    podemos tener en un caso como este es el siguiente: 
+                </p>
+            </div>
+
+            <div>
+                <figure>
+                    <img src="./img/sintaxisWhile.png" alt="sintaxis while" />
+                </figure>
+            </div>
+
+            <div>
+                <p>
+                    En este caso cada iteración del bucle, incrementa “n” y añade ese resultado a “x”. Por lo tanto, 
+                    tendrían estos valores:
+                </p>
+            </div>
+
+            <div>
+                <ul>
+                    <li>Después del primer pase: “n = 1” y “x = 1”.</li>
+                    <li>Después del segundo pase: “n = 2” y “x = 3”.</li>
+                    <li>Después del tercer pase: “n = 3” y “x = 6”.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <hr />
+
+        <section>
+            <h2>Palabra clave: Break</h2>
+
+            <div>
+                <p>
+                    Cuando estamos en un bucle while y deseamos que termine en una condición dada, debemos usar la instrucción “break”. 
+                    Esto sucede porque break nos retorna un resultado false que nos termina el ciclo. Para ejemplificar este proceso 
+                    vamos a realizar un ejercicio donde se genere un break cuando nos retorne un numero impar el ciclo:
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
