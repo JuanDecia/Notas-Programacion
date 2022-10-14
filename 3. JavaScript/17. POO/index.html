@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Programación Orientada a Objetos</h1>
+        </header>
+
+        <section>
+
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        Este lenguaje está orientado a prototipos que es un tipo específico de programación orientada a objetos. 
+                        En esta ocasión usaremos la sintaxis de ES6.
+                    </p>
+
+                    <p>
+                        La POO es una abstracción de los objetos de la realidad plasmado en nuestro código y es aquella programación 
+                        donde el sistema que estamos implementando se representa como un conjunto de objetos interactuando entre sí. 
+                        Para ello, necesitamos identificar los mismos y que hacen dichos objetos. Esto se logra a través del encapsulamiento 
+                        que refiere a que: cada objeto es independiente. En el sentido en que cada uno tiene definido sus funciones y 
+                        propiedades, de allí la noción de cápsulas. Cada una de las cuales contiene los elementos del objeto que determinan 
+                        su comportamiento, este contenido de las cápsulas, está oculto al mundo exterior solo permitiendo que se vea lo 
+                        que sea requerido. Por ejemplo: una persona (objeto) lleva a reparar su teléfono móvil (objeto).
+                    </p>
+                </div>
+            </article>
+            
+        </section>
+
+        <hr />
+
+        <!-- Conceptos -->
+        <section>
+
+            <h2>Conceptos Claves</h2>
+
+            <article>
+                <h3>Clases</h3>
+
+                <div>
+                    <p>
+                        Las clases se representan como el tipo general del objeto, englobando los elementos comunes (comportamiento) 
+                        que tiene un objeto. Por ejemplo: La clase “persona” que es un tipo general de lo que puede ser un objeto 
+                        persona (Juan). La persona tendría definido lo que tienen las personas en general: cabeza, cuerpo, manos, pies…
+                    </p>
+                </div>
+
+            </article>
+
+            <article>
+                <h3>Objeto</h3>
+
+                <div>
+                    <p>
+                        Por otra parte tenemos el objeto que es la instancia de la clase, por ejemplo: Un objeto de la clase persona 
+                        puede ser “Luis”, que es una instancia de “persona (clase)” (persona (clase) => Luis (Instancia de persona, 
+                        es decir, objeto)). Entonces “persona” es la clase y “Luis” es el objeto.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Atributo</h3>
+
+                <div>
+                    <p>
+                        Cada objeto tiene atributos que son las propiedades de dicho objeto. Si “Luis” es un objeto, las propiedades 
+                        serían: altura, nombre, apellido.
+                    </p>
+                </div>
+
+            </article>
+
+            <article>
+                <h3>Métodos</h3>
+
+                <div>
+                    <p>
+                        Los métodos son las funciones que determinan un comportamiento de ese objeto (caminar (), hablar (), etc.). 
+                        Anteriormente hemos visto cómo agregar atributos, en este caso, un método puede ser un atributo y para ejemplificar 
+                        este concepto vamos a crear un método con nombre “presentarse()” para que el objeto persona pueda colocar su 
+                        “nombre y apellido”. 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>let persona = {</code>
+                    <code class="indentacion">nombre: ‘Juan’,</code>
+                    <code class="indentacion">apellido: ‘Decia’,</code>
+                    <code class="indentacion">edad: 28,</code>
+                    <code class="indentacion">nombreCompleto: function(){</code>
+                    <code class="indentacion-40">return this.nombre + ‘ ‘ + this.apellido;</code>
+                    <code>};</code>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar usamos una palabra clave llamada “this”, esta palabra clave es muy útil para asociar a los 
+                        valores del propio objeto. Esto sucede porque “this” es un puntero hacia los atributos que están dentro del objeto, 
+                        nos retornará un error si apuntamos con “this” hacia una variable que esté relacionada con un ámbito global.
+                    </p>
+
+                    <p>
+                        También, observemos que la función tiene un return para que nos devuelva la concatenación de los valores de 
+                        nombre y apellido cuando hagamos la llamada de este método. Para realizar este paso con éxito podemos colocar 
+                        esta línea de código:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>console.log(persona.nombreCompleto()); // Resultado: Juan Decia</code>
+                </div>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Abstracción de un objeto</h2>
+
+                <div>
+                    <p>
+                        Un aspecto importante a resaltar en el paradigma es la abstracción, que consiste en definir qué elementos de 
+                        la realidad vamos a implementar, de forma tal, que podamos ejecutar funciones requeridas para cumplir el 
+                        objetivo del sistema que estamos desarrollando. Por ejemplo, si definimos el objeto “Luis” que tiene 
+                        “último nivel de educación” como atributo, un dato como: “sistema de control de masa corporal” no es importante, 
+                        por lo cual, no lo debemos definir como un atributo que necesitamos implementar. Si no, buscar uno acorde a la 
+                        implementación del objetivo.
+                    </p>
+
+                    <p>
+                        En términos de abstracción debemos decidir las clases que vamos a tener, los objetos que debemos definir, qué 
+                        métodos debemos implementar y que atributos debemos incluir para cada objeto.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>let toby = {color: "blanco", ladrar: function()}</code>
+                </div>
+
+                <div>
+                    <p>
+                        Tenemos una variable “tobby” que es un objeto específico que “representa un perro”. Es de color “blanco” y 
+                        tiene la función de ladrar ().
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Método constructor</h2>
+
+                <div>
+                    <p>
+                        Hay un método especial conocido como método constructor que se define en cada clase, son 
+                        altamente recomendables usarlos y se llaman generalmente cuando se inicializa el objeto. 
+                        Se utiliza para inicializar atributos que son generales entre los objetos.
+                        Debemos saber que constructor tiene un parámetro el cual le podemos agregar elementos los 
+                        cuales podemos utilizar como variables locales con el método this.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo codigo-bloque">
+                    <code>constructor() {</code>
+                    <code class="indentacion">this.color = "blanco";</code>
+                    <code>}</code>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>let toby = new Perro();</code>
+                    <code>// tobby.color --> retorna "blanco"</code>
+                </div>
+
+                <div>
+                    <p>
+                        Esta propiedad es muy similar cuando le pasamos atributos a una “function()” porque trabaja de la 
+                        misma manera con las variables locales. A diferencia de este caso, se cambia la sintaxis porque estamos 
+                        tratando con “clases”. La declaración podría ser la siguiente:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo fondo-bloque">
+                    <code>class Automovil {</code>
+                    <code class="indentacion">constructor(marca, modelo, color) {</code>
+                </div>
+
+                <div>
+                    <p>
+                        Ahora con la palabra reservada “this” crearemos los atributos haciendo referencia a los parámetros de la clase:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo fondo-bloque">
+                    <code>class Automovil {</code>
+                    <code class="indentacion">constructor(marca, modelo, color) {</code>
+                    <code class="indentacion-40">this.marca = marca;</code>
+                    <code class="indentacion-40">this.modelo = modelo;</code>
+                    <code class="indentacion-40">this.color = color;</code>
+                </div>
+
+                <div>
+                    <p>
+                        Luego a estas declaraciones le aplicamos el valor del parámetro, para que cuando se cree el objeto, tome el valor 
+                        que se le pase al parámetro a un futuro:
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Herencia</h2>
+
+                <div>
+                    <p>
+                        Otro concepto importante es la herencia esto significa que una clase puede heredar otra en particular sus 
+                        atributos y métodos lo que establece una jerarquía de clases. Podemos decir que la clase “perro” se 
+                        extiende de la clase “animal”. Esto quiere decir que hay una cosa que tienen todos los animales en común. 
+                        Esto se conoce como “generalización”. Tal es el caso del “color”, es por ello que podemos separar los atributos 
+                        comunes de los atributos particulares de cada clase.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Polimorfismo</h2>
+
+                <div>
+                    <p>
+                        También tenemos el concepto de polimorfismo cuando hay una jerarquía de clase con herencias. Un método puede 
+                        correr de distintas maneras, es decir, su ejecución es distinta de acuerdo a la subclase donde se encuentre, 
+                        por ejemplo:
+                    </p>
+
+                    <p>
+                        si definimos “perro” que extiende la clase “animal” así como también “gallo” el conjunto de acciones de 
+                        perro.caminar() es distinta a la de gallo.caminar() aun cuando ambos son animales. Este concepto es llamado 
+                        polimorfismo.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Conclusión</h2>
+
+                <div>
+                    <p>
+                        En resumen, en la POO es importante definir las clases, sus métodos, la interacción que significa como una clase 
+                        llama a los métodos o atributos de otra. Esto se logra enlazando atributos o cuando un método instancia a otra clase.
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
