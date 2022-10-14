@@ -1,7 +1,7 @@
 let contResultado = document.getElementsByClassName("cont-resultado");
 
     //  EJEMPLO #1
-    console.log(`%c#################### EJEMPLO #1: `, "color: #71B1C1");
+console.log(`%c#################### EJEMPLO #1: `, "color: #71B1C1");
 let objetoPractica = {
     clave1: 'valor1',
     clave2: 4444,
