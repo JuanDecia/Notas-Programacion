@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Class</h1>
+        </header>
+
+        <section>
+            <!-- Introduccion -->
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        Podemos considerar a una <b>clase</b> como una plantilla, a partir, de esta clase
+                        vamos a crear instancias que serían lo que conocemos como <b>objeto</b>. En los ejemplos
+                        anteriores a una <b>clase</b> le podíamos poner <b>"persona"</b>, ya que podemos crear
+                        una plantilla generalizada de <b>"personas"</b>. Cuando hablamos de instanciar al objeto
+                        nos referimos a usar la plantilla de "persona" pero, personalizandola en una en específico
+                        este puede ser una instancia objeto llamado "juan" o "padre".
+                    </p>
+
+                    <p>
+                        Lo que se comienza a diferenciar es que en los <b>objetos</b> los atributos tienen <b>valores</b>
+                        definidos. En cambio en las <b>clases</b> debemos crear una plantilla con valores generalizados 
+                        que luego se completarán en el <b>objeto</b> según los datos que fueran necesarios.
+                    </p>
+
+                    <p>
+                        Una clase debe tener los siguientes componentes: <b>nombre de la clase</b>, que este siempre
+                        debe estar en <b>mayúscula</b>. Atributos y métodos. A continuación, crearemos una sintaxis para
+                        visualizar como se arma una <b>clase</b> en <b>JS</b>. Un dato muy importante, es que vamos a estar
+                        haciendo uso del <b>método constructor</b> que lo hemos visto anteriormente en los objetos pero, en
+                        esta ocasión lo vamos a utilizar en las <b>clases</b>, así que, su sintaxis puede cambiar un poco.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Sintaxis -->
+            <article>
+                <h2>Sintaxis</h2>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>class Persona{</code>
+                    <code class="indentacion">constructor (nombre, apellido, edad, mail) {</code>
+                    <code class="indentacion-40">this.nombre = nombre;</code>
+                    <code class="indentacion-40">this.apellido = apellido;</code>
+                    <code class="indentacion-40">this.edad = edad;</code>
+                    <code class="indentacion-40">this.email = email;</code>
+                    <code class="indentacion">}</code>
+                </div>
+
+                <div>
+                    <p>
+                        De esta manera, tenemos la construcción de la planilla de la <b>clase persona</b>.
+                        Ahora, nuestro siguiente paso es instanciarlo en un <b>objeto</b>, este va a ser llamado
+                        <b>juan</b>.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>let juan = new Persona('Juan', 'Decia', 28, 'juan@gmail.com');</code>
+                </div>
+
+                <div>
+                    <p>
+                        Para ver si la instancia se creó con exito podemos mandar a llamarlo por la consola o el DOM:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <ul class="cont-resultado"></ul>
+                </div>
+
+                <div>
+                    <p>
+                        A continuación, crearemos un objeto llamado "sol" que sera otra instancia. Para crear este objeto
+                        usaremos la misma plantilla:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>let personaSol = new Persona('Sol', 'Vega', 38, 'sol@gmail.com');</code>
+                </div>
+
+                <div>
+                    <p>
+                        Veamos los resultados: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <ul class="cont-resultado"></ul>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
