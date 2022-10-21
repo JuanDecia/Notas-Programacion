@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Out</title>
+</head>
+<body>
+    <main>
+
+        <p>
+            <b>Set time out</b> trabaja de la siguiente manera: <br>
+
+            Cuando pase un tiempo determinado en el parámetro que declaramos se active una acción. Debemos
+            tener en cuenta que, para el temporalizador de este method debemos declarar el timepo en
+            <b>milisegundos</b>.
+        </p>
+
+        <p>
+            Debemos saber que <b>1 segundo</b> son <b>1000 milisegundos</b>. Nosotros debemos <b>multiplicar</b>
+            los segundos <b>.1000</b> para obtener los segundos que estamos buscando. <br/>
+            Por ejemplo, si queremos utilizar 10 segundos nuestra cuenta debe ser "10 x 1000", lo cual nos
+            dará 10000 milisegundos que es lo que debemos declarar como tiempo.
+        </p>
+
+        <p>
+            Para este ejemplo vamos a construir un fondo para el body con un retardo de 10seg.
+        </p>
+
+        <p>
+            Debemos saber que tenemos que <b>limpiar el temporalizador a 0</b>. Esto no realizará ningun cambio
+            en el funcionamiento de la web, pero dejamos el temporalizador en 0 para poder volver a utilizarlo
+            si lo deseamos. 
+        </p>
+
+        <p>
+            El method para limpiar setTimeOut se llama <b>clearTimeout()</b> y dentro de los parámetros
+            colocaremos la variable donde esta aplicado "setTimeOut". Para saber que este funcionamiento fue
+            aplicado correctamente, podemos declarar un console log aplicando "el temporalizador se ha limpiado correctamente"
+        </p>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
