@@ -27,29 +27,8 @@ h4 {
     color: rgb(134, 93, 231);
 }
 
-a {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    text-decoration: none;
-    color: rgb(224, 162, 90);
-}
-
-a:hover {
-    font-size: 1.3em;
-    text-decoration: underline;
-}
-
-.fondo-codigo {
-    background-color: bisque;
-}
-
 li {
     padding: 5px 0;
-}
-
-figure {
-    text-align: center;
 }
 
 p {
@@ -58,11 +37,24 @@ p {
 
 /* ESTILOS ESPECÍFICOS */
 
+.fondo-codigo {
+    background-color: bisque;
+}
+
+article div.fondo-codigo {
+    margin-top: 15px;
+} 
+
 .bloque-codigo > code {
     display: block;
     padding: 5px 0;
 }
 
-.espacio-top {
-    margin-top: 20px;
+
+.indentacion {
+    margin-left: 20px;
+}
+
+.indentacion-40{
+    margin-left: 40px;
 }

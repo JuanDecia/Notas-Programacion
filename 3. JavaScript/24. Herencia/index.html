@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <main>
+        <header>
+            <h1>Herencia</h1>
+        </header>
+
+        <section id="content">
+
+            <article>
+                <p>
+                    Las herencias nos son útiles cuando tenemos que hacer un nuevo objeto con similares atributos. A continuación, veremos como se construye la sintaxis de una <b>herencia</b>.
+                </p>
+            </article>
+
+            <article>
+                <h2>Sintaxis</h2>
+
+                <p>
+                    Para crear una <b>herencia</b> de una <b>clase objeto</b>, primero debemos declarar que es una <b>nueva clase</b> con la palabra reservada que ya conocemos <b>class</b>, seguido del <b>nombre que hereda esta nueva clase</b>, para este ejemplo vamos a utilizar "Nautica" (recordemos que los nombres de las clases van en "mayúsculas"). <br>
+                    A continuación, viene la palabra reservada de JS que <b>declara la herencia</b> y esta es: <b>extends</b>, seguido del nombre de <b>la clase que estamos heredando todos sus atributos</b>. Hasta ahí es la primer parte de la construcción de la <b>nueva clase</b> y en limpio quedaría de la siguiente manera:
+                </p>
+
+                <p>
+                    <code>class Nautica extends Automovil { }</code>
+                </p>
+
+                <p>
+                    Dentro de las llaves debemos crear los <b>atributos propios</b> de la nueva clase. Recordemos que debemos usar para esto el <b>method constructor</b>. Primero debemos colocar lo <b>que se hereda</b> puede ser: marca y modelo. Luego, debemos colocar <b>los nuevos atributos de la nueva clase</b> que estos pueden ser: materialCasco y tipoMotor  Esta construcción queda de la siguiente manera:
+                </p>
+
+                <p>
+                    <code>constructor(marca, modelo, materialCasco, tipoMotor,) { }</code>
+                </p>
+
+                <p>
+                    Debemos saber que nos falta agregar la palabra clave <b>super()</b> que se coloca dentro del method constructor y <b>no lleva llaves ({ })</b>. <b>Super</b> solo contiene lo que vamos a heredar de la clase padre, esto debe estar colocado entre sus <b>parámetros</b>. En nuestro caso, solo heredamos de "Automovil" <b>marca y modelo</b>.
+                </p>
+
+                <p>
+                    <code>super(marca, modelo)</code>
+                </p>
+
+                <p>
+                    Ahora nos resta construir los atributos internos de la nueva clase heredada que con <b>materialCasco</b> y <b>tipoMotor</b>. Recordemos que para esto debemos usar la palabra clave <b>this</b>.
+                </p>
+
+                <p>
+                    <code>
+                        this.materialCasco = materialCasco <br>
+                        this.tipoMotor = tipoMotor
+                    </code>
+                </p>
+
+                <p>
+                    En el caso que requiera construir otros methods, esto sustituyen a los de la clase heredada, para este ejemplo, construiremos el mismo method de velocidad pero que la condición sea de 80Km/h.
+                </p>
+            </article>
+
+            <article>
+                <h2>Creando Objeto Heredado</h2>
+
+                <p>
+                    Ahora ya tenemos creada y construida nuestra <b>nueva clase</b>, en este paso debemos <b>instanciarla</b> para crear el <b>objeto</b> que necesitamos para nuestra página.
+                </p>
+
+                <p>
+                    Como hemos visto recientemente debemos crear una instancia de la clase para copiar los datos, esto se realiza <b>creando una variable</b> y le pasamos como valor la clase, pero, recordemos que debemos usar la palabra clave <b>new</b> antes de aplicar la clase:
+                </p>
+
+                <p>
+                    <code>
+                        const titanic = new Nautica('metal', 'carbon', 'titanic', 'titanicModel');
+                    </code>
+                </p>
+
+                <p>
+                    Como podemos observar dentro de los parámetro de "Nautica" se colocan los <b>atributos especificos</b> de "Titanic". Estos atributos son los elementos que nos dan el formato del objeto.
+                </p>
+            </article>
+
+            <article>
+                <h2>Heredando un método</h2>
+
+                <div>
+                    <p>
+                        Para heredar un método desde la clase padre, solo debemos realizar su llamado
+                        sin utilizar nada más en especial.
+                    </p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobreescritura</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Sobreescritura</h1>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        El término <b>sobreescritura</b> en <b>POO</b> refiere a <b>sobreescribir</b> una
+                        propiedad o método de un <b>elemento padre</b>. Para ejemplificar este caso vamos a
+                        crear una clase padre llamada <b>Empleado</b>, la cual va a tener unas propiedades y un
+                        método, el cual luego va a ser <b>sobreescrito</b> por la clase hija llamada "gerente".
+                    </p>
+
+                    <p>
+                        Debemos tener en cuenta el concepto de <b>herencia</b>, ya que, en la clase hija que
+                        va a ser llamada "Gerente" vamos a tener todas las propiedades de la clase padre (Empleado).
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Sintaxis Ejemplo</h2>
+
+                <div class="fondo-codigo bloque-codigo">
+
+                    <code>class Empleado {</code>
+                        <code class="indentacion">constructor (nombre, sueldo) {</code>
+                        <code class="indentacion-40">this._nombre = nombre;</code>
+                        <code class="indentacion-40">this._sueldo = sueldo;</code>
+                    <code class="indentacion">}</code>
+
+                    <code class="indentacion espacio-top">obtenerDetalles() {</code>
+                        <code class="indentacion-40">return `Empleado nombre: ${this._nombre}, sueldo: ${this.sueldo}.`;</code>
+                    <code class="indentacion">}</code>
+                    <code>}</code>
+                </div>
+
+                <div>
+                    Ahora crearemos la herencia a <b>Gerente</b> y luego le realizaremos la sobreescritura
+                    al <b>method</b> de la clase padre.
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>class Gerente extends Empleado {</code>
+                    <code class="indentacion">constructor(nombre, sueldo, departamento) {</code>
+                        <code class="indentació-40">super(nombre, sueldo);</code>
+                        <code class="indentacion-40">this._departamento = departamento;</code>
+                    <code class="indentacion">}</code>
+                </div>
+
+                <div>
+                    <p>
+                        Con esta construcción, ya podemos crear nuestro primer objeto "Gerente". Esto lo
+                        realizamos de la siguiente manera:
+                    </p>
+                </div>
+
+                <h3>Construcción de objeto Gerente</h3>
+
+                <div class="fondo-codigo">
+                    <code>let gerente = new Gerente('Juan', 'USD 5000', 'Desarrollo');</code>
+                </div>
+
+                <div>
+                    <p>
+                        A continuación, vamos a llamar al <b>método "obtenerDetalles()"</b> el cual se
+                        <b>heredó</b> de la <b>clase padre (Empleado)</b>.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>console.log(gerente.obtenerDetalles());</code>
+                </div>
+
+                <h4>Resultado</h4>
+
+                <div class="fondo-codigo">
+                    <code>Empleado: nombre: 'Juan', sueldo: USD 5000.</code>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar, hasta el momento no tenemos el <b>resultado del departamento</b>
+                        donde pertenece el <b>gerente</b>. Porque, al llamar el método de la clase padre no se
+                        encuentra especificado. <br />
+                        Para poder visualizar el resultado, debemos aplicar en este caso el concepto de 
+                        <b>sobreescritura</b> y para ello vamos a realizar la siguiente sintaxis: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>class Gerente extends Empleado {</code>
+                    <code class="indentacion">constructor(nombre, sueldo, departamento) {</code>
+                    <code class="indentacion-40">super(nombre, sueldo);</code>
+                    <code class="indentacion-40">this._departamento = departamento;</code>
+                    <code class="indentacion">}</code>
+
+                    <code class="indentacion espacio-top">obtenerDetalles() {</code>
+                        <code class="indentacion-40">return `Gerente: ${super.obtenerDetalles()}, Depto: ${this._departamento}.`;</code>
+                    <code class="indentacion">}</code>
+                </div>
+
+                <div class="bloque-codigo">
+                    <p>
+                        Ahora, veamos como quedo el nuevo resultado:
+                    </p>
+
+                    <code class="fondo-codigo">console.log(gerente.obtenerDetalles());</code>
+
+                    <code class="fondo-codigo cont-resultado espacio-top"></code>
+                </div>
+
+                <div>
+                    <p>
+                        Ahora sí, podemos observar que se está imprimiendo correctamente el mensaje haciendo
+                        uso de <b>sobreescritura</b>.
+                    </p>
+                </div>
+
+            </article>
+
+            
+        </section>
+    </main>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

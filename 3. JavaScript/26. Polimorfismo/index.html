@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/styles.css" class="" />
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>POO: Polimorfismo</h1>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+
+                <article>
+                    <div>
+                        <p>
+                            El concepto de <b>polimorfismo</b> se aplica especialmente cuando estamos trabajando
+                            con <b>POO</b> y las <b>clases</b>. Este concepto es para resumir líneas de código
+                            en la cual la declaración puede trabajar de manera <b>diferente</b> según para la clase
+                            en la que se está aplicando. Es decir, si tenemos dos clases con <b>métodos diferentes</b>
+                            podemos crear una declaración que al llamarla trabaje de una forma si la llamamos para la
+                            <b>clase 1</b> y que trabaje de otra forma si la llamamos para la <b>clase 2</b>. Esto se
+                            debe porque <b>ambas clases</b> tienen <b>métodos diferentes</b>.
+                        </p>
+
+                        <p>
+                            Tomando en cuenta las clases del ejemplo anterior:
+                        </p>
+                    </div>
+
+                    <h3>Clase empleado</h3>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>class Empleado {</code>
+                            <code class="indentacion">constructor (nombre, sueldo) {</code>
+                            <code class="indentacion-40">this._nombre = nombre;</code>
+                            <code class="indentacion-40">this._sueldo = sueldo;</code>
+                        <code class="indentacion">}</code>
+    
+                        <code class="indentacion espacio-top">obtenerDetalles() {</code>
+                                <code class="indentacion-40">return `Empleado nombre: ${this._nombre}, sueldo: ${this.sueldo}.`;</code>
+                            <code class="indentacion">}</code>
+                        <code>}</code>
+                    </div>
+
+                    <h3>Clase Genrente</h3>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>class Gerente extends Empleado {</code>
+                        <code class="indentacion">constructor(nombre, sueldo, departamento) {</code>
+                        <code class="indentacion-40">super(nombre, sueldo);</code>
+                        <code class="indentacion-40">this._departamento = departamento;</code>
+                        <code class="indentacion">}</code>
+    
+                        <code class="indentacion espacio-top">obtenerDetalles() {</code>
+                            <code class="indentacion-40">return `Gerente: ${super.obtenerDetalles()}, Depto: ${this._departamento}.`;</code>
+                        <code class="indentacion">}</code>
+                    </div>
+                </article>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Aplicando el Polimorfismo</h2>
+
+                <div>
+                    <p>
+                        Teniendo en cuenta las clases anteriores, ahora vamos a crear una funcion
+                        <b>fuera del scope</b> de las clases, en la cual, al llamarla vamos a poder
+                        aplicar el <b>method</b> de cada una, según, la clase que seleccionemos como
+                        parámetro. La función sería la siguiente:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>function imprimirDatosClase(clase) {</code>
+                    <code class="indentacion">console.log( clase.obtenerDetalles() );</code>
+                    <code>};</code>
+                </div>
+
+                <div>
+                    <p>
+                        Con ésta función declarada podremos llamar a los métodos de la clase <b>padre</b>
+                        y clase <b>hija</b>, según necesitemos. Para verificar si el resultado es el 
+                        correcto crearemos la siguiente declaración.
+                    </p>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>
+                            imprimirDatosClase(gerente);
+                        </code>
+                    </div>
+
+                    <div>
+                        <p>
+                            Imprimiendo los resultados de la clase padre: <code class="fondo-codigo cont-resultado"></code>
+                        </p>
+
+                        <p>
+                            Imprimiendo los resultado de la clase hija: <code class="fondo-codigo cont-resultado"></code>
+                        </p>
+                    </div>
+
+                    
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

@@ -40,6 +40,27 @@
                     <code>contResultado[0].innerHTML += `El resultado de 5 + 6 es: ${sumarValores(5, 6)}.`;</code> <br />
                     <code class="cont-resultado"></code>
                 </div>
+
+                <div>
+                    <p>
+                        Un detalle que debemos saber es que si a la función la aplicamos sobre la 
+                        <b>misma línea de código</b> no debemos crear el <b>cuerpo de la función</b>
+                        con las <b>llaves</b> ("{cuerpo de la funcion}");
+                    </p>
+
+                    <p>
+                        Otro detalle a tener en cuenta con este tipo de funciones es cuando la trabajamos
+                        con un <b>objeto</b>, ya que, al trabajar con los objetos también estamos usando
+                        las llaves <b>"{}"</b>. Para evitar que la consola nos tire un error debemos poner
+                        el cuerpo de la función <b>entre paréntesis</b>. El ejemplo quedaría de la siguiente
+                        manera:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>cont funcionFlecha = () => ({nombre: 'Juan'});</code>
+                    <code class="espacio-top cont-resultado"></code>
+                </div>
             </article>
         </section>
     </main>
