@@ -1,0 +1,26 @@
+body {
+    max-width: 80%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(55, 185, 55);
+}
+
+.background {
+    background-color: aquamarine;
+}
+
+h2 {
+    color: blue;
+}
+
+p {
+    text-align: justify;
+}
+
+code {
+    background-color: bisque;
+    font-size: large;
+}
