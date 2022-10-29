@@ -25,7 +25,9 @@
                 <div>
                     <p>
                         Cuando estamos usando variables o estructuras de control estamos guardando “datos” y estos datos
-                        pueden tener diferentes “tipos” por eso la palabra compuesta es “tipo de datos”.
+                        pueden tener diferentes “tipos” por eso la palabra compuesta es “tipo de datos”. Para visualizar
+                        el tipo de dato que está guardando una variable podemos usar el method <b>typeOf</b> el cual
+                        nos retorna el tipo de dato de una variable seleccionada.
                     </p>
 
                     <p>
@@ -35,6 +37,9 @@
 
             </article>
 
+            <hr />
+
+            <!-- Dato Int -->
             <article>
                 <h3>Int</h3>
 
@@ -42,8 +47,24 @@
                     Los datos de tipo entero son los datos numéricos que no poseen decimales, estos datos pueden ser tanto 
                     positivos como negativos. Por ejemplo: 3, 15, -20, etc.
                 </p>
+
+                <h4>Ejemplo</h4>
+
+                <div class="fondo-color">
+                    <p><code>let numeroCinco = 5;</code></p>
+
+                    <!-- Resultado -->
+                    <div>
+                        <code class="cont-resultado"></code>
+                    </div>
+                </div>
+
+
             </article>
 
+            <hr />
+
+            <!-- Dato Float -->
             <article>
                 <h3>Float</h3>
 
@@ -52,8 +73,23 @@
                     separados por un punto “.”, ya que si usamos una coma no lo tomará como decimal. Dentro de este tipo 
                     entran todos los números que contengan un “.” En su estructura.
                 </p>
+
+                <h4>Ejemplo</h4>
+
+                <div class="fondo-color">
+                    <p><code>let numeroFloat = 0.5;</code></p>
+
+                    <!-- Resultado -->
+                    <div>
+                        <code class="cont-resultado"></code>
+                    </div>
+                </div>
+
             </article>
 
+            <hr />
+
+            <!-- Dato String -->
             <article>
                 <h3>String</h3>
 
@@ -66,14 +102,24 @@
                         número. Por ejemplo:
                     </p>
 
-                    <div class="cont-code">
-                        <code>let = “Juan”;</code>
+                <h4>Ejemplo</h4>
+
+                    <div class="fondo-color">
+                        <p><code>let tipoString = 'Soy una cadena de caracteres de tipo string';</code></p>
+
+                        <!-- Resultado -->
+                        <div>
+                            <code class="cont-resultado"></code>
+                        </div>
                     </div>
                 </div>
             </article>
 
+            <hr />
+
+            <!-- Dato Array -->
             <article>
-                <h3>List o Array</h3>
+                <h3>Array</h3>
 
                 <div>
                     <p>
@@ -84,10 +130,26 @@
                         sean string o de otro tipo deben estar separados por comas.
                     </p>
                 </div>
+
+                <h4>Ejemplo</h4>
+
+                <div class="fondo-color">
+                        <p><code>let colores = ["Rojo", "Blanco", "Negro"];</code></p>
+
+                        <!-- Resultado -->
+                        <div>
+                            <code class="cont-resultado"></code>
+                        </div>
+                    </div>
+                </div>
+
             </article>
 
+            <hr />
+
+            <!-- Objeto -->
             <article>
-                <h3>Diccionario y objeto</h3>
+                <h3>Objeto</h3>
 
                 <div>
                     <p>
@@ -107,21 +169,36 @@
                     </p>
 
                     <div class="cont-code">
-                        <code>var persona = {"altura": 160, colorDeOjos: "café"};</code>
+                        <code>let objetoPersona = {"altura": 160, colorDeOjos: "café"};</code>
                     </div>
 
                     <p>
-                        La estructura de los diccionarios se declara entre {} llaves y por cada clave – valor que tenga debe estar 
+                        La estructura de los objetos se declara entre {} llaves y por cada clave – valor que tenga debe estar 
                         separado por coma. También debemos saber que los strings llevan las “” comillas.
                     </p>
 
                     <p>
-                        Los diccionarios comienzan con claves las que les siguen “:” dos puntos para luego colocar el valor de 
+                        Los objetos comienzan con claves las que les siguen “:” dos puntos para luego colocar el valor de 
                         dicha clave.
                     </p>
                 </div>
+
+                <h4>Ejemplo</h4>
+
+                <div class="fondo-color">
+                        <p><code>let objetoPersona = {"altura": 160, colorDeOjos: "café"};</code></p>
+
+                        <!-- Resultado -->
+                        <div>
+                            <code class="cont-resultado"></code>
+                        </div>
+                    </div>
+                </div>
             </article>
 
+            <hr />
+
+            <!-- Boolean -->
             <article>
                 <h3>Boolean</h3>
 
@@ -134,8 +211,23 @@
                         <b>Debemos saber que mientras estamos trabajando en nuestro código podemos utilizar en una misma línea muchos tipos de datos.</b>
                     </p>
                 </div>
+
+                <h4>Ejemplo</h4>
+
+                <div class="fondo-color">
+                        <p><code>let estaActivo = true;</code></p>
+
+                        <!-- Resultado -->
+                        <div>
+                            <code class="cont-resultado"></code>
+                        </div>
+                    </div>
+                </div>
             </article>
 
+            <hr />
+
+            <!-- Nan -->
             <article>
                 <h3>NaN</h3>
 
@@ -145,20 +237,43 @@
                         como un error en un debug en la consola, ya que, estamos pudiendo mostrar una variable de tipo <b>numero</b>
                         y le estamos pasando una variable de tipo <b>string</b>.
                     </p>
+
+                    <p>
+                        Una práctica en donde podemos encontrar este caso es cuando utilizamos el méthod
+                        <b>Number constructor, parseFloat y parseInt</b>.
+                    </p>
                 </div>
             </article>
+
+            <h4>Ejemplo</h4>
+
+            <div class="fondo-color">
+                <div class="bloque-codigo">
+                    <code>let numeroString = 'numeroCinco';</code>
+                    <code>console.log(parseInt(numeroString));</code>
+                </div>
+
+                <!-- Resultado -->
+                <div>
+                    <code class="cont-resultado"></code>
+                </div>
+            </div>
+        </div>
 
         </section>
 
         <hr>
 
+        <!-- Datos Compuestos -->
         <section>
             <h2>Datos Compuestos</h2>
 
             <div>
                 <p>
-                    Vamos a elaborar el ejemplo con tipo de datos compuestos redefiniendo la variable “persona” agregándole 
-                    una variable de tipo arreglo con sus números de teléfonos representados como strings.
+                    Vamos a elaborar el ejemplo con tipo de datos compuestos redefiniendo la variable “persona”, vamos
+                    a hacerlo definiendo una variable de tipo objeto en donde una de sus propiedades
+                    se llamará "telefonos" y su valor es de tipo <b>array</b> la cual contiene sus números de 
+                    teléfonos representados como strings.
                 </p>
             </div>
 
@@ -168,16 +283,25 @@
 
             <div>
                 <p>
-                    Consultamos las propiedades de “persona” utilizando “persona.telefonos[0]” que nos retorna el primer 
-                    teléfono en el arreglo “123123”. En una segunda línea imprimimos “persona.telefonos.length”, es decir, 
-                    el tamaño del arreglo de “teléfonos” esto nos retornará el primer número del arreglo “123123” y 
-                    la cantidad de elementos que hay dentro de él o la longitud del arreglo: “2”.
+                    Si consultamos las propiedades de “persona” utilizando “persona.telefonos[0]” nos retornara
+                    el primer teléfono en el arreglo “123123”. También, podemos imprimir “persona.telefonos.length”, 
+                    es decir, el <b>tamaño</b> del arreglo de “teléfonos” esto nos retornará la cantidad de elementos 
+                    que hay dentro del arreglo o es lo mismo decir la longitud del arreglo: “2”.
                 </p>
 
                 <p>
-                    Podemos anidar objetos más complejos dentro de otros objetos:
+                    <code class="cont-resultado fondo-color"></code>
                 </p>
             </div>
+
+            <div class="fondo-color bloque-codigo">
+                <code>console.log(personas.telefonos.length);</code>
+                <code class="cont-resultado"></code>
+            </div>
+
+            <p>
+                Podemos anidar objetos más complejos dentro de otros objetos:
+            </p>
 
             <figure>
                 <img src="./img/datoCompuestoDos.png" alt="dato compuesto 2" />
@@ -190,31 +314,37 @@
                     La manera de acceder a las propiedades es similar a lo anteriormente realizado, para ilustrar el 
                     proceso podemos imprimir:
                 </p>
-
-                <div class="cont-code">
-                    <code>console.log(persona.direccion.estado);</code>
-                </div>
-
-                <p>
-                    Esto nos retornará <b>“principal”</b>.
-                </p>
-
-                <p>
-                    Cuando trabajamos con objetos podemos preguntar por chances que no existen como (persona.edad), esto nos retornará “undefined”, es decir no existe.
-                    Cuando usamos un condicional “no definido” se toma como valor “false”.
-                    Podemos asignar de forma dinámica sin alterar la estructura a “persona.edad” de la siguiente manera:
-                </p>
+                
+                <p>Esto nos retornará <b>“principal”</b>.</p>
             </div>
 
-            <figure>
-                <img src="./img/onjeto.png" alt="objeto" />
-            </figure>
+            <div class="bloque-codigo fondo-color">
+                <code>console.log(persona.direccion.estado);</code>
+                <code class="cont-resultado"></code>
+            </div>
 
             <div>
                 <p>
-                    Le decimos a “persona.edad” que le asignamos el valor “20” a la variable “persona”.
-                    Si tenemos esta variable declarada pero hacemos una impresión en una línea anterior a la 
-                    declaración (ej: 15) nos seguirá retornando “undefined”:
+                    Cuando trabajamos con objetos si llamamos a una propiedad que no existe (Ejemplo: persona.edad), 
+                    esto nos retornará “undefined”, es decir, que esa propiedad <b>no está declarada</b>. 
+                    Cuando nos retorna un valor <b>undefined</b>, se toma como valor el boolean <b>“false”</b>.
+                    Podemos asignar de forma dinámica sin alterar la estructura a “persona.edad” de la 
+                    siguiente manera:
+                </p>
+            </div>
+
+            <div class="fondo-color bloque-codigo">
+                <code>persona.edad = 20;</code>
+                <code class="cont-resultado"></code>
+            </div>
+
+            <div>
+                <p>
+                    Le decimos al objeto “persona" que tiene una <b>propiedad</b> con nombre <b>edad</b>
+                    y a su vez le asignamos el valor “20”. Haciendo un repaso sobre los <b>scopes</b>
+                    de las variables, debemos prestar atención que: si tenemos esta variable declarada (línea 16) pero 
+                    hacemos una impresión en una línea anterior a la declaración (ej: 15) nos seguirá 
+                    retornando “undefined”:
                 </p>
             </div>
 
@@ -223,8 +353,9 @@
             </figure>
         </section>
 
-        <hr>
+        <hr />
 
+        <!-- Cambiar tipo de dato -->
         <section>
             <article>
                 <h2>Cambiar el tipo de dato</h2>
@@ -240,11 +371,32 @@
                         colocar la variable a la que deseamos cambiar su tipo de dato.
                     </p>
                 </div>
+
+                <h4>Ejemplo</h4>
+
+                <div class="fondo-color">
+                    <div class="bloque-codigo">
+                        <code>let numeroTipoLetra = '25';</code>
+                        <code class="cont-resultado"></code>
+                    </div>
+
+                    <div>
+                        <p>Ahora convertimos el valor a número de tipo <b>int</b></p>
+
+                        <div class="fondo-codigo bloque-codigo">
+                            <code>let numeroTipoNumero = parseInt(numeroTipoLetra);</code>
+                            <code class="cont-resultado"></code>
+                        </div>
+                    </div>
+
+                 </div>
             </article>
+
         </section>
 
-        <hr>
+        <hr />
 
+        <!-- Undefined & Null -->
         <section>
             <h2>Undefined & Null</h2>
 
@@ -263,7 +415,22 @@
                         probable que este cartel salga cuando estamos utilizando variables que no tienen valores dentro de funciones,
                         bucles, etc.
                     </p>
+                
                 </div>
+
+                <div class="fondo-color bloque-codigo">
+                    <code>let variableVacía;</code>
+                    <code>console.log(variableVacía)</code>
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div>
+                    <p>
+                        También, es un aspecto muy importante saber que un valor <b>undefined</b> nos retornará
+                        como resultado final un valor booleano <b>'false'</b>.
+                    </p>
+                </div>
+
             </article>
 
             <article>
@@ -271,17 +438,18 @@
 
                 <div>
                     <p>
-                        La diferencia de Null y Undefined es que Null si reconoce la variable y su valor es Null, es decir, vacío.
+                        La diferencia de Null y Undefined es que Null si reconoce la variable y su valor es Null, 
+                        es decir, vacío.
                     </p>
 
                     <p>
-                        Este tipo de dato es muy útil cuando no tenemos un valor inicial para una variable que luego la completamos 
-                        con el valor del algoritmo que estemos creando. Por ejemplo:
+                        Este tipo de dato es muy útil cuando no tenemos un valor inicial para una variable que 
+                        luego la completamos con el valor del algoritmo que estemos creando. Por ejemplo:
                     </p>
 
                     <p>
-                        Primero podemos declarar que el botón de encendido de un programa es null y luego de un par de procesos 
-                        ese botón de encendido cambie a True y el funcionamiento arranque.
+                        Primero podemos declarar que el botón de encendido de un programa es null y luego de un 
+                        par de procesos ese botón de encendido cambie a True y el funcionamiento arranque.
                     </p>
 
                     <p>
@@ -289,11 +457,18 @@
                         hablando de un valor undefined es un error que estamos cometiendo en nuestro código.
                     </p>
                 </div>
+
+                <div class="fondo-color bloque-codigo">
+                    <code>let variableNull = null;</code>
+                    <code>console.log(variableNull)</code>
+                    <code class="cont-resultado"></code>
+                </div>
             </article>
         </section>
 
         <hr>
 
+        <!-- typeof() -->
         <section>
             <article>
                 <h2>TypeOf</h2>
@@ -302,16 +477,18 @@
             <article>
                 <div>
                     <p>
-                        Este método (TypeOf) nos permite saber que tipo de dato es el valor de la variable que lo está conteniendo. 
-                        Si declaramos una variable tipo "array" y luego la hacemos pasar por typeof nos retornará el tipo de valor:
+                        Este método (TypeOf) nos permite saber que tipo de dato es el valor de la variable que lo está 
+                        conteniendo. Si declaramos una variable tipo "array" y luego la hacemos pasar por typeof 
+                        nos retornará el tipo de valor:
                     </p>
 
-                    <div class="cont-code">
+                    <div class="fondo-color bloque-codigo">
                         <code>let elementos = ["Tierra", "Fuego", "Agua", "Aire"];</code>
+                        <code>console.log(typeof elementos);</code>
+                        <code class="cont-resultado"></code>
                     </div>
 
                     <div class="cont-code">
-                        <code>console.log(typeof elementos)</code>
                     </div>
 
                     <p>Retorna en consola de JS: <code>Object</code></p>
@@ -319,8 +496,9 @@
             </article>
         </section>
 
-        <hr>
+        <hr />
 
+        <!-- Tipos de Datos -->
         <section>
             <article>
                 <h2>Tipo de datos: Estructuras</h2>
@@ -347,6 +525,20 @@
                         lo coloca a “color2”. Por lo que si imprimimos ambas variables nos retornará “blanco”.
                     </p>
                 </div>
+
+                <div class="fondo-color bloque-codigo">
+                    <code>let color = blanco;</code>
+                    <code>let copiaColor = color;</code>
+                    <code class="cont-resultado"></code>
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar la variable <b>copiaColor</b> se le ha asignado una copia del
+                        valor que tiene la variable <b>color</b>, es decir, 'blanco'.
+                    </p>
+                </div>
             </article>
 
             <article>
@@ -359,8 +551,8 @@
                     </p>
 
                     <p>
-                        Tenemos una variable “personas” que es un array que contiene un objeto y dentro tiene un “hash” cuyo 
-                        nombre es “Luis”.
+                        Tenemos una variable “personas” que es un array que contiene un objeto y dentro tiene una propiedad
+                        'nombre' con valor cuyo “Luis”.
                     </p>
                 </div>
 
@@ -370,7 +562,7 @@
 
                 <div>
                     <p>
-                        Ahora vamos a agregar otro elemento objeto al array con ”push”:
+                        Ahora vamos a agregar otro elemento objeto al array con el method para arrays ”push()”:
                     </p>
                 </div>
 
@@ -379,15 +571,18 @@
                 </figure>
 
                 <div>
-                    <p>Esto nos retornará: </p>
+                    <p>
+                        Si prestamos atención debemos crear una estructura de objeto al utilizar este método
+                        en este caso en específico. La anterior declaración nos retornará: 
+                    </p>
 
-                    <div class="cont-code">
+                    <div class="fondo-color">
                         <code>[{"nombre":"luis"},{"nombre":"marcos","edad": 10}]</code>
                     </div>
 
                     <p>
-                        Agregamos al objeto nuevo creado (que se encuentra en la posición [1]) del array, una lista 
-                        llamada “amigos” y con valor “Roberto” y “ana”.
+                        Agregamos al objeto nuevo que hemos creado (que se encuentra en la posición [1]) 
+                        del array, una lista llamada “amigos” y con valor “Roberto” y “ana”.
                     </p>
 
                     <figure>
@@ -396,7 +591,7 @@
 
                     <p>
                         Al correrlo podemos observar que la segunda posición del objeto que se encuentra en [1], tiene un 
-                        atributo que se llama “amigos” con valores “Roberto” y “Ana”.
+                        atributo que se llama “amigos” con valores “Roberto” y “Ana” (ver este resultado en consola).
                     </p>
 
                     <figure>
@@ -427,26 +622,9 @@
             </article>
         </section>
 
-        <hr>
-
-        <section>
-            <article>
-                <h2>Ejemplos</h2>
-
-                <div>
-                    <p>
-                        A continuación, el siguiente link nos lleva a una página donde podremos encontrar todos los Ejemplos
-                        prácticos que tenemos en la teoría de este sitio.
-                    </p>
-                </div>
-
-                <div>
-                    <a href="../3. Tipo de Datos/html/ejemplos.html">Ir a Ejemplos Prácticos</a>
-                </div>
-            </article>
-
-        </section>
     </main>
+
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>
