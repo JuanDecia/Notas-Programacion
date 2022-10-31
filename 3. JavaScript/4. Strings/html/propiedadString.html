@@ -11,10 +11,17 @@
 <body>
     <main>
         <header>
-            <h1>Strings: Propiedades</h1>
+            <h1>Strings: Métodos</h1>
+
+            <div class="cont-regresar">
+                <div class="cont-flecha"><img class="flecha" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAASlJREFUSEu1le0xBFEQRc9GYDMgAzYCMkAGREAGyIAIyAARIIOVARkQAXWqelTXYKfmTU//mppXdc/tr/cWzByLmfWpAOwBt2F01Tc8FXAJXCTRX3qtgB3gHtB9jhLAebheAu/ACfAUlEkABXV9EGKPIf4BfE0FHEUjhXyG8EOqTTNAQSdEgPES37rO0QSwFIrbUF07Mdf/7M0ogK4dPZtpvIbrtw1LOQqwBnZD7CqcDy18M8CyCBmKUQBLpPBZqJrRMVBWos6tTb4DtgGnRuhNRZOzhtkIOYyfz5FNyZhmkHsgaCuyOQVKFq2fjaL78dNvQSVXRQa5H/bDbGy8kJLLLkPcbjPo9qU7m3Sb/jVAsz04Geaj4wAY/Qeo5E3euOWtT+bQ1fFz/g3z2joZKcKcfAAAAABJRU5ErkJggg=="/></div>
+                <a class="cont-link" href="../index.html"><button>Volver a inicio</button></a>
+            </div>
         </header>
 
         <section>
+
+            <!-- Seccion length-->
             <article>
                 <h2>Length</h2>
 
@@ -28,20 +35,21 @@
                     </p>
                 </div>
 
-                <div class="fondo-codigo">
-                    <p>
-                        <code>"Primer nombre".length;</code>
-                    </p>
-                    <p><code>var nombre = "Primer nombre";</code></p>
-                    <p><code>nombre.length;</code></p>
-                    <p><code>Resultado= 13</code></p>
+                <h3>Ejemplo</h3>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>let cadenaTexto = "Cadena de texto";</code>
+                    <code>cadenaTexto.length;</code>
+                    <code class="cont-resultado"></code>
                 </div>
             </article>
         </section>
 
-        <hr>
+        <hr />
 
+        <!-- Seccion tolowercase-->
         <section>
+
             <article>
 
                 <h2>toLowerCase</h2>
@@ -61,14 +69,17 @@
                     </p>
                 </div>
 
-                <div class="fondo-codigo">
-                    <p><code>"CURSO DE JAVASCRIPT" .toLowerCase ();</code></p>
-                    <p><code>Resultado= "curso de javascript"</code></p>
+                <h3>Resultado</h3>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>let textoMayus = 'TEXTO EN MAYUS';</code>
+                    <code>console.log(`Convertimos 'TEXTO EN MAYUS' a minúscula: ${textoMayus.toLowerCase()}.`);</code>
+                    <code class="cont-resultado"></code>
                 </div>
             </article>
         </section>
 
-        <hr>
+        <hr />
 
         <!-- toUpperCase -->
         <section>
@@ -81,9 +92,10 @@
                     </p>
                 </div>
 
-                <div class="fondo-codigo">
-                    <p><code>"estoy aprendiendo javascript". ToUpperCase ();</code></p>
-                    <p><code>Resultado= "ESTOY APRENDIENDO JAVASCRIPT"</code></p>
+                <div class="fondo-codigo bloque-codigo">
+                   <code>let textoMinuscula = 'texto en minúscula';</code>
+                   <code>console.log(`Convertimos el 'texto en minúscula' a mayúscula; ${textoMinuscula.toUpperCase()}.`);</code>
+                   <code class="cont-resultado"></code>
                 </div>
             </article>
         </section>
@@ -124,20 +136,75 @@
                         Es recomendable crear una variable para usar con el separador, es decir:
                     </p>
 
-                    <div class="fondo-codigo">
-                        <p><code>const separadorEspacio = (‘ ‘);</code></p>
-                        <p><code>const separadorComa = (‘,’);</code></p>
+                    <h3>Resultado</h3>
+
+                    <div>
+                        <p>
+                            Crearemos una cadena de caracteres para divirla en un arreglo según el parámetro
+                            que elegimos con <b>split()</b>.
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>const espacio = " ";</code>
+                        <code>const coma = ",";</code>
+                        <code>let nombreApellido = 'Luis Blanco';</code>
+                        <code>let arregloNombreApellido = nombreApellido.split(espacio);</code>
+                        <code></code>
+                    </div>
+
+                    <div>
+                        <p>
+                            A este momento tenemos una variable con 2 arreglos un arreglo [Luis] y otro
+                            [Blanco]. Para verificar este resultado es recomendable verlo en la consola.
+                        </p>
+
+                        <p>
+                            Para realizar una buena práctica podemos crear una función que realice este
+                            proceso para cada vez que tengamos que dividir una cadena. La sintaxis de la 
+                            función sería la siguiente: 
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>function dividirCadena(cadenaADividir, separador) {</code>
+                        <code class="margen-funcion">let arrayDeCadenas = cadenaADividir.split(separador);</code>
+                        <code class="margen-funcion">return arrayDeCadenas.join(" ");</code>
+                        <code>}</code>
+                    </div>
+
+                    <div>
+                        <p>
+                            Con la construcción de esta función, lo único que debemos realizar a seguir
+                            es la llamada de la misma y pasarle los parámetros que esta pide. Es decir,
+                            una <b>variable</b> que contenga una <b>cadena de texto</b> que va a ser
+                            dividida y un parámetro que funciona como <b>separador.</b>
+                        </p>
+
+                        <p>
+                            En el cuerpo de la función, se declara una variable la cual va a trabajar
+                            con la cadena a dividir y el method de split(). Esta misma nos retorna la
+                            variable con los arreglos correspondientes.
+                        </p>
+
+                        <p>
+                            A continuación, realizaremos la llamada de la función y le pasaremos una variable
+                            que será con la que trabajará.
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>let nombre = "Juan Marcelo Decia";</code>
+                        <code>let espacio = " ";</code>
+                        <code>console.log(dividirCadena(nombre, espacio));</code>
+                        <code class="cont-resultado"></code>
                     </div>
                     
-                </div>
-
-                <div>
-                    <a href="../html/stringPropiedades/ejemploSplit.html">Ir a Ejemplos Split</a>
                 </div>
             </article>
         </section>
 
-        <hr>
+        <hr />
 
         <!-- Trim -->
         <section>
@@ -151,16 +218,17 @@
                     </p>
                 </div>
 
-                <div class="fondo-codigo">
-                    <p><code>let frase = '     eliminando espacios en blanco        ';</code></p>
-                    <p><code>console.log(frase.trim());</code></p>
-                    <p><code>Resultado= "eliminando espacios en blanco"</code></p>
+                <div class="fondo-codigo bloque-codigo">
+                    <code class="cont-resultado"></code>
+                    <code>console.log(frase.trim());</code>
+                    <code class="cont-resultado"></code>
                 </div>
 
                 <div>
                     <p>
                         Como podemos observar no necesitamos especificar un argumento en los parámetros de este método para 
-                        que funcione.
+                        que funcione. Para una mejor experiencia para el ejemplo, se puede ver en la consola
+                        que la frase tiene muchos espacios por eliminar.
                     </p>
                 </div>
 
@@ -178,14 +246,12 @@
                     <p><code>console.log(resultado);</code></p>
                 </div>
 
-                <div>
-                    <a href="../html/stringPropiedades/trimEjemplo.html">Ir a ejemplo de "Trim"</a>
-                </div>
             </article>
         </section>
 
-        <hr>
+        <hr />
 
+        <!-- CharAt-->
         <section>
             <article>
                 <h2>charAt</h2>
@@ -222,14 +288,60 @@
                     </p>
                 </div>
 
+                <h3>Resultado</h3>
+
                 <div>
-                    <a href="../html/stringPropiedades/charAtEjemplo.html">Ir a ejemplo "charAt"</a>
+                    <div>
+                        <p>
+                            Para este ejemplo práctico vamos a crear una variable con nombre "nombre" y le vamos a asignar el valor de 
+                            "juan decia" (sin mayúsculas). El objetivo de esta práctica es que luego en la consola, nos retorne el 
+                            nombre y apellido con mayúsculas respecivamente.
+                        </p>
+
+                        <p>
+                            A continuación, realizaremos una serie de pasos para que este string tenga las mayúsculas correspondientes.
+                            Uno de estos pasos es el <b>charAt()</b> el cual nos dejará cambiar la letra gracias a que nos podemos
+                            ubicar en la posición que deseemos.
+                        </p>
+                    </div>
+    
+                    <div class="fondo-codigo bloque-codigo">
+                        <p>Función para colocar una mayúscula: </p>
+
+                        <code>function mayusculas(palabra) {</code>
+                        <code class="margen-funcion">return palabra.charAt(0).toLocaleUpperCase() + palabra.slice(1).toLocaleLowerCase()</code>
+                        <code>}</code>
+                    </div>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <p>Función para dividir nombre-apellido y limpiar espcios. Retorna la función que coloca mayus.</p>
+
+                        <code>function procesarFila(fila){</code>
+                        <code class="margen-funcion">const arreglo = fila.split(" ");</code>
+                        <code class="margen-funcion">const nombre = arreglo[0].trim();</code>
+                        <code class="margen-funcion">const apellido = arreglo[1].trim();</code>
+                        <code class="margen-codigo">return mayusculas(nombre) + " " + mayusculas(apellido);</code>
+                        <code>}</code>
+                    </div>
+    
+                    <div>
+                        <p>
+                            A continuación, procederemos a realizar la llamada de la función para verificar
+                            que el nombre a resolver se le coloquen las letras correspondientes en 
+                            mayúsculas:
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>let nombrePersona = "juan decia";</code>
+                        <code class="cont-resultado"></code>
+                    </div>
                 </div>
 
             </article>
         </section>
 
-        <hr>
+        <hr />
 
         <!-- Slice -->
         <section>
@@ -280,11 +392,18 @@
 
             <article>
                 <div>
-                    <a href="../html/stringPropiedades/sliceEjemplo.html">Ir a ejemplo "Slice()"</a>
+                    <h3>Ejemplo</h3>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>let nombreSlice = 'Juan';</code>
+                        <code>console.log(nombre.slice(1));</code>
+                        <code class="cont-resultado"></code>
+                    </div>
                 </div>
             </article>
         </section>
 
     </main>
+    <script src="../scripts/propiedadString.js"></script>
 </body>
 </html>

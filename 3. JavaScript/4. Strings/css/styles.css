@@ -27,6 +27,12 @@ h4 {
     color: rgb(134, 93, 231);
 }
 
+.texto-blanco {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+
 a {
     display: flex;
     align-items: center;
@@ -36,7 +42,6 @@ a {
 }
 
 a:hover {
-    font-size: 1.3em;
     text-decoration: underline;
 }
 
@@ -54,20 +59,51 @@ p {
 
 /* ESTILOS ESPECÍFICOS */
 
-code:hover {
-    font-size: 1.3em;
-    color: rgb(247, 43, 16);
+    /*############# CONTENEDOR REGRESAR */
+
+.cont-regresar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.flecha {
+    margin-top: 3px;
+}
+
+    /*#############  ESTILO BOTON */
+
+.cont-link {
+    width: 15%;
+}
+
+button {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);;
+    color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    height: 6vh; 
+}
+
+.cont-pagina-ejemplo {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+    /* ############# CONTENEDOR EJEMPLO CODIGOS */
+
+.bloque-codigo > code{
+    display: block;
+    padding: 8px 0;
+}
+
+.margen-funcion {
+    margin-left: 30px;
 }
 
 .fondo-codigo {
     background-color: bisque;
-}
-
-.fondo-color {
-    padding-left: 5px;
-    background-color: rgb(221, 221, 193);
-}
-
-.margen-funcion {
-    padding-left: 30px;
 }
