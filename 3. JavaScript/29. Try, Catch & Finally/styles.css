@@ -22,6 +22,10 @@ code {
     padding: 5px 0;
 }
 
+p {
+    text-align: justify;
+}
+
 /* ESTILOS CONTENEDORES */
 
     /* Contenedor ejemplo */
