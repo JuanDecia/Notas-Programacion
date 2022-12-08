@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Json</h1>
+        </header>
+
+        <section>
+            <article>
+                <div>
+                    <h2>Introducción</h2>
+                </div>
+
+                <div>
+                    <p>
+                        Cuando construimos nuestro código a veces es necesario garantizar la portabilidad 
+                        de nuestros objetos a otros sistemas, que son parte de la solución global al 
+                        problema que tenemos planteado.
+                    </p>
+
+                    <p>
+                        JSON son las siglas JavaScript Object Notation y se considera hoy en día como el 
+                        formato líder de intercambio de datos en la Web. JS utiliza este formato para 
+                        representar los objetos, los cuales son seriados en Strings.
+                    </p>
+
+                    <p>
+                        Los JSON son Arrays que contienen Objetos. No son declarados como variables, 
+                        sencillamente se abren los corchetes y todo su contenido se encuentra dentro. 
+                        Debemos saber también que no permite escritura externa fuera del JSON.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <div>
+                    <h2>Diferencia entre Json y Array</h2>
+                </div>
+
+                <div>
+                    <p>
+                        Diferenciamos un array de objetos con un tipo de dato JSON de la siguiente manera:
+                    </p>
+
+                    <p>
+                        Un tipo de dato JSON tiene su contenido entre corchetes y los objetos entre llaves 
+                        pero estos no pueden ser instanciados en una variable. En cambio, cuando utilizamos
+                        un array si debemos hacerlo.
+                    </p>
+
+                    <p>
+                        Otra de sus diferencias los JSON cuando declaramos los objetos sus claves deben 
+                        estar también en comillas dobles. En su diferencia, los objetos las claves son 
+                        declaradas como valores por ende, no llevan las comillas dobles.  Un ejemplo a continuación:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>{</code>
+                    <code>"nombre": "Luis",</code>
+                    <code>"edad": 20,</code>
+                    <code>"hobbies": [</code>
+                    <code class="indentado-20">{ "nombre": "ajedrez", "nivel": "alto"</code>
+                    <code class="indentado-20">},</code>
+                    <code class="indentado-20">{ "nombre": "pintura", "nivel": "intermedio"</code>
+                    <code class="indentado-20">}</code>
+                    <code>],</code>
+                    <code>"estudiaActualmente": true,</code>
+                    <code>"altura": 1.68,</code>
+                    <code>}</code>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
