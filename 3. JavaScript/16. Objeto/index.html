@@ -34,19 +34,23 @@
                         debe estar encerrado entre llaves "{}" y separados por coma entre ellos. Ejemplo:
                     </p>
 
-                    <div>
-                        <code class="fondo-codigo">let objeto = {clave1: "valor1", clave2: 4444, clave3: "valor3"}</code>
-                    </div>
-
-                    <p>
-                        Nos puede quedar en una misma línea o, podemos presionar “enter” para que el código sea más legible:
-                    </p>
-
                     <div class="fondo-codigo bloque-codigo">
                         <code>let objeto = {</code>
                         <code class="indentacion">clave1: "valor1", </code>
                         <code class="indentacion">clave2: 4444,</code>
                         <code class="indentacion">clave3: "valor3",</code>
+                        <code>};</code>
+                    </div>
+
+                    <p>
+                        Un ejemplo más real de un objeto puede ser el siguiente:
+                    </p>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>let objetoPersona = {</code>
+                        <code class="indentacion">nombre: 'Juan',</code>
+                        <code class="indentacion">apellido: 'Decia',</code>
+                        <code class="indentacion">edad: 29,</code>
                         <code>};</code>
                     </div>
 
@@ -130,30 +134,52 @@
             <article>
                 <h2>Accediendo a los valores de un objeto</h2>
 
+                <!-- Opcion 1 -->
                 <div>
+
+                    <h3>Opcion 1</h3>
+
                     <p>
                         Podemos acceder a los valores de los objetos llamándolos por los nombres de su clave. Primero, debemos colocar el
                         nombre de la variable objeto y luego, debemos colcar entre corchetes ([]) el nombre de la clave a la cual queremos
-                        acceder a su respectivo valor. Este nombre debe estar colocado entre <b>comillas</b> ("" o '').
+                        acceder a su respectivo valor. Este nombre debe estar colocado entre 
+                        <b>comillas dobles o simples</b> (" " o ' ').
                     </p>
 
-                    <p><code class="fondo-codigo">console.log(objeto['clave1']); // Retorna: valor1</code></p>
+                    <p>
+                        Para este ejemplo, vamos a utlizar el objeto llamado 'objetoPersona' y vamos a acceder al primer
+                        valor, es decir, <b>al valor de la propiedad nombre</b> que como resultado nos debe retornar
+                        <b>'Juan'</b>.
+                    </p>
+
+                    <p><code class="fondo-codigo">console.log(objetoPersona['nombre']); // Retorna: Juan</code></p>
 
                     <h4>Resultado desde JS:</h4>
 
                     <div class="fondo-codigo">
                         <code class="cont-resultado"></code>
                     </div>
+
+                    <p>
+                        Cabe mencionar que esta no es la manera de seleccionar los valores de las propiedades, ya que,
+                        existe una sintaxis mucho más sencilla y eficiente que la vamos a ver a continuación.
+                    </p>
                     
                 </div>
 
+                <!-- Opcion 2 -->
                 <div>
+
+                    <h3>Opcion 2</h3>
+
                     <p>
-                        También, accedemos a los valores siguiendo la estructura <b>“variable.clave”</b>. Para este ejemplo, 
-                        vamos a colocar “persona.nombre” que nos retorna como resultado “Juan”.
+                        También, accedemos a los valores siguiendo la estructura <b>“nombreVariable.clave”</b>. Para este ejemplo, 
+                        vamos a utilizar el ejemplo del objeto creado anteriormente llamado <b>'objetoPersona'</b> y colocaremos
+                        “persona.nombre” para acceder al valor de la propiedad de 'nombre'. Esto nos deberá retornar 
+                        como resultado “Juan”.
                     </p>
 
-                    <p><code class="fondo-codigo">console.log(persona.nombre) // Resultado: Juan</code></p>
+                    <p><code class="fondo-codigo">console.log(objetoPersona.nombre) // Resultado: Juan</code></p>
 
                     <h4>Resultado desde JS:</h4>
 
@@ -163,7 +189,7 @@
 
                     <p>Si realizamos la misma práctica con apellido, la sintaxis y el resultado sería el mismo: </p>
 
-                    <p><code class="fondo-codigo">console.log(persona.apellido) // Decia </code></p>
+                    <p><code class="fondo-codigo">console.log(objetoPersona.apellido) // Decia </code></p>
 
                     <h4>Resultado desde JS:</h4>
 
@@ -172,10 +198,14 @@
                     </div>
                 </div>
 
+                <!-- Opcion 3: Imprimiendo el objeto -->
                 <div>
+
+                    <h3>Imprimiendo el Objeto</h3>
+
                     <p>Si, solo colocamos el nombre del objeto: </p>
 
-                    <p><code class="fondo-codigo">console.log (persona);</code></p>
+                    <p><code class="fondo-codigo">console.log (objetoPersona);</code></p>
 
                     <p>Este nos imprime todo el objeto: </p>
 
@@ -188,6 +218,13 @@
                     <p>
                         Como podemos observar, en el DOM solo nos aparece el resultado de <b>[object Object]</b>, en cambio,
                         en la consola se nos muestra el objeto completo, parecido a como se muestra un arreglo.
+                        Esto es a causa a que el DOM espera <b>el valor</b> del objeto y no va a mostrar el
+                        objeto como dato.
+                    </p>
+
+                    <p>
+                        Para corregir este error, podemos <b>iterar</b> los <b>valores</b> o las <b>propiedades</b>.
+                        Más adelante, realizaremos ejemplos para ver como realizar esta práctica con éxito.
                     </p>
                 </div>
 
@@ -199,27 +236,31 @@
             <article>
                 <h2>Cambiando las claves y valores de un objeto</h2>
 
-                <h3>Cambiando Clave</h3>
-
                 <div>
                     <p>
-                        Si llegamos a cambiar en algún momento el nombre de la clave de “nombre” o el de “apellido” nos desplegará 
-                        los mismos valores aún así habiendo reemplazado los nombres de las claves anteriores.
+                        Si llegamos a cambiar en algún momento el nombre de la clave de un objeto nos desplegará 
+                        los <b>mismos valores</b> aún así habiendo reemplazado los nombres de las claves anteriores.
+                    </p>
+                </div>
+
+                <h3>Copiando el valor de una clave en una nueva variable</h3>
+
+                <div>
+
+                    <p>
+                        Vamos a colocar el valor de la clave “nombre” del objeto persona en una variable nueva
+                        (a esta la vamos a llamar “propiedad”). Y luego, realizar el llamado del objeto y la variable nueva, 
+                        la cual nos debe retornar <b>una copia del “valor”</b> que le hemos declarado a la nueva variable.
                     </p>
 
                     <p>
-                        Para ejemplificar el concepto podemos colocar el valor de la clave “nombre” del objeto persona en una variable 
-                        nueva (a esta la vamos a llamar “propiedad”) y luego, realizar el llamado del objeto y la variable nueva, 
-                        la cual nos debe retornar una copia de la “clave-valor” que le hemos declarado a la nueva variable.
-                    </p>
-
-                    <p>
-                        Para realizar el llamado y que nos retorne el resultado que esperamos debemos escribir la siguiente declaración: 
+                        Para realizar el llamado y que nos retorne el resultado que esperamos (el nombre del valor del objeto)
+                        debemos escribir la siguiente declaración: 
                     </p>
 
                     <div class="fondo-codigo bloque-codigo">
                         <code>let propiedad = ‘nombre’;</code>
-                        <code>console.log(persona[propiedad]); // Resultado: 'Juan'</code>
+                        <code>console.log(objetoPersona['propiedad']); // Resultado: 'Juan'</code>
                     </div>
 
                     <h4>Resultado desde JS:</h4>
@@ -239,10 +280,10 @@
                     </p>
 
                     <div class="fondo-codigo bloque-codigo">
-                        <code>let propiedad = ‘nombre’;</code>
+                        <code>let propiedad = ‘nombre’;</code> <br />
                         <code>console.log(objetoPersona[propiedad]); // Resultado: Juan.</code>
                         <code>console.log(propiedad); // Resultado: nombre.</code>
-                        <code>console.log(objetoPersona[‘nombre’]); // Resultado: Juan.</code>
+                        <code>console.log(objetoPersona.nombre); // Resultado: Juan.</code>
                     </div>
 
                     <h4>Resultado desde JS:</h4>
@@ -258,16 +299,16 @@
 
                 <div>
                     <p>
-                        Podemos cambiar los valores dentro del objeto nombrando su respectiva ”clave”. Primero, debemos colocar 
+                        Podemos <b>cambiar los valores</b> dentro del objeto nombrando su respectiva ”clave”. Primero, debemos colocar 
                         el nombre de la variable objeto; seguido del nombre de la clave a cambiar que debe estar encerrada entre 
-                        corchetes y entre comillas. Luego, debemos colocar un igual "=" (porque estamos declarando un nuevo valor) 
+                        corchetes (<b>[]</b>) y entre comillas (<b>['']</b>). Luego, debemos colocar un igual (<b>=</b>), porque estamos declarando un nuevo valor 
                         y por último, el nuevo valor que le daremos a la clave que anteriormente escogimos. 
                     </p>
                 </div>
 
                 <div class="fondo-codigo bloque-codigo">
-                    <code>objeto['clave3'] = "nuevoValor3";</code>
-                    <code>console.log(objeto['clave3']); // nuevoValor3</code>
+                    <code>objetoPersona['nombre'] = "Joan";</code>
+                    <code>console.log(objetoPersona.nombre); // Joan</code>
                 </div>
 
                 <h4>Resultado desde JS:</h4>

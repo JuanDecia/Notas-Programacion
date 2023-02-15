@@ -1,41 +1,53 @@
+// Arreglo que toma la clase del DOM "cont-resultado"
 let contResultado = document.getElementsByClassName("cont-resultado");
 
-    //  EJEMPLO #1
-console.log(`%c#################### EJEMPLO #1: `, "color: #71B1C1");
+// OBJETO 1
 let objetoPractica = {
     clave1: 'valor1',
     clave2: 4444,
     clave3: 'valor3',
 };
 
-contResultado[0].innerHTML += `${objetoPractica['clave1']}.`
-
-console.log(`Accediendo al primer valor escogiendo la clave: ${objetoPractica['clave1']}.`);
-console.log("");
-
-    // EJEMPLO #2
-console.log(`%c#################### EJEMPLO #2: `, "color: #71B1C1");
+// OBJETO 2
 let objetoPersona = {
     nombre: 'Juan',
     apellido: 'Decia',
     edad: 28,
 };
 
-contResultado[1].innerHTML += `Accediendo al valor con la estructura "objeto.clave": ${objetoPersona.nombre}.`;
-contResultado[2].innerHTML += `Accediendo al valor con la estructura "objeto.clave": ${objetoPersona.apellido}.`;
+    // Accediendo a los valores de un objeto.
+    
+    //  EJEMPLO #1
+console.log(`%c#################### EJEMPLO #1: `, "color: #71B1C1");
 
-console.log(`Accediendo al valor con la estructura "objeto.clave": ${objetoPersona.nombre}.`);
-console.log(`Accediendo al valor con la estructura "objeto.clave": ${objetoPersona.apellido}.`);
+    // Opcion 1: desde la clave.
+contResultado[0].innerHTML += `Accediendo a los valores a través de la clave: ${objetoPersona['nombre']}.`
+console.log(`Accediendo al primer valor escogiendo la clave: ${objetoPersona['nombre']}.`);
 
 console.log("");
 
+    // EJEMPLO #2
+console.log(`%c#################### EJEMPLO #2: `, "color: #71B1C1");
+
+    // Opción 2: desde la estructura "objeto.clave".
+contResultado[1].innerHTML += `Accediendo al primer valor de 'objetoPersona' con la estructura "nombreObjeto.clave": ${objetoPersona.nombre}.`;
+contResultado[2].innerHTML += `Accediendo al segundo valor de 'objetoPersona' con la estructura "nombreObjeto.clave": ${objetoPersona.apellido}.`;
+
+console.log(`Accediendo al primer valor de 'objetoPersona' con la estructura "nombreObjeto.clave": ${objetoPersona.nombre}.`);
+console.log(`Accediendo al segundo valor de 'objetoPersona' con la estructura "nombreObjeto.clave": ${objetoPersona.apellido}.`);
+
+console.log("");
+
+    // Opción 3: Imprimendo solo el objeto.
 console.log('Si imprimimos solo la variable del objeto: ');
 contResultado[3].innerHTML += objetoPersona;
 console.log(objetoPersona);
 console.log("");
 
-    // EJEMPLO #3
+    // EJEMPLO #3: Cambiando los nombres de las claves.
 console.log(`%c#################### EJEMPLO #3: `, "color: #71B1C1");
+
+    // COPIANDO LOS VALORES DE LAS PROPIEDADES
 let propiedad = 'nombre';
 
 contResultado[4].innerHTML += `Realizamos la copia de la clave-nombre: ${objetoPersona[propiedad]}.`;
@@ -49,17 +61,17 @@ contResultado[7].innerHTML += `Llamando "objetoPersona['nombre']", resultado: <b
 
 console.log(`Llamando "objetoPersona[propiedad]", resultado: ${objetoPersona[propiedad]}.`);
 console.log(`Llamando "objetoPersona[propiedad]", resultado: ${propiedad}.`);
-console.log(`Llamando "objetoPersona[propiedad]", resultado: ${objetoPersona['nombre']}.`);
+console.log(`Llamando "objetoPersona[propiedad]", resultado: ${objetoPersona.nombre}.`);
 
 console.log("");
 
-    // EJEMPLO #4
+    // EJEMPLO #4: Cambiando los valores de las propiedades
 console.log(`%c#################### EJEMPLO #4: `, "color: #71B1C1");
 
-objetoPractica['clave1'] = 'nuevaClave1';
+objetoPersona['nombre'] = 'Joan';
 
-contResultado[8].innerHTML += `Cambiamos el valor de 'clave1' del objeto 'objetoPraca'. Ahora el valor es: <b>${objetoPractica.clave1}</b>.`
-console.log(`Cambiamos el valor de 'clave1' a: ${objetoPractica.clave1}.`);
+contResultado[8].innerHTML += `Cambiamos el valor de la propiedad 'nombre' del objeto 'objetoPersona' por Joan. Ahora el valor es: <b>${objetoPersona.nombre}</b>.`;
+console.log(`Cambiamos el valor de la propiedad 'nombre' a: ${objetoPersona.nombre}.`);
 
 console.log("");
 
