@@ -1,0 +1,33 @@
+totalMinutos
+
+Es una función que transforma horas y minutos, a minutos. Es decir, esa función llamada totalMinutos 
+recibe dos parámetros horas y minutos y devuelve el total, en cantidad de minutos. 
+
+Ejemplo:
+•	totalMinutos(5, 25)// debe dar como resultado 325
+•	totalMinutos(1, 5) // debe dar como resultado 65
+•	totalMinutos(0, 15)// debe dar como resultado 15
+
+cantidadRecolectadaSimple
+
+Es una función que calcula la cantidad de dinero recolectado dado un costo y la cantidad de participantes.
+
+Ejemplo:
+•	cantidadRecolectadaSimple(10, 5) // devuelve 50
+•	cantidadRecolectadaSimple(1, 5) // devuelve 5
+
+cantidadRecolectada
+
+Es una función que calcula la cantidad de dinero recolectado dado los siguientes parámetros, recibidos 
+en este orden:
+
+•	costoEstudiante
+•	costoAdulto
+•	cantidadEstudiantes
+•	cantidadAdultos
+
+Ejemplo:
+•	cantidadRecolectada(1, 5, 20, 4) // devuelve 40
+•	cantidadRecolectada(0, 5, 20, 3) // devuelve 15
+
+Esta función debe utilizar la función anterior cantidadRecolectadaSimple.

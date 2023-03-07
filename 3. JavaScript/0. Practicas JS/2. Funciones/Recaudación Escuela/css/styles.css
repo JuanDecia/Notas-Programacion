@@ -1,0 +1,35 @@
+main {
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    max-width: 85%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5em;
+    color: rgb(54, 196, 148);
+}
+
+table {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(162, 167, 167, 0.473);
+}
+
+.table-alumno {
+    margin-bottom: 30px;
+}
