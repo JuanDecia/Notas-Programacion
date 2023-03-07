@@ -1,0 +1,10 @@
+main {
+    width: 85%;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(47, 116, 93);
+}
