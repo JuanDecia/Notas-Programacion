@@ -44,9 +44,22 @@ code:hover {
     font-size: 1.3em;
 }
 
+/* EJEMPLOS CÓDIGO */
+
+.cont-codigo code{
+    display: block;
+    padding: 7px;
+}
+
+.indentacion-20 {
+    margin-left: 20px;
+}
+
 .fondo-codigo {
     background-color: bisque;
 }
+
+/* ########## */
 
 li {
     padding: 5px 0;

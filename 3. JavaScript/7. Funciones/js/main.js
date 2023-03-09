@@ -1,12 +1,18 @@
+// DOM
+const contenedorResultado = document.getElementsByClassName('cont-resultado');
+
 // #################### EJEMPLO FUNCION S/RETURN #################### //
 console.log("%c#################### EJEMPLO FUNCION S/RETURN: ", "color: #71B1C1");
 
 console.log(`Ejemplo sin utilizar return: `);
 
-function sumar(a, b) {
+const cuentaSumar = (a, b) => {
     console.log(`La suma entre los dos numeros es: ${a + b}.`);
+    return a + b;
 }
-sumar(5, 10);
+
+cuentaSumar(5, 10);
+contenedorResultado[0].innerHTML = `El resultado de la suma es ${cuentaSumar(5, 2)}.`
 console.log(" ");
 
 // #################### EJEMPLO FUNCION C/RETURN #################### //
