@@ -74,27 +74,24 @@
                     <code class="indentacion-20">return a + b;</code>
                     <code>}</code>
                     <code>console.log(cuentaSumar(5, 2)); <span class="cont-resultado"></span></code>
-                    <code></code>
                 </div>
 
                 <div>
                     <p>
-                        Con los parámetros predeterminados en EC2015, puedes asignar 1 como valor predeterminado para b en el 
-                        encabezado de la función lo cual en esta ocasión de multiplicar si solo pasamos un parámetro nos puede 
-                        retornar de todas maneras el resultado:
+                        Como es una función que no <b>retorna</b> un valor, es decir, que no nos está devolviendo
+                        un resultado, el mismo no puede ser colocado en el DOM porque es como que estamos
+                        tratando de colocar el fragmento de la función completa y no solo el resultado
+                        que estamos buscando. Por eso el resultado que nos muestra el DOM es <b>undefined</b>.
                     </p>
-                </div>
 
-                <figure>
-                    <img src="./img/functionMultiply2.png" alt="function 2" />
-                </figure>
-
-                <div>
                     <p>
-                        Cuando una función tiene varios parámetros, se debe invocar escribiendo su nombre seguido de los parámetros
-                        en el orden adecuado.
+                        Por lo contrario, si buscamos el resultado de esta operación en la consola, vamos a encontrar
+                        que se efectua correctamente el resultado que esperamos. Esto sucede porque en la consola
+                        no necesitamos que muestre <b>un valor</b> específico, si no, que podemos pasar la función
+                        como argumento para mostrar el resultado.
                     </p>
                 </div>
+
             </article>
 
             <hr />
@@ -109,6 +106,34 @@
                         return es aquello que queremos sacar de la función. Una vez se llega a la sentencia return se produce la 
                         devolución del resultado y se interrumpe la ejecución (finaliza) de la función. Por ello, estructuralmente 
                         return es la última instrucción dentro de la función. En JS una variable puede tener el valor de una función. 
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Con los parámetros predeterminados en EC2015, puedes asignar 1 como valor predeterminado para b en el 
+                        encabezado de la función lo cual en esta ocasión de multiplicar si solo pasamos un parámetro nos puede 
+                        retornar de todas maneras el resultado:
+                    </p>
+                </div>
+
+                <div class="cont-codigo fondo-codigo">
+                    <code>cuentaMultiplicar = (a, b = 1) => {</code>
+                    <code class="indentacion-20">return a * b;</code>
+                    <code>}</code>
+                    <code>console.log(cuentaMultiplicar(5, 2)); <span></span></code>
+                    <code></code>
+                    <code></code>
+                </div>
+
+                <figure>
+                    <img src="./img/functionMultiply2.png" alt="function 2" />
+                </figure>
+
+                <div>
+                    <p>
+                        Cuando una función tiene varios parámetros, se debe invocar escribiendo su nombre seguido de los parámetros
+                        en el orden adecuado.
                     </p>
                 </div>
 
