@@ -61,13 +61,14 @@
                     </p>
 
                     <p>
-                        En el siguiente ejemplo, si no se proporciona ningún valor para  ”b” cuando se llama a ”multiply”, el valor 
-                        de ”b” sería undefined, al evaluar ”a * b”  y multiply devolvería NaN.
+                        En el siguiente ejemplo, si no se proporciona ningún valor para  ”b” cuando se llama a
+                        ”cuentaSumar”, el valor de ”b” sería <b>undefined</b>, al evaluar ”a + b” 
+                        y el resultado que nos retornaría "cuentaSumar" sería <b>Nan en consola</b> y 
+                        <b>undefined en el DOM</b>.
                     </p>
                 </div>
 
-
-
+                <!-- Código Cuenta -->
                 <div class="cont-codigo fondo-codigo">
                     <code>const cuentaSumar = (a, b) => {</code>
                     <code class="indentacion-20">console.log(`El resultado de la suma es: ${a + b}.`)</code>
@@ -86,9 +87,9 @@
 
                     <p>
                         Por lo contrario, si buscamos el resultado de esta operación en la consola, vamos a encontrar
-                        que se efectua correctamente el resultado que esperamos. Esto sucede porque en la consola
-                        no necesitamos que muestre <b>un valor</b> específico, si no, que podemos pasar la función
-                        como argumento para mostrar el resultado.
+                        que se efectua correctamente la función. Esto sucede porque en la consola no necesitamos
+                        que muestre <b>un valor</b> específico, si no, que podemos pasar la función como argumento
+                        de "console.log()" para mostrar el resultado, esto nos debería retornar "7".
                     </p>
                 </div>
 
@@ -109,6 +110,33 @@
                     </p>
                 </div>
 
+                <!-- Código Multiplicar -->
+                <div class="cont-codigo fondo-codigo">
+                    <code>cuentaMultiplicar = (a, b) => {</code>
+                    <code class="indentacion-20">return a * b;</code>
+                    <code>}</code>
+                    <code>console.log(cuentaMultiplicar(5, 2)); <span class="cont-resultado"></span></code>
+                </div>
+
+                <div>
+                    <p>
+                        A diferencia del ejemplo anterior, en este caso podemos visualizar el resultado
+                        que nos devuelve la función. Esto se debe porque dentro de la misma, gracias a la
+                        palabra reservada <b>return</b>, ésta nos está guardando un resultado que nosotros le
+                        hemos asignado. Por eso, en esta ocasión pudimos visualizar el resultado.
+                    </p>
+                </div>
+
+                <h3>Falta de parámetro</h3>
+
+                <div>
+                    <p>
+                        Si colocamos la llamada de la función y luego nos olvidamos un <b>parámetro</b>, nos retorna
+                        el mismo resultado que en la función anterior. Más adelante, vamos a ver una de las maneras
+                        que podemos evitar obtener ese resultado.
+                    </p>
+                </div>
+
                 <div>
                     <p>
                         Con los parámetros predeterminados en EC2015, puedes asignar 1 como valor predeterminado para b en el 
@@ -117,18 +145,6 @@
                     </p>
                 </div>
 
-                <div class="cont-codigo fondo-codigo">
-                    <code>cuentaMultiplicar = (a, b = 1) => {</code>
-                    <code class="indentacion-20">return a * b;</code>
-                    <code>}</code>
-                    <code>console.log(cuentaMultiplicar(5, 2)); <span></span></code>
-                    <code></code>
-                    <code></code>
-                </div>
-
-                <figure>
-                    <img src="./img/functionMultiply2.png" alt="function 2" />
-                </figure>
 
                 <div>
                     <p>
