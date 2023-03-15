@@ -30,10 +30,21 @@ contenedorResultado[1].innerHTML = `El resultado de la suma es ${cuentaMultiplic
 console.log(" ");
 
 // #################### PARÁMETRO POR DEFECTO #################### //
+console.log("%c#################### EJEMPLO PARAMETRO POR DEFECTO: ", "color: #71B1C1");
 
 const multiplicarPorDefecto = (a, b = 1) => {
     return a * b
 }
+
+console.log(multiplicarPorDefecto(5, 2));
+console.log(multiplicarPorDefecto(5));
+console.log(multiplicarPorDefecto(5, undefined));
+
+contenedorResultado[2].innerHTML = `El resultado de la multiplicación es: ${multiplicarPorDefecto(5, 2)}.`;
+contenedorResultado[3].innerHTML = `El resultado de la multiplicación es: ${multiplicarPorDefecto(5)}.`;
+contenedorResultado[4].innerHTML = `El resultado de la multiplicación es: ${multiplicarPorDefecto(5, undefined)}.`;
+
+console.log(" ");
 
 // #################### EJEMPLO SELF INVOKING #################### //
 console.log("%c#################### EJEMPLO SELF INVOKING: ", "color: #71B1C1");

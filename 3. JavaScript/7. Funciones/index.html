@@ -137,6 +137,8 @@
                     </p>
                 </div>
 
+                <h3>Parámetro Establecido Por Defecto</h3>
+
                 <div>
                     <p>
                         Con los parámetros predeterminados en EC2015, puedes asignar 1 como valor predeterminado para b en el 
@@ -145,11 +147,26 @@
                     </p>
                 </div>
 
+                <!-- Código Multiplicar -->
+                <div class="cont-codigo fondo-codigo">
+                    <code>cuentaMultiplicar = (a, b = 1) => {</code>
+                    <code class="indentacion-20">return a * b;</code>
+                    <code>}</code>
+                    <code>console.log(cuentaMultiplicar(5, 2)); <span class="cont-resultado"></span></code>
+                    <code>console.log(cuentaMultiplicar(5)); <span class="cont-resultado"></span></code>
+                    <code>console.log(cuentaMultiplicar(5, undefined)); <span class="cont-resultado"></span></code>
+                </div>
 
                 <div>
                     <p>
-                        Cuando una función tiene varios parámetros, se debe invocar escribiendo su nombre seguido de los parámetros
-                        en el orden adecuado.
+                        En esta ocasión pudimos lograr evitarnos el error de que la consola y el DOM nos arroje
+                        un error. Esto fue gracias que en el caso de esta operación matemática podemos escojer
+                        el valor de uno de los parámetros, en este caso <b>b = 1</b>.
+                    </p>
+
+                    <p>
+                        Como <b>b</b> siempre tiene el valor de "1", aunque el parámetro se encuentre <b>vacío</b>
+                        o <b>indefinido</b> al momento de hacer la llamada de la función <b>no nos retorna el error</b>.
                     </p>
                 </div>
 
