@@ -1,5 +1,6 @@
 // DOM
 const contenedorResultado = document.getElementsByClassName('cont-resultado');
+const ejemploSuma = document.getElementById('ejemplo-suma');
 
 // #################### EJEMPLO FUNCION S/RETURN #################### //
 console.log("%c#################### EJEMPLO FUNCION S/RETURN: ", "color: #71B1C1");
@@ -18,14 +19,17 @@ console.log(" ");
 // #################### EJEMPLO FUNCION C/RETURN #################### //
 console.log("%c#################### EJEMPLO FUNCION C/RETURN: ", "color: #71B1C1");
 
-const cuentaMultiplicar = (a, b) => {
-    return a * b 
-};
+const cuentaMultiplicar = (a, b) => a * b;
+
+const cuentaSumarReturn = (a, b) => a + b;
+
+const cuentaSumarFlecha = (a, b) => a + b;
 
 
 // Mostramos resultados
 console.log(`El resultado de la multiplicación es: ${cuentaMultiplicar(5, 2)}.`);
 contenedorResultado[1].innerHTML = `El resultado de la suma es ${cuentaMultiplicar(5, 2)}.`;
+ejemploSuma.innerHTML = `El resultado de la suma es: ${cuentaSumarReturn(4, 5)}.`;
 
 console.log(" ");
 

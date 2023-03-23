@@ -187,15 +187,26 @@
                     </p>
 
                     <p>
+                        <code class="cont-codigo fondo-codigo">function nombreFuncion() {}</code>
+                    </p>
+
+                    <p>
                         En el caso que necesitemos que la función nos retorne un resultado en específico, en la última línea de 
                         la construcción de la misma debemos declarar la palabra clave reservada  “return”, seguido del valor que 
                         necesitemos que nos tiene que dar.
                     </p>
+
+                    <div class="cont-codigo fondo-codigo">
+                        <code>function nombreFuncion {</code>
+                        <code class="indentacion-20">return</code>
+                        <code>};</code>
+
+                    </div>
                 </div>
 
                 <!-- Ejemplos sintaxis -->
                 <div class="">
-                    <h3>Ejemplos: </h3>
+                    <h3>Ejemplo: </h3>
 
                     <div>
                         <p>
@@ -204,29 +215,56 @@
                             desear sumar.
                         </p>
 
-                        <figure>
-                            <img src="./img/sintaxis 1.png" alt="sintaxis" />
-                        </figure>
+                        <div class="cont-codigo fondo-codigo">
+                            <code>function operacionSumar(a, b) {</code>
+                            <code class="indentacion-20">return a + b;</code>
+                            <code>}</code>
+                            <code>let resultado = operacionSumar(4, 5);</code>
+                            <code>console.log(resultado); <span id="ejemplo-suma"></span></code>
+                        </div>
 
-                        <p>
-                            Vamos a crear una variable add con el valor de la función “sumar”, es decir, la variable contiene el valor 
-                            de esa función. Para finalizar este paso debemos ingresar la palabra clave “return” con la operación de la 
-                            suma. 
-                        </p>
+                        <h3>Función en una variable</h3>
 
-                        <figure>
-                            <img src="./img/sintaxis2.png" alt="sintaxis 2" />
-                        </figure>
+                        <div>
+                            <p>
+                                Podemos colocar una función en una variable y luego llamarla por el nombre
+                                de la misma. Esta práctica la vamos a conocer como <b>función de tipo flecha</b>
+                                y es con la que <b>vamos a comenzar a trabajar</b> de ahora en adelante.
+                            </p>
 
-                        <p>
-                            Luego, podemos usar add definiendo la variable “d” que tendrá el resultado de “add” con parámetros 
-                            (5 , 2). Al imprimir el valor de “d” observamos que tenemos como resultado 7.
-                        </p>
-                    </div>
+                            <p>
+                                En JavaScript se comenzó a utilizar este tipo de funciones porque se guardan en una
+                                variable que hemos visto anteriormente llamadas <b>constantes</b> (const). Si recordamos
+                                un poco de sus características, estas constantes <b>no pueden ser cambiadas</b> en el
+                                futuro de nuestro código, es decir, si declaramos <span class="fondo-codigo">const numeroTres = 3;</span>
+                                luego no nodemos declarar que <b>numeroTres</b> tiene otro valor. 
+                            </p>
 
-                    <div class="fondo-codigo">
-                        <code>let d = add(5, 2);</code> <br />
-                        <code>console.log(d);</code>
+                            <p>
+                                Pasando esto a las funciones, nuestras páginas quedarán más seguras, ya que, los resultados (return)
+                                no van a poder cambiarse su valor en tiempo real, porque, están protegidas por la declaración de
+                                la función flecha.
+                            </p>
+                        </div>
+
+                        <div class="fondo-codigo cont-codigo">
+                            <code>const operacionSumarFlecha = (a, b) => a + b;</code>
+                        </div>
+
+                        <div>
+                            <p>
+                                En este momento no vamos a entrar en detalles en la sintaxis (lo veremos más
+                                en detalle en el siguiente tema) pero si prestamos atención practicamente
+                                estamos realizando los mismos pasos de la función, aunque cambia un poco 
+                                la sintaxis.
+                            </p>
+
+                            <p>
+                                Cuando realizamos la llamada, debemos colocar el <b>nombre</b> que le dimos a la
+                                <b>variable const</b>, es decir, <b>operacionSumarFlecha</b>.
+                            </p>
+                        </div>
+
                     </div>
 
                     <div>
