@@ -277,36 +277,103 @@
                 </div>
             </article>
 
+            <!-- Valores en Variables -->
+            <article>
+                <h2>Valores en Variables</h2>
+
+                <div>
+                    <p>
+                        En el caso anterior vimos una <b>función flecha</b> que nos da una mejor protección
+                        a la vulnerabilidad de nuestro código. También, podemos lograr algo similar usando
+                        variables para almacenar los valores que deseamos retornar. Para ejemplificar este
+                        concepto lo vamos a pasar a código: 
+                    </p>
+                </div>
+
+                <div class="cont-codigo fondo-codigo">
+                    <code>function NombreCompleto (nombre, apellido) {</code>
+                    <code class="indentacion-20">const nombreCompleto = `${nombre} ${apellido}.`;</code>
+                    <code class="indentacion-20">return nombreCompleto;</code>
+                    <code>}</code>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar en el ejemplo hemos utilizado una variable para <b>guardar el valor del resultado</b>
+                        de nuestra función, que, posteriormente la <b>declaramos</b> en la línea donde usamos <b>return</b>,
+                        para que nuestra función nos <b>retorne lo que se encuentra en la variable "NombreCompleto"</b>.
+                    </p>
+                </div>
+
+            </article>
+
             <!-- Ambito -->
             <article>
-                <h2>Ámbito</h2>
+
+                <div>
+                    <h2>Ámbito de variables en las funciones</h2>
+                </div>
 
                 <div>
                     <p>
-                        Trabajemos ahora con ámbito. Vamos a extender el ejemplo de la función anterior para obtener el resultado 
-                        antes de retornar un valor. Esto lo vamos a hacer declarando la variable “suma” dentro de la función, a la 
-                        cual le asignaremos el resultado de adicionar “a y b”. En vez de retornar (a + b), la función ahora retorna 
-                        el valor de suma.
+                        En este sub-tema vamos a conocer un poco mejor sobre el ámbito de las variables
+                        y como se realcionan con las funciones.
+                    </p>
+
+                    <p>
+                        En el primer caso de este tema, vamos a tener una variable <b>fuera de la función</b>
+                        que posteriormente va a ser <b>utilizada dentro de la función</b>, el objetivo de esta
+                        práctica es ver el resultado de si es posible o no utilizar una variable de <b>ámbito global</b>
+                        dentro de la función.
                     </p>
                 </div>
 
-                <figure>
-                    <img src="./img/ambito.png" alt="ambito" />
-                </figure>
+                <div class="cont-codigo fondo-codigo">
+                    <code>let numeroDiez = 10;</code>
+                    <code>const restaNumero = (a, b) => {</code>
+                    <code class="indentacion-20">let a = numeroDiez</code>
+                    <code class="indentacion-20">let b = 5;</code>
+                    <code class="indentacion-20">return a - b</code>
+                    <code>}</code>
+                </div>
 
                 <div>
                     <p>
-                        En JS el alcance de las variables se determina desde las definiciones más internas hacia la más externa. 
-                        Por ejemplo, la variable suma solo existe dentro de la función “sumar” dentro del ámbito de las llaves “{}”. 
-                        Si queremos hacer el llamado de la variable suma nos retornará un error ya que no existe en el ámbito global 
-                        del código.
+                        El resultado de esta operación debería ser <b>5</b>. A continuación, vamos a llamar
+                        la función y veremos reflejado el resultado: <span id="resultado-resta" class="fondo-codigo"></span>
+                    </p>
+
+                    <P>
+                        En el siguiente caso, vamos a ver si queremos simplemente utilizar una variable que este
+                        en <b>ámbito local</b> en una función y queremos utilizar su valor fuera de ella. Para
+                        esta práctica vamos a realizar una sintaxis sencilla solo para visualizar este resultado.
+                    </P>
+                </div>
+
+                <div class="fondo-codigo cont-codigo">
+                    <code>const dividirNumero = (a, b) => {</code>
+                    <code class="indentacion-20">const numeroVeinte = 20;</code>
+                    <code class="indentacion-20">b = 2;</code>
+                    <code class="indentacion-20">return a / b;</code>
+                    <code>}</code>
+                </div>
+
+                <div>
+                    <p>
+                        Ahora, si realizamos la llamada de <b>"numeroVeinte"</b> que está <b>dentro de la función</b>
+                        el código nos retornará un error de que <b>la variable 'numeroVeinte' no está definida</b> y
+                        no podremos continuar visualizando el código.
                     </p>
 
                     <p>
-                        Pero, si asignamos una variable antes y fuera de function esta si podrá ser retornada si realizamos el 
-                        llamado.
+                        Para realizar correctamente esta práctica podremos utilizar <b>try - catch</b> para que
+                        nos capture el error correctamente. Esta práctica también la vamos a utilizar más adelante
+                        cuando estemos capturando datos con promesas desde las API's en la web.
                     </p>
                 </div>
+
+
+
             </article>
 
             <!-- Self Invoking-->

@@ -1,6 +1,8 @@
 // DOM
 const contenedorResultado = document.getElementsByClassName('cont-resultado');
 const ejemploSuma = document.getElementById('ejemplo-suma');
+const resultadoResta = document.getElementById('resultado-resta');
+const variableError = document.getElementById('variable-error');
 
 // #################### EJEMPLO FUNCION S/RETURN #################### //
 console.log("%c#################### EJEMPLO FUNCION S/RETURN: ", "color: #71B1C1");
@@ -49,6 +51,43 @@ contenedorResultado[3].innerHTML = `El resultado de la multiplicación es: ${mul
 contenedorResultado[4].innerHTML = `El resultado de la multiplicación es: ${multiplicarPorDefecto(5, undefined)}.`;
 
 console.log(" ");
+
+// #################### VALORES EN VARIABLES ####################
+console.log("%c#################### VALORES EN VARIABLES: ", "color: #71B1C1"); 
+
+function nombreCompleto (nombre, apellido) { 
+
+    const nombreCompleto = `${nombre} ${apellido}.`;
+
+    return nombreCompleto;
+}
+
+console.log(nombreCompleto('Juan', 'Decia'));
+
+console.log("");
+
+// #################### ÁMBITO DE VARIABLES EN FUNCIONES ####################
+console.log("%c#################### ÁMBITO DE VARIABLES EN FUNCIONES: ", "color: #71B1C1");
+
+const numeroDiez = 10;
+
+const restaNumero = (a, b) => {
+    a = numeroDiez;
+    b = 5;
+    return a - b;
+}
+
+console.log(restaNumero());
+resultadoResta.innerHTML = `${restaNumero()}.`;
+
+const cuentaDividir = (a, b) => {
+    const numeroVeinte = 20;
+    b = 2;
+
+    return a / b;
+}
+
+console.log("");
 
 // #################### EJEMPLO SELF INVOKING #################### //
 console.log("%c#################### EJEMPLO SELF INVOKING: ", "color: #71B1C1");
