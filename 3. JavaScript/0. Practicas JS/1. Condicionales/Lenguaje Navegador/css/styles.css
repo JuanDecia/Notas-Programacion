@@ -1,0 +1,11 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    max-width: 80%;
+}
+
+header {
+    text-align: center;
+    color: rgb(26, 110, 131);
+}
+
