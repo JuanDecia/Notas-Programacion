@@ -1,0 +1,41 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: aliceblue;
+}
+
+main {
+    max-width: 80%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(21, 94, 128);
+}
+
+h2 {
+    color: rgb(70, 125, 245);
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+li {
+    padding: 5px 0;
+}
+
+b {
+    text-decoration: underline;
+    color: rgb(115, 37, 170);
+}
+
+code {
+    font-size: 1.5em;
+}
+
+/* Paso 2 colocar las letras de la etiqueta span a rojo */
+span {
+    color: red;
+    font-weight: bold;
+}
