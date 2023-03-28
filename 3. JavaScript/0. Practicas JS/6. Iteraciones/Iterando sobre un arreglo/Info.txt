@@ -1,0 +1,9 @@
+El objetivo de esta práctica es iterar un arreglo de números con los ciclos conocidos como "while" y "for".
+
+Al realizar la iteración, debemos sumar al valor que contiene el índide en +1. Es decir, si tenemos el arreglo:
+
+[2,14,76]
+
+El resultado de este debería ser: [3,15,77].
+
+NOTA: Sumamos al valor del índice, no al índice del arreglo.
