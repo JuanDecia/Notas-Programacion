@@ -1,0 +1,33 @@
+/* ESTILOS ETIQUETAS */
+
+body {
+    max-width: 80%;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    color: rgb(33, 141, 127);
+}
+
+h2 {
+    color: rgb(22, 174, 201);
+}
+
+code {
+    display: block;
+}
+
+/* ESTILOS CLASES */
+
+.fondo-codigo {
+    background-color: blanchedalmond;
+}
+
+.fondo-codigo code:first-child {
+    margin-bottom: 10px;
+}
