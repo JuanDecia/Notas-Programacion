@@ -18,6 +18,10 @@ h2 {
     color: rgb(22, 174, 201);
 }
 
+h3 {
+    color: rgb(189, 59, 59);
+}
+
 code {
     display: block;
 }
@@ -30,4 +34,16 @@ code {
 
 .fondo-codigo code:first-child {
     margin-bottom: 10px;
+}
+
+.indentacion-20 {
+    margin-left: 20px;
+}
+
+.indentacion-40 {
+    margin-left: 40px;
+}
+
+.indentacion-60 {
+    margin-left: 60px;
 }

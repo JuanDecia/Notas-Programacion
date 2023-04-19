@@ -60,14 +60,99 @@
 
                     <div class="fondo-codigo">
                         <code>const agregarDoble = (arreglo) => {</code>
-                        <code></code>
-                        <code></code>
-                        <code></code>
-                        <code></code>
-                        <code></code>
+                        <code class="indentacion-20">let doble = arreglo.map(x => {</code>
+                        <code class="indentacion-40">return x * 2;</code>
+                        <code class="indentacion-20">})</code>
+                        <code class="indentacion-20">return doble;</code>
+                        <code>}</code>
+                    </div>
+
+                    <h3 class="">Resultado</h3>
+
+                    <div class="fondo-codigo">
+                        <div>
+                            <code>Resultado esperado: <span class="arregloDuplicado"></span></code>
+                            <code>Resultado esperado: <span class="arregloDuplicado"></span></code>
+                        </div>
                     </div>
                 </article>
             </section>
+
+            <hr />
+
+            <!-- Práctica Buscar Números Impares -->
+            <section class="seccion-numerosImpares">
+
+                <article>
+                    <h2>Buscar Números Impares</h2>
+                </article>
+
+                <article>
+                    <div>
+                        <p>
+                            En esta sección realizaremos una función para <b>buscar</b> los <b>números impares</b> dentro de los arreglos presentados anteriormente.
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo">
+                        <code>const numerosImpares = (arreglo) => {</code>
+                        <code class="indentacion-20">let impar = arreglo.filter(x => {</code>
+                        <code class="indentacion-40">return x % 2 != 0;</code>
+                        <code class="indentacion-20">})</code>
+                        <code class="indentacion-20">return impar;</code>
+                        <code>}</code>
+                    </div>
+
+                    <h3>Resultado</h3>
+
+                    <div class="fondo-codigo">
+                        <code>Resultado esperado: <span class="numerosImpares"></span></code>
+                        <code>Resultado esperado: <span class="numerosImpares"></span> </code>
+                    </div>
+                </article>
+            </section>
+
+            <hr />
+
+            <!-- Impar duplica, par divide -->
+            <section>
+
+                <article>
+                    <h2>Duplicar número impar, dividir número par</h2>
+                </article>
+
+                <article>
+                    <div>
+                        <p>
+                            En esta sección vamos a recorrer un arreglo para <b>duplicar los números impares</b> y para <b>dividir los números pares</b>.
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo">
+                        <code>const duplicarODividir = (arreglo) => {</code>
+                        <code class="indentacion-20">let resultado = arreglo.map(x => {</code>
+                        <code class="indentacion-40">if (x % 2 != 0) {</code>
+                        <code class="indentacion-60">return x * 2;</code>
+                        <code class="indentacion-40">} else {</code>
+                        <code class="indentacion-60">return x / 2;</code>
+                        <code class="indentacion-40">}</code>
+                        <code class="indentacion-20">})</code>
+                        <code>}</code>
+                    </div>
+                </article>
+
+                <article>
+                    <div>
+                        <h3>Resultado</h3>
+                    </div>
+
+                    <div class="fondo-codigo">
+                        <code>Resultado Esperado: <span class="duplicarYDividir"></span></code>
+                        <code>Resultado Esperado: <span class="duplicarYDividir"></span></code>
+                    </div>
+                </article>
+            </section>
+
         </main>
 
         <script src="main.js"></script>
