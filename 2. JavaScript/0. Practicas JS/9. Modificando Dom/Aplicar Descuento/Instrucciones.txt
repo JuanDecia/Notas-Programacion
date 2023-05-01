@@ -1,0 +1,3 @@
+Diseñar un algoritmo que permita aplicar un descuento en el supermercado de tal forma permita visualizar el 
+monto a pagar después de aplicar dicho procedimiento.
+
