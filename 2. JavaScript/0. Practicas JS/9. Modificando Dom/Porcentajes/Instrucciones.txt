@@ -1,0 +1,2 @@
+Para un salón de clase nos pide diseñar un algoritmo que permita determinar el porcentaje de varones y 
+el porcentaje de mujeres. Estos deben ser cargados por el usuario.
