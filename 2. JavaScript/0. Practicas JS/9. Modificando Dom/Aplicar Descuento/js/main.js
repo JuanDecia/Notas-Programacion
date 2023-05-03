@@ -1,15 +1,14 @@
 window.addEventListener('load', function() {
 
-    function aplicarDescuento() {
+    const aplicarDescuento = () => {
 
         // Get Valor Compra
 
         const compraField = document.getElementById('valor-compra');
-            console.log(compraField);
+        console.log(compraField);
 
-        const valorCompra = compraField.value;
-            parseInt(valorCompra);
-            console.log(valorCompra);
+        const valorCompra = parseInt(compraField.value);
+        console.log(valorCompra);
 
         // Get Result
         
