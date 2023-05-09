@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Registro</title>
+
+        <style>
+            .error {
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Registro</h1>
+        </header>
+            <section>
+                <form action="">
+                    
+                    <p>
+                        <label>Nombre: </label>
+                        <input id="nombre" name="nombre" type="text" placeholder="Ej: Juan">
+                        <span id="errorNombre" class="error"></span>
+                    </p>
+
+                    <p>
+                        <label>Email: </label>
+                        <input id="email" name="email" type="email" placeholder="Ej: juan@gmail.com">
+                        <span id="errorEmail" class="error"></span>
+                    </p>
+
+                    <p>
+                        <label>Contraseña: </label>
+                        <input id="contraseña" name="contraseña" type="password" placeholder="Mímino 5 caracteres" />
+                        <span id="errorContraseña" class="error"></span>
+                    </p>
+
+                    <p>
+                        <label>Contraseña (Confirmar): </label>
+                        <input id="confirmar" name="confirmar" type="password">
+                        <span id="errorConfirmar" class="error"></span>
+                    </p>
+
+                    <p>Género: <span id="errorGenero" class="error"></span></p>
+
+                    <input type="radio" name="genero" id="m" value="m">
+                    <label for="m">Masculino</label>
+
+                    <input type="radio" name="genero" id="f" value="f">
+                    <label for="f">Femenino</label>
+
+                    <p>
+                        <label>País: </label>
+                        <select id="pais" name="pais">
+                            <option value="">Seleccione</option>
+                            <option value="1">Argentina</option>
+                            <option value="2">Brasil</option>
+                            <option value="3">Chile</option>
+                            <option value="4">Uruguay</option>
+                        </select>
+                        <span id="errorPais" class="error">
+                    </p>
+
+                    <p>
+                        <label for="terminos">
+                            <input type="checkbox" name="terminos" id="terminos" value="acepta"> Acepta términos y condiciones
+                        </label>
+                        <span id="errorTerminos" class="error"></span>
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Continuar" onclick="return validarFormulario(this.form)" />
+                    </p>
+                </form>
+            </section>
+    <script src="main.js"></script>
+    </body>
+</html>
