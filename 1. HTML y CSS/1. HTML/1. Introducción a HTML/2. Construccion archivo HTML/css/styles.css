@@ -1,11 +1,8 @@
 body {
     font-family: sans-serif;
     background: rgb(208, 211, 214);
-}
-
-main {
+    max-width: 85%;
     margin: auto;
-    width: 75%;
 }
 
 h1 {
@@ -15,11 +12,19 @@ h1 {
 
 h2 {
     margin-top: 30px;
-    color: rgb(47, 113, 212);
+    color: rgb(38, 99, 251);
 }
 
 div {
     text-align: center;
+}
+
+img {
+    max-width: 80%;
+}
+
+p {
+    text-align: justify;
 }
 
 b {

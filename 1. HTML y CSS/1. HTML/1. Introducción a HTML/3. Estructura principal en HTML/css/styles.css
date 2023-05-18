@@ -5,11 +5,7 @@
 
 body {
     background-color: aliceblue;
-}
-
-/* Contenedor principal */
-main {
-    width: 85%;
+    max-width: 85%;
     margin: auto;
 }
 
@@ -34,6 +30,10 @@ article {
 div {
     margin-top: 35px;
     text-align: center;
+}
+
+img {
+    max-width: 80%;
 }
 
 p {
