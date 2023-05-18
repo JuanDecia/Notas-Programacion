@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-color: rgb(194, 188, 166);
+    background: rgb(208, 211, 214);
 }
 
 main {
@@ -10,13 +10,12 @@ main {
 
 h1 {
     text-align: center;
-    text-decoration: underline;
-    color: rgb(104, 150, 30);
+    color: rgb(15, 122, 122);
 }
 
 h2 {
     margin-top: 30px;
-    color: blue;
+    color: rgb(47, 113, 212);
 }
 
 div {
