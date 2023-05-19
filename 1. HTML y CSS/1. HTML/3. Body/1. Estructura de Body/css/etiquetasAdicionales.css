@@ -1,16 +1,13 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: aliceblue;
-}
-
-main {
-    width: 85%;
-    margin: 0 auto;
+    background-color: rgb(197, 201, 204);
+    max-width: 85%;
+    margin: auto;
 }
 
 /* Header */
 
 h1 {
-    color: rgb(45, 182, 45);
+    color: rgb(15, 122, 122);
     text-align: center;
 }
