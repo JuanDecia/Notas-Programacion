@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etiqueta Meta</title>
 
-    <link rel="stylesheet" href="./css/styles.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5c75cb074f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
@@ -17,8 +21,17 @@
         <header id="inicio">
             <h1>Etiqueta Meta</h1>
 
+            
+
             <nav>
+                <!-- Boton Hamburguesa -->
+                <label for="menu-toggle">
+                    <img class="menu-img" src="./img/bars-solid.svg" alt="menu" />
+                </label>
+                <input type="checkbox" name="menu-toggle" id="menu-toggle">
+
                 <ul class="navegacion">
+
                     <li><a href="#introduccion">Introducción</a></li>
                     <li><a href="#meta">Sintaxis Meta</a></li>
                     <li><a href="#charset">Propiedad Charset</a></li>
@@ -216,7 +229,7 @@
                         </p>
 
                         <div class="cont-img">
-                            <img src="./img/viewport.jpg" alt="viewport" width="300px" />
+                            <img src="./img/viewport.jpg" alt="viewport" title="viewport" />
                         </div>
                     </div>
 
@@ -283,5 +296,6 @@
 
     </main>
 
+    <script src="./scripts/index.js"></script>
 </body>
 </html>

@@ -1,13 +1,13 @@
 body {
     margin: auto;
-    width: 75%;
+    max-width: 85%;
     font-family: sans-serif;
     background-color: aliceblue;
 }
 
 header {
     text-align: center;
-    color: rgb(42, 182, 77);
+    color: rgb(15, 122, 122);
 }
 
 .img {
@@ -17,11 +17,11 @@ header {
 }
 
 img {
-    width: 50%;
+    max-width: 50%;
 }
 
 h2 {
-  color: rgb(66, 127, 219);  
+  color: rgb(38, 99, 231);  
 }
 
 b {
