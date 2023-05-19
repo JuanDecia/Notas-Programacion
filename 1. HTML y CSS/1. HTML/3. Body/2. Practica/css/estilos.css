@@ -108,3 +108,15 @@ h2 {
     text-align: center;
     background-color: gray;
 }
+
+@media (max-width: 576px) {
+    #izq {
+        overflow-x: hidden;
+    }
+
+    #izq h1 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
