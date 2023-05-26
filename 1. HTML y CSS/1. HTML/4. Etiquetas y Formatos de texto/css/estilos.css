@@ -1,34 +1,44 @@
 body {
     font-family: sans-serif;
-    background-color: aliceblue;
+    background-color: rgb(197, 201, 204);
+    max-width: 85%;
+    margin: auto;
+    box-sizing: border-box;
 }
 
-main {
-    margin: auto;
-    max-width: 75%;
-}
+/* ========== Estilos Header */
 
 header {
     text-align: center;
 }
 
-li {
-    padding: 0.5%;
+#title {
+    color: rgb(15, 122, 122);
+}
+
+div a:first-child {
+    font-weight: 600;
+}
+
+/* ========== Imagen Responsiva */
+
+figure {
+    text-align: center;
+}
+
+img {
+    max-width: 70%;
 }
 
 
 /* ========== Estilos de texto */
-
-#title {
-    color: rgb(55, 185, 55);
-}
 
 .sub {
     color: rgb(59, 124, 184);
 }
 
 h3 {
-    color: rgb(224, 54, 11);
+    color: rgb(199, 47, 9);
 }
 
 b {
@@ -44,7 +54,7 @@ a {
     align-items: center;
     padding: 10px;
     text-decoration: none;
-    color: rgb(224, 162, 90);
+    color: rgb(207, 120, 21);
 }
 
 a:hover {
