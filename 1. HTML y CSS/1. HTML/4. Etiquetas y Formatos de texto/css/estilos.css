@@ -61,3 +61,11 @@ a:hover {
     font-size: 1.3em;
     text-decoration: underline;
 }
+
+.centrar {
+    text-align: center;
+}
+
+.ejemplo-hr {
+    width: 50%;
+}
