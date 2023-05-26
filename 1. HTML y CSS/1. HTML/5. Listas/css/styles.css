@@ -1,11 +1,8 @@
 body {
     font-family: sans-serif;
-    background-color: rgb(194, 189, 173);
-}
-
-main {
+    background-color: rgb(197, 201, 204);
+    max-width: 85%;
     margin: auto;
-    width: 75%;
 }
 
 header {
@@ -13,9 +10,34 @@ header {
 }
 
 h1 {
-    color: rgb(121, 187, 15);
+    color: rgb(15, 122, 122);
 }
 
 h2 {
-    color: blue;
+    color: rgb(32, 99, 231);
+}
+
+/* Main */
+
+.imagenes-ejemplo {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.ejemplo-codigo {
+    max-width: 80%;
+}
+
+
+@media (max-width: 570px) {
+    .imagenes-ejemplo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagenes-ejemplo img:first-child {
+        margin-bottom: 20px;
+        border: 1px solid blue;
+    }
 }
