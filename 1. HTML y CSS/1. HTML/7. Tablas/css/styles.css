@@ -1,8 +1,8 @@
 body {
-    width: 85%;
-    margin: 15px auto;
+    max-width: 85%;
+    margin: auto;
     font-family: sans-serif;
-    background-color: aliceblue;
+    background-color: rgb(197, 201, 204);
 }
 
 header {
@@ -10,28 +10,45 @@ header {
 }
 
 h1 {
-    color: rgb(45, 161, 45);
+    color: rgb(15, 122, 122);
 }
 
 h2 {
-    color: rgb(57, 135, 199);
+    color: rgb(38, 99, 231);
+}
+
+.cont-h3 {
+    display: flex;
+    justify-content: center;
 }
 
 h3 {
-    color: rgb(224, 54, 11);
+    border: 2px solid rgb(113, 64, 248);
+    padding: 10px;
+    margin-bottom: 0;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+    color: rgb(113, 64, 248);
 }
 
-main {
-    margin-left: 0 auto;
+li:nth-child(even) {
+    margin: 10px 0;
 }
 
 p {
-    width: 95%;
-    margin: 10px auto;
-    font-size: large;
+    text-align: justify;
 }
 
 /* Estilos para tablas */
+
+.cont-table {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed black;
+}
 
 table {
     margin: 20px auto;
@@ -68,7 +85,7 @@ th {
 }
 
 caption {
-    color: #e63946;
-    font-size: large;
-    line-height: 50px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.2em;
 }
