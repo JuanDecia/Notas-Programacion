@@ -1,17 +1,14 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: aliceblue;
-}
-
-main {
-    width: 85%;
+    background-color: rgb(197, 201, 204);
+    max-width: 85%;
     margin: 0 auto;
 }
 
 /* Header */
 
 h1 {
-    color: rgb(45, 182, 45);
+    color: rgb(15, 122, 122);
     text-align: center;
 }
 
@@ -28,6 +25,11 @@ a {
     padding: 10px;
     text-decoration: none;
     color: black;
+}
+
+a:hover {
+    color: #fff;
+    font-weight: 600;
 }
 
 .tilde {
@@ -48,9 +50,18 @@ h2 {
     color: rgb(57, 135, 199);
 }
 
+.cont-h3 {
+    display: flex;
+    justify-content: center;
+}
+
 h3 {
     color: orange;
+    width: 20%;
     text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid orange;
 }
 
 .link {
@@ -67,4 +78,20 @@ h3 {
     background: #2980B9;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.img-ejemplo {
+    max-width: 80%;
+}
+
+@media (max-width: 768px) {
+    .cont-link {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .cont-link {
+        width: 100%;
+    }
 }

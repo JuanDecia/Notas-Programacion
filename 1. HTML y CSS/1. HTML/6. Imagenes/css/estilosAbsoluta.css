@@ -45,3 +45,12 @@ a {
 .flecha {
     margin-top: 5px;
 }
+
+/* Contenido */
+
+.cont-img img:first-child {
+    max-width: 80%;
+    width: 300px;
+}
+
+
