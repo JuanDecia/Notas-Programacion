@@ -1,30 +1,48 @@
 body {
     font-family: sans-serif;
-    background-color: aliceblue;
-  }
-
-  section {
+    background-color: rgb(197, 201, 204);
+    max-width: 75%;
     margin: auto;
-    width: 75%;
-  }
+}
 
-  h1 {
-    text-align: center;
-    color: rgb(144, 199, 56);
-  }
+/* ############ HEADER */
+
+h1 {
+  text-align: center;
+  color: rgb(15, 122, 122);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.ul-header {
+  padding: 0;
+  margin-left: 10px;
+}
+
+.li-header {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+a:visited {
+  color: black;
+}
+
+/* ############  */
 
   .volver {
     margin-left: 15%;
   }
   
-  a {
-    text-decoration: none;
-    color: blue;
-  }
 
-  a:visited {
-    color: blue;
-  }
   
 
   h2 {
