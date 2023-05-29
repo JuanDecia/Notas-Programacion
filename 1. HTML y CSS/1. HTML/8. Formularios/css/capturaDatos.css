@@ -1,21 +1,45 @@
 body {
     font-family: sans-serif;
-    width: 70%;
-    margin: 30px auto;
-    background-color: aliceblue;
+    max-width: 75%;
+    margin: auto;
+    background-color: rgb(197, 201, 204);
 }
+
+/* ############ HEADER */
 
 h1 {
     text-align: center;
-    color: rgb(137, 190, 50);
+    color: rgb(15, 122, 122);
 }
 
+.volver-inicio {
+    display: flex;
+}
+
+.volver {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(236, 130, 8);
+    font-weight: 600;
+}
+
+a:visited {
+    color: rgb(236, 130, 8);
+}
+
+/* ############ MAIN CONTENT */
+
 h2 {
-    color: rgb(57, 135, 199);
+    color: rgb(38, 99, 231);
 }
 
 h3 {
-    color: orange;
+    color: rgb(103, 45, 240);
 }
 
 nav {
@@ -23,19 +47,7 @@ nav {
     justify-content: space-between;
 }
 
-.volver {
-    width: 50%;
-    text-align: center;
-}
   
-a {
-    text-decoration: none;
-    color: blue;
-}
-
-a:visited {
-    color: blue;
-}
 
 p {
     text-align: justify;
