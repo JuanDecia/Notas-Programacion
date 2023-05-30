@@ -1,0 +1,85 @@
+body {
+    max-width: 80%;
+    margin: auto;
+    font-family: sans-serif;
+    background-color: rgb(197, 201, 204);
+}
+
+/* ############ HEADER */
+
+header {
+    margin: 30px;
+}
+
+h1 {
+    color: rgb(15, 122, 122);
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    gap: 20px;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(236, 103, 14);
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.tilde {
+    margin-right: 15px;
+}
+
+/* ############ MAIN CONTENT */
+
+h2 {
+    color: rgb(38, 99, 231);
+}
+
+h3 {
+    color: orange;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+}
+
+.img-ejemplo {
+    max-width: 90%;
+}
+
+/* 576px */
+@media (max-width: 576px) {
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        margin: 5px 0;
+    }
+
+    .tilde {
+        display: none;
+    }
+
+}
+
+
+
