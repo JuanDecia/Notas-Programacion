@@ -16,12 +16,28 @@
     <style>
       body {
         font-family: sans-serif;
-        width: 70%;
-        margin: 20px auto;
-        background-color: rgb(194, 189, 173);
+        max-width: 75%;
+        margin: auto;
+        background-color: rgb(197, 201, 204);
       }
 
-      div {
+      /* ############ HEADER */
+
+      h1 {
+        text-align: center;
+        color: rgb(15, 122, 122);
+      }
+
+      .volver-inicio {
+        display: flex;
+      }
+
+      .volver-inicio a:first-child[href$='index.html'] {
+        margin-left: 10px;
+        align-items: center;
+      }
+
+      .cont-select {
         margin-top: 10px;
         padding: 10px;
         border: 1px solid rgb(63, 63, 124);
@@ -79,9 +95,26 @@
 
   <header>
 
-    <div class="cont-link">
-      <a href="../index.html">Volver a Inicio</a>
-    </div>
+    <h1>Etiquetas de Control</h1>
+
+    <nav>
+
+      <!-- Volver a inicio -->
+      <div class="volver-inicio">
+
+        <a href="../index.html">
+          <img
+            class="flecha"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEvtlNsNgzAQBIcO0gkpgZSQSmgh6SgdQAnQSUpAJ4F0imLfGsMf/rZmbtePhpNXczKfSxA2XFLRDeiBd0h1G1SBwQfgvgpeqkQRePgMdMD3KEEV3IbIJaiG5wSHwFMCD1erTg77ryITjEBbQk/VnToDL5mAR8nN8YNFh7wl2S2J3kF1kkhgaaskiuBX8gQ+6gVQBZvEvgkZHr1kdcjsvpIEu4SXIKxtAb+eIBmkl/3TAAAAAElFTkSuQmCC"
+          />
+        </a>
+
+        <div class="cont-link">
+          <a href="../index.html">Volver a Inicio</a>
+        </div>
+      </div>
+
+    </nav>
 
   </header>
 
@@ -89,7 +122,7 @@
     <fieldset>
       <legend>Formulario con controles</legend>
 
-      <div>
+      <div class="cont-select">
 
         <p>
           <b class="titulo">Select:</b> Nos sirve para crear una <b>lista desplegable de opciones</b>, por ejemplo, cuando el navegador te pide que ingreses la cuidad donde vivís y el buscador despliega una lista de las ciudades disponibles. <br />
@@ -103,7 +136,7 @@
         </select>
       </div>
 
-      <div class="campo">
+      <div class="campo cont-select">
 
         <p>
           <b class="titulo">Textarea:</b> Es un <b>área de texto</b> que tiene un tamaño mucho más grande que un input tipo texto y <b>sirve para ingresar párrafos, comentarios u observaciones largas</b>. Este <b>tiene 2 atributos especiales</b>, que sirven para <b>definir el tamaño (cols; rows)</b> ambos reciben <b>valores numéricos y representan el número de filas y columnas</b> que puede tener el textarea.
