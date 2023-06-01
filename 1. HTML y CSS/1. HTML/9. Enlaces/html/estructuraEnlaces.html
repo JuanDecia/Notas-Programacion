@@ -10,26 +10,42 @@
 
 <body>
 
-    <div id="contenedor">
+    <header>
+        <a href="https://www.google.com" target="_blank">
+            <h1>Enlace a Buscador Google</h1>
+        </a>
+
+        <nav>
+            <div>
+                <img class="flecha" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEvtlNsNgzAQBIcO0gkpgZSQSmgh6SgdQAnQSUpAJ4F0imLfGsMf/rZmbtePhpNXczKfSxA2XFLRDeiBd0h1G1SBwQfgvgpeqkQRePgMdMD3KEEV3IbIJaiG5wSHwFMCD1erTg77ryITjEBbQk/VnToDL5mAR8nN8YNFh7wl2S2J3kF1kkhgaaskiuBX8gQ+6gVQBZvEvgkZHr1kdcjsvpIEu4SXIKxtAb+eIBmkl/3TAAAAAElFTkSuQmCC"/>
+            </div>
+
+            <ul>
+                <li><a href="../index.html">Volver a Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
         <!-- 
-            En href agregamos el link que será dirigido Si queremos enviar al usuario a una página especifica, deberemos agregar el enlace la ruta absoluta de la dirección.
-
-            target="_blank" abre pestaña nueva
-        -->
-
-        <a id="link-google" href="https://www.google.com" target="_blank"><h1>Enlace a Buscador Google</h1></a>
-
-        <!--
+            En href agregamos el link que será dirigido Si queremos enviar al usuario a una página especifica, deberemos agregar el enlace la ruta absoluta de la dirección. target="_blank" abre pestaña nueva.
+        
             Estos enlaces relativos nos guiarán a través de nuestra página web a páginas internas de la misma. Tambien debemos tener en cuenta que debemos crear los archivos de dichas rutas dentro de la carpeta.
         -->
 
-        <ul>
-            <li><a href="../html/estructuraEnlaces/pagina_vikingos.html">Página Vikingos</a></li>
-            <li><a href="../html/estructuraEnlaces/pagina_fairytail.html">Página Fairy Tail</a></li>
-            <li><a href="../html/estructuraEnlaces/pagina_kimetsunoyaiba.html">Página Kimetsu no Yaiba</a></li>
+        <ul class="lista-enlaces">
+            <li>
+                <a href="../html/estructuraEnlaces/pagina_vikingos.html">Página Vikingos</a>
+            </li>
+            <li>
+                <a href="../html/estructuraEnlaces/pagina_fairytail.html">Página Fairy Tail</a>
+            </li>
+            <li>
+                <a href="../html/estructuraEnlaces/pagina_kimetsunoyaiba.html">Página Kimetsu no Yaiba</a>
+            </li>
         </ul>
         
-        <a id="contacto" href="mailto:juan.decia@gmail.com?Subject=Peticion%20de%20contacto">Contactame</a>
+        <a id="contacto" href="mailto:juan.decia@gmail.com?Subject=Peticion%20de%20contacto">Contactame vía mail</a>
 
     </div>
 </body>

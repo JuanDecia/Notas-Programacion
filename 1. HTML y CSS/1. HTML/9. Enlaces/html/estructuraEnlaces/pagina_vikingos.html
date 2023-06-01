@@ -12,45 +12,63 @@
 </head>
 
 <body>
-    <h1 id="inicio">Inicio: Vikingos</h1>
+    <header>
+        <h1 id="inicio">Inicio: Vikingos</h1>
 
-<!--
-    En informática para comunicarse con el ordenardor para regresar a la raíz lo escribimos con dos puntos: ../
-    Luego debemos escribir la ruta relativa hacia donde nos vamos a dirigir.
+        <!--
+            En informática para comunicarse con el ordenardor para regresar a la raíz lo escribimos con dos puntos: ../
+            Luego debemos escribir la ruta relativa hacia donde nos vamos a dirigir.
+        
+            Para contenido 1 y 2, utilizamos el concepto de anclas para hacer más funcional y proporcionarle comodidad al usuario. Las anclas comienzan con "#"" y debemos identificar con un id los lugares donde debe dirigirse para luego llamarlos por su id.
+        -->
 
-    Para contenido 1 y 2, utilizamos el concepto de anclas para hacer más funcional y proporcionarle comodidad al usuario. Las anclas comienzan con "#"" y debemos identificar con un id los lugares donde debe dirigirse para luego llamarlos por su id.
--->
+        <nav>
+            <a class="link" href="../../index.html">Volver a Inicio |</a>
 
-    <a class="link" href="../../index.html">Volver a Inicio |</a>
-    <a class="link" href="../estructuraEnlaces.html">Volver a "Estructura de enlaces" |</a>
-    <a class="link" href="#contenido1">Contenido 1 |</a>
-    <a class="link" href="#contenido2">Contenido 2 |</a>
+            <!-- Tiene que ser hermano directo "menu-toggle" y "cont-link" -->
+            <label for="menu-toggle">
+                <img class="menu" src="../../img/menu.svg" alt="menu" />
+            </label>
+            <input type="checkbox" name="menu-toggle" id="menu-toggle" />
+            
 
+            <div class="cont-link">
+                <a class="link" href="../estructuraEnlaces.html">Volver a "Estructura de enlaces" |</a>
+                <a class="link" href="#contenido1">Contenido 1 |</a>
+                <a class="link" href="#contenido2">Contenido 2 |</a>
+            </div>
+        </nav>
+    </header>
 
-    <h2 class="subTitulo" id="contenido1">Contenido 1</h2>
-
-    <p>
-        <strong>Vikingo</strong> (del nórdico antiguo víkingr) es el principal nombre dado a los guerreros germánicos que realizaban incursiones de saqueos,
-        provenientes de los pueblos nórdicos procedentes de Escandinavia, famosos por ser grandes navegantes y por llevar a cabo pillajes y 
-        ataques en Europa. Dependiendo del contexto y de la interpretación del autor, puede usarse el nombre para referirse a los incursores
-        de esta procedencia o a sus países de origen. La metonimia ha llevado a que el nombre se siga usando aún hoy en día de forma coloquial 
-        para referirse a los países escandinavos. Su lengua era el nórdico antiguo.
-    </p>
-
-    <a class="link" href="#inicio">Volver al inicio</a>
-
-    <h2 class="subTitulo" id="contenido2">Contenido 2</h2>
-
-    <p>
-        Si bien existen referencias vagas a pueblos germánicos del mar Báltico y Escandinavia en las fuentes romanas,1​ sus ataques y su 
-        aparición en la escena política europea cobran relevancia con el saqueo del monasterio de Lindisfarne (793) en el norte de
-        Gran Bretaña, al que pronto siguieron ataques a otros monasterios. Los anales y crónicas de los dos siglos siguientes están repletos 
-        de relatos aterradores. Su actuar violento aterrorizó a las antiguas comunidades, que, aunque acostumbradas a la guerra, no tenían 
-        forma de prever cuándo habría una incursión y sufrían una carencia de poderes fuertes en los comienzos de la Edad Media. Estos ataques
-        sumados a los de los húngaros y ávaros, a la presión de pueblos eslavos en Europa Oriental y a la de los árabes en el Sur fueron tanto 
-        causa como consecuencia de un período de inestabilidad que favoreció la descentralización política del feudalismo.
-    </p>
+    <main>
+        
+        <h2 class="subTitulo" id="contenido1">Contenido 1</h2>
     
-    <a class="link" href="#inicio">Volver al inicio</a>
+        <p>
+            <strong>Vikingo</strong> (del nórdico antiguo víkingr) es el principal nombre dado a los guerreros germánicos que realizaban incursiones de saqueos,
+            provenientes de los pueblos nórdicos procedentes de Escandinavia, famosos por ser grandes navegantes y por llevar a cabo pillajes y 
+            ataques en Europa. Dependiendo del contexto y de la interpretación del autor, puede usarse el nombre para referirse a los incursores
+            de esta procedencia o a sus países de origen. La metonimia ha llevado a que el nombre se siga usando aún hoy en día de forma coloquial 
+            para referirse a los países escandinavos. Su lengua era el nórdico antiguo.
+        </p>
+    
+        <a class="link" href="#inicio">Volver al inicio</a>
+    
+        <h2 class="subTitulo" id="contenido2">Contenido 2</h2>
+    
+        <p>
+            Si bien existen referencias vagas a pueblos germánicos del mar Báltico y Escandinavia en las fuentes romanas,1​ sus ataques y su 
+            aparición en la escena política europea cobran relevancia con el saqueo del monasterio de Lindisfarne (793) en el norte de
+            Gran Bretaña, al que pronto siguieron ataques a otros monasterios. Los anales y crónicas de los dos siglos siguientes están repletos 
+            de relatos aterradores. Su actuar violento aterrorizó a las antiguas comunidades, que, aunque acostumbradas a la guerra, no tenían 
+            forma de prever cuándo habría una incursión y sufrían una carencia de poderes fuertes en los comienzos de la Edad Media. Estos ataques
+            sumados a los de los húngaros y ávaros, a la presión de pueblos eslavos en Europa Oriental y a la de los árabes en el Sur fueron tanto 
+            causa como consecuencia de un período de inestabilidad que favoreció la descentralización política del feudalismo.
+        </p>
+        
+        <a class="link" href="#inicio">Volver al inicio</a>
+    </main>
+
+    <script src="../../js/vikingos.js"></script>
 </body>
 </html>

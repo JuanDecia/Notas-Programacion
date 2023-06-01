@@ -2,26 +2,98 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    max-width: 80%;
+    margin: auto;
+    background-color: rgb(197, 201, 204);
+}
+
+/* ############ HEADER */
+
 h1 {
-    margin-left: 5px;
+    text-align: center;
+    color: rgb(15, 122, 122);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Icono menú oculto para mostrar solo en responsive */
+.menu {
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
 }
 
 .link {
     text-decoration: none;
     padding: 5px;
+    color: rgb(219, 138, 45);
+    font-weight: 600;
+    font-size: 1.2em;
 }
+
+.link:hover {
+    color: black;
+}
+
+/* ############ MAIN CONTENT */
 
 .subTitulo {
     margin-left: 10px;
-    color: rgb(106, 146, 231);
+    color: rgb(38, 99, 231);
     font-size: 1.7em;
-}
-
-a {
-    text-align: center;
 }
 
 p {
     text-align: justify;
     padding: 10px;
+}
+
+/* QUERIES */
+
+@media (max-width: 992px) {
+    /* Ocultamos contenido del menú */
+    .cont-link {
+        position: absolute;
+        background-color: black;
+        right: 90px;
+        top: 130px;
+        border-radius: 10px;
+        padding: 10px;
+        flex-direction: column;
+        transition: max-height 0.2s ease;
+        display: none;
+    }
+
+    .link:hover {
+        color: #fff;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    /* Se muestra el icono del menú */
+    .menu {
+        display: flex;
+    }
+
+    #menu-toggle:checked + .cont-link {
+        display: flex;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .cont-link {
+        top: 130px;
+        right: 20px;
+    }
 }
