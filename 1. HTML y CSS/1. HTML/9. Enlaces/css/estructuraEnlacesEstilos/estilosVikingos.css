@@ -18,9 +18,10 @@ h1 {
 nav {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-/* Icono menú oculto para mostrar solo en responsive */
+    /* Icono menú oculto para mostrar solo en responsive */
 .menu {
     width: 40px;
     cursor: pointer;
@@ -31,12 +32,47 @@ nav {
     display: none;
 }
 
+.cont-volver-inicio {
+    border: 1px solid red;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.cont-volver-inicio:hover img.flecha {
+    animation: move 1s linear infinite;
+}
+
+@keyframes move {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-1px, 0) scale(1.2);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+}
+
+.volver-inicio-txt {
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: rgb(219, 138, 45);
+}
+
+
+
 .link {
     text-decoration: none;
     padding: 5px;
     color: rgb(219, 138, 45);
     font-weight: 600;
     font-size: 1.2em;
+    border: 1px solid black;
 }
 
 .link:hover {
@@ -92,8 +128,16 @@ p {
 
 
 @media (max-width: 576px) {
+    
     .cont-link {
-        top: 130px;
-        right: 20px;
+        right: 70px;
+    }
+}
+
+@media (max-width: 420px) {
+    
+    .cont-link {
+        width: 50%;
+        right: 40px;
     }
 }
