@@ -21,6 +21,30 @@ nav {
     flex-wrap: wrap;
 }
 
+nav a {
+    position: relative;
+    margin: 10px;
+    padding: 10px 0;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
     /* Icono menú oculto para mostrar solo en responsive */
 .menu {
     width: 40px;
@@ -33,7 +57,6 @@ nav {
 }
 
 .cont-volver-inicio {
-    border: 1px solid red;
     width: 100%;
     margin-bottom: 20px;
     display: flex;
@@ -64,15 +87,12 @@ nav {
     color: rgb(219, 138, 45);
 }
 
-
-
 .link {
     text-decoration: none;
     padding: 5px;
     color: rgb(219, 138, 45);
     font-weight: 600;
     font-size: 1.2em;
-    border: 1px solid black;
 }
 
 .link:hover {
@@ -97,15 +117,17 @@ p {
 @media (max-width: 992px) {
     /* Ocultamos contenido del menú */
     .cont-link {
+        display: flex;
+        flex-direction: column;
         position: absolute;
         background-color: black;
-        right: 90px;
-        top: 130px;
+        width: 80%;
+        right: 0;
+        top: 173px;
         border-radius: 10px;
         padding: 10px;
-        flex-direction: column;
-        transition: max-height 0.2s ease;
-        display: none;
+        transition: opacity 0.5s ease, height 0.5s ease;
+        opacity: 0;
     }
 
     .link:hover {
@@ -122,7 +144,15 @@ p {
     }
 
     #menu-toggle:checked + .cont-link {
-        display: flex;
+        opacity: 1;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .cont-link {
+        left: 120px;
+        width: 60%;
     }
 }
 
@@ -130,7 +160,7 @@ p {
 @media (max-width: 576px) {
     
     .cont-link {
-        right: 70px;
+        left: 20%;
     }
 }
 
