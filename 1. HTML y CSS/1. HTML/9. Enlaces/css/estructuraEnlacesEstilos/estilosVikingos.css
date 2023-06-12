@@ -21,6 +21,7 @@ nav {
     flex-wrap: wrap;
 }
 
+    /* Efecto de subrayado */
 nav a {
     position: relative;
     margin: 10px;
@@ -52,6 +53,7 @@ nav a:hover::after {
     display: none;
 }
 
+    /* Input Oculto */
 #menu-toggle {
     display: none;
 }
@@ -115,7 +117,7 @@ p {
 /* QUERIES */
 
 @media (max-width: 992px) {
-    /* Ocultamos contenido del menú */
+    
     .cont-link {
         display: flex;
         flex-direction: column;
@@ -127,7 +129,7 @@ p {
         border-radius: 10px;
         padding: 10px;
         transition: opacity 0.5s ease, height 0.5s ease;
-        opacity: 0;
+        opacity: 0; /* Ocultamos contenido del menú */
     }
 
     .link:hover {
