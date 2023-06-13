@@ -12,31 +12,55 @@
 
 <body>
 
-    <h1>Fairy Tail: Erza Scarlet</h1>
+    <header>
+        <h1>Fairy Tail: Erza Scarlet</h1>
 
-    <!--
-        En informática para comunicarse con el ordenardor para regresar a la raíz lo escribimos con dos puntos: ../
-        Luego debemos escribir la ruta relativa hacia donde nos vamos a dirigir.
-    -->
+        <nav>
 
-    <a href="../../index.html">Volver a Inicio |</a>
+            <div class="cont-volver-inicio">
+    
+                <!-- Flecha -->
+                <a class="flecha-link" href="../../index.html">
+                    <img
+                      class="flecha"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEvtlNsNgzAQBIcO0gkpgZSQSmgh6SgdQAnQSUpAJ4F0imLfGsMf/rZmbtePhpNXczKfSxA2XFLRDeiBd0h1G1SBwQfgvgpeqkQRePgMdMD3KEEV3IbIJaiG5wSHwFMCD1erTg77ryITjEBbQk/VnToDL5mAR8nN8YNFh7wl2S2J3kF1kkhgaaskiuBX8gQ+6gVQBZvEvgkZHr1kdcjsvpIEu4SXIKxtAb+eIBmkl/3TAAAAAElFTkSuQmCC"
+                    />
+                </a>
+    
+                <a class="volver-inicio-txt" href="../../index.html">Volver a Inicio</a>
+            </div>
 
-    <a href="../estructuraEnlaces.html">Volver a Estructura de enlaces |</a>
+            <!-- Menu -->
+            <label for="menu-toggle">
+                <img class="menu" src="../../img/menu.svg" alt="menu" />
+            </label>
+            <input type="checkbox" name="menu-toggle" id="menu-toggle" />
+    
+            <div class="estructura-enlaces">
+    
+                <a href="../estructuraEnlaces.html">Volver a Estructura de enlaces </a>
+            
+                <a href="./pagina_kimetsunoyaiba.html">Ir a Kimetsu </a>
+            
+                <a href="./pagina_vikingos.html">Ir a vikingos</a>
+                
+            </div>
+        </nav>
 
-    <a href="./pagina_kimetsunoyaiba.html">Ir a Kimetsu |</a>
+    </header>
 
-    <a href="./pagina_vikingos.html">Ir a vikingos</a>
-
-    <div id="cont-imagen">
-        <img src="https://i.pinimg.com/236x/d5/d5/a2/d5d5a286f5ad9ab8a67ed0ac6c97032d.jpg" alt="erza" title="Erza Scarlet">
-
+    <main>
         <p>
             Erza Scarlet (エルザ・スカーレット Eruza Sukāretto) es una Maga Clase S denominada como la 
             mujer más fuerte de Fairy Tail simbolo.png Fairy Tail así como miembro del Equipo de Natsu, 
             también es una de las principales protagonistas femeninas. Durante el año X792, en medio de 
             la reconstrucción del gremio, fue declarada la séptima maestra de Fairy Tail.
         </p>
-    </div>
+
+        <div id="cont-imagen">
+            <img src="https://i.pinimg.com/236x/d5/d5/a2/d5d5a286f5ad9ab8a67ed0ac6c97032d.jpg" alt="erza" title="Erza Scarlet" />
+        </div>
+    </main>
 
 </body>
 </html>

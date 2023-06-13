@@ -3,28 +3,106 @@
 }
 
 body {
+    max-width: 80%;
+    margin: auto;
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* HEADER */
+
+nav {
+    display: flex;
+}
+
+    /* Animación Título */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(50px);
+    }
+    to {
+        transform: translate(0);
+    }
 }
 
 h1 {
     text-align: center;
     color: #fff;
+    font-size: 3em;
+    animation: fade 1.5s ease-in, slide-left 1.5s ease-in-out;
 }
+
+.cont-volver-inicio {
+    display: flex;
+    align-items: center;
+}
+
+    /* Animación Flecha */
+
+.cont-volver-inicio:hover img.flecha {
+    animation: move 1s linear infinite;
+}
+
+@keyframes move {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-1px, 0) scale(1.2);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+}
+
+.flecha-link {
+    display: flex;
+    align-items: center;
+}
+
+.volver-inicio-txt {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    margin-left: 15px;
+    position: relative;
+    padding: 10px;
+}
+
+/* Animación Subrayado */
+
+.volver-inicio-txt::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 1px solid white;
+    height: 1px;
+    background-color: #fff;
+    margin-left: 13px;
+    width: 80%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.volver-inicio-txt:hover::after {
+    transform: scaleX(1);
+}
+
+    /*   MAIN CONTENT   */
 
 #sub-naruto {
     text-align: center;
-}
-
-div {
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
-}
-
-a {
-    height: 300px;
-    
 }
 
 #sinopsis {
@@ -38,4 +116,34 @@ a {
 
 p {
     text-align: justify;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+}
+
+.cont-link-img {
+    display: flex;
+    justify-content: center;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 992px) {
+
+    .link-img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    img {
+        width: 70%;
+    }
+
+    #sinopsis {
+        width: 70%;
+    }
+
 }
