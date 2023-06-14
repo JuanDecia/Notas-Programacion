@@ -1,26 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    width: 85%;
-    margin: 15px auto;
+    max-width: 80%;
+    margin: auto;
     font-family: sans-serif;
-    background-color: aliceblue;
-}
-
-header {
-    text-align: center;
-}
-
-h1 {
-    color: rgb(45, 161, 45);
-}
-
-h2 {
-    color: rgb(57, 135, 199);
+    background-color: rgb(75, 75, 77);
+    color: rgb(255, 255, 255);
 }
 
 a {
     padding: 10px;
     text-decoration: none;
     color: rgb(224, 162, 90);
+}
+
+a:visited {
+    color: rgb(224, 162, 90);
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+}
+
+    /* Animación titulo */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(50px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+h1 {
+    color: rgb(48, 170, 129);
+    animation: fade 1s ease-in, slide-left 1.2s ease-in-out;
+}
+
+.cont-volver-inicio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.flecha-link {
+    display: flex;
+    align-items: center;
+}
+
+.volver-inicio-txt {
+    font-size: 1.3em;
+    font-weight: 600;
+    padding: 10px;
+    position: relative;
+}
+
+    /*   Animación Links   */
+
+.volver-inicio-txt::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    border: 1px solid rgb(224, 162, 90);
+    background-color: rgb(224, 162, 90);
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.cont-volver-inicio:hover .volver-inicio-txt::after {
+    transform: scaleX(1);
+}
+
+.estructura-enlaces {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.estructura-enlaces a {
+    padding: 10px;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    border: 1px solid rgb(224, 162, 90);
+    background-color: rgb(224, 162, 90);
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.estructura-enlaces a:first-child:hover::after, .estructura-enlaces a:last-child:hover::after {
+    transform: scaleX(1);
+}
+
+/*   MAIN CONTENT   */
+
+.cont-download {
+    margin-bottom: 40px;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+}
+
+h2 {
+    color: rgb(59, 162, 221);
 }
 
 p {
