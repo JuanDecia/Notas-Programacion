@@ -1,24 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    width: 85%;
-    margin: 15px auto;
+    max-width: 80%;
+    margin: auto;
     font-family: sans-serif;
-    background-color: aliceblue;
-}
-
-header {
-    text-align: center;
-}
-
-h1 {
-    color: rgb(45, 161, 45);
-}
-
-h2 {
-    color: rgb(57, 135, 199);
-}
-
-h3 {
-    color: orange;
+    background-color: rgb(172, 172, 190);
 }
 
 ul {
@@ -34,13 +22,157 @@ a {
     align-items: center;
     padding: 10px;
     text-decoration: none;
-    color: rgb(224, 162, 90);
+    color: rgb(209, 87, 5);
+    font-weight: 600;
+    position: relative;
+    font-size: 1.3em;
+}
+
+p {
+    text-align: justify;
+}
+
+/* ######### HEADER */
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    /*   Efecto título   */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    text-align: center;
+    color: rgb(21, 117, 117);
+    animation: fade 1.5s ease, slide-down 1.5s ease-in-out;
+}
+
+nav {
+    display: flex;
+}
+
+.cont-links {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+    /* Efecto subrayado links */
+a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: rgb(236, 103, 14);
+    background-color: rgb(236, 103, 14);
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+    /* ###### Menu Oculto en pantalla completa */
+
+.menu-button {
+    width: 50px;
+}
+
+#menu-toggle, .menu-button {
+    display: none;
+}
+
+/* Efecto links */
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-50px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+a {
+    animation: slide-right 1.5s ease;
 }
 
 .tilde {
     margin-right: 20px;
 }
 
-p {
-    text-align: justify;
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 992px) {
+
+    .menu-button {
+        display: flex;
+        margin: 30px 0;
+        object-fit: cover;
+        box-shadow: 0px 10px 11px -2px rgba(0,0,0,0.54);
+        -webkit-box-shadow: 0px 10px 11px -2px rgba(0,0,0,0.54);
+        -moz-box-shadow: 0px 10px 11px -2px rgba(0,0,0,0.54);
+        border-radius: 10px;
+    }
+
+    .cont-links {
+        position: absolute;
+        flex-direction: column;
+        left: 155px;
+        top: 105px;
+        width: 55%;
+        border: 2px solid rgb(236, 103, 14);
+        background-color: rgba(0, 0, 0, 0.637);
+        display: none; /* Ocultamos para luego aplicar el efecto checked */
+    }
+
+    #menu-toggle:checked + .cont-links {
+        display: flex;
+        animation: fade 0.7s ease-in;
+    }
+
+    a {
+        font-size: 1.3em;
+    }
+
+    .tilde {
+        display: none;
+    }
+
 }
+
+@media (max-width: 576px) {
+    .cont-links {
+        top: 40%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    /* Estilos para pantallas entre 320px y 480px */
+    .cont-links {
+        top: 180px;
+        left: 110px;
+    }
+  }
+  
