@@ -1,22 +1,121 @@
 body {
-    width: 85%;
-    margin: 15px auto;
+    max-width: 80%;
+    margin: auto;
     font-family: sans-serif;
-    background-color: aliceblue;
+    background-color: rgb(172, 172, 190);
 }
 
+/* ######### HEADER */
+
+    /* ### Animaciones Header */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes flecha {
+    0% {
+        transform: translate(0,0) scale(1) ;
+    }
+    50% {
+        transform: translate(-1px) scale(1.2);
+    }
+    100% {
+        transform: translate(0,0) scale(1);
+    }
+}
+
+    /* ### */
+
 header {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
-    color: rgb(45, 161, 45);
+    text-align: center;
+    color: rgb(21, 156, 156);
+    animation: fade 1s ease-in, slide-down 1s ease-in-out;
 }
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-volver-inicio {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.flecha-link {
+    margin-right: 20px;
+}
+
+.cont-volver-inicio:hover .flecha-link {
+    animation: flecha 1s linear infinite;
+}
+
+a {
+    font-size: 1.3em;
+    text-decoration: none;
+    color: rgb(236, 103, 14);
+    font-weight: 600;
+    position: relative;
+}
+
+.estructura-enlaces {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.estructura-enlaces a {
+    padding: 10px;
+}
+
+.estructura-enlaces a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: rgb(236, 103, 14);
+    color: rgb(236, 103, 14);
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.estructura-enlaces a:hover::after {
+    transform: scaleX(1);
+}
+
+/* ######### MAIN CONTENT */
 
 h2 {
-    color: rgb(57, 135, 199);
+    color: rgb(38, 99, 231);
 }
 
-h3 {
-    color: orange;
+.cont-video {
+    display: flex;
+    justify-content: center;
+}
+
+video {
+    width: 80%;
 }
