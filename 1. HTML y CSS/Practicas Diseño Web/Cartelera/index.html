@@ -7,82 +7,92 @@
         <link rel="stylesheet" href="css/estilos.css" />
     </head>
     <body>
+
         <header>
             <h1>Cartelera de vuelos - Aeropuerto el mirador</h1>
 
-            <nav-bar class="menu_principal">
-                <a href="vuelos_por_hora.html">Vuelos por hora |</a>
-                <a href="vuelos_por_destino.html">Vuelos por destino</a> 
-            </nav-bar>
+            <nav class="menu_principal">
+                <a href="#">Vuelos por hora</a>
+                <a href="#">Vuelos por destino</a> 
+            </nav>
             
         </header>
+
+        <!-- Main Content -->
         <section>
             <article>
 
                 <h2>Llegada</h2>
-                <table name="llegadas">
-                    <thead>
-                        <tr>
-                            <th>Aerolinea</th>
-                            <th>Nro. Vuelo</th>
-                            <th>Estatus</th>
-                            <th>Hora estimada</th>
-                            <th>Puerta</th>
-                        </tr>
-                    </thead>
-                    <tbody>
 
-                        <tr>
-                            <td>AIRLAN</td>
-                            <td>355</td>
-                            <td>ATERRIZO</td>
-                            <td>2:45 PM</td>
-                            <td>3</td>
-                        </tr>
-
-                        <tr>
-                            <td>VIAJAR</td>
-                            <td>556</td>
-                            <td>RETARDADO</td>
-                            <td>2:35 PM</td>
-                            <td>6</td>
-                        </tr>
-
-                        <tr>
-                            <td>AEROVUELO</td>
-                            <td>1234</td>
-                            <td>EN VUELO</td>
-                            <td>3:45 PM</td>
-                            <td>8</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-llegadas">
+                    <table name="llegadas">
+                        <thead>
+                            <tr>
+                                <th>Aerolinea</th>
+                                <th>Nro. Vuelo</th>
+                                <th>Estatus</th>
+                                <th>Hora estimada</th>
+                                <th>Puerta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                            <tr>
+                                <td>AIRLAN</td>
+                                <td>355</td>
+                                <td>ATERRIZO</td>
+                                <td>2:45 PM</td>
+                                <td>3</td>
+                            </tr>
+    
+                            <tr>
+                                <td>VIAJAR</td>
+                                <td>556</td>
+                                <td>RETARDADO</td>
+                                <td>2:35 PM</td>
+                                <td>6</td>
+                            </tr>
+    
+                            <tr>
+                                <td>AEROVUELO</td>
+                                <td>1234</td>
+                                <td>EN VUELO</td>
+                                <td>3:45 PM</td>
+                                <td>8</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <h2>Salida</h2>
-                <table>
-                    <thead>
 
-                        <tr>
-                            <th>Aerolinea</th>
-                            <th>Nro. Vuelo</th>
-                            <th>Estatus</th>
-                            <th>Hora estimada</th>
-                            <th>Puerta</th>
-                        </tr>
+                <div class="table-salida">
+                    <table>
+                        <thead>
+    
+                            <tr>
+                                <th>Aerolinea</th>
+                                <th>Nro. Vuelo</th>
+                                <th>Estatus</th>
+                                <th>Hora estimada</th>
+                                <th>Puerta</th>
+                            </tr>
+    
+                        </thead>
+                        <tbody>
+    
+                            <tr>
+                                <td>AIRLAN</td>
+                                <td>355</td>
+                                <td>EMBARCANDO</td>
+                                <td>2:15 PM</td>
+                                <td>1</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
 
-                    </thead>
-                    <tbody>
-
-                        <tr>
-                            <td>AIRLAN</td>
-                            <td>355</td>
-                            <td>EMBARCANDO</td>
-                            <td>2:15 PM</td>
-                            <td>1</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
             </article>
         </section>
         <footer>Derechos Reservados</footer>

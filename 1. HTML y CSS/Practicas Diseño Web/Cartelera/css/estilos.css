@@ -1,15 +1,56 @@
-body{
-    margin: 20px;
-    font-family: verdana;
+* {
+    box-sizing: border-box;
 }
 
-.menu_principal{
+body{
+    max-width: 80%;
+    margin: auto;
+    font-family: verdana;
+    background-color: rgb(172, 172, 190);
+}
+
+/* ###### HEADER */
+
+    /*   Animaciones   */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: rgb(21, 117, 117);
+    text-align: center;
+    animation: fade 1.5s ease-in, slide-down 1.5s ease-in-out;
+}
+
+/* Nav */ .menu_principal{ 
     padding: 10px 0px;
 }
 
 .menu_principal a{
     color: green;
     text-decoration: none;
+    font-weight: 600;
+    padding-bottom: 5px;
 }
 
 .menu_principal a:hover{
@@ -21,16 +62,32 @@ body{
     color: black;
 }
 
-footer{
-    margin-top: 20px;
-    border-top: solid 1px black;
-    padding-top: 10px;
-    text-align: center;
+/* ###### MAIN CONTENT */
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-50px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+.table-llegadas {
+    display: flex;
+    justify-content: center;
+}
+
+.table-salida {
+    display: flex;
+    justify-content: center;
 }
 
 table{
     border-collapse: collapse;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    width: 55%;
+    animation: slide-right 1s ease;
 }
 
 table, th, td {
@@ -54,3 +111,20 @@ tbody tr:nth-child(odd):hover {
     color: #DDF;
 }
 
+footer{
+    margin-top: 20px;
+    border-top: solid 1px black;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* ###### MEDIA QUERIES */
+
+@media (max-width: 576px) {
+    table {
+       display: block;
+       width: 80%;
+       box-shadow: none;
+       border: none;
+    }
+}
