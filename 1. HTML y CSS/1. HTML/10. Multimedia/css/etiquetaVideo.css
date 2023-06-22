@@ -48,7 +48,7 @@ header {
 
 h1 {
     text-align: center;
-    color: rgb(21, 156, 156);
+    color: rgb(21, 117, 117);
     animation: fade 1s ease-in, slide-down 1s ease-in-out;
 }
 
