@@ -1,30 +1,70 @@
+* {
+    margin: 0;
+}
+
 body {
     font-family: sans-serif;
-    background: rgb(208, 211, 214);
     max-width: 85%;
     margin: auto;
+    background-image: url("../img/fondo-imagen.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
+
+main {
+    background-color: rgba(197, 201, 204, 0.85);
+    padding: 20px;
+}
+
+p {
+    text-align: justify;
+}
+
+/* ###### HEADER */
 
 h1 {
     text-align: center;
-    color: rgb(15, 122, 122);
+    color: rgb(15, 110, 110);
 }
+
+/* ###### MAIN CONTENT */
 
 h2 {
-    margin-top: 30px;
-    color: rgb(38, 99, 251);
+    margin: 30px 0;
+    color: rgb(38, 99, 231);
 }
 
-div {
-    text-align: center;
+h3 {
+    color: rgb(103, 45, 240);
+}
+
+.cont-img {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
 }
 
 img {
     max-width: 80%;
 }
 
-p {
-    text-align: justify;
+.cont-link {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    padding: 15px;
+    background-color: rgba(141, 100, 236, 0.247);
+    text-decoration: none;
+    border: 1px solid rgb(103, 45, 240);
+    border-radius: 5px;
+}
+
+.parrafo-margen {
+    margin: 20px 0;
 }
 
 b {
@@ -32,5 +72,5 @@ b {
 }
 
 li {
-    margin-top: 10px;
+    margin: 15px 0;
 }

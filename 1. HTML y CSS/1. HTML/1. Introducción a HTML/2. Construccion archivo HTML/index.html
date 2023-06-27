@@ -12,95 +12,118 @@
 </head>
 <body>
 
-    <header>
-        <h1>Construccion del archivo HTML</h1>
-    </header>
-
     <main>
+        
+        <header>
+            <h1>Construccion del archivo HTML</h1>
+        </header>
+    
+        <section>
+    
+            <!-- Etiqueta Doctype -->
 
-        <!-- Etiqueta Doctype -->
-        <h2>Etiqueta "!DOCTYPE html"</h2>
+            <article>
+                <h2>Etiqueta "!DOCTYPE html"</h2>
+        
+                <p>
+                    La etiqueta <b>"!DOCTYPE"</b> se encarga de establecer el tipo de versión de HTML 
+                    que se establece en el navegador. Su versión es HTML5. Esta etiqueta <b>se declara en la línea 
+                    1 del documento html</b> que estemos maquetando.
+                </p>
+        
+                <div class="cont-img">
+                    <img src="./img/doctype.png" alt="Etiqueta Doctype" width="500px" />
+                </div>
+        
+                <hr>
+        
+                <!-- Etiqueta HTML -->
+                <h2>Etiqueta HTML</h2>
+        
+                <p>
+                    Esta etiqueta se coloca seguida de la declaración de "!DOCTYPE html". Porque, luego de declarar 
+                    la versión de HTML que usaremos estamos <b>identificando</b> que el archivo que vamos a 
+                    construir es de <b>tipo HTML</b>. Esta etiqueta tiene <b>apertura y cierre</b>.
+                </p>
+        
+                <div class="cont-img">
+                    <img src="img/etiqueta.jpg" alt="">
+                </div>
+        
+                <p>
+                    Como podemos observar en la imagen anterior tenemos una <b>etiqueta de apertura</b> 
+                    "h1" y una <b>etiqueta de cierre</b> "h1". El contenido de la etiqueta siempre va en medio de ellas.
+                </p>
+            </article>
+    
+            <hr>
+    
+            <!-- Entidades HTML -->
 
-        <p>
-            La etiqueta <b>"!DOCTYPE"</b> se encarga de establecer el tipo de versión de HTML 
-            que se establece en el navegador. Su versión es HTML5. Esta etiqueta <b>se declara en la línea 
-            1 del documento html</b> que estemos maquetando.
-        </p>
+            <article>
+                <h2>Entidades (Símbolos) HTML</h2>
+        
+                <p>
+                    La representación de símbolos es un problema en los lenguajes de programación. Un símbolo especial puede ser una arroba (@), usado en los correos electrónicos o un símbolo de dólar ($), empleando para distinguir una moneda específica, entre tantos ejemplos.
+                </p>
+        
+                <p>
+                    Hay dos maneras de codificar una entidad HTML:
+                </p>
+        
+                <ul>
+                    <li>La primera es a través del uso del ampersand (&) seguido del código o nombre de la entidad y terminado en un punto y coma.</li>
+                    <li>La segunda es usando el ampersand (&), a continuación, el numeral (#) y siguiente el código o nombre de la entidad y terminado en punto y coma.</li>
+                </ul>
+        
+                <h3>Ejemplo:</h3>
+        
+                <ol>
+                    <li><b>&nombre_entidad;</b></li>
+                    <li><b>&#número_entidad;</b></li>
+                </ol>
+        
+                <p>
+                    Estas son algunas entidades HTML útiles. En la siguiente tabla se puede visualizar como se puede utilizar el número de la entidad (código de la entidad) o el nombre de la entidad.
+                </p>
+        
+                <div class="cont-link">
+                    <a href="https://developer.mozilla.org/es/docs/Glossary/Entity">
+                        <h3>Página de los códigos de las entidades</h3>
+                    </a>
+                </div>
+            </article>
 
-        <div>
-            <img src="./img/doctype.png" alt="Etiqueta Doctype" width="500px" />
-        </div>
+            <hr />
+    
+            <!-- Ejemplo Sintaxis -->
+            <article class="cont-sintaxis">
+                <h2>Sintaxis Entidades:</h2>
+                <p>
+                    El siguiente código HTML es un ejemplo del uso de las entidades HTML: 
+                </p>
+    
+                <ul>
+                    <li>Esta camisa me costó: "&"euro;5</li>
+                    <li>El per "&"#237;metro de un c"&"iacute;rculo es 2"&"Pi;</li>
+                    <li>Este es mi correo electr"&"oacute;nico: micorreo"&"#64;correo.com</li>
+                </ul>
+    
+                <p>
+                    Se le colocaron <b>comillas</b> al símbolo <b>&</b> para que se pueda ver como es el ejemplo práctico, ya que, si no las lleva (solo como ejemplo) nos escribe el símbolo como en el siguiente ejemplo.
+                </p>
+        
+                <p class="parrafo-margen"><b>Esto se plegará como:</b></p>
+        
+                <ul>
+                    <li>Esta camisa me costó: <b>&euro;</b>5</li>
+                    <li>El per<b>&#237;</b>metro de un c&iacute;rculo es 2<b>&Pi;</b></li>
+                    <li>Este es mi correo electr&oacute;nico: micorreo<b>&#64;</b>correo.com</li>
+                </ul>
+            </article>
 
-        <hr>
-
-        <!-- Etiqueta HTML -->
-        <h2>Etiqueta HTML</h2>
-
-        <p>
-            Esta etiqueta se coloca seguida de la declaración de "!DOCTYPE html". Porque, luego de declarar 
-            la versión de HTML que usaremos estamos <b>identificando</b> que el archivo que vamos a 
-            construir es de <b>tipo HTML</b>. Esta etiqueta tiene <b>apertura y cierre</b>.
-        </p>
-
-        <div>
-            <img src="img/etiqueta.jpg" alt="">
-        </div>
-
-        <p>
-            Como podemos observar en la imagen anterior tenemos una <b>etiqueta de apertura</b> 
-            "h1" y una <b>etiqueta de cierre</b> "h1". El contenido de la etiqueta siempre va en medio de ellas.
-        </p>
-
-        <hr>
-
-        <!-- Entidades HTML -->
-        <h2>Entidades (Símbolos) HTML</h2>
-
-        <p>
-            La representación de símbolos es un problema en los lenguajes de programación. Un símbolo especial puede ser una arroba (@), usado en los correos electrónicos o un símbolo de dólar ($), empleando para distinguir una moneda específica, entre tantos ejemplos.
-        </p>
-
-        <p>
-            Hay dos maneras de codificar una entidad HTML:
-        </p>
-
-        <ul>
-            <li>La primera es a través del uso del ampersand (&) seguido del código o nombre de la entidad y terminado en un punto y coma.</li>
-            <li>La segunda es usando el ampersand (&), a continuación, el numeral (#) y siguiente el código o nombre de la entidad y terminado en punto y coma.</li>
-        </ul>
-
-        <h3>Ejemplo:</h3>
-
-        <ol>
-            <li><b>&nombre_entidad;</b></li>
-            <li><b>&#número_entidad;</b></li>
-        </ol>
-
-        <p>
-            Estas son algunas entidades HTML útiles. En la siguiente tabla se puede visualizar como se puede utilizar el número de la entidad (código de la entidad) o el nombre de la entidad.
-        </p>
-
-        <a href="https://developer.mozilla.org/es/docs/Glossary/Entity"><h3>Página de los códigos de las entidades</h3></a>
-
-        <!-- Ejemplo Sintaxis -->
-        <h2 style="color: rgb(207, 59, 0);">Sintaxis:</h2>
-        <p>
-            El siguiente código HTML es un ejemplo del uso de las entidades HTML: 
-        </p>
-
-        <p>
-            Esta camisa me costó: "&"euro;5 <br/>
-            El per "&"#237;metro de un c"&"iacute;rculo es 2"&"Pi; <br/>
-            Este es mi correo electr"&"oacute;nico: micorreo"&"#64;correo.com
-        </p>
-
-        <p><b>Esto se plegará como:</b></p>
-
-        <ul>
-            <li>Esta camisa me costó: <b>&euro;</b>5</li>
-            <li>El per<b>&#237;</b>metro de un c&iacute;rculo es 2<b>&Pi;</b></li>
-            <li>Este es mi correo electr&oacute;nico: micorreo<b>&#64;</b>correo.com</li>
-        </ul>
+        </section>
     </main>
+
 </body>
 </html>
