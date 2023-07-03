@@ -1,13 +1,67 @@
+* {
+    margin: 0;
+}
+
 body {
     margin: auto;
     max-width: 85%;
     font-family: sans-serif;
-    background-color: aliceblue;
+    background-image: url('../img/fondo-imagen.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
+
+.main-container {
+    background-color: rgba(197, 201, 204, 0.9);
+    padding: 25px;
+}
+
+p {
+    text-align: justify;
+}
+
+b {
+    color: rgb(115, 37, 170);
+}
+
+/* Animaciones */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ###### HEADER */
 
 header {
     text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
     color: rgb(15, 122, 122);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+/* ###### MAIN CONTENT */
+
+h2 {
+  color: rgb(38, 99, 231);  
+  margin-bottom: 30px;
 }
 
 .img {
@@ -20,10 +74,8 @@ img {
     max-width: 50%;
 }
 
-h2 {
-  color: rgb(38, 99, 231);  
-}
+/* ### Contenedor Title */
 
-b {
-    color: rgb(115, 37, 170);
+.cont-title h2 {
+    margin-top: 30px;
 }
