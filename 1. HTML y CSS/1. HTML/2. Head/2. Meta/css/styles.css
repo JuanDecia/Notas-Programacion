@@ -4,32 +4,44 @@
     box-sizing: border-box;
 }
 
+/* ###### ESTILOS GENERALES */
+
 body {
     font-family: sans-serif;
-    background-color: aliceblue;
     max-width: 85%;
     margin: auto;
+    background-image: url('../img/fondo-imagen.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-h1 {
-    text-align: center;
-    color: rgb(15, 122, 122);
+main {
+    background-color: rgba(197, 201, 204, 0.9);
+    padding: 25px;
 }
-
 
 h2 {
     margin-bottom: 25px;
-    color: rgb(57, 135, 199);
+    color: rgb(38, 99, 231);
 }
 
 h3 {
     margin-bottom: 25px;
-    color: rgb(224, 157, 32);
+    color: rgb(103, 45, 240);
 }
 
 h4 {
     color: blueviolet;
+    margin-top: 20px;
+    font-size: 1.1em;
 }
+
+p {
+    text-align: justify;
+}
+
+/* Estilos para la el contenedor .code (General) */
 
 .code {
     text-align: center;
@@ -37,21 +49,50 @@ h4 {
     font-size: 1.3em;
 }
 
-/* Estilos en Header y sus elementos */
+code {
+    color:rgb(21, 104, 4);
+    font-weight: 600;
+} 
+/* Finaliza contenedor code ↑ */  
 
-header {
-    margin: 25px 0;
+/* Animaciones */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-element.style {
-    display: flex;
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ###### HEADER */
+
+header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(15, 122, 122);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+    margin-bottom: 40px;
+    text-shadow: 3px 2px 5px rgba(0,0,0,0.4);
 }
 
 nav {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 20px;
     background-color: rgb(40, 207, 207);
     border-radius: 10px;
 }
@@ -62,32 +103,55 @@ nav {
     padding: 15px;
     list-style: none;
     justify-content: space-between;
+    align-items: center;
 }
 
-a {
+.link-header {
     text-decoration: none;
-    color: #fff;
+    color: black;
+    position: relative;
+    padding-bottom: 10px;
 }
 
 .navegacion a:visited {
     color: black;
 }
 
+.link-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    color: black;
+    background-color: black;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in;
+}
 
-/* Estilos en el Contenido */
+.link-header:hover::after {
+    transform: scaleX(1);
+}
 
-    /* Sección introduccion */
+/* ###### MAIN CONTENT */
+
+/* Sección introduccion */
+
 .cont-introduccion {
     margin-bottom: 25px;
 }
+
+
+/* Sección Sintaxis Meta */
 
 .cont-meta {
     margin: 20px 0;
 }
 
-/* Sección propiedades */
+/* Sección Propiedades y Valores */
 
-    /* =========== Charset */
+/* -- Articulo Propiedad Charset -- */
 
 .cont-charset {
     margin: 25px 0;
@@ -97,29 +161,49 @@ a {
     margin: 15px;
 }
 
-    /* =========== Name */
+/* -- Articulo Propiedad Name -- */
 
-.link {
+ul li:nth-child(odd) {
+    margin: 7px 0;
+}
+
+.cont-link {
     margin: 25px 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
-a {
+.acerca-viewport {
+    padding: 13px;
+    border: 1px solid rgb(236, 103, 14);
+    border-radius: 10px;
     text-decoration: none;
+    color: rgb(236, 103, 14);
+    background-color: rgba(236, 103, 14, 0.096);
+    font-size: 1.3em;
 }
 
-a:hover {
-    font-size: large;
+.acerca-viewport::before {
+    content: "-- ";
 }
 
-a:visited {
-    color: red;
+.acerca-viewport::after {
+    content: " --";
 }
+/* Finaliza contenedor name ↑ */ 
 
-    /* =========== Content */
+/* -- Articulo Propiedad Content -- */
 
 .cont-content p {
     margin: 15px 0;
+}
+
+.content-viewport {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 25px 0;
 }
 
 .content-viewport li {
@@ -127,9 +211,46 @@ a:visited {
     color: slateblue;
 }
 
-.cont-img > img {
-    max-width: 50%;
+.cont-img {
+    display: flex;
+    justify-content: center;
 }
+
+.cont-img > img {
+    max-width: 70%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.76);
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.76);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.76);
+}
+
+.cont-volver-arriba {
+    display: flex;
+    justify-content: center;
+}
+
+.link-volver-arriba {
+    text-decoration: none;
+    color: rgb(236, 103, 14);
+    padding: 13px;
+    border: 1px solid rgb(236, 103, 14);
+    border-radius: 10px;
+    width: 15%;
+    text-align: center;
+    background-color: rgba(236, 103, 14, 0.096);
+    font-weight: 600;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.54);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.54);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.54);
+    transform: scaleX(1);
+    transition: transform 0.3s ease-in;
+}
+
+.link-volver-arriba:hover {
+    transform: scaleX(1.05);
+}
+
+/* Finaliza contenedor content ↑ */ 
 
 label + input {
     display: none;

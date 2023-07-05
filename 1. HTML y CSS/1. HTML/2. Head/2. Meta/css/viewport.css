@@ -1,37 +1,112 @@
+* {
+    margin: 0;
+}
+
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: aliceblue;
+    background-image: url('https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    max-width: 85%;
+    margin: auto;
+    padding: 25px;
+    background-color: rgba(197, 201, 204, 0.9);
+}
+
+/* Animaciones */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes move-arrow {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-1px, 0) scale(1.2);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
 }
 
 /* Estilos en header */
 
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
 h1 {
     text-align: center;
-    color: rgb(45, 182, 45);
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0,0,0,0.4);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
 }
 
 nav {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+nav:hover .cont-flecha a .flecha {
+    animation: move-arrow 1s linear infinite;
+}
+
+.cont-flecha {
+    display: flex;
+}
+
+.flecha {
+    width: 30px;
 }
 
 a {
+    display: flex;
     text-decoration: none;
-    color: blue;
-}
-
-a:hover {
-    font-size: large;
+    color: rgb(236, 103, 14);
+    font-size: 1.3em;
 }
 
 a:visited {
-    color: blue;
+    color: rgb(236, 103, 14);
 }
 
-/* Estilos contenido principal */
+/* ###### MAIN CONTENT */
 
 .cont-img {
     display: flex;
     justify-content: center;
     margin: 40px 0;
+}
+
+.cont-lista {
+    margin-top: 20px;
+}
+
+.cont-lista li:nth-child(2) {
+    margin: 10px 0;
 }

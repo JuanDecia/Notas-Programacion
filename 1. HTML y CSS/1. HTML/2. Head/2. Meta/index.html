@@ -21,22 +21,19 @@
         <header id="inicio">
             <h1>Etiqueta Meta</h1>
 
-            
-
             <nav>
                 <!-- Boton Hamburguesa -->
                 <label for="menu-toggle">
                     <img class="menu-img" src="./img/bars-solid.svg" alt="menu" />
                 </label>
-                <input type="checkbox" name="menu-toggle" id="menu-toggle">
+                <input type="checkbox" name="menu-toggle" id="menu-toggle" />
 
                 <ul class="navegacion">
-
-                    <li><a href="#introduccion">Introducción</a></li>
-                    <li><a href="#meta">Sintaxis Meta</a></li>
-                    <li><a href="#charset">Propiedad Charset</a></li>
-                    <li><a href="#name">Propiedad Name</a></li>
-                    <li><a href="#content">Propiedad Content</a></li>
+                    <li><a class="link-header" href="#introduccion">Introducción</a></li>
+                    <li><a class="link-header" href="#meta">Sintaxis Meta</a></li>
+                    <li><a class="link-header" href="#charset">Propiedad Charset</a></li>
+                    <li><a class="link-header" href="#name">Propiedad Name</a></li>
+                    <li><a class="link-header" href="#content">Propiedad Content</a></li>
                 </ul>
             </nav>
         </header>
@@ -78,7 +75,7 @@
                 </p>
 
                 <div class="code">
-                    <code>(meta name="viewport" content="width=device-width" /)</code> 
+                    <code>&#60meta name="viewport" content="width=device-width" /&#62</code> 
                 </div>  
 
                 <p>
@@ -116,7 +113,7 @@
                     </p>
 
                     <div class="code">
-                        <code>(meta charset = "UTF-8" /)</code>
+                        <code>&#60meta charset = "UTF-8" /&#62</code>
                     </div>
                     
                 </div>
@@ -147,8 +144,10 @@
                         </li>
                     </ul>
 
-                    <div class="link">
-                        <a href="./html/viewport.html">Lee más acerca del viewport</a>
+                    <div class="cont-link">
+                        <a class="acerca-viewport" href="./html/viewport.html">
+                            Lee más acerca del viewport
+                        </a>
                     </div>
 
                 </div>
@@ -158,21 +157,23 @@
                     <h3>Propiedad Content</h3>
 
                     <p>
-                        Esta <b>propiedad</b> se coloca conjuntamente con <b>name</b>, ya que, <b>content</b> va a
-                        recibir el <b>valor</b> que realmente va a modificar el comportamiento de la etiqueta. Esta propiedad
-                        puede recibir <b>más de un valor</b> declarado.
+                        Esta <b>propiedad</b> se coloca despues de la propiedad <b>name</b>, ya que, <b>content</b> recibe el <b>valor</b> que va a modificar el comportamiento de la etiqueta <b>&#60meta /&#62</b>. Esta propiedad puede recibir <b>más de un valor</b> declarado.
                     </p>
 
+                    <div class="code">
+                        <code>
+                            &#60meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        </code>
+                    </div>
+
+
                     <p>
-                        A continuación, se especificarán la propiedad <b>content</b> de cada una de las propiedades de <b>name</b> respectivamente:
+                        A continuación, se especificarán los valores que generalmente puede recibir la propiedad <b>content</b>:
                     </p>
 
                     <!-- Valores de content -->
-                    <!-- Viewport -->
                     <p>
-                        La propiedad <b>name</b> que recibe el valor <b>viewport</b>, en su propiedad <b>content</b>
-                        rebibe varios valores que modifican su comportamiento. Entre esos valores podemos encontrar los
-                        siguientes en la lista: 
+                        En la propiedad <b>name</b> que recibe el valor de <b>viewport</b>, podemos declarar en la propiedad de <b>content</b> (recordemos que este modifica el comportamiento de name) los siguientes valores en la lista: 
                     </p>
 
                     <ul class="content-viewport">
@@ -182,50 +183,41 @@
                     </ul>
 
                     <p>
-                        Cada uno de estos <b>valores</b> se comportan como un <b>atributo</b>, porque, ellos también
-                        deben recibir un valor específico.
+                        Cada uno de estos <b>valores</b> se comportan como un <b>atributo</b> diferente, porque, ellos también deben recibir un valor específico. Por eso es que se los separa por <b>","</b> y llevan un símbolo de <b>"="</b> para <b>asignar</b> el atributo declarado. A continuación, especificaremos cada uno de ellos cual es el comportamiento o la modificación que genera en la etiqueta "meta".
                     </p>
-
 
                     <div class="cont-valoresViewport">
 
                         <h4>Width</h4>
 
                         <p>
-                            <b>Width</b> va a recibir como valor <b>device-width</b>, esto se traduce a que el
-                            <b>viewport</b> del <b>dispositivo (device)</b> tendrá el <b>ancho (width)</b> de la
-                            pantalla donde se esté visualizando.
+                            <b>Width</b> recibe como valor <b>"device-width"</b>, esto se traduce a que el <b>viewport</b> del <b>dispositivo</b> (nombrado como device) tendrá el <b>ancho</b> (nombrado como width) de la pantalla donde se esté visualizando la página.
                         </p>
 
                         <h4>Initial-scale</h4>
 
                         <p>
-                            Este valor-atributo, refiere a el <b>zoom</b> que tendrá el sitio web al iniciarse en su
-                            pantalla principal. El valor que generalmente se coloca es de <b>1.0</b>.
+                            Este atributo dentro de la propiedad <b>content</b>, refiere al <b>zoom</b> que tendrá el sitio web al iniciarse o refrescar la página. El valor que generalmente se coloca es de <b>1.0</b>.
                         </p>
 
                         <h4>user-scalable</h4>
 
                         <p>
-                            Este valor-atributo, refiere a que si el usuario puede o no <b>hacer zoom</b> en el sitio.
-                            Generalmente, el valor que recibe es <b>no</b>, ya que, si está activado podría ser negativa
-                            la visita del usuario en el sitio que se está visitando.
+                            Este valor-atributo, refiere a que si el usuario puede o no <b>hacer zoom</b> en el sitio. Generalmente, el valor que recibe es <b>no</b>, ya que, si está activado podría ser una experiencia negativa la visita del usuario en el sitio que se está navegando.
                         </p>
 
                         <p>
-                            A continuación se colocará una sintaxis que contendrá a todos estos valores dentro de la misma
-                            etiqueta de meta.
+                            A continuación, se colocará una sintaxis que contendrá a todos estos valores dentro de la misma etiqueta de meta.
                         </p>
 
                         <div class="code">
                             <code>
-                                (meta name = "viewport" content = "width = device - width, initial-scale = 1.0, user-scalable = no" /)
+                                &#60meta name = "viewport" content = "width = device - width, initial-scale = 1.0, user-scalable = no" /&#62
                             </code>
                         </div>
 
                         <p>
-                            También se deja una imágen ilustrativa de como sería un sitio sin esta etiqueta meta con la propiedad
-                            de viewport declarada, y como sería, si la tuviera:
+                            También se deja una imágen ilustrativa de como sería un sitio sin esta etiqueta meta con la propiedad de viewport declarada, y como sería, si la tuviera:
                         </p>
 
                         <div class="cont-img">
@@ -239,13 +231,11 @@
                         <h4>Author</h4>
 
                         <p>
-                            La propiedad de <b>name</b> que recibe el valor de <b>author</b> debemos especificar
-                            su verdadero comportamiento en el valor de la <b>propiedad de content</b>, este debe ser
-                            justamente, el <b>dueño del propietario de la página</b>. Por ejemplo, Juan Decia.
+                            En la propiedad de <b>name</b> que recibe el valor de <b>author</b>, debemos indicar en el <b>valor</b> de la propiedad <b>content</b> el <b>dueño del propietario de la página</b>. Por ejemplo, Juan Decia.
                         </p>
 
                         <div class="code">
-                            <code>(meta name = "author" content = "Juan Decia" /)</code>
+                            <code>&#60meta name = "author" content = "Juan Decia" /&#62</code>
                         </div>
 
                     </div>
@@ -255,13 +245,12 @@
                         <h4>Keywords</h4>
 
                         <p>
-                            En el valor de <b>content</b> de esta construcción meta debemos colocar <b>palabras clave</b>
-                            que estén relacionadas con el sitio.
+                            En el valor de <b>content</b> de esta construcción meta debemos colocar <b>palabras clave</b> que estén relacionadas con el sitio.
                         </p>
 
                         <div class="code">
                             <code>
-                                (meta name = "keywords" content = "etiqueta meta, notas, aprendizaje, html" /)
+                                &#60meta name = "keywords" content = "etiqueta meta, notas, aprendizaje, html" /&#62
                             </code>
                         </div>
                         
@@ -278,14 +267,14 @@
 
                         <div class="code">
                             <code>
-                                (meta name = "description" content = "construcción de metadatos en html" /)
+                                &#60meta name = "description" content = "construcción de metadatos en html" /&#62
                             </code>
                         </div>
 
                     </div>
 
-                    <div class="link">
-                        <a href="#inicio">Ir a inicio</a>
+                    <div class="cont-volver-arriba">
+                        <a class="link-volver-arriba" href="#inicio">Volver Arriba</a>
                     </div>
                     
                 </div>
