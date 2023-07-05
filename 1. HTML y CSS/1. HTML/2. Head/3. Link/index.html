@@ -38,10 +38,12 @@
                 </p>
 
                 <p>
-                    La <b>propiedad</b> que necesitamos saber utilizar que contiene esta etiqueta es la llamada <b><em>"rel"</em></b>
-                    , la que recibe como valor <b><em>"stylesheet"</em></b> (hoja de estilo). De esta manera estamos
-                    indicando que nuestro documento se <b>conectará</b> (link) a una <b><em>hoja de estilos</em></b> (stylesheet).
+                    La <b>propiedad</b> que necesitamos saber utilizar que contiene esta etiqueta es la llamada <b><em>"rel"</em></b> , la que recibe como valor <b><em>"stylesheet"</em></b> (hoja de estilo). De esta manera estamos indicando que nuestro documento se <b>conectará</b> (link) a una <b><em>hoja de estilos</em></b> (stylesheet).
                 </p>
+
+                <div class="cont-code">
+                    <code class="code-stylesheet">rel='stylesheet'</code>
+                </div>
 
                 <p>
                     El atributo <b>"rel"</b> no es el único que vamos a utilizar dentro de la etiqueta <b>link</b>, si no,
@@ -50,7 +52,7 @@
                     y para acceder a ellos utilizamos el siguiente comando: 
                 </p>
 
-                <div>
+                <div class="cont-code">
                     <code>
                         href="./css/styles.css"
                     </code>
@@ -64,9 +66,9 @@
                     utiliza este nombre genérico o alguno parecido para los estilos de la página principal.
                 </p>
 
-                <p>
-                    La sintaxis completa sería la siguiente: <code>(link rel="stylesheet" href="./css/styles.css")</code>.
-                </p>
+                <div class="cont-code">
+                    <code>&#60link rel="stylesheet" href="./css/styles.css" /&#62</code>.
+                </div>
             </article>
 
             <!-- Link 2 -->
@@ -84,9 +86,9 @@
                     <b>href</b> que es donde se encuentra el archivo que vamos a conectar a nuestro sitio.
                 </p>
 
-                <p>
-                    Su sintaxis: <code>(link rel="icon" href="./img/nombrearchivo.png")</code>
-                </p>
+                <div class="cont-code">
+                    <code>&#60link rel="icon" href="./img/nombrearchivo.png" /&#62</code>
+                </div>
             </article>
 
             <!-- Script -->
@@ -94,24 +96,20 @@
                 <h2>Script</h2>
 
                 <p>
-                    La etiqueta <b>"script"</b> cumple un objetivo muy similar al de la etiqueta link, los aspectos que la
-                    diferencia es que la función de <b>"script"</b> es para <b>insertar un código construído en JavaScript</b>.
-                    Además, es una etiqueta que puede contener contenido, esto quiere decir que necesitamos cerrar la declaración
-                    con una etiqueta de cierre.
+                    La etiqueta <b>"script"</b> cumple un objetivo muy similar al de la etiqueta link, los aspectos que la diferencia es que la función de <b>"script"</b> es para <b>insertar un código construído en JavaScript</b>. Además, es una etiqueta que puede contener contenido, esto quiere decir que necesitamos cerrar la declaración con una etiqueta de cierre.
                 </p>
 
-                <p>
-                    La sintaxis sería la siguiente: <code>(script) (/script)</code>
-                </p>
+                <div class="cont-code">
+                    <code>&#60script&#62&#60/script&#62</code>
+                </div>
 
                 <p>
-                    Ahora, para enlazar la página donde construímos el JavaScript debemos colocarla dentro de un atributo
-                    llamado <b><em>"src"</em></b>. Seguido de la ubicación del archivo dentro del directorio.
+                    Ahora, para enlazar la página donde construímos el JavaScript debemos colocarla dentro de un atributo llamado <b><em>"src"</em></b>. Seguido de la ubicación del archivo dentro del directorio.
                 </p>
 
-                <p>
-                    Por ejemplo: <code>(script src="./js/scripts.js") (/script)</code>
-                </p>
+                <div class="cont-code">
+                    <code>&#60script src="./js/scripts.js"&#62&#60/script&#62</code>
+                </div>
 
                 <p>
                     Donde <b>./</b> es la ubicación del directorio, <b>js</b> es la carpeta donde se encuentra el archivo y todos

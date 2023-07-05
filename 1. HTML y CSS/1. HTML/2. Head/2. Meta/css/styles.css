@@ -142,7 +142,6 @@ nav {
     margin-bottom: 25px;
 }
 
-
 /* Sección Sintaxis Meta */
 
 .cont-meta {
@@ -288,6 +287,16 @@ label + input {
 
     #menu-toggle:checked + .navegacion {
         display: flex;
+    }
+
+    .link-volver-arriba {
+        width: 30%;
+    }
+}
+
+@media (max-width: 576px) {
+    .link-volver-arriba {
+        width: 30%;
     }
 }
 
