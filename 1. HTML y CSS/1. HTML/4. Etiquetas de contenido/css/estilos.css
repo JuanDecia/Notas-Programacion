@@ -178,7 +178,7 @@ header {
     margin-top: 20px;
 }
 
-/* Articulo HR */
+/* -- Articulo HR -- */
 
 .cont-ejemplo {
     border: 1px solid black;
@@ -193,4 +193,24 @@ header {
 .ejemplo-hr {
     border: 1px solid blue;
     width: 50%;
+}
+
+/* -- Articulo Etiquetas Adicionales */
+
+.cont-link {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    border: 1px solid rgb(236, 103, 14);
+    background-color: rgba(236, 103, 14, 0.137);
+    border-radius: 10px;
+}
+
+.cont-link a {
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(236, 103, 14);
+    font-weight: 600;
+    font-size: 1.1em;
 }
