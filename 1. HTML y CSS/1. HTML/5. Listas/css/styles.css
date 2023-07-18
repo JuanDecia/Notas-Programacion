@@ -1,23 +1,78 @@
+* {
+    margin: 0;
+}
+
 body {
     font-family: sans-serif;
-    background-color: rgb(197, 201, 204);
+    background-image: url('../img/fondo-imagen.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     max-width: 85%;
     margin: auto;
 }
 
-header {
-    text-align: center;
-}
-
-h1 {
-    color: rgb(15, 122, 122);
+main {
+    background-color: rgb(197, 201, 204, 0.9);
+    padding: 25px;
 }
 
 h2 {
-    color: rgb(32, 99, 231);
+    margin: 20px 0;
+    color: rgb(38, 99, 231);
 }
 
-/* Main */
+p {
+    text-align: justify;
+}
+
+/* -- Animaciones -- */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ######### HEADER */
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+/* ######### MAIN CONTENT */
+
+/* -- Article Ul -- */
+
+.cont-codigo {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.ejemplo-ul {
+    background-color: black;
+    color: rgb(54, 131, 233);
+}
 
 .imagenes-ejemplo {
     display: flex;
