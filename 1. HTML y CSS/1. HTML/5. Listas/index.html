@@ -35,42 +35,38 @@
           </p>
 
           <div class="cont-codigo">
-            <code class="ejemplo-ul">
-              <span>&#60ul&#62</span>
-            </code>
+            <div class="ejemplo-ul">
+              <div class="cont-ul">
+                <code>
+                  <span class="span-ul">&#60ul&#62</span>
+                    <div class="cont-li">
+                      <p>
+                        <code class="elemento-li">&#60li&#62<span class="span-blanco">Item 1</span>&#60/li&#62</code>
+                      </p>
+                      <p>
+                        <code class="elemento-li">&#60li&#62<span class="span-blanco">Item 2</span>&#60/li&#62</code>
+                      </p>
+                      <p>
+                        <code class="elemento-li">&#60li&#62<span class="span-blanco">Item 3</span>&#60/li&#62</code>
+                      </p>
+                    </div>
+                  <span class="span-ul">&#60/ul&#62</span>
+                </code>
+              </div>
+            </div>
+
+            <div class="resultado-ul">
+              <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- Imágenes ejemplo #1 -->
-          <figure class="imagenes-ejemplo">
-            <img src="./img/sintaxisUl.png" alt="sintaxis" />
-            <img src="./img/listaUl.png" alt="lista" />
-          </figure>
-
           <p>
-            Las listas no organizadas son útiles para formar una barra de 
-            navegación <b>nav</b>.
+            Las listas no organizadas son útiles para formar una barra de navegación <b>nav</b> en nuestro <b>header</b>.También, es importante mencionar que dentro de las listas en los elementos <b>"li"</b> podemos volver a crear otra <b>"ul"</b> o una <b>"ol"</b> con los elementos que necesitemos para nuestra página web. Podemos realizar esta misma práctica desde un elemento <b>ol</b> y anidar una lista <b>ul</b> como uno de sus items.
           </p>
-
-          <p>
-            También es necesario mencionar que dentro de las listas en los 
-            elementos <b>"li"</b> podemos volver a crear otra <b>"ul"</b> 
-            o una <b>"ol"</b> con los elementos que necesitemos para nuestra 
-            página web.
-          </p>
-
-          <h3>Ejemplo en la web</h3>
-
-          <div class="lista">
-
-            <ul>
-              <li>Llantas</li>
-              <li>Puertas</li>
-              <li>Motor</li>
-              <li>Asientos</li>
-              <li>Carrocería</li>
-            </ul>
-
-          </div>
 
         </article>
 
@@ -82,45 +78,57 @@
           <h2>Listas ordenadas</h2>
 
           <p>
-            Las etiquetas <b>ordened list</b> nos son útiles para
-            crear listas con un <b>orden numérico</b>. Para la creación de
-            este tipo de lista debemos seguir los pasos como una lista "ul"
-            . Solo que a diferencia, en esta ocasión en vez de utilizar "ul"
-            vamos a declarar la etiqueta <b>"ol"</b> que es la que representa
-            la <b>lista ordenada</b>. Luego, por cada elemento de dicha lista
-            , si debemos aplicar la etiqueta <b>"li"</b>.
+            Las etiquetas <b>&#60ol&#62</b> son útiles para crear listas con un <b>orden numérico</b>. Para la creación de este tipo de lista debemos seguir los pasos como lo hemos hecho con las listas  <b>&#60ul&#62</b> en el caso anterior. Solo que, en esta ocasión en vez de utilizar la etiqueta <b>&#60ul&#62</b> vamos a declarar la etiqueta <b>&#60ol&#62</b> que es la que representa la <b>lista ordenada</b>. Luego, por cada elemento de dicha lista, debemos aplicar la etiqueta <b>&#60li&#62</b>.
           </p>
 
-          <h3>Ejemplo en la web</h3>
+          <div class="cont-codigo">
+            <div class="ejemplo-ul">
+              <div class="cont-ul">
+                <code>
+                  <span class="span-ul">&#60ol&#62</span>
+                    <div class="cont-li">
+                      <p>
+                        <code class="elemento-li">&#60li&#62<span class="span-blanco">Item 1</span>&#60/li&#62</code>
+                      </p>
+                      <p>
+                        <code class="elemento-li">&#60li&#62<span class="span-blanco">Item 2</span>&#60/li&#62</code>
+                      </p>
+                      <p>
+                        <code class="elemento-li">&#60li&#62<span class="span-blanco">Item 3</span>&#60/li&#62</code>
+                      </p>
+                    </div>
+                  <span class="span-ul">&#60/ol&#62</span>
+                </code>
+              </div>
+            </div>
 
-          <ol>
-            <li>Llantas</li>
-            <li>Puertas</li>
-            <li>Motor</li>
-            <li>Asientos</li>
-            <li>Carrocería</li>
-          </ol>
+            <div class="resultado-ul">
+              <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ol>
+            </div>
+          </div>
 
         </article>
 
         <hr />
 
         <!-- Listas anidadas -->
-        <article>
+        <article class="cont-anidadas">
 
           <h2>Listas Anidadas</h2>
 
           <p>
-            Las listas anidadas son <b>listas dentro de otras listas.</b> 
-          </p>
+            Las listas anidadas son <b>listas dentro de otras listas</b>. Las cuales podemos combinar los elementos de listas que hemos visto en las explicaciones anteriores como la lista <b>&#60ul&#62</b> y la lista <b>&#60ol&#62</b>. A continuación, Utilizaremos como ejemplo los transportes (Aéreo, Terrestre y Marítimo) cada uno de los términos está separado por clasificaciones.
+          </p> <br />
 
           <p>
-            Utilizaremos como ejemplo los transportes (Aéreo, Terrestre y 
-            Marítimo) cada uno de los términos está separado por 
-            clasificaciones.
+            Construiremos una lista ordenada de transporte y una lista no ordenada con las características: terrestre, aéreo y marítimo. Dentro de aéreo construimos una lista ordenada al igual que en marítimo y en terrestre la lista no será ordenada con las variables carro y moto. 
           </p>
 
-          <div>
+          <div class="cont-instrucciones">
             <ul>
               <li>En el caso de los terrestres estarán los autos y las motos.</li>
               <li>En el caso de los aéreos estarán los aviones y los helicópteros.</li>
@@ -128,53 +136,48 @@
             </ul>
           </div>
 
-          <p>
-            Construiremos una lista ordenada de transporte y una lista no 
-            ordenada con las características: terrestre, aéreo y marítimo. 
-            Dentro de aéreo construimos una lista ordenada al igual que en 
-            marítimo y en terrestre la lista no será ordenada con las 
-            variables carro y moto. 
-          </p>
 
           <p>
             El código que vamos a construir debe quedarnos similar al que se 
             presenta en la siguiente imagen.
-          </p>
+          </p> <br />
 
           <!-- Imagen ejemplo #2 -->
-          <figure>
-            <img class="ejemplo-codigo" src="./img/listaAnidada.png" alt="listaAnidada" />
-          </figure>
 
-          <div>
-            <ol>
-              <li>Transporte</li>
-                <ul>
-                  <li>Terrestre</li>
-                    <ul>
-                      <li>Carro</li>
-                      <li>Moto</li>
-                    </ul>
-                  <li>Aéreo</li>
-                    <ol>
-                      <li>Avión</li>
-                      <li>Helicóptero</li>
-                    </ol>
-                  <li>Marítimo</li>
-                    <ol>
-                      <li>Barco</li>
-                      <li>Canoa</li>
-                    </ol>
-                </ul>
-            </ol>
+          <div class="cont-ejercicio">
+            <figure>
+              <img class="ejemplo-codigo" src="./img/listaAnidada.png" alt="listaAnidada" />
+            </figure>
+            
+            <div class="cont-resultado">
+              <ol>
+                <li>Transporte</li>
+                  <ul>
+                    <li>Terrestre</li>
+                      <ul>
+                        <li>Carro</li>
+                        <li>Moto</li>
+                      </ul>
+                    <li>Aéreo</li>
+                      <ol>
+                        <li>Avión</li>
+                        <li>Helicóptero</li>
+                      </ol>
+                    <li>Marítimo</li>
+                      <ol>
+                        <li>Barco</li>
+                        <li>Canoa</li>
+                      </ol>
+                  </ul>
+              </ol>
+            </div>
           </div>
-
         </article>
 
         <hr />
 
         <!-- Lista con definiciones y términos -->
-        <article>
+        <article class="cont-definiciones">
 
           <h2>Definiciones y Términos</h2>
 

@@ -22,8 +22,17 @@ h2 {
     color: rgb(38, 99, 231);
 }
 
+h3 {
+    margin: 20px;
+    color: rgb(103, 45, 240);
+}
+
 p {
     text-align: justify;
+}
+
+img {
+    max-width: 90%;
 }
 
 /* -- Animaciones -- */
@@ -63,27 +72,75 @@ h1 {
 
 /* -- Article Ul -- */
 
-.cont-codigo {
-    margin: 20px;
-    display: flex;
-    justify-content: center;
+.cont-ul {
+    margin-bottom: 20px;
 }
 
+.cont-codigo {
+    margin: 20px 0 20px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+/* Contenedor Ul */
 .ejemplo-ul {
-    background-color: black;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    width: 30%;
+}
+
+.resultado-ul {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    background-color: #ffffff;
+}
+
+.span-ul, .elemento-li {
     color: rgb(54, 131, 233);
 }
 
-.imagenes-ejemplo {
+/* Contenedor li */
+.elemento-li {
+    margin-left: 10px;
+}
+
+.span-blanco {
+    color: #ffffff;
+}
+
+/* -- Articulo Listas Anidadas -- */
+
+.cont-anidadas {
+    margin-bottom: 20px;
+}
+
+.cont-instrucciones {
+    margin: 20px 0;
+}
+
+.cont-instrucciones ul li {
+    padding: 5px;
+}
+
+.cont-ejercicio {
     display: flex;
-    justify-content: center;
-    gap: 25px;
+    gap: 30px;
 }
 
-.ejemplo-codigo {
-    max-width: 80%;
+.cont-resultado {
+    display: flex;
+    align-items: center;
 }
 
+/* -- Articulo Definiciones -- */
+.cont-definiciones {
+    margin-bottom: 20px;
+}
+
+/* ######### MEDIA QUERIES */
 
 @media (max-width: 570px) {
     .imagenes-ejemplo {
