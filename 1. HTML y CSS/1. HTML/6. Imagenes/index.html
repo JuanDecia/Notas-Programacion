@@ -20,15 +20,8 @@
                 <ul>
 
                     <li>
-                        <a href="../6. Imagenes/html/imagenesDigitales.html">
-                            <img class="tilde" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALVJREFUSEvtlNENgzAMBY8NugkdgU7UEWg3YCM6QtmkI6AngeQGGhsKf8kXKOFOfnaoOHlVJ/MpAjfhEtEc0QW4A880syMiErwHrpPgYSX/Cix8ABrgc5TAhUu0t4IQ3BMoyy4tGQjDcwLBW+AN3IxkEzwnEOgF1Eai8/O0rDZ07VrnepBK9L1GMQz3eqB9K9H7JnhEYCV6Xsy597eLjqkq0fq6RB48WkGE8/NMtILdkiJwoxsBhvUmGXE1+WEAAAAASUVORK5CYII=" />
-                            Más sobre Imágenes Digitales
-                        </a>
-                    </li>
-
-                    <li>
                         <a href="../6. Imagenes/html/figureAndFigcaption.html">
-                            <img class="tilde" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALVJREFUSEvtlNENgzAMBY8NugkdgU7UEWg3YCM6QtmkI6AngeQGGhsKf8kXKOFOfnaoOHlVJ/MpAjfhEtEc0QW4A880syMiErwHrpPgYSX/Cix8ABrgc5TAhUu0t4IQ3BMoyy4tGQjDcwLBW+AN3IxkEzwnEOgF1Eai8/O0rDZ07VrnepBK9L1GMQz3eqB9K9H7JnhEYCV6Xsy597eLjqkq0fq6RB48WkGE8/NMtILdkiJwoxsBhvUmGXE1+WEAAAAASUVORK5CYII=" />
+                            <svg class="arrow" width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12H6.5M20 12L14 6M20 12L14 18M20 12H9.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                             Más acerca de Figure y Figcaption
                         </a>
                     </li>
@@ -41,60 +34,71 @@
         <section>
 
             <!-- Contenedor Introducción -->
-            <article>
+            <article class="cont-absoluta">
 
                 <p>
-                    Generalmente cuando estemos construyendo nuestro sitio web, es muy usual que tengamos que aplicar el
-                    uso de imágenes, estas pueden estar alojadas en <b>nuestro ordenador</b> o podemos buscarla a través 
-                    de internet y conseguir <b>la ruta</b> donde se <b>encuentra alojada</b>.
+                    Generalmente cuando estemos construyendo nuestro sitio web, es muy usual que tengamos que aplicar el uso de imágenes, estas pueden estar alojadas en <b>nuestro ordenador</b> o podemos buscarla a través de internet y conseguir <b>la ruta</b> donde se <b>encuentra alojada</b>. Estas maneras pueden conocerce como <b>ruta absoluta</b> o <b>ruta relativa</b>. A continuación, comenzaremos a detallarar cada una de ellas para profundizar su conocimiento.
                 </p>
 
+                <!-- Imagen Absoluta -->
                 <h2>Imagen Absoluta</h2>
 
                 <p>
-                    Para comenzar a utilizar las imágenes en nuestro sitio, debemos realizar algunos pasos para generar 
-                    buenas prácticas en nuestro código. Primero, debemos <b>crear una subcarpeta</b> donde <b>almacenaremos todas
-                    las imágenes</b> que vamos a usar en nuestro sitio web. Esta carpeta generalmente se recomienda nombrarla 
-                    como <b>“img”</b>. También, podemos cargar imágenes a nuestra página siempre y cuando éstas estén
-                    <b>almacenadas en algún servidor</b> de la web.
+                    Para comenzar a utilizar las imágenes en nuestro sitio, debemos realizar una serie de pasos para continuar el aprendizaje de las buenas prácticas en nuestro código. Primero, debemos <b>crear una subcarpeta</b> donde <b>almacenaremos todas las imágenes</b> que vamos a usar en nuestro sitio web. Esta carpeta generalmente se recomienda nombrarla como <b>“img”</b>. También, podemos cargar imágenes a nuestra página siempre y cuando éstas estén <b>almacenadas en algún servidor</b> de la web.
                 </p>
 
-                <p>
-                    Para incluir las imágenes que hemos seleccionado en nuestro sitio web usaremos una serie de etiquetas. 
-                    Una cumple una función semántica y la otra es la que va a renderizar la imagen.
-                </p>
+                <br />
 
                 <p>
-                    La etiqueta que cumple la función semántica es llamada <b>figure</b>, la cual nos prepara
-                    un campo en forma de conenedor (caja) para que podamos colocar la imagen. La etiqueta que
-                    vamos a utilizar para renderizar la imagen es <b>"img"</b>, la cual se le pasan <b>dos atributos</b>.
-                    Estos atributos son <b>src</b> y <b>alt</b>.
+                    Para incluir las imágenes que hemos seleccionado y almacenado en nuestro sitio web usaremos una serie de etiquetas para que nuestro navegador las renderice. Una cumple una función semántica y la otra es la que va a renderizar la imagen.
                 </p>
 
-                <p>
-                    El atributo principal de esta etiqueta (img) es <b>src</b> ya que como valor, le vamos a pasar
-                    <b>la ruta donde estará alojada la imagen</b>. Si la imagen esta en <b>nuestro directorio</b>
-                    , la ruta es <b>relativa</b> y, si la ruta donde vamos a buscar la imagen está en la web, es
-                    denominada <b>absoluta</b>.
-                </p>
+                <br />
 
                 <p>
-                    Generalmente para usar las imagenes que esten en nuestro directorio, debemos saber movernos a través
-                    de las carpetas como si estuvieramos utilizando la <b>consola</b> de nuestro ordenador.
-                    En el caso de que nuestra imagen no está en el directorio en donde nos encontramos trabajando debemos 
-                    comenzar la ruta con “../” el cual nos permite salir de nuestro directorio y luego seleccionar la ruta 
-                    relativa donde se encuentra la imagen que estamos necesitando para nuestra página web. 
+                    La etiqueta que cumple la función semántica es llamada <b>figure</b>, la cual nos prepara un campo en forma de conenedor (caja) para que podamos colocar la imagen. La etiqueta que vamos a utilizar para renderizar la imagen es <b>"img"</b>, la cual se le pasan <b>tres atributos</b>. Estos atributos son <b>src</b>, <b>alt</b> y <b>title</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    El atributo principal de esta etiqueta (img) es <b>src</b>, ya que, como valor le vamos a pasar <b>la ruta donde estará alojada la imagen</b>. Si la imagen esta en <b>nuestro directorio</b>, la ruta es <b>absoluta</b> y, si la ruta donde vamos a buscar la imagen está en la web, es denominada <b>relativa</b>.
+                </p> <br />
+                
+                <p>
+                    Generalmente para usar las imagenes que esten en nuestro directorio, debemos saber movernos a través de las carpetas como si estuvieramos utilizando la <b>consola</b> de nuestro ordenador. En el caso de que nuestra imagen no está en el directorio en donde nos encontramos trabajando debemos comenzar generalmente la ruta con <b>“../”</b> el cual nos permite salir de nuestro directorio y luego seleccionar la <b>ruta relativa</b> donde se encuentra la imagen que estamos necesitando para nuestra página web. 
+                </p> <br />
+                
+                <p>
+                    Si la imagen que vamos a agregar, está ubicada en la carpeta img se le denomina ruta absoluta porque, se construye con la dirección exacta de la ubicación del archivo. Es decir, debemos especificar el camino exacto desde la ubicación donde se encuentra el archivo que estamos construyendo, hasta el archivo donde se encuentra la imagen que va a ser renderizada en el navegador. En este proceso debemos indicar el nombre de la carpeta donde está ubicado el archivo (img), más el nombre del archivo. En el caso que se requiera realizar a más accesos a los directorios debemos seguir los pasos de la navegación de la consola hasta llegar al archivo de la imagen que deseamos abrir.
                 </p>
 
                 <!-- Imagen ejemplo #1 -->
-                <figure>
-                    <img class="img-ejemplo" src="./img/ejemplo relativo.png" alt="ejemplo" width="100%"/>
-                </figure>
+
+                <div class="cont-ejemplo-absoluto">
+                    <div class="cont-ejemploCodigo">
+                        <p>
+                            <code class="ejemplo-codigo">
+                                <span class="color-etiqueta">&#60img</span>
+                                <span class="color-propiedad">src</span>=
+                                <span class="color-string">"img/River.png"</span>
+                                <span class="color-propiedad">alt</span>=
+                                <span class="color-string">"River Plate"</span>
+                                <span class="color-propiedad">title</span>=
+                                <span class="color-string">"River Plate"</span> />
+                            </code>
+                        </p>
+                    </div>
+    
+                    <img class="img-river" src="./img/River.png" alt="Escudo River" title="Escudo River" />
+                </div>
 
                 <p>
-                    Podemos agregar a la etiqueta <b>img</b> información complementaria para cumplir su contenido en los 
-                    buscadores a partir de los atributos <b>“alt”</b> y <b>“title”</b>. Se suele aplicar obligatoriamente el atributo 
-                    alt porque es el respaldo para el usuario si la imagen no llegase a cargar correctamente.
+                    En este ejemplo de <b>imagen absoluta</b> podemos observar que nuestra imagen se encuentra en un <b>directorio</b> llamado <b>img</b> que en este se encuentra la imagen que hemos seleccionado con nombre <b>River.png</b>. Se dice que es absoluta porque realizamos la <b>ruta específica</b> para dar con la imagen.
+                </p> <br />
+
+                <p>
+                    Podemos agregar a la etiqueta <b>img</b> información complementaria para mejorar el SEO y ayudar a reconocer de manera más efectiva la página en los buscadores. Para realizar esta práctica debemos usar a los atributos <b>“alt”</b> y <b>“title”</b>. El atributo alt es el respaldo para el usuario si la imagen no llegase a cargar correctamente y el atributo title es para ayudar al navegador a reconocer el nombre de la imagen.
                 </p>
 
                 <div class="cont-h3">
@@ -102,8 +106,7 @@
                 </div>
 
                 <p>
-                    Este atributo recibe como valor la descripción que dejaremos al usuario si accidentalmente la 
-                    imagen cargada en la página no pueda llegar a visualizarse.
+                    Este atributo recibe como valor la descripción que dejaremos al usuario si accidentalmente la imagen cargada en la página no pueda llegar a visualizarse.
                 </p>
 
                 <div class="cont-h3">
@@ -111,50 +114,40 @@
                 </div>
 
                 <p>
-                    Este atributo recibe como valor la descripción que le dejamos al usuario si pasa el mouse sobre la imagen. 
-                    En el ejemplo de la imagen, cuando el usuario realice esa acción le aparecerá una pequeña viñeta con 
-                    “River Plate”.
+                    Este atributo recibe como valor la descripción que le dejamos al usuario si pasa el mouse sobre la imagen. En el ejemplo de la imagen, cuando el usuario realice esa acción le aparecerá una pequeña viñeta con “River Plate”.
                 </p>
-
-                <p>
-                    Como podemos ver también en nuestro ejemplo encontramos el atributo <b>width</b> que este determina el <b>ancho</b> de 
-                    la imagen. Es recomendable que al usar este atributo de tamaño no usemos otro atributo ya que la imagen 
-                    puede quedar distorsionada. Sus medidas pueden variar según el método de medida que estemos usando en
-                    nuestro caso son pixeles (px).
-                </p>
-
-                <div class="cont-link">
-                    <a href="../6. Imagenes/html/imagenAbsoluta.html" class="link">Ir al ejemplo de imagen absoluta</a>
-                </div>
 
             </article>
 
             <hr />
 
-            <article>
+            <!-- Imagen Relativa -->
+            <article class="cont-imagenRelativa">
 
-                <h2>Imagen en Servidor</h2>
+                <h2>Imagen Relativa</h2>
 
                 <p>
-                    Si vamos a usar una imagen guardada en un servidor muy probablemente deberemos usar la ruta absoluta 
-                    de la imagen para poder incluirla en nuestra página. Esta práctica es adecuada siempre y cuando nos 
-                    aseguremos que la imagen no cambiará de ubicación. 
+                    Si vamos a usar una imagen guardada en un servidor muy probablemente deberemos usar la ruta absoluta de la imagen para poder incluirla en nuestra página. Esta práctica es adecuada siempre y cuando nos aseguremos que la imagen no cambiará de ubicación. 
                 </p>
 
                 <!-- Imagen ejemplo #2 -->
-                <figure>
-                    <img class="img-ejemplo" src="./img/ejemploAbsoluto.png" alt="ejemploAbsoluto" width="100%" />
-                </figure>
+
+                <div class="cont-ejemploCodigo">
+                    <p>
+                        <code class="ejemplo-codigo">
+                            <span class="color-etiqueta">&#60img</span>
+                            <span class="color-propiedad">src</span>=
+                            <span class="color-string">"https://i.pinimg.com/564..."</span>
+                            <span class="color-propiedad">alt</span>=
+                            <span class="color-string">"Estadio-River"</span>
+                            <span class="color-propiedad">title</span>=
+                            <span class="color-string">"Estadio-River"</span> />
+                        </code>
+                    </p>
+                </div>
 
                 <p>
-                    Recordemos que una <b>referencia absoluta</b> contiene la <b>ruta completa</b> donde se encuentra el archivo, es decir, 
-                    <b>protocolo/ servidor y ruta</b>. Esto se puede conseguir fácilmente si hacemos click derecho donde se encuentra 
-                    la imagen que deseamos utilizar y seleccionamos en la barra de herramientas la opción copiar dirección de 
-                    la imagen.
-                </p>
-
-                <p>
-                    Cuando renderizamos el archivo el navegador carga la imagen desde el servidor a partir de la ruta absoluta.
+                    Recordemos que una <b>referencia relativa</b> contiene la <b>ruta completa</b> donde se encuentra el archivo en el servidor, es decir, <b>protocolo/ servidor y ruta</b>. Esto se puede conseguir fácilmente si hacemos click derecho donde se encuentra la imagen que deseamos utilizar y seleccionamos en la barra de herramientas la opción copiar dirección de la imagen. Cuando renderizamos el archivo el navegador carga la imagen desde el servidor a partir de la ruta absoluta.
                 </p>
 
                 <div class="cont-link">
@@ -170,26 +163,15 @@
                 <h2>Tamaño en las imágenes</h2>
 
                 <p>
-                    Existen varios procedimientos para <b>cambiar el tamaño</b> de las imágenes en el caso de la etiqueta "img",
-                    existen <b>dos atributos</b> que podemos usar para cambiar el <b>ancho</b> y el <b>alto</b> de la imagen 
-                    que son: <b>width</b> y <b>height</b> respectivamente.
-                </p>
+                    Existen varios procedimientos para <b>cambiar el tamaño</b> de las imágenes en el caso de la etiqueta "img", existen <b>dos atributos</b> que podemos usar para cambiar el <b>ancho</b> y el <b>alto</b> de la imagen que son: <b>width</b> y <b>height</b> respectivamente. Si usamos <b>medidas arbitrarias</b> la imagen se verá deformada, tanto para el ancho como para el alto, sin tener en cuenta ninguna proporción.
+                </p> <br />
 
                 <p>
-                    Si usamos <b>medidas arbitrarias</b> la imagen se verá deformada, tanto para el ancho como para el alto, 
-                    sin tener en cuenta ninguna proporción.
-                </p>
+                    Para cambiar el tamaño de una imagen sin que se deforme asignamos <b>SOLO UN VALOR</b> al <b>ancho</b> (width) o <b>alto</b> (height) de la imagen. Esto hace que la imagen se redimensione proporcionalmente a partir de uno del valor cambiado. También, es importante destacar que estos <b>cambios de estilos</b> es recomendable realizarlos desde las <b>hojas de estilos</b> de tipo <b>.css</b> (tema que veremos al finalizar html), ya que, es una buena práctica cambiar los estilos desde dicha página y no desde el propio archivo HTML.
+                </p> <br />
 
                 <p>
-                    Para cambiar el tamaño de una imagen sin que se deforme asignamos <b>SOLO UN VALOR</b> al 
-                    <b>ancho</b> o <b>alto</b> de la imagen. Esto hace que la imagen se redimensione proporcionalmente a 
-                    partir de uno del valor cambiado.
-                </p>
-
-                <p>
-                    Si al cargar nuestra página en el navegador aparece un <b>símbolo de enlace roto</b>, debemos verificar si 
-                    el enlace que pusimos en el atributo <b>src=””</b> está escrito correctamente. De lo contrario, la imagen no 
-                    se verá en la pantalla.
+                    Si al cargar nuestra página en el navegador aparece un <b>símbolo de enlace roto</b>, debemos verificar si el enlace que pusimos en el atributo <b>src=”esta dirección”</b> está escrito correctamente o que la ruta sea la indicada. De lo contrario, la imagen no se verá en la pantalla.
                 </p>
                 
             </article>
