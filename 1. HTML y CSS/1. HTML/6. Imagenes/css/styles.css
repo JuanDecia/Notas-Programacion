@@ -153,14 +153,30 @@ h3 {
 
 /* -- Articulo Relativo -- */
 
-.cont-imagenRelativa > .cont-ejemploCodigo {
-    width: 60%;
-    padding: 10px;
+.cont-imagenRelativa {
+    margin-bottom: 25px;
 }
 
+.cont-ejemploRelativo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px;
+}
+
+.cont-ejemploRelativo > .cont-ejemploCodigo {
+    width: 80%;
+    padding: 10px;
+    margin: 20px;
+}
+
+.cont-imgRelativo {
+    display: flex;
+    justify-content: center;
+}
 
 .img-ejemplo {
-    max-width: 80%;
+    max-width: 70%;
 }
 
 @media (max-width: 768px) {
