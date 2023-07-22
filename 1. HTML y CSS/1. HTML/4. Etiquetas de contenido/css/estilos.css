@@ -129,6 +129,13 @@ header {
     margin: 20px 0;
 }
 
+.cont-atajo {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
 /* -- Articulo Headings */
 
 .ejemplos-headings {
