@@ -1,46 +1,155 @@
+* {
+    margin: 0
+}
+
 body {
     max-width: 85%;
     margin: auto;
     font-family: sans-serif;
-    background-color: rgb(197, 201, 204);
+    background-image: url('../img/fondo-imagen.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-header {
-    text-align: center;
-}
-
-h1 {
-    color: rgb(15, 122, 122);
-}
-
-h2 {
-    color: rgb(38, 99, 231);
-}
-
-.cont-h3 {
-    display: flex;
-    justify-content: center;
-}
-
-h3 {
-    border: 2px solid rgb(113, 64, 248);
-    padding: 10px;
-    margin-bottom: 0;
-    width: 30%;
-    text-align: center;
-    border-radius: 10px;
-    color: rgb(113, 64, 248);
-}
-
-li:nth-child(even) {
-    margin: 10px 0;
+main {
+    background-color: rgb(197, 201, 204, 0.9);
+    padding: 25px;
 }
 
 p {
     text-align: justify;
 }
 
-/* Estilos para tablas */
+h2 {
+    margin-bottom: 20px;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+/* -- Animaciones -- */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ######### HEADER */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+/* ######### MAIN CONTENT */
+
+/* -- Articulo Introducción */
+.cont-introduccion {
+    margin-bottom: 25px;
+}
+
+/* -- Articulo Semántica -- */
+
+.cont-semantica {
+    margin: 25px 0;
+}
+
+.semantica-tabla {
+    margin: 20px;
+}
+
+li > strong {
+    color: rgb(183, 0, 255);
+}
+
+.li-ejemplo {
+    list-style: none;
+}
+
+/* Ejemplo en Código */
+
+.cont-codigo {
+    background-color: black;
+    margin: 15px 0;
+    padding: 17px;
+}
+
+.cont-codigo > code {
+    color: #2795f0;
+    width: 100%;
+    display: block;
+}
+
+.margin-20 {
+    margin-left: 20px;
+}
+
+.margin-40 {
+    margin-left: 40px;
+}
+
+.margin-60 {
+    margin-left: 60px;
+}
+
+.texto-blanco {
+    color: #ffffff;
+}
+
+/* -- Articulo Estilos -- */
+
+.cont-estilos {
+    margin: 25px 0;
+}
+
+.estilos-encabezado, .estilos-bordes {
+    margin: 15px 0;
+}
+
+h3 {
+    color: rgb(103, 45, 240);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    margin-bottom: 10px;
+}
+
+.estilos-bordes > .cont-codigo > code {
+    padding: 1px;
+}
+
+.selectores {
+    color: rgb(255, 166, 0);
+}
+
+.propiedad-valores {
+    color: #ffffff;
+}
+
+/* -- Articulo Tabla Ejemplo */
+
+.ejemplo-tabla h3 {
+    margin: 15px 0;
+}
+
+/* Estilo tablas */
 
 .cont-table {
     margin-top: 20px;
@@ -88,4 +197,10 @@ caption {
     margin-bottom: 20px;
     font-weight: 600;
     font-size: 1.2em;
+}
+
+/* -- Articulo Tablas Anidadas */ 
+
+.tablas-anidadas, .fondo-tabla, .ejemplo-practico {
+    margin: 25px 0;
 }
