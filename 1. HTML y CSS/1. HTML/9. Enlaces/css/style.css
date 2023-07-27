@@ -71,6 +71,15 @@ h3 {
     }
 }
 
+@keyframes slide-left {
+    from {
+        transform: translateX(-50px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
 /* ############ HEADER */
 
 header {
@@ -106,10 +115,41 @@ a {
     color: rgb(236, 103, 14);
     font-weight: 600;
     font-size: 1.2em;
+    position: relative;
 }
 
 .arrow {
     width: 35px;
+}
+
+/* Subrayado Dinámico */
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    height: 2px;
+    color: #ffffff;
+    background-color: #ffffff;
+    width: 50%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+/* -- Articulo Menú Toggle */
+
+.menu {
+    width: 45px;
+    display: none; /* Se muestra a partir de 768px */
+}
+
+input {
+    display: none; /* Botón siempre oculto */
 }
 
 /* ############ MAIN CONTENT */
@@ -164,6 +204,51 @@ figure {
     margin: 10px;
 }
 
+/* ######### RESPONSIVE DESIGN */
+
+/* 778px */
+@media (max-width: 778px) {
+    
+    .menu {
+        display: flex; /* Se muestra menú que estaba oculto */
+    }
+
+    header {
+        margin: 0;
+    }
+
+    ul {
+        position: absolute;
+        left: 140px;
+        display: none;
+        flex-direction: column;
+        background-color: rgba(51, 50, 50, 0.938);
+        width: 60%;
+        padding: 7px;
+        border-radius: 5px;
+    }
+    
+    svg {
+        display: none;
+    }
+
+    a {
+        width: 60%;
+        padding: 10px;
+    }
+
+    a::after {
+        width: 90%;
+        left: 0;
+    }
+
+    /* Mostramos Menú cuando activamos el Checkbox */
+    #menu-toggle:checked + ul {
+        display: flex;
+        animation: fade 0.9s ease-in, slide-left 0.9s ease-in-out;
+    }
+}
+
 /* 576px */
 @media (max-width: 576px) {
 
@@ -171,17 +256,11 @@ figure {
         margin-bottom: 10px;
     }
 
-    ul {
-        flex-direction: column;
-    }
-
     li {
         margin: 5px 0;
     }
 
-    .tilde {
-        display: none;
-    }
+
 
 }
 
