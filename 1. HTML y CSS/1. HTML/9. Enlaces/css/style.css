@@ -1,8 +1,74 @@
+* {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     max-width: 80%;
     margin: auto;
     font-family: sans-serif;
-    background-color: rgb(197, 201, 204);
+    background-image: url('../img/fondo-imagen.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    background-color: rgb(197, 201, 204, 0.9);
+    padding: 25px;
+}
+
+p {
+    text-align: justify;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+h3 {
+    color: rgb(103, 45, 240);
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.cont-codigo code {
+    color: rgb(22, 128, 250);
+}
+
+.color-propiedad {
+    color: rgb(90, 193, 252);
+}
+
+.color-valor {
+    color: rgb(252, 134, 38);
+}
+
+/* -- Animaciones -- */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 /* ############ HEADER */
@@ -12,14 +78,16 @@ header {
 }
 
 h1 {
-    color: rgb(15, 122, 122);
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
     text-align: center;
-    margin-bottom: 35px;
 }
 
 nav {
     display: flex;
     width: 100%;
+    margin: 20px 0;
 }
 
 ul {
@@ -31,33 +99,69 @@ ul {
 }
 
 a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
     text-decoration: none;
     color: rgb(236, 103, 14);
     font-weight: 600;
     font-size: 1.2em;
 }
 
-.tilde {
-    margin-right: 15px;
+.arrow {
+    width: 35px;
 }
 
 /* ############ MAIN CONTENT */
 
-h2 {
-    color: rgb(38, 99, 231);
+/* -- Articulo Introducción -- */
+
+.cont-codigo {
+    background-color: rgb(56, 55, 55);
+    margin: 20px auto;
+    padding: 7px;
+    text-align: center;
+    width: 70%;
+    border-radius: 5px;
 }
 
-h3 {
-    color: orange;
+/* -- Artículo Secciones Internas */
+
+.secciones-internas {
+    margin: 20px 0;
 }
 
 figure {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin: 15px 0;
 }
 
 .img-ejemplo {
     max-width: 90%;
+}
+
+.cont-codigo h3 {
+    margin: 10px;
+    color: rgb(155, 81, 224);
+}
+
+/* -- Articulo Anclas -- */
+
+.cont-anclas {
+    margin: 25px 0;
+}
+
+.cont-anclas h3 {
+    margin: 15px 0;
+}
+
+.ejemplo-ancla {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
 }
 
 /* 576px */

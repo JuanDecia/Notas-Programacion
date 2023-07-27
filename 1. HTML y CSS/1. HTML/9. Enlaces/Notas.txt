@@ -1,2 +1,0 @@
-En esta práctica de enlaces podemos observar como se pueden aplicar en diferentes ocasiones utilizando la etiqueta
-<a>.

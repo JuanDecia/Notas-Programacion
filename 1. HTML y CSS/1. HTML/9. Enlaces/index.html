@@ -14,25 +14,25 @@
 
         <header>
 
-            <h1>Creación de enlaces</h1>
+            <h1 id="titulo">Creación de enlaces</h1>
 
             <nav>
                 <ul>
                     <li>
                         <a href="./html/estructuraEnlaces.html">
-                            <img class="tilde" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALVJREFUSEvtlNENgzAMBY8NugkdgU7UEWg3YCM6QtmkI6AngeQGGhsKf8kXKOFOfnaoOHlVJ/MpAjfhEtEc0QW4A880syMiErwHrpPgYSX/Cix8ABrgc5TAhUu0t4IQ3BMoyy4tGQjDcwLBW+AN3IxkEzwnEOgF1Eai8/O0rDZ07VrnepBK9L1GMQz3eqB9K9H7JnhEYCV6Xsy597eLjqkq0fq6RB48WkGE8/NMtILdkiJwoxsBhvUmGXE1+WEAAAAASUVORK5CYII=" />
+                            <svg class="arrow" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                             Ir a "Estructura de enlaces"
                         </a>
                     </li>
                     <li>
                         <a href="./html/EnlaceImagen.html">
-                            <img class="tilde" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALVJREFUSEvtlNENgzAMBY8NugkdgU7UEWg3YCM6QtmkI6AngeQGGhsKf8kXKOFOfnaoOHlVJ/MpAjfhEtEc0QW4A880syMiErwHrpPgYSX/Cix8ABrgc5TAhUu0t4IQ3BMoyy4tGQjDcwLBW+AN3IxkEzwnEOgF1Eai8/O0rDZ07VrnepBK9L1GMQz3eqB9K9H7JnhEYCV6Xsy597eLjqkq0fq6RB48WkGE8/NMtILdkiJwoxsBhvUmGXE1+WEAAAAASUVORK5CYII=" />
+                            <svg class="arrow" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                             Ir a "Enlace en Imagenes"
                         </a>
                     </li>
                     <li>
                         <a href="./html/atributoEnEnlaces.html">
-                            <img class="tilde" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALVJREFUSEvtlNENgzAMBY8NugkdgU7UEWg3YCM6QtmkI6AngeQGGhsKf8kXKOFOfnaoOHlVJ/MpAjfhEtEc0QW4A880syMiErwHrpPgYSX/Cix8ABrgc5TAhUu0t4IQ3BMoyy4tGQjDcwLBW+AN3IxkEzwnEOgF1Eai8/O0rDZ07VrnepBK9L1GMQz3eqB9K9H7JnhEYCV6Xsy597eLjqkq0fq6RB48WkGE8/NMtILdkiJwoxsBhvUmGXE1+WEAAAAASUVORK5CYII=" />
+                            <svg class="arrow" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                             Ir a "Atributos en Enlaces"
                         </a>
                     </li>
@@ -41,7 +41,6 @@
 
             </nav>
 
-
         </header>
 
         <section>
@@ -49,154 +48,126 @@
             <article>
                 
                 <p>
-                    Para crear una estructura de enlaces básicos tendremos que usar la etiqueta <b>"a"</b>. Entre la apertura 
-                    y el cierre de esta etiqueta, agregaremos el contenido que se anclará en el viewport y que se verá como un 
-                    enlace donde el usuario puede hacer “click”, luego, esta ancla lo redirigirá.
-                </p>
+                    Para crear una estructura de enlaces básicos tendremos que usar la etiqueta <strong>&#60a&#62</strong>. Entre la apertura y el cierre de la estructura de este elemento (cierra con &#60/a&#62), agregaremos el contenido que se anclará en el viewport y que se verá como un enlace donde el usuario puede hacer <b>'click'</b> y luego, esta ancla (enlace) lo redirigirá. La etiqueta &#60a&#62 (anchor en inglés) recibe como atributo <strong>'href'</strong> el cual debemos pasar como valor la <b>dirección relativa o absoluta</b> que tendrá el enlace.
+                </p> <br />
 
                 <p>
-                    Anchor recibe como atributo “href” y le pasamos como valor la dirección que tendrá el enlace. 
-                    Esta puede ser local o remota.
-                </p>
+                    Si en nuestra página estamos creando un proyecto donde debemos abrir otro archivo alojado en nuestro directorio la ruta será <b>absoluta</b> en el caso de que el enlace deba abrir una página externa a nuestro proyecto debemos pasar como valor en el <b>'href'</b> la ruta <b>relativa</b> de esa nueva página a abrir.
+                </p> <br />
 
                 <p>
-                    Si necesitamos generar un enlace que lleve a un sitio específico en internet, debemos aplicar enlaces absolutos.
-                </p>
+                    Cuando renderizamos la página web podremos observar que estarán los links creados con la descripción que se han colocado entre las etiquetas <b>&#60a&#62</b> como contenido del elemento. Si pasamos el mouse sobre el link, en la parte inferior izquierda del navegador podemos visualizar una pequeña pestaña informativa de la ruta donde nos redireccionará ese link.
+                </p> <br />
 
                 <p>
-                    Cuando renderizamos la página web podremos observar que está nuestro link creado con la descripción que 
-                    hemos colocado entre las etiquetas <b>"a"</b> como contenido del elemento. Si pasamos el mouse sobre el 
-                    link, en la parte inferior izquierda del navegador podemos visualizar una pequeña pestaña de la ruta 
-                    donde nos redireccionará ese link.
+                    Para evitar que el contenido de nuestro sitio web, sea reemplazado por el de la página vinculada agregamos el atributo <b>target=””</b> con el valor <b>_blank</b>. Esto hace que se abra una nueva pestaña con el contenido vinculado.
                 </p>
 
-                <p>
-                    Para evitar que el contenido de nuestro sitio web, sea reemplazado por el de la página vinculada agregamos 
-                    el atributo <b>target=””</b> con el valor <b>_blank</b>. Esto hace que se abra una nueva pestaña con 
-                    el contenido vinculado.
-                </p>
-
-                <!-- Imagen Ejemplo #1 -->
-                <figure>
-                    <img class="img-ejemplo" src="./img/target.png" alt="ejemploTarget" />
-                </figure>
-
-                <p>
-                    En el caso de un sitio web que su página principal es llamada index.html y tengamos un conjunto de 
-                    páginas html internas, tenemos que usar referencias relativas para construir los hipervínculos 
-                    en nuestro directorio con los nuevos archivos html a vincular.
-                </p>
+                <div class="cont-codigo">
+                    <code>
+                        <span class="text-white">&#60</span>a <span class="color-propiedad">href</span>=<span class="color-valor">'https://www.google.com'</span> <span class="color-propiedad">target</span>=<span class="color-valor">'_blank'</span>Enlace a Buscador Google<span class="text-white">&#60/</span>a<span class="text-white">&#62</span>
+                    </code>
+                </div> 
 
             </article>
 
             <hr />
 
-            <article>
+            <article class="secciones-internas">
 
                 <h2>Enlaza secciones internas</h2>
 
                 <p>
-                    Si queremos crear hipervínculos desde la página principal a paginas internas primero, debemos crear las 
-                    páginas interiores. En este caso, la página principal debe estar ubicada en la raíz de la carpeta del 
-                    proyecto. En esta página, agregaremos los enlaces que nos llevarán a otras páginas dentro del mismo 
-                    sitio web.
-                </p>
+                    Si queremos crear hipervínculos desde la página principal a paginas internas, primero, debemos crear las páginas interiores. En este caso, la página principal debe estar ubicada en la raíz de la carpeta del proyecto con el nombre de <strong>index.html</strong>. En esta página que es la principal, agregaremos los enlaces que nos llevarán a otras páginas dentro del mismo sitio web.
+                </p> <br />
 
                 <p>
-                    Para recrear el ejemplo de este enlace primero debemos crear algunas páginas internas que contengan una 
-                    estructura base y un párrafo. Luego, la guardamos dentro de la subcarpeta nombrada <b>“html”</b>.
-                </p>
-
-                <p>
-                    Ahora crearemos un conjunto de enlaces en la página principal, para referenciar las páginas internas. 
-                    Estos enlaces pueden estar en una lista no ordenada para facilitar el uso del usuario.
+                    Para representar el ejemplo de esta practica, debemos crear una carpera llamada <b>html</b> que es donde se encontrarán alojados todos los archivos de tipo <b>'.html'</b> que van a estar anclados para que el usuario pueda navegar por el directorio de páginas de nuestro sitio. Una vez que tengamos el directorio llamado <b>html</b>, creamos los archivos <b>'.html'</b> que sean necesarios.
                 </p>
 
                 <!-- Imagen Ejemplo #2 y #3 -->
                 <figure>
-                    <img class="img-ejemplo" src="./img/subCarpeta1.png" alt="ejemplo1" />
-                </figure>
+                    <h3>Carpeta Raíz</h3>
+                    <img class="img-ejemplo" src="./img/subCarpeta1.png" alt="ejemplo1" />              
 
-                <figure>
+                    <h3>Carpeta img</h3>
                     <img class="img-ejemplo" src="./img/subCarpeta2.png" alt="ejemplo2" />
                 </figure>
 
                 <p>
-                    Como necesitamos referenciar páginas ubicadas en una estructura de directorios en nuestro computador, 
-                    debemos usar referencias relativas. Luego, solo falta agregar a las páginas internas un enlace para 
-                    luego retornar a la página principal.
+                    Como necesitamos referenciar las páginas ubicadas en una estructura de directorios que se encuentra en nuestro computador local, debemos usar rutas <b>absolutas</b>.
                 </p>
+                
+                <div class="cont-codigo">
+                    <h3>Ejemplo</h3>
 
-                <!-- Imagen Ejemplo #4 -->
-                <figure>
-                    <img class="img-ejemplo" src="./img/link.png" alt="link" />
-                </figure>
-
-                <p>
-                    Ahora necesitamos crear un link en el archivo <b>“página_vikingos”</b>, para que se vincule con el archivo 
-                    principal, en este caso <b>“index.html”</b>. El enlace puede referenciarse <b>“volver”</b> con una 
-                    referencia relativa, teniendo en cuenta que, el archivo donde se generará el enlace estará 
-                    ubicado en la carpeta html (no en la raíz).
-                </p>
-
-                <p>
-                    Primero indicaremos en la ruta que es necesario salirse de esa carpeta, es decir, primero debemos 
-                    ir a la raíz de la carpeta para luego referenciar el archivo principal. Los pasos serian los siguientes: 
-                </p>
-
-                <!-- Imagen Ejemplo #5 -->
-                <figure>
-                    <img class="img-ejemplo" src="./img/link2.png" alt="link2" />
-                </figure>
+                    <code>
+                        <div class="elemento-ejemplo">
+                            <span class="text-white">&#60</span>a <span class="color-propiedad">href</span>=
+                            <span class="color-valor">'./html/estructuraEnlaces.html'</span><span class="text-white">&#62Estructura Enlaces</span><span class="text-white">&#60/</span>a<span class="text-white">&#62</span>
+                        </div>
+                    </code>
+                </div> 
 
             </article>
 
             <hr />
 
-            <article>
+            <article class="cont-anclas">
 
                 <h2>Anclas</h2>
 
                 <p>
-                    Al crear enlaces en las páginas internas, para luego volver a la principal, estamos generando una 
-                    estructura de navegación dentro de nuestro sitio web. A veces, necesitamos generar una estructura de 
-                    navegación que funcione dentro de la misma página (misma hoja), en el caso de tener un gran volumen de 
-                    contenido podemos usar anclas para crear la navegación.
-                </p>
+                    Al generar enlaces hacia páginas internas de nuestro sitio web y luego volver a la página principal, estamos creando una estructura de navegación dentro de nuestro sitio web. A veces, necesitamos generar una estructura de navegación que funcione dentro de la <b>misma página (misma hoja)</b>. En el caso de tener un gran volumen de contenido en una misma hoja, podemos usar <b>anclas</b> para crear la navegación dentro de la misma página para enriquecer la experiencia del usuario.
+                </p> <br />
 
                 <p>
-                    Para aplicar el concepto de ancla podemos agregar un grupo de enlaces en la parte superior de la página, 
-                    que permite a los visitantes saltar rápidamente a los títulos del contenido y luego volver arriba para 
-                    crear un enlace interno o ancla. Primero, debemos colocarle un id a las etiquetas que van a estar ancladas 
-                    para luego aplicar el ancla.
-                </p>
+                    Para aplicar el concepto de ancla podemos agregar un grupo de enlaces en la parte superior de la página, que permita a los visitantes saltar rápidamente a los títulos o subtítulos del contenido. Al finalizar la lectura o visualización de esa sección es <b>muy recomendable</b> volver a crear un enlace de tipo <b>ancla</b> para que nos vuelva a <b>posicionar</b> en el título principal o hacia el tope de la página.
+                </p> <br />
+
+                <h3>Sintaxis</h3>
 
                 <p>
-                    Para las anclas construiremos la etiqueta a y en el atributo href colocaremos <b>“#”</b> seguido del id 
-                    que le dimos a la etiqueta a anclar.
+                    En la sintaxis de esta construcción lo <b>primero</b> que debemos tener en cuenta, es que debemos crear una propiedad <b>ID</b> en las <b>etiquetas</b> que se van a comportar como <b>anclas</b>. Por ejemplo, al contenedor de esta sección le colocaremos un <b>ID</b> con valor <b>ancla</b> para que desde el header con un solo click nos traiga hasta esta posición. También, crearemos un <b>ancla</b> en el título principal para que nos lleve hacia arriba cuando finalizamos de visualizar el artículo.
                 </p>
 
-                <!-- Imagen Ejemplo #6 -->
-                <figure>
-                    <img class="img-ejemplo" src="./img/ancla.png" alt="ancla" />
-                </figure>
+                <h3>Ejemplo ID y Ancla</h3>
+
+                <div class="cont-codigo">
+                    <div class="elementoUno">
+                        <code>
+                            <span class="text-white">&#60</span>article
+                            <span class="color-propiedad">id</span>=<span class="color-valor">'ancla'</span>
+                            <span class="text-white">&#62</span>
+                        </code>
+                    </div>
+                    <div class="elementoDos">
+                        <code>
+                            <span class="text-white">&#60</span>h1
+                            <span class="color-propiedad">id</span>=<span class="color-valor">'titulo'</span>
+                            <span class="text-white">&#62</span>
+                        </code>
+                    </div>
+                </div>
 
                 <p>
-                    Para que la estructura de navegación quede funcional, es conveniente agregar un enlace al final 
-                    de cada sección de contenido que puede decir: <b>volver al inicio de página</b>.
+                    Para hacer uso de las anclas construiremos la etiqueta <b>&#60a&#62</b> y en el atributo href colocaremos <b>“#”</b> seguido del valor que le hemos dado al id a la etiqueta que deseamos crear como ancla. Como ejemplo vamos a dirigirnos desde esta posición hacia el título.
                 </p>
 
-                <p>
-                    Si tenemos un buen uso de anclas podemos agregar un punto de referencia al inicio del documento, 
-                    para poder generar el enlace entre volver y el inicio de la página. Al final de cada sección de contenido, 
-                    agregaremos una etiqueta enlace con el valor <b>“#inicio”</b> en el atributo de href y con el contenido 
-                    de volver al inicio entre la etiqueta de enlace.
-                </p>
+                <div class="cont-codigo">
+                    <div class="elementoUno">
+                        <code>
+                            <span class="text-white">&#60</span>a
+                            <span class="color-propiedad">href</span>=<span class="color-valor">'#titulo'</span><span class="text-white">&#62</span><span class="text-white">Volver a Inicio</span><span class="text-white">&#60/</span>a<span class="text-white">&#62</span>
+                        </code>
+                    </div>
+                    <div class="ejemplo-ancla">
+                        <a href="#titulo">Volver a Inicio</a>
+                    </div>
+                </div>
 
                 <p>
-                    Las etiquetas anchor podemos aplicarla a cualquier elemento que deseemos que tenga una referencia a 
-                    cualquier página externa, interna o alguna parte de la página que estamos visualizando en el momento. 
-                    Por ejemplo, podemos aplicarla a imágenes, párrafos, títulos, entre otros elementos más.
+                    Las etiquetas anchor podemos aplicarla a cualquier elemento que deseemos que tenga una referencia a cualquier página externa, interna o alguna parte de la página que estamos visualizando en el momento. Por ejemplo, podemos aplicarla a imágenes, párrafos, títulos, entre otros elementos más.
                 </p>
                 
             </article>
