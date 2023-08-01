@@ -186,3 +186,11 @@ a:hover {
     display: flex;
     justify-content: center;
 }
+
+/* ######### MEDIA QUERIES */
+
+@media (max-width: 778px) {
+    nav {
+        margin: 20px 0;
+    }
+}

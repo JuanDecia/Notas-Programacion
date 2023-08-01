@@ -1,13 +1,30 @@
 * {
-    box-sizing: border-box;
+    margin: 0;
 }
 
 body {
     max-width: 80%;
     margin: auto;
     font-family: sans-serif;
-    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    background-image: url('https://i.pinimg.com/originals/cd/cf/fc/cdcffc575c7d8c6a2323b4ba0d01ff18.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    background-color: rgba(196, 176, 85, 0.664);
+    padding: 25px;
+}
+
+p {
+    text-align: justify;
+}
+
 
 /* HEADER */
 
@@ -35,7 +52,8 @@ h1 {
     margin: 30px auto;
     margin-bottom: 20px;
     padding: 7px;
-    color: #fff;
+    color: #ffffff;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
     text-align: center;
     border-bottom: 1px solid white;
     width: 45%;
@@ -155,8 +173,8 @@ p {
 
 .estructura-enlaces {
     position: absolute;
-    top: 190px;
-    left: 150px;
+    top: 160px;
+    left: 200px;
     display: none;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.712);
@@ -200,4 +218,13 @@ nav a::after {
 
 p {
     text-align: justify;
+}
+
+/* ######### QUERIES */
+
+@media (max-width: 992px) {
+    .estructura-enlaces {
+        top: 190px;
+        left: 180px;
+    }
 }

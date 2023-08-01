@@ -6,27 +6,42 @@ body {
     max-width: 80%;
     margin: auto;
     font-family: sans-serif;
-    background-color: rgb(75, 75, 77);
-    color: rgb(255, 255, 255);
+    background-image: url('../img/fondo-imagen.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    background-color: rgb(197, 201, 204, 0.8);
+    padding: 25px;
+}
+
+h2 {
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
 }
 
 a {
     padding: 10px;
     text-decoration: none;
-    color: rgb(224, 162, 90);
+    color: rgb(231, 93, 1);
+    transition: color 0.3s ease-in;
+}
+
+a:hover {
+    color: #ffffff;
 }
 
 a:visited {
-    color: rgb(224, 162, 90);
+    color: rgb(236, 103, 14);
 }
 
-/* HEADER */
-
-header {
-    text-align: center;
+p {
+    text-align: justify;
 }
 
-    /* Animación titulo */
+/* -- Animaciónes */
 
 @keyframes fade {
     from {
@@ -46,8 +61,34 @@ header {
     }
 }
 
+/* Animación Links */
+
+.volver-inicio-txt::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.cont-volver-inicio:hover .volver-inicio-txt::after {
+    transform: scaleX(1);
+}
+
+/* ######### HEADER */
+
+header {
+    text-align: center;
+}
+
 h1 {
-    color: rgb(48, 170, 129);
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
     animation: fade 1s ease-in, slide-left 1.2s ease-in-out;
 }
 
@@ -69,25 +110,6 @@ h1 {
     position: relative;
 }
 
-    /*   Animación Links   */
-
-.volver-inicio-txt::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 1px;
-    border: 1px solid rgb(224, 162, 90);
-    background-color: rgb(224, 162, 90);
-    width: 100%;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-
-.cont-volver-inicio:hover .volver-inicio-txt::after {
-    transform: scaleX(1);
-}
-
 .estructura-enlaces {
     display: flex;
     justify-content: center;
@@ -98,6 +120,12 @@ h1 {
 .estructura-enlaces a {
     padding: 10px;
     position: relative;
+    font-size: 1.3em;
+    transition: color 0.3s ease-in;
+}
+
+.estructura-enlaces a:hover {
+    color: #ffffff;
 }
 
 a::after {
@@ -106,8 +134,8 @@ a::after {
     bottom: 0;
     left: 0;
     height: 1px;
-    border: 1px solid rgb(224, 162, 90);
-    background-color: rgb(224, 162, 90);
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
     width: 100%;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
@@ -117,25 +145,45 @@ a::after {
     transform: scaleX(1);
 }
 
-/*   MAIN CONTENT   */
+/* ######### MAIN CONTENT */
 
 .cont-download {
     margin-bottom: 40px;
 }
 
-figure {
-    display: flex;
-    justify-content: center;
+/* Bloque Código */
+
+.cont-codigo {
+    background-color: rgb(56, 55, 55);
+    margin: 20px auto;
+    padding: 7px;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow-x: auto;
 }
 
-img {
-    width: 100%;
+.margin-20 {
+    margin-left: 20px;
 }
 
-h2 {
-    color: rgb(59, 162, 221);
+.txt-white {
+    color: #ffffff;
 }
 
-p {
-    text-align: justify;
+.tag-color {
+    color: rgb(37, 143, 241);
 }
+
+.property-color {
+    color: rgb(113, 209, 247);
+}
+
+.value-color {
+    color: #f39658;
+}
+
+/* -- */
+
+
+
+
