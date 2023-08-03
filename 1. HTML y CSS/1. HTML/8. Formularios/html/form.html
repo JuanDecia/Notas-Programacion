@@ -15,7 +15,7 @@
         <h1>Formularios y atributos</h1>
 
         <nav>
-          <div>
+          <div class="cont-link-flecha">
             <a href="../index.html">
               <img
                 class="flecha"
@@ -30,98 +30,85 @@
         </nav>
       </header>
 
-      <section>
-        <h2>Etiqueta form y sus atributos:</h2>
-
-        <p>
-          Cuando diseñamos páginas o aplicaciones en algún momento necesitaremos
-          <b>crear formularios</b> para <b>capturar y recibir</b> cualquier
-          información de parte de nuestros clientes y usuarios.
-        </p>
-
-        <p>
-          La etiqueta <b>"form"</b> es la que debemos usar para
-          <b>crear el contenedor de la estructura de un formulario</b>. Las
-          etiquetas de los formularios se pueden <b>dividir</b> en dos tipos:
-          <b>captura de información y enunciado</b>.
-        </p>
-
-        <p>
-          El <b>contenedor</b> del formulario debe encontrarse dentro de la
-          etiqueta <b>"body"</b>. Si debemos darle una <b>estructura</b> a
-          nuestro formulario para eso usaremos la etiqueta
-          <b>"fieldset"</b> dentro de la estructura de <b>"form"</b>, esta
-          etiqueta generará un encuadre con un borde de un 1px para nuestro
-          formulario. Dentro de <b>"fieldset"</b> debemos agregar la etiqueta
-          <b>"legend"</b> con su respectivo cierre que esta
-          <b>llevará el título del formulario en medio del encuadre generado</b
-          >. <br />
-          Solo se recomienda utilizar <b>"fieldset"</b> cuando necesitemos
-          específicamente <b>encuadrar el título dentro del formulario</b>.
-        </p>
-      </section>
+      <!-- Main Content -->
 
       <section>
-        <form autocomplete="on" name="Mi primer formulario">
-          <fieldset>
-            <!-- Encuadra el formulario con un border de 1px solid black -->
-            <legend>Título del Formulario</legend>
-            <!-- Titula el formulario -->
-            <label for="nombre">Nombre</label>
-            <input id="nombre" type="text" />
-          </fieldset>
-        </form>
 
-        <p>
-          La etiqueta <b>"form"</b> ofrece varios atributos que complementan su
-          funcionamiento, en el ejemplo visualizamos <b>autocomplete y name</b>.
-        </p>
-      </section>
+        <!-- Introducción -->
+        <article>
+          <h2>Etiqueta form y sus atributos:</h2>
+  
+          <p>
+            Cuando diseñamos páginas o aplicaciones en algún momento necesitaremos <b>crear formularios</b> para <b>capturar y recibir</b> cualquier información de parte de nuestros clientes y usuarios. La etiqueta <strong>&#60form&#62</strong> es la que debemos usar para <b>crear el contenedor y campo de la estructura de un formulario</b>. Las etiquetas de los formularios se pueden <b>dividir</b> en dos tipos: <b>captura de información</b> y <b>enunciado</b>.
+          </p>
+  
+          <!-- Bloque Codigo Ejemplo -->
+          <div class="cont-codigo">
+            <code>
+              <span class="txt-white">&#60</span><span class="tag-color">form</span><span class="txt-white">&#62</span>
+  
+              <br />
+  
+              <span class="comment-color margin-20">&#60!-- Contenido del Formulario -- &#62</span>
+  
+              <br />
+  
+              <span class="txt-white">&#60/</span><span class="tag-color">form</span><span class="txt-white">&#62</span>
+            </code>
+          </div>
+  
+          <br />
+  
+          <p>
+            El <b>contenedor</b> del formulario debe encontrarse dentro de la etiqueta <b>"body"</b>. Si debemos darle una <b>estructura</b> a nuestro formulario para eso usaremos la etiqueta <b>"fieldset"</b> dentro de la estructura de <b>"form"</b>, esta etiqueta generará un encuadre con un borde de un 1px para nuestro formulario. Dentro de <b>"fieldset"</b> debemos agregar la etiqueta <b>"legend"</b> con su respectivo cierre que esta <b>llevará el título del formulario en medio del encuadre generado</b>. Solo se recomienda utilizar <b>"fieldset"</b> cuando necesitemos específicamente <b>encuadrar el título dentro del formulario</b>.
+          </p>
+        </article>
 
-      <section>
-        <ul>
-          <li>
-            <span>Autocomplete:</span> sirve para
-            <b>autocompletar campos</b> dentro de un formulario que en
-            <b>alguna ocasión ya hemos diligenciado</b>. Esto con el fin de
-            evitar repeticiones con el llenado del formulario. Este atributo
-            puede recibir <b>dos valores: “on” y “off”</b>, sino es especificado
-            en la etiqueta <b>"form"</b> el navegador <b>asumirá</b> por defecto
-            el modo <b>“on”</b>, y auto completará los campos que correspondan a
-            información previamente llenada.
-          </li>
+        <!-- Ejemplo -->
+        <article class="cont-ejemplo">
 
-          <li>
-            <span>Name:</span> es un <b>atributo informativo</b> que no
-            desempeña ninguna función dentro de nuestro formulario, es utilizado
-            cuando se tienen muchos formularios y se hace necesario utilizar un
-            nombre para <b>distinguirlos entre sí</b>.
-          </li>
+          <h2>Ejemplo Formulario</h2>
 
-          <li>
-            <span>Action:</span> este atributo envia los datos del mismo a donde
-            se especifique. Dentro de los valores estará enlazada la ruta de la
-            base de datos que guardará los datos del usuario. Este atributo está
-            asociado al atributo <b>submit</b> que es para el
-            <b>envio de los datos del formulario</b> de la etiqueta
-            <b>input</b>.
-          </li>
+          <!--La etiqueta <form> Renderiza un formulario -->
+          <form autocomplete="on" name="Mi primer formulario">
+            <fieldset> <!-- Encuadra el formulario con un border de 1px solid black -->
+              <legend>Título del Formulario</legend> <!-- Titula el formulario -->
+              <label for="nombre">Nombre</label>
+              <input id="nombre" type="text" />
+            </fieldset>
+          </form>
+    
+          <p>
+            La etiqueta <b>"form"</b> ofrece varios atributos que complementan su funcionamiento, en el ejemplo visualizamos <b>autocomplete y name</b>.
+          </p>
+        </article>
 
-          <li>
-            <span>Method:</span> este atributo recibe dos valores con dos
-            funciones diferentes. El valor “get” el cual nos permite ver el
-            resultado de los datos del formulario en la web, cuando el usuario
-            envie la infomación aparecerá los datos ingresados en la url. El
-            valor “post” envia los resultados del formularios pero estos quedan
-            encriptados respetando la privacidad del usuario que ingreso los
-            datos.
-          </li>
-        </ul>
+        <!-- Propiedades Form -->
+        <article>
+          <h2>Propiedades que recibe la etiqueta Form</h2>
+
+          <ul>
+            <li>
+              <span>Autocomplete:</span> sirve para <b>autocompletar campos</b> dentro de un formulario que en <b>alguna ocasión ya hemos diligenciado</b>. Esto con el fin de evitar repeticiones con el llenado del formulario. Este atributo puede recibir <b>dos valores: “on” y “off”</b>, si no es especificado en la etiqueta <b>"form"</b> el navegador <b>asumirá</b> por defecto el modo <b>“on”</b>, y auto completará los campos que correspondan a información previamente llenada.
+            </li>
+    
+            <li>
+              <span>Name:</span> es un <b>atributo informativo</b> que no desempeña ninguna función dentro de nuestro formulario, es utilizado cuando se tienen muchos formularios y se hace necesario utilizar un nombre para <b>distinguirlos entre sí</b>.
+            </li>
+    
+            <li>
+              <span>Action:</span> este atributo envía los datos del mismo a donde se especifique. Dentro de los valores estará enlazada la ruta de la base de datos que guardará los datos del usuario. Este atributo está asociado al atributo <b>submit</b> que es para el <b>envío de los datos del formulario</b> de la etiqueta <b>input</b>.
+            </li>
+    
+            <li>
+              <span>Method:</span> este atributo recibe dos valores con dos funciones diferentes. El valor “get” el cual nos permite ver el resultado de los datos del formulario en la web, cuando el usuario envíe la información aparecerá los datos ingresados en la url. El valor “post” envía los resultados del formulario pero estos quedan encriptados respetando la privacidad del usuario que ingresó los datos.
+            </li>
+          </ul>
+
+        </article>
       </section>
     </main>
   </body>
 </html>
 
-<!--
-  La etiqueta <form> Renderiza un formulario 
--->
+
