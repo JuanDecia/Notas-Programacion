@@ -156,6 +156,10 @@ input {
 
 /* -- Articulo Introducción -- */
 
+.cont-introduccion {
+    display: flex;
+}
+
 .cont-codigo {
     background-color: rgb(56, 55, 55);
     margin: 20px auto;
@@ -259,9 +263,6 @@ figure {
     li {
         margin: 5px 0;
     }
-
-
-
 }
 
 

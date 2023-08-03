@@ -124,14 +124,14 @@ ol li {
 
 /* -- 768px -- */
 
-@media (max-width: 768px) {
+@media (max-width: 778px) {
 
     .cont-lista {
         background: black;
         position: absolute;
-        top: 140px;
-        right: 20px;
-        width: 80%;
+        top: 130px;
+        left: 140px;
+        width: 70%;
         border-radius: 15px;
         display: none;
     }
@@ -156,14 +156,22 @@ ol li {
 
 @media (max-width: 576px) {
 
+    svg {
+        display: none;
+    }
+
     .cont-lista {
         background: black;
         position: absolute;
-        top: 200px;
-        left: 33px;
-        width: 90%;
+        top: 190px;
+        left: 120px;
+        width: 60%;
         border-radius: 15px;
-        display: none;
+        flex-direction: column;
+    }
+
+    li {
+        padding: 10px 0;
     }
 
     .tilde {
@@ -173,14 +181,23 @@ ol li {
 
 @media (max-width: 496px) {
 
+    svg {
+        display: none;
+    }
+
+    li {
+        padding: 5px 0;
+    }
+
     .cont-lista {
         background: black;
         position: absolute;
-        top: 250px;
-        left: 33px;
-        width: 90%;
+        top: 190px;
+        left: 130px;
+        width: 60%;
         border-radius: 15px;
-        display: none;
+        display: flex;
+        flex-direction: column;
     }
 
     .tilde {
