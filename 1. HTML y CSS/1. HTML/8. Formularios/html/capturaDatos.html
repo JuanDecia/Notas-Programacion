@@ -36,101 +36,917 @@
             </div>
   
           </div>
-    
-          <div class="volver">
-            <a href="./propiedadesInput.html">Ir a las propiedades de la etiqueta Input</a>
-          </div>
         </nav>
   
       </header>
+
+      <section>
+        <article class="cont-introduccion">
+          <h2>Introducción</h2>
+
+          <p>
+            La etiqueta <strong>&#60input /&#62</strong> es una importante herramienta que nos permite <b>capturar distintos tipos de datos</b>, podemos llamarlo también como <b>tipos de campos de entrada</b>. Un <b>campo de entrada</b> es un elemento en un formulario que <b>permite al usuario ingresar información</b> como texto, números, fechas, archivos, entre otros. La etiqueta <strong>&#60input /&#62</strong> solo recibe <b>propiedades</b> que van a darle la información al navegador de que tipo de entrada de dato es la que debe colocar el usuario en el campo del <b>input</b>.
+          </p>
+    
+          <div class="cont-codigo">
+            <code>
+              <span class="txt-white">&#60</span><span class="tag-color">input</span>
+              <span class="property-color">type=</span><span class="value-color">'text'</span>
+              <span class="property-color">name=</span><span class="value-color">'nombre'</span>
+              <span class="property-color">id=</span><span class="value-color">'nombre'</span>
+              <span class="txt-white">/&#62</span>
+            </code>
+          </div>
+          
+        </article>
+
+        <!-- Atributo Type -->
+        <article class="cont-type">
+          <h2>Atributo type</h2>
+
+          <p>
+            Los tipos de datos que el usuario va a ingresar en el campo de la etiqueta <strong>input</strong> deben ser especificados en un <b>atributo</b> llamado <strong>type</strong> que es propio de la etiqueta y solo <b>puede recibir un valor</b>, es decir, solo podemos requerir un tipo de entrada a la vez. A continuación, comenzaremos a explorar los diferentes tipos de <strong>valores</strong> que podemos colocar en esta propiedad para poder visualizar el comportamiento del campo en el navegador.
+          </p>
+
+          <h3>Type: Diferentes campos de entrada</h3>
+
+          <form action="">
+            <fieldset>
+
+              <!-- Type Text -->
+              <div class="cont-text">
+                <h4>Type: Text</h4>
+
+                <p>
+                  La <strong>propiedad 'text'</strong> en HTML es utilizada para crear un campo de entrada de texto en un formulario. Es el tipo más común de campo de entrada, y permite al usuario ingresar cualquier tipo de texto, como nombres, direcciones, comentarios, etc. La estructura básica de un campo de texto es la siguiente:
+                </p>
+
+                <div class="cont-codigo">
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                    <span class="property-color">for=</span><span class="value-color">'nombre'</span><span class="txt-white">&#62Ingrese su Nombre: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+                  </code>
+
+                  <br />
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                    <span class="property-color">type=</span><span class="value-color">'text'</span>
+                    <span class="property-color">name=</span><span class="value-color">'nombre'</span>
+                    <span class="property-color">id=</span><span class="value-color">'nombre'</span>
+                    <span class="property-color">placeholder=</span><span class="value-color">'Ej: Juan'</span>
+                    <span class="txt-white">/&#62</span>
+                  </code>
+                </div>
+
+                <div class="cont-input">
+                  <label for="nombre">Ingrese su Nombre: </label>
+                  <input type="text" id="nombre" placeholder="Ej: Juan." />
+                </div>
+
+                <p>
+                  Como nota adicional (única vez) notemos que agregamos una etiqueta llamada <strong>label</strong>, recordemos que esta etiqueta es útil para <b>vincular</b> el texto con el campo. Para conocer más acerca del comportamiento de dicha etiqueta les recomiendo ingresar al siguiente link: <a class="link-label" href="../html/label.html">Ir a label</a>
+                </p>
+                
+              </div>
+
+              <hr />
+
+              <!-- Type Number -->
+              <div class="cont-number">
+                <h4>Type: Number</h4>
+
+                <p>
+                  La propiedad <strong>type='number'</strong> en HTML se utiliza para crear un campo de entrada de números en un formulario. Este tipo de campo se utiliza para recopilar información numérica, como edad, teléfono, cantidades, etc.
+                </p>
+
+                <div class="cont-codigo">
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                    <span class="property-color">for=</span><span class="value-color">'edad'</span><span class="txt-white">&#62Ingrese su edad: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+                  </code>
+
+                  <br />
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                    <span class="property-color">type=</span><span class="value-color">'number'</span>
+                    <span class="property-color">name=</span><span class="value-color">'edad'</span>
+                    <span class="property-color">id=</span><span class="value-color">'edad'</span>
+                    <span class="property-color">placeholder=</span><span class="value-color">'Ej: 29'</span>
+                    <span class="txt-white">/&#62</span>
+                  </code>
+                </div>
+
+                <div class="cont-input">
+                  <label for="nombre">Ingrese su edad: </label>
+                  <input type="number" id="edad" placeholder="Ej: 29" />
+                </div>
+
+                <p>
+                  En el ejemplo podemos ver que la estructura es similar al de texto, pero además los inputs de tipo <strong>number</strong> pueden tener atributos como <strong>min y max</strong> para determinar el rango válido de números, entre otros.
+                </p>
+
+                <!-- Min -->
+                <h4>Propiedad Min de Type Number</h4>
+
+                <p>
+                  Indica cuál es el <b>valor mínimo</b> que puede ser ingresado. El tipo ingresado de este campo debe ser <strong>int</strong> (5) por lo que sí requerimos o auto completamos con un tipo de dato <strong>string</strong> ('5') nos arrojaría un error. 
+                </p>
+
+                <div class="cont-codigo">
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                    <span class="property-color">for=</span><span class="value-color">'numeroMin'</span><span class="txt-white">&#62Ingrese un valor menor a 50: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+                  </code>
+
+                  <br />
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                    <span class="property-color">type=</span><span class="value-color">'number'</span>
+                    <span class="property-color">min=</span><span class="value-color">'50'</span>
+                    <span class="property-color">id=</span><span class="value-color">'numeroMin'</span>
+                    <span class="property-color">placeholder=</span><span class="value-color">'A partir del número 50'</span>
+                    <span class="txt-white">/&#62</span>
+                  </code>
+                </div>
+                        
+                <div class="cont-input">
+                  <label for="numeroMin">Ingrese un número mayor a 50: </label>
+                  <input
+                    type="number"
+                    min="50"
+                    placeholder="A partir del número 50"
+                    id="numeroMin"
+                  />                  
+                </div>
+
+                <!-- Max -->
+                <h4>Propiedad Max de Type Number</h4>
+
+                <p>
+                  Esta propiedad se usa con el <b>tipo number</b>, indica cual es el <b>valor máximo</b> que se puede ingresar en el cuadro de entrada El tipo ingresado de este campo debe ser <strong>int</strong> (5) por lo que sí requerimos o auto completamos con un tipo de dato <strong>string</strong> ('5') nos arrojaría un error. 
+                </p>
+
+                <div class="cont-codigo">
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                    <span class="property-color">for=</span><span class="value-color">'numeroMax'</span><span class="txt-white">&#62Ingrese un valor hasta 50: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+                  </code>
+
+                  <br />
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                    <span class="property-color">type=</span><span class="value-color">'number'</span>
+                    <span class="property-color">max=</span><span class="value-color">'50'</span>
+                    <span class="property-color">id=</span><span class="value-color">'numeroMax'</span>
+                    <span class="property-color">placeholder=</span><span class="value-color">'Hasta el número 50'</span>
+                    <span class="txt-white">/&#62</span>
+                  </code>
+                </div>
+                        
+                <div class="cont-input">
+                  <label for="numeroMax">Ingrese un número hasta 50: </label>
+                  <input
+                    type="number"
+                    min="50"
+                    placeholder="Hasta el número 50"
+                    id="numeroMax"
+                  />                  
+                </div>
+
+                <!-- Step -->
+                <h4>Propiedad Step de Type Number</h4>
+
+                <p>
+                  Cuando tenemos un <b>cuadro de entrada numérico</b> tenemos <b>dos opciones</b> para ingresar los datos. La <b>primera</b> es ingresando manualmente en el campo el valor deseado. La <b>segunda</b>, disponemos de <b>flechas de incremento o decremento</b> que podemos utilizarlas hasta llegar al valor deseado. La propiedad <strong>step</strong> en este campo nos permite seleccionar cada cuantos números se realiza este <b>incremento</b> en el caso de que deseamos utilizar las flechas auxiliares que se encuentran a la derecha del campo numérico.
+                </p>
+
+                <div class="cont-codigo">
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                    <span class="property-color">for=</span><span class="value-color">'decadas'</span><span class="txt-white">&#62Ingrese cuantas decadas avanzar: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+                  </code>
+
+                  <br />
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                    <span class="property-color">type=</span><span class="value-color">'number'</span>
+                    <span class="property-color">id=</span><span class="value-color">'decadas'</span>
+                    <span class="txt-white">/&#62</span>
+                  </code>
+                </div>
+                        
+                <div class="cont-input">
+                  <label for="decadas">Ingrese cuantas decadas avanzar: </label>
+                  <input type="number" step="10" />                  
+                </div>
+
+              </div>
+
+              <hr />
+
+              <!-- Type Email -->
+              <div class="cont-email">
+                <h4>Type: Email</h4>
+
+                <p>
+                  El valor <strong>email</strong> en la propiedad <strong>type</strong>, se utiliza para crear un campo de entrada de correo electrónico en un formulario. Este tipo de campo se utiliza para recopilar direcciones de correo electrónico del usuario.
+                </p>
+
+                <div class="cont-codigo">
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                    <span class="property-color">for=</span><span class="value-color">'email'</span><span class="txt-white">&#62Ingrese un email: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+                  </code>
+
+                  <br />
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                    <span class="property-color">type=</span><span class="value-color">'number'</span>
+                    <span class="property-color">min=</span><span class="value-color">'50'</span>
+                    <span class="property-color">id=</span><span class="value-color">'numeroMin'</span>
+                    <span class="property-color">placeholder=</span><span class="value-color">'A partir del número 50'</span>
+                    <span class="txt-white">/&#62</span>
+                  </code>
+                </div>
+
+                <div class="cont-input">
+                  <label for="email">Ingrese su email: </label>
+                  <input type="email" id="email" placeholder="juan@mail.com" />                  
+                </div>
+
+              </div>
+
+              <hr />
+
+              <!-- Type Password -->
+              <div class="cont-password">
+                <h4>Type: Password</h4>
+
+                <p>
+                  El valor <strong>password</strong> en la propiedad de <strong>type</strong> en HTML se utiliza para crear un campo de entrada de contraseña en un formulario. Este tipo de campo se utiliza para recopilar contraseñas o información confidencial del usuario, como contraseñas de inicio de sesión o información financiera. Lo que hará este campo es que no se muestren los caracteres cuando el usuario escribe.
+                </p>
+
+                <div class="cont-codigo">
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                    <span class="property-color">for=</span><span class="value-color">'password'</span><span class="txt-white">&#62Ingrese contraseña: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+                  </code>
+
+                  <br />
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                    <span class="property-color">type=</span><span class="value-color">'password'</span>
+                    <span class="property-color">id=</span><span class="value-color">'password'</span>
+                    <span class="property-color">placeholder=</span><span class="value-color">'Ingrese Contraseña'</span>
+                    <span class="txt-white">/&#62</span>
+                  </code>
+                </div>
+
+                <div class="cont-input">
+                  <label for="password">Ingrese Contraseña: </label>
+                  <input type="password" id="password" />                  
+                </div>
+              </div>
+
+              <hr />
+
+              <!-- Type Color -->
+
+              <div class="cont-color">
+                <h4>Type Color</h4>
+
+                <p>
+                  Esta propiedad permite al usuario escojer y definir un tipo de color con valores hexadecimales.
+                </p>
+
+                <div class="cont-codigo">
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                    <span class="property-color">for=</span><span class="value-color">'color'</span><span class="txt-white">&#62Elija un Color: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+                  </code>
+
+                  <br />
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                    <span class="property-color">type=</span><span class="value-color">'color'</span>
+                    <span class="property-color">id=</span><span class="value-color">'color'</span>
+                    <span class="txt-white">/&#62</span>
+                  </code>
+                </div>
+
+                <div class="cont-input">
+                  <label for="color">Elija un color: </label>
+                  <input type="color" id="color" />                  
+                </div>
+
+                <p id="parrafo-color">
+                  Lo que podemos realizar con este efecto es <b>capurar</b> el <b>valor</b> que el usuario escoge y dinámicamente cambiar el color de un contenedor o algún elemento. Para este caso vamos a cambiar el color de éste párrafo.
+                </p>
+
+              </div>
+
+              <hr />
+
+              <!-- Type Fecha -->
+
+              <div class="cont-fecha">
+                <h4>Type Date</h4>
+
+                <p>
+                  Crean un campo de entrada que le permite al usuario introducir una fecha, que puede ser tanto como una caja de texto para validar el campo como una interfaz especial que le permite escoger una fecha.
+                </p>
+
+                <div class="cont-codigo">
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                    <span class="property-color">for=</span><span class="value-color">'fecha'</span><span class="txt-white">&#62Elija una fecha: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+                  </code>
+
+                  <br />
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                    <span class="property-color">type=</span><span class="value-color">'date'</span>
+                    <span class="property-color">id=</span><span class="value-color">'fecha'</span>
+                    <span class="txt-white">/&#62</span>
+                  </code>
+                </div>
+
+                <div class="cont-input">
+                  <label for="fecha">Elija una fecha: </label>
+                  <input type="date" id="fecha" />                  
+                </div>
+              </div>
+
+              <hr />
+
+              <!-- Type Datetime -->
+
+              <div class="cont-dateTime">
+                <h4>Type Datetime</h4>
+
+                <p>
+                  Representa un campo para una fecha y hora global que recolecta datos con información de zona horaria. Este tipo de campos es particularmente útil para la recolección de puntos en el tiempo universales, que son equivalentes en cualquier parte del mundo. Por ejemplo, la fecha y hora de una reunión online debería ser recolectada por este control, de modo que sea exactamente la misma para todos los participantes.
+                </p>
+
+                <div class="cont-codigo">
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                    <span class="property-color">for=</span><span class="value-color">'dateTime'</span><span class="txt-white">&#62Elija una fecha: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+                  </code>
+
+                  <br />
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                    <span class="property-color">type=</span><span class="value-color">'datetime'</span>
+                    <span class="property-color">id=</span><span class="value-color">'dateTime'</span>
+                    <span class="txt-white">/&#62</span>
+                  </code>
+                </div>
+
+                <div class="cont-input">
+                  <label for="dateTime">Elija una fecha: </label>
+                  <input type="datetime" id="dateTime" />                  
+                </div>
+              </div>
+
+              <hr />
+
+              <!-- Type datetime-local -->
+
+              <div class="cont-dateTimeLocal">
+                <h4>Type Datetime-local</h4>
+
+                <p>
+                  Crea un campo para que el usuario pueda escoger una fecha y hora. Los valores de este campo incluyen el año, el mes, el dia y la hora.
+                </p>
+
+                <div class="cont-codigo">
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                    <span class="property-color">for=</span><span class="value-color">'dateTimeLocal'</span><span class="txt-white">&#62Elija una fecha: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+                  </code>
+
+                  <br />
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                    <span class="property-color">type=</span><span class="value-color">'datetime-local'</span>
+                    <span class="property-color">id=</span><span class="value-color">'dateTimeLocal'</span>
+                    <span class="txt-white">/&#62</span>
+                  </code>
+                </div>
+
+                <div class="cont-input">
+                  <label for="dateTimeLocal">Elija una fecha: </label>
+                  <input type="datetime-local" id="dateTimeLocal" />                  
+                </div>
+              </div>
+
+              <hr />
+
+              <!-- Type File -->
+              <div class="cont-file">
+                <h4>Type File</h4>
+
+                <p>
+                  Permite al usuario cargar uno o más archivos desde su dispositivo a la página.
+                </p>
+
+                <div class="cont-codigo">
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                    <span class="property-color">for=</span><span class="value-color">'cargarArchivo'</span><span class="txt-white">&#62Cargue un archivo: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+                  </code>
+
+                  <br />
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                    <span class="property-color">type=</span><span class="value-color">'file'</span>
+                    <span class="property-color">id=</span><span class="value-color">'cargarArchivo'</span>
+                    <span class="txt-white">/&#62</span>
+                  </code>
+                </div>
+
+                <div class="cont-input">
+                  <label for="cargarArchivo">Cargue un archivo: </label>
+                  <input type="file" id="cargarArchivo" />                  
+                </div>
+              </div>
+
+              <hr />
+
+              <!-- Type Search -->
+              <div class="cont-busqueda">
+                <h4>Type Search</h4>
+
+                <p>
+                  Este campo es funcional cuando los usuarios quieren identificar <b>textos</b> en un sitio determinado.
+                </p>
+
+                <div class="cont-codigo">
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                    <span class="property-color">for=</span><span class="value-color">'buscar'</span><span class="txt-white">&#62Buscar: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+                  </code>
+
+                  <br />
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                    <span class="property-color">type=</span><span class="value-color">'search'</span>
+                    <span class="property-color">id=</span><span class="value-color">'buscar'</span>
+                    <span class="txt-white">/&#62</span>
+                  </code>
+                </div>
+
+                <div class="cont-input">
+                  <label for="buscar">Buscar: </label>
+                  <input type="search" id="buscar" />                  
+                </div>
+              </div>
+
+              <hr />
+
+              <!-- Type reset -->
+              <div class="cont-reset">
+                <h4>Type Reset</h4>
+
+                <p>
+                  Este tipo de input se comporta como un <b>botón</b> que al presionarlo, podemos limpiar todos los campos que hemos llenado en el formulario donde este se encuentra linkeado.
+                </p>
+
+                <div class="cont-codigo">
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                    <span class="property-color">for=</span><span class="value-color">'limpiar'</span><span class="txt-white">&#62Limpiar formulario: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+                  </code>
+
+                  <br />
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                    <span class="property-color">type=</span><span class="value-color">'reset'</span>
+                    <span class="property-color">id=</span><span class="value-color">'limpiar'</span>
+                    <span class="txt-white">/&#62</span>
+                  </code>
+                </div>
+
+                <div class="cont-input">
+                  <label for="limpiar">Limpiar Formulario: </label>
+                  <input type="reset" id="limpiar" />                  
+                </div>
+              </div>
+
+              <hr />
+              
+              <!-- Type Boton -->
+              <div class="cont-boton">
+                <h4>Type Button</h4>
+
+                <p>
+                  Representa un botón sin una acción predefinida asociada, lo que significa que por defecto, el botón no producirá ningún efecto cuando sea presionado. Estos botones son normalmente utilizados con programas del lado cliente que son ejecutados cuando el usuario los presiona.
+                </p>
+
+                <div class="cont-codigo">
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                    <span class="property-color">type=</span><span class="value-color">'button'</span>
+                    <span class="property-color">value=</span><span class="value-color">'Boton Enviar Formulario'</span>
+                    <span class="txt-white">/&#62</span>
+                  </code>
+                </div>
+
+                <div class="cont-input">
+                  <input type="button" value="Boton Enviar Formulario" />                  
+                </div>
+              </div>
+
+              <hr />
+
+              <!-- Type Submit -->
+              <div class="cont-submit">
+                <h4>Type Submit</h4>
+
+                <p>
+                  Representa un botón sin una acción predefinida asociada, lo que significa que por defecto, el botón no producirá ningún efecto cuando sea presionado. Cuando a este botón se le define una función es para <b>enviar los datos</b> que captura el formulario a una base de datos.
+                </p>
+
+                <div class="cont-codigo">
+
+                  <code>
+                    <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                    <span class="property-color">type=</span><span class="value-color">'submit'</span>
+                    <span class="property-color">value=</span><span class="value-color">'Submit'</span>
+                    <span class="txt-white">/&#62</span>
+                  </code>
+                </div>
+
+                <div class="cont-input">
+                  <input type="submit" value="Submit" />                  
+                </div>
+              </div>
+
+            </fieldset>
+          </form>
+        </article>
+
+        <hr />
+
+        <article class="cont-propiedadesInput">
+          <h2>Propiedades de la etiqueta Input</h2>
+
+          <!-- Introducción -->
+          <div class="cont-introduccion">            
+            <h3>Introducción</h3>
   
-      <p>
-        La etiqueta <b>input</b> es una importante herramienta que nos permite <b>capturar distintos tipos de datos</b>. Funciona para capturar: <b>texto, números, e-mails, direcciones, fechas, horas, etc</b>. Estos son los diferentes tipos de input que existen con su respectiva función en el navegador:
-      </p>
-  
-      <p>
-        Estos tipos de datos deben ser especificados en un <b>atributo llamado type</b> que es propio de la etiqueta input y solo <b>puede recibir 1 valor</b>, es decir, el dato solo <b>solo puede ser de 1 solo tipo</b>.
-      </p>
-  
-      <form autocomplete="on" name="Tipos de inputs"> 
-        <fieldset>
-          <p>Selección de color:
-            <input type="color">
+            <p>
+              Dentro de las etiquetas input podemos agregarle propiedades que modificaran su comportamiento dentro del campo, estas son adicionales al tipo de dato a la que se les está solicitando:
+              <b>name, id, disable, readonly, max length, max, min, value, step, placehorlder</b>.
+            </p>
+
+            <br />
+
+            <p>
+              Un <b>elemento input</b> puede tener <b>todos los atributos</b> que <b>sean necesarios</b>. Debemos tener en cuenta también que no todos los atributos son soportados en los navegadores, si deseamos saber eso podemos ingresar a la web <span><a class="can-i-use" href="https://caniuse.com/">caniuse.com</a></span>.
+            </p>
+          </div>
+
+          <!-- Name or ID -->
+          <div>
+            <h3>Propiedad Name o Id</h3>
+
+            <p>
+              Las propiedades <b>name o ID</b> trabajan de manera similar. La propiedad <b>name</b> sirve para nombrar una etiqueta para reconocer el tipo de dato que se esta tomando. Por ejemplo, en el caso de que estemos pidiendo un dato de texto para el nombre o apellido de una persona, esta propiedad (name) recibe el valor de <b>nombre</b>. <br />
+              La propiedad <b>id</b> lo que hace es darle un identificador al <b>input</b> para que pueda ser modificado o conectado a una propiedad de <b>CSS o JavaScript</b>, es recomendable darle un valor que este relacionado al tipo de dato que se está pidiendo. En el caso de los inputs también se utiliza para que el atributo <b>for de los label apunte hacia ese mismo nombre</b> y así puedan asociarse.
+            </p>
+
+            <div class="cont-codigo">
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                <span class="property-color">type=</span><span class="value-color">'text'</span>
+                <span class="property-color">id=</span><span class="value-color">'nombre'</span>
+                <span class="property-color">name=</span><span class="value-color">'Nombre'</span>
+                <span class="txt-white">/&#62</span>
+              </code>
+          </div>
+
+          <!-- Disable -->
+          <div class="cont-disable">
+            <h3>Propiedad Disable</h3>
+
+            <p>
+              Este atributo sirve para <b>deshabilitar un campo</b> y así impide que se ingresen datos. Este atributo puede tomar dos valores <b>true or false</b>.
+            </p>
+
+            <div class="cont-codigo">
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                <span class="property-color">type=</span><span class="value-color">'text'</span>
+                <span class="property-color">placeholder=</span><span class="value-color">'No se puede modificar este campo'</span>
+                <span class="property-color">disable=</span><span class="value-color">'true'</span>
+                <span class="txt-white">/&#62</span>
+              </code>
+            </div>
+
+            <div class="cont-disable">
+              <input type="text" placeholder="No se puede modificar este campo" disabled="true" />
+            </div>
+          </div>
+
+          <!-- Readonly -->
+          <div class="cont-readonly">
+            <h3>Propiedad Readonly</h3>
+
+            <p>
+              Esta propiedad es parecida a <b>disable</b>, la diferencia es que es un campo solo para <b>mostrar</b> información o una <b>entrada</b> que no es editable, es decir, que solo se puede apreciar su <b>lectura</b>.
+            </p>
+
+            <div class="cont-codigo">
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                <span class="property-color">type=</span><span class="value-color">'text'</span>
+                <span class="property-color">readonly</span>
+                <span class="txt-white">/&#62</span>
+              </code>
+            </div>
+
+            <div class="readonly">
+              <input type="text" value="Campo de solo Lectura" readonly />
+            </div>
+          </div>
+
+          <!-- Max-Length -->
+          <div class="cont-maxLength">
+            <h3>Propiedad Max Length</h3>
+
+            <p>
+              Le especifica al navegador cuál es el <b>máximo números de caracteres</b> que puede <b>dejar ingresar</b> en el <b>cuadro de entrada</b>.
+            </p>
+
+            <div class="cont-codigo">
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                <span class="property-color">type=</span><span class="value-color">'text'</span>
+                <span class="property-color">maxlength=</span><span class="value-color">'30'</span>
+                <span class="property-color">placeholder=</span><span class="value-color">'Solo 30 caracteres'</span>
+                <span class="txt-white">/&#62</span>
+              </code>
+            </div>
+
+            <div class="max-length">
+              <input type="text" maxlength="30" placeholder="Solo 30 caracteres" />
+            </div>
+          </div>
+
+          <!-- Value -->
+          <div class="cont-value">
+            <h3>Propiedad Value</h3>
+
+            <p>
+              Es asignado para <b>darle un valor por defecto</b> al elemento input. Es utilizado en caso de que la <b>persona olvide llenar</b> este cuadro de entrada y necesitemos dejar un valor específico que debemos guardar. En otras palabras, retorna el valor que contiene el input. Debemos tener mucho cuidado con autocompletar este campo ya que es el dato que se guardará en la base de datos.
+            </p>
+
+            <div class="cont-codigo">
+
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                <span class="property-color">for=</span><span class="value-color">'nombrePrincipal'</span><span class="txt-white">&#62Ingrese su nombre: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+              </code>
+
+              <br />
+
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                <span class="property-color">type=</span><span class="value-color">'text'</span>
+                <span class="property-color">value=</span><span class="value-color">'Juan (Autocompletado)'</span>
+                <span class="property-color">id=</span><span class="value-color">'nombrePrincipal'</span>
+                <span class="txt-white">/&#62</span>
+              </code>
+            </div>
+
+            <div class="value">
+              <label for="nombrePrincipal">Ingrese su nombre: </label>
+              <input type="text" value="Juan (Autocompletado)" id="nombrePrincipal" />
+            </div>
+
+          </div>
+
+          <!-- Placeholder -->
+
+          <div class="cont-placeholder">
+            <h3>Propiedad Placeholder</h3>
+
+            <p>
+              Se usa para dar una <b>pista</b> al usuario sobre que debe <b>completar</b> en el campo input solicitado. El <b>mensaje aparecerá</b> dentro del cuadro de texto, mientras esté <b>vacio</b>.
+            </p>
+
+            <div class="cont-codigo">
+
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                <span class="property-color">for=</span><span class="value-color">'direccion'</span><span class="txt-white">&#62Ingrese su direccion: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+              </code>
+
+              <br />
+
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                <span class="property-color">type=</span><span class="value-color">'text'</span>
+                <span class="property-color">placeholder=</span><span class="value-color">'Roca 1234'</span>
+                <span class="property-color">id=</span><span class="value-color">'direccion'</span>
+                <span class="txt-white">/&#62</span>
+              </code>
+            </div>
+
+            <div class="value">
+              <label for="direccion">Ingrese su Dirección: </label>
+              <input type="text" placeholder="Ej: Roca 1234" id="direccion" />
+            </div>
+            
+          </div>
+
+        </article>
+
+        <hr />
+
+        <!-- Validar Campos -->
+        <article class="cont-validaciones">
+          <h2>Validar los campos</h2>
+
+          <p>
+            El atributo <strong>required</strong> se aplica dentro del elemento <strong>input</strong> y es muy útil para realizar las <b>validaciones</b> de algunos campos de nuestro formulario. En el siguiente formulario de ejemplo tenemos algunos campos para completar y cada uno de ellos con el atributo required.
           </p>
-          <p>Fecha <br/>
-            <input type="date">
-          </p>
-          <p>Fecha Hora <br/>
-            <input type="datetime">
-          </p>
-          <p>Fecha Hora Local <br/>
-            <input type="datetime-local">
-          </p>
-          <p>Archivos Planos, Word, Excel y Otros <br/>
-            <input type="file">
-          </p>
-          <p>Email <br/>
-            <input type="email">
-          </p>
-          <p>Mes <br/>
-            <input type="month">
-          </p>
-          <p>Números <br/>
-            <input type="number">
-          </p>
-          <p>Rango de Números <br/>
-            <input type="range" min="0" max="10">
-          </p>
-          <p>Búsqueda <br/>
-            <input type="search">
-          </p>
-          <p>Teléfono <br/>
-            <input type="tel">
-          </p>
-          <p>Hora <br/>
-            <input type="time">
-          </p>
-          <p>Dirección URL <br/>
-            <input type="url">
-          </p>
-          <p>Semana <br/>
-            <input type="week">
-          </p>
-          <p>Reset <br/>
-            <input type="reset">
-          </p>
-          <p>Botón HTML <br/>
-            <input type="button" value="Botón HTML">
-          </p>
-          <p>Envío del Formulario <br/>
-            <input type="submit">
-          </p>
-        </fieldset>
-      </form>
-  
-      <p>
-        El <b>tipo de dato RESET</b> sirve para <b>limpiar el formulario</b> que hemos completado.
-      </p>
+
+          <div class="cont-codigo">
+
+            <!-- Etiqueta Form -->
+            <code>
+              <span class="txt-white">&#60</span><span class="tag-color">form</span><span class="txt-white">&#62</span>
+            </code>
+
+            <br />
+
+            <!-- Fielset -->
+            <code class="margin-20">
+              <span class="txt-white">&#60</span><span class="tag-color">fielset</span><span class="txt-white">&#62</span>
+            </code>
+
+            <br />
+
+            <!-- Legend -->
+            <code class="margin-40">
+              <span class="txt-white">&#60</span><span class="tag-color">legend</span><span class="txt-white">&#62Validación de Formularios&#60/</span><span class="tag-color">legend</span><span class="txt-white">&#62</span>
+            </code>
+
+            <br />
+
+            <!-- Campo Nombre -->
+            <code class="margin-40">
+              <span class="txt-white">&#60</span><span class="tag-color">label</span>
+              <span class="property-color">for=</span><span class="value-color">'nombre-primario'</span><span class="txt-white">&#62Ingrese su nombre: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+            </code>
+
+            <br />
+
+            <code class="margin-40">
+              <span class="txt-white">&#60</span><span class="tag-color">input</span>
+              <span class="property-color">type=</span><span class="value-color">'text'</span>
+              <span class="property-color">id=</span><span class="value-color">'nombre-primario'</span>
+              <span class="property-color">placeholder=</span><span class="value-color">'Ej: Juan'</span>
+              <span class="txt-white">/&#62</span>
+            </code>
+
+            <br /><br />
+
+            <!-- Campo Apellido -->
+            <code class="margin-40">
+              <span class="txt-white">&#60</span><span class="tag-color">label</span>
+              <span class="property-color">for=</span><span class="value-color">'apellido-primario'</span><span class="txt-white">&#62Ingrese su apellido: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+            </code>
+
+            <br />
+
+            <code class="margin-40">
+              <span class="txt-white">&#60</span><span class="tag-color">input</span>
+              <span class="property-color">type=</span><span class="value-color">'text'</span>
+              <span class="property-color">id=</span><span class="value-color">'apellido-primario'</span>
+              <span class="property-color">placeholder=</span><span class="value-color">'Ej: Decia'</span>
+              <span class="txt-white">/&#62</span>
+            </code>
+
+            <br><br>
+
+            <!-- Campo Email -->
+            <code class="margin-40">
+              <span class="txt-white">&#60</span><span class="tag-color">label</span>
+              <span class="property-color">for=</span><span class="value-color">'email-usuario'</span><span class="txt-white">&#62Ingrese su email: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+            </code>
+
+            <br />
+
+            <code class="margin-40">
+              <span class="txt-white">&#60</span><span class="tag-color">input</span>
+              <span class="property-color">type=</span><span class="value-color">'email'</span>
+              <span class="property-color">id=</span><span class="value-color">'email-usuario'</span>
+              <span class="property-color">placeholder=</span><span class="value-color">'Ej: Juan@gmail.com'</span>
+              <span class="txt-white">/&#62</span>
+            </code>
+
+            <br><br>
+
+            <!-- Campo Edad -->
+            <code class="margin-40">
+              <span class="txt-white">&#60</span><span class="tag-color">label</span>
+              <span class="property-color">for=</span><span class="value-color">'edad-usuario'</span><span class="txt-white">&#62Ingrese su edad: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+            </code>
+
+            <br />
+
+            <code class="margin-40">
+              <span class="txt-white">&#60</span><span class="tag-color">input</span>
+              <span class="property-color">type=</span><span class="value-color">'number'</span>
+              <span class="property-color">id=</span><span class="value-color">'edad-usuario'</span>
+              <span class="property-color">placeholder=</span><span class="value-color">'Ej: 29'</span>
+              <span class="txt-white">/&#62</span>
+            </code>
+
+            <br>
+
+            <!-- Cierre Fieldset -->
+            <code class="margin-20">
+              <span class="txt-white">&#60/</span><span class="tag-color">fielset</span><span class="txt-white">&#62</span>
+            </code>
+
+            <br />
+
+            <!-- Cierre Form -->
+            <code>
+              <span class="txt-white">&#60/</span><span class="tag-color">form</span><span class="txt-white">&#62</span>
+            </code>
+
+          </div>
+
+          <form class="form-contacto">
+            <fieldset>  
+              <legend>Validación de Formularios</legend>
+
+              <div class="cont-input">
+                <label for="nombre-primario">Nombre: </label>
+                <input id="nombre-primario" type="text" placeholder="Ej: Juan" size="50px" required />
+              </div>
+
+              <div class="cont-input">
+                <label for="apellido-principal">Apellido: </label>
+                <input id="apellido-principal" type="text" placeholder="Ej: Decia" size="50px" required />
+              </div>
+
+              <div class="cont-input">
+                <label for="email-usuario">E-mail: </label>
+                <input id="email-usuario" type="email" placeholder="Ej: Juan@gmail.com" required />
+              </div>
+
+              <div class="cont-input">
+                <label for="edad-usuario">Edad: </label>
+                <input id="edad-usuario" type="number" placeholder="Ej: 29" required />
+              </div>
+
+              <input type="submit" value="Enviar">
+          
+            </fieldset>
+          </form>
+        </article>
+
+        <hr />
+
+      </section>
   
       <h2>Captura de datos especiales</h2>
-  
-      <p>
-          En algunos casos debemos capturar datos especiales como contraseñas, selecciones especiales o listas. 
-      </p>
-  
-      <h3>Contraseña</h3>
-  
-      <p>
-  
-          Para las contraseñas usamos la etiqueta <b>"input"</b> con el atributo <b>type=”password”</b>, lo que hará que no se muestren 
-          los caracteres cuando el usuario escribe. <br /> <br />
-      
-          <label for="contraseña">Contraseña: </label>
-          <input name="contraseña" type="password" />
-  
-      </p>
-  
-      <hr />
   
       <h3>Checkbox</h3>
   
@@ -209,5 +1025,6 @@
       </p>
     </main>
 
+    <script src="../scripts/index.js"></script>
   </body>
 </html>

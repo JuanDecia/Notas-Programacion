@@ -1,12 +1,26 @@
-window.onpageshow = (event) => {
-    var menuToggle = document.getElementById("menu-toggle");
+// ######### FUNCIÓN COLOR FORMULARIO
+let colorPredeterminado = '#000000';
 
-    if (menuToggle.checked) {
-      menuToggle.checked = false;
+const cambiarColor = () => {
+    color = document.querySelector('#color');
+    color.value = colorPredeterminado;
+    color.addEventListener('input', actualizarPrimero, false);
+    color.addEventListener('change', actualizarTodo, false);
+    color.select();
+}
+
+function actualizarPrimero (event) {
+    let p = document.querySelector('#parrafo-color');
+
+    if (p) {
+        p.style.color = event.target.value;
     }
+}
 
-    // Agrega el siguiente código para desmarcar el menú toggle cuando se recargue la página
-    if (event.persisted) {
-        menuToggle.checked = false;
-      }
-  };
+function actualizarTodo(event) {
+    document.querySelectorAll('p').forEach(function (p) {
+        p.style.color = event.target.value;
+    });
+}
+
+cambiarColor();
