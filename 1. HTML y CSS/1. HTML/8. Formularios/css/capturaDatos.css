@@ -2,6 +2,10 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     max-width: 85%;
     margin: auto;
@@ -122,6 +126,16 @@ nav {
 
 /* -- Artículo Introducción -- */
 
+.cont-arriba {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+}
+
+svg {
+    width: 60px;
+}
+
 /* Bloque Código */
 
 .cont-codigo {
@@ -219,4 +233,21 @@ hr {
 
 .form-contacto {
     margin: 25px 0;
+}
+
+/* -- Artículo Captura de Datos */
+
+.burger {
+    width: 30px;
+}
+
+.textarea {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* -- Articulo Buenas Prácticas -- */
+
+li {
+    padding: 7px;
 }

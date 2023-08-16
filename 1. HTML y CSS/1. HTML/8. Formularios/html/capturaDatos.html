@@ -17,7 +17,7 @@
 
       <header>
   
-        <h1>Captura de Datos y tipos de Inputs</h1>
+        <h1 id="inicio">Captura de Datos y tipos de Inputs</h1>
   
         <nav>
   
@@ -41,6 +41,13 @@
       </header>
 
       <section>
+
+        <div class="cont-arriba">
+          <a href="#inicio">
+            <svg fill="#878787" viewBox="0 0 24 24" id="up-direction-square" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color" stroke="#878787"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><rect id="primary" x="2" y="2" width="20" height="20" rx="2" style="fill: #c9c9c9;"></rect><path id="secondary" d="M14,12v4a1,1,0,0,1-1,1H11a1,1,0,0,1-1-1V12H9.18a1,1,0,0,1-.76-1.65l2.82-3.27a1,1,0,0,1,1.52,0l2.82,3.27A1,1,0,0,1,14.82,12Z" style="fill: #111212;"></path></g></svg>
+          </a>
+        </div>
+
         <article class="cont-introduccion">
           <h2>Introducción</h2>
 
@@ -102,7 +109,7 @@
 
                 <div class="cont-input">
                   <label for="nombre">Ingrese su Nombre: </label>
-                  <input type="text" id="nombre" placeholder="Ej: Juan." />
+                  <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan." />
                 </div>
 
                 <p>
@@ -197,9 +204,7 @@
                   <code>
                     <span class="txt-white">&#60</span><span class="tag-color">label</span>
                     <span class="property-color">for=</span><span class="value-color">'numeroMax'</span><span class="txt-white">&#62Ingrese un valor hasta 50: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
-                  </code>
-
-                  <br />
+                  </code> <br />
 
                   <code>
                     <span class="txt-white">&#60</span><span class="tag-color">input</span>
@@ -233,9 +238,7 @@
                   <code>
                     <span class="txt-white">&#60</span><span class="tag-color">label</span>
                     <span class="property-color">for=</span><span class="value-color">'decadas'</span><span class="txt-white">&#62Ingrese cuantas decadas avanzar: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
-                  </code>
-
-                  <br />
+                  </code> <br />
 
                   <code>
                     <span class="txt-white">&#60</span><span class="tag-color">input</span>
@@ -267,9 +270,7 @@
                   <code>
                     <span class="txt-white">&#60</span><span class="tag-color">label</span>
                     <span class="property-color">for=</span><span class="value-color">'email'</span><span class="txt-white">&#62Ingrese un email: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
-                  </code>
-
-                  <br />
+                  </code> <br />
 
                   <code>
                     <span class="txt-white">&#60</span><span class="tag-color">input</span>
@@ -303,9 +304,7 @@
                   <code>
                     <span class="txt-white">&#60</span><span class="tag-color">label</span>
                     <span class="property-color">for=</span><span class="value-color">'password'</span><span class="txt-white">&#62Ingrese contraseña: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
-                  </code>
-
-                  <br />
+                  </code> <br />
 
                   <code>
                     <span class="txt-white">&#60</span><span class="tag-color">input</span>
@@ -642,8 +641,8 @@
             <h3>Propiedad Name o Id</h3>
 
             <p>
-              Las propiedades <b>name o ID</b> trabajan de manera similar. La propiedad <b>name</b> sirve para nombrar una etiqueta para reconocer el tipo de dato que se esta tomando. Por ejemplo, en el caso de que estemos pidiendo un dato de texto para el nombre o apellido de una persona, esta propiedad (name) recibe el valor de <b>nombre</b>. <br />
-              La propiedad <b>id</b> lo que hace es darle un identificador al <b>input</b> para que pueda ser modificado o conectado a una propiedad de <b>CSS o JavaScript</b>, es recomendable darle un valor que este relacionado al tipo de dato que se está pidiendo. En el caso de los inputs también se utiliza para que el atributo <b>for de los label apunte hacia ese mismo nombre</b> y así puedan asociarse.
+              Las propiedades <b>name o ID</b> trabajan de manera similar. La propiedad <b>name</b> sirve para nombrar una etiqueta para reconocer el tipo de dato que se está tomando. Por ejemplo, en el caso de que estemos pidiendo un dato de texto para el nombre o apellido de una persona, esta propiedad (name) recibe el valor de <b>nombre</b>. <br />
+              La propiedad <b>id</b> lo que hace es darle un identificador al <b>input</b> para que pueda ser modificado o conectado a una propiedad de <b>CSS o JavaScript</b>, es recomendable darle un valor que esté relacionado al tipo de dato que se está pidiendo. En el caso de los inputs también se utiliza para que el atributo <b>for de los label apunte hacia ese mismo nombre</b> y así puedan asociarse.
             </p>
 
             <div class="cont-codigo">
@@ -763,7 +762,7 @@
             <h3>Propiedad Placeholder</h3>
 
             <p>
-              Se usa para dar una <b>pista</b> al usuario sobre que debe <b>completar</b> en el campo input solicitado. El <b>mensaje aparecerá</b> dentro del cuadro de texto, mientras esté <b>vacio</b>.
+              Se usa para dar una <b>pista</b> al usuario sobre qué debe <b>completar</b> en el campo input solicitado. El <b>mensaje aparecerá</b> dentro del cuadro de texto, mientras esté <b>vacío</b>.
             </p>
 
             <div class="cont-codigo">
@@ -808,31 +807,23 @@
             <!-- Etiqueta Form -->
             <code>
               <span class="txt-white">&#60</span><span class="tag-color">form</span><span class="txt-white">&#62</span>
-            </code>
-
-            <br />
+            </code> <br />
 
             <!-- Fielset -->
             <code class="margin-20">
               <span class="txt-white">&#60</span><span class="tag-color">fielset</span><span class="txt-white">&#62</span>
-            </code>
-
-            <br />
+            </code> <br />
 
             <!-- Legend -->
             <code class="margin-40">
               <span class="txt-white">&#60</span><span class="tag-color">legend</span><span class="txt-white">&#62Validación de Formularios&#60/</span><span class="tag-color">legend</span><span class="txt-white">&#62</span>
-            </code>
-
-            <br />
+            </code> <br />
 
             <!-- Campo Nombre -->
             <code class="margin-40">
               <span class="txt-white">&#60</span><span class="tag-color">label</span>
               <span class="property-color">for=</span><span class="value-color">'nombre-primario'</span><span class="txt-white">&#62Ingrese su nombre: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
-            </code>
-
-            <br />
+            </code> <br />
 
             <code class="margin-40">
               <span class="txt-white">&#60</span><span class="tag-color">input</span>
@@ -848,9 +839,7 @@
             <code class="margin-40">
               <span class="txt-white">&#60</span><span class="tag-color">label</span>
               <span class="property-color">for=</span><span class="value-color">'apellido-primario'</span><span class="txt-white">&#62Ingrese su apellido: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
-            </code>
-
-            <br />
+            </code> <br />
 
             <code class="margin-40">
               <span class="txt-white">&#60</span><span class="tag-color">input</span>
@@ -860,15 +849,13 @@
               <span class="txt-white">/&#62</span>
             </code>
 
-            <br><br>
+            <br /><br />
 
             <!-- Campo Email -->
             <code class="margin-40">
               <span class="txt-white">&#60</span><span class="tag-color">label</span>
               <span class="property-color">for=</span><span class="value-color">'email-usuario'</span><span class="txt-white">&#62Ingrese su email: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
-            </code>
-
-            <br />
+            </code> <br />
 
             <code class="margin-40">
               <span class="txt-white">&#60</span><span class="tag-color">input</span>
@@ -878,15 +865,13 @@
               <span class="txt-white">/&#62</span>
             </code>
 
-            <br><br>
+            <br /><br />
 
             <!-- Campo Edad -->
             <code class="margin-40">
               <span class="txt-white">&#60</span><span class="tag-color">label</span>
               <span class="property-color">for=</span><span class="value-color">'edad-usuario'</span><span class="txt-white">&#62Ingrese su edad: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
-            </code>
-
-            <br />
+            </code> <br />
 
             <code class="margin-40">
               <span class="txt-white">&#60</span><span class="tag-color">input</span>
@@ -894,16 +879,12 @@
               <span class="property-color">id=</span><span class="value-color">'edad-usuario'</span>
               <span class="property-color">placeholder=</span><span class="value-color">'Ej: 29'</span>
               <span class="txt-white">/&#62</span>
-            </code>
-
-            <br>
+            </code> <br />
 
             <!-- Cierre Fieldset -->
             <code class="margin-20">
               <span class="txt-white">&#60/</span><span class="tag-color">fielset</span><span class="txt-white">&#62</span>
-            </code>
-
-            <br />
+            </code> <br />
 
             <!-- Cierre Form -->
             <code>
@@ -944,87 +925,375 @@
 
         <hr />
 
-      </section>
-  
-      <h2>Captura de datos especiales</h2>
-  
-      <h3>Checkbox</h3>
-  
-      <p>
-  
-          El checkbox es una caja le permite al usuario activar una opción o no. Para crear un checkbox empleamos la etiqueta "input" con el atributo 
-          type=”Checkbox”. Es importante colocar una etiqueta (label) y enlazarla con el atributo for al checkbox a través de su id, donde el valor for 
-          y el valor del id deben coincidir. <br /> <br />
-      
-          <label for="terminos">Checkbox: Acepto los Términos y Condiciones</label>
-          <input id="terminos" type="checkbox" value="yes" required/>
-      
-      </p>
-  
-      <hr />
-  
-      <h3>Radio</h3>
-  
-      <p>
-  
-          El radio o radio button es una entrada que permite seleccionar exclusivamente entre un conjunto de alternativas. Para crear un radio button
-          usamos la etiqueta <b>"input"</b> con el atributo <b>type=”radio”</b>. Es importante colocar una etiqueta (label) y enlazarla con el atributo for al 
-          checkbox con el id, donde el valor for y el valor del id deben coincidir. También, es importante colocar la propiedad
-          de <b>value</b> ya que va a contener el valor de la casilla que marque el usuario. <br /> <br />
-      
-          <label for="mañana">Mañana</label>
-          <input id="mañana" name="horario" type="radio" value="M" />
-          <label for="tarde">Tarde</label>
-          <input id="tarde" name="horario" type="radio" value="T" />
-      
-      </p>
-  
-      <hr />
-  
-      <h3>Lista con grupos</h3>
-      
-      <p>
-          Para crear una lista con grupos utilizamos la etiqueta <b>select</b> y dentro de ella, 
-          la etiqueta <b>otpgroup</b> para definir el grupo, por cada etiqueta otpgroup es un grupo 
-          diferente. Para definir las opciones debemos utilizar la etiqueta <b>option</b> y agregar el 
-          atributo value que les dará un valor único a la opción que le corresponda, dentro de las 
-          etiquetas de <option> agregaremos el valor que aparecerá en la lista de grupos. También, es importante agregar
-          la propiedad de <b>value</b> ya que la casilla seleccionada contendrá el valor que el usuario ha elegido.
-      </p>
-      
-      <label for="ciudades">Lista con Grupos: Ciudad</label>
-      <select name="ciudades">
-          <optgroup label="Latinoamerica">
-              <option value="caracas">Caracas</option>
-              <option value="bogota">Bogotá</option>
-          </optgroup>
-          <optgroup label="Europa">
-              <option name="europa" value="madrid">Madrid</option>
-              <option name="europa" value="londres">Londres</option>
-          </optgroup>
-      </select>
-  
-      <hr />
-  
-      <h3>Lista de selección múltiple</h3>
-  
-      <p>
-          Para crear una lista de selección múltiple usamos la etiqueta <b>select</b> que permite 
-          seleccionar múltiples elementos. El primer elemento se selecciona con un click, pero los 
-          adicionales se seleccionan usando (ctrl+click) ó (cmd+click) según el navegador y sistema operativo. 
-      </p>
-    
-      <p>
-          <label for="tipo">Tipo</label>
-          <select name="tipo" multiple="true">
-            <option value="musico">Músico</option>
-            <option value="pintor">Pintor</option>
-            <option value="actor">Actor</option>
-            <option value="escultor">Escultor</option>
-          </select>
-      </p>
-    </main>
+        <article class="cont-datosEspeciales">
+          <h2>Captura de datos especiales</h2>
+          
+          <!-- Checkbox -->
+          <div class="cont-checkbox">
+            <h3>Checkbox</h3>
 
+            <p>
+              El checkbox es una caja le permite al usuario activar una opción o no. Para crear un checkbox empleamos la etiqueta <strong>&#60input /&#62</strong> con el atributo <b>type=”checkbox”</b>. Es importante colocar una etiqueta <strong>&#60label&#62</strong> y enlazarla con el atributo <strong>for</strong> al checkbox a través de su id, donde el valor for y el valor del id deben coincidir.
+            </p>
+
+            <div class="cont-codigo">
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                <span class="property-color">for=</span><span class="value-color">'terminos'</span><span class="txt-white">&#62Acepto los términos y condiciones&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+              </code> <br />
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                <span class="property-color">id=</span><span class="value-color">'terminos'</span>
+                <span class="property-color">type=</span><span class="value-color">'checkbox'</span>
+                <span class="property-color">required</span>
+                <span class="txt-white">/&#62</span>
+              </code>
+            </div>
+
+            <div class="cont-checkbox">
+              <h4>Ejemplo Simple Checkbox</h4>
+
+              <div class="cont-input">
+                <label for="terminos">Checkbox: Acepto los Términos y Condiciones</label>
+                <input id="terminos" type="checkbox" required />
+              </div>
+            </div>
+
+            <p>
+              A diferencia de los inputs de tipo radio, los inputs de tipo checkbox son útiles cuando se quiere permitir al usuario seleccionar varias opciones de una lista. Comparte atributos con los otros tipos pero además tiene otros como el atributo checked, que permite marcar un input de tipo checkbox como marcado.
+            </p> <br />
+
+            <p>
+              Uno de los casos que utilizamos este tipo de <b>input</b> es para el <b>menú desplegable</b> el cual colocamos la etiqueta <strong>label</strong> en una <b>imagen</b> como el <b>burger menu</b> y luego, colocamos un <b>input</b> con la propiedad <b>type</b> y su valor en <b>checkbox</b>. Entonces, al estar <b>linkeados</b> el input con la etiqueta label, al hacer <b>click</b> en la imagen, estaremos <b>activando</b> o <b>desactivando</b> el <strong>checkbox</strong>. A continuación, podremos probar el ejemplo para visualizarlo en práctica.
+            </p>
+
+            <div class="cont-codigo">
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                <span class="property-color">for=</span><span class="value-color">'burger-menu'</span><span class="txt-white">&#62</span>
+              </code> <br />
+
+              <code class="margin-20">
+                <span class="txt-white">&#60</span><span class="tag-color">img</span>
+                <span class="property-color">class=</span><span class="value-color">'burger'</span>
+                <span class="property-color">src=</span><span class="value-color">'../img/menu.svg'</span>
+                <span class="txt-white">/&#62</span>
+              </code> <br />
+
+              <code>
+                <span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+              </code> <br />
+
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                <span class="property-color">id=</span><span class="value-color">'burger-menu'</span>
+                <span class="property-color">type=</span><span class="value-color">'checkbox'</span>
+                <span class="property-color">required</span>
+                <span class="txt-white">/&#62</span>
+              </code> <br />
+            </div>
+
+            <div class="cont-checkbox">
+              <h4>Ejemplo Menú Hamburguesa</h4>
+
+              <div class="cont-input">
+                <label for="burger-menu">
+                  <img class="burger" src="../img/menu.svg" alt="" />
+                  <span>Hacer Click en la img</span>
+                </label>
+                <input type="checkbox" id="burger-menu" />
+              </div>
+            </div>
+            
+            <p>
+              Para que quede funcional para el usuario, debemos usar los estilos de <b>css</b>. Debemos aplicar la propiedad <strong>display</strong> con el valor <b>none</b> para ocultar la caja del checkbox.
+            </p>
+
+          </div>
+
+          <hr />
+
+          <!-- Radio -->
+          <div class="cont-radio">
+            <h3>Radio</h3>
+
+            <p>
+              El radio o radio button es una entrada que permite seleccionar una opción exclusivamente entre un conjunto de alternativas. Para crear un radio button usamos la etiqueta <b>&#60input /&#62</b> con el atributo <b>type=”radio”</b>. Es importante colocar la propiedad <b>value</b> ya que, va a contener el valor de la casilla que marque el usuario para enviarla a procesar al servidor.
+            </p>
+
+            <div class="cont-codigo">
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                <span class="property-color">for=</span><span class="value-color">'manana'</span><span class="txt-white">&#62Mañana </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+              </code> <br />
+  
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                <span class="property-color">type=</span><span class="value-color">'radio'</span>
+                <span class="property-color">id=</span><span class="value-color">'manana'</span>
+                <span class="property-color">value=</span><span class="value-color">'m'</span>
+                <span class="txt-white">/&#62</span>
+              </code> <br /> <br />
+
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                <span class="property-color">for=</span><span class="value-color">'tarde'</span><span class="txt-white">&#62Tarde </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+              </code> <br />
+  
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">input</span>
+                <span class="property-color">type=</span><span class="value-color">'radio'</span>
+                <span class="property-color">id=</span><span class="value-color">'tarde'</span>
+                <span class="property-color">value=</span><span class="value-color">'t'</span>
+                <span class="txt-white">/&#62</span>
+              </code>
+            </div>
+
+            <h4>Ejemplo Radio Button</h4>
+
+            <div class="cont-input">
+              <label for="mañana">Mañana</label>
+              <input id="mañana" name="horario" type="radio" value="M" />
+              <label for="tarde">Tarde</label>
+              <input id="tarde" name="horario" type="radio" value="T" />
+            </div>
+          </div>
+
+          <hr />
+          
+          <!-- Grupos -->
+          <div class="cont-grupos">
+            <h3>Lista con grupos</h3>
+            
+            <p>
+              Para crear una <strong>lista con grupos</strong> utilizamos la etiqueta <b>&#60select&#62</b> y dentro de la estructura de ella, debemos utilizar la etiqueta <strong>&#60optgroup&#62</strong> para definir el <strong>grupo</strong>, por cada etiqueta &#60optgroup&#62 es un grupo diferente. Para definir las <strong>opciones</strong> de cada grupo, debemos utilizar la etiqueta <b>&#60option&#62</b> y agregar el atributo <strong>value</strong>, que les dará un valor único a la opción que le corresponda. Dentro de las etiquetas de <strong>&#60option&#62</strong> <b>agregaremos</b> el <b>valor</b> que aparecerá en la lista de grupos. También, es importante agregar la propiedad de <b>value</b>, ya que, la casilla seleccionada contendrá el valor que el usuario ha elegido.
+            </p>
+
+            <div class="cont-codigo">
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                <span class="property-color">for=</span><span class="value-color">'ciudades'</span><span class="txt-white">&#62Lista con Grupos: Ciudad</span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+              </code> <br />
+
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">select</span>
+                <span class="property-color">name=</span><span class="value-color">'ciudades'</span><span class="txt-white">&#62</span>
+              </code> <br />
+
+              <code class="margin-20">
+                <span class="txt-white">&#60</span><span class="tag-color">optgroup</span>
+                <span class="property-color">label=</span><span class="value-color">'Latinoamerica'</span><span class="txt-white">&#62</span>
+              </code> <br />
+
+              <code class="margin-40">
+                <span class="txt-white">&#60</span><span class="tag-color">option</span>
+                <span class="property-color">value=</span><span class="value-color">'caracas'</span><span class="txt-white">&#62Caracas&#60/</span><span class="tag-color">option</span><span class="txt-white">&#62</span> 
+              </code> <br />
+
+              <code class="margin-40">
+                <span class="txt-white">&#60</span><span class="tag-color">option</span>
+                <span class="property-color">value=</span><span class="value-color">'bogota'</span><span class="txt-white">&#62Bogotá&#60/</span><span class="tag-color">option</span><span class="txt-white">&#62</span> 
+              </code> <br />
+
+              <code class="margin-20">
+                <span class="txt-white">&#60/</span><span class="tag-color">optgroup</span><span class="txt-white">&#62</span> 
+              </code> <br />
+
+              <code class="margin-20">
+                <span class="txt-white">&#60</span><span class="tag-color">optgroup</span>
+                <span class="property-color">label=</span><span class="value-color">'Europa'</span><span class="txt-white">&#62</span>
+              </code> <br />
+
+              <code class="margin-40">
+                <span class="txt-white">&#60</span><span class="tag-color">option</span>
+                <span class="property-color">value=</span><span class="value-color">'madrid'</span><span class="txt-white">&#62Madrid&#60/</span><span class="tag-color">option</span><span class="txt-white">&#62</span> 
+              </code> <br />
+
+              <code class="margin-40">
+                <span class="txt-white">&#60</span><span class="tag-color">option</span>
+                <span class="property-color">value=</span><span class="value-color">'londres'</span><span class="txt-white">&#62Londres&#60/</span><span class="tag-color">option</span><span class="txt-white">&#62</span> 
+              </code> <br />
+
+              <code class="margin-20">
+                <span class="txt-white">&#60/</span><span class="tag-color">optgroup</span><span class="txt-white">&#62</span> 
+              </code> <br />
+
+              <code>
+                <span class="txt-white">&#60/</span><span class="tag-color">select</span><span class="txt-white">&#62</span>
+              </code>
+            </div>
+
+            <h4>Ejemplo Lista con Grupos</h4>
+
+            <div class="cont-input">
+              <label for="ciudades">Lista con Grupos: Ciudad</label>
+              <select name="ciudades">
+                  <optgroup label="Latinoamerica">
+                      <option value="caracas">Caracas</option>
+                      <option value="bogota">Bogotá</option>
+                  </optgroup>
+                  <optgroup label="Europa">
+                      <option name="europa" value="madrid">Madrid</option>
+                      <option name="europa" value="londres">Londres</option>
+                  </optgroup>
+              </select>
+            </div>
+          </div>
+
+          <hr />
+
+          <!-- Selección Múltiple -->
+          <div class="cont-seleccion-multiple">
+            <h3>Lista de selección múltiple</h3>
+            
+            <p>
+                Para crear una lista de selección múltiple usamos la etiqueta <b>&#60select&#62</b> con la propiedad <b>multiple='true'</b>, que permite seleccionar múltiples elementos. El primer elemento se selecciona con un click, pero los adicionales se seleccionan usando (ctrl+click) ó (cmd+click) según el navegador y sistema operativo. 
+            </p>
+
+            <div class="cont-codigo">
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">label</span>
+                <span class="property-color">for=</span><span class="value-color">'tipo'</span><span class="txt-white">&#62Tipo</span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+              </code> <br />
+  
+                <code>
+                  <span class="txt-white">&#60</span><span class="tag-color">select</span>
+                  <span class="property-color">name=</span><span class="value-color">'tipo'</span>
+                  <span class="property-color">multiple=</span><span class="value-color">'true'</span><span class="txt-white">&#62</span>
+                </code> <br />
+  
+                <code class="margin-20">
+                  <span class="txt-white">&#60</span><span class="tag-color">option</span>
+                  <span class="property-color">value=</span><span class="value-color">'musico'</span><span class="txt-white">&#62Músico&#60/</span><span class="tag-color">option</span><span class="txt-white">&#62</span> 
+                </code> <br />
+  
+                <code class="margin-20">
+                  <span class="txt-white">&#60</span><span class="tag-color">option</span>
+                  <span class="property-color">value=</span><span class="value-color">'actor'</span><span class="txt-white">&#62Actor&#60/</span><span class="tag-color">option</span><span class="txt-white">&#62</span> 
+                </code> <br />
+  
+                <code class="margin-20">
+                  <span class="txt-white">&#60</span><span class="tag-color">option</span>
+                  <span class="property-color">value=</span><span class="value-color">'pintor'</span><span class="txt-white">&#62Pintor&#60/</span><span class="tag-color">option</span><span class="txt-white">&#62</span> 
+                </code> <br />
+  
+                <code class="margin-20">
+                  <span class="txt-white">&#60</span><span class="tag-color">option</span>
+                  <span class="property-color">value=</span><span class="value-color">'escultor'</span><span class="txt-white">&#62Escultor&#60/</span><span class="tag-color">option</span><span class="txt-white">&#62</span> 
+                </code> <br />
+  
+                <code>
+                  <span class="txt-white">&#60/</span><span class="tag-color">select</span><span class="txt-white">&#62</span>
+                </code>
+            </div>
+
+            <div class="cont-input">
+              <label for="tipo">Tipo</label>
+              <select name="tipo" multiple="true">
+                <option value="musico">Músico</option>
+                <option value="pintor">Pintor</option>
+                <option value="actor">Actor</option>
+                <option value="escultor">Escultor</option>
+              </select>
+            </div>
+          </div>
+
+          <hr />
+
+          <!-- Text Area -->
+          <div class="cont-textarea">
+            <h3>Textarea</h3>
+
+            <p>
+              La etiqueta <strong>&#60textarea&#62</strong> es un <b>área de texto</b> que tiene un tamaño mucho más grande que un input tipo texto y sirve para <b>ingresar</b> párrafos, comentarios u observaciones largas. Este tiene 2 atributos especiales, que sirven para definir el tamaño <strong>cols</strong> (columnas) y <strong>rows</strong> (filas), ambos reciben valores numéricos y representan el número de <b>filas y columnas</b> que puede tener el textarea.
+            </p>
+
+            <div class="cont-codigo">
+              <code>
+                <span class="txt-white">&#60</span><span class="tag-color">textarea</span>
+                <span class="property-color">name=</span><span class="value-color">'comentarios'</span>
+                <span class="property-color">id=</span><span class="value-color">'comentario'</span>
+                <span class="property-color">cols=</span><span class="value-color">'50'</span>
+                <span class="property-color">rows=</span><span class="value-color">'10'</span>
+                <span class="property-color">placeholder=</span><span class="value-color">'Ingrese su comentario por favor'</span><span class="txt-white">&#62</span><span class="txt-white">&#60/</span><span class="tag-color">textarea</span><span class="txt-white">&#62</span>
+              </code> <br />
+            </div>
+
+            <div class="textarea">
+              <textarea name="comentarios" id="comentario" cols="50" rows="10" placeholder="Ingrese su comentario por favor"></textarea>
+            </div>
+          </div>
+
+        </article>
+      </section>
+
+      <hr />
+
+      <section class="cont-button">
+        <article>
+          <h2>Etiqueta &#60button&#62 y diferencias con input</h2>
+
+          <p>
+            La etiqueta <strong>&#60button&#62</strong> en HTML es utilizada para crear un botón interactivo en una página web. El contenido dentro de la etiqueta de apertura y cierre <strong>&#60button&#62</strong> se mostrará como el texto del botón.
+          </p>
+
+          <div class="cont-codigo">
+            <code>
+              <span class="txt-white">&#60</span><span class="tag-color">button</span><span class="txt-white">&#62</span>
+              <span class="txt-white">Texto del botón</span>
+              <span class="txt-white">&#60/</span><span class="tag-color">button</span><span class="txt-white">&#62</span>
+            </code>
+          </div>
+
+          <p>
+            La etiqueta <strong>&#60button&#62</strong> con el atributo <b>type="submit"</b> y la etiqueta <strong>&#60button&#62</strong> son ambas utilizadas para crear botones en una página web. Sin embargo, existen algunas diferencias importantes entre ellas.
+          </p> <br />
+
+          <p>
+            La principal diferencia es el uso específico para el que están diseñados. La etiqueta <strong>&#60input&#62</strong> con el atributo <b>type="submit"</b> se utiliza específicamente para enviar un formulario en HTML. Es decir, cuando el usuario hace clic en el botón, se envían los datos del formulario a un servidor para su procesamiento.
+          </p> <br />
+
+          <p>
+            Por otro lado, la etiqueta <strong>&#60button&#62</strong> no está limitada a solo enviar formularios. Puede ser utilizada para <b>cualquier acción</b>, como enviar una petición a un servidor mediante JavaScript, cambiar el contenido de la página, mostrar un cuadro de diálogo, etc.
+          </p> <br />
+
+          <p>
+            Otra diferencia es la personalización y flexibilidad. La etiqueta <strong>&#60button&#62</strong> tiene más opciones para <b>personalizar</b> su apariencia y comportamiento. Por ejemplo, a los botones se les puede colocar imágenes internamente, cosa que no se puede hacer con los inputs de tipo submit.
+          </p> <br />
+
+          <p>
+            En resumen, La etiqueta <strong>&#60input&#62</strong> con el atributo <b>type="submit"</b> es específica para enviar formularios, mientras que <strong>&#60button&#62</strong> es más versátil y personalizable, pero ambos son botones que pueden ser utilizados para darle un comportamiento dinámico al sitio web.
+          </p> <br />
+
+          <p>
+            <b>Esta etiqueta (button) se puede utilizar por fuera de los formularios.</b>
+          </p>
+
+        </article>
+      </section>
+
+      <!-- Buenas Prácticas -->
+      <section class="buenas-practicas">
+        <article>
+          <h2>Buenas Prácticas en los Formularios</h2>
+
+          <div class="lista-practicas">
+            <ol>
+              <li>
+                Utilizar etiquetas <strong>label</strong> para asociar los campos de formulario con una descripción clara. Esto ayuda a los usuarios a entender lo que se espera que ingresen en cada campo, y también ayuda a las personas con discapacidades a utilizar el formulario con una lectura de pantalla.
+              </li>
+              <li>
+                Utilizar atributos placeholder para proporcionar instrucciones adicionales sobre lo que se espera que ingresen en cada campo. Sin embargo, no debes depender solo de esto, es importante tener etiquetas label para describir los campos.
+              </li>
+              <li>
+                Utilizar un botón de "Enviar" o "Enviar" claramente etiquetado para que los usuarios sepan cómo enviar el formulario.
+              </li>
+            </ol>
+          </div>
+        </article>
+      </section>
+
+    </main>
     <script src="../scripts/index.js"></script>
   </body>
 </html>
