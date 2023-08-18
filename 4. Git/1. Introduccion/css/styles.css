@@ -129,3 +129,18 @@ ul {
 li {
     padding: 7px 0;
 }
+
+/* ######### MEDIA QUERIES */
+
+/* 778px */
+
+@media (max-width: 778px) {
+    .cont-li {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cont-li li {
+        text-align: center;
+    }
+}
