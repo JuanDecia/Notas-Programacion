@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositorios</title>
+
+    <link rel="stylesheet" href="../css/repositorios.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main id="inicio">
+        <header>
+            <h1>Git: Sistema de control de versiones</h1>
+
+            <nav>
+                <ul class="cont-li">
+                    <li>
+                        <a class="link-header underlined" href="../index.html">Introducción</a>
+                    </li>
+                    <li>
+                        <a class="link-header underlined" href="./control-versiones.html">Sistema de control de versiones</a>
+                    </li>
+                    <li>
+                        <a class="link-header active" href="./repositorios.html">Repositorio</a>
+                    </li>
+                    <li>
+                        <a class="link-header underlined" href="./funcionamiento.html">Funcionamiento</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main content -->
+        <section>
+
+            <!-- Boton ir arriba -->
+            <div class="cont-arriba">
+                <a href="#inicio">
+                  <svg fill="#878787" viewBox="0 0 24 24" id="up-direction-square" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color" stroke="#878787"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><rect id="primary" x="2" y="2" width="20" height="20" rx="2" style="fill: #c9c9c9;"></rect><path id="secondary" d="M14,12v4a1,1,0,0,1-1,1H11a1,1,0,0,1-1-1V12H9.18a1,1,0,0,1-.76-1.65l2.82-3.27a1,1,0,0,1,1.52,0l2.82,3.27A1,1,0,0,1,14.82,12Z" style="fill: #111212;"></path></g></svg>
+                </a>
+            </div>
+
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    Un <strong>repositorio</strong> es el lugar dentro del sistema de control de versiones en donde guardamos las diferentes versiones de nuestro archivo. Un ejemplo coloquial para esta definición sería que creamos un álbum de fotos y luego cada semana cargamos una foto. Esto se traduce a que nuestro <b>álbum es la carpeta del repositorio</b> y las <b>fotos son las versiones del documento</b>.
+                </p> <br />
+
+                <p>
+                    Git, almacena los archivos dentro de su nube para cuando quieras acceder a una versión en específica, esta estará disponible. Cabe destacar que los repositorios pueden tener múltiples tipos de archivos dentro de sus carpetas, hasta, otras carpetas con otra estructura de archivos.
+                </p>
+            </article>
+
+            <!-- Git Hub -->
+            <article>
+                <h2>Repositorio Remoto: Github</h2>
+
+                <p>
+                    Sabiendo el concepto de <strong>repositorio</strong> ahora, volvamos a repasar los conceptos de esta herramienta llamada <strong>github</strong>. Es una plataforma en línea que brinda servicios de alojamiento de control de versiones y colaboración para proyectos de software. GitHub es esencialmente un servicio basado en la web para alojar y compartir repositorios de Git, lo que permite a los desarrolladores trabajar juntos en proyectos de software de manera más eficiente.
+                </p> <br />
+
+                <p>
+                    Además de alojar repositorios Git, GitHub ofrece una amplia variedad de herramientas y características para colaborar en proyectos, incluyendo seguimiento de problemas, pull requests, wikis, estadísticas y más. GitHub es una plataforma ampliamente utilizada en la comunidad de desarrollo de software y es uno de los servicios de control de versiones más populares en la actualidad.
+                </p>
+            </article>
+
+            <!-- Creando repositorio Remoto -->
+            <article>
+                <h2>Creando un repositorio remoto</h2>
+
+                <p>
+                    Para crear un nuevo repositorio en <strong>github</strong>, debemos seguir los siguientes pasos:
+                </p>
+
+                <ol class="pasos-gihub">
+                    <li>
+                        <b>Regístrate o Inicia sesión en GitHub: </b>Inicia sesión en tu cuenta de GitHub o crea una nueva cuenta si aún no tienes una - <span><a class="link-github" href="https://github.com/">Crea tu cuenta aquí.</a></span>
+                    </li>
+                    <li>
+                        <b>Iniciar la creación: </b>Una vez registrada la cuenta o iniciada la sesión, haz clic en el botón "New repository" en la página principal de tu perfil de GitHub.
+
+                        <p class="cont-new-repository">
+                            <img src="../img/new-repository.png" alt="new-repository" title="new-repository" />
+                        </p>
+                    </li>
+                    <li>
+                        <b>Configura el repositorio: </b>Da un nombre y descripción al repositorio y selecciona la visibilidad del repositorio (público o privado). También puedes elegir inicializar el repositorio con un archivo README ya creado. 
+                    </li>
+                    <li>
+                        <b>Crear repositorio: </b> Haz clic en el botón "Create repository" para crear el repositorio.
+                    </li>
+                </ol>
+            </article>
+
+            <!-- Repositorio Local -->
+            <article>
+                <h2>Repositorio Local: Configurando Git.</h2>
+
+                <p>
+                    Una vez realizados los pasos anteriormente mencionados, ya tenemos nuestro repositorio listo para alojar un proyecto. Veamos cuales son los pasos a realizar para empezar a subir archivos desde nuestra área de trabajo local a dicho repositorio remoto:
+                </p>
+
+                <!-- Descargar e instalar -->
+                <div class="cont-remoto">
+                    <h3>1. Descargar e instalar Git</h3>
+    
+                    <p>
+                        Descargamos e instalamos la última versión de Git para nuestro sistema operativo desde la página oficial de Git - <span><a class="link-git" href="https://git-scm.com/downloads">Descarga e instala git aqui</a></span>
+                    </p> <br />
+    
+                    <p>
+                        <b>IMPORTANTE: </b>Durante la instalación nos aseguramos de que se designe la rama “main” como la rama principal de nuestro proyecto. Para ello, verificamos que al instalar , en el paso que corresponde al ajuste de la rama inicial de un proyecto.
+                    </p>
+
+                    <div class="cont-img">
+                        <img src="../img/config-git.png" alt="configuracion-git" title="configurar-git" />
+                    </div>
+                </div>
+
+                <div class="cont-remoto">
+                    <h3>2. Configurar Identidad</h3>
+
+                    <p>
+                        Una de las maneras de iniciar <strong>git</strong> es presionando el <b>click derecho sobre el entorno</b> al cual vamos acceder en consola y la opción a abrir es <strong>git bash</strong>. Una vez hecho este paso para corroborar si el programa está funcionando correctamente usaremos el comando <strong>git –version</strong> el cual nos retornará la <b>versión de git</b> en la consola si todo funciona correctamente.
+                    </p> <br />
+
+                    <p>
+                        Nuestro siguiente paso es acceder como usuario al programa, para que este pueda identificarnos y poder usar los directorios que tenemos almacenados, para esto debemos saber 2 nuevos comandos que son: <b>tu nombre de usuario y dirección de correo electrónico.</b> Es importante que el email que utilices sea el mismo con el cual te registraste en GITHUB.
+                    </p> <br />
+
+                    <h4>Comandos</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="com-git">git</span>
+                            <span class="txt-white">config</span>
+                            <span class="value-git">--global</span>
+                            <span class="txt-white">user.name</span>
+                            <span class="comment-git">'Tu nombre'</span>
+                        </code> <br />
+                        <code>
+                            <span class="com-git">git</span>
+                            <span class="txt-white">config</span>
+                            <span class="value-git">--global</span>
+                            <span class="txt-white">user.email</span>
+                            <span class="comment-git">'Tu mail que usaste en github'</span>
+                        </code>
+                    </div>
+
+                    <h4>Ejemplo Práctico</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="comment-git">juand@DESKTOP-6M2PRO8</span>
+                            <span class="txt-purple">MINGW64</span>
+                            <span class="txt-white">~</span>
+                            <br />
+                            <span class="txt-white">$ git --version</span>
+                            <br /> 
+                            <span class="txt-white">git version 2.35.1windows.2</span>
+                            <br /> <br />
+                            <span class="comment-git">juand@DESKTOP-6M2PRO8</span>
+                            <span class="txt-purple">MINGW64</span>
+                            <span class="txt-white">~</span>
+                            <br />
+                            <span class="txt-white">$ git config --global user.name 'juan'</span>
+                            <br /> <br />
+                            <span class="comment-git">juand@DESKTOP-6M2PRO8</span>
+                            <span class="txt-purple">MINGW64</span>
+                            <span class="txt-white">~</span>
+                            <br />
+                            <span class="txt-white">$ git config --global user.mail 'juan@mail.com'</span>
+                        </code>
+                    </div>
+
+                </div>
+
+                <div class="cont-remoto">
+                    <h3>Configurar rama principal</h3>
+
+                    <p>
+                        En caso de que no lo hayas realizado en la instalación, puedes colocar el siguiente comando en la consola para poder configurar la rama <strong>main</strong> como la rama principal de todos los proyectos que inicialices de ahora en más en tu área de trabajo local
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="comment-git">juand@DESKTOP-6M2PRO8</span>
+                            <span class="txt-purple">MINGW64</span>
+                            <span class="txt-white">~</span>
+                            <br />
+                            <span class="txt-white">$ git config --global init.defaultBranch main</span>
+                        </code>
+                    </div>
+
+                    <p>
+                        Una vez realizados estos 3 pasos, ya podemos comenzar a ver los comandos que nos permitirán subir un proyecto que tengamos en una carpeta local al almacenamiento en la nube que nos otorga <strong>Github</strong>.
+                    </p>
+                </div>
+
+            </article>
+
+            <!-- Commits -->
+            <article>
+                <h2>Commits</h2>
+
+                <p>
+                    Más adelante, estaremos viendo una acción que desarrollan los repositorios llamada <strong>commit</strong>. Siguiendo con el ejemplo de los álbumes y las fotografías, cada fotografía recibe un “commit”. Esto representa una versión, es muy importante saber que cada ‘commit’ recibe un identificador único. Volvemos a remarcar que, el álbum donde se almacenan los commits es un repositorio. 
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

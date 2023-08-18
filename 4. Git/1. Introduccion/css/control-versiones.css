@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 85%;
+    margin: auto;
+    background-image: url('../img/git.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    background-color: rgba(197, 201, 204, 0.9);
+    padding: 25px;
+}
+
+h2 {
+    margin: 30px 0;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+p {
+    text-align: justify;
+}
+
+/* -- Animaciones -- */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ######### HEADER */
+
+header {
+    display: flex;
+    flex-wrap: wrap; /* Para que h1 este por encima de nav. h1 debe estar al 100% del ancho */
+    gap: 35px;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.3s ease-in, slide-down 1.3s ease-in-out;
+}
+
+ul {
+    margin: 20px 0;
+}
+
+li {
+    padding: 7px 0;
+}
+
+/* -- Nav -- */
+
+nav {
+    background-color: rgba(15, 110, 110, 0.486);
+    width: 100%;
+}
+
+.cont-li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.link-header {
+    text-decoration: none;
+    width: 100%;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.link-header:visited {
+    color: #ffffff;
+}
+
+.active {
+    color: black;
+    font-weight: 600;
+}
+
+/* Efecto Subrayado */
+
+.underlined {
+    position: relative;
+}
+
+.underlined::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    color: #ffffff;
+    background-color: #ffffff;
+    width: 100%;
+    transform: scaleX(0); /* Ocultamos contenedor */
+    transition: transform 0.3s ease-in; /* Preparamos el efecto */
+}
+
+.underlined:hover::after {
+    transform: scaleX(1); /* Aplicamos el efecto */
+}
