@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branches y Merges</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Branches y Merges</h1>
+        </header>
+
+        <section>
+            <!-- Branches -->
+            <article>
+                <h2>Introducción a Branches (Ramas en español)</h2>
+
+                <p>
+                    Las <strong>branches</strong> en Git son líneas separadas de desarrollo dentro de un mismo repositorio. Cada rama representa una versión independiente del proyecto, lo que permite a los desarrolladores trabajar en <b>diferentes funcionalidades</b> o correcciones de errores al <b>mismo tiempo</b> sin afectar la rama principal.
+                </p> <br />
+
+                <p>
+                    Estas son útiles porque permiten una <b>mayor flexibilidad y organización en el desarrollo de software</b>. En resumen, entre las principales ventajas de utilizar ramas podemos mencionar:
+                </p>
+
+                <div class="cont-lista">
+                    <ol>
+                        <li>
+                            <b>Desarrollo de características: </b>Cada nueva característica puede ser desarrollada en una rama separada, lo que permite trabajar en varias funcionalidades al mismo tiempo sin interferir entre ellas. 
+                        </li>
+                        <li>
+                            <b>Corrección de errores: </b>Las ramas pueden ser utilizadas para identificar y corregir errores específicos en un proyecto. De esta manera, el trabajo de corrección de errores no afecta la rama principal del proyecto.
+                        </li>
+                        <li>
+                            <b>Experimentación: </b>Las ramas pueden ser utilizadas para realizar pruebas y experimentos con nuevas soluciones sin afectar el código principal. 
+                        </li>
+                        <li>
+                            <b>Integración de contribuciones externas: </b> Las ramas pueden ser utilizadas para integrar contribuciones externas, como pull requests en un proyecto open-source, de forma aislada antes de fusionarlas con la rama principal. 
+                        </li>
+                    </ol>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Comandos para las branches -->
+            <article>
+                <h2>Comandos para trabajar con branches</h2>
+
+                <p>
+                    A continuación vamos a ver los comandos más comunes para trabajar con ramas en Git.
+                </p>
+
+                <!-- crear branch -->
+                <h3>Crear branches</h3>
+
+                <p>
+                    Para crear una nueva rama en Git, se puede usar el comando <b>"git branch"</b> seguido del nombre de la nueva rama.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">$ git branch *nombre-de-la-rama*</span>
+                    </code>
+                </div>
+
+                <!-- listar branch -->
+                <h3>Listar branches</h3>
+
+                <p>
+                    Para ver una lista de todas las ramas en un repositorio Git, se puede usar el comando <b>"git branch"</b>. Las ramas activas se marcan con un asterisco (*).
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">$ git branch</span>
+                    </code>
+                </div>
+
+                <!-- cambiar branch -->
+                <h3>Cambiar de branch</h3>
+
+                <p>
+                    Para cambiar a una rama en Git, se puede usar el comando <b>"git checkout"</b> seguido del nombre de la rama.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">$ git checkout *nombre-de-la-rama*</span>
+                    </code>
+                </div>
+
+                <!-- crear y cambiar de rama -->
+                <h3>Crear branch y cambiar a la branch creada</h3>
+
+                <p>
+                    Para crear una rama y al mismo tiempo cambiar a esa rama creada, podemos utilizar el comando <b>“git checkout -b”</b> seguido por el nombre de la rama.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">$ git checkout -b *nombre-de-la-rama*</span>
+                    </code>
+                </div>
+
+                <!-- borrar rama -->
+                <h3>Borrar una branch creada</h3>
+
+                <p>
+                    Para borrar una rama en Git, se puede usar el comando <b>"git branch -d"</b> seguido del nombre de la rama
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">$ git branch -d *nombre-de-la-rama*</span>
+                    </code>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Vincular nueva rama con el repositorio remoto -->
+            <article>
+                <h2>Vincular la nueva rama con el repositorio remoto</h2>
+
+                <p>
+                    Para vincular la rama local con un repositorio remoto, se puede usar el comando <b>"git push -u origin nombre-de-la-rama"</b>. En este caso, <b>"origin"</b> es el nombre predeterminado del repositorio remoto y <b>"nombre-de-la-rama"</b> es el nombre de la rama local. <b>Importante:</b> Esto funcionará siempre y cuando se hayan realizado los demás pasos necesarios para subir algo a Github (add y commit).
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- git merge -->
+            <article>
+                <h2>Git merge</h2>
+
+                <p>
+                    Imaginemos que estamos trabajando en un proyecto de software con un equipo de desarrolladores. Cada uno de ellos puede estar trabajando en una rama separada, pero eventualmente es necesario combinar esos cambios en una sola rama para tener una versión consolidada del proyecto, <b>este proceso de fusión se conoce como "merge"</b>. Cuando se realiza un <strong>merge</strong>, Git <b>compara los cambios de ambas ramas y crea una nueva versión con todos los cambios combinados</b>.
+                </p>
+            </article>
+
+            <!-- Conflictos -->
+            <article>
+                <h2>¿Qué es un conflicto?</h2>
+
+                <p>
+                    Un <b>conflicto de merge</b> ocurre cuando los cambios realizados en una rama son <b>mutuamente excluyentes</b> con los cambios realizados en otra rama. Por ejemplo, si un desarrollador modifica una línea de código en una rama y otro desarrollador modifica la misma línea en otra rama, Git no sabe cuál versión es la correcta y genera un conflicto de merge.
+                </p> <br />
+
+                <p>
+                    Para resolver un conflicto de merge, es necesario <b>abrir el archivo en conflicto</b> y editarlo manualmente para incluir los cambios deseados. Luego, se debe confirmar los cambios resolviendo el conflicto y <b>agregando los cambios al repositorio con un commit</b>.
+                </p> <br />
+
+                <p>
+                    Es importante tener en cuenta que es necesario <b>ser cuidadoso al resolver conflictos de merge</b> ya que los errores en la resolución pueden tener <b>graves consecuencias</b> para la integridad del código. Por esta razón, es recomendable <b>revisar cuidadosamente</b> los cambios antes de confirmarlos y <b>trabajar en equipo</b> para resolver conflictos de manera <b>eficiente y segura</b>.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- tipos de merging -->
+            <article>
+                <h2>Tipos de merging</h2>
+
+                <p>
+                    Hay tres tipos principales de merge en Git: <b>merge automático, merge manual y mergecon conflicto</b>.
+                </p>
+
+                <div class="cont-lista">
+                    <ol>
+                        <li>
+                            <b>Merge automático: </b>Es el tipo más sencillo de merge en el que Git combina los cambios de manera automática sin conflictos. Este tipo de merge se realiza cuando las ramas a fusionar no tienen cambios que entren en conflicto entre sí.
+                        </li>
+                        <li>
+                            <b>Merge manual: </b>Es un tipo de merge en el que Git identifica conflictos entre las ramas y requiere la intervención manual del usuario para resolverlos. Este tipo de merge se realiza cuando las ramas a fusionar tienen cambios que entran en conflicto entre sí.
+                        </li>
+                        <li>
+                            <b>Merge con conflicto: </b>: Es un tipo de merge en el que Git identifica conflictos entre las ramas y no puede resolverlos automáticamente. Este tipo de merge requiere la intervención manual del usuario para resolver los conflictos y completar el merge.
+                        </li>
+                    </ol>
+                </div>
+
+                <p>
+                    Para realizar un merge en Git, primero se debe cambiar a la rama donde se quiere fusionar los cambios y luego se debe usar el comando <b>"git merge"</b> seguido del nombre de la rama con los cambios que se desean fusionar. Git realizará el merge y, en caso de conflicto, indicará los archivos que tienen conflictos y requieren la intervención manual del usuario.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Buenas Prácticas -->
+            <article>
+                <h2>Buenas prácticas para trabajar con branches y merges</h2>
+
+                <div class="cont-lista">
+                    <ol>
+                        <li>
+                            <b>Utilice ramas para organizar su trabajo: </b>Crear ramas separadas para diferentes funcionalidades o características es una forma eficiente de organizar su trabajo y evitar interrupciones en el código principal.                           
+                        </li>
+                        <li>
+                            <b>Mantenga las ramas separadas hasta que estén listas: </b>: Es recomendable mantener las ramas separadas hasta que estén completamente desarrolladas y probadas, antes de fusionarlas en la rama principal.
+                        </li>
+                        <li>
+                            <b>Realice pruebas antes de fusionar: </b>: Antes de fusionar una rama en la ramaprincipal, es importante realizar pruebas exhaustivas para asegurarse de que el código funciona correctamente y no tiene errores.
+                            
+                        </li>
+                        <li>
+                            <b>Documentación detallada: </b>Mantenga un registro detallado de los cambios realizados en cada rama y los motivos detrás de ellos, especialmente en el caso de conflictos de merge. Esto ayudará a su equipo a entender las decisiones tomadas y a solucionar problemas en el futuro.
+                        </li>
+                    </ol>
+                </div>
+            </article>
+        </section>
+
+        <footer>
+
+        </footer>
+    </main>
+</body>
+</html>
