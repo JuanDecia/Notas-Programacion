@@ -82,7 +82,9 @@
 
                 <div class="cont-codigo">
                     <code>
-                        <span class="txt-white">$ git branch</span>
+                        <span class="txt-white">$ git branch</span> <br />
+                        <span class="txt-white margin-20">* </span><span class="comment-git">master</span> <br />
+                        <span class="txt-white margin-20">nueva-rama</span>
                     </code>
                 </div>
 
@@ -95,7 +97,8 @@
 
                 <div class="cont-codigo">
                     <code>
-                        <span class="txt-white">$ git checkout *nombre-de-la-rama*</span>
+                        <span class="txt-white">$ git checkout *nombre-de-la-rama*</span> <br />
+                        <span class="txt-white">Switched to branch *nombre-de-la-rama*</span>
                     </code>
                 </div>
 
@@ -108,7 +111,8 @@
 
                 <div class="cont-codigo">
                     <code>
-                        <span class="txt-white">$ git checkout -b *nombre-de-la-rama*</span>
+                        <span class="txt-white">$ git checkout -b *nombre-de-la-rama*</span> <br />
+                        <span class="txt-white">Switched to a new branch *nombre-de-la-rama*</span>
                     </code>
                 </div>
 
@@ -122,19 +126,56 @@
                 <div class="cont-codigo">
                     <code>
                         <span class="txt-white">$ git branch -d *nombre-de-la-rama*</span>
+                        <span class="txt-white">Deleted branch *nombre-de-la-rama*</span>
                     </code>
                 </div>
             </article>
 
             <hr />
 
-            <!-- Vincular nueva rama con el repositorio remoto -->
-            <article>
-                <h2>Vincular la nueva rama con el repositorio remoto</h2>
+            <article id="push-rama">
+                <h2>Pushear directamente desde una rama</h2>
+
+                <p>
+                    Si estamos trabajando en nuestro proyecto desde una <b>rama creada</b> y queremos realizar los pasos para subir los cambios como si estuviéramos en la <b>rama principal</b>, este proceso nos arrojará un error. Es decir, si realizamos estos pasos: 
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">$ git add .</span> <br />
+                        <span class="txt-white">$ git commit -m 'Commit desde rama secundaria'</span> <br />
+                        <span class="txt-white">$ git push</span> <br />
+                        <span class="txt-white">fatal: The current branch nuevaRama has no upstream branch. To push the current branch and set the remote as upstream, use</span> <br /> <br />
+                        <span class="txt-white margin-20">git push --set-upstream origin ramaNueva</span>
+                    </code>
+                </div>
+
+                <p>
+                    Básicamente el mensaje nos está refiriendo que la <b>rama</b> desde donde estamos tratando de cargar el proyecto <b>no está o no existe</b>. Este error ocurre porque la <b>rama creada no se encuentra en la nube</b>, es decir, <b>en GitHub</b>. 
+                </p>
+
+                <h3>Vincular la nueva rama con el repositorio remoto</h3>
+
+                <p>
+                    Anteriormente hemos visto que si tratamos de <b>pushear</b> las actualizaciones que hemos realizado desde una <b>rama creada</b> al proyecto, Git nos arroja un error. Para solucionar este error, debemos <b>crear la nueva rama en la nube</b> y para ello debemos usar el siguiente comando: 
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">$ git push --set-upstream origin *nombre-de-la-rama*</span>
+                    </code>
+                </div>
+
+                <p>
+                    Con este sencillo comando lo que vamos a lograr es <b>subir la rama nueva</b> a la nube. Si hemos realizado correctamente la sincronización estaremos en condiciones de realizar el <b>push</b> de la nueva rama.
+                </p>
+
+                <h4>Otra alternativa posible</h4>
 
                 <p>
                     Para vincular la rama local con un repositorio remoto, se puede usar el comando <b>"git push -u origin nombre-de-la-rama"</b>. En este caso, <b>"origin"</b> es el nombre predeterminado del repositorio remoto y <b>"nombre-de-la-rama"</b> es el nombre de la rama local. <b>Importante:</b> Esto funcionará siempre y cuando se hayan realizado los demás pasos necesarios para subir algo a Github (add y commit).
                 </p>
+
             </article>
 
             <hr />
@@ -145,7 +186,72 @@
 
                 <p>
                     Imaginemos que estamos trabajando en un proyecto de software con un equipo de desarrolladores. Cada uno de ellos puede estar trabajando en una rama separada, pero eventualmente es necesario combinar esos cambios en una sola rama para tener una versión consolidada del proyecto, <b>este proceso de fusión se conoce como "merge"</b>. Cuando se realiza un <strong>merge</strong>, Git <b>compara los cambios de ambas ramas y crea una nueva versión con todos los cambios combinados</b>.
+                </p> <br />
+
+                <h4>Primero: </h4>
+
+                <p>
+                    Lo primero que debemos saber de este proceso es que la rama nueva debe estar sincronizada correctamente para poder pushear la actualización del archivo. Estos pasos son: (<span><a href="#push-rama">Presione aquí para ver los pasos en detalle</a></span>).
                 </p>
+                
+                <div class="cont-lista">
+                    <ul>
+                        <li>
+                            <b>Sincronizar la nueva rama en la nube</b>: (git push --set-upstream origin *nombre-de-la-rama*).
+                        </li>
+                        <li>
+                            <b>Agregar los cambios</b>: (git add .).
+                        </li>
+                        <li>
+                            <b>Aceptar los cambios</b>: (git commit -m 'Comentarios').
+                        </li>
+                        <li>
+                            <b>Pushear los cambios</b>: (git push).
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">$ git push --set-upstream origin *nombre-de-la-rama*</span> <br />
+                        <span class="txt-white">$ git add .</span> <br />
+                        <span class="txt-white">$ git commit -m 'Comentario'</span> <br />
+                        <span class="txt-white">$ git push</span>
+                    </code>
+                </div>
+                
+                <h4>Segundo: </h4>
+
+                <p>
+                    Ahora, podemos centrarnos en <b>recibir</b> los cambios de la nueva rama con <strong>merge</strong> y este debe aplicarse desde la <b>rama principal</b>. Para esto debemos volver a cambiar la rama, es decir, desde la rama nueva que recibimos los cambios a la <b>rama principal</b>.
+                </p>
+                
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">$ git checkout main</span>
+                        <span class="txt-white">Switched to branch main</span>
+                    </code>
+                </div>
+
+                <h4>Aplicamos merge</h4>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">$git merge *nombre-de-la-rama*</span>
+                    </code>
+                </div>
+
+                <h3>Aplicar cambios de master a rama</h3>
+
+                <p>
+                    En el caso de que estemos trabajando con <b>varias ramas</b> en nuestro proyecto, debemos saber que podemos <b>traer los cambios</b> que subió una rama a <b>main</b>. Es decir, nuestro proyecto cuenta con una <b>rama principal</b> y <b>dos ramas adicionales</b> (rama1 y rama2). Si <b>rama1</b> subió cambios a <b>main</b>, cuando estemos en la <b>rama2</b> no vamos a poder visualizar esos cambios porque tendremos la rama <b>desactualizada</b>. Para <b>actualizar</b> los cambios a <b>rama2</b> debemos aplicar el siguiente comando: 
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">$ git merge master</span>
+                    </code>
+                </div>
             </article>
 
             <!-- Conflictos -->

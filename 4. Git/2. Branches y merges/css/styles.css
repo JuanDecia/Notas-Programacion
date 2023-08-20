@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: url('../img/git.webp');
     background-repeat: no-repeat;
@@ -28,6 +32,13 @@ h3 {
     color: rgb(103, 45, 240);
     margin: 25px 0;
     text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+h4 {
+    margin: 15px 0;
+    font-size: 1.1em;
+    color: rgb(204, 136, 9);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.219);
 }
 
 p {
@@ -102,6 +113,20 @@ h1 {
 
 /* -- Artículo Branches -- */
 
+.margin-20 {
+    margin-left: 20px;
+}
+
 .cont-lista ol li {
     padding: 10px;
+}
+
+/* -- Artículo Merge -- */
+
+.cont-lista ul {
+    margin: 20px 0;
+}
+
+.cont-lista ul li {
+    padding: 7px;
 }
