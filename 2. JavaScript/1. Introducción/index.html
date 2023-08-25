@@ -138,6 +138,7 @@
                     Existen <b>dos maneras</b> de integrar JS en HTML. Estas maneras son muy similares, ya que, en ambas utilizaremos la <b>etiqueta &#60script&#62</b>. Una de las maneras es a traves del <b>archivo de tipo HTML</b>, es decir, declaramos las etiquetas y dentro del elemento de las etiquetas comenzamos a escribir código JS. La otra manera es utilizando un <b>archivo externo</b> de tipo <b>'.js'</b> como lo hacemos con los archivos de CSS, esta última es la manera ideal de crear archivos JS.
                 </p>
 
+                <!-- Archivo Interno -->
                 <h3>Dentro del archivo HTML</h3>
 
                 <div class="cont-codigo">
@@ -162,6 +163,7 @@
                     </ul>
                 </div>
 
+                <!-- Archivo Externo -->
                 <h3>Vincular archivo externo</h3>
                 
                 <div class="cont-parrafo">
@@ -189,7 +191,7 @@
 
                 <div class="cont-parrafo">
                     <p>
-                        Debemos tener en cuenta el siguiente aspecto de esta estructura, la etiqueta <b>&#60script&#62</b> se debe encontrar al <b>final</b> de la construcción del archivo HTML. Esto es debido a que como el lenguaje es <b>interpretado</b> va leyendo de <b>arriba hacia abajo</b>, entonces gracias a esta lógica, <b>primero</b> carga la página y <b>luego</b> carga las <b>funciones</b> que hemos dado con <b>Javascript</b>.
+                        Debemos tener en cuenta el siguiente aspecto de esta estructura, la etiqueta <b>&#60script&#62</b> se debe encontrar al <b>final</b> de la construcción del archivo HTML justo antes de donde se cierra la etiqueta de <b>body</b>. Esto es debido a que como el lenguaje es <b>interpretado</b> va leyendo de <b>arriba hacia abajo</b>, entonces gracias a esta lógica, <b>primero</b> carga la página y <b>luego</b> carga las <b>funciones</b> que hemos dado con <b>Javascript</b>.
                     </p> <br />
 
                     <p>
@@ -204,48 +206,6 @@
                         <li><a class="link-ejemplo" href="./html/js-externo.html">Ir a usando JS en un archivo externo</a></li>
                     </ul>
                 </div>
-        
-                    <p>
-                        Debemos saber que el elemento de script debe <b>estar al final del código HTML</b> justo antes de donde se cierra
-                        la etiqueta de <b>body</b>.
-                    </p>
-        
-                    <p>
-                        A continuación, agregaremos una variable “nombre” con valor “Juan”, esta variable vamos a concatenarla en  los parámetros de la función de alert.
-                    </p>
-
-            </article>
-        </section>
-        <section>
-
-            <article>
-
-                <h3>Página Externa de Script</h3>
-
-                <div>
-                    <p>
-                        Las buenas prácticas de JS dicen que es más legible y ordenado tener el código de JS a parte de la hoja de 
-                        HTML. Para ello veremos la segunda manera de integrar nuestro código JS a HTML, vamos a necesitar las 
-                        etiquetas de <b>script</b> pero, vamos a incluir el atributo <b>src</b>, que se refiere donde esta la 
-                        fuente de nuestro archivo. Entre las comillas (valor del atributo) vamos a indicar la ruta del código JS 
-                        que vamos a utilizar.
-                    </p>
-                </div>
-
-                <div>
-                    <p>
-                        Vamos a crear un archivo dentro de una carpeta llamada JS o Scripts donde van a estar alojados todos 
-                        los archivos JS que nuestro código necesite. El archivo principal va a tener el nombre main.js.
-                    </p>
-
-                    <p>
-                        Es importante declarar las etiquetas de JS al final de nuestro código HTML, es decir, antes de que se cierre 
-                        el body de HTML. Debemos tener en cuenta que los archivos cargados se ejecutarán en el orden ingresado 
-                        (linea 1 y luego linea 2). La razón de ello es porque la página se va dibujando a medida que se va 
-                        ejecutando de arriba hacia abajo, siendo mejor para el usuario ver la pagina y luego tener el 
-                        comportamiento que definimos en nuestros archivos JS.                     
-                    </p>
-                </div>
             </article>
         </section>
 
@@ -257,59 +217,58 @@
             <article>
                 <h2>Consola</h2>
 
+                <h3>Introducción</h3>
+
                 <div>
                     <p>
-                        JavaScript tiene una consola integrada en el navegador en donde podemos ver los resultados de nuestro código.
-                    </p>
+                        Los <b>navegadores</b> tienen una <b>consola</b> integrada en el navegador en donde podemos ver los resultados de nuestro código hechos en JS. Para visualizar esta consola, debemos abrir el navegador y haciendo <b>click derecho</b> y luego en la opción <b>inspeccionar</b>, o también, una manera más rápida de abrirla es con la tecla <b>F12</b>. abrimos el <b>explorador para desarrolladores</b>. También, existen extensiones para VS Code en donde podemos ver estos resultados dentro del mismo sin tener que pasar al navegador, esta extensión es llamada <b>Quoka</b>.
+                    </p> <br />
 
                     <p>
-                        Para visualizar esta consola, debemos abrir el navegador y con la tecla F12 abrimos la consola en donde 
-                        presionamos en ejecutar y ejecuta el código. También, existen extensiones para VS Code en donde podemos 
-                        ver estos resultados dentro del mismo sin tener que pasar al navegador.
-                    </p>
-
-                    <p>
-                        Para ejecutar un fragmento de código y visualizarlo debemos colocar la palabra clave “console.log()” 
-                        que dentro del parámetro de los paréntesis colocaremos lo que se mostrará en consola.
+                        Para ejecutar un fragmento de código y visualizarlo, debemos colocar la palabra clave <b>“console.log()”</b> que <b>dentro del parámetro</b> (paréntesis) colocaremos lo que se mostrará en consola.
                     </p>
                 </div>
             </article>
 
+            <!-- Ambiente y Depuración -->
             <article>
 
                 <h3>Ambiente y Depuración</h3>
 
                 <div>
                     <p>
-                        El ambiente de desarrollo de Js nos permite manejar y detectar errores al tiempo que nos facilita la 
-                        tarea de creación de contenido de nuestro código.
-                    </p>
+                        El <b>ambiente de desarrollo de JS</b> nos permite manejar y detectar errores al mismo tiempo que nos facilita la tarea de creación o modificación de contenido de nuestro código.
+                    </p> <br />
 
                     <p>
-                        Usualmente se desean ver las variables o el estado de la aplicación en determinado momento, para esto 
-                        podemos usar la función console.log() que nos imprime los mensajes en la consola. Para usar la consola 
-                        dentro del navegador podemos apretar F12 o hacer click derecho y luego seleccionar la opción inspeccionar. 
-                        Al aparecer la consola, podemos ver el mensaje que hemos hecho imprimir con console.log ().
-                    </p>
-
-                    <p>
-                        Como podremos ver en la siguiente imagen, nos vamos a encontrar que al final de la consola, nos informa en 
-                        qué línea se está haciendo la impresión del código:
+                        Usualmente se desea ver el <b>estado de la aplicación en determinado momento</b>, para este caso es que se usa la función de JavaScript <b>console.log()</b>, que nos imprime los resultados pasados en sus parámetros en la <b>consola del navegador</b>. Al visualizar la consola, podemos ver el mensaje o resultado que hemos pasado en los parámetros de console.log ().
                     </p>
                 </div>
 
-                <figure>
-                    <img src="./img/console log.png" alt="console log" />
-                </figure>
+                <h4>Ejemplo Ilustrativo</h4>
 
-                <div>
-                    <p>
-                        A continuación, se puede acceder a un ejemplo para visualizar en limpio el funcionamiento de console.log.
-                    </p>
+                <div class="fondo-consola">
+                    <code>
+                        <span class="color-black">El valor de a es: 1</span><span class="color-black">main.js:3</span> <br />
+                    </code>
+                    <code>
+                        <span class="color-black">Bienvenido a JS</span><span class="color-black">main.js:4</span> <br />
+                    </code>
+                    <code>
+                        <span class="color-black">Resultado: 5</span><span class="color-black">main.js:6</span> <br />
+                    </code>
                 </div>
+                
+                <p>
+                   Si prestamos atención al ejemplo anterior, vamos a observar que en el lado derecha de la consola, la misma nos está informando en que <b>línea</b> se está realizando la llamada de la función <b>console.log()</b>. Por ejemplo, la primer llamada se hizo en la <b>línea 3</b> de nuestro editor de texto.
+                </p>
 
-                <div>
-                    <a href="../1. Introducción/html/consoleLog.html">Ir a ejemplo de console.log</a>
+                <h4>Ejemplo Práctico</h4>
+
+                <div class="cont-lista">
+                    <ul>
+                        <li><a class="link-ejemplo" href="./html/consoleLog.html">Ir al ejemplo de console.log()</a></li>
+                    </ul>
                 </div>
             </article>
 

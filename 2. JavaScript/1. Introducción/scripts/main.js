@@ -39,14 +39,13 @@ const renderNombre = () => {
 
 // FIN PÁGINA JS EXTERNA.
 
-function sumaValor() {
+// -- PÁGINA CONSOLE.LOG
+
+const sumar = () => {
     let a = 1;
+    let suma = a + 3;
 
-    a++; // Suma a en 1: a = 1 (++) a = 1 || RESULTADO: a = 2 //
-
-    let b = 1;
-
-    console.log(`El valor de a es: ${a}. `);
+    console.log(`El valor de la suma es: ${suma}.`);
 }
 
-sumaValor();
+sumar();

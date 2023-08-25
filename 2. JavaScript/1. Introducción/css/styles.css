@@ -104,6 +104,28 @@ hr {
 
 /* -- */
 
+/* -- Bloque Consola -- */
+
+.fondo-consola {
+    margin: 20px auto;
+    padding: 7px;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+.fondo-consola code {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fondo-consola code span {
+    width: 100%;
+}
+
+.color-black {
+    color: rgb(3, 3, 3);
+}
+
 /* -- Animaciones-- */
 @keyframes fade {
     from {
@@ -149,12 +171,17 @@ h1 {
     animation: fade 1.3s ease-in, slide-down 1.3s ease-in-out;
 }
 
+nav {
+    margin: 30px 0;
+}
+
 .volver {
     text-decoration: none;
     color: rgb(236, 103, 14);
     position: relative;
     padding-bottom: 10px;
-    
+    font-size: 1.2em;
+    font-weight: 600;
 }
 
 .volver:hover {

@@ -7,6 +7,12 @@
     <title>Ejemplo ConsoleLog</title>
 
     <link rel="stylesheet" href="../css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <main>
@@ -14,32 +20,78 @@
             <h1>Ejemplo de Console.log()</h1>
 
             <nav>
-                <a href="../index.html">Volver a inicio</a>
+                <a class="volver" href="../index.html">Volver a inicio</a>
             </nav>
         </header>
 
         <section>
+
+            <!-- Introducción -->
             <article>
+
+                <h2>Introducción</h2>
+                
                 <div>
                     <p>
-                        A continuación, vamos a crear una función donde esta va a llamarse “sumaValor ()”. Dentro de la función 
-                        vamos a declarar una variable “a” con valor “1”, en la siguiente línea declararemos un operador de suma 
-                        “a++” en donde decimos que a aumenta su valor en 1. En la siguiente línea vamos a declarar una variable 
-                        “b” con valor “1” y en la siguiente línea terminando la función vamos a hacer la declaración de console.log 
-                        con un mensaje que nos diga “El valor de a es: “(valor a).
+                        A continuación, se va a observar una función llamada <b>“sumaValor ()”</b>. Esta función va a realizar una suma y el resultado lo podremos ver por la consola. Para ver los resultados debemos apretar el <b>F12</b> y dirigirnos a la sección de
+                        <b>console</b>. Nos debería aparecer como resultado en la consola: 
+                        <b>"El valor de la suma es 4"</b>.
                     </p>
                 </div>
+            </article>
 
-                <figure>
-                    <img src="../img/ejemploSuma.png" alt="ejemplo suma" />
-                </figure>
+            <!-- Código ejemplo -->
+            <article>
+                <h2>Código de la función</h2>
 
-                <div>
-                    <p>
-                        Para ver los resultados debemos apretar el <b>F12</b> y dirigirnos a la sección de
-                        <b>console</b> para ver los resultados de nuestro JS. Nos debería aparecer como resultado en la consola: 
-                        "El valor de a es 2."
-                    </p>
+                <div class="cont-codigo">
+                    <code>
+                        <span class="tag-color">const</span>
+                        <span class="function-color">sumar</span>
+                        =
+                        <span class="function-color">()</span>
+                        <span class="tag-color">=&#62</span>
+                        <span class="function-color">{</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="tag-color">let</span>
+                        <span class="property-color">a</span>
+                        =
+                        <span class="comment-color">1</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="tag-color">let</span>
+                        <span class="property-color">suma</span>
+                        =
+                        <span class="property-color">a</span>
+                        +
+                        <span class="comment-color">3</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">console</span>.<span class="function-color">log</span><span class="parametro-color">(</span><span class="value-color">`El valor de la suma es:</span>
+                        <span class="variable-color">${</span><span class="property-color">suma</span><span class="variable-color">}</span><span class="value-color">.`</span><span class="parametro-color">)</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        <span class="function-color">}</span>
+                    </code>
+
+                    <br />
+
+                    <code>
+                        <span class="function-color">sumar()</span>;
+                    </code>
                 </div>
             </article>
         </section>
