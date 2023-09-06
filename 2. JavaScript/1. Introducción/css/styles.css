@@ -35,6 +35,12 @@ h4 {
     margin: 20px 0;
 }
 
+figure {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
 p {
     text-align: justify;
     line-height: 1.3em;
@@ -219,11 +225,8 @@ nav {
     margin: 30px 0;
 }
 
-/* ESTILOS ESPECÍFICOS */
-
-figure {
-    display: flex;
-    justify-content: center;
+.img-ejemplo {
+    max-width: 90%;
 }
 
 /* ######### PÁGINA JS-INTERNO */

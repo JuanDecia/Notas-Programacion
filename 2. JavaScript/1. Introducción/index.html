@@ -221,7 +221,7 @@
 
                 <div>
                     <p>
-                        Los <b>navegadores</b> tienen una <b>consola</b> integrada en el navegador en donde podemos ver los resultados de nuestro código hechos en JS. Para visualizar esta consola, debemos abrir el navegador y haciendo <b>click derecho</b> y luego en la opción <b>inspeccionar</b>, o también, una manera más rápida de abrirla es con la tecla <b>F12</b>. abrimos el <b>explorador para desarrolladores</b>. También, existen extensiones para VS Code en donde podemos ver estos resultados dentro del mismo sin tener que pasar al navegador, esta extensión es llamada <b>Quoka</b>.
+                        Los <b>navegadores</b> tienen una <b>consola</b> integrada en el navegador en donde podemos ver los resultados de nuestro código hechos en JS. Para visualizar esta consola, debemos abrir el navegador y haciendo <b>click derecho</b> y luego en la opción <b>inspeccionar</b>, o también, una manera más rápida de abrirla es con la tecla <b>F12</b>. También, existen extensiones para VS Code en donde podemos ver estos resultados dentro del mismo sin tener que pasar al navegador, esta extensión es llamada <b>Quoka</b>.
                     </p> <br />
 
                     <p>
@@ -244,7 +244,44 @@
                         Usualmente se desea ver el <b>estado de la aplicación en determinado momento</b>, para este caso es que se usa la función de JavaScript <b>console.log()</b>, que nos imprime los resultados pasados en sus parámetros en la <b>consola del navegador</b>. Al visualizar la consola, podemos ver el mensaje o resultado que hemos pasado en los parámetros de console.log ().
                     </p>
                 </div>
+                
+                <h3>Objeto Console</h3>
+                
+                <div>
+                    <p>
+                        El objeto <strong>Console</strong> es una herramienta integrada en los navegadores web que proporciona una interfaz para imprimir mensajes de depuración y errores, así como para interactuar con la consola del navegador.
+                    </p> <br />
 
+                    <p>
+                        El objeto Console se utiliza para <b>imprimir información en la consola del navegador y para interactuar con ella</b>. Los métodos del objeto Console incluyen:
+                    </p>
+                </div>
+
+                <div class="cont-log">
+                    <h4>Console.log</h4>
+    
+                    <div>
+                        <p>
+                            Muestra mensajes de depuración en la pantalla de la consola.
+                        </p>
+                    </div>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="tag-color">let</span>
+                            <span>variable</span>
+                            =
+                            <span class="value-color">'Soy una variable'</span>;
+                        </code> <br />
+
+                        <code>
+                            <span class="property-color">console</span>.<span class=""></span>
+                        </code>
+                    </div>
+                </div>
+
+
+                
                 <h4>Ejemplo Ilustrativo</h4>
 
                 <div class="fondo-consola">
@@ -270,35 +307,31 @@
                         <li><a class="link-ejemplo" href="./html/consoleLog.html">Ir al ejemplo de console.log()</a></li>
                     </ul>
                 </div>
-            </article>
 
-            <article>
                 <h3>Ambiente "source" en navegadores</h3>
 
                 <div>
                     <p>
-                        Los navegadores también cuentan con una ventana llamada source que nos muestra los códigos donde están 
-                        siendo llamados desde el archivo actual que se está ejecutando.
+                        Los navegadores también cuentan con una ventana llamada <b>source</b> que nos muestra los códigos donde están siendo llamados desde el archivo actual que se está ejecutando.
                     </p>
                 </div>
 
                 <figure>
-                    <img src="./img/source.png" alt="source" />
+                    <img src="./img/source.png" class="img-ejemplo" alt="source" title="source" />
                 </figure>
 
                 <div>
                     <p>
-                        En el caso de la imagen tenemos “main.js”, en esta ventana podemos colocar un punto de parada en el código, 
-                        de forma de que el programa se ejecute hasta dicho punto. Cuando refrescamos el programa se detiene en el 
+                        En el ejemplo de la imagen tenemos el archivo <b>“main.js”</b>, en esta ventana podemos colocar un punto de parada en el código, de forma de que el programa se ejecute hasta dicho punto. Cuando refrescamos el programa se detiene en el 
                         punto de parada y a partir de allí se puede ejecutar el mismo paso a paso utilizando las flechas de la 
                         derecha:
                     </p>
                 </div>
 
                 <figure>
-                    <img src="./img/sourceDos.png" alt="source dos" />
+                    <img src="./img/sourceDos.png" class="img-ejemplo" alt="source-dos" title="source-dos" />
                 </figure>
-                
+
             </article>
         </section>
 

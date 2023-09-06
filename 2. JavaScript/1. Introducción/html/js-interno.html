@@ -337,6 +337,7 @@
         const renderNombre = () => {
             let nombrePersona = getInput.value.trim();
             let contieneNumeros = false;
+            console.log(nombrePersona);
 
             for (let i = 0; i < nombrePersona.length; i++) {
                 if (!isNaN(nombrePersona[i])) {

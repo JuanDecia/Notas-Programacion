@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* ###### ESTILOS GENERALES */
 
 body {
@@ -134,6 +138,10 @@ nav {
     transform: scaleX(1);
 }
 
+.menu-toggle {
+    display: none;
+}
+
 /* ###### MAIN CONTENT */
 
 /* Sección introduccion */
@@ -251,10 +259,6 @@ ul li:nth-child(odd) {
 
 /* Finaliza contenedor content ↑ */ 
 
-label + input {
-    display: none;
-}
-
 /* QUERIES */
 
 @media (max-width: 768px) {
@@ -262,19 +266,24 @@ label + input {
     nav {
         justify-content: start;
         width: 100%;
+        gap: 30px;
     }
 
     .navegacion {
-        justify-content: flex-start;
         width: 100%;
         gap: 20px;
-        display: none;
         flex-wrap: wrap;
         order: 2;
+        animation: fade 1.5s ease;
+        display: none;
+    }
+
+    .navegacion li {
+        width: 100%;
     }
 
     /* Muestro Menu */
-    label {
+    .menu-toggle {
         display: flex;
         padding: 10px;
         order: 1;
@@ -285,12 +294,13 @@ label + input {
         cursor: pointer;
     }
 
-    #menu-toggle:checked + .navegacion {
-        display: flex;
-    }
-
     .link-volver-arriba {
         width: 30%;
+    }
+
+    /* Estilo para el dinamismo del menú con js */
+    .open-menu {
+        display: flex;
     }
 }
 

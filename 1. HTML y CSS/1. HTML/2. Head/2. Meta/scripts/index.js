@@ -1,3 +1,7 @@
+//DOM
+const menuBtn = document.querySelector('.menu-toggle');
+const barsMenu = document.querySelector('.navegacion');
+
 // Oculta la barra de navegacion luego de hacer click en algun elemento.
 
 window.addEventListener('resize', () => {
@@ -17,4 +21,17 @@ window.addEventListener('resize', () => {
       });
     }
   });
+
+// Función Menu
+const toggleMenu = () => {
+  barsMenu.classList.toggle('open-menu');
+}
   
+// Función inicializadora
+const init = () => {
+
+  // Evento para el menú
+  menuBtn.addEventListener('click', toggleMenu);
+
+}
+init();
