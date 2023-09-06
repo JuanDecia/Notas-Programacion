@@ -9,17 +9,17 @@ const cambiarColor = () => {
     color.select();
 }
 
-function actualizarPrimero (event) {
+const actualizarPrimero = (e) => {
     let p = document.querySelector('#parrafo-color');
 
     if (p) {
-        p.style.color = event.target.value;
+        p.style.color = e.target.value;
     }
 }
 
-function actualizarTodo(event) {
-    document.querySelectorAll('p').forEach(function (p) {
-        p.style.color = event.target.value;
+const actualizarTodo = (e) => {
+    document.querySelectorAll('p').forEach( (p) => {
+        p.style.color = e.target.value;
     });
 }
 

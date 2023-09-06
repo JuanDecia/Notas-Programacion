@@ -1,2 +1,0 @@
-En este ejemplo práctico, se realiza un orden semántico utilizando contenedores de HTML y estilos en CSS para dar una representación
-gráfica de como generalmente podemos encontrar ordenados los elementos dentro de una página web.
