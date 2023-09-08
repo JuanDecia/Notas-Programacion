@@ -8,6 +8,8 @@ body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* -- Animaciones -- */
+
 /* ############ ESTILOS HEADER */
 
 nav {
@@ -95,12 +97,8 @@ nav a:hover::after {
     /* Menú solo se visualiza en responsive ( < 992px) */
 
 .menu {
-    width: 7%;
+    width: 10%;
     display: none;
-}
-
-#menu-toggle {
-    display: none; /* Ocultamos checkbox del input */
 }
 
 #cont-imagen {
@@ -120,47 +118,46 @@ p {
     font-family: sans-serif;
 }
 
-/* ######### Responsive */
+/* ######### MEDIA QUERIES */
+
+/* -- 992px -- */
 
 @media (max-width: 992px) {
 
-h1 {
-    width: 100%;
-}
+    h1 {
+        width: 100%;
+    }
 
-    /* Mostramos el menu que está oculto */
-.menu {
-    display: flex;
-}
+        /* Mostramos el menu que está oculto */
+    .menu {
+        display: flex;
+    }
 
-.estructura-enlaces {
-    position: absolute;
-    top: 200px;
-    left: 120px;
-    display: flex;
-    flex-direction: column;
-    background-color: #ddc9f7;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid blueviolet;
-    transition: opacity 0.5s ease, height 0.5s ease;
-    opacity: 0; /* Ocultamos el menú */
-}
+    .cont-menu {
+        position: absolute;
+        top: 200px;
+        left: 120px;
+        flex-direction: column;
+        background-color: #ddc9f7;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid blueviolet;
+        display: none; /* Ocultamos menú, es mostrado luego a través de JS */
+    }
 
-.color-claro {
-    text-align: start;
-    width: 100%;
-}
+    .color-claro {
+        text-align: start;
+        width: 100%;
+    }
 
-.estructura-enlaces .color-claro:hover {
-    color: #6b37d1;
-}
+    .estructura-enlaces .color-claro:hover {
+        color: #6b37d1;
+    }
 
-    /* Mostramos el menu que está oculto */
-#menu-toggle:checked + .estructura-enlaces {
-    opacity: 1;
-    height: auto;
-}
+        /* Mostramos el menu que está oculto */
+    .open-menu {
+        display: flex;
+    }
 
 }
 

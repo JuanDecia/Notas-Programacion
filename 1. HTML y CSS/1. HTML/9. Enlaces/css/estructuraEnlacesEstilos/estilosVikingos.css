@@ -153,22 +153,24 @@ nav a:hover::after {
     margin: 20px 0;
 }
 
-/* QUERIES */
+/* ######### MEDIA QUERIES */
+
+/* -- 992px -- */
 
 @media (max-width: 992px) {
     
-    .cont-link {
-        display: flex;
-        flex-direction: column;
+    .cont-menu {
         position: absolute;
+        top: 155px;
+        left: 190px;
+        flex-direction: column;
         background-color: rgba(0, 0, 0, 0.658);
-        width: 80%;
-        right: 0;
-        top: 173px;
+        width: 60%;
         border-radius: 10px;
         padding: 10px;
-        transition: opacity 0.5s ease, height 0.5s ease;
-        opacity: 0; /* Ocultamos contenido del menú */
+        animation: fade 1.3s ease;
+        z-index: 2;
+        display: none;
     }
 
     .link:hover {
@@ -181,35 +183,42 @@ nav a:hover::after {
 
     /* Se muestra el icono del menú */
     .menu {
+        z-index: 2;
         display: flex;
     }
 
-    #menu-toggle:checked + .cont-link {
-        opacity: 1;
-        height: auto;
+    .open-menu {
+        display: flex;
     }
 }
+
+/* -- 778px -- */
 
 @media (max-width: 778px) {
-    .cont-link {
+    .cont-menu {
         top: 160px;
         left: 150px;
-        width: 60%;
+        width: 50%;
     }
 }
 
+/* -- 576px -- */
 
 @media (max-width: 576px) {
-    
-    .cont-link {
-        left: 20%;
+    .cont-menu {
+        top: 156px;
+        left: 30%;
+    }
+
+    .overlay {
+        height: 100vh;
     }
 }
 
+/* -- 420px -- */
+
 @media (max-width: 420px) {
-    
     .cont-link {
         width: 50%;
-        right: 40px;
     }
 }

@@ -25,10 +25,7 @@ p {
     text-align: justify;
 }
 
-
-/* HEADER */
-
-    /* Efecto Titulo */
+/* -- Animaciones -- */
 
 @keyframes fade {
     from {
@@ -47,6 +44,21 @@ p {
         transform: translateX(0);
     }
 }
+
+
+@keyframes move {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-1px, 0) scale(1.2);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+}
+
+/* ######### HEADER */
 
 h1 {
     margin: 30px auto;
@@ -88,22 +100,8 @@ a:visited {
     color: #ffffff;
 }
 
-/* Efecto Flecha */
-
 .cont-volver-inicio:hover img.flecha {
     animation: move 1s linear infinite;
-}
-
-@keyframes move {
-    0% {
-      transform: translate(0, 0) scale(1);
-    }
-    50% {
-      transform: translate(-1px, 0) scale(1.2);
-    }
-    100% {
-      transform: translate(0, 0) scale(1);
-    }
 }
 
 /* Efecto de subrayado dinámico */
@@ -138,71 +136,46 @@ nav a:hover::after {
     width: 100%;
 }
 
-
     /* Menu Oculto */
 
 .menu {
-    width: 7%;
+    width: 10%;
     display: none; /* Se muestra a partir de 768px */
 }
 
-#menu-toggle {
-    display: none; /* Boton Checked oculto siempre */
-}
-
-
-/* MAIN */
+/* ######### MAIN CONTENT */
 
 #cont-imagen {
     margin: 20px auto;
     text-align: center;
 }
 
-p {
-    margin: 20px 0 50px 0;
-    color: #fff; 
+#cont-imagen img {
+    max-width: 100%;
 }
 
-/* RESPONSIVE DESIGN */
+/* ######### RESPONSIVE DESIGN */
 
     /* 768px */
 
 .menu {
     display: flex;
+    margin: 20px 0;
 }
 
-.estructura-enlaces {
+.cont-menu {
     position: absolute;
-    top: 160px;
-    left: 200px;
+    top: 200px;
+    left: 140px;
     display: none;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.712);
-    width: 55%;
+    width: 65%;
+    border-radius: 10px;
     transition: opacity 0.5s ease, height 0.5s ease;
 }
 
-    /* Animación Menu */
-
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slide-left {
-    from {
-        transform: translateX(-50px);
-    }
-    to{
-        transform: translateX(0);
-    }
-}
-
-#menu-toggle:checked + .estructura-enlaces {
+.open-menu {
     display: flex;
     animation: fade 0.9s ease-in, slide-left 0.9s ease-in-out;
 }

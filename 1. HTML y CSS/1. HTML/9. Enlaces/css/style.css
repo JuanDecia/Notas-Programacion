@@ -73,7 +73,7 @@ h3 {
 
 @keyframes slide-left {
     from {
-        transform: translateX(-50px);
+        transform: translateX(-30px);
     }
     to{
         transform: translateX(0);
@@ -148,10 +148,6 @@ a:hover::after {
     display: none; /* Se muestra a partir de 768px */
 }
 
-input {
-    display: none; /* Botón siempre oculto */
-}
-
 /* ############ MAIN CONTENT */
 
 /* -- Articulo Introducción -- */
@@ -224,12 +220,12 @@ figure {
     ul {
         position: absolute;
         left: 140px;
-        display: none;
         flex-direction: column;
-        background-color: rgba(51, 50, 50, 0.938);
         width: 60%;
         padding: 7px;
         border-radius: 5px;
+        background-color: rgba(51, 50, 50, 0.938);
+        display: none;
     }
     
     svg {
@@ -246,8 +242,8 @@ figure {
         left: 0;
     }
 
-    /* Mostramos Menú cuando activamos el Checkbox */
-    #menu-toggle:checked + ul {
+    /* Mostramos Menú desde JS */
+    .open-menu {
         display: flex;
         animation: fade 0.9s ease-in, slide-left 0.9s ease-in-out;
     }
