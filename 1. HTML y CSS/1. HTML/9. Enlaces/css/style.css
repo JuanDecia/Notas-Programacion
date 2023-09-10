@@ -39,6 +39,15 @@ h3 {
     color: #ffffff;
 }
 
+.cont-codigo {
+    background-color: rgb(56, 55, 55);
+    margin: 20px auto;
+    padding: 7px;
+    text-align: center;
+    width: 70%;
+    border-radius: 5px;
+}
+
 .cont-codigo code {
     color: rgb(22, 128, 250);
 }
@@ -154,15 +163,6 @@ a:hover::after {
 
 .cont-introduccion {
     display: flex;
-}
-
-.cont-codigo {
-    background-color: rgb(56, 55, 55);
-    margin: 20px auto;
-    padding: 7px;
-    text-align: center;
-    width: 70%;
-    border-radius: 5px;
 }
 
 /* -- Artículo Secciones Internas */
