@@ -33,6 +33,51 @@ p {
     text-align: justify;
 }
 
+.cont-codigo {
+    background-color: rgb(56, 55, 55);
+    color: #ffffff;
+    margin: 20px auto;
+    padding: 7px;
+    width: 70%;
+    border-radius: 5px;
+}
+
+.margin-20 {
+    margin-left: 20px;
+}
+
+.margin-40 {
+    margin-left: 40px;
+}
+
+.margin-60 {
+    margin-left: 60px;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.tag-color {
+    color: rgb(37, 143, 241);
+}
+
+.property-color {
+    color: rgb(113, 209, 247);
+}
+
+.field-color {
+    color: #ffd311;
+}
+
+.value-color {
+    color: #f39658;
+}
+
+.comment-color {
+    color: rgb(41, 148, 31);
+}
+
 /* --- Animaciones --- */
 @keyframes fade {
     from {
@@ -67,27 +112,4 @@ h1 {
 }
 
 /* ######### MAIN CONTENT */
-
-/* --- Articulo CSS --- */
-.cont-css {
-    margin: 30px 0;
-}
-
-/* --- Articulo Historia CSS --- */
-
-.lista-versiones li {
-    padding: 7px;
-}
-
-/* --- Articulo Ventajas --- */
-
-.lista-ventajas li {
-    padding: 7px;
-}
-
-/* --- Articulo Objetivos --- */
-
-.lista-objetivos li {
-    padding: 7px;
-}
 

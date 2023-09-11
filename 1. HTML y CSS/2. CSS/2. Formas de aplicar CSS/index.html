@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicando CSS</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Formas de aplicar CSS</h1>
+        </header>
+
+        <section>
+
+            <!-- CSS en encabezado -->
+            <article>
+                <h2>CSS como etiqueta &#60style&#62</h2>
+
+                <p>
+                    Para hacer uso de CSS podemos utilizar una etiqueta llamada <strong>&#60style&#62</strong> la cual debe estar ubicada dentro de la etiqueta <strong>&#60head&#62</strong> y luego de la etiqueta <b>&#60title&#62</b> dentro de nuestro archivo HTML. Es decir, Podemos agregar estilos a todas las páginas de un sitio web agregando una sección de estilos en el encabezado de cada página, utilizando la etiqueta <b>&#60style&#62</b> en el mismo.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        &#60<span class="tag-color">head</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">title</span>&#62Título del Navegador&#60/<span class="tag-color">title</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">style</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="field-color">p</span>
+                        <span class="field-color">&#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-60">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">red</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="field-color">&#125</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60/<span class="tag-color">style</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#60/<span class="tag-color">head</span>&#62
+                    </code>
+                </div>
+
+                <p>
+                    Como podemos observar en el ejemplo práctico, estamos aplicando <b>estilos CSS</b> desde el encabezado de la página, dentro de las <b>etiquetas 'style'</b>. En este ejemplo específico le damos a las <b>etiquetas &#60p&#62</b> un color de texto <b>rojo</b>.
+                </p>
+            </article>
+
+            <!-- CSS como atributo -->
+        </section>
+    </main>
+</body>
+</html>
