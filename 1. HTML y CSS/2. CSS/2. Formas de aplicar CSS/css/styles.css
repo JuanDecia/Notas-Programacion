@@ -102,10 +102,10 @@ p {
 header {
     display: flex;
     justify-content: center;
-    margin: 40px 0;
 }
 
 h1 {
+    margin-bottom: 30px;
     color: rgb(15, 110, 110);
     text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
     animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
@@ -113,3 +113,13 @@ h1 {
 
 /* ######### MAIN CONTENT */
 
+/* --- Articulo archivo externo --- */
+.cont-img-estilos {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.img-estilos {
+    max-width: 100%;
+}
