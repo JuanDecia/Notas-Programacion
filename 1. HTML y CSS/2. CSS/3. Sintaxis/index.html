@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintaxis</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Sintaxis de CSS</h1>
+        </header>
+
+        <!-- Main Content -->
+        <section>
+
+            <!-- Introducción -->
+            <article>
+                
+                <h2>Introducción</h2>
+
+                <p>
+                    La sintaxis de CSS se compone de tres partes principales: <b>selectores, propiedades y valores.</b>
+                </p>
+
+                <ol class="lista-introduccion">
+                    <li>
+                        <b>Selectores: </b>Determinan a qué elementos HTML se aplicarán los estilos. Por ejemplo, un selector puede ser una etiqueta HTML específica como &#60p&#62 o una clase o ID personalizados que hayas definido en tu HTML.
+                    </li>
+                    <li>
+                        <b>Propiedades: </b>Definen los aspectos específicos que se quieren estilizar, como el color del texto o el espacio alrededor de un elemento.
+                    </li>
+                    <li>
+                        <b>Valores: </b>Especifican cómo se quiere que se vea esa propiedad. Por ejemplo, el color del texto puede ser "rojo" o "#ff0000".
+                    </li>
+                </ol>
+            </article>
+
+            <!-- Sintaxis -->
+            <article>
+                <h2>Ejemplo de Sintaxis</h2>
+
+                <h3>Selector de etiqueta</h3>
+
+                <!-- Selector 1 -->
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">p &#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">red</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">text-align</span>:
+                        <span class="value-color">center</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">font-size</span>:
+                        <span class="value-color">20px</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="field-color">
+                        &#125
+                    </code>
+                </div>
+
+                <h3>Selector de clase</h3>
+                <!-- Selector 2 -->
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.titulo &#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">blue</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">text-align</span>:
+                        <span class="value-color">left</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">font-size</span>:
+                        <span class="value-color">30px</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="field-color">
+                        &#125
+                    </code>
+                </div>
+
+                <h3>Selector de Id</h3>
+                <!-- Selector 3 -->
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">#subtitulo &#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">green</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">text-align</span>:
+                        <span class="value-color">right</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">font-size</span>:
+                        <span class="value-color">25px</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="field-color">
+                        &#125
+                    </code>
+                </div>
+
+                <p>
+                    En este ejemplo podemos ver e identificar los distintos selectores , valores y propiedades. Entre los selectores podemos ver el selector de etiqueta , con la etiqueta <b>&#60p&#62</b>, el selector de clase, <b>“.titulo”</b> y el selector de id, <b>“#subtitulo”</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    Por otro lado, en cuanto a propiedades podemos identificar 3: <b>color, text-align y font-size.</b>
+                </p>
+
+                <br />
+
+                <p>
+                    Finalmente, tenemos los valores. Por un lado, valores de color como <b>green, blue y red</b>, valores para la alineación del texto, como <b>center, left y right</b>, y finalmente valores de tamaño de letra, como <b>20px, 30px y 25px</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    Además podemos ver que los selectores se colocan antes de la llave de apertura que envuelve los estilos que se van a declarar , siendo cada combinación de propiedad y valor una declaración. Finalmente, la sintaxis concluye con la llave de cierre que envuelve las declaraciones de estilos.
+                </p>
+            </article>
+
+            <hr>
+
+            <!-- Concepto Cascada -->
+            <article>
+                <h2>Concepto Cascada</h2>
+
+                <p>
+                    Este concepto se refiere a la posibilidad de especificar cuál estilo tiene <b>prioridad jerárquica</b>. Por ejemplo, si tenemos “color red” en una etiqueta “style” y “color blue” en un “archivo externo” y ambos están aplicados a la etiqueta <b>&#60p&#62</b> <b>¿Cuál debería mostrar el navegador?</b>
+                </p>
+
+                <br />
+
+                <p>
+                    Para renderizarse en el navegador, nuestra Web tiene varias fuentes de estilos que se van colocando una después de la otra. De ahí viene el término <b>Cascade Style Sheet</b>, debemos tener en cuenta que si tenemos un proyecto web que aún no tiene estilos definidos, prevalecerá la hoja de estilos que viene <b>por defecto en el navegador</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    Por ejemplo, cuando creamos un enlace si ya lo hemos visitado, este se pone de un color específico según los estilos predefinidos del navegador. Actualmente algunos navegadores permiten que carguemos en su configuración hojas de estilo personalizadas. Este archivo tendrá prioridad sobre los propios del navegador usado y se conoce como: hojadeestilosdeusuario.css 
+                </p>
+
+                <h3>¿Qué pasaría si tuviéramos varios archivos CSS de autor en nuestro sitio?</h3>
+
+                <p>
+                    La prioridad la tendría el último archivo CSS vinculado. Por ejemplo, si tuviéramos el siguiente código:
+                </p>
+                
+                <div class="cont-codigo">
+                    <code>
+                        &#60<span class="tag-color">head</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">title</span>&#62Aplicando CSS&#60/<span class="tag-color">title</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">link</span>
+                        <span class="property-color">rel</span>=<span class="value-color">'stylesheet'</span>
+                        <span class="property-color">href</span>=<span class="value-color">'./css/styles.css'</span>
+                        /&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">link</span>
+                        <span class="property-color">rel</span>=<span class="value-color">'stylesheet'</span>
+                        <span class="property-color">href</span>=<span class="value-color">'./css/styles2.css'</span>
+                        /&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">link</span>
+                        <span class="property-color">rel</span>=<span class="value-color">'stylesheet'</span>
+                        <span class="property-color">href</span>=<span class="value-color">'./css/styles3.css'</span>
+                        /&#62
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#60/<span class="tag-color">head</span>&#62
+                    </code>
+                </div>
+
+                <p>
+                    Los estilos que tendrían prioridad serían los del último archivo, que en este caso se llaman: <b>'./css/estilos3.css'</b>.
+                </p>
+            </article>
+
+            <hr>
+
+            <!-- Prioridad de estilos -->
+            <article>
+                <h2>Palabra reservada: !important</h2>
+
+                <p>
+                    Hay ocasiones en las que debemos aplicar un estilo donde el navegador posiblemente no esté tomando correctamente el selector. La manera de aplicar este estilo de una forma imperativa es usando la palabra reservada ‘!important’.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">body &#123</span>
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="property-color">font-family</span>:
+                        <span class="value-color">verdana</span>
+                        <span class="tag-color">!important</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        <span class="field-color">&#125</span>
+                    </code>
+                </div>
+
+                <p>
+                    Esta regla obligará a que todo el cuerpo de la página esté vinculado con el archivo CSS que la contenga y maneje la fuente verdana sobre otro cualquier tipo de fuente definido.
+                </p>
+                
+                <h3>Prioridad de jerarquía en los estilos</h3>
+
+                <h4>Estilo en línea: atributo 'style'.</h4>
+
+                <p>
+                    Los estilos en línea que se encuentran en la hoja de HTML son los que tienen <b>prioridad</b> sobre todas las demás declaraciones, debemos destacar que este tipo de estilos no son una práctica apropiada para aplicar.
+                </p>
+
+                <h4>Estilos en encabezado: Etiqueta &#60style&#62.</h4>
+
+                <p>
+                    Los estilos que se encuentran en el encabezado del documento HTML <b>tienen prioridad</b> sobre la hoja de estilos externa pero no sobre los estilos en línea. También, debemos destacar que no es una buena práctica aplicar este tipo de estilos.
+                </p>
+            </article>
+
+            <!-- Concepto Herencia -->
+            <article class="cont-herencia">
+                <h2>Concepto Herencia</h2>
+
+                <p>
+                    La <b>herencia</b> debe entenderse con los siguientes términos: <b>padres, hijos y hermanos</b>. Teniendo en cuenta esta jerarquía podemos afirmar que el <b>padre</b> de todo el contenido es la <b>etiqueta HTML</b>, el cual agrupa a <b>dos hijos</b> que son las <b>etiquetas de head y body</b>. Estos últimos son hermanos porque tienen el mismo nivel jerárquico y también son padres de todos los elementos que ellos componen.
+                </p>
+
+                <br />
+
+                <p>
+                    Esto nos permite dar cuenta que cuando un <b>elemento padre</b> tiene estilos definidos, por ejemplo, el <b>color rojo en el texto</b> estos estilos pasarán a todos sus hijos. Es decir, a todos los elementos que se encuentren en su interior lo que significa que estas etiquetas hijas van a heredar todos los estilos que se apliquen al elemento padre.
+                </p>
+
+                <h3>Ejemplo de herencia</h3>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">body &#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">blue</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        <span class="field-color">&#125</span>
+                    </code>
+                </div>
+
+                <p>
+                    En este ejemplo estaremos aplicando <b>color azul</b> a todo el texto del documento, ya que, la etiqueta <b>body</b> es padre de todos los elementos que se van a visualizar en el navegador. Si prestamos atención, todos los elementos que vayamos a crear dentro de la estructura de estas etiquetas tomarán el comportamiento que le hemos aplicado a su etiqueta padre.
+                </p>
+
+                <h3>Cambiando de estilos a etiquetas hijas</h3>
+
+                <p>
+                    Si tenemos en una etiqueta padre un estilo aplicado que nos afecta a las demás etiquetas que están dentro de su estructura, debemos recordar que CSS tiene el concepto en cascada, es decir, <b>si aplicamos un estilo nuevo sobre el elemento hijo este tendrar la prioridad</b>. Tomando el ejemplo anterior donde tenemos estilos sobre el elemento <b>body</b>, vamos a modificar un elemento hijo (ej: &#60h1&#62) a un color negro.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">body &#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">blue</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        <span class="field-color">&#125</span>
+                    </code>
+
+                    <br /><br />
+
+                    <code>
+                        <span class="field-color">h1 &#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">black</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        <span class="field-color">&#125</span>
+                    </code>
+                </div>
+
+                <p>
+                    En este caso específico, todo el documento tendrá el <b>texto azul</b> excepto el elemento <b>&#60h1&#62</b> que será de color negro, porque, respeta los estilos en cascada. Es decir, cómo se ubica declarado más cerca de la parte inferior de la última línea será el estilo que <b>pisa</b> al que está declarado anteriormente, por más que el elemento declarado sea el <b>elemento padre</b>.
+                </p>
+            </article>
+
+        </section>
+
+    </main>
+</body>
+</html>
