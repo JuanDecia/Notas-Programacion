@@ -157,39 +157,174 @@
 
                 <h2 class="subtitle">Selector Class</h2>
 
-                <p>
-                    Cuando queremos darles estilos a <b>múltiples elementos</b>, pero no queremos llenar nuestro 
-                    código de id porque podría llegar a ser inmanejable. En la construcción de un proyecto grande 
-                    podemos utilizar otro tipo de selector llamado <b>selector de clase</b>, a diferencia del id,
-                    <b>este selector puede localizar un número de elementos en el DOM y aplicarles las reglas 
-                    o estilos que definamos</b>. Es útil en muchos casos en los que tenemos el mismo 
-                    componente y en todos debe aparecer el mismo aspecto y presentación dentro de la página. 
-                    Para hacer uso del selector de clase debemos incluir el atributo <b>class</b> a nuestros 
-                    elementos HTML y darles un nombre para identificarlos.
-                </p>
+                <div class="cont-introduccion">
+                    <h3>Introducción</h3>
+
+                    <p>
+                        Cuando queremos darles estilos a <b>múltiples elementos</b>, pero no podemos llenar nuestra estructura de HTML de id porque podría llegar a ser inmanejable y poco mantenible en el tiempo debemos aplicar los selectores de <b>clases</b>. En la construcción de un proyecto grande los <b>selectores de clases</b> son la mejor opción de identificar a los elementos, a diferencia del id, <b>este selector puede localizar un número de elementos en el DOM y aplicarles los estilos que definamos</b>. Para hacer uso del selector de clase debemos incluir el atributo <b>class</b> a nuestros elementos HTML y darles un nombre para identificarlos.
+                    </p>
+                </div>
+
+                <div class="cont-ejemplo">
+                    <h3>Ejemplo práctico</h3>
+
+                    <p>
+                        Para el ejemplo de los <b>selectores de clases</b> vamos a volver a crear <b>tres elementos span</b> pero en esta ocasión <b>todos compartirán la misma clase</b> y en la hoja de estilos de CSS, solo debemos aplicar estilos <b>a la clase</b> que tienen los elementos span. Es decir, vamos a tener tres elementos con la siguiente estructura <b>&#60span class='span-green'></b>.
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Antes de pasar al ejemplo, vamos a conocer como identificamos un elemento que tiene una clase en HTML. Para identificarlo debemos usar el símbolo <b>punto</b>, es decir, <b>'.'</b> luego el nombre del elemento que contiene la clase. La estructura quedaría de la siguiente forma: <b>'.span-green'</b>.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <!-- Span rojo -->
+                        <code>
+                            <span class="field-color">.span-green &#123</span>
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">color</span>:
+                            <span class="value-color">green</span>;
+                        </code>
+
+                        <br />
+
+                        <code>
+                            <span class="field-color">&#125</span>
+                        </code>
+                    </div>
+
+                    <p class="parrafo-ejemplo">
+                        <span class="span-green">Span Green</span>
+                        <span class="span-green">Span Green</span>
+                        <span class="span-green">Span Green</span>
+                    </p>
+                </div>
+            </article>
+
+            <!-- Mulpliples Clases -->
+            <article class="cont-multiple-clases">
+                <h2>Multiples clases en un solo elemento</h2>
 
                 <p>
-                    Si quisiéramos hacer esto con el selector id, tendríamos que generar un id diferente para 
-                    cada elemento y luego referenciar cada uno de ellos en la hoja de estilos ocasionando 
-                    pérdida de mucho tiempo y escritura de código que no necesitamos.
+                    Como vimos en el apartado anterior, es posible colocar más de una clase a un elemento HTML, y para eso, vamos a estar utilizando los espacios, siendo cada espacio la separación entre una clase y la otra.
                 </p>
 
-                <p>
-                    Para este ejemplo colocaremos este selector a las etiquetas h2 de esta página y cambiaremos
-                    el estilo del color de las letras a naranja.
-                </p>
+                <div class="cont-codigo">
+                    <code>
+                        &#60<span class="tag-color">p</span>
+                        <span class="property-color">class</span>=<span class="value-color">'fondo-negro parrafo-grande color-blanco'</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        Hola soy un párrafo con fondo negro, letra blanca y más grande.
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#60<span class="tag-color">p</span>&#62
+                    </code>
+                </div>
 
                 <p>
-                    Luego, en la <b>sección de estilos</b> se selecciona con <b>un punto (.)</b> seguido del nombre
-                    que le hemos dado a la clase, en nuestro caso va a ser <b>.subtitle</b>, y le aplicamos 
-                    los estilos que la página requiera.
+                    Ahora aplicaremos el estilo a ese párrafo:
                 </p>
+
+                <div class="cont-codigo">
+                    <!-- Fondo Negro -->
+                    <code>
+                        <span class="field-color">.fondo-negro &#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-color</span>:
+                        <span class="value-color">black</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        <span class="field-color">&#125</span>
+                    </code>
+
+                    <br /><br />
+
+                    <!-- Parrafo Grande -->
+
+                    <code>
+                        <span class="field-color">.parrafo-grande &#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">font-size</span>:
+                        <span class="value-color">1.2em</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        <span class="field-color">&#125</span>
+                    </code>
+
+                    <br /> <br />
+
+                    <!-- Texto Blanco -->
+                    <code>
+                        <span class="field-color">.color-blanco &#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">white</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        <span class="field-color">&#125</span>
+                    </code>
+                </div>
+
+                <h3>Resultado: </h3>
+
+                <p class="fondo-negro parrafo-grande color-blanco">Hola, soy un párrafo con fondo negro, letra blanca y más grande.</p>
+
+            </article>
+
+            <!-- Pautas -->
+            <article class="cont-pautas">
+                <h2>Pautas a la hora de usar Id y Clases</h2>
+
+                <ol class="lista-pautas">
+                    <li>
+                        <b>Utilizar nombres descriptivos: </b>El nombre de una clase debe ser claro y descriptivo, evitando nombres genéricos como “clase1” o “clase2”. El objetivo de esto es poder indicar claramente el propósito de una clase y a qué elemento hace referencia de nuestra página, facilitando así la comprensión del código.
+                    </li>
+                    <li>
+                        <b>Mantenibilidad: </b>Las clases deben ser lo suficientemente genéricas como para ser reutilizadas, pero también deben ser lo suficientemente específicas como para no causar problemas en la aplicación de estilos. Por ejemplo, la clase navbar-link es lo suficientemente específica para saber qué se trata de un link del navbar y poder utilizarla para todos los links del navbar, pero no entra en detalle de cómo son esos links.
+                    </li>
+                    <li>
+                        <b>Utilizar minúsculas y evitar usar tildes: </b>Se recomienda usar minúsculas para definir clases ya que es una convención estándar en la industria hacerlo, ya que ayuda a mantener la consistencia y la legibilidad del código. Además, ayuda a la mejor comprensión del código. Es recomendable utilizar mayúsculas únicamente si decidimos nombrar nuestras clases que tengan más de una palabra con el método camelcase (navbarLink , navbarItem , etc)
+                    </li>
+                    <li>
+                        <b>No utilizar espacios para definir una clase individual: </b>Los espacios a la hora de nombrar clases son caracteres inválidos. Al colocar uno, el código interpretará que estamos poniendo dos clases diferentes. Por lo tanto, si tenemos que usar dos palabras para definir una única clase, utilizaremos camelcase (navbarLink) o guiones medios o bajos (navbar-link / navbar_link).
+                    </li>
+                </ol>
             </article>
 
         </section>
-        <footer>
-
-        </footer>
     </main>
 </body>
 </html>
