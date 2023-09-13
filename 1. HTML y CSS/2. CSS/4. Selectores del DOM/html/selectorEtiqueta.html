@@ -6,42 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selector de etiqueta</title>
 
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/selectorEtiqueta.css" />
 
-    <style>
-
-        header {
-            background-color: red;
-        }
-
-        section {
-            background-color: green;
-            padding: 5px;
-        }
-
-        footer {
-            background-color: black;
-            margin-top: 20px;
-        }
-
-        div {
-            width: 100%;
-            height: 150px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid black;
-        }
-
-        h1 {
-            color: white;
-        }
-
-        p {
-            color: white;
-        }
-
-    </style>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -50,57 +20,75 @@
             <h1>Selector de etiqueta</h1>
 
             <nav>
-                <a href="../index.html">Volver a Inicio</a>
+                <svg class="arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+
+                <a class="link-volver" href="../index.html">Volver a Inicio</a>
             </nav>
         </header>
 
+        <!-- Main Content -->
         <section>
             <article>
-                <p>
-                    Como su nombre lo indica estos selectores son aquellos que buscan directamente un elemento DOM según el nombre de la etiqueta seleccionada.
-                </p>
+
+                <h2>Introducción</h2>
 
                 <p>
-                    Si estamos dentro de nuestra hoja de estilo y colocamos <b>"body"</b>, estaremos seleccionando dicha etiqueta, es decir, seleccionamos todo el elemento. Esto significa que los cambios que se le apliquen en los estilos a esta etiqueta afectarán a todos los elementos que se encuentren dentro de ella también.
+                    Los <b>selectores de etiqueta</b> son aquellos que <b>buscan</b> directamente un <b>elemento</b> en el <b>DOM</b> según el <b>nombre de la etiqueta que deseamos seleccionar</b>. Este selector tiene un <b>comportamiento general</b>, ya que, al aplicar a <b>una etiqueta específica</b> los estilos que le coloquemos a este selector se aplicarán a <b>todas las demás etiquetas del mismo tipo</b>, es decir, si seleccionamos una etiqueta &#60p&#62 para cambiar el color a rojo, todas las demás etiquetas &#60p&#62 también cambiarán su comportamiento. Por eso, hay que prestar mucha atención al usar un selector tan general como este.
                 </p>
+            </article>
+
+            <!-- Ejemplo práctico -->
+            <article class="cont-ejemplo">
+                <h2>Ejemplo práctico</h2>
 
                 <p>
-                    Así como podemos seleccionar la etiqueta <b>"body"</b>, podemos seleccionar cualquier otra etiqueta.
+                    Para ejemplificar el concepto anterior, crearemos <b>tres headings</b> de nivel <b>h3</b> a los cuales les daremos unos valores específicos.
                 </p>
 
-                <p>
-                    Para aplicar más estilos en nuestro documento de ejemplo vamos a realizar los siguientes pasos:
-                </p>
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">h3 &#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">margin</span>:
+                        <span class="value-color">30px 0</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">rgb(103, 45, 240)</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">font-size</span>:
+                        <span class="value-color">1.3em</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        <span class="field-color">&#125</span>
+                    </code>
+                </div>
+
+                <div class="cont-h3">
+                    <h3>Subtitulo ejemplo #1</h3>
+                    <h3>Subtitulo ejemplo #2</h3>
+                    <h3>Subtitulo ejemplo #3</h3>
+                </div>
 
                 <p>
-                    Para tener una mejor visualización de los cambios que vamos a realizar, vamos a aplicar en los selectores un atributo llamado <b>background</b>, este aplicara un <b>color de fondo</b> dentro del contenedor seleccionado. Aplicaremos esto para "header", "section" y "footer". Respectivamente aplicaremos como valor al <b>background</b>: azul, verde y negro.
-                </p>
-
-                <p>
-                    A continuación, Aplicaremos estilos a la etiqueta “footer” para que nuestro pie de página se separe un poco del resto del contenido. Llamaremos a la etiqueta por su nombre y en el contenido agregaremos: margin-top: 20px.
-                </p>
-
-                <p>
-                    Una breve explicación sobre margin es el espacio que existe entre los contenedores de la página web.
-                </p>
-
-                <p>
-                    Este tipo de selector tiene una desventaja importante y es que cuando tenemos una Web Page con mucho contenido y nuestro documento html tiene muchas veces la misma etiqueta donde las etiquetas pueden repetirse muchas veces, no podremos aplicarle los estilos a una etiqueta en particular ya que estos harán efectos en todas las etiquetas con ese mismo nombre. Procederemos a ver como se afectan a todas las etiquetas.
-                </p>
-
-                <p>
-                    Supongamos que agregamos el estilo margin-top: 20px a body, esto afectara a todos los elementos que esten dentro de esta etiqueta y hará que todos los contenedores tengan una separación superior de 20px.
+                    Como podemos observar hemos creado los elementos del ejemplo y todos respetaron la misma estructura de estilos que le hemos especificado al selector de la etiqueta.
                 </p>
             </article>
         </section>
-
-        <footer>
-            <div>
-                <p>
-                    Soy el footer
-                </p>
-            </div>
-        </footer>
     </main>
 </body>
 </html>

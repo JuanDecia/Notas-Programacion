@@ -112,34 +112,22 @@ p {
 
 /* ######### HEADER */
 
-header {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-}
-
 h1 {
+    margin: 30px 0;
+    text-align: center;
     color: rgb(15, 110, 110);
     text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
     animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
 }
 
-/* ######### MAIN CONTENT */
-
-/* --- Articulo Selectores --- */
-
-.cont-links {
-    list-style: none;
-}
-
-.cont-links li {
+nav {
     display: flex;
     align-items: center;
-    padding: 10px;
-    gap: 20px;
+    gap: 30px;
+    margin: 30px 0;
 }
 
-.cont-links a {
+.link-volver {
     position: relative;
     padding: 10px;
     color: rgb(209, 87, 5);
@@ -147,7 +135,7 @@ h1 {
     font-size: 1.3em;
 }
 
-.cont-links a::after {
+.link-volver::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -160,10 +148,12 @@ h1 {
     transition: transform 0.3s ease-in-out;
 }
 
-.cont-links :hover::after {
+.link-volver:hover::after {
     transform: scaleX(1);
 }
 
 .arrow {
     width: 30px;
 }
+
+/* ######### MAIN CONTENT */
