@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Id y Clase</title>
 
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/selectorIdClase.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -14,30 +19,20 @@
             <h1>Selectores de Id y Clase</h1>
 
             <nav>
-                <a href="../index.html">Volver a inicio</a>
+                <svg class="arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+
+                <a class="link-volver" href="../index.html">Volver a inicio</a>
             </nav>
         </header>
+
+        <!-- Main Content -->
         <section>
 
+            <!-- Introducción -->
             <article>
-
+                <h2>Introducción</h2>
                 <p>
-                    Este tipo de selectores ayudan a filtrar los elementos y son más específicos con los elementos que
-                    queremos estilizar por medio de CSS.
-                </p>
-
-                <h2 class="subtitle">Selector ID</h2>
-                
-                <p>
-                    Una forma fácil de agregar una <b>"identificación única" o ID</b> a un elemento del DOM es 
-                    a través del atributo <b>"ID"</b>.
-                </p>
-            
-                <p id="parrafo">
-                    Como ejemplo le agregaremos un <b>ID</b> a este mismo párrafo. Para realizar 
-                    buenas prácticas se recomienda usar nombres acordes con el contenido, en este caso pondremos
-                    como ejemplo "parrafo". Una vez hecho asignamos los estilos para el atributo, colocaremos
-                    El color de este párrafo en azul.
+                    Este tipo de selectores ayudan a filtrar los elementos y son más específicos con los elementos que queremos estilizar por medio de CSS.
                 </p>
 
                 <p>
@@ -51,6 +46,111 @@
                     de nuestro sitio.
                 </p>
 
+            </article>
+
+            <!-- ID -->
+            <article>
+                <h2>Selector ID</h2>
+
+                <p>
+                    Una forma fácil de agregar estilos <b>solo a un elemento</b> es utilizando una <b>identificación única</b> en un elemento o etiqueta de HTML y se logra a través de la utilización del <b>atributo “id”</b> que nos ofrece el propio HTML, en otras palabras, un ID en HTML es un atributo que se utiliza para identificar de manera única un elemento en una página HTML.
+                </p>
+
+                <br />
+
+                <p>
+                    Es muy importante destacar que <b>no puede haber más de un elemento con el mismo ID en una página HTML</b>, por lo tanto, no podemos repetirlos , solo debemos usarlo en un único elemento.
+                </p>
+
+                <div class="cont-ejemplo">
+                    <h3>Ejemplo práctico ID</h3>
+
+                    <p>
+                        A continuación, realizaremos un ejempo donde crearemos <b>tres elementos 'span'</b> donde los tres tendrán un <b>ID</b> diferente al cual le aplicaremos un estilo específico a cada uno de ellos.
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Antes de aplicar los estilos, debemos saber <b>cómo identificar este selector en CSS</b>. A los elementos con atributos ID los identificaremos con las almohadillas <b>'#'</b> seguido del nombre del contenedor que tiene el ID. Es decir, si tenemos un elemento <b>&#60span id='span-rojo'&#62</b> lo identificaremos como <b>'#span-rojo'</b>.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <!-- Span rojo -->
+                        <code>
+                            <span class="field-color">#span-rojo &#123</span>
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">color</span>:
+                            <span class="value-color">red</span>;
+                        </code>
+
+                        <br />
+
+                        <code>
+                            <span class="field-color">&#125</span>
+                        </code>
+
+                        <br /> <br />
+
+                        <!-- Span blanco -->
+                        <code>
+                            <span class="field-color">#span-blanco &#123</span>
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">color</span>:
+                            <span class="value-color">white</span>;
+                        </code>
+
+                        <br />
+
+                        <code>
+                            <span class="field-color">&#125</span>
+                        </code>
+
+                        <br /> <br />
+
+                        <!-- Span azul -->
+                        <code>
+                            <span class="field-color">#span-azul &#123</span>
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">color</span>:
+                            <span class="value-color">blue</span>;
+                        </code>
+
+                        <br />
+
+                        <code>
+                            <span class="field-color">&#125</span>
+                        </code>
+                    </div>
+
+                    <p class="parrafo-ejemplo">
+                        <span id="span-rojo">Texto a color Rojo</span>
+                        <span id="span-blanco">Texto a color Blanco</span>
+                        <span id="span-azul">Texto a color Azul</span>
+                    </p>
+
+                    <p>
+                        Como podemos observar en el resultado, cada uno de los elementos span tienen las propiedades que le hemos aplicado a los elementos en la hoja de estilos. Ahora, volvemos a destacar que no podemos volver a repetir este atributo ID en todo el documento, es decir, no puede volver a tener otro elemento 'span' el mismo id.
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Por eso, esta práctica no es muy recomendable en un código extenso, porque deberíamos aplicar nombres diferentes a cada elemento que vamos a escoger con un ID. Para evitar y no generar esta mala práctica vamos a ver el selector de clases a continuación.
+                    </p>
+                </div>
             </article>
 
             <article>
