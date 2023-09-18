@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores Avanzados</title>
+
+    <link rel="stylesheet" href="../css/selectorAtributo.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Selectores Avanzados</h1>
+
+            <nav>
+                <svg class="arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+
+                <a class="link-volver" href="../index.html">Volver a inicio</a>
+            </nav>
+        </header>
+        <section>
+
+            <!-- Introducción -->
+            <article class="cont-introducción">
+                <h2>Introducción</h2>
+
+                <p>
+                    Los selectores avanzados son una regla especial que nos ayudan a identificar elementos o un elemento específico sin la necesidad de crear id o clases a las etiquetas. Es decir, vamos a poder seleccionar los elementos según su herencia o su atributo.
+                </p>
+            </article>
+
+            <!-- Selectores de Atributos -->
+            <article>
+                <h2>Selector de elementos descendientes</h2>
+    
+                <p>
+                    Un selector de elementos descendientes en CSS se utiliza para <b>seleccionar y aplicar estilos a elementos que están contenidos dentro de otro elemento en la estructura de la página HTML</b>. Se pueden seleccionar elementos descendientes utilizando la sintaxis de selector de espacio.
+                </p>
+    
+                <div class="cont-codigo">
+                    <code3
+                        &#60<span class="tag-color">section</span>&#62
+                    </code>
+    
+                    <!-- Elemento Div #1 -->
+                    <br />
+    
+                    <code class="margin-20">
+                        &#60<span class="tag-color">div</span>
+                        <span class="property-color">class</span>=<span class="value-color">'div-hijo'</span>&#62Soy un div con contenido&#60/<span class="tag-color">div</span>&#62
+                    </code>
+    
+                    <!-- Elemento Div #2 -->
+                    <br />
+    
+                    <code class="margin-20">
+                        &#60<span class="tag-color">div</span>
+                        <span class="property-color">class</span>=<span class="value-color">'div-hijo-dos'</span>&#62
+                    </code>
+    
+                    <!-- Elemento Parrafo -->
+                    <br />
+    
+                    <code class="margin-40">
+                        &#60<span class="tag-color">p</span>&#62Soy un párrafo hijo de div que a su vez es hijo de section&#60/<span class="tag-color">p</span>&#62
+                    </code>
+    
+                    <br />
+    
+                    <code class="margin-20">
+                        &#60/<span class="tag-color">div</span>&#62
+                    </code>
+    
+                    <br />
+    
+                    <code>
+                        &#60/<span class="tag-color">section</span>&#62
+                    </code>
+                    
+                </div>
+    
+                <p>
+                    Ahora nuestro objetivo es identificar y seleccionar cada uno de los elementos que se encuentra dentro del elemento <b>'section'</b>. Para ello vamos a realizar la práctica nombrada anteriormente: 
+                </p>
+    
+                <!-- Ejemplo Selectores -->
+                <div class="cont-codigo">
+                    <!-- Primer Selector -->
+                    <code>
+                        <span class="field-color">section .div-hijo &#123</span>
+                    </code>
+    
+                    <br />
+    
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">red</span>;
+                    </code>
+    
+                    <br />
+    
+                    <code>
+                        <span class="field-color">&#125</span>
+                    </code>
+    
+                    <br /> <br />
+    
+                    <!-- Segundo Selector -->
+                    <code>
+                        <span class="field-color">section .div-hijo-dos &#123</span>
+                    </code>
+    
+                    <br />
+    
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">red</span>;
+                    </code>
+    
+                    <br />
+    
+                    <code>
+                        <span class="field-color">&#125</span>
+                    </code>
+    
+                    <br /> <br />
+    
+                    <!-- Tercer Selector -->
+                    <code>
+                        <span class="field-color">section .div-hijo-dos p &#123</span>
+                    </code>
+    
+                    <br />
+    
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">blue</span>;
+                    </code>
+    
+                    <br />
+    
+                    <code>
+                        <span class="field-color">&#125</span>
+                    </code>
+                </div>
+    
+                <h3>Primer Selector</h3>
+    
+                <p>
+                    Como podemos observar en el primer caso para seleccionar al <b>primer elemento 'div'</b> primero hemos hecho de la selección del elemento padre llamado 'section' y seguido, <b>separado por espacio</b> el selector al que vamos a apuntar, es decir, al elemento <b>div</b>. Si prestamos atención en esta selección, hemos llamado por su <b>nombre de la clase</b>, esto es para que solo a ese elemento dentro de la estructura de <b>section</b> se le apliquen los cambios en los estilos.
+                </p>
+    
+                <h3>Segundo Selector</h3>
+    
+                <p>
+                    En el segundo caso hemos aplicado la misma regla que en el primer selector, a diferencia que esta vez, hemos cambiado <b>el selector al que apuntamos</b>. Es decir, el selector en esta ocasión es la clase <b>.div-hijo-dos</b>. Notemos que este elemento también tiene un hijo, entonces, los cambios que le apliquemos a este elemento le van a afectar también a su elemento hijo.
+                </p>
+    
+                <h3>Tercer Selector</h3>
+    
+                <p>
+                    En el último caso de los selectores de este ejemplo, hemos seleccionado el elemento que es hijo del elemento <b>section</b> y a su vez, también es hijo de un elemento <b>div</b>. La estructura para apuntar a este elemento no ha cambiado, solo que hemos agregado <b>un paso más al selector</b>, es decir, luego de llegar hasta el selector <b>.div-hijo-dos</b> dejamos un espacio y agregamos el selector <b>p</b> que es al que deseamos cambiar los estilos. Para tener en cuenta un detalle, con los cambios realizados, el elemento 'p' que se encuentra dentro del elemento 'div' con clase 'div-hijo-dos' va a contener el texto azul, pero, este va a ser el único con este estilo. Ya que, los demás elementos de <b>'.div-hijo-dos</b> van a tener el texto rojo porque así esta declarado en su selector.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Selector Múltiple -->
+            <article>
+                <h2>Selector de múltiples elementos</h2>
+
+                <p>
+                    Css nos permite aplicar estilos a <b>más de un elemento a la vez</b>, separando cada uno de los elementos a los que queremos aplicar estilos mediante el uso de una <b>coma (",")</b>.
+                </p>
+
+                <!-- Estructura HTML -->
+                <h3>Ejemplo: Estructura en HTML</h3>
+
+                <div class="cont-codigo">
+                    <code>
+                        &#60<span class="tag-color">section</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">p</span>
+                        <span class="property-color">class</span>=<span class="value-color">'parrafo'</span>&#62Soy el párrafo #1&#60/<span class="tag-color">p</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">h1</span>&#62Hola Soy el título&#60/<span class="tag-color">h1</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">p</span>
+                        <span class="property-color">class</span>=<span class="value-color">'parrafo'</span>&#62Soy el párrafo #2&#60/<span class="tag-color">p</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">p</span>
+                        <span class="property-color">class</span>=<span class="value-color">'parrafo'</span>&#62Soy el párrafo #3&#60/<span class="tag-color">p</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#60/<span class="tag-color">section</span>&#62
+                    </code>
+                </div>
+
+                <!-- Ejemplo: Selector Múltiple CSS -->
+                <h3>Ejemplo: Selector Múltiple en CSS</h3>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">h1</span>
+                        ~
+                        <span class="field-color">.parrafo</span>,
+                    </code>
+
+                    <br />
+
+                    <code>
+                        <span class="field-color">section h2</span>,
+                    </code>
+
+                    <br />
+
+                    <code>
+                        <span class="field-color">div &#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-color</span>:
+                        <span class="value-color">red</span>;
+                    </code>
+
+                    <br />
+
+                    <code><span class="field-color">&#125</span></code>
+                </div>
+
+                <p>
+                    En este caso de ejemplo, aplicará el mismo estilo a los párrafos que sean hermanos consecutivos del h1 con la clase “parrafo”, a todos los h2 que se encuentren dentro de nuestra sección hero y a todos los divs de nuestra estructura HTML.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Selector de elementos Hijo Directo -->
+            <article class="cont-elemento-hijo">
+                <h2>Selector de elementos hijos directos</h2>
+
+                <p>
+                    Un <b>selector de elementos hijo</b> en CSS se utiliza para <b>seleccionar y aplicar estilos</b> a elementos que son <b>hijos directos</b> de otro elemento en la estructura de la página HTML. Se pueden seleccionar elementos hijo utilizando la sintaxis de selector de <b>mayor que (">")</b>. Por ejemplo:
+                </p>
+                
+                <!-- Ejemplo Elementos HTML -->
+                <div class="cont-codigo">
+                    <code>
+                        &#60<span class="tag-color">section</span>&#62
+                    </code>
+
+                    <!-- Elemento Div #1 -->
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">div</span>
+                        <span class="property-color">class</span>=<span class="value-color">'contenido'</span>&#62Soy un div con contenido&#60/<span class="tag-color">div</span>&#62
+                    </code>
+
+                    <!-- Elemento Div #2 -->
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">div</span>&#62
+                    </code>
+
+                    <!-- Elemento Parrafo -->
+                    <br />
+
+                    <code class="margin-40">
+                        &#60<span class="tag-color">p</span>
+                        <span class="property-color">class</span>=<span class="value-color">'contenido'</span>&#62Soy un párrafo hijo de div que a su vez es hijo de section&#60/<span class="tag-color">p</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60/<span class="tag-color">div</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#60/<span class="tag-color">section</span>&#62
+                    </code>
+                    
+                </div>
+
+                <div class="cont-codigo">
+                    <!-- Primer Selector -->
+                    <code>
+                        <span class="field-color">section &#62 .contenido &#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">red</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        <span class="field-color">&#125</span>
+                    </code>
+                </div>
+
+                <p>
+                    En este caso, los elementos que son <b>hijos directos</b> del elemento section y tengan la clase <b>'contenido'</b> se verán afectados por los estilos que pongamos entre las llaves. El elemento <b>'p'</b> no se verá afectado por los cambios porque no es un hijo directo de 'section'.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Hermanos Adyacentes -->
+            <article>
+                <h2>Selector de Hermanos Adyacentes</h2>
+
+                <p>
+                    Un <b>selector de hermanos adyacentes</b> en CSS se utiliza para <b>seleccionar y aplicar estilos</b> a elementos que son <b>hermanos directos</b> en la estructura de la página HTML. Se pueden seleccionar elementos hermanos adyacentes utilizando la sintaxis de <b>selector de adyacencia (+)</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    Este selector se puede utilizar, por ejemplo, para darle funcionalidad al menú de barras que suelen tener las páginas web en su versión mobile y/o tablet.
+                </p>
+
+                <br />
+
+                <p>
+                    Cuando hacemos referencia a <b>hermanos directos o adyacentes</b> nos referimos a aquellos elementos que son <b>elementos hijo del mismo elemento padre</b> y que se encuentran colocados en la estructura del código de manera sucesiva.
+                </p>
+
+                <br />
+
+                <p>
+                    Por otro lado, es importante destacar que solo se podrá seleccionar a <b>un hermano adyacente que se encuentre con posterioridad dentro del código, y no uno que se encuentre antes del elemento mediante el cual seleccionaremos un hermano directo</b>. Veamos un ejemplo de cómo utilizar el selector de hermanos adyacentes:
+                </p>
+
+                <!-- Ejemplo Estructura HTML -->
+                <h3>Ejemplo: Estructura en HTML</h3>
+
+                <div class="cont-codigo">
+                    <code>
+                        &#60<span class="tag-color">section</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">p</span>
+                        <span class="property-color">class</span>=<span class="value-color">'parrafo'</span>&#62Soy el párrafo #1&#60/<span class="tag-color">p</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">h1</span>&#62Hola Soy el título&#60/<span class="tag-color">h1</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">p</span>
+                        <span class="property-color">class</span>=<span class="value-color">'parrafo'</span>&#62Soy el párrafo #2&#60/<span class="tag-color">p</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">p</span>
+                        <span class="property-color">class</span>=<span class="value-color">'parrafo'</span>&#62Soy el párrafo #3&#60/<span class="tag-color">p</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#60/<span class="tag-color">section</span>&#62
+                    </code>
+                </div>
+
+                <!-- Ejemplo Selector en CSS -->
+                <h3>Ejemplo: Selector hermano adyacente en CSS</h3>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">h1</span>
+                        +
+                        <span class="field-color">.parrafo</span>
+                        <span class="field-color">&#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-color</span>:
+                        <span class="value-color">red</span>;
+                    </code>
+
+                    <br />
+
+                    <code><span class="field-color">&#125</span></code>
+                </div>
+
+                <p>
+                    En este caso, vemos que todos los párrafos y nuestro título son elementos hermanos, ya que son todos <b>hijos directos</b>. Ahora bien como mencionamos anteriormente, el <b>selector de hermanos adyacentes</b> selecciona elementos posteriores a, en este caso, nuestro <b>h1</b>, por lo cual los estilos <b>no van a afectar al párrafo 1</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    Por otro lado, mencionamos también que selecciona al hermano que se encuentra de manera sucesiva en el código, lo cual hace que los estilos no se apliquen al párrafo 3.
+                </p>
+
+                <br />
+
+                <p>                    
+                    Por ende, los estilos aplicarán al párrafo 2 , ya que cumple con ambas características necesarias: Estar colocado luego de nuestro h1 en el código y además está colocado de manera sucesiva.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Selector General de Elementos Hermanos -->
+            <article class="cont-selector-general-hermanos">
+                <h2>Selector general de hermanos</h2>
+
+                <p>
+                    Un <b>selector de hermanos generales</b> en CSS se utiliza para seleccionar y aplicar estilos a elementos que son <b>hermanos consecutivos</b> en la estructura de la página HTML. Se pueden seleccionar elementos hermanos consecutivos utilizando la sintaxis de <b>virgulilla (~)</b>.
+                </p>
+
+                <h3>Ejemplo: Selector hermanos generales en CSS</h3>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">h1</span>
+                        ~
+                        <span class="field-color">.parrafo</span>
+                        <span class="field-color">&#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-color</span>:
+                        <span class="value-color">red</span>;
+                    </code>
+
+                    <br />
+
+                    <code><span class="field-color">&#125</span></code>
+                </div>
+
+                <p>
+                    Tomando como base el ejemplo de los hermanos adyacentes, se mantendrá que no se aplicarán los estilos al primer párrafo, ya que si bien son hermanos no es consecutivo en el código, pero <b>si aplicará</b> los estilos a los otros 3 párrafos que están <b>luego de nuestro h1</b>, ya que son <b>elementos hermanos</b> que se encuentran <b>posteriormente</b> en el código que nuestro título.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- SELECTORES DE ATRIBUTOS -->
+            <article class="cont-selector-atributos">
+                <h2>Selectores de Atributos</h2>
+
+                <p>
+                    Los selectores de <b>atributos</b> se especializan en capturar los elementos <b>según los atributos</b> que tengan en su estructura en el DOM. Esta herramienta puede ser muy útil a la hora de hacer un <b>selector único</b> o realizar un <b>selector múltiple</b> sin la necesidad de crear clases o Id's específicos para capturar un elemento. Estos selectores ofrecen una funcionalidad mucho más avanzada, podemos realizar búsquedas personalizadas y con mejores filtros. También, tenemos la posibilidad de buscar fácilmente un <b>valor al principio, un valor al final o en todo el contenido del valor del atributo</b>.
+                </p>
+
+                <!-- Selector de Atributo General -->
+                <h3>Selector de atributo General</h3>
+
+                <p>
+                    El <b>atributo de selector general</b> consiste en seleccionar los elementos que tengan un atributo específico, independientemente del valor que tenga ese atributo que estamos por seleccionar. Por ejemplo, este selector es útil para seleccionar todas las etiquetas <b>"a"</b> que tengan el atributo href en su elemento.
+                </p>
+
+                <br />
+
+                <p>
+                    Para realizar dicha búsqueda debemos realizar la siguiente <b>sintaxis</b> de este tipo de <b>selector</b>, primero necesitamos referenciar el elemento del DOM que deseamos seleccionar (en nuestro caso de ejemplo es la etiqueta &#60a&#62) y luego, entre <b>corchetes</b> ("[]") colocamos el valor del atributo que debe tener el elemento al que estamos seleccionando (en nuestro caso de ejemplo href).
+                </p>
+
+                <h4>Ejemplo: Sintaxis</h4>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">a[href] &#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-color</span>:
+                        <span class="value-color">red</span>;
+                    </code>
+
+                    <br />
+
+                    <code><span class="field-color">&#125</span></code>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <article>
+
+                <h2>Selector de valores en un atributo</h2>
+
+                <!-- Selector Valor del Atributo -->
+                <div class="cont-selector-valor-atributo">
+                    <h3>Selector del valor de un atributo</h3>
+
+                    <p>
+                        Si queremos hacer una selección más específica <b> por medio de un atributo</b>, también, podemos filtrarlos por el valor que tenga el atributo del elemento al que queremos modificar. Es decir, además de seleccionar el <b>atributo</b> vamos a colocar el <b>valor</b> que este tenga.
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Tomando el ejemplo anterior, podemos seleccionar elementos <b>&#60a&#62</b> que a su vez tengan el atributo <b>href</b> y también, que los <b>valores específicos</b> del atributo 'href' sean <b>http://www.google.com</b>.
+                    </p>
+
+                    <h4>Ejemplo: Sintaxis</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">a[href='http://www.google.com'] &#123</span>
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">background-color</span>:
+                            <span class="value-color">red</span>;
+                        </code>
+
+                        <br />
+
+                        <code><span class="field-color">&#125</span></code>
+                    </div>
+                </div>
+                
+                <!-- Selector general del valor de un atributo -->
+                <div class="cont-selector-atributo-general">
+                    <h3>Selector general del valor de un atributo</h3>
+    
+                    <p>
+                        Este selector tiene un comportamiento muy parecido al ejemplo anterior, pero es más <b>general</b>. En el ejemplo anterior, debía coincidir por completo la <b>ruta absoluta</b> del valor para tomar el selector, es decir, generalmente es usado para <b>enlaces</b>.
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Este selector es más precisamente para usar elementos que tengan atributos y seleccionar los valores generales de esos atributos. Para hacer uso de este selector debemos aplicar el <b>asterisco</b> ("*"). Primero escogemos el elemento, luego seleccionamos el atributo seguido del <b>asterisco</b> y finalizando el valor que nosotros vamos a apuntar para capturar el elemento.
+                    </p>
+
+                    <h4>Ejemplo: Sintaxis</h4>
+    
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">div[class*='cont-codigo'] &#123</span>
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">background-color</span>:
+                            <span class="value-color">red</span>;
+                        </code>
+
+                        <br />
+
+                        <code><span class="field-color">&#125</span></code>
+                    </div>
+
+                    <p>
+                        Tomamos los <b>div</b> que solo tengan un atributo <b>class</b> con un valor <b>'cont-codigo'</b> y cambiamos su fondo a rojo.
+                    </p>
+                </div>
+
+                <!-- Selector Singo arriba -->
+                <div class="cont-selector-inicio">
+                    <h3>Selector inicio de valor de atributo</h3>
+
+                    <p>
+                        Existe un selector para capturar <b>con que caracter inicia</b> dicho atributo. Es decir, <b>el atributo que comienza con (agregar descripción de inicio)</b>. Para aplicar dicho selector debemos utilizar el <b>símbolo mayor que</b> apuntando hacia arriba ("^").
+                    </p>
+                    
+                    <h4>Ejemplo: Sintaxis</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">a[href^='#'] &#123</span>
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">background-color</span>:
+                            <span class="value-color">red</span>;
+                        </code>
+
+                        <br />
+
+                        <code><span class="field-color">&#125</span></code>
+                    </div>
+
+                    <p>
+                        En el ejemplo hemos capturado los elementos <b>a</b> que a su vez, solo en su <b>atributo 'href'</b> comiencen con <b>'#'</b>.
+                    </p>
+                </div>
+
+                <!-- Selector $ -->
+                <div class="cont-selector-peso">
+                    <h3>Selector finalización del valor de un atributo</h3>
+
+                    <p>
+                        Existe un selector para capturar un elemento según <b>como finaliza su valor</b>, es decir, hace que el selector siempre busque al <b>final de la palabra especificada</b> al <b>final del valor del atributo</b>. Para aplicar este selector debemos hacer uso del <b>símbolo peso</b> ("$").
+                    </p>
+
+                    <h4>Ejemplo: Sintaxis</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">a[href$='.com'] &#123</span>
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">background-color</span>:
+                            <span class="value-color">red</span>;
+                        </code>
+
+                        <br />
+
+                        <code><span class="field-color">&#125</span></code>
+                    </div>
+
+                    <p>
+                        En ejemplo de la sintaxis estamos capturando los elementos <b>'a'</b> que a su vez su valor finalice en <b>.com</b>.
+                    </p>
+                </div>
+
+                <!-- Selector símbolo ~ -->
+                <div class="cont-selector-virgilla">
+                    <h3>Selector para múltiples valores</h3>
+
+                    <p>
+                        Si nuestro símbolo es <b>~</b> se usa cuando el atributo tiene <b>múltiples valores</b> separados por espacio entonces se buscará la palabra completa que se especifica en el selector entre todos los valores que tiene el atributo.
+                    </p>
+
+                    <h4>Ejemplo: Sintaxis</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">a[class~='logo'] &#123</span>
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">background-color</span>:
+                            <span class="value-color">red</span>;
+                        </code>
+
+                        <br />
+
+                        <code><span class="field-color">&#125</span></code>
+                    </div>
+
+                    <p>
+                        En este caso el selector buscará los elementos <b>a</b> que contengan un atributo <b>class</b> y a su vez, que en todos los valores posibles que tenga ese atributo el valor específico <b>'logo'</b>.
+                    </p>
+                </div>
+
+                <!-- Selector signo | -->
+                <div class="cont-selector-contenido">
+                    <h3>Selector busqueda de valor</h3>
+
+                    <p>
+                        Si nuestro símbolo del selector en valor de atributo es <b>'|'</b> buscará el valor al <b>principio o en todo el contenido</b>. Pero, deberá estar seguido por un guion <b>"|-"</b>. Por ejemplo, si tenemos un grupo de imágenes o íconos y el nombre de cada uno comienza con ícono, es decir: icono twitter, icono Facebook, icono etc, para referenciar a todos usamos este selector que es el más indicado.
+                    </p>
+
+                    <h4>Ejemplo: Sintaxis</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">img[src|='icono'] &#123</span>
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">background-color</span>:
+                            <span class="value-color">red</span>;
+                        </code>
+
+                        <br />
+
+                        <code><span class="field-color">&#125</span></code>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+</body>
+</html>
