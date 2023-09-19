@@ -83,38 +83,95 @@ h1 {
 }
 
 /* ######### MAIN CONTENT */
-.lista-especificidad ol li {
+
+/* -- Ejemplo contenedor código 'General' */
+.cont-codigo {
+    background-color: rgb(56, 55, 55);
+    color: #ffffff;
+    margin: 20px auto;
+    padding: 7px;
+    width: 70%;
+    border-radius: 5px;
+}
+
+.margin-20 {
+    margin-left: 20px;
+}
+
+.margin-40 {
+    margin-left: 40px;
+}
+
+.margin-60 {
+    margin-left: 60px;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.tag-color {
+    color: rgb(37, 143, 241);
+}
+
+.property-color {
+    color: rgb(113, 209, 247);
+}
+
+.field-color {
+    color: #ffd311;
+}
+
+.value-color {
+    color: #f39658;
+}
+
+.comment-color {
+    color: rgb(41, 148, 31);
+}
+/* -- */
+
+/* --- Articulo Medidas Absolutas --- */
+.lista-medidas-absolutas {
+    margin: 20px 0;
+}
+
+.lista-medidas-absolutas ul li {
     padding: 10px;
 }
 
-.tabla-niveles {
-    margin: 25px 0;
-    display: flex;
-    justify-content: center;
-}
-
-.tabla-niveles table {
-    width: 60%;
-    border-collapse: collapse;
-}
-
-thead tr {
-    background-color: #cab6a7;
-}
-
-tbody {
-    background-color: #ffffff6e;
-}
-
-.tabla-niveles table th {
-    text-align: start;
-}
-
-table, th, td {
+/* --- Articulo Medidas Relativas --- */
+.contenedor-ejemplo {
+    margin: 30px 0;
+    padding: 10px;
     border: 1px solid black;
 }
 
-td, th {
-    width: 33.33%;
-    padding: 7px;
+.contenedor-hijo {
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid blue;
+    background-color: rgb(168, 243, 218);
+}
+
+.contenedor-hijo-dos {
+    width: 400px;
+    border: 2px solid rgb(152, 28, 224);
+}
+
+.medida-absoluta {
+    width: 200px;
+}
+
+.medida-relativa {
+    width: 40%;
+}
+
+/* Contenedor medida viewport */
+.lista-viewport {
+    margin: 20px auto;
+}
+
+.lista-viewport ul li {
+    padding: 10px;
 }

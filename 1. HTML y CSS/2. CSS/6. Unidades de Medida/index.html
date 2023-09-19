@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Medida</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Unidades de Medida</h1>
+        </header>
+
+        <!-- Main Content -->
+        <section>
+
+            <!-- Articulo Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    En CSS3 es necesario utilizar <b>unidades de medidas</b>, ya que son usadas por muchas de las propiedades más importantes que nos ofrece esta herramienta. Con estas propiedades definimos <b>altos, anchos, márgenes y tamaños de letra</b> entre muchos otros formatos. Existen dos grandes grupos de unidades de medida para realizar las maquetaciones son: las <b>unidades absolutas</b> y las <b>unidades relativas</b>.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Articulo Unidades Absolutas -->
+            <article class="unidad-absoluta">
+                <h2>Unidades Absolutas</h2>
+
+                <p>
+                    Las unidades de medida absolutas en CSS son un sistema de medida que se refiere a una cantidad fija y constante de medida. Estas unidades no cambian en relación al tamaño de la pantalla o al tamaño de la fuente, <b>están completamente definidas y no dependen de otros valores de medida</b>. Entre las unidades de medida absoluta se encuentran:
+                </p>
+
+                <div class="lista-medidas-absolutas">
+                    <ul>
+                        <li>
+                            <b>Pixeles (px): </b>Unidad de medida que se refiere a la cantidad de píxeles en la pantalla. Normalmente va a ser esta la medida absoluta que vamos a utilizar.
+                        </li>
+                        <li>
+                            <b>Puntos (pt): </b>Unidad de medida utilizada en la impresión y en el diseño gráfico. Un punto equivale a 1 pulgada/72, aproximadamente 0.35 milímetros.
+                        </li>
+                        <li>
+                            <b>Centímetros (cm), milímetros (mm), pulgadas (in) y picas (pc): </b> unidades de medida utilizadas para impresión y diseño gráfico.
+                        </li>
+                    </ul>
+                </div>
+
+                <p>
+                    La ventaja de las unidades absolutas es que siempre tendremos un valor fijo, sin preocuparnos por cálculos externos, siempre estaremos seguros de que el valor definido no cambiará en ninguna pantalla ni resolución en la que sea vista nuestra página web.Las unidades de medida absolutas se utilizan cuando es necesario tener un <b>control preciso y constante</b> sobre el tamaño de los elementos en una página web.
+                </p>
+
+                <br />
+
+                <p>
+                    La desventaja son las menos eficientes a la hora de trabajar bajo el modelo de Mobile-First o Responsive Design, ya que las resoluciones y medidas de pantalla cambian constantemente.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Unidades Relativas -->
+            <article class="unidades-relativas">
+                <h2>Unidad de medida relativa</h2>
+
+                <p>
+                    Las unidades de medida relativas en CSS son un sistema de medida que se refiere a una cantidad proporcional a otro elemento o valor. Estas unidades cambian en relación al tamaño de la pantalla o al tamaño de la fuente. Las unidades de medida relativas son útiles cuando se desea que los elementos cambien de tamaño en función del tamaño de la pantalla o de la fuente. Esto puede ser útil para lograr una experiencia de usuario más uniforme en diferentes dispositivos y tamaños de pantalla. No obstante, es importante que cuando las utilicemos sepamos <b>en relación a que está tomando un tamaño el elemento al cual le estamos aplicando unidades de medidas relativas</b>.
+                </p>
+
+                <!-- Tipo de unidades -->
+                <div class="tipo-unidades-relativas">
+                    <h3>Tipos de unidades Relativas</h3>
+
+                    <!-- Porcentaje -->
+                    <div class="porcentaje-unidad">
+                        <h4>Porcentaje</h4>
+
+                        <p>
+                            El <b>porcentaje</b> es una unidad de medida que se refiere a un porcentaje de la <b>anchura o altura del contenedor del elemento</b>. Por ejemplo, si estableces una propiedad de un elemento como porcentaje, será un porcentaje <b>a relación del elemento padre</b>. Si usas un porcentaje para un div en el valor de la propiedad width, será una medida de width en porcentaje en relación del elemento padre que podría ser un elemento section.
+                        </p>
+
+                        <div class="cont-codigo">
+                            <!-- Apertura Section -->
+                            <code>
+                                &#60<span class="tag-color">section</span>&#62
+                            </code>
+
+                            <br />
+
+                            <!-- Contenedor div #1 -->
+                            <code class="margin-20">
+                                &#60<span class="tag-color">div</span>&#62I am 200px wide&#60/<span class="tag-color">div</span>&#62
+                            </code>
+
+                            <br />
+
+                            <!-- Contenedor div #2 -->
+                            <code class="margin-20">
+                                &#60<span class="tag-color">div</span>&#62I am 40% wide&#60/<span class="tag-color">div</span>&#62
+                            </code>
+
+                            <br /> <br />
+
+                            <!-- Contenedor article apertura -->
+                            <code class="margin-20">
+                                &#60<span class="tag-color">article</span>&#62
+                            </code>
+
+                            <br />
+
+                            <!-- Contenedor div #1 -->
+                            <code class="margin-40">
+                                &#60<span class="tag-color">div</span>&#62I am 200px wide&#60/<span class="tag-color">div</span>&#62
+                            </code>
+
+                            <br />
+
+                            <!-- Contenedor div #2 -->
+                            <code class="margin-40">
+                                &#60<span class="tag-color">div</span>&#62I am 40% wide&#60/<span class="tag-color">div</span>&#62
+                            </code>
+
+                            <br />
+
+                            <!-- Contenedor article cierre -->
+                            <code class="margin-20">
+                                &#60/<span class="tag-color">article</span>&#62
+                            </code>
+
+                            <br />
+
+                            <code>
+                                &#60/<span class="tag-color">section</span>&#62
+                            </code>
+                        </div>
+
+                        <p>
+                            Las dos primeras cajas que se encuentran en relación a su contenedor padre, es decir <b>&#60section&#62</b> una tiene la medida en pixeles y la otra tiene medida en porcentaje. Los anchos de las cajas son de 200 píxeles y de 40%, respectivamente.
+                        </p>
+
+                        <br />
+
+                        <p>
+                            Las siguientes dos cajas podemos observar que se encuentran dentro de una estructura. Esta estructura es el elemento <b>&#60article&#62</b> que es hijo del elemento <b>&#60section&#62</b> pero a su vez es el elemento padre de los elementos <b>&#60div&#62</b> que este contiene. En este ejemplo el elemento article tiene 400 píxeles de ancho. El primer <b>elemento hijo de article</b> tiene un ancho de 200px, es decir, tiene el mismo ancho que el primer elemento del ejemplo anterior y el segundo elemento también respeta la misma medida de 40%, pero a diferencia que ahora es el 40% de su elemento padre, es decir de article, que respectivamente tiene un ancho de 400px y no del viewport completo como lo tiene section.
+                        </p>
+
+                        <div class="contenedor-ejemplo">
+                            <div class="contenedor-hijo medida-absoluta">I am 200 px wide</div>
+                            <div class="contenedor-hijo medida-relativa">I am 40% wide</div>
+
+                            <div class="contenedor-hijo-dos">
+                                <div class="contenedor-hijo medida-absoluta">I am 200 px wide</div>
+                                <div class="contenedor-hijo medida-relativa">I am 40% wide</div>
+                            </div>
+                        </div>
+
+                        <p>
+                            Si observamos detenidamente este ejemplo, las unidades de los contenedores div fueron declaradas de la misma manera, pero al utilizar medidas diferentes (relativas y absolutas) podemos notar los diferentes comportamientos según su elemento padre, y en este caso, el segundo elemento con unidad de porcentaje notamos que es ¡mucho más estrecha que la primera!.
+                        </p>
+                    </div>
+
+                    <!-- Tipografía -->
+                    <div class="cont-tipografia">
+                        <h4>Relativo a la tipografía</h4>
+
+                        <p>
+                            Existen dos tipos de medidas relativas que se basan en el tamaño de la tipografía estas son llamadas <b>em y rem</b>.
+                        </p>
+
+                        <h4>EM</h4>
+
+                        <p>
+                            Los em son una unidad de medida relativa en CSS que se utiliza para especificar la longitud de un elemento en términos del tamaño de fuente. Una unidad de "em" equivale al tamaño de fuente actual del elemento en el que se utiliza.
+                        </p>
+
+                        <div class="cont-codigo">
+                            <!-- Apertura Section -->
+                            <code>
+                                &#60<span class="tag-color">section</span>&#62
+                            </code>
+
+                            <br />
+
+                            <!-- Elemento h1 -->
+                            <code class="margin-20">
+                                &#60<span class="tag-color">h1</span>
+                                <span class="property-color">class</span>=<span class="value-color">'titulo'</span>Hola Soy el Título&#60/<span class="tag-color">h1</span>&#62
+                            </code>
+
+                            <br />
+
+                            <!-- Elemento p -->
+                            <code class="margin-20">
+                                &#60<span class="tag-color">p</span>
+                                <span class="property-color">class</span>=<span class="value-color">'parrafo'</span>Hola Soy el párrafo&#60/<span class="tag-color">p</span>&#62
+                            </code>
+
+                            <br />
+                            
+                            <!-- Cierre Section -->
+                            <code>
+                                &#60/<span class="tag-color">section</span>&#62
+                            </code>
+                        </div>
+
+                        <div class="cont-codigo">
+
+                            <!-- Estilo #1 -->
+                            <code>
+                                <span class="field-color">section</span>
+                                &#123
+                            </code>
+
+                            <br />
+
+                            <code class="margin-20">
+                                <span class="property-color">font-size</span>:
+                                <span class="value-color">24px</span>;
+                            </code>
+
+                            <br />
+
+                            <code>
+                                <span class="field-value">&#125</span>
+                            </code>
+
+                            <br /> <br />
+
+                            <!-- Estilo #2 -->
+                            <code>
+                                <span class="field-color">h1</span>
+                                &#123
+                            </code>
+
+                            <br />
+
+                            <code class="margin-20">
+                                <span class="property-color">font-size</span>:
+                                <span class="value-color">1.5em</span>;
+                            </code>
+
+                            <br />
+
+                            <code>
+                                <span class="field-value">&#125</span>
+                            </code>
+
+                            <br /> <br />
+
+                            <!-- Estilo #3 -->
+                            <code>
+                                <span class="field-color">p</span>
+                                &#123
+                            </code>
+
+                            <br />
+
+                            <code class="margin-20">
+                                <span class="property-color">font-size</span>:
+                                <span class="value-color">0.5em</span>;
+                            </code>
+
+                            <br />
+
+                            <code>
+                                <span class="field-value">&#125</span>
+                            </code>
+                        </div>
+
+                        <p>
+                            Podemos notar que tanto el h1 como el p son hijos directos del elemento section. Entonces, al tener en nuestro elemento section un tamaño de fuente de 24px, los elementos internos tendrán de base un em equivalente a 24px. Entonces, si al elemento h1 le ponemos un font-size de 1.5em , este font-size equivaldrá a 24px + 12px , ya que es la mitad de 24px. Por otro lado, nuestro párrafo con un font-size de 0.5em equivaldría a la mitad de los 24px del font-size de nuestra sección , siendo esto equivalente a 12px.
+                        </p>
+
+                        <br />
+
+                        <p>
+                            Importante: El uso de em no se encuentra limitado únicamente a definir el tamaño de fuente de los elementos. Siempre se basará en el tamaño base de font-size del elemento padre, pero podemos aplicar para ancho, alto y cualquier otra propiedad en la que se pueda definir un tamaño.
+                        </p>
+
+                        <!-- REM -->
+
+                        <div class="cont-rem">
+                            <h4>REM</h4>
+
+                            <p>
+                                La unidad de medida rem en CSS es una unidad de medida relativa que se basa en el tamaño de la fuente del elemento html. El valor 1rem equivale al tamaño de fuente actual del elemento html , que por defecto es de 16px.
+                            </p>
+
+                            <br />
+
+                            <p>
+                                Por ejemplo, si el tamaño de la fuente del elemento html es de 16px, entonces 1rem equivale a 16px. Si definimos un elemento con un tamaño de fuente de 2rem, entonces su tamaño de fuente será de 32px.
+                            </p>
+
+                            <div class="cont-codigo">
+                                <!-- Estilo #1 -->
+                                <code>
+                                    <span class="field-color">html</span>
+                                    &#123
+                                </code>
+
+                                <br />
+
+                                <code class="margin-20">
+                                    <span class="property-color">font-size</span>:
+                                    <span class="value-color">20px</span>;
+                                </code>
+
+                                <br />
+
+                                <code>
+                                    <span class="field-value">&#125</span>
+                                </code>
+
+                                <br /> <br />
+
+                                <!-- Estilo #2 -->
+                                <code>
+                                    <span class="field-color">h1</span>
+                                    &#123
+                                </code>
+
+                                <br />
+
+                                <code class="margin-20">
+                                    <span class="property-color">font-size</span>:
+                                    <span class="value-color">1.5rem</span>;
+                                    <span class="comment-color">/* 30px */</span>
+                                </code>
+
+                                <br />
+
+                                <code>
+                                    <span class="field-value">&#125</span>
+                                </code>
+
+                                <br /> <br />
+
+                                <!-- Estilo #3 -->
+                                <code>
+                                    <span class="field-color">p</span>
+                                    &#123
+                                </code>
+
+                                <br />
+
+                                <code class="margin-20">
+                                    <span class="property-color">font-size</span>:
+                                    <span class="value-color">0.5em</span>;
+                                    <span class="comment-color">/* 10px */</span>
+                                </code>
+
+                                <br />
+
+                                <code>
+                                    <span class="field-value">&#125</span>
+                                </code>
+                            </div>
+
+                            <p>
+                                El uso de <b>rem</b> en lugar de px es útil para hacer que la apariencia de un sitio web sea adaptable a diferentes tamaños de pantalla. Por ejemplo, si aumentamos el tamaño de la fuente del elemento html, todos los elementos que usen "rem" para definir su tamaño de fuente también aumentarán su tamaño de fuente.
+                            </p>
+
+                            <br />
+
+                            <p>
+                                Importante: El uso de rem no se encuentra limitado únicamente a definir el tamaño de fuente de los elementos. Siempre se basará en el tamaño base de font-size del elemento html, pero podemos aplicar para <b>ancho, alto y cualquier otra propiedad en la que se pueda definir un tamaño</b>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Relativo al Viewport -->
+                    <div class="relativo-viewport">
+                        <h4>Medida relativa al viewport</h4>
+
+                        <p>
+                            Las medidas relativas al viewport son muy importantes cuando estamos haciendo diseños web que se adaptarán a múltiples dispositivos.
+                        </p>
+
+                        <div class="lista-viewport">
+                            <ul>
+                                <li>
+                                    <b>Viewport Width (vw): </b>Es una unidad de medida relativa al ancho del viewport de una página. 1vw equivale al 1% del ancho del viewport, mientras que 100vw equivale al ancho total del viewport. Si el ancho es 1280px entonces 100vw es equivalente a 1280px.
+                                </li>
+                                <li>
+                                    <b>Viewport Height (vh): </b>Es una unidad de medida relativa al alto del viewport de una página. 1vh equivale al 1% del alto del viewport, mientras que 100vh equivale al alto total del viewport. Si el alto son 900px entonces 100vh es equivalente a 900px.
+                                </li>
+                                <li>
+                                    <b>vmin: </b>Entre vw y vh toma el que tenga menor valor.
+                                </li>
+                                <li>
+                                    <b>vmax: </b> Entre vw y vh toma el que tenga mayor valor.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
