@@ -7,6 +7,12 @@
     <title>Colores Digitales</title>
 
     <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
     
@@ -18,119 +24,230 @@
 
         <section>
 
+            <!-- Introducción -->
             <article>
-                <p>
-                    El color digital son números en computadores ordenados de tal forma que al ser representados en dispositivos 
-                    como monitores (RGB) o dispositivos de saluda como impresoras (CMYK) los percibimos como color.
-                </p>
-            </article>
 
-            <article>
-                <h2>Color</h2>
+                <h2>Introducción</h2>
 
                 <p>
-                    Cuando trabajamos con los colores en CSS tenemos diferentes propiedades las cuales le aplican estilo de 
-                    colores a estas mismas. Generalmente la propiedad color se encuentra con las propiedades avanzadas en las 
-                    que no hay que dar muchos detalles para aplicarlos.
+                    El <b>color digital</b> son números en computadores ordenados de tal forma que al ser representados en dispositivos como monitores (RGB) o dispositivos de saluda como impresoras (CMYK) y son percibimos con un color. <b>CSS</b> nos ofrece diferentes propiedades para agregar <b>colores</b> a los elementos que existen el el DOM de nuestro documento. En CSS, hay varias formas de especificar un color, entre ellas son: 
                 </p>
 
-                <p>
-                    En el caso que utilicemos colores sencillos debemos llamarlo por su nombre (en inglés). También podemos 
-                    buscar páginas online en donde encontraremos el nombre de todos los colores que podamos aplicar, son 140 
-                    colores que podemos aplicar con nombre.
-                </p>
+                <div class="lista-colores">
+                    <ul>
+                        <li>
+                            <b>Nombre de colores: </b>CSS tiene una lista de nombres de colores predefinidos que se pueden usar para especificar un color. Por ejemplo: <b>"red", "blue", "green"</b>, etc.
+                        </li>
+                        <li>
+                            <b>Hexadecimal: </b>Es un sistema de codificación de colores que usa una combinación de números y letras para representar un color. Por ejemplo: <b>"#FF0000"</b> representa el rojo.
+                        </li>
+                        <li>
+                            <b>RGB: </b>Este sistema especifica un color en términos de valores de intensidad de los componentes rojo, verde y azul. Por ejemplo: <b>"rgb(255, 0, 0)"</b> representa el rojo.
+                        </li>
+                        <li>
+                            <b>RGBA: </b>Es similar a RGB, pero también incluye un valor de opacidad, que controla la transparencia del color. Por ejemplo: <b>"rgba(255, 0, 0, 0.5)"</b> representa un rojo semitransparente.
+                        </li>
+                        <li>
+                            <b>HSL: </b>Este sistema especifica un color en términos de tono, saturación y
+                            luminosidad. Por ejemplo: <b>"hsl(0, 100%, 50%)"</b> representa el rojo.
+                        </li>
+                        <li>
+                            <b>HSLA: </b>Es similar a HSL, pero también incluye un valor de opacidad.
+                        </li>
+                    </ul>
+                </div>
 
-                <p>
-                    Para ejemplificar esta teoría, crearemos un contenedor con una estructura cuadrada y le aplicaremos un
-                    color base de fondo.
-                </p>
+                <!-- Contenedor RGB -->
+                <div class="cont-rgb">
+                    <h3>RGB</h3>
 
-                <div class="caja color-color" ></div>
+                    <p>
+                        Cuando aplicamos un color en RGB estamos aplicando una combinación de colores que estos colores son (en inglés) red, green, blue. La medición de estos colores es numérica y dependiendo el valor numérico que le demos a estos valores es la graduación que aplica a la combinación. 
+                    </p>
 
+                    <br />
+
+                    <p>
+                        Para aplicar esta propiedad debemos colocar la palabra clave <b>'rgb()'</b> y dentro los paréntesis colocaremos los <b>valores numéricos separados por coma (",")</b>. Debemos tener en cuenta que los colores respetan el orden del nombre de la propiedad (red, green, blue).
+                    </p>
+
+                    <br /> 
+
+                    <p>
+                        En el caso que tengamos el valor (0, 0, 0) estamos diciendo que no hay combinaciones de colores y por ende nos retornaría el color “negro”, es decir, estamos aplicando una ausencia de color. Debemos saber que estos colores van de 0 hasta el 255 siendo el 255 la tonalidad más fuerte, es decir, que si colocamos este valor a uno de RGB y los demás los dejamos en 0 nos retornaría el color natural que lo representa. Ejemplo: 0, 0, 255 (retorna blue).
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">.caja</span>
+                            &#123
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">background-color</span>:
+                            <span class="value-color">rgb(0, 0, 255)</span>;
+                        </code>
+
+                        <br />
+
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Contenedor RGBA -->
+                <div class="cont-rgba">
+                    <h3>RGBA</h3>
+    
+                    <p>
+                        Esta propiedad de color que puede ser implementada en la hoja de estilos CSS permite añadirle trasparencia (representa la letra a “Alpha”) al texto en el último valor agregado con “.”. Por ejemplo: rgba(68, 241, 15, 0.5) el último valor puede ser de 0 a 1. Teniendo en cuenta que 0 es totalmente trasparente (el texto no se va a ver) y 1 no hay trasparencia (se ve igual). Los valores que deberíamos manejar son decimales como por ejemplo 0.5 que es una trasparencia media.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">.caja</span>
+                            &#123
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">background-color</span>:
+                            <span class="value-color">rgba(70, 70, 194, 0.404)</span>;
+                        </code>
+
+                        <br />
+
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+    
+                    <div class="caja color-rgba"></div>
+                </div class="cont-rgba">
             </article>
 
             <hr />
 
-            <article>
-                <h2>RGB</h2>
+            <!-- Color para Fuentes -->
+            <article class="color-fuente">
+                <h2>Color para Fuentes</h2>
+
+                <h3>Propiedad: Color</h3>
 
                 <p>
-                    Cuando aplicamos un color en RGB estamos aplicando una combinación de colores que estos colores son 
-                    (en inglés) red, green, blue. La medición de estos colores es numérica y dependiendo el valor numérico 
-                    que le demos a estos valores es la graduación que aplica a la combinación. 
+                    Es la propiedad que se utiliza para cambiar el color de la fuente de un elemento. Podemos usar todos los formatos de colores que vimos anteriormente. Para ejemplificar esta teoría, crearemos un contenedor con una estructura cuadrada y le aplicaremos un color al texto que se encuentra dentro.
                 </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.parrafo-ejemplo-color</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">#4c26f3</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <div class="ejemplo-fuente">
+                    <p class="parrafo-ejemplo-color">
+                        Soy un párrafo de ejemplo, por defecto soy de color negro. En este ejemplo me cambiaron de color gracias a la propiedad 'color' de CSS.
+                    </p>
+                </div>
+
+                <h4>Importante propiedad Color</h4>
 
                 <p>
-                    Para aplicar esta propiedad debemos colocar la palabra clave rgb() y dentro los paréntesis colocaremos 
-                    los valores numéricos separados por “,” (coma). Debemos tener en cuenta que los colores respetan el orden 
-                    del nombre de la propiedad (red, green, blue).
+                    Es común, salvo en casos muy puntuales que al poner la propiedad color en un elemento que contiene otros, los elementos internos tomen el color de letra que se le colocó al elemento padre, es decir, los elementos hijos van a heredar la propiedad color del elemento que los contiene. Es decir, le hemos aplicado directamente al contenido del elemento 'p' la propiedad de 'color', hubiera sido el mismo resultado si le colocabamos la propiedad al contenedor padre 'div' con clase 'ejemplo-fuente'.
                 </p>
 
-                <p>
-                    En el caso que tengamos el valor (0, 0, 0) estamos diciendo que no hay combinaciones de colores y por 
-                    ende nos retornaría el color “negro”, es decir, estamos aplicando una ausencia de color. Debemos saber 
-                    que estos colores van de 0 hasta el 255 siendo el 255 la tonalidad más fuerte, es decir, que si colocamos 
-                    este valor a uno de RGB y los demás los dejamos en 0 nos retornaría el color natural que lo representa. 
-                    Ejemplo: 0, 0, 255 (retorna blue).
-                </p>
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.contenedor-color</span>
+                        &#123
+                    </code>
 
-                <p>
-                    Para ejemplificar esta teoría, crearemos un contenedor con una estructura cuadrada y le aplicaremos un
-                    color base de fondo en RGB.
-                </p>
+                    <br />
 
-                <div class="caja color-rgb"></div>
-            </article>
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">#4c26f3</span>;
+                    </code>
 
-            <hr />
+                    <br />
 
-            <article>
-                <h2>RGBA</h2>
+                    <code>
+                        &#125
+                    </code>
+                </div>
 
-                <p>
-                    Esta propiedad de color que puede ser implementada en la hoja de estilos CSS permite añadirle trasparencia 
-                    (representa la letra a “Alpha”) al texto en el último valor agregado con “.”.
-                </p>
-
-                <p>
-                    Ejemplo: rgba(68, 241, 15, 0.5) el último valor puede ser de 0 a 1. Teniendo en cuenta que 0 es totalmente 
-                    trasparente (el texto no se va a ver) y 1 no hay trasparencia (se ve igual). Los valores que deberíamos 
-                    manejar son decimales como por ejemplo 0.5 que es una trasparencia media.
-                </p>
-
-                <p>
-                    Para ejemplificar esta teoría, aplicaremos el mismo color que el ejemplo anterior, pero en este caso
-                    colocaremos una trasparencia.
-                </p>
-
-                <div class="caja color-rgba"></div>
-            </article>
-
-            <hr />
-
-            <article>
-                <h2>Formato de colores</h2>
-
-                <div class="contenedor">    
-                    <figure>
-                        <img src="./img/espacioColor.jpg" alt="espacioColor" />
-                    </figure>
-                    <figure>
-                        <img src="./img/lab.png" alt="lab" />
-                    </figure>
-                    <figure>
-                        <img src="./img/colores.jpg" alt="colores" />
-                    </figure>
-                    <figure>
-                        <img src="./img/hexa.jpg" alt="hexadecimal" />
-                    </figure>
+                <div class="ejemplo-fuente contenedor-color">
+                    <p>
+                        Soy un párrafo de ejemplo, por defecto soy de color negro. En este ejemplo me cambiaron de color gracias a la propiedad 'color' de CSS.
+                    </p>
                 </div>
             </article>
+
+            <hr />
+
+            <!-- Color para elementos -->
+            <article class="color-elemento">
+
+                <h2>Colores para elementos del DOM</h2>
+
+                <h3>Propiedad Background</h3>
+
+                <p>
+                    Es la propiedad que se utiliza para definir el fondo de un elemento. Con ella, podemos establecer el color de fondo, agregar una imagen de fondo, y controlar cómo se repetirá o se ajustará esa imagen. En esta ocasión, como solo estamos especificando como colocar colores a los elementos mediante esta propiedad, solo veremos cómo utilizar background para darle color a un elemento.
+                </p>
+
+                <br />
+
+                <p>
+                    Para ejemplificar esta teoría, crearemos un contenedor con una estructura cuadrada y le aplicaremos un color base de fondo en RGB.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.ejemplo-color-rgb</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-color</span>:
+                        <span class="value-color">rgb(70, 70, 194)</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <div class="caja ejemplo-color-rgb"></div>
+            </article>
+
+            <hr />
+
+            <!-- Artículo RGBA -->
+            
         </section>
-
-        <footer>
-
-        </footer>
     </main>
 </body>
 </html>
