@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedad Background</title>
+
+    <link rel="stylesheet" href="../css/background.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Propiedad background</h1>
+        </header>
+
+        <!-- Main Content -->
+        <section>
+            <article class="cont-introducción">
+                
+                <h2>Introducción</h2>
+
+                <p>
+                    Es la propiedad que se utiliza para <b>definir el fondo de un elemento en una sola regla</b>. Con ella, podemos establecer el color de fondo, agregar una imagen de fondo, y controlar cómo se repetirá o se ajustará esa imagen.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">main</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">padding</span>:
+                        <span class="value-color">25px</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-color</span>:
+                        <span class="value-color">rgba(206, 218, 218, 0.815)</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <p>
+                    Background pertenece a las propiedades llamadas <b>shorthand</b>, recordemos que estas propiedades, podemos juntar varias declaraciones de la misma en una sola. De todas maneras, a continuación vamos a ver detalladamente cuales son cada una de las propiedades que podemos utilizar con background.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Background-Color -->
+            <article>
+                <h2>Background Color</h2>
+
+                <p>
+                    Esta propiedad de CSS es la que <b>define el color de fondo de un elemento</b>, puede ser el valor de un color o <b>“transparente” que es el valor inicial de esta propiedad</b>, es decir,  si no tiene un color definido no se verá el fondo del elemento. Si en los estilos le agregamos un valor a la propiedad este tomará el color establecido en la hoja de estilos.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.background-ejemplo</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-color</span>:
+                        <span class="value-color">rgba(144, 233, 233, 0.623)</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <!-- Ejemplo -->
+                <div class="cont-ejemplo background-ejemplo">
+                    <h3>Ejemplo background con color</h3>
+                </div>
+
+                <div class="cont-degradado">
+                    <h3>Background Color con degradado</h3>
+
+                    <p>
+                        Existen dos posibilidades en CSS3: <b>degradado lineal o degradado radial</b>.
+                    </p>
+
+                    <h4>Degradado Lineal</h4>
+
+                    <p>
+                        Para crear un <b>gradiente lineal</b>, se establece un <b>punto de partida y una dirección</b> (indicada por un ángulo) a lo largo de la cual se aplica el efecto. Usted también puede definir paradas de color. las paradas de color son los colores que usted desea que Gecko renderice con suaves transiciones entre ellos, y usted puede especificar al menos dos de ellas, pero puede especificar más para crear efectos de gradientes más complejos.
+                    </p>
+
+                    <h4>Sintaxis</h4>
+
+                    <p>
+                        Aquí está un gradiente lineal que inicia en el centro (horizontalmente) y arriba (verticalmente), e inicia en azul, transicionando a blanco.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code class="margin-20">
+                            <span class="property-color">background-color</span>:
+                            <span class="field-color">linear-gradient</span>(<span class="value-color">to bottom, blue, white</span>);
+                        </code>
+                    </div>
+
+                    <p>
+                        Cambiando el mismo gradiente para correr de izquierda a derecha:
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code class="margin-20">
+                            <span class="property-color">background-color</span>:
+                            <span class="field-color">linear-gradient</span>(<span class="value-color">to right, blue, white</span>);
+                        </code>
+                    </div>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Background Image -->
+            <article>
+                <h2>Background image</h2>
+
+                <p>
+                    Esta propiedad establece <b>una o más imágenes de fondo para un elemento</b>. La ventaja de usar una imagen como background es que podemos adaptarla a medida del contenedor. Para especificar esta propiedad debemos usar el valor <b>“url()” en donde pondremos entre los paréntesis la localización de la imagen que se utilizará de fondo</b>. Debemos recordar que esta localización puede ser relativa o absoluta. Además, las imágenes de fondo son mostradas encima del color de fondo.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.cont-img</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">height</span>:
+                        <span class="value-color">300px</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-image</span>:
+                        <span class="field-color">url(<span class="value-color">Ruta de la img</span>)</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <!-- Ejemplo -->
+                <div class="cont-ejemplo">
+                    <div class="cont-img">
+                        
+                    </div>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Background Repeat -->
+            <article class="cont-background-repeat">
+                <h2>Background repeat</h2>
+
+                <p>
+                    Esta propiedad define cómo se repiten los fondos del elemento. Un fondo de la imagen puede ser repetido sobre el eje horizontal, eje vertical, ambos ejes, o no estar repetido. Esta propiedad tiene distintos valores asignados para el flujo del “background-image” que estamos aplicando en el contenedor. Es principalmente usado para controlar las dimensiones de las imágenes. Estos valores son:
+                </p>
+
+                <div class="lista-background-repeat">
+                    <ul>
+                        <li>
+                            <b>Repeat: </b>La imagen se repite hasta cubrir todo el fondo existente. La última imagen debe ser recortada si no encaja.
+                        </li>
+                        <li>
+                            <b>Repeat-x: </b>La imagen se repite horizontalmente hasta llenar el ancho del elemento.
+                        </li>
+                        <li>
+                            <b>Repeat-y: </b>La imagen se repite verticalmente hasta llenar la altura del elemento.
+                        </li>
+                        <li>
+                            <b>Space: </b>La imagen se repite lo máximo posible sin recortarse. La primera y última imagen son fijadas a cada lado del elemento, y el espacio blanco es distribuido igualmente entre las imágenes. La propiedad background-position es ignorada a menos que una sola imagen pueda ser desplegada sin recortar. El único caso donde se recorta usando space es cuando no hay suficiente sitio para desplegar una imagen.
+                        </li>
+                        <li>
+                            <b>Round: </b>Como el espacio permitido aumenta, las imágenes repetidas se estrechan (sin dejar huecos) hasta que haya espacio suficiente (espacio restante >= la mitad del ancho de la imagen) para que otra sea añadida. Cuando la siguiente imagen es añadida, todas las demás son comprimidas al espacio disponible. Ejemplo: Una imagen con un ancho inicial de 260px, se repite 3 veces, debería estirarse hasta que el tamaño sea de 300px, luego otra imagen debe ser añadida. Luego debería comprimirse hasta los 225px.
+                        </li>
+                        <li>
+                            <b>No-repeat: </b>La imagen no se repite (y por lo tanto el área coloreada de la imagen de fondo no debe ser llenada completamente). La posición del fondo no repetido es definida por la propiedad de CSS background-position.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Codigo Ejemplo -->
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.cont-img</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">height</span>:
+                        <span class="value-color">300px</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-image</span>:
+                        <span class="field-color">url(<span class="value-color">Ruta de la img</span>)</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-repeat</span>:
+                        <span class="value-color">no-repeat</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <!-- Ejemplo Repeat -->
+                <div class="cont-ejemplo repeat-ejemplo">
+                    <h4>Ejemplo Repeat o Repeat-X</h4>
+
+                    <div class="img-repeat">
+
+                    </div>
+                </div>
+
+                <!-- Repeat-y -->
+                <div class="cont-ejemplo repeatY-ejemplo">
+                    <h4>Ejemplo Repeat-y</h4>
+
+                    <div class="img-repeatX">
+
+                    </div>
+                </div>
+
+                <!-- Space -->
+                <div class="cont-ejemplo space-ejemplo">
+                    <h4>Ejemplo Space</h4>
+
+                    <div class="img-space">
+
+                    </div>
+                </div>
+
+                <!-- Round -->
+                <div class="cont-ejemplo round-ejemplo">
+                    <h4>Ejemplo Round</h4>
+
+                    <div class="img-round">
+
+                    </div>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <!-- Background Position -->
+            <article>
+                <h2>Background Position</h2>
+
+                <p>
+                    Es la propiedad que se utiliza para <b>controlar la posición de la imagen de fondo en un elemento</b>. Puede tomar una combinación de valores en píxeles, porcentajes o palabras clave como "center" o "top left" para especificar la posición de la imagen de fondo. Algunos de los valores más comunes son:
+                </p>
+
+                <div class="lista-position">
+                    <ol>
+                        <li>
+                            <b>Center: </b>La imagen se posiciona en el centro del elemento.
+                        </li>
+                        <li>
+                            <b>Top/ Bottom: </b>La imagen se posiciona en la parte superior o inferior del elemento respectivamente.
+                        </li>
+                        <li>
+                            <b>Left/ Right: </b>La imagen se posiciona en el borde izquierdo o derecho del elemento, respectivamente.
+                        </li>
+                        <li>
+                            <b>top left , top right , bottom left , bottom right: </b>La imagen se posiciona en uno de los cuatro puntos cardinales del elemento
+                        </li>
+                        <li>
+                            <b>Valores separados: </b>También es posible especificar dos valores separados por un espacio para controlar la posición horizontal y vertical de la imagen de fondo, respectivamente.
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">div</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-image</span>:
+                        <span class="field-color">url(<span class="value-color">insertar-ruta-imagen</span>)</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="comment-color">/* Usando valores separados alineando en horizontal y vertical */</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-position</span>:
+                        <span class="value-color">center top</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <!-- Background Size -->
+            <article>
+                <h2>Background Size</h2>
+
+                <p>
+                    Es la propiedad que se utiliza para controlar el tamaño de imagen de fondo de un elemento. Algunos de los valores más comunes son:
+                </p>
+
+                <div class="lista-size">
+                    <ol>
+                        <li>
+                            <b>Auto: </b>La imagen se muestra en su tamaño original.
+                        </li>
+                        <li>
+                            <b>Cover: </b>La imagen se amplía o reduce para cubrir completamente el elemento, sin distorsionarse.
+                        </li>
+                        <li>
+                            <b>Contain: </b>La imagen se amplía o se reduce para cubrir completamente el elemento, sin distorsionarse.
+                        </li>
+                        <li>
+                            <b>Píxeles y porcentajes: </b>La imagen se amplía o se reduce para que se ajuste completamente dentro del elemento, sin cortarse.
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">div</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-image</span>:
+                        <span class="field-color">url(<span class="value-color">insertar-ruta-imagen</span>)</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="comment-color">/* Usando valores separados alineando en horizontal y vertical */</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-position</span>:
+                        <span class="value-color">center</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-size</span>:
+                        <span class="value-color">cover</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Shorthand -->
+            <article>
+                <h2>Background como shorthand</h2>
+
+                <p>
+                    Podemos utilizar la propiedad background como shorthand de las propiedades anteriormente mencionadas.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">#hero</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background</span>:
+                        <span class="field-color">url(<span class="value-color">insertar-ruta-imagen</span>)</span>
+                        <span class="property-color">rgba</span>(<span class="value-color">255, 255, 255, 0.8</span>)
+                        <span class="value-color">no-repeat center center fixed</span>/<span class="value-color">cover</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <p>
+                    En este ejemplo, se establece una <b>imagen de fondo</b> (imagen.jpg), un <b>color de fondo</b> opaco con una transparencia del 80% (rgba(255, 255, 255, 0.8)), que <b>no se repetirá</b> (no-repeat) y se <b>posicionará en el centro del contenedor</b> tanto horizontal como verticalmente (center center). Además, la imagen de fondo se <b>fijará en su posición</b> (fixed) y se <b>ajustará automáticamente al tamaño</b> del contenedor (cover).
+                </p>
+
+                <br />
+
+                <p>
+                    Es importante aclarar que no es necesario que se coloquen todas. Por ejemplo, podríamos solamente colocar el color y CSS lo interpretará correctamente.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Attachment -->
+            <article>
+                <h2>Background Attachment</h2>
+
+                <p>
+                    Esta propiedad determina si la posición de la imagen de fondo será fija dentro de la pantalla o se desplazará con su bloque contenedor.
+                </p>
+
+                <h3>Scroll</h3>
+
+                <p>
+                    Si el valor scroll es especificado, la imagen de fondo <b>se moverá dentro de la pantalla</b> junto al bloque que la contiene.
+                </p>
+
+                <h3>Fixed</h3>
+
+                <p>
+                    Si el valor fixed es especificado, la imagen de fondo <b>estará fija en la pantalla</b> y no se moverá con el bloque contenedor.
+                </p>
+
+                <br />
+
+                <p>
+                    Esta propiedad soporta múltiples imágenes de fondo. Puedes especificar un &#60attachment&#62 diferente por cada imagen de fondo, separado por comas. Cada imagen es asociada con el correspondiente valor de &#60attachment&#62, especificado desde el primero hasta el último.
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

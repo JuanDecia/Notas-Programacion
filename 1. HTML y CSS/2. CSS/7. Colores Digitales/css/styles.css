@@ -73,6 +73,7 @@ h1 {
 }
 
 /* ######### MAIN CONTENT */
+
 /* -- Ejemplo contenedor código 'General' */
 .cont-codigo {
     background-color: rgb(56, 55, 55);
@@ -137,7 +138,7 @@ h1 {
     padding: 10px;
 }
 
-.color-rgba{
+.color-rgba {
     background-color: rgba(70, 70, 194, 0.404);
 }
 
