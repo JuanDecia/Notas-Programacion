@@ -4,8 +4,591 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Border</title>
+
+    <link rel="stylesheet" href="../css/border.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <main>
+        <header>
+            <h1>Propiedad Border</h1>
+        </header>
+
+        <section>
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    Esta propiedad <b>establece el estilo de línea para los cuatro lados del borde de un elemento</b>. Debemos saber que cuando estamos haciendo referencia a la propiedad border estamos hablando de una <b>“propiedad shorthand”</b>. Esto se debe a que border puede aplicar muchos estilos en una sola declaración. Pero, en este caso puntual vamos a hacer referencia a <b>“border-style”</b> que es enmarcado que nosotros les damos a los contenedores para visualizarlos.
+                </p>
+
+                <br />
+
+                <p>
+                    Esta propiedad puede recibir hasta 4 valores <b>comenzando</b> siempre desde la <b>parte top siguiendo el sentido del reloj hacia la derecha</b>, es decir: right, bottom y por último left. Esto debemos saberlo para manipular los bordes cuando no es necesario que todos tengan el mismo valor.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Sintaxis -->
+            <article>
+                <h2>Sintaxis</h2>
+
+                <p>
+                    En el siguiente ejemplo visualizamos la <b>sintaxis de border</b>, recordemos que border es una <b>shorthand</b> en la misma podemos darle diferentes tipos de argumentos como <b>“tamaño” “tipo” y “color”</b>, puede recibir una de estas o como máximo las 3.
+                </p>
+
+                <br />
+
+                <p>
+                    Primero hacemos el llamado del uso de la propiedad <b>“border”</b>. Luego es recomendable determinar el <b>“tamaño”</b> del borde en <b>pixeles (px)</b> para visualizar el contenedor (el valor por defecto de este estilo es “none”) <b>recordemos que si no lo hacemos no podemos visualizar el contorno</b> del contenedor.
+                </p>
+
+                <br />
+
+                <p>
+                    Seguido, debemos especificar el <b>tipo de “border”</b> que vamos a utilizar para visualizar el contorno, recordemos que para este estilo tenemos diferentes valores. Usualmente se suele trabajar para visualizar el contorno es <b>“solid”</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    El último valor que podemos utilizar en esta propiedad es <b>“color”</b>, que al aplicar este estilo es el <b>color que visualizamos el contorno</b>. Su valor por defecto es “black”, pero, si estamos trabajando con varios contornos al mismo tiempo es recomendable usar otros colores para manipular mejor el moldeado de las cajas.
+                </p>
+
+                <h3>Sintaxis Ejemplo</h3>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.border-ejemplo</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">border</span>:
+                        <span class="value-color">1px solid black</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <p>
+                    Es lo mismo que declarar: 
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.border-ejemplo</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">border</span>:
+                        <span class="value-color">1px</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">border-style</span>:
+                        <span class="value-color">solid</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">border-color</span>:
+                        <span class="value-color">black</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <h4>Resultado</h4>
+
+                <div class="border-ejemplo">
+                    <p>Soy un párrafo de ejemplo</p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Tipos de Bordes -->
+            <article>
+                <h2>Estilos de Bordes</h2>
+
+                <p>
+                    Anteriormente nombramos que los bordes podían tener <b>diferentes estilos</b> y estos podían ser declarados y manipulados con la propiedad de "style". A continuación, vamos a visualizar algunos de los estilos que podemos usar con esta propiedad:
+                </p>
+
+                <!-- None -->
+                <div class="border-none">
+                    <h3>Border: None</h3>
+                    
+                    <p>
+                        Es el valor que viene por defecto en el navegador en el cual no podemos visualizar los bordes de los contenedores.
+                    </p>
+                </div>
+
+                <!-- Dotted -->
+                <div class="border-dotted">
+                    <h3>Border: Dotted</h3>
+
+                    <p>Este valor aplica al borde una línea punteada.</p>
+
+                    <div class="dotted-ejemplo">
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="field-color">.dotted-ejemplo</span>
+                                &#123
+                            </code>
+        
+                            <br />
+        
+                            <code class="margin-20">
+                                <span class="property-color">border</span>:
+                                <span class="value-color">1px dotted blue</span>;
+                            </code>
+        
+                            <br />
+        
+                            <code>
+                                &#125
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inset -->
+                <div class="border-inset">
+                    <h3>Border: Inset</h3>
+
+                    <p>
+                        Este valor crea un sombreado en la parte superior e izquierda del contenedor ancho.
+                    </p>
+
+                    <div class="inset-ejemplo">
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="field-color">.inset-ejemplo</span>
+                                &#123
+                            </code>
+        
+                            <br />
+        
+                            <code class="margin-20">
+                                <span class="property-color">border</span>:
+                                <span class="value-color">2px inset blue</span>;
+                            </code>
+        
+                            <br />
+        
+                            <code>
+                                &#125
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outset -->
+                <div class="border-outset">
+                    <h3>Border: Outset</h3>
+
+                    <p>Crea un sombreado ancho en la parte derecha e inferior del contenedor.</p>
+
+                    <div class="outset-ejemplo">
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="field-color">.outset-ejemplo</span>
+                                &#123
+                            </code>
+        
+                            <br />
+        
+                            <code class="margin-20">
+                                <span class="property-color">border</span>:
+                                <span class="value-color">2px outset blue</span>;
+                            </code>
+        
+                            <br />
+        
+                            <code>
+                                &#125
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashed -->
+                <div class="border-dashed">
+                    <h3>Border: Dashed</h3>
+
+                    <p>Este valor crea un borde entre líneas.</p>
+
+                    <div class="dashed-ejemplo">
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="field-color">.dashed-ejemplo</span>
+                                &#123
+                            </code>
+        
+                            <br />
+        
+                            <code class="margin-20">
+                                <span class="property-color">border</span>:
+                                <span class="value-color">2px dashed blue</span>;
+                            </code>
+        
+                            <br />
+        
+                            <code>
+                                &#125
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Double -->
+                <div class="border-double">
+                    <h3>Border: Double</h3>
+
+                    <p>
+                        Este valor crea una doble línea sólida en el contorno del contenedor. <b>No lleva valor en pixeles</b>.
+                    </p>
+
+                    <div class="double-ejemplo">
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="field-color">.double-ejemplo</span>
+                                &#123
+                            </code>
+        
+                            <br />
+        
+                            <code class="margin-20">
+                                <span class="property-color">border</span>:
+                                <span class="value-color">double blue</span>;
+                            </code>
+        
+                            <br />
+        
+                            <code>
+                                &#125
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solid -->
+                <div class="border-solid">
+                    <h3>Border: Solid</h3>
+
+                    <p>Este valor crea una línea sólida en el contorno del contenedor.</p>
+
+                    <div class="solid-ejemplo">
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="field-color">.solid-ejemplo</span>
+                                &#123
+                            </code>
+        
+                            <br />
+        
+                            <code class="margin-20">
+                                <span class="property-color">border</span>:
+                                <span class="value-color">1px solid blue</span>;
+                            </code>
+        
+                            <br />
+        
+                            <code>
+                                &#125
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Groove -->
+                <div class="border-groove">
+                    <h3>Border: Grove</h3>
+
+                    <p>Este valor crea un efecto como “inset” pero en todo el contorno del contenedor.</p>
+
+                    <div class="groove-ejemplo">
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="field-color">.groove-ejemplo</span>
+                                &#123
+                            </code>
+        
+                            <br />
+        
+                            <code class="margin-20">
+                                <span class="property-color">border</span>:
+                                <span class="value-color">3px groove blue</span>;
+                            </code>
+        
+                            <br />
+        
+                            <code>
+                                &#125
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ridge -->
+                <div class="border-ridge">
+                    <h3>Border: Ridge</h3>
+
+                    <p>Crea un contorno sombreado en todo el contenedor.</p>
+
+                    <div class="ridge-ejemplo">
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="field-color">.ridge-ejemplo</span>
+                                &#123
+                            </code>
+        
+                            <br />
+        
+                            <code class="margin-20">
+                                <span class="property-color">border</span>:
+                                <span class="value-color">3px ridge blue</span>;
+                            </code>
+        
+                            <br />
+        
+                            <code>
+                                &#125
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comentarios -->
+                <div class="cont-comentario">
+                    <h3>A tener en cuenta a la hora de utilizar bordes</h3>
+
+                    <div class="lista-borde">
+                        <ul>
+                            <li>
+                                Cuando se especifica un valor, se aplica el mismo estilo a los cuatro lados.
+                            </li>
+                            <li>
+                                Cuando se especifican dos valores, el primer estilo se aplica a la parte superior e inferior, el segundo a la izquierda y a la derecha.
+                            </li>
+                            <li>
+                                Cuando se especifican tres valores, el primer estilo se aplica a la parte superior, el segundo a la izquierda y derecha y el tercero a la parte inferior.
+                            </li>
+                            <li>
+                                Cuando se especifican cuatro valores, los estilos se aplican a la parte superior, derecha, inferior e izquierda en ese orden.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Border Radius -->
+            <article>
+                <h2>Border Radius</h2>
+
+                <p>
+                    Vamos a comenzar con el efecto de esquinas redondas para las cajas, este efecto se logra con la propiedad border-radius.
+                </p>
+
+                <h3>Sintaxis</h3>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.border-ejemplo</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">border-radius</span>:
+                        <span class="value-color">5px</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">-moz-border-radius</span>:
+                        <span class="value-color">5px</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">-webkit-border-radius</span>:
+                        <span class="value-color">5px</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <p>
+                    Como esta propiedad no es accesible a los diferentes navegadores, debemos agregar manualmente a nuestra hoja CSS las propiedades para los diferentes navegadores <b>‘-moz-’ y ‘-webkit-’</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    La propiedad border-radius puede especificarse en 4 formas:
+                </p>
+
+                <!-- Un valor -->
+
+                <div class="cont-un-valor">
+                    <h3>Un valor</h3>
     
+                    <p>Todas las esquinas tienen el mismo radio.</p>
+    
+                    <div class="radius-ejemplo un-valor">
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="field-color">.un-valor</span>
+                                &#123
+                            </code>
+        
+                            <br />
+        
+                            <code class="margin-20">
+                                <span class="property-color">border-radius</span>:
+                                <span class="value-color">5px</span>;
+                            </code>
+        
+                            <br />
+        
+                            <code>
+                                &#125
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dos Valores -->
+                <div class="cont-dos-valores">
+                    <h3>Dos valores</h3>
+    
+                    <p>
+                        El primero se utiliza para el radio de las esquinas superior izquierda e inferior derecha. El segundo valor se aplica al radio de las esquinas.
+                    </p>
+    
+                    <div class="radius-ejemplo dos-valores">
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="field-color">.dos-valores</span>
+                                &#123
+                            </code>
+        
+                            <br />
+        
+                            <code class="margin-20">
+                                <span class="property-color">border-radius</span>:
+                                <span class="value-color">15px 5px</span>;
+                            </code>
+        
+                            <br />
+        
+                            <code>
+                                &#125
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tres Valores -->
+                <div class="cont-tres-valores">
+                    <h3>Tres valores</h3>
+    
+                    <p>
+                        El primero se aplica al radio de la esquina superior izquierda, el segundo valor a la esquina superior derecha y la esquina inferior izquierda, el tercero se aplica al radio inferior de la esquina derecha.
+                    </p>
+    
+                    <div class="radius-ejemplo tres-valores">
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="field-color">.tres-valores</span>
+                                &#123
+                            </code>
+        
+                            <br />
+        
+                            <code class="margin-20">
+                                <span class="property-color">border-radius</span>:
+                                <span class="value-color">15px 5px 7px</span>;
+                            </code>
+        
+                            <br />
+        
+                            <code>
+                                &#125
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cuatro Valores -->
+                <div class="cont-cuatro-valores">
+                    <h3>Cuatro valores</h3>
+    
+                    <p>
+                        El primer valor se aplica al radio de la esquina superior izquierda, el segundo al borde superior derecho, el tercero al borde inferior derecho y, el cuarto al borde inferior izquierdo.
+                    </p>
+    
+                    <div class="radius-ejemplo cuatro-valores">
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="field-color">.cuatro-valores</span>
+                                &#123
+                            </code>
+        
+                            <br />
+        
+                            <code class="margin-20">
+                                <span class="property-color">border-radius</span>:
+                                <span class="value-color">15px 5px 7px 10px</span>;
+                            </code>
+        
+                            <br />
+        
+                            <code>
+                                &#125
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </section>
+    </main>
 </body>
 </html>
