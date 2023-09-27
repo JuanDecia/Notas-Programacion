@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Width & Height</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Width & Height</h1>
+      </header>
+
+      <section>
+        <article>
+          <div>
+            <h2>Width</h2>
+          </div>
+
+          <div>
+            <p>
+              La propiedad <b>width</b> (ancho) del <b>box model</b> es ancho del área de contenido de un elemento y también, cuando la aplicamos puede modificar el ancho del elemento seleccionado. Cuando estamos trabajando con elementos, es recomendable aplicar la propiedad “border” para trazar el tamaño del elemento y así visualizar los cambios que estamos realizando con respecto al box model con el objetivo de llegar al estilo deseado.
+            </p>
+          </div>
+
+          <br />
+
+          <div>
+            <p>
+              Esta propiedad es aplicable a todos los elementos que se encuentren en el DOM de HTML. Los valores de medida aplicables a esta propiedad pueden ser en <b>px, vw y porcentaje</b>. Se recomiendan usar <b>medidas relativas</b>, ya que los elementos son adaptativos a las diferentes pantallas de los distintos dispositivos que se puede visualizar nuestro contenido.
+            </p>
+          </div>
+
+          <br />
+
+          <div>
+            <p>
+              Existen propiedades llamadas <b>min-width</b> y <b>max-width</b>. Estas sobrescriben el valor de width y son útiles cuando necesitemos que el elemento siempre respete el contenedor padre. Es decir, si tenemos un valor de un elemento con <b>width 100%</b> y tenemos un elemento con la propiedad de <b>max-width 70%</b>, debemos saber que tiene prioridad jerárquica el elemento con <b>max-width</b> por ende el elemento se renderizará con un ancho del 70% y no del 100%.
+            </p>
+          </div>
+
+          <div class="cont-codigo">
+            <code>
+              <span class="field-color">.elemento-html</span>
+              &#123
+            </code>
+
+            <br />
+
+            <code class="margin-20">
+                <span class="property-color">width</span>:
+                <span class="value-color">200px</span>;
+            </code>
+
+            <br />
+
+            <code class="margin-20">
+                <span class="property-color">width</span>:
+                <span class="value-color">40%</span>;
+            </code>
+
+            <br />
+
+            <code class="margin-20">
+                <span class="property-color">width</span>:
+                <span class="value-color">4rem</span>;
+            </code>
+
+            <br />
+
+            <code class="margin-20">
+                <span class="property-color">width</span>:
+                <span class="value-color">5em</span>;
+            </code>
+
+            <br />
+
+            <code class="margin-20">
+                <span class="property-color">width</span>:
+                <span class="value-color">30vw</span>;
+            </code>
+
+            <br>
+
+            <code>
+                &#125
+            </code>
+          </div>
+
+          <div class="cont-diferencias">
+            <div>
+              <h3>Diferencia entre width: auto y 100%</h3>
+            </div>
+  
+            <div>
+              <p>
+                Se emplea “width:100%” para que un elemento adopte todo el ancho del elemento padre. Si se agrega espacio adicional al tamaño del elemento (width:100%) sin tener en cuenta el tamaño del elemento padre puede generar un <b>overflow</b>, en otras palabras, si tenemos alguna modificación sobre margin, padding o border en el <b>elemento hijo</b> además del tamaño del ancho, esto puede generar que el contenido se salga del contenedor padre.
+              </p>
+            </div>
+
+            <br />
+  
+            <div>
+              <p>
+                Con la propiedad y valor <b>“width: auto”</b> el contenido se puede <b>expandir o contraer</b> para <b>ocupar el espacio horizontal disponible</b> dentro del elemento padre, si el elemento hijo tiene propiedades declaradas como border o rellenos en espacios no se suman al ancho total del elemento por lo que no genera un <b>overflow</b>.
+              </p>
+            </div>
+
+            <h4>Ejemplo Práctico</h4>
+  
+            <div>
+              <p>
+                Creamos un ejemplo en el que tendremos un contenedor padre con un width detallado y luego crearemos dos contenedores hijos. El primer contenedor tendrá declarada la propiedad <b>'width: auto'</b> y le agregaremos una propiedad <b>margin-left</b> para que separe el elemento unos 20px del elemento padre hacia la izquierda. El segundo contenedor tendrá una propiedad de <b>'width: 100%'</b> y agregaremos la misma propiedad de margin-left. El resultado sería el siguiente:
+              </p>
+            </div>
+  
+            <figure>
+              <img src="./img/diferencias.png" alt="diferencias" width="350px" />
+            </figure>
+  
+            <div>
+              <p>
+                Como podemos observar, el valor <b>'auto'</b> respeta el <b>tamaño</b> del elemento padre
+                contrayendo el contenido (ancho) al moverse 20px a la izquierda. El valor <b>'100%'</b> respeta el movimiento completo del elemento hacia la izquierda, <b>saliendo de la estructura</b> del elemento padre y respetando su medida de 100%.
+              </p>
+            </div>
+
+            <a href="./html/diferencias.html"><h4>Ir a Ejemplo</h4></a>
+            <h4></h4>
+          </div>
+
+          <!-- Min-Width -->
+          <div class="cont-min-width">
+            <div>
+              <h3>Min-Width</h3>
+            </div>
+  
+            <div>
+              <p>
+                Esta propiedad establece un <b>ancho mínimo</b> para el elemento seleccionado. En el caso que declaremos un <b>'width-min: 30%'</b> al contraer el viewport este elemento se contraerá solo hasta el 30%.
+              </p>
+            </div>
+          </div>
+
+          <!-- Max-Width -->
+          <div class="cont-max-width">
+            <div>
+              <h3>Max-Width</h3>
+            </div>
+  
+            <div>
+              <p>
+                Esta propiedad establece un <b>ancho máximo</b> al elemento seleccionado. En el caso que declaremos <b>'max-width: 50%'</b> al extender el viewport este <b>no seguirá aumentando el tamaño</b> del elemento.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <hr />
+
+        <!-- Height -->
+        <article>
+          <div>
+            <h2>Height</h2>
+          </div>
+
+          <div>
+            <p>
+              La propiedad <b>height (alto)</b> especifica la <b>altura del área de contenido</b> de un elemento. Esta propiedad tiene las <b>propiedades y valores aplicables</b> con las reglas muy similares a “width”. Debemos destacar que su única diferencia al aplicar valores porcentuales al “viewport” en vez de usar “vw” que es para el ancho, debemos usar la propiedad <b>“vh” que es para el alto</b>. Las iniciales que le corresponden a esta propiedad son V y H que están haciendo referencia a “Viewport” y “height”.
+            </p>
+          </div>
+
+          <div class="cont-codigo">
+            <code>
+              <span class="field-color">.elemento-html</span>
+              &#123
+            </code>
+
+            <br />
+
+            <code class="margin-20">
+                <span class="property-color">height</span>:
+                <span class="value-color">200px</span>;
+            </code>
+
+            <br />
+
+            <code class="margin-20">
+                <span class="property-color">height</span>:
+                <span class="value-color">40%</span>;
+            </code>
+
+            <br />
+
+            <code class="margin-20">
+                <span class="property-color">height</span>:
+                <span class="value-color">4rem</span>;
+            </code>
+
+            <br />
+
+            <code class="margin-20">
+                <span class="property-color">height</span>:
+                <span class="value-color">5em</span>;
+            </code>
+
+            <br />
+
+            <code class="margin-20">
+                <span class="property-color">height</span>:
+                <span class="value-color">30vh</span>;
+            </code>
+
+            <br>
+
+            <code>
+                &#125
+            </code>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
