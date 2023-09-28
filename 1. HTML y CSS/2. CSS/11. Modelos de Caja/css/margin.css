@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 85%;
+    margin: 0 auto;
+    background-image: url('https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y3NzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    padding: 25px;
+    background-color: rgba(206, 218, 218, 0.815);
+}
+
+h2 {
+    margin: 20px 0;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+h3 {
+    margin: 20px 0;
+    font-size: 1.3em;
+    color: rgb(103, 45, 240);
+}
+
+h4 {
+    margin: 20px 0;
+    color: #a826f3;
+    font-size: 1.1em;
+}
+
+figure {
+    margin: 25px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    text-align: justify;
+}
+
+hr {
+    margin: 20px;
+}
+
+/* --- Animaciones --- */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ######### HEADER */
+
+h1 {
+    margin: 30px 0;
+    text-align: center;
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+.link {
+    position: relative;
+    align-items: center;
+    padding: 5px;
+    text-decoration: none;
+    color: rgb(236, 103, 14);
+    font-size: 1.3em;
+    font-weight: 600;
+    transition: color 0.3s ease-in;
+}
+
+/* Efecto Vínculos */
+.link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    height: 2px;
+    color: rgb(236, 103, 14);
+    background-color: rgb(236, 103, 14);
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in;
+}
+
+.link:hover::after {
+    transform: scaleX(1);
+}
+
+/* --- */
+
+/* ######### MAIN CONTENT */
+
+/* --- Estilos Generales --- */
+
+.cont-ejemplo {
+    margin: 30px 0;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: rgba(250, 235, 215, 0.267);
+}
+
+.cont-lista {
+    margin: 25px 0;
+}
+
+.cont-lista ul li {
+    padding: 10px;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+}
+
+.img-muestra {
+    max-width: 100%;
+}
+
+.cont-codigo {
+    background-color: rgb(56, 55, 55);
+    color: #ffffff;
+    margin: 20px auto;
+    padding: 7px;
+    width: 70%;
+    border-radius: 5px;
+}
+
+.margin-20 {
+    margin-left: 20px;
+}
+
+.margin-40 {
+    margin-left: 40px;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.property-color {
+    color: rgb(113, 209, 247);
+}
+
+.field-color {
+    color: #ffd311;
+}
+
+.value-color {
+    color: #f39658;
+}
+
+.comment-color {
+    color: rgb(41, 148, 31);
+}
+/* -- */
+
+/* --- Artículo Inherit --- */
+.contenedor-parrafo {
+    margin: 20px;
+    border: 1px solid blue;
+}
+
+.parrafo-inherit {
+    margin: inherit;
+    border: 1px solid red;
+}
+
+/* --- Artículo Ejemplos --- */
+.ejemplo-cajas {
+    display: flex;
+    margin: 20px;
+    /* Sacamos el padding para visualizar el margin de ejemplo luego */
+    padding: 0;
+}
+
+.caja {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.margin-aplicado {
+    margin: 20px 0 0 20px;
+}
+
+.caja-1 {
+    background-color: aquamarine;
+}
+
+.caja-2 {
+    background-color: burlywood;
+}
+
+.caja-3 {
+    background-color: cadetblue;
+}
+
