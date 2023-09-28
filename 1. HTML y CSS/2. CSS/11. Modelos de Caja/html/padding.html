@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Padding</title>
 
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/padding.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <main>
@@ -14,7 +20,7 @@
             <h1>Padding</h1>
 
             <nav>
-                <a href="../index.html">Volver a inicio</a>
+                <a class="link" href="../index.html">Volver a inicio</a>
             </nav>
         </header>
 
@@ -23,10 +29,46 @@
                 <h2>Introducción</h2>
 
                 <p>
-                    Esta propiedad tiene el mismo comportamiento que margin en cuanto a los valores. Recordemos que 
-                    padding es el espacio generado dentro de la caja entre el contenido y el borde, es decir, nos va a 
-                    dar el espacio que especifiquemos dentro de la caja.
+                    Padding es el espacio generado dentro de la caja <b>entre el contenido y el borde</b>. Esta propiedad tiene el mismo comportamiento que margin en cuanto a que es una propiedad <b>shorthand</b> y a cuanto a la <b>declaración de valores</b>
                 </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">h2</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">padding</span>:
+                        <span class="value-color">10px</span>;
+                        <span class="comment-color">/* Genera espacio en todas sus coordenadas */</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">padding</span>:
+                        <span class="value-color">10px 5px</span>;
+                        <span class="comment-color">/* Genera espacio en top - bottom de 10px y en right-left de 5px */</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">padding</span>:
+                        <span class="value-color">0 0 0 10px</span>;
+                        <span class="comment-color">/* Genera espacio de 10px en left */</span>
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+
+                </div>
             </article>
 
             <hr />
@@ -34,39 +76,55 @@
             <article>
                 <h2>Ejemplo Padding</h2>
 
-                <figure>
-                    <img src="../img/sinPadding.png" alt="sin padding" />
-                </figure>
+                <div class="cont-ejemplo ejemplo-padding">
+                    <p>
+                        Soy un párrafo sin padding.
+                    </p>
+                </div>
 
                 <p>
-                    A continuación, vamos a modificar la caja que contiene el texto que es la etiqueta h1 y vamos a 
-                    agregarle un padding de 10px en todos los lados, recordemos que para hacer una práctica sencilla 
-                    de este valor simplemente debemos aplicar uno solo y este reparte ese valor a todas las coordenadas: 
+                    A continuación, vamos a modificar el elemento <b>'p'</b> que contiene el texto agregando un padding de 15px en todos sus lados.
                 </p>
 
-                <figure>
-                    <img src="../img/conPadding.png" alt="con padding" />
-                </figure>
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.parrafo-padding</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">padding</span>:
+                        <span class="value-color">15px</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-color</span>:
+                        <span class="value-color">rgba(127, 255, 212, 0.432)</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+
+                </div>
+
+                <div class="cont-ejemplo">
+                    <p class="parrafo-padding">
+                        Soy un párrafo con un padding de 15px en todos sus lados
+                    </p>
+                </div>
 
                 <p>
-                    Como podemos observar se ha separado el contenido (el texto) de los bordes internos de la caja en 
-                    una medida de 10px, también, debemos notar que el contenedor principal no ha cambiado su ubicación 
-                    original en relación (izquierda/ superior) ya que no hemos modificado el margin.
+                    Como podemos observar se ha separado el contenido (el texto) de los bordes internos de la caja en una medida de 15px, también, debemos notar que el contenedor principal no ha cambiado su ubicación original en relación (izquierda/ superior) ya que no hemos modificado el margin.
                 </p>
-            </article>
-
-            <hr />
-
-            <article>
-                <h2>Más ejemplos de padding</h2>
-
-                <a href="../../8. Modelos de Caja/html/ejemploPadding/ejemploPadding.html">Ejemplo Padding</a>
             </article>
         </section>
-
-        <footer>
-
-        </footer>
     </main>
 </body>
 </html>
