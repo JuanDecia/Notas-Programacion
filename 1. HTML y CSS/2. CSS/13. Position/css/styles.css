@@ -163,7 +163,7 @@ h1 {
     transform: scaleX(1);
 }
 
-/* ========== ESTILOS STATIC ========= */
+/* ========== ESTILOS PÁGINA STATIC ========= */
 
 .cont-static {
     display: flex;
@@ -172,9 +172,14 @@ h1 {
     border: 1px solid red;
 }
 
-/* ========== ESTILOS RELATIVE ========= */
+/* ========== ESTILOS PÁGINA RELATIVE ========= */
 
 .cont-relative {
+    border: 2px solid black;
+    margin: 80px 0;
+}
+
+.ejemplo-relative {
     display: flex;
     justify-content: center;
     position: relative;

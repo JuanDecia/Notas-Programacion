@@ -16,7 +16,7 @@
             <h1>Position: Relative</h1>
 
             <nav>
-                <a href="../index.html">Volver a inicio</a>
+                <a class="link-position" href="../index.html">Volver a inicio</a>
             </nav>
         </header>
 
@@ -26,23 +26,15 @@
 
                 <div>
                     <p>
-                        Cuando trabajamos con la position relative, sí debemos especificar las propiedades de top, right, bottom y 
-                        left. Es decir, dependiendo de los valores que agreguemos es como se moverá el elemento y se moverá de 
-                        manera relativa según al padre que lo contiene.
+                        Cuando trabajamos con la position relative, sí debemos especificar las propiedades de top, right, bottom y left. Es decir, dependiendo de los valores que agreguemos es como se moverá el elemento y se <b>moverá de manera relativa al flujo normal según al padre que lo contiene</b>. Si el elemento que contiene la propiedad <b>relative</b> no se le agrega ningún valor, éste, continuará con su flujo normal.
                     </p>
                 </div>
 
-                <div>
-                    <p>
-                        Primero debemos indicar position: relative y luego las propiedades de ubicación nombradas anteriormente.
-                    </p>
-                </div>
+                <br />
 
                 <div>
                     <p>
-                        Si en el caso que tenemos un div centrado y le agregamos una position relative con un top de 100px y un 
-                        left de 50px, este se moverá hacia abajo 100px y 50px hacia la derecha. Prestemos atención que los elemento 
-                        son empujados desde la posición que se está indicando. No es que se mueven hacía donde se indica.
+                        Si en el caso que tenemos un div centrado y le agregamos una position relative con un top de 100px y un left de 50px, este se moverá hacia abajo 100px y 50px hacia la derecha. Prestemos atención que los elementos son empujados desde la posición que se está indicando (elemento padre).
                     </p>
                 </div>
             </article>
@@ -57,10 +49,22 @@
                 </div>
 
                 <div class="cont-relative">
-                    <p>
-                        Elemento Relative (50px de top)
-                    </p>
+                    <div class="ejemplo-relative">
+                        <p>
+                            Elemento Relative (50px de top)
+                        </p>
+                    </div>
                 </div>
+
+                <p>
+                    En este ejemplo, el <b>contenedor padre</b> es el que tiene <b>bordes negros</b> y hemos aplicado en el <b>elemento hijo</b> (bordes azules) una <b>posición relativa</b> de <b>top: 50px</b> desde su ubicación. Es decir, el elemento con bordes azul esta a <b>50px</b> de distancia desde la parte superior <b>del elemento con bordes negro</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    También, haciendo esta práctica hemos <b>roto el flujo normal</b> de los elementos. El elemento con bordes azules <b>debería estar dentro</b> del elemento con bordes negros, esto va a generar un <b>overflow</b> con el siguiente contenedor.
+                </p>
             </article>
         </section>
     </main>
