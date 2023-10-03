@@ -21,83 +21,162 @@
                 <h2>Introducción</h2>
 
                 <p>
-                    Comenzaremos a ver la propiedad Display para los contenedore de CSS. Esta propiedad es una de las más 
-                    importantes a la hora de maquetar una página web, ya que, sus opciones establecen el flujo de como se 
-                    posicionarán los contenidos dentro del contenedor.
+                    Comenzaremos a ver la propiedad <b>display</b> para los elementos de CSS, esta propiedad es una de las más importantes a la hora de maquetar una página web, ya que, <b>sus opciones establecen el flujo de cómo se posicionarán los contenidos dentro o fuera del elemento</b>. La propiedad de CSS <b>display</b>, especifica si un <b>elemento es tratado como “block” o “inline”</b>, es decir, si el flujo es en bloque o en línea. Formalmente la propiedad <b>display</b> establece tipos de visualización “interna” y “externa” de un elemento.
                 </p>
-
-                <p>
-                    La propiedad CSS display, especifica si un elemento es tratado como “block” o “inline”, es decir, 
-                    si el flujo es en bloque o en línea. El diseño usado por sus hijos (elementos dentro del contenedor) 
-                    son: “Flow layout” (diseño de flujo), “grid” (cuadrícula), “flex” (flexible).
-                </p>
-
-                <p>
-                    Formalmente la propiedad display establece tipos de visualización interna y externa de un elemento.
-                </p>
-
-                <p>
-                    La tipo “externa”, establece la participación de un elemento en Flow layout
-                </p>
-
-                <figure>
-                    <img src="./img/outside.png" alt="Flayout Outside" />
-                </figure>
-
-                <p>
-                    La tipo interna establece el layout (diseño) de los hijos.
-                </p>
-
-                <figure>
-                    <img src="./img/inside.png" alt="Flayout Inside" />
-                </figure>
-
-                <h3>Sintaxis</h3>
-
-                <p>
-                    La propiedad display se especifica mediante valores de palabras clave. En la actualidad, es mejor 
-                    especificar el display utilizando una sola palabra clave, las combinaciones de palabras claves aún no 
-                    están bien soportadas por los navegadores.
-                </p>
-
-                <figure>
-                    <img src="./img/display.png" alt="Display" />
-                </figure>
-
             </article>
 
-        </section>
+            <hr />
 
-        <hr />
-
-        <section>
-
+            <!-- Display Outside -->
             <article>
-
-                <h2>Explorar más: </h2>
-
-                <div>
-                    <ul>
-                        <li>
-                            <a href="../11. Display/html/layoutOutside.html">
-                                <img class="tilde" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALVJREFUSEvtlNENgzAMBY8NugkdgU7UEWg3YCM6QtmkI6AngeQGGhsKf8kXKOFOfnaoOHlVJ/MpAjfhEtEc0QW4A880syMiErwHrpPgYSX/Cix8ABrgc5TAhUu0t4IQ3BMoyy4tGQjDcwLBW+AN3IxkEzwnEOgF1Eai8/O0rDZ07VrnepBK9L1GMQz3eqB9K9H7JnhEYCV6Xsy597eLjqkq0fq6RB48WkGE8/NMtILdkiJwoxsBhvUmGXE1+WEAAAAASUVORK5CYII=" />
-                                Más acerca del termino "Layout Outside"
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../11. Display/html/layoutInside.html">
-                                <img class="tilde" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALVJREFUSEvtlNENgzAMBY8NugkdgU7UEWg3YCM6QtmkI6AngeQGGhsKf8kXKOFOfnaoOHlVJ/MpAjfhEtEc0QW4A880syMiErwHrpPgYSX/Cix8ABrgc5TAhUu0t4IQ3BMoyy4tGQjDcwLBW+AN3IxkEzwnEOgF1Eai8/O0rDZ07VrnepBK9L1GMQz3eqB9K9H7JnhEYCV6Xsy597eLjqkq0fq6RB48WkGE8/NMtILdkiJwoxsBhvUmGXE1+WEAAAAASUVORK5CYII=" />
-                                Más acerca del termino "Layout Inside"
-                            </a>
-                        </li>
-                    </ul>
+                <h2>Display Outside</h2>
+    
+                <p>
+                    <b>Display-outside</b>, se encarga de establecer <b>el flujo de los elementos hijos</b>, es decir, de que manera son ubicados al generarse. Como anteriormente habíamos nombrado estos pueden estar en bloque o en línea (ver conceptos de '12.layout css').
+                </p>
+    
+                <h3>Valores y sintaxis</h3>
+    
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.display-outside</span>
+                        &#123
+                    </code>
+    
+                    <br />
+    
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">block</span>;
+                    </code>
+    
+                    <br />
+    
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">inline</span>;
+                    </code>
+    
+                    <br />
+    
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">run-in</span>;
+                    </code>
+    
+                    <br />
+    
+                    <code>
+                        &#125
+                    </code>
                 </div>
+    
+                <p>
+                    El valor por defecto que reciben <b>todos los elementos al generarse</b> es <b>'block'</b>.
+                </p>
+
+                <h3>Valores de Outside</h3>
+
+                <div class="ejemplo-block">
+                    <h4>Display: block</h4>
+    
+                    <p>
+                        <b>Block es el valor por defecto del navegador</b> a declarar un elemento. Este valor genera un <b>cuadro de elemento de bloque</b>, es decir, el elemento hace que se <b>ocupe todo el espacio disponible</b> hasta el final donde sea posible, aunque sus contenidos no ocupen todo el espacio.
+                    </p>
+    
+                    <div class="cont-ejemplo">
+                        <div class="elemento-block">
+                            Soy un div con display block, ocupo todo el espacio disponible de mi elemento. Mi elemento padre, también tiene su display en block.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo-inline">
+                    <h4>Display: inline</h4>
+
+                    <p>
+                        Este valor modifica el elemento a <b>uno o más contenedores del elemento en la línea del ancho del viewport o del contenedor padre</b>. Es decir, <b>solo ocupa el espacio necesario para mostrar los contenidos</b>.
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="elemento-block">
+                            Soy un elemento en bloque.
+                        </div>
+                        <div class="elemento-inline">
+                            Soy un elemento inline, solo ocupo el espacio necesario.
+                        </div>
+                        <div class="elemento-inline">
+                            Soy un elemento inline, solo ocupo el espacio necesario.
+                        </div>
+                        <div class="elemento-inline">
+                            Soy un elemento inline, solo ocupo el espacio necesario.
+                        </div>
+                    </div>
+                </div>
+
+
             </article>
+
+            <hr />
+
+            <!-- Display Inside -->
+            <article>
+                <h2>Display Inside</h2>
+    
+                <p>
+                    Los elementos que tienen establecidos algún valor que su comportamiento refiere a <b>display-inside</b> son para establecer <b>el diseño de los elementos hijos</b> que se generen en ese elemento padre.
+                </p>
+    
+                <h3>Valores y sintaxis</h3>
+    
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.display-inside</span>
+                        &#123
+                    </code>
+    
+                    <br />
+    
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">flex</span>;
+                    </code>
+    
+                    <br />
+    
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">grid</span>;
+                    </code>
+    
+                    <br />
+    
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">table</span>;
+                    </code>
+    
+                    <br />
+    
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">flow</span>;
+                    </code>
+    
+                    <br />
+    
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <p>
+                    Los valores de <b>inside</b> como las propiedades de <b>flex box</b> la veremos más adelante.
+                </p>
+
+            </article>
+
         </section>
-
-        <footer>
-
-        </footer>
     </main>
 </body>
 </html>
