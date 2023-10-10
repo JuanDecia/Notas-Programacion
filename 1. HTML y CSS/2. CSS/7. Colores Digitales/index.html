@@ -245,7 +245,194 @@
 
             <hr />
 
-            <!-- Artículo RGBA -->
+            <!-- Artículo Gradientes -->
+            <article>
+                <h2>Gradientes</h2>
+
+                <p>
+                    Los <b>gradientes</b> en CSS permiten crear <b>efectos de transición de color suaves y personalizados</b> en un elemento HTML. Esta propiedad es útil para crear fondos, efectos de texto o bordes decorativos en un diseño web.
+                </p>
+
+                <br />
+
+                <p>
+                    Se definen utilizando la propiedad <b>background-image</b> o el <b>shorthand background</b> seguidos del <b>tipo de gradiente</b> y luego <b>entre paréntesis</b> '()' colocamos el <b>valor que queremos que tome nuestro gradiente</b>. Veamos algunos ejemplos:
+                </p>
+
+                <h3>Sintaxis</h3>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.gradiente-grado</span>
+                        &#123
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="property-color">background</span>:
+                        <span class="field-color">linear-gradient(<span class="value-color">70deg, black, white</span>)</span>;
+                    </code>
+
+                    <br>
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <div class="ejemplos-gradientes">
+                    <h3>Gradientes Lineal: Ejemplos</h3>
+
+                    <p>
+                        En este ejemplo, lo primero que vemos son los <b>gradientes lineales</b>, que se extienden en una dirección específica (desde arriba hacia abajo o de izquierda a derecha, por ejemplo). Además, podemos especificar que se vaya extendiendo con una inclinación de “x” grados y tener más de un color.
+                    </p>
+
+                    <h4>Gradiente por grado</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">.gradiente-grado</span>
+                            &#123
+                        </code>
+    
+                        <br>
+    
+                        <code class="margin-20">
+                            <span class="property-color">background</span>:
+                            <span class="field-color">linear-gradient(<span class="value-color">70deg, black, white</span>)</span>;
+                        </code>
+    
+                        <br>
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+    
+                    <!-- Ejemplo -->
+                    <div class="caja gradiente-grado"></div>
+                </div>
+
+                <!-- Una dirección -->
+                <div class="ejemplo-una-direccion">
+                    <h4>Gradiente en una dirección</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">.una-direccion</span>
+                            &#123
+                        </code>
+    
+                        <br>
+    
+                        <code class="margin-20">
+                            <span class="property-color">background</span>:
+                            <span class="field-color">linear-gradient(<span class="value-color">to right, #d7d2cc, #304352</span>)</span>;
+                        </code>
+    
+                        <br>
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <!-- Ejemplo -->
+                    <div class="caja una-direccion"></div>
+                </div>
+
+                <!-- Una dirección, varios colores -->
+                <div class="ejemplo-varios-colores">
+                    <h4>Gradiente en una dirección, con varios colores</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">.varios-colores</span>
+                            &#123
+                        </code>
+    
+                        <br>
+    
+                        <code class="margin-20">
+                            <span class="property-color">background</span>:
+                            <span class="field-color">linear-gradient(<span class="value-color">to top, #0f0c29, #302b63, #24243e</span>)</span>;
+                        </code>
+    
+                        <br>
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <!-- Ejemplo -->
+                    <div class="caja varios-colores"></div>
+                </div>
+
+                <!-- Radial -->
+                <div class="gradiente-radial">
+                    <h3>Gradiente radial</h3>
+
+                    <p>
+                        Por otro lado, tenemos los <b>gradientes radiales</b>, que permiten crear efectos de transición de color suave y personalizados en un elemento HTML en forma circular.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">.radial</span>
+                            &#123
+                        </code>
+    
+                        <br>
+    
+                        <code class="margin-20">
+                            <span class="property-color">background</span>:
+                            <span class="field-color">radial-gradient(<span class="value-color">#f69d3c, #3f87a6</span>)</span>;
+                        </code>
+    
+                        <br>
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+    
+                    <!-- Ejemplo -->
+                    <div class="caja radial"></div>
+                </div>
+
+                <!-- Gradiente Repetición -->
+                <div class="cont-repeticion-gradiente">
+                    <h3>Gradiente con repetición</h3>
+
+                    <p>
+                        Finalmente, Tenemos los <b>gradientes repetitivos</b>, que hará que la extensión de nuestro gradiente ocupe , en el caso de ejemplo, <b>50px</b> y luego comenzará de nuevo y se repetirá las veces que sea necesario hasta cubrir todo nuestro elemento HTML.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">.repeticion-gradiente</span>
+                            &#123
+                        </code>
+    
+                        <br>
+    
+                        <code class="margin-20">
+                            <span class="property-color">background</span>:
+                            <span class="field-color">repeating-linear-gradient(<span class="value-color">#f69d3c, #3f87a6 50px</span>)</span>;
+                        </code>
+    
+                        <br>
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <!-- Ejemplo -->
+                    <div class="caja repeticion-gradiente"></div>
+                </div>
             
         </section>
     </main>

@@ -123,7 +123,7 @@ h1 {
 
 /* --- Elemento para ejemplo de color (Estilo General) --- */
 .caja {
-    width: 150px;
+    width: 250px;
     height: 150px;
     margin: 30px auto;
 }
@@ -171,4 +171,25 @@ h1 {
 
 .color-color {
     background-color: aqua;
+}
+
+/* --- Articulo Gradientes --- */
+.gradiente-grado {
+    background: linear-gradient(70deg, black, white);
+}
+
+.una-direccion {
+    background: linear-gradient(to right, #d7d2cc, #304352);
+}
+
+.varios-colores {
+    background: linear-gradient(to top, #0f0c29, #302b63, #24243e);
+}
+
+.radial {
+    background: radial-gradient(#f69d3c, #3f87a6);
+}
+
+.repeticion-gradiente {
+    background: repeating-linear-gradient(#f69d3c, #3f87a6 50px);
 }
