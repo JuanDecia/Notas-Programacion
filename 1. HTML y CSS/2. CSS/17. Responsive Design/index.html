@@ -11,211 +11,147 @@
 <body>
     <main>
         <header>
-            <h1>Diseño Adaptativo</h1>
+            <h1>Responsive Design</h1>
         </header>
 
         <section>
+
+            <!-- Introducción -->
             <article>
                 <h2>Introducción</h2>
+
+                <p>
+                    El <b>diseño responsivo</b> es un enfoque de diseño web que permite que un sitio web se <b>adapte a diferentes tamaños de pantalla</b>, como computadoras de escritorio, tabletas y dispositivos móviles. Con el aumento en el uso de dispositivos móviles para navegar por Internet, el diseño responsivo se ha vuelto cada vez más importante para garantizar una experiencia de usuario óptima. 
+                </p>
+
+                <br />
+
+                <p>
+                    Se trata de un enfoque de diseño que utiliza distintas técnicas de CSS para crear diseños que responden automáticamente a diferentes dispositivos. Entre estas técnicas o herramientas podemos utilizar cosas que ya hemos visto, cómo las distintas propiedades de flex, propiedades como min y max width/height que nos permiten limitar algunos tamaños de los elementos y otros elementos que vamos a ver en este documento, como los <b>breakpoints</b> y las <b>mediaqueries</b>, u otros sistemas de diseño que vamos a ver más adelante, como <b>CSS Grid</b> y sus propiedades. 
+                </p>
+
+                <br />
+
+                <p>
+                    El <b>diseño responsivo también implica la creación de diseños escalables y adaptables</b>, lo que significa que debemos adaptar los diseños para los distintos tipos de resoluciones, no alcanzará simplemente con achicar los elementos para que entre en la resolución buscada. Muchas veces, esto implicará ajustar posiciones y tamaños de elementos y el flujo general de nuestro sitio.
+                </p>
             </article>
 
+            <hr>
+
+            <!-- Importancia -->
             <article>
-                <div>
-                    <p>
-                        Esta estación es un paso inicial por el concepto y características del Diseño Web Adaptativo o Responsive 
-                        y la introducción del término Viewport. Esto trata de que las imágenes y videos se vean a una forma 
-                        proporcional a la dimensión de las pantallas de nuestros equipos.
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        Hablaremos de la media queries, que se usan para adaptar el formato de los contenidos a las 
-                        características de los dispositivos. Asociados a la media queries están los media types que 
-                        describen la categoría de un dispositivo.
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        Finalizaremos estudiando diversos Patrones de Diseño Web que ayudan a definir las características de 
-                        una página web, tanto lo que corresponde con la distribución de sus elementos, como su adaptabilidad a 
-                        diversos dispositivos. Entre los patrones que exploraremos están: Tiny Tweaks, Mostly Fluid, Column Drop, 
-                        Layout Shifter y Off Canvas.
-                    </p>
-                </div>
-            </article>
+                <h2>Importancia del Responsive Design en una web</h2>
 
+                <p>
+                    El <b>diseño responsivo</b> es importante porque cada vez más personas acceden a sitios web a través de dispositivos móviles como teléfonos inteligentes y tabletas. De hecho, el tráfico móvil de Internet supera al tráfico de pc's de escritorio en muchos países. Por lo tanto, <b>es esencial que los sitios web estén diseñados para adaptarse a diferentes tamaños de pantalla y proporcionar una experiencia de usuario óptima, independientemente del dispositivo que se utilice</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    Un sitio web que no está diseñado de manera responsiva puede ser <b>difícil de navegar en dispositivos móviles</b>, lo que puede llevar a una <b>mala experiencia de usuario, aumentar la tasa de rebote y reducir el tiempo de permanencia en el sitio web</b>. Además, los motores de búsqueda como Google han comenzado a <b>penalizar los sitios web que no son responsivos en los resultados de búsqueda móviles</b>, lo que puede afectar la visibilidad y el tráfico del sitio web.
+                </p>
+            </article>
+            
+            <hr />
+
+            <!-- Funcionamiento -->
             <article>
-                <h3>Objetivos de aprendizaje</h3>
+                <h2>Funcionamiento de Responsive Design</h2>
 
-                <div>
-                    <ol>
-                        <li>
-                            Interpretar el concepto y las características del Diseño Web Adaptativo con la finalidad de poder 
-                            aplicarlo a los contenidos Web Responsive.
-                        </li>
-                        <li>
-                            Aplicar el concepto de viewport con la finalidad de especificar el área disponible para renderizar una 
-                            página web.
-                        </li>
-                        <li>
-                            Usar los media queries y media types para adaptar el formato de los contenidos a las características de 
-                            los dispositivos.
-                        </li>
-                        <li>
-                            Aplicar patrones de Diseño Web Adaptativo para la creación de contenidos Web Responsive.
-                        </li>
-                    </ol>
-                </div>
+                <p>
+                    Como ya mencionamos antes, hay temas que ya hemos visto durante la cursada que nos ayudarán a implementar este tipo de diseño, como <b>flexbox</b> y sus distintas propiedades. Además, el uso de <b>unidades de medida relativas</b> serán grandes aliadas a la hora de aplicar diseño responsivo, ya que permiten que el tamaño de los elementos se adapte a una medida relativa, en lugar de que un elemento tenga siempre la misma medida fija (Esto no quiere decir que no utilizaremos unidades de medida absolutas, ya que muchas veces será preferible usarlas).
+                </p>
+
+                <br>
+
+                <p>
+                    No obstante, la principal técnica utilizada en el diseño responsivo son las <b>“mediaqueries”</b>, que permiten definir diferentes estilos a un mismo elemento para diferentes tamaños de pantalla y dispositivos.
+                </p>
             </article>
-        </section>
 
-        <hr />
+            <hr />
 
-        <section>
+            <!-- Desktop vs Mobile -->
             <article>
-                <h2>Diseño Adaptativo</h2>
+                <h2>Desktop first vs Mobile First</h2>
+
+                <p>
+                    <b>Mobile-First</b> y <b>Desktop-First</b> son dos enfoques diferentes para el diseño de sitios web, que se diferencian en el orden en el que se desarrollan y diseñan las versiones para diferentes dispositivos.
+                </p>
+
+                <br />
+
+                <p>
+                    En el enfoque de mobile-first, el diseño y desarrollo del sitio web comienzan por la versión móvil, y luego se expanden y adaptan para pantallas de mayor tamaño, como tabletas y computadoras de escritorio. En este enfoque, se prioriza la experiencia de usuario en dispositivos móviles, lo que puede resultar en una mayor simplicidad, claridad y rapidez en la navegación. Este enfoque es popular debido al aumento del tráfico móvil en Internet. Además, al diseñar primero para dispositivos móviles, los diseñadores tienen que priorizar y simplificar los elementos del sitio web, lo que puede resultar en una experiencia de usuario más clara y fácil de usar en cualquier dispositivo.
+                </p>
+
+                <br />
+
+                <p>
+                    En el enfoque desktop-first, el diseño y desarrollo del sitio web comienzan por la versión de escritorio, y luego se adaptan y ajustan para pantallas más pequeñas, como tabletas y teléfonos móviles. En este enfoque, se prioriza la experiencia de usuario en pantallas de escritorio, y luego se ajusta para adaptarse a dispositivos móviles.
+                </p>
+
+                <br />
+
+                <p>
+                    Muchas veces surge la duda de cuál es la mejor opción a la hora de desarrollar. Hoy en día, es muy común ver proyectos empezando desde 0 con un enfoque <b>mobile-first</b>. No obstante, si tenemos en cuenta que muchos sitios ya vienen creados desde tiempo atrás , existe una cantidad enorme de sitios que están diseñados con el enfoque <b>desktop-first</b>. Por esto, recomendamos practicar los dos tipos de enfoques , ya que no sabemos en qué tipo de proyecto podemos llegar a participar y será muy importante nuestra capacidad de adaptarnos a cualquiera de los dos enfoques.
+                </p>
             </article>
 
+            <hr />
+
+            <!-- Breakpoints -->
             <article>
-                <div>
-                    <p>
-                        Responsive Web Design es una técnica que permite desarrollar paginas web que se adapten a cualquier 
-                        dispositivo. Consiste en usar HTML y CSS3 con el fin de acomodar los contenidos de una página para 
-                        que se vean bien en cualquier tipo de plataforma.
-                    </p>
-                </div>
+                <h2>Breakpoints</h2>
 
-                <div>
-                    <p>
-                        Para lograr que un proyecto web sea adaptativo, debemos determinar el viewport, o el área de la página 
-                        web que será visible para el usuario, y definir un conjunto de condiciones (media queries) y reglas CSS3 
-                        de acuerdo con cada tamaño de pantalla. Estableciendo las características de los elementos para que puedan 
-                        verse correctamente en cada dispositivo.
-                    </p>
-                </div>
+                <p>
+                    Los <b>breakpoints</b>, o puntos de quiebre, son valores específicos de <b>ancho de pantalla</b> en los que se aplican diferentes estilos a un sitio web <b>mediante el uso de mediaqueries</b> en CSS. Básicamente, son los puntos en los que cambia el diseño de un sitio web para adaptarse a diferentes tamaños de pantalla. Se utilizan en conjunto con las mediaqueries , dentro de los paréntesis , siendo lo que le indica al documento a partir de que medida se aplicarán los nuevos estilos.
+                    
+                </p>
 
-                <div>
-                    <p>
-                        Existe una amplia gama de frameworks CSS para diseños web de este tipo, cuenta con herramientas muy útiles 
-                        al momento de desarrollar proyectos que requieran adaptabilidad.
-                    </p>
-                </div>
-            </article>
-        </section>
+                <h3>Referencia en los Breakpoints</h3>
 
-        <hr />
+                <p>
+                    Los breakpoints se pueden establecer en cualquier valor de ancho de pantalla necesario, y su uso dependerá del diseño específico del sitio web y de las necesidades de los usuarios. No obstante, existen algunas medidas estándar que podemos tomar como base para trabajar sobre nuestros sitios, teniendo siempre en cuenta que podemos llegar a necesitar otras medidas, pero siempre tratando de no utilizar demasiados breakpoints diferentes, ya que esto implicaría que hay cosas que se podrían realizar de una manera más óptima a la hora nuestra web.
+                </p>
 
-        <section>
-            <article>
-                <h2>Ventajas del diseño web adaptativo</h2>
-            </article>
+                <!-- Medidas Breackpoints -->
+                <table class="breakpoint-table">
+                    <thead>
+                        <tr>
+                            <th>Extra Small</th>
+                            <th>Small</th>
+                            <th>Medium</th>
+                            <th>Large</th>
+                            <th>X-Large</th>
+                            <th>XX-Large</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&#60 576px</td>
+                            <td>&#62= 576px</td>
+                            <td>&#62= 768px</td>
+                            <td>&#62= 992px</td>
+                            <td>&#62= 1200px</td>
+                            <td>&#62= 1400px</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-            <article>
-                <div>
-                    <p>
-                        Cuando creamos una página web es importante pensar en los dispositivos de los usuarios que usan al 
-                        ingresar a ella. El Diseño Web Adaptativo permite que los proyectos puedan verse bien en los diferentes 
-                        dispositivos.
-                    </p>
-                </div>
-            </article>
+                <p>
+                    Normalmente, si trabajamos un enfoque <b>desktop-first</b> partiremos de una base en la cual nuestros estilos base aplicarán para pantallas <b>X-large</b> o <b>xx-large</b> , y deberemos ir adaptando para las resoluciones más bajas utilizando <b>max-width</b> con los 992px, 768px y 576px (Aunque es muy factible que no sea necesario que utilicemos todas si aplicamos buenas prácticas a la hora de realizar nuestro código con las distintas técnicas antes mencionadas).
+                </p>
 
-            <article>
-                <h3>¿Por qué es importante?</h3>
-            </article>
+                <br />
 
-            <article>
-                <div>
-                    <p>
-                        La primera razón es la compatibilidad visual con los diferentes dispositivos. Si una página web no 
-                        cuenta con este diseño al acceder a ella desde un dispositivo móvil el navegador mostraría una versión 
-                        reducida de lo que sería una versión de escritorio.
-                    </p>
-                </div>
-
-                <div>
-                    <p>
-                        Otra de las ventajas es la codificación de un solo sitio web para los diferentes dispositivos. Si 
-                        nuestra página no cuenta con esta característica deberemos hacer un código para cada una de las versiones 
-                        incrementando la dificultad al momento de realizar cambios o actualizaciones.
-                    </p>
-                </div>
-
-                <div>
-                    <p>
-                        Por último, también contamos que nuestras paginas sean encontradas con más facilidad en los portales web 
-                        porque cuando alguien está buscando información en un navegador (ej: Google) este retornara resultados con 
-                        prioridad a las páginas que cuentan con diseño adaptativo.
-                    </p>
-                </div>
-            </article>
-        </section>
-
-        <hr />
-
-        <section>
-            <article>
-                <h2>Media adaptativa</h2>
+                <p>
+                    Por otro lado, si trabajamos con un enfoque <b>mobile-first</b> partiremos de una base en la cual nuestros estilos base aplicarán para pantallas <b>extra-small</b> , y deberemos ir adaptando a resoluciones más altas utilizando <b>min-width</b> con los 576px , 768px, 992px, 1200px y 1400px (Aplica la misma aclaración que para desktop-first respecto a que puede no ser necesario utilizar todas).
+                </p>
             </article>
 
-            <article>
-                <h3>Imágenes Adaptativas</h3>
-
-                <div>
-                    <p>
-                        Cuando colocamos las imágenes a nuestro sitio web, siempre debemos realizar la revisación de la 
-                        visualización en los diferentes dispositivos con la herramienta de desarrolladores del explorador. 
-                        Con este paso podemos notar si la imagen se adapta a la pantalla de cierto dispositivo, el error más 
-                        común es que el tamaño excede a del dispositivo.
-                    </p>
-                </div>
-
-                <div>
-                    <p>
-                        Ya hemos trabajado con la etiqueta img con el atributo width o height aplicando medidas en pixeles. 
-                        Ahora, vamos a cambiar la medida para que las imágenes realmente sean adaptativas y para ello debemos 
-                        manejar las medidas en porcentaje. Recordemos de ahora en adelante que el tamaño máximo será de 100% 
-                        para que la imagen no se salga de la pantalla o del contenedor donde se encuentre. Si mermamos o aumentamos 
-                        el tamaño del navegador, la imagen se adaptará a esta modificación y siempre ocupará el 100% del espacio 
-                        donde se encuentra. Recordemos hacer la prueba con la resolución de móvil y Tablet.
-                    </p>
-                </div>
-
-                <div>
-                    <a href="../15. Diseño Adaptativo/html/imagenAdaptativa.html">Ir a ejemplo de imágenes adaptativas</a>
-                </div>
-            </article>
-
-            <article>
-
-                <h3>Videos Adaptativos</h3>
-
-                <div>
-                    <p>
-                        Luego agregamos el video a nuestra hoja html con la etiqueta video. El problema que puede existir en un 
-                        video que además sea más ancho que la pantalla, solo se puede reproducir a 360px. Para modificar esto vamos 
-                        a crear unos selectores en nuestro archivo CSS que nos permiten cambiar el tamaño del video. Debemos tener 
-                        en cuenta que en la etiqueta video debemos sacar la etiqueta width.
-                    </p>
-                </div>
-
-                <div>
-                    <p>
-                        En nuestra hoja de estilos, seleccionaremos la etiqueta de nuestro ejemplo video y le agregaremos ahí 
-                        mismo el width. Para cuando se agrande la pantalla del video y no exceda el máximo de pantalla se 
-                        recomienda agregar también el estilo max-width con un valor 100%. Con esta regla el video no superara el 
-                        máximo de ancho del browser cuando se maximice el video.
-                    </p>
-                </div>
-
-                <div>
-                    <a href="../15. Diseño Adaptativo/html/videoAdaptativo.html">Ir a ejemplo de video adaptativo</a>
-                </div>
-            </article>
-
-        </section>
-
-        <footer></footer>
     </main>
 </body>
 </html>
