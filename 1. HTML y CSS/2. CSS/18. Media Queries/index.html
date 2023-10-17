@@ -16,26 +16,25 @@
         </header>
 
         <section>
+
+            <!-- Introducción -->
             <article>
                 <h2>Introducción</h2>
 
                 <div>
                     <p>
-                        Los Media queries son una extensión muy útil de CSS que permiten detectar las características de los 
-                        dispositivos que accedan a nuestra web, y a partir de esos datos crear hojas de estilo más personalizadas, 
-                        que llevan finalmente a aumentar y mejorar la experiencia del cliente en nuestro sitio.
+                        Los <b>Media queries</b> son una extensión muy útil de CSS que permiten detectar las características de los dispositivos que accedan a nuestra web, y a partir de esos datos crear hojas de estilo más personalizadas, que llevan finalmente a aumentar y mejorar la experiencia del cliente en nuestro sitio.
                     </p>
-                </div>
 
-                <div>
-                    <p>
-                        Los media queries, permiten que el browser decida cómo mostrar contenido dependiendo de las condiciones 
-                        que encuentre en el dispositivo y esas condiciones se dan a través de unos media types los cuales podemos
+                    <br />
+
+                    <p>                       
+                        Los <b>media queries</b>, permiten que el browser decida cómo mostrar contenido dependiendo de las condiciones que encuentre en el dispositivo y esas condiciones se dan a través de unos <b>media types</b> los cuales podemos
                         agrupar en:
                     </p>
                 </div>
 
-                <div>
+                <div class="lista">
                     <ul>
                         <li>
                             <b>Print</b>: Vista de impresión.
@@ -69,252 +68,171 @@
 
                 <div>
                     <p>
-                        Dependiendo de los media types deben crearse estilos individuales que se ajusten a las condiciones 
-                        detectadas. El dispositivo renderizará los estilos creados específicamente para cada condición.
+                        Dependiendo de los media types deben crearse estilos individuales que se ajusten a las condiciones detectadas. El dispositivo renderizará los estilos creados específicamente para cada condición.
                     </p>
                 </div>
 
-                <figure>
-                    <img src="./img/ventajasDesventajas.png" alt="ventajas y desventajas" />
-                </figure>
+                <div class="cont-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ventajas</th>
+                                <th>Desventajas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Permite Ajustar el sitio web a cualquier dispositivo.</td>
+                                <td>Se requiere escribir repetidamente algunas de las reglas css que deseen aplicarse por cada dispositivo agregado.</td>
+                            </tr>
+                            <tr>
+                                <td>Aparecen para mejorar la visualización del diseño adaptable.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Sintaxis -->
+            <article>
+                <h2>Sintaxis</h2>
+
+                <p>
+                    Las mediaqueries se definen utilizando la regla @media, seguida de una condición que especifica las características de la pantalla para las que se aplicarán las reglas de estilo. Veamos un ejemplo:
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.contenedor</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">width</span>:
+                        <span class="value-color">1200px</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="function-color">@media ( <span class="property-color">max-width: </span><span class="value-color">992px</span> )</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="field-color">.contenedor</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="property-color">width</span>:
+                        <span class="value-color">1200px</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">&#125</code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <p>
+                    En este ejemplo, tenemos un enfoque desktop-first de diseño responsive, en el cual tenemos una caja con un ancho de 1200px. Como queremos que la caja se adapte a dispositivos más chicos, utilizamos la sintaxis de mediaqueries para indicar que hasta un ancho máximo de 992px, queremos que nuestra caja tenga un ancho del 90% del que sea su contenedor. Es importante notar que debemos especificar las reglas que queremos modificar dentro de la declaración de mediaqueries, indicando cuales son los elementos del HTML que queremos que se vea distinto y cuales son las propiedades que se modificarán.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Mobile First -->
+            <article>
+                <h2>Mobile First</h2>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.contenedor</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">width</span>:
+                        <span class="value-color">1200px</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background</span>:
+                        <span class="value-color">red</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">font-size</span>:
+                        <span class="value-color">20px</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="function-color">@media ( <span class="property-color">max-width: </span><span class="value-color">992px</span> )</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="field-color">.contenedor</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="property-color">width</span>:
+                        <span class="value-color">1200px</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">&#125</code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <p>
+                    En este caso, hemos agregado algunas propiedades más a nuestra caja para poder ejemplificar otras características del uso de mediaqueries. Podemos ver que nuestro elemento tendrá, en resoluciones pequeñas, un ancho de 90% de su elemento contenedor, un color de fondo rojo y un tamaño de fuente de 20px. Aplicando mediaqueries para resoluciones más grandes, le indicamos a CSS que a partir de un ancho mínimo de 992px, se modifiquen tanto el ancho de nuestra caja como el tamaño de la fuente.
+                </p>
+
+                <br />
+
+                <p>
+                    Por su parte, el color de fondo, seguirá siendo rojo, ya que aquellas propiedades que no se reemplacen en una determinada resolución se mantendrán tal como venían declaradas desde la resolución anterior. En este caso, al no tener otra resolución previa a los 992px que se haya modificado, se mantendrá con el color rojo declarado como base en el archivo CSS.
+                </p>
             </article>
         </section>
-
-        <hr />
-
-        <section>
-            <h2>Tiny Tweaks</h2>
-
-            <div>
-                <p>
-                    Tiny Tweaks es un patrón de diseño y este define las características de una página web, tanto la 
-                    distribución de los elementos como la adaptabilidad a diversos dispositivos, estos según las reglas 
-                    establecidas previamente.
-                </p>
-            </div>
-
-            <div>
-                <p>
-                    Uno como los patrones más sencillos se conoce como tiny tweaks. Este patrón se ha establecido para 
-                    sitios diseñados en una sola columna se emplea comúnmente en portales de lectura, páginas simples o 
-                    con poco contenido. Su nombre traducido significa retoques diminutos asi que como dice su nombre, 
-                    introduce pequeños cambios a partir de los tamaños que puede tomar la pantalla en la que se renderiza 
-                    el sitio web. Este patrón modifica el tamaño del texto y las imágenes, así como su ubicación en la página.
-                </p>
-            </div>
-
-            <div>
-                <p>
-                    Para adoptar el patrón tiny tweaks en nuestros proyectos, basta con definir un conjunto de media queries. 
-                    Establecidos los tamaños de letra y disposición de imágenes según los requerimientos de cada tamaño de 
-                    pantalla.
-                </p>
-            </div>
-
-            <div>
-                <p>
-                    En el ejemplo hay una página html con un párrafo y con una imagen. Los contenidos están definidos en una 
-                    columna. Esto significa que adoptará el patron tiny tweaks en su diseño. Al modificar el tamaño de la 
-                    ventana observamos que el texto y la imagen cambian.
-                </p>
-            </div>
-
-            <div>
-                <p>
-                    Viendo el código podemos visualizar las dos medias queries para dos tamaños de pantalla y en su 
-                    interior están los pequeños cambios que se realizan a la letra y a la imagen.
-                </p>
-            </div>
-
-            <div>
-                <a href="../16. Media Queries/html/ejemploTinyTweaks.html">Ir a ejemplo de "Tiny Tweaks"</a>
-            </div>
-
-        </section>
-
-        <hr />
-
-        <section>
-            
-            <h2>Mostly Fluid</h2>
-
-            <div>
-                <p>
-                    Mostly Fuid es otro patrón de diseño, este patrón conserva el tamaño y organización de los contenidos 
-                    en páginas grandes y medianas, mientas que a las pequeñas las dispone verticalmente.
-                </p>
-            </div>
-
-            <div>
-                <p>
-                    Este patrón se basa en un contenedor principal definido con una clase y dentro de este se ubican todos 
-                    los elementos de la página. Para aplicar este patron de diseño debemos aplicar un ancho máximo para el 
-                    contenedor principal y al aumentar el tamaño de la pantalla no alterar el tamaño de los contenidos y 
-                    adicionalmente debemos indicar en que orden se deben apilar los contenidos cuando la pantalla sea pequeña.
-                </p>
-            </div>
-
-            <div>
-                <p>
-                    En nuestro ejemplo podemos observar que al alterar el tamaño de la imagen el contenedor sigue igual y 
-                    al reducir la pantalla completamente observamos que los contenidos cambian su ubicación colocándose uno 
-                    debajo de otro.
-                </p>
-            </div>
-
-            <h3>Aplicarlo en HTML y CSS</h3>
-
-            <div>
-                <p>
-                    Tenemos un contenedor div con un id llamado wrapper y en los 3 bloques de tipo article que son nuestros 
-                    bloques de contenido.
-                </p>
-            </div>
-
-            <figure>
-                <img src="./img/mostlyFluidHtml.png" alt="html mostly fluid" />
-            </figure>
-
-            <div>
-                <p>
-                    En la hoja de estilos vemos la configuración del ancho del wrapper en 960px y los bloques de contenido en 
-                    porcentaje que varían según la distribución en el contenedor:
-                </p>
-            </div>
-
-            <figure>
-                <img src="./img/mostlyFluidCss.png" alt="css mostly fluid" />
-            </figure>
-
-            <div>
-                <p>
-                    A continuación, vamos a observar 2 media queries que acomodan el tamaño del wrapper para que reduzca las 
-                    márgenes de las pantallas de 960px y las elimine por completo en las de 640px y por último en las media 
-                    queries de pantallas pequeñas 480px se ajusta el tamaño del wrapper para eliminar las márgenes y se le 
-                    indica a los elementos del contenido que ocupen el 100% del ancho del contenedor. Es decir que cada bloque
-                    ocupe la totalidad de la pantalla. Esto generará una disposición vertical  de los bloques uno debajo 
-                    del otro.
-                </p>
-            </div>
-
-            <div>
-                <a href="../16. Media Queries/html/ejemploMostlyFluid.html">Ir a ejemplo de "Mostly Fluid"</a>
-            </div>
-        </section>
-
-        <hr />
-
-        <section>
-            <h2>Column Drop</h2>
-
-            <div>
-                <p>
-                    Es un patron similar a Mostly Fluid, pero a diferencia, Column Drop es muy útil para sitios distribuidos 
-                    en columnas. Permite definir las columnas principales y secundarias de la página y acomodarlas 
-                    prioritariamente a medida que se reduce la imagen. Otra de las diferencias es que no todos los 
-                    elementos reducen su tamaño sin modificar su posición, ya que algunas columnas prevalecen sobre otras.
-                </p>
-            </div>
-
-            <div>
-                <p>
-                    Para aplicar este patron debemos definir la prioridad que tienen las columnas, debemos identificar el 
-                    orden de importancia según el contenido que posee cada columna.
-                </p>
-            </div>
-
-            <figure>
-                <img src="./img/columnDrop.png" alt="column drop" />
-            </figure>
-
-            <div>
-                <a href="../16. Media Queries/html/ejemploColumnDrop.html">Ir a ejemplo de "Column Drop"</a>
-            </div>
-        </section>
-
-        <hr />
-
-        <section>
-            <h2>Layout Shifter</h2>
-
-            <div>
-                <p>
-                    Es un patron que se encarga de reubicar y redimensionar los elementos de una página web conforme cambia 
-                    el tamaño de la pantalla.
-                </p>
-            </div>
-
-            <div>
-                <p>
-                    Layout Shifter cambia por completo la disposición del contenido, es poco común por su complejidad, 
-                    pero es el mas efectivo a los cambios de pantalla.
-                </p>
-            </div>
-
-            <div>
-                <p>
-                    Para aplicar este patrón debemos determinar barios puntos de quiebre mediante media queries en tamaños 
-                    específicos de pantalla. Allí se indican los cambios de la organización de la página, modificando el 
-                    tamaño y ubicación de los contenidos. Se trata de tener un diseño diferente por cada break point.
-                </p>
-            </div>
-
-            <div>
-                <p>
-                    En el siguiente ejemplo tenemos una disposición inicial de 5 bloques. Cuando reducimos el tamaño de 
-                    la pantalla y alcanzamos el primer punto de quiebre la organización de los elementos cambia. Si 
-                    continuamos reduciendo el tamaño de la ventana se alcanza el segundo break point y observamos otra 
-                    posición diferente. 
-                </p>
-            </div>
-
-            <div>
-                <a href="../16. Media Queries/html/ejemploLayoutShifter.html">Ir a ejemplo: "Layout Shifter"</a>
-            </div>
-
-        </section>
-
-        <hr />
-
-        <section>
-            <h2>Off Canvas</h2>
-
-            <div>
-                Es un patron de diseño con un concepto diferente a los patrones ya estudiados. Los patrones más utilizados 
-                intentan colocar los elementos de manera que todos quepan en la pantalla o se apilen verticalmente. En 
-                tamaños de pantalla pequeños, el patrón Off Canvas sólo deja en pantalla un elemento y permite el acceso 
-                a los demás mediante gestos o botones, desplazando lateralmente el contenido actual.
-            </div>
-
-            <div>
-                <figure>
-                    <img src="./img/offCanvas.png" alt="off canvas" />
-                </figure>
-            </div>
-
-            <div>
-                <p>
-                    Este patrón en aplicaciones móviles nativas, ya que permita una fácil navegación y una manera optima 
-                    de presentar los contenidos. Sin embargo, en páginas web es uno de los patrones que menos se utiliza, 
-                    debido a su alta complejidad y dificultad en su desarrollo.
-                </p>
-            </div>
-
-            <div>
-                <p>
-                    Para aplicar este patrón en una pagina web usando CSS, se deben utilizar propiedades de transformación, 
-                    animación y otras que veremos más adelante.
-                </p>
-            </div>
-            <div>
-                <p>
-                    Este patrón se popularizo en aplicaciones móviles nativas, ya que permite una fácil navegación y una 
-                    manera óptima de presentar los contenidos. Sin embargo, en paginas web es uno de los patrones que menos 
-                    se utiliza. Debido a su alta complejidad y dificultad en su desarrollo.
-                </p>
-            </div>
-        </section>
-
     </main>
 
 </body>
