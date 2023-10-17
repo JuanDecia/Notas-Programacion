@@ -152,6 +152,52 @@
                 </p>
             </article>
 
+            <hr />
+
+            <!-- Multimedia Responsiva -->
+            <article>
+                <h2>Multimedia Responsiva</h2>
+
+                <p>
+                    Cuando utilizamos <b>etiquetas de multimedia</b> podemos notar que es dificil que se <b>adapten a su contenedor padre</b>, ya que, tienen una medida ya establecida que no la genera el propio navegador. En esta sección, veremos como colocar unas sencillas propiedades con CSS para que estos elementos no generen un overflow no deseado.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">img, video, iframe</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">max-width</span>:
+                        <span class="value-color">100%</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">height</span>:
+                        <span class="value-color">auto</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <p>
+                    La más sencilla y probablemente la más utilizada sea simplemente agregar al elemento multimedia las siguientes propiedades. De esta forma, las imágenes, vídeos e iframes, en este caso, no superarán el máximo width de su contenedor, por lo que no se va a desbordar y el height se adaptará al contenido, es decir, a la altura del archivo multimedia.
+                </p>
+
+                <br />
+
+                <p>
+                    <b class="color-red">IMPORTANTE: </b>Si el ancho de estos elementos multimedia es menor que el ancho de su contenedor, NO seguirán creciendo y quedarán fijos aunque el contenedor siga aumentando su tamaño.
+                </p>
+            </article>
+
     </main>
 </body>
 </html>
