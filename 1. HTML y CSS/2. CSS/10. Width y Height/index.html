@@ -163,6 +163,144 @@
               </p>
             </div>
           </div>
+
+          <div class="cont-uso">
+            <h3>Usando ambas en el mismo elemento</h3>
+
+            <p>
+              Las propiedades <b>max / min - height y max / min - width</b> nos permiten establecer valores máximos y mínimos a nuestros contenedores. Por esta razón, en estos casos podemos implementar unidades absolutas, porque el tamaño de la caja oscila entre los valores que nosotros le indiquemos, nunca va a superarlos, por ende, da la sensación de que es un contenedor flexible.
+            </p>
+
+            <h4>Jerarquía con las propiedades bases</h4>
+
+            <p>
+              Es importante saber que en caso de que definamos las propiedades base <b>height y width</b> con unidades absolutas, <b>tienen una mayor jerarquía</b> sobre las propiedades  max / min - height y max / min - width que podamos definir dentro del mismo elemento, sin importar los estilos en cascada de CSS.
+            </p>
+
+            <div class="cont-codigo">
+              <code>
+                <span class="field-color">.contenedor</span>
+                &#123
+              </code>
+  
+              <br />
+  
+              <code class="margin-20">
+                  <span class="property-color">max-width</span>:
+                  <span class="value-color">960px</span>;
+              </code>
+  
+              <br />
+  
+              <code class="margin-20">
+                  <span class="property-color">min-width</span>:
+                  <span class="value-color">280px</span>;
+              </code>
+  
+              <br />
+  
+              <code class="margin-20">
+                  <span class="property-color">max-height</span>:
+                  <span class="value-color">480px</span>;
+              </code>
+  
+              <br />
+  
+              <code class="margin-20">
+                  <span class="property-color">min-height</span>:
+                  <span class="value-color">280px</span>;
+              </code>
+  
+              <br />
+  
+              <code class="margin-20">
+                  <span class="property-color">width</span>:
+                  <span class="value-color">300px</span>;
+                  <span class="comment-color">/* Tiene prioridad */</span>
+              </code>
+  
+              <br>
+
+              <code class="margin-20">
+                <span class="property-color">height</span>:
+                <span class="value-color">300px</span>;
+                <span class="comment-color">/* Tiene prioridad */</span>
+              </code>
+
+              <br>
+  
+              <code>
+                  &#125
+              </code>
+            </div>
+
+            <p>
+              En cambio, si definimos las propiedades height y width con unidades relativas, tienen mayor jerarquía que los máximos y mínimos, pero en este caso al ser unidades relativas, cede esa jerarquía llegado cierto punto para respetar los mínimos y máximos. 
+            </p>
+
+            <br />
+
+            <p>
+              Por ejemplo, un contenedor que tiene como max-width 960px y cómo width 50%, si ese 50% representa un valor mayor a 960px, ya no respetará la propiedad width y le dará prioridad a max-width. Mientras que el 50% de nuestro elemento no supere los 960px, siempre el ancho va a representar el valor definido en la propiedad width con unidades relativas.
+            </p>
+
+            <div class="cont-codigo">
+              <code>
+                <span class="field-color">.contenedor</span>
+                &#123
+              </code>
+  
+              <br />
+  
+              <code class="margin-20">
+                  <span class="property-color">max-width</span>:
+                  <span class="value-color">960px</span>;
+              </code>
+  
+              <br />
+  
+              <code class="margin-20">
+                  <span class="property-color">min-width</span>:
+                  <span class="value-color">280px</span>;
+              </code>
+  
+              <br />
+  
+              <code class="margin-20">
+                  <span class="property-color">max-height</span>:
+                  <span class="value-color">480px</span>;
+              </code>
+  
+              <br />
+  
+              <code class="margin-20">
+                  <span class="property-color">min-height</span>:
+                  <span class="value-color">280px</span>;
+              </code>
+  
+              <br />
+  
+              <code class="margin-20">
+                  <span class="property-color">width</span>:
+                  <span class="value-color">50%</span>;
+                  <span class="comment-color">/* Tiene prioridad hasta que supera el valor máximo o mínimo */</span>
+              </code>
+  
+              <br>
+
+              <code class="margin-20">
+                <span class="property-color">height</span>:
+                <span class="value-color">20vh</span>;
+                <span class="comment-color">/* Tiene prioridad hasta que supera el valor máximo o mínimo */</span>
+              </code>
+
+              <br>
+  
+              <code>
+                  &#125
+              </code>
+            </div>
+          </div>
         </article>
 
         <hr />
