@@ -18,314 +18,702 @@
         
         <section>
 
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    Las pseudoclases y pseudoelementos son elementos clave en la creación de diseños y estilos avanzados en CSS. Permiten a los desarrolladores seleccionar y aplicar estilos a elementos HTMLdeformasmásespecíficas y sofisticadas que simplemente seleccionar por el tipo de elemento.
+                </p>
+            </article>
+
+            <!-- Pseudoclases -->
             <article>
 
                 <h2>Pseudoclases</h2>
 
                 <p>
-                    Las Pseudoclases son palabras clave que representan <b>el estado</b> en el que se puede encontrar un 
-                    elemento HTML. En otras palabras, los que son el primer elemento de su tipo, o aquellos por 
-                    los que el cursor les pasa por encima. Las Pseudoclases son palabras clave que comienzan con 
-                    dos puntos:
+                    Las <b>pseudoclases</b> son <b>selectores especiales</b> que representan <b>el estado</b> en el que se puede encontrar un elemento HTML. Estos selectores nos permiten aplicar estilos a elementos que no están definidos en el HTML, sino que son generados automáticamente por el navegador en función de la interacción del usuario con la página web.
                 </p>
 
-                <code>
-                    :pseudo-class-name
-                </code>
-                
-                <p>
-                    A continuación, realizaremos un ejemplo práctico para mejorar su entendimiento. Si queremos el primer 
-                    párrafo de un artículo en letra más grande y en negrita, podemos añadir una clase a ese párrafo y luego 
-                    añadirle CSS a esa clase, como se muestra en este ejemplo:
-                </p>
+                <h3>Sintaxis de pseudoclases</h3>
 
-                <p class="parrafo">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut placeat cum quasi odit recusandae. Magni 
-                    expedita laudantium, aut ea deserunt autem eligendi similique omnis dolor est, commodi rerum placeat 
-                    inventore.
-                </p>
+                <div class="cont-codigo">
+                    <code>
+                        <span class="property-color">a</span>:<span class="field-color">hover</span>
+                        &#123
+                    </code>
 
-                <p>
-                    Sin embargo, podría ser complicado de mantener. ¿Y si añadiésemos un párrafo nuevo en la parte superior del 
-                    documento? Habría que mover la clase para que quede antes del nuevo párrafo. En lugar de añadir la clase, 
-                    podríamos utilizar el selector de pseudoclase :first-child, que siempre seleccionará el primer elemento 
-                    hijo del artículo, y de esta forma no tendremos que editar el código HTML (esto no siempre es posible, 
-                    tal vez debido a que lo genera un CMS).
-                </p>
+                    <br />
 
-                <div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dolor a nulla tenetur quisquam reiciendis 
-                        atque, commodi et soluta voluptatum enim delectus ad, itaque magni inventore! Dolor quia nihil sit!
-                    </p>
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">red</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">text-decoration</span>:
+                        <span class="value-color">underline</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
                 </div>
 
                 <p>
-                    En el caso del ejemplo anterior aplicamos la <b>pseudoclase</b> | <span><code>div :first-child</code></span> |
-                    y como podemos observar, el contenedor seleccionado se le aplican los cambios. Para una traducción a 
-                    entender esta declaración, estamos diciendo que todos los elementos que sean <b>primer hijo</b> del
-                    contenedor <b>div</b>, tendrán esos cambios.
+                    A continuación, veremos las <b>pseudoclases</b> más utilizadas por los desarrolladores.
                 </p>
 
-                <p>
-                    Todas las pseudoclases se comportan del mismo modo. Seleccionan un fragmento del documento que está en un 
-                    estado determinado y se comportan como si se hubiera añadido una clase a su HTML.
-                </p>
+                <!-- Active -->
+                <div class="active">
+                    <h3>Active</h3>
 
-            </article>
+                    <p>
+                        La <b>pseudoclase ':active'</b> es un selector especial de CSS que se utiliza para <b>aplicar estilos a un elemento HTML cuando está siendo activado</b>, es decir, cuando el usuario hace <b>clic sobre él</b>. Por ejemplo, si queremos aplicar un estilo diferente al botón de un formulario cuando el usuario <b>lo está presionando</b> con el ratón, podemos utilizar la pseudoclase :active.
+                    </p>
 
-            <article>
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">button</span>:<span class="field-color">active</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">background-color</span>:
+                            <span class="value-color">red</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">color</span>:
+                            <span class="value-color">white</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+                    </div>
 
-                <h3>first-child</h3>
+                    <h4>Ejemplo</h4>
 
-                <p>
-                    Siempre seleccionará el primer elemento hijo del articulo seleccionado en el DOM. A continuación, 
-                    visualizaremos una imagen en donde el selector es “p” y con la referencia de first-child estamos 
-                    seleccionando al primer elemento hijo del dom de “p”.
-                </p>
+                    <div class="cont-ejemplo">
+                        <button class="btn-active">Soy un Botón</button>
+                    </div>
+                </div>
 
-                <p>
-                    En el ejemplo podría escribirse “article:first-child” y la regla se aplicaría a cualquier elemento 
-                    que sea primer hijo de un elemento “article”, no solo un párrafo primer hijo.
-                </p>
+                <!-- Hover -->
+                <div class="hover">
+                    <h3>Hover</h3>
 
-                <figure>
-                    <img src="./img/firstChild.png" alt="first child" />
-                </figure>
+                    <p>
+                        <b>Hover</b> es una pseudo-clase <b>dinámica</b>, es decir, el usuario <b>interactua</b> con ella para que esta pueda <b>activarse</b>. Esta pseudo-clase se activa cuando el usuario <b>pasa por encima del elemento con el puntero del ratón</b>.
+                    </p>
 
-            </article>
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">p</span>:<span class="field-color">hover</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">background-color</span>:
+                            <span class="value-color">red</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">color</span>:
+                            <span class="value-color">white</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+                    </div>
 
-            <article>
+                    <h4>Ejemplo</h4>
 
-                <h3>last-child</h3>
+                    <div class="cont-ejemplo">
+                        <p class="p-hover">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nostrum reprehenderit distinctio, voluptate maiores ipsum at cupiditate et sequi, optio repellat adipisci amet atque nemo fuga consequuntur enim eos cum natus unde accusamus saepe, dicta voluptatibus ratione. Rerum, similique rem?
+                        </p>
+                    </div>
 
-                <p>
-                    La Pseudoclase “:last-child” representa el último elemento entre un grupos de elementos hermanos.
-                </p>
+                </div>
 
-                <p>
-                    A continuación, veremos un ejemplo en donde aplicaremos esta Pseudoclase a 3 hermanos “p” el cual 
-                    estamos seleccionando el último de ellos para aplicarle los estilos.
-                </p>
 
-                <figure>
-                    <img src="./img/lastChild.png" alt="last child" />
-                </figure>
+                <!-- Visited -->
+                <div class="visited">
+                    <h3>Visited</h3>
 
-            </article>
+                    <p>
+                        La pseudoclase <b>:visited</b> es un selector especial de CSS que se utiliza para <b>aplicar estilos a un enlace HTML que ya ha sido visitado</b> por el usuario. Esta pseudoclase se utiliza principalmente para resaltar los enlaces que ya hemos visitado y distinguirlos de los que aún no hemos visitado. Por ejemplo, si queremos cambiar el color de los enlaces visitados a un tono más suave que el de los enlaces que aún no hemos visitado, podemos utilizar la pseudoclase :visited.
+                    </p>
 
-            <article>
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">a</span>:<span class="field-color">visited</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">color</span>:
+                            <span class="value-color">green</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+                    </div>
 
-                <h3>only-child</h3>
+                    <h4>Ejemplo</h4>
 
-                <p>
-                    Esta pseudoclase hace selección a un único hijo que no tenga hermanos. En la siguiente imagen podemos ver 
-                    un ejemplo en donde tenemos dos contenedores padres, en el primero con un único div hijo y el segundo con 
-                    varios elementos hijos, esta regla aplicaría al primero por ser único hijo.
-                </p>
+                    <div class="cont-ejemplo">
+                        <a class="a-visited" href="#">Link-Visited</a>
+                    </div>
+                </div>
 
-                <figure>
-                    <img src="./img/onlyChild.png" alt="only child" />
-                </figure>
+                <!-- Link -->
+                <div class="link">
+                    <h3>Link</h3>
 
-            </article>
+                    <p>
+                        La pseudoclase <b>:link</b> es un selector especial de CSS que se utiliza para <b>aplicar estilos a los enlaces HTML que aún no han sido visitados</b> por el usuario. Es decir, cuando un usuario aún no ha hecho clic en un enlace, este se considera como "no visitado", y se puede aplicar un estilo diferente a él utilizando la pseudoclase :link.
+                    </p>
 
-            <article>
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">a</span>:<span class="field-color">link</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">color</span>:
+                            <span class="value-color">blue</span>;
+                        </code>
 
-                <h3>Invalid</h3>
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">text-decoration</span>:
+                            <span class="value-color">none</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+                    </div>
 
-                <p>
-                    Esta pseudo clase es útil para trabajar con los formularios que representa a cualquier elemento input cuyos 
-                    contenidos no se puedan validar. Esta pseudo clase es útil para resaltar errores de campo para el usuario. 
-                    En el siguiente ejemplo colorea los elementos en verde cuando son válidos y en rojo cuando no lo son. La 
-                    sintaxis es como las demás pseudo clases “:invalid”.
-                </p>
+                    <h4>Ejemplo</h4>
 
-                <figure>
-                        <img src="./img/invalidHtml.png" alt="invalid html" />
-                </figure>
+                    <div class="cont-ejemplo">
+                        <a class="a-link" href="#">Link sin visitar</a>
+                    </div>
+                </div>
 
-                <figure>
-                    <img src="./img/invalidCss.png" alt="invalid css" />
-                </figure>
+                <!-- Focus -->
+                <div class="focus">
+                    <h3>Focus</h3>
 
-                <figure>
-                    <img src="./img/invalidResultado.png" alt="invalid resultado" />
-                </figure>
+                    <p>
+                        La pseudoclase <b>:focus</b> es un selector especial de CSS que se utiliza para aplicar estilos <b>a un elemento HTML cuando este está enfocado</b>, es decir, cuando el usuario lo ha seleccionado utilizando el teclado o el ratón. Por ejemplo, si queremos aplicar un estilo diferente a un campo de formulario cuando este está enfocado, podemos utilizar el siguiente código CSS:
+                    </p>
 
-            </article>
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">input</span>:<span class="field-color">focus</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">border</span>:
+                            <span class="value-color">2px solid blue</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
 
-        </section>
+                    </div>
 
-        <hr />
+                    <h4>Ejemplo</h4>
 
-        <section>
+                    <div class="cont-ejemplo">
+                        <input class="input-focus" type="text">
+                    </div>                    
+                    
+                </div>
 
-            <article>
+                <!-- First-child -->
+                <div class="first-child">
+                    <h3>first-child</h3>
 
-                <h2>Pseudoclases de acción de usuario</h2>
+                    <p>
+                        La pseudoclase <b>:first-child</b> es un selector especial de CSS que se utiliza para <b>seleccionar el primer elemento hijo de otro elemento</b>. Es decir, si tenemos un elemento HTML que tiene varios elementos hijos, podemos utilizar la pseudoclase <b>:first-child para seleccionar el primer hijo</b> y aplicar estilos CSS específicos a ese elemento. Por ejemplo, si queremos aplicar un estilo diferente al primer elemento de una lista, podemos utilizar el siguiente código CSS:
+                    </p>
 
-                <p>
-                    Algunas pseudoclases solo intervienen cuando el usuario interactúa con el documento de alguna manera. 
-                    Estas pseudoclases de acción de usuario, que también reciben el nombre de pseudoclases dinámicas, actúan 
-                    como si se añadiese una clase al elemento cuando el usuario interactúa con él. Algunos ejemplos son:
-                </p>
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">ul li</span>:<span class="field-color">first-child</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">color</span>:
+                            <span class="value-color">red</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
 
-            </article>
+                    </div>
 
-            <article>
+                    <div class="cont-ejemplo">
+                        <ul class="list-first-child">
+                            <li>Primer elemento hijo</li>
+                            <li>Segundo elemento hijo</li>
+                            <li>Tercer elemento hijo</li>
+                        </ul>
+                    </div>
+                </div>
 
-                <h3>hover</h3>
+                <!-- Last-child -->
+                <div class="last-child">
+                    <h3>last-child</h3>
 
-                <p>
-                    La pseudoclase “:hover” es considerada dinámica, solo interviene si el usuario pasa el cursor sobre 
-                    un elemento. Cuando esto ocurre hover aplica una acción de diseño.
-                </p>
+                    <p>
+                        La pseudoclase <b>:last-child</b> es un selector especial de CSS que se utiliza para <b>seleccionar el último elemento hijo de otro elemento</b>. Es decir, si tenemos un elemento HTML que tiene varios elementos hijos, podemos utilizar la pseudoclase <b>:last-child para seleccionar el último hijo</b> y aplicar estilos CSS específicos a ese elemento. Por ejemplo, si queremos aplicar un estilo diferente al último elemento de una lista, podemosutilizar el siguiente código CSS.
+                    </p>
 
-                <code class="code-hover">
-                    A :hover { color: green;} 
-                </code>
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">ul li</span>:<span class="field-color">last-child</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">color</span>:
+                            <span class="value-color">green</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
 
-                <p>
-                    Cambiará el elemento a color green cuando el usuario pase el cursor por encima. 
-                </p>
+                    </div>
 
-            </article>
+                    <h4>Ejemplo</h4>
 
-            <article>
+                    <div class="cont-ejemplo">
+                        <ul class="list-last-child">
+                            <li>Primer elemento hijo</li>
+                            <li>Segundo elemento hijo</li>
+                            <li>Tercer elemento hijo</li>
+                        </ul>
+                    </div>
+                </div>
 
-                <h3>Focus</h3>
+                <!-- First-of-type -->
+                <div class="first-of-type">
+                    <h3>first-of-type</h3>
 
-                <p>
-                    La pseudoclase “:focus” es considerada dinámica y solo interviene si el usuario selecciona el elemento 
-                    con los controles del teclado.
-                </p>
+                    <p>
+                        La pseudoclase <b>:first-of-type</b> es un selector especial de CSS que se utiliza para <b>seleccionar el primer elemento de un tipo específico que aparece dentro de otro elemento</b>. Por ejemplo, si queremos aplicar un estilo diferente al <b>primer párrafo de un artículo</b>, podemosutilizar el siguiente código CSS:
+                    </p>
 
-                <code>
-                    Input:focus{ width: 160px; height: 140px;} 
-                </code>
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">article p</span>:<span class="field-color">first-of-type</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">font-weight</span>:
+                            <span class="value-color">bold</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
 
-                <form action="">
-                    <input class="focus-text" type="text" />
-                </form>
+                    </div>
+                </div>
 
-            </article>
+                <!-- nth-child -->
+                <div>
+                    <h3>nth-child</h3>
 
-            <article>
+                    <p>
+                        La pseudoclase <b>:nth-child</b> es un selector especial de CSS que se utiliza para seleccionar <b>elementos específicos dentro de otro elemento HTML</b>, según su posición en el árbol de elementos. Es decir, si tenemos un elemento HTML que contiene varios elementos, podemosutilizar la pseudoclase <b>:nth-child para seleccionar elementos específicos según su posición</b> dentro del elemento padre.
+                    </p>
+
+                    <h4>Ejemplo, seleccionando elementos impares</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">elemento</span>:<span class="field-color">nth-child</span>(odd)
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">font-weight</span>:
+                            <span class="value-color">bold</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+
+                    </div>
+
+                    <h4>Ejemplo, seleccionando elementos pares</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">elemento</span>:<span class="field-color">nth-child</span>(even)
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">font-weight</span>:
+                            <span class="value-color">bold</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+
+                    </div>
+
+                    <h4>Ejemplo, seleccionando elementos en posición específica</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">elemento</span>:<span class="field-color">nth-child</span>(2)
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">font-weight</span>:
+                            <span class="value-color">bold</span>;
+                        </code>
+    
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="comment-color">/* Estilos para el elemento que se encuentra en la posición 2 dentro de su contenedor padre. */</span>
+                        </code>
+
+                        <br />
+    
+                        <code>&#125</code>
+
+                    </div>
+
+                    <h4>Ejemplo, seleccionando elementos en posición específica según su múltiplo</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">elemento</span>:<span class="field-color">nth-child</span>(3n)
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">font-weight</span>:
+                            <span class="value-color">bold</span>;
+                        </code>
+    
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="comment-color">/* Estilos para los elementos hijos múltiplos de 3. */</span>
+                        </code>
+
+                        <br />
+    
+                        <code>&#125</code>
+
+                    </div>
+                </div>
+
+                <h4>
+                    Ejemplo, seleccionando elementos en posición específica a partir de un elemento seleccionado
+                </h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">elemento</span>:<span class="field-color">nth-child</span>(3n+4)
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">font-weight</span>:
+                            <span class="value-color">bold</span>;
+                        </code>
+    
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="comment-color">/* Estilos para los elementos hijos múltiplos de 3, a partir de la posición 4. */</span>
+                        </code>
+
+                        <br />
+    
+                        <code>&#125</code>
+
+                    </div>
                 
-                <h3>Visited</h3>
-
-                <p>
-                    La pseudoclase “:visited” es considerada dinámica y generalmente se aplica a links ya que tomará el estilo 
-                    luego de que el usuario haya hecho “click” en el elemento que tenga esta pseudo clase especificada.
-                </p>
-
-                <code>
-                    A[href^ = ’http://’]: visited{ color: red;} 
-                </code>
-
-                <p>
-                    Esto retornara que el link luego de visitar la página externa, quedará en color rojo.
-                </p>
-
             </article>
-        </section>
 
-        <section>
+            <hr />
 
-            <h2>Pseudoelementos</h2>
-
-            <p>
-                Los pseudoelementos se comportan de manera similar. Sin embargo, actúan como si hubieras añadido un elemento 
-                HTML totalmente nuevo en el marcado, en lugar de haber aplicado una clase nueva a los elementos presentes. 
-                Los pseudoelementos comienzan con un doble signo de dos puntos “::”
-            </p>
-
-            <p>
-                Supongamos que se desea seleccionar la primera línea de un párrafo simplemente se puede delimitar con el 
-                elemento span y utilizar un selector de elementos. Sin embargo, esto fallará si el número de palabras que 
-                se delimitó resulta ser más largo o más corto que el ancho del elemento padre. Ya que normalmente no 
-                sabemos cuántas palabras caben en una línea porque esto cambia con el ancho de pantalla o con los cambios 
-                de tamaño de letra, no es posible hacer esto introduciendo solo HTML.
-            </p>
-
-            <p>
-                A continuación, vamos a ver un ejemplo de como trabaja un pseudoelemento:
-            </p>
-
-            <h3>first line</h3>
-
-            <p>
-                Para el ejemplo nombrado anteriormente podemos aplicarlo con el pseudo elemento “::first-name”, ya que, 
-                no importa si el número de palabras aumenta o disminuye, siempre se seleccionará la primer línea.
-            </p>
-
-            <p class="pseudoElemento">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores expedita, sed pariatur et 
-                voluptates molestias voluptatem incidunt rerum obcaecati ducimus, voluptas quaerat numquam? Obcaecati 
-                fugit consectetur corrupti. Iure, quidem facilis.
-            </p>
-
-            <figure>
-                <img src="./img/firstLine.png" alt="first line" />
-            </figure>
-
-            <p>
-                Como vemos en el ejemplo anterior le hemos aplicado solamente estilos a la <b>primer línea</b>
-                del párrafo. Le hemos cambiado el color a verde para que se puedan visualizar los cambios con
-                mejor claridad.
-            </p>
-
-            <hr>
-
+            <!-- Pseudo-elementos -->
             <article>
-
-                <h2>Pseudoelementos y pseudoclases</h2>
-
-                <p>
-                    Podemos hacer uso de ambos cuando sea necesario. En el ejemplo anterior, en el caso de tener 2 etiquetas de 
-                    párrafo, podemos usar una pseudoclase para seleccionar el primer hijo del primer párrafo.
-                </p>
+                <h2>Pseudo-elementos</h2>
 
                 <p>
-                    A continuación, vamos a ver un ejemplo en donde se selecciona la primera línea del primer elemento “p” 
-                    que esté dentro de un elemento “article”.
+                    Los pseudoelementos permiten agregar contenido a un elemento HTML que no está presente en el código fuente, como puede ser el caso del texto que se encuentra en el borde de un elemento, o el icono de un enlace.
                 </p>
 
-                <figure>
-                    <img src="./img/combinado.png" alt="pseudos" />
-                </figure>
+                <h3>Sintaxis</h3>
 
-            </article>
+                <div class="cont-codigo">
+                    <code>
+                        <span class="property-color">elemento</span>::<span class="field-color">pseudo-elemento</span>
+                        &#123
+                    </code>
 
-            <hr>
+                    <br />
 
-            <article>
+                    <code class="margin-20">
+                        <span class="property-color">font-weight</span>:
+                        <span class="value-color">bold</span>;
+                    </code>
 
-                <h2>Generar contenido con before y after</h2>
+                    <br />
 
-                <p>
-                    Hay un par de pseudoelementos especiales que se utilizan junto con la propiedad de <b>content</b> para 
-                    introducir contenido en el documento usando el CSS.
-                </p>
+                    <code>&#125</code>
 
-                <p>
-                    Los usos más habituales son los iconos dentro de cadenas de texto los cuales se pueden cambiar la posición. 
-                    En la siguiente imagen podemos ver un ejemplo en el que tenemos en el content una imagen en la que el 
-                    pseudoelemento lo coloca luego del contenedor “box” por declararse “after”. Si el pseudoelemento es “before” 
-                    lo colocaría antes de “box”.
-                </p>
+                </div>
 
-                <figure>
-                    <img src="./img/beforeAfter.png" alt="before y after" />
-                </figure>
+                <!-- First-letter -->
+                <div class="first-letter">
+                    <h3>First-letter</h3>
+
+                    <p>
+                        El pseudoelemento <b>::first-letter</b> permite <b>seleccionar la primera letra</b> de un elemento HTML y aplicarle estilos específicos.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">p</span>::<span class="field-color">first-letter</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">font-weight</span>:
+                            <span class="value-color">bold</span>;
+                        </code>
+
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">color</span>:
+                            <span class="value-color">red</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+    
+                    </div>
+
+                    <h4>Ejemplo</h4>
+
+                    <div class="cont-ejemplo">
+                        <p class="p-first-letter">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum, quae rerum quisquam aut natus molestias, ipsam corporis tenetur fuga enim nobis nemo, tempore dolore neque magni aspernatur eius voluptas?
+                        </p>
+                    </div>
+                </div>
+
+                <!-- First-line -->
+                <div class="cont-first-line">
+                    <h3>First-line</h3>
+
+                    <p>
+                        El pseudoelemento <b>::first-line</b> permite seleccionar la <b>primera línea de un bloque de texto</b> y aplicarle estilos específicos. Esto puede ser útil para cambiar la apariencia de la primera línea de un párrafo, por ejemplo, o para destacar las primeras palabras de un título
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">p</span>::<span class="field-color">first-line</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">font-weight</span>:
+                            <span class="value-color">bold</span>;
+                        </code>
+
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">color</span>:
+                            <span class="value-color">red</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+    
+                    </div>
+
+                    <h4>Ejemplo</h4>
+
+                    <div class="cont-ejemplo">
+                        <p class="p-first-line">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum, quae rerum quisquam aut natus molestias, ipsam corporis tenetur fuga enim nobis nemo, tempore dolore neque magni aspernatur eius voluptas?
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Placeholder -->
+                <div class="cont-placeholder">
+                    <h3>Placeholder</h3>
+
+                    <p>
+                        El pseudoelemento ::placeholder se utiliza para estilizar el texto de marcador de posición en un elemento input o textarea. El texto de marcador de posición es el texto gris que se muestra dentro del campo antes de que el usuario escriba algo en él.  El uso de ::placeholder te permite cambiar el estilo del texto de marcador de posición en relación con el estilo del texto escrito en el campo. Esto puede ayudar a resaltar el campo y hacer que sea másfácil de usar.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">input</span>::<span class="field-color">placeholder</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">color</span>:
+                            <span class="value-color">#999</span>;
+                        </code>
+
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">font-style</span>:
+                            <span class="value-color">italic</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+    
+                    </div>
+
+                    <h4>Ejemplo</h4>
+
+                    <div class="cont-ejemplo">
+                        <input class="placeholder" type="text" placeholder="Texto de ejemplo">
+                    </div>
+                </div>
+
+                <!-- After -->
+                <div class="cont-after">
+                    <h3>After</h3>
+
+                    <p>
+                        El pseudoelemento <b>::after</b> se utiliza para <b>insertar contenido después del contenido de un elemento seleccionado</b>. Este pseudoelemento puede ser utilizado para <b>agregar elementos decorativos</b>, como líneas, flechas, íconos, etc. También puede ser utilizado para <b>agregar contenido generado automáticamente</b>, como números de sección o viñetas de lista.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">li</span>::<span class="field-color">after</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">content</span>:
+                            <span class="value-color">"/2192"</span>;
+                        </code>
+
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">margin-left</span>:
+                            <span class="value-color">5px</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+    
+                    </div>
+
+                    <p>
+                        Podemos ver en el ejemplo que se usa la propiedad content para establecer en código hexadecimal una flecha que apunta hacia la derecha. Está propiedad siempre debe colocarse para que este pseudoelemento funcione correctamente.
+                    </p>
+
+                    <h4>Ejemplo</h4>
+
+                    <div class="cont-ejemplo">
+                        <ul class="list-after">
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Before -->
+                <div class="cont-before">
+                    <h3>Before</h3>
+
+                    <p>
+                        El pseudoelemento <b>:before</b> se utiliza para <b>añadir contenido al inicio de un elemento</b>, es decir, antes de su contenido real.
+                    </p>
+                </div>
+
             </article>
 
         </section>
-
-        <footer>
-
-        </footer>
     </main>
 </body>
 </html>
