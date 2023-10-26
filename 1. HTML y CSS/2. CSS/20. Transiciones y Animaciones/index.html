@@ -4,330 +4,585 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interacciones</title>
+    <title>Trancisiones y Animaciones</title>
 
     <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
     <main>
         <header>
-            <h1>Interacciones</h1>
+            <h1>Trancisiones y Animaciones</h1>
         </header>
 
         <section>
-            <article>
-                <h2>Introducción</h2>
-            </article>
 
+            <!-- Introducción -->
             <article>
+                <h2>Introducción: Concepto de ejes.</h2>
+
                 <p>
-                    Esta unidad esta separada en dos secciones lógicas; una dedicada a la forma en que podemos hacer 
-                    nuestros contenidos HTML más dinámicos, a través del uso de transformaciones y animaciones. La 
-                    otra es una visión a ciertas características avanzadas del lenguaje.
+                    El concepto de <b>ejes</b> es muy importante para comprender <b>cómo los elementos de una página web pueden moverse y cambiar de forma dinámica</b> mediante código CSS. Los ejes son los <b>puntos de referencia</b> que se utilizan para <b>determinar la dirección y la velocidad</b> de los cambios que se aplican a un elemento. 
+                </p>
+
+                <br />
+
+                <p>
+                    Hay <b>dos tipos</b> principales de ejes que se utilizan en CSS: el <b>eje X</b> y el <b>eje Y</b>. El <b>eje X</b> representa la <b>dirección horizontal</b>, mientras que el <b>eje Y representa la dirección vertical</b>. Juntos, estos dos ejes forman un plano cartesiano que se utiliza para representar la posición de un elemento en una página web. 
+                </p>
+
+                <br />
+
+                <p>
+                    Cuando se aplican animaciones y transiciones a un elemento utilizando CSS, se pueden definir los ejes de movimiento para controlar la dirección y la velocidad del cambio. Por ejemplo, se puede utilizar el <b>eje X</b> para <b>mover un elemento de izquierda a derecha</b>, o el <b>eje Y</b> para <b>moverlo de arriba a abajo</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    Los ejes también pueden ser utilizados para <b>controlar la rotación</b> y <b>la escala de un elemento</b>. En estos casos, se utilizan los <b>ejes Z</b> y <b>XYZ</b> para <b>representar la dirección en la que el elemento está siendo transformado</b>.
                 </p>
             </article>
 
+            <hr />
+
+            <!-- Transform -->
             <article>
+                <h2>Propiedad Transform</h2>
+
+                <p>
+                    Las transformaciones en CSS son una herramienta útil que <b>nos permite cambiar la apariencia y posición de elementos HTML sin modificar su estructura</b>. Con las transformaciones, podemos girar, mover, escalar y deformar elementos de manera dinámica y fluida.
+                </p>
+
+                <br />
+
+                <p>
+                    Para poder utilizar estas herramientas debemos aplicarla con la <b>propiedad</b> que nos proporciona la hoja de estilos CSS llamada <b>transform</b>. En esta propiedad, le colocaremos el valor que tomará el comportamiento del elemento seleccionado.
+                </p>
+
+                <br />
+
+                <p>
+                    Existen diferentes tipos de transformaciones que se pueden aplicar a los elementos HTML, veamos las más importantes.
+                </p>
+
+                <!-- Translate -->
+                <div class="cont-translate">
+                    <h3>Translate</h3>
+
+                    <p>
+                        Esta propiedad nos permite <b>mover o trasladar</b> un elemento en una web. Este método se encarga de alterar la ubicación de un elemento a partir de su posición original. Esta propiedad recibe <b>dos valores</b>: el <b>valor del desplazamiento horizontal y el valor del desplazamiento vertical</b>, los cuales determinan los valores de la nueva posición del elemento trasladado. Estos valores pueden ser en cualquier unidad de medida.
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Cuando usamos un valor <b>positivo</b> en la <b>unidad horizontal</b> los elementos se trasladarán hacia la <b>derecha</b>. Si usamos <b>números negativos</b> será hacia la <b>izquierda</b>. Cuando usamos un <b>valor positivo</b> en la unidad <b>vertical</b> los elementos se trasladarán <b>hacia abajo</b>. Si usamos <b>números negativos será hacia arriba</b>.
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Si deseamos trasladar hacia una dirección sola podemos hacer uso de translate + X, Y o Z y definir dentro del paréntesis la medida del desplazamiento. En el ejemplo lo trasladaremos horizontalmente con el método translateX(). 
+                    </p>
+
+                    <h4>Sintaxis y ejemplo</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">elemento</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">transform</span>:
+                            <span class="value-color">translate<span class="field-color">(<span class="number-color">x, y</span>)</span></span>;
+                        </code>
+
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="comment-color">/*  Donde x e y son valores numéricos que indican cuánto deberá moverse un elemento en cada uno de esos ejes. */</span>
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+                    </div>
+
+                    <div class="cont-ejemplo">
+                        <div class="elemento-translate"></div>
+                    </div>
+                </div>
+
+                <!-- Scale -->
+                <div class="cont-scale">
+                    <h3>Scale</h3>
+
+                    <p>
+                        La transformación Scale nos <b>permite aumentar o disminuir el tamaño de un elemento
+                        HTML</b>. Podemosescalar en ambasdirecciones (X e Y) o sólo en una de ellas. La sintaxis para aplicar esta transformación es:
+                    </p>
+
+                    <h4>Sintaxis</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">elemento</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">transform</span>:
+                            <span class="value-color">scale<span class="field-color">(<span class="number-color">x, y</span>)</span></span>;
+                        </code>
+
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="comment-color">/*  Donde x e y son valores numéricos que indican cuánto deberá crecer un elemento en cada uno de esos ejes. */</span>
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+                    </div>
+                </div>
+
+                <!-- Skew -->
+                <div class="cont-skew">
+                    <h3>Skew</h3>
+                    
+                    <p>
+                        La transformación Skew nos <b>permite inclinar o deformar un elemento HTML</b>. La sintaxis para aplicar esta transformación es:
+                    </p>
+
+                    <h4>Sintaxis</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">elemento</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">transform</span>:
+                            <span class="value-color">skew<span class="field-color">(<span class="number-color">x, y</span>)</span></span>;
+                        </code>
+
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="comment-color">/*  Donde x e y son valores numéricos que indican cuánto se deformará un elemento en cada uno de esos ejes. */</span>
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+                    </div>
+                </div>
+
+                <!-- Rotate -->
+                <div class="cont-rotate">
+                    <h3>Rotate</h3>
+
+                    <p>
+                        Esta transformación nos permite <b>girar un elemento HTML en un ángulo determinado</b>. La sintaxis para aplicar esta transformación es:
+                    </p>
+
+                    <h4>Sintaxis</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">elemento</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">transform</span>:
+                            <span class="value-color">rotate<span class="field-color">(<span class="number-color">angulo</span>)</span></span>;
+                        </code>
+
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="comment-color">/*  Donde el ángulo es un valor en grados (deg) que indican la rotación. */</span>
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+                    </div>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Transition -->
+            <article>
+                <h2>Propiedad Transition</h2>
+
+                <p>
+                    La propiedad <b>transition</b> en CSS es <b>una forma abreviada (shorthand) de definir las cuatro propiedades relacionadas con las transiciones: transition-property, transition-duration, transition-timing-function y transition-delay</b>. Esta propiedad abreviada permite definir todas las propiedades de transición en una sola declaración.
+                </p>
+
                 <h3>Sintaxis</h3>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">elemento</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">transition</span>:
+                        <span class="value-color">[property]</span>
+                        <span class="value-color">[duration]</span>
+                        <span class="value-color">[timing-function]</span>
+                        <span class="value-color">[delay]</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
             </article>
 
+            <hr />
+
+            <!-- Animaciones -->
             <article>
+                <h2>Animaciones en CSS</h2>
+
                 <p>
-                    Con la finalidad de proporcionar más dinamismo a las páginas, CSS provee ciertas propiedades para la 
-                    rotación, escalamiento, incorporación de perspectiva, sesgado y traslado de los elementos HTML. 
-                    Adicionalmente, a través de la propiedad transition y el uso de @keyframes es posible animar nuestros 
-                    contenidos vía el cambio de estilos, aplicados a un objeto de forma gradual y periódica. Otro componente 
-                    de CSS son los filtros empleados para las aplicaciones de efectos especiales, en particular a las imágenes.
+                    Las <b>animaciones</b> en CSS <b>permiten crear efectos visuales en una página web al cambiar gradualmente los valores de las propiedades CSS de un elemento a lo largo del tiempo</b>. Se pueden animar una ovarias propiedades a la vez, y la duración y el tipo de animación se pueden especificar con CSS.
                 </p>
-            </article>
 
-            <article>
+                <h3>Keyframes</h3>
+
                 <p>
-                    En esta unidad revisamos los conceptos avanzados de funciones en CSS, para facilitar la asignación 
-                    de valores a las propiedades. Hasta el momento se han definido un conjunto limitado de ellas, pero 
-                    actualmente están soportadas en la mayoría de los navegadores. El otro aspecto avanzado de CSS 
-                    son los grids que ayudan al posicionamiento de los elementos HTML en nuestros sitios web.
+                    Las animaciones se definen utilizando la regla <b>@keyframes seguida del nombre de la
+                    animación</b>. Luego, entre llaves, se especifican los valores que tendrán las propiedades que se quieren animar en los distintos puntos de la animación.
                 </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="function-color">@keyframes</span>
+                        <span class="property-color">nombreAnimacion</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="comment-color">/* Animaciones */</span>
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <p>
+                    En el keyframe <b>se suele utilizar el porcentaje</b> para indicar los <b>distintos efectos que sucederán durante el 100% (total)</b> de la animación.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="function-color">@keyframes</span>
+                        <span class="property-color">nombreAnimacion</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="">0%</span>
+                        <span class="field-color">&#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="property-color">transform</span>:
+                        <span class="tag-color">translateX</span><span class="field-color">(<span class="value-color">0</span>)</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="">50%</span>
+                        <span class="field-color">&#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="property-color">transform</span>:
+                        <span class="tag-color">translateX</span><span class="field-color">(<span class="value-color">100%</span>)</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="">100%</span>
+                        <span class="field-color">&#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="property-color">transform</span>:
+                        <span class="tag-color">translateX</span><span class="field-color">(<span class="value-color">0%</span>)</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-ejemplo">
+                    <div class="elemento-transform"></div>
+                </div>
+
+                <p>
+                    A parte de definir a través de los porcentajes exactamente los tiempos en lo que queremos que se realice los cambios, podemos simplemente decir que la animación irá <b>desde el valor de una propiedad hasta otro valor de la misma propiedad</b>:
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="function-color">@keyframes</span>
+                        <span class="property-color">nombreAnimacion</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="">from</span>
+                        <span class="field-color">&#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="property-color">transform</span>:
+                        <span class="tag-color">translateX</span><span class="field-color">(<span class="value-color">0</span>)</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="">to</span>
+                        <span class="field-color">&#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="property-color">transform</span>:
+                        <span class="tag-color">translateX</span><span class="field-color">(<span class="value-color">100%</span>)</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
             </article>
 
+            <hr />
+
+            <!-- Propiedades -->
             <article>
-                <h3>Objetivos de Aprendizaje</h3>
-            </article>
+                <h2>Propiedades en las animaciones</h2>
 
-            <article>
-                <ol>
-                    <li>
-                        Aplicar las propiedades de transformación CSS para proporcionar movimiento y cambio de aspecto a los 
-                        elementos HTML.
-                    </li>
-                    <li>
-                        Usar las reglas de CSS para animar los elementos HTML.
-                    </li>
-                    <li>
-                        Usar las funciones de CSS en la especificación de las propiedades para facilitar el proceso de aplicación 
-                        de formato a los elementos HTML.
-                    </li>
-                    <li>
-                        Describir el concepto de grid en el contexto del desarrollo de contenido HTML/CSS.
-                    </li>
-                </ol>
-            </article>
-        </section>
+                <p>
+                    Ahora que yavimos cómocrearlas, debemos colocarlas en un elemento de nuestro HTML. Para esto, existen varias propiedades que se pueden aplicar. A continuación vamos a ver una por una.
+                </p>
 
-        <hr>
-
-        <section>
-
-            <article>
-                <h2>Propiedades Transform</h2>
-            </article>
-
-            <article>
-                <h3>Rotate</h3>
-
+                <!-- Animation -->
                 <div>
+                    <h3>Animation</h3>
+
                     <p>
-                        Las transformaciones son efectos CSS3 que permiten modificar la forma, tamaño y posición de un elemento.
+                        La propiedad <b>animation</b> es un shorthand que nos permite definir varias propiedades de una animación en unamismalínea de código. Es importante recordar que <b>la única propiedad que es obligatoria es la propiedad name</b>. El resto, pueden colocarse o no, en el siguiente orden:
                     </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation</span>:
+                            <span class="field-color">nombreAnimacion</span>
+                            <span class="tag-color">duration</span>
+                            <span class="tag-color">timing-function</span>
+                            <span class="tag-color">delay</span>
+                            <span class="tag-color">iteration-count</span>
+                            <span class="tag-color">direction</span>
+                            <span class="tag-color">fill-mode</span>
+                            <span class="tag-color">play-state</span>;
+                        </code>
+                    </div>
                 </div>
 
-                <h4>Sintaxis</h4>
-
+                <!-- Animation name -->
                 <div>
-                    <p>
-                        Para realizar una transformación debemos agregar el atributo transform en el CSS correspondiente al 
-                        elemento que se desea transformar, seguido del método de transformación que usaremos.
-                    </p>
+                    <h3>Animation-name</h3>
 
                     <p>
-                        En este ejemplo comenzaremos con rotate. Este método permite rotar un elemento, podemos girarlo según 
-                        los ejes que se indiquen en los paréntesis, seguido de la palabra “deg”.
+                        La propiedad <b>animation-name</b> nos permite <b>definir el nombre de la propiedad que queremos aplicar</b> a un elemento. Es la única propiedad obligatoria a la hora de colocar una animación a unelemento.
                     </p>
 
-                    <figure>
-                        <img src="./img/rotateSintaxis.png" alt="rotate sintaxis" />
-                    </figure>
-
-                    <p>
-                        Para obtener una rotación en contra de las agujas del reloj utilizaremos valores negativos dentro 
-                        del paréntesis.
-                    </p>
-
-                    <p>
-                        Las rotaciones que realizamos recientemente son en 2D, CSS3 también nos permite hacer rotaciones 3D. 
-                        Para esto debemos comprender el concepto de eje/rotación (x/ y/ z).
-                    </p>
-
-                    <figure>
-                        <img src="./img/rotateEjemplo.png" alt="rotate ejemplo" />
-                    </figure>
-
-                    <p>
-                        Un Cubo tiene estas propiedades y pueden rotar en esos tres sentidos. Para realizar una rotación en 3D 
-                        debemos añadir la letra X, Y o Z al final de la palabra rotate. Este indica el eje de rotación del elemento.
-                    </p>
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation-name</span>:
+                            <span class="value-color">nombreAnimacion</span>;
+                        </code>
+                    </div>
                 </div>
 
+                <!-- Animation-duration -->
                 <div>
-                    <a href="../17. Interacciones/html/rotate.html">Ir a ejemplo: "Rotate"</a>
+                    <h3>Animation-duration</h3>
+
+                    <p>
+                        La propiedad <b>animation-duration</b> nos permite <b>definir la duración de la animación</b>, especificada en segundos(s) o milisegundos(ms).
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation-duration</span>:
+                            <span class="value-color">tiempo</span>;
+                        </code>
+
+                        <br />
+
+                        <code>
+                            <span class="comment-color">/* Ej: 2s, 9ms, etc. */</span>
+                        </code>
+                    </div>
                 </div>
 
-            </article>
-
-            <article>
-                <h3>Scale</h3>
-
+                <!-- Timing-function -->
                 <div>
+                    <h3>Animatimation-timing-function</h3>
+
                     <p>
-                        Este es otro elemento de la propiedad transform que permite modificar el tamaño de un elemento HTML 
-                        según los cambios que se realizan en sus dimensiones.
+                        La propiedad <b>animation-timing-function</b> nos permite definir la <b>curva de velocidad de la animación</b>. Puede ser <b>ease (predeterminada), linear, ease-in,ease-out o ease-in-out</b> (valores que ya vimos con la propiedad transition-timing-function).
                     </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation-timing-function</span>:
+                            <span class="value-color">curvaDeVelocidad</span>;
+                        </code>
+                    </div>
                 </div>
 
-                <h4>Sintaxis</h4>
-
+                <!-- delay -->
                 <div>
+                    <h3>Animation-delay</h3>
+
                     <p>
-                        Para asignar este elemento debemos asignar la propiedad transform en el bloque correspondiente al elemento 
-                        a modificar y después de los dos puntos escribimos scale y dentro del paréntesis definimos dos valores 
-                        numéricos separados por una coma el primer valor indicará el numero de veces en el que se aumentará el 
-                        ancho del elemento y el segundo indica el aumento en su altura, el tamaño que se obtiene es multiplicar 
-                        el ancho x altura del elemento original.
+                        La propiedad <b>animation-delay</b> nos permite <b>especificar el tiempo que debe esperar una animación antes de que comience</b>, especificada en segundos(s) o milisegundos(ms).
                     </p>
 
-                    <figure>
-                        <img src="./img/sintaxisScale.png" alt="sintaxis scale" />
-                    </figure>
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation-delay</span>:
+                            <span class="value-color">tiempo</span>;
+                        </code>
+                    </div>
                 </div>
 
-                <h4>Scale: Una dimensión</h4>
-
+                <!-- iteration-count -->
                 <div>
+                    <h3>Animation-iteration-count</h3>
+
                     <p>
-                        Si no queremos modificar el tamaño de alguna de las dimensiones utilizamos el numero “1”.
+                        La propiedad <b>animation-iteration-count</b> permite <b>indicar el número de veces que se debe repetir una animación</b>. Puede ser un número determinado de veces, <b>infinite</b>, para repetir la animación infinitamente, o <b>alternate</b>, para repetir la animación de ida y vuelta.
                     </p>
 
-                    <figure>
-                        <img src="./img/unaDimensionScale.png" alt="Scale una dimensión" />
-                    </figure>
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation-iteration-count</span>:
+                            <span class="value-color">numeroVeces</span>;
+                        </code>
+                    </div>
                 </div>
 
-                <h4>Reducir tamaño</h4>
-
+                <!-- Direction -->
                 <div>
+                    <h3>Animation-direction</h3>
+
                     <p>
-                        Para reducir el tamaño de una dimensión debemos elegir un tamaño entre 0 y 1, con el fin que la 
-                        multiplicación arroje un valor menor al original
+                        La propiedad <b>animation-direction determina la dirección en la que debe reproducirse la animación</b>. Su valor puede ser <b>normal (predeterminado), reverse (del final al principio), alternate (de principio a fin y viceversa) o alternate-reverse (de fin a principio y viceversa)</b>.
                     </p>
 
-                    <figure>
-                        <img src="./img/reducirTamañoScale.png" alt="reducir tamaño" />
-                    </figure>
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation-direction</span>:
+                            <span class="value-color">direccion</span>;
+                        </code>
+                    </div>
                 </div>
 
-                <h4>Combinado</h4>
-
+                <!-- fill-mode -->
                 <div>
+                    <h3>Animation-fill-mode</h3>
+
                     <p>
-                        La ventaja de este método es que nos sirve para formar cada dimensión de manera individual. Como 
-                        ejemplo final vamos a reducir el ancho del elemento y vamos a aumentar la altura
+                        La propiedad <b>animation-fill-mode</b> permite <b>especificar cómo deben ser los valores de las propiedades antes y después de la animación</b>. Estos valores pueden ser:
                     </p>
 
-                    <figure>
-                        <img src="./img/combinadoScale.png" alt="combinado scale" />
-                    </figure>
+                    <div class="lista">
+                        <ul>
+                            <li>
+                                <b>none</b>: el elemento mantiene su estilo original antes y después de la animación.
+                            </li>
+                            <li>
+                                <b>fowards</b>:  el elemento mantiene el último estilo de la animación después de que se complete.
+                            </li>
+                            <li>
+                                <b>backwards</b>: el elemento toma el primer estilo de la animación antes de que comience.
+                            </li>
+                            <li>
+                                <b>both</b>: el elemento aplica tanto forwards como backwards.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation-fill-mode</span>:
+                            <span class="value-color">estilo</span>;
+                        </code>
+                    </div>
                 </div>
 
+                <!-- Play State -->
                 <div>
-                    <a href="../17. Interacciones/html/scale.html">Ir a ejemplo: "Scale"</a>
-                </div>
-            </article>
-
-            <article>
-                <h3>Perspective</h3>
-
-                <div>
-                    <p>
-                        Esta propiedad nos ayuda a mejorar la visualización 3D, tiene que estar establecida antes de la 
-                        propiedad que le da forma a 3D (rotate).
-                    </p>
+                    <h3>Animation-play-state</h3>
 
                     <p>
-                        Esta propiedad define la perspectiva de un elemento HTML ubicándolo en un espacio tridimensional. 
-                        Comúnmente se conoce como la distancia que hay de un elemento y la pantalla donde se renderiza la página. 
-                        En la Gráfica, perspective representa la distancia entre la persona enfrente de su computador y un elemento 
-                        determinado, se recomienda usar esta propiedad para que las transformaciones 3d cobren el efecto de espacio 
-                        adecuado.
+                        La propiedad <b>animation-play-state</b> permite <b>pausar y reanudar una animación en CSS sin tener que detenerla y volver a iniciarla</b>. Sus valores pueden ser <b>running o paused</b>.  Esta propiedad normalmente se usa de manera dinámica, pudiendo alterar su valor para parar y reanudar una animación desde Javascript.
                     </p>
 
-                    <p>
-                        Existen dos formas distintas de definir perspectiva en CCS3. Podemos asignar la perspectiva directamente 
-                        al elemento con la propiedad transform y su método perspective () o incuir el elemento al contenedor padre 
-                        al que se le define la perspectiva con la propiedad perspective 
-                    </p>
-                </div>
-
-                <figure>
-                    <img src="./img/perspective.png" alt="Perspective" />
-                </figure>
-
-                <div>
-                    <p>
-                        Las diferencias entre estas formas de definir la perspectiva se evidencian al tener más de un elemento 3d 
-                        en nuestra página.
-                    </p>
-                </div>
-
-                <figure>
-                    <img src="./img/perspectivaElementos.png" alt="perspectiva elementos" />
-                </figure>
-
-                <div>
-                    <p>
-                        Los elementos en rojo tienen perspectiva individual y los azules la perspectiva fue definida en el elemento 
-                        padre. En estos casos se recomienda el segundo método ya que se genera una perspectiva uniforme para todos 
-                        los elementos.
-                    </p>
-                </div>
-
-                <h4>Perspectiva Individual</h4>
-
-                <figure>
-                    <img src="./img/perspectiveIndividual.png" alt="perspective individual" />
-                </figure>
-
-                <div>
-                    <p>
-                        La imagen representa la definición de la perspectiva individual para el rectángulo. Podemos ver que luego 
-                        de transform se indica la palabra perspective como método y entre los () se determina la distancia que 
-                        tendrá la perspectiva. Luego están indicadas dos transformaciones de tipo rotate en el eje X y Y para darle 
-                        un aspecto 3D al elemento. Si reducimos la distancia del elemento indicamos que nos acercamos y por ende se 
-                        verá más grande.
-                    </p>
-                </div>
-
-                <h4>Perspectiva Padre</h4>
-
-                <figure>
-                    <img src="./img/perspectivePadre.png" alt="perspective padre" />
-                </figure>
-
-                <div>
-                    <p>
-                        Tenemos una clase llamada contenedor que define las propiedades del elemento padre, podemos observar que 
-                        la perspectiva se define como una propiedad donde la distancia se indica luego de los dos puntos (:).
-                    </p>
-
-                    <p>
-                        En el id #elemento solo deben definirse las transformaciones “rotate”.
-                    </p>
-
-                    <p>
-                        Para definir una perspectiva en CSS3 se debe Incluir en la propiedad transform el método perspective 
-                        ( ) del elemento 3D.
-                    </p>
-
-                    <p>
-                        CSS3 nos permite manipular el origen o fondo de la perspectiva, es decir, desde la posición en la que 
-                        el usuario esta viendo el objeto, por defecto el origen de la perspectiva es el centro del elemento.
-                    </p>
-
-                    <p>
-                        Para modificar el origen de la perspectiva usaremos la propiedad perspective-origin, esta propiedad tiene 
-                        2 parámetros un valor para el eje X y uno para el Y. Para el eje X podemos usar la palabra left para ubicar 
-                        el punto de origen a la izquierda del elemento, center para ubicarlo en el centro, rigth para ubicarlo a la 
-                        derecha o también podemos especificar el valor en pixeles, milímetros o porcentajes. En el eje Y podemos 
-                        usar la palabra top para ubicar el origen de la parte superior del elemento, center para ubicarlo en el
-                        centro, bottom para ubicarlo en la parte inferior o indicar el valor mediante unidades de medida.
-                    </p>
-
-                    <p>
-                        Para entender el origen de la perspectiva construiremos un cubo, y nos centraremos a como cambia la 
-                        perspectiva del objeto al introducir perspective-origin:
-                    </p>
-                </div>
-
-                <h4>HTML</h4>
-
-                <figure>
-                    <img src="./img/perspectiveHtml.png" alt="construcción html" />
-                </figure>
-
-                <h4>CSS</h4>
-
-                <figure>
-                    <img src="./img/perspective css.png" alt="perspective css" />
-                </figure>
-
-                <div>
-                    <a href="">Ir a ejemplo: "Perspective"</a>
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation-play-state</span>:
+                            <span class="value-color">state</span>;
+                        </code>
+                    </div>
                 </div>
             </article>
-
-            <article>
-                <h3>Translate</h3>
-            </article>
-            
 
         </section>
     </main>
