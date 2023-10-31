@@ -24,14 +24,25 @@
 
                 <div>
                     <p>
-                        Cuando estamos usando variables o estructuras de control estamos guardando “datos” y estos datos
-                        pueden tener diferentes “tipos” por eso la palabra compuesta es “tipo de datos”. Para visualizar
-                        el tipo de dato que está guardando una variable podemos usar el method <b>typeOf</b> el cual
-                        nos retorna el tipo de dato de una variable seleccionada.
+                        Cuando estamos usando variables o estructuras de control estamos <b>guardando “datos”</b> y estos datos pueden tener <b>diferentes “tipos”</b> por eso la palabra compuesta es <b>“tipo de datos”</b>. En JavaScript, los tipos de datos se utilizan para <b>representar diferentes tipos de valores</b>, como números, texto, booleanos, objetos y más.
                     </p>
 
+                    <br />
+
                     <p>
-                        Los tipos de datos que podemos encontrar en nuestro código son los siguientes:
+                        Cada tipo de dato tiene sus <b>propias características y comportamientos únicos</b>, y es importante conocerlos para poder escribir código JavaScript efectivo y sin errores. 
+                    </p>
+
+                    <br />
+
+                    <p>
+                        En JavaScript, los tipos de datos se dividen en <b>dos categorías principales: tipos de datos primitivos y tipos de datos compuestos</b>. Los <b>tipos de datos primitivos</b> incluyen valores simples como <b>números, cadenas de texto y booleanos</b> y <b>no tienen métodos ni propiedades</b>, mientras que los tipos de <b>datos compuestos incluyen objetos, arrays y funciones y si los tienen</b>. 
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Como mencionamos antes, los <b>tipos de datos en Javascript son dinámicos</b>, lo que significa que el tipo de una variable <b>puede cambiar durante la ejecución del programa</b>. Por ejemplo, una variable que inicialmente contiene un número puede cambiar su valor a una cadena de texto en cualquier momento del programa.
                     </p>
                 </div>
 
@@ -39,225 +50,429 @@
 
             <hr />
 
-            <!-- Dato Int -->
+            <!-- Tipos de datos -->
             <article>
-                <h3>Int</h3>
 
-                <p>
-                    Los datos de tipo entero son los datos numéricos que no poseen decimales, estos datos pueden ser tanto 
-                    positivos como negativos. Por ejemplo: 3, 15, -20, etc.
-                </p>
+                <h2>Tipos de datos</h2>
 
-                <h4>Ejemplo</h4>
-
-                <div class="fondo-color">
-                    <p><code>let numeroCinco = 5;</code></p>
-
+                <!-- Int -->
+                <div class="cont-int">
+                    <h3>Int</h3>
+    
+                    <p>
+                        Los datos de tipo entero son los datos numéricos que no poseen decimales, estos datos pueden ser tanto positivos como negativos. Por ejemplo: 3, 15, -20, etc. A continuación, realizaremos un ejemplo donde vamos a declarar una variable con nombre <b>'numeroCinco'</b> y le asignaremos el valor de <b>'5'</b>. Luego, en nuestra hoja de JS usaremos la palabra reservada <b>typeof</b> para que nos retorne el <b>tipo de dato</b> de esta variable.
+                    </p>
+    
+                    <h4>Ejemplo</h4>
+                        
                     <!-- Resultado -->
+                    <div class="cont-ejemplo">
+
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="tag-color">let</span>
+                                <span class="property-color">numeroCinco</span>
+                                =
+                                <span class="number-color">5</span>;
+                            </code>
+
+                            <br>
+
+                            <code>
+                                <span class="property-color">contenedorResultado</span><span class="function-color">[<span class="number-color">0</span>]</span>.<span class="property-color">innerHTML</span>
+                                +=
+                                <span class="value-color">`Variable 'numeroCinco' con valor '
+                                  <span class="function-color">${
+                                    <span class="property-color">numeroCinco</span>
+                                  }</span>
+                                ' es de tipo
+                                  <span class="function-color">${
+                                    <span class="property-color">
+                                        <span class="tag-color">typeof </span>
+                                    numeroCinco</span>
+                                  }</span>.`
+                                </span>;
+                            </code>
+                        </div>
+
+                        <!-- Contenedor JS -->
+                        <div class="cont-resultado"></div>
+                    </div>
+                </div>
+
+                <!-- Float -->
+                <div>
+                    <h3>Float</h3>
+        
+                    <p>
+                        Los datos de tipo float son los datos numéricos con decimales. Cabe destacar, que los decimales son separados por un punto “.”, ya que si usamos una coma no lo tomará como decimal. Dentro de este tipo entran todos los números que contengan un “.” en su estructura.
+                    </p>
+        
+                    <h4>Ejemplo</h4>
+        
+                    <div class="cont-ejemplo">
+
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="tag-color">let</span>
+                                <span class="property-color">numeroFloat</span>
+                                =
+                                <span class="number-color">0.5</span>;
+                            </code>
+
+                            <br>
+
+                            <code>
+                                <span class="property-color">contenedorResultado</span><span class="function-color">[<span class="number-color">1</span>]</span>.<span class="property-color">innerHTML</span>
+                                +=
+                                <span class="value-color">`Variable 'numeroFloat' con valor '
+                                  <span class="function-color">${
+                                    <span class="property-color">numeroFloat</span>
+                                  }</span>
+                                ' es de tipo
+                                  <span class="function-color">${
+                                    <span class="property-color">
+                                        <span class="tag-color">typeof </span>
+                                    numeroFloat</span>
+                                  }</span>.`
+                                </span>;
+                            </code>
+                        </div>
+
+                        <!-- Contenedor JS -->
+                        <div class="cont-resultado"></div>
+                    </div>
+                </div>
+
+                <!-- String -->
+                <div>
+                    <h3>String</h3>
+        
+                    <p>
+                        Los tipos de datos <b>String</b> son <b>cadenas de caracteres para representar texto, nombres, direcciones de correos electrónicos, direcciones web y otros tipos de información basada en caracteres</b>. Los strings van <b>encerrados entre comillas</b> (“”), pueden ser <b>dobles o simples</b> y si comenzamos un string con comillas dobles debemos cerrar el mismo con las mismas comillas dobles. Debemos saber que si pasamos un valor numérico a una estructura string el código a este lo leerá como un carácter y no como un número.
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Además existen los <b>template literals</b> que permiten crear de manera sencilla y legible strings que necesitan <b>incluir variable u otras expresiones dentro del string que se va a crear en el DOM</b>. Se definen utilizando <b>comillas invertidas</b> (``) en lugar de comillas simples o dobles, y permiten agregar variables o expresiones encerrándolas entre llaves y precediéndolas con el signo de dólar.
+                    </p>
+        
+                    <h4>Ejemplo</h4>
+        
+                    <div class="cont-ejemplo">
+
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="tag-color">let</span>
+                                <span class="property-color">texto</span>
+                                =
+                                <span class="value-color">'Soy un texto con comillas simples'</span>;
+                            </code>
+
+                            <br>
+
+                            <code>
+                                <span class="tag-color">let</span>
+                                <span class="property-color">otroTexto</span>
+                                =
+                                <span class="value-color">"Soy un texto con comillas dobles"</span>;
+                            </code>
+
+                            <br /> <br />
+
+                            <code>
+                                <span class="property-color">contenedorResultado</span><span class="function-color">[<span class="number-color">2</span>]</span>.<span class="property-color">innerHTML</span>
+                                +=
+                                <span class="value-color">`Variable 'texto' con valor '
+                                  <span class="function-color">${
+                                    <span class="property-color">texto</span>
+                                  }</span>
+                                ' es de tipo
+                                  <span class="function-color">${
+                                    <span class="property-color">
+                                        <span class="tag-color">typeof </span>
+                                    numeroFloat</span>
+                                  }</span>.`
+                                </span>;
+                            </code>
+                        </div>
+
+                        <!-- Contenedor JS -->
+                        <div class="cont-resultado"></div>
+                    </div>
+                </div>
+
+                <!-- Array -->
+                <div>
+                    <h3>Array</h3>
+
                     <div>
-                        <code class="cont-resultado"></code>
+                        <p>
+                            Los tipos de datos de <b>listas o arreglos</b> (array en ingles) son <b>una colección de datos</b>, ya que, dentro de estos se pueden almacenar diferentes tipos de datos. Los datos que se encuentran en los arrays deben estar <b>encerrados entre corchetes</b> ('[]') y cada uno de los valores deben estar separados por comas.
+                        </p>
+                    </div>
+    
+                    <h4>Ejemplo</h4>
+    
+                    <div class="cont-ejemplo">
+
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="tag-color">let</span>
+                                <span class="property-color">colores</span>
+                                =
+                                <span class="function-color">
+                                    [<span class="value-color">'blanco', 'negro', 'azul'</span>]
+                                </span>;
+                                
+                            </code>
+
+                            <br /> <br />
+
+                            <code>
+                                <span class="property-color">contenedorResultado</span><span class="function-color">[<span class="number-color">3</span>]</span>.<span class="property-color">innerHTML</span>
+                                +=
+                                <span class="value-color">`Variable 'colores' es de tipo '
+                                  <span class="function-color">${
+                                    <span class="tag-color">typeof</span>
+                                    <span class="property-color">colores</span>
+                                  }</span>.`
+                                </span>;
+                            </code>
+                        </div>
+
+                        <!-- Contenedor JS -->
+                        <div class="cont-resultado"></div>
                     </div>
                 </div>
 
+                <!-- Objeto -->
+                <div>
+                    <h3>Objeto</h3>
 
-            </article>
-
-            <hr />
-
-            <!-- Dato Float -->
-            <article>
-                <h3>Float</h3>
-
-                <p>
-                    Los datos de tipo float son los datos numéricos con decimales, cabe destacar, que los decimales son 
-                    separados por un punto “.”, ya que si usamos una coma no lo tomará como decimal. Dentro de este tipo 
-                    entran todos los números que contengan un “.” En su estructura.
-                </p>
-
-                <h4>Ejemplo</h4>
-
-                <div class="fondo-color">
-                    <p><code>let numeroFloat = 0.5;</code></p>
-
-                    <!-- Resultado -->
                     <div>
-                        <code class="cont-resultado"></code>
+                        <p>
+                            Los tipos de dato objeto son otro tipo de <b>colección de datos y métodos</b>, pero estos almacenan los datos de manera diferente a los arrays. Tratan de representar una entidad o concepto del mundo real. Los objetos se construyen con <b>llaves</b> ('{}') y cada uno de sus valores están compuestos por una <b>clave</b> y un <b>valor</b>, los cuales están separados por una <b>coma</b> (','). Luego de definir una clave debemos colocar <b>dos puntos</b> (':') para declarar su <b>valor</b>.
+                        </p>
                     </div>
-                </div>
 
-            </article>
+                    <h4>Ejemplo</h4>
 
-            <hr />
+                    <div class="cont-ejemplo">
 
-            <!-- Dato String -->
-            <article>
-                <h3>String</h3>
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="tag-color">let</span>
+                                <span class="property-color">persona</span>
+                                =
+                                &#123
+                            </code>
 
-                <div>
-                    <p>
-                        Los tipos de datos Sring son cadenas de caracteres los cuales al declarar let o const seguido de un 
-                        “=” los strings van encerrados entre comillas (“”). Las comillas pueden ser dobles o simples y si comenzamos 
-                        un string con comillas dobles debemos cerrar el mismo con las mismas comillas dobles. Debemos saber que si 
-                        pasamos un valor numérico a una estructura string el código a este lo leerá como un carácter y no como un 
-                        número. Por ejemplo:
-                    </p>
+                            <br>
 
-                <h4>Ejemplo</h4>
+                            <code class="margin-20">
+                                <span class="property-color">altura</span>
+                                :
+                                <span class="value-color">'1.83'</span>,
+                            </code>
 
-                    <div class="fondo-color">
-                        <p><code>let tipoString = 'Soy una cadena de caracteres de tipo string';</code></p>
+                            <br />
 
-                        <!-- Resultado -->
-                        <div>
-                            <code class="cont-resultado"></code>
+                            <code class="margin-20">
+                                <span class="property-color">colorDeOjos</span>
+                                :
+                                <span class="value-color">'cafe'</span>,
+                            </code>
+
+                            <br />
+
+                            <code>
+                                &#125
+                            </code>
+
+                            <br /> <br />
+
+                            <code>
+                                <span class="property-color">contenedorResultado</span><span class="function-color">[<span class="number-color">4</span>]</span>.<span class="property-color">innerHTML</span>
+                                +=
+                                <span class="value-color">`Variable 'persona' es de tipo '
+                                  <span class="function-color">${
+                                    <span class="tag-color">typeof</span>
+                                    <span class="property-color">persona</span>
+                                  }</span>.`
+                                </span>;
+                            </code>
                         </div>
+
+                        <!-- Contenedor JS -->
+                        <div class="cont-resultado"></div>
                     </div>
                 </div>
-            </article>
 
-            <hr />
-
-            <!-- Dato Array -->
-            <article>
-                <h3>Array</h3>
-
+                <!-- Boolean -->
                 <div>
-                    <p>
-                        Los tipos de datos de listas o arreglos son llamados estructuras de control ya que dentro de estos 
-                        pueden almacenar varias variables de diferentes tipos de datos. Específicamente las listas son 
-                        declaradas como una variable y sus valores están encerrados entre [] corchetes. Debemos destacar que 
-                        si los valores son de tipo string deben estar encerrados entre comillas. Además, cada uno de los valores
-                        sean string o de otro tipo deben estar separados por comas.
-                    </p>
-                </div>
+                    <h3>Boolean</h3>
 
-                <h4>Ejemplo</h4>
+                    <div>
+                        <p>
+                            El tipo de dato <b>Boolean</b> recibe solo 2 valores: <b>True or False</b>. En el caso de recibir el tipo de dato de un boolean nos retornará si el valor es <b>true o false</b>.
+                        </p>
+                    </div>
 
-                <div class="fondo-color">
-                        <p><code>let colores = ["Rojo", "Blanco", "Negro"];</code></p>
+                    <h4>Ejemplo</h4>
 
-                        <!-- Resultado -->
-                        <div>
-                            <code class="cont-resultado"></code>
+                    <div class="cont-ejemplo">
+
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="tag-color">let</span>
+                                <span class="property-color">estaActivo</span>
+                                =
+                                <span class="tag-color">true</span>
+                            </code>
+
+                            <br /> <br />
+
+                            <code>
+                                <span class="property-color">contenedorResultado</span><span class="function-color">[<span class="number-color">5</span>]</span>.<span class="property-color">innerHTML</span>
+                                +=
+                                <span class="value-color">`Variable 'estaActivo' es de tipo '
+                                  <span class="function-color">${
+                                    <span class="tag-color">typeof</span>
+                                    <span class="property-color">estaActivo</span>
+                                  }</span>.`
+                                </span>;
+                            </code>
                         </div>
+
+                        <div class="cont-resultado"></div>
                     </div>
                 </div>
 
-            </article>
-
-            <hr />
-
-            <!-- Objeto -->
-            <article>
-                <h3>Objeto</h3>
-
+                <!-- Nan -->
                 <div>
-                    <p>
-                        Los tipos de dato diccionarios u objetos son otro tipo de estructuras de control, pero estos almacenan 
-                        los datos de manera diferente. Como ya hemos mencionado el diccionario cuando se declara estamos 
-                        creando un objeto el cual tiene diferentes características o tipos de datos, es decir, estamos 
-                        declarando una variable que dentro tiene una sub variable y esta tiene una lista con uno o más 
-                        valores.
-                    </p>
-                </div>
+                    <h3>NaN</h3>
 
-                <div>
-                    <p>
-                        Para ser más claro en el ejemplo, supongamos que declaramos un objeto con nombre “persona” y los 
-                        valores que le corresponden a persona son “altura” con valor: 160 y “colorDeOjos” con valor “café”.
-                        Como podemos notar persona tiene dentro dos variables con sus respectivos valores cada uno.
-                    </p>
-
-                    <div class="cont-code">
-                        <code>let objetoPersona = {"altura": 160, colorDeOjos: "café"};</code>
+                    <div>
+                        <p>
+                            Este tipo de dato representa que la variable indicada <b>no es de tipo número</b>. Generalmente la podemos encontrar como un <b>error en un debug en la consola</b>, ya que, estamos pudiendo mostrar una variable de tipo <b>numero</b> y le estamos pasando una variable de tipo <b>string</b>. Una práctica en donde podemos encontrar este caso es cuando utilizamos el méthod
+                            <b>Number constructor, parseFloat y parseInt</b>.
+                        </p>
                     </div>
 
-                    <p>
-                        La estructura de los objetos se declara entre {} llaves y por cada clave – valor que tenga debe estar 
-                        separado por coma. También debemos saber que los strings llevan las “” comillas.
-                    </p>
+                    <div class="cont-ejemplo">
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="tag-color">let</span>
+                                <span class="property-color">numeroString</span>
+                                =
+                                <span class="value-color">'numeroCinco'</span>
+                            </code>
 
-                    <p>
-                        Los objetos comienzan con claves las que les siguen “:” dos puntos para luego colocar el valor de 
-                        dicha clave.
-                    </p>
-                </div>
+                            <br />
 
-                <h4>Ejemplo</h4>
-
-                <div class="fondo-color">
-                        <p><code>let objetoPersona = {"altura": 160, colorDeOjos: "café"};</code></p>
-
-                        <!-- Resultado -->
-                        <div>
-                            <code class="cont-resultado"></code>
+                            <code>
+                                <span class="property-color">contenedorResultado</span><span class="function-color">[<span class="number-color">6</span>]</span>.<span class="property-color">innerHTML</span>
+                                +=
+                                <span class="value-color">`Pedimos por parámetro un número y pasamos un string, el resultado es: '
+                                  <span class="parametro-color">
+                                    ${
+                                    <span class="function-color">parseInt</span>
+                                        <span class="parametro-color">
+                                            (<span class="property-color">
+                                                numeroString
+                                            </span>)
+                                        </span>
+                                    }
+                                  </span>.`
+                                </span>;
+                            </code>
                         </div>
+
+                        <div class="cont-resultado"></div>
                     </div>
                 </div>
-            </article>
 
-            <hr />
-
-            <!-- Boolean -->
-            <article>
-                <h3>Boolean</h3>
-
+                <!-- Undefined -->
                 <div>
-                    <p>
-                        Otro tipo de dato que podemos utilizar es el Boolean el cual recibe solo 2 valores: True or False.
-                    </p>
+                    <h3>Undefined</h3>
 
                     <p>
-                        <b>Debemos saber que mientras estamos trabajando en nuestro código podemos utilizar en una misma línea muchos tipos de datos.</b>
+                        Es un tipo de dato primitivo que hace referencia a una variable que <b>ha sido declarada pero no ha sido asignada con un valor</b>. También será el valor por defecto al intentar acceder a una propiedad que no existe en un tipo de dato objeto.
                     </p>
-                </div>
 
-                <h4>Ejemplo</h4>
+                    <h4>Ejemplo</h4>
+        
+                    <div class="cont-ejemplo">
 
-                <div class="fondo-color">
-                        <p><code>let estaActivo = true;</code></p>
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="tag-color">let</span>
+                                <span class="property-color">noDefinido</span>;
+                            </code>
 
-                        <!-- Resultado -->
-                        <div>
-                            <code class="cont-resultado"></code>
+                            <br /> <br />
+
+                            <code>
+                                <span class="property-color">contUndefined</span>.<span class="property-color">innerHTML</span>
+                                +=
+                                <span class="value-color">`Valor de la variable 'noDefinido' es de tipo '
+                                  <span class="function-color">${
+                                    <span class="property-color">noDefinido</span>
+                                  }</span>'.`
+                                </span>;
+                            </code>
                         </div>
+
+                        <!-- Contenedor JS -->
+                        <div class="resultado-undefined"></div>
+                </div>
+
+                <!-- NULL -->
+                <div>
+                    <h3>Null</h3>
+
+                    <p>
+                        Es un tipo de dato que representa la <b>ausencia intencional de cualquier valor</b>. En otras palabras, si una <b>variable se establece en null</b>, significa que <b>no tiene valor ni referencia</b> a ningún objeto.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        A diferencia de "undefined", qué se utiliza para representar la ausencia de un valor o propiedad indefinida, <b>"null" se utiliza para representar una ausencia intencional y se asigna explícitamente a una variable</b>, como vemos en el ejemplo:
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="tag-color">let</span>
+                                <span class="property-color">valorNull</span>
+                                =
+                                <span class="parametro-color">null</span>;
+                            </code>
+
+                            <br> <br>
+
+                            <code>
+                                <code>
+                                    <span class="property-color">contNull</span>.<span class="property-color">innerHTML</span>
+                                    +=
+                                    <span class="value-color">`Valor de la variable 'valorNull' es de tipo '
+                                      <span class="function-color">${
+                                        <span class="property-color">valorNull</span>
+                                      }</span>'.`
+                                    </span>;
+                                </code>
+                            </code>
+
+                        </div>
+
+                        <div class="cont-valorNull"></div>
                     </div>
                 </div>
+
             </article>
-
-            <hr />
-
-            <!-- Nan -->
-            <article>
-                <h3>NaN</h3>
-
-                <div>
-                    <p>
-                        Este tipo de dato representa que la variable indicada <b>no es de tipo número</b>. Generalmente la podemos encontrar
-                        como un error en un debug en la consola, ya que, estamos pudiendo mostrar una variable de tipo <b>numero</b>
-                        y le estamos pasando una variable de tipo <b>string</b>.
-                    </p>
-
-                    <p>
-                        Una práctica en donde podemos encontrar este caso es cuando utilizamos el méthod
-                        <b>Number constructor, parseFloat y parseInt</b>.
-                    </p>
-                </div>
-            </article>
-
-            <h4>Ejemplo</h4>
-
-            <div class="fondo-color">
-                <div class="bloque-codigo">
-                    <code>let numeroString = 'numeroCinco';</code>
-                    <code>console.log(parseInt(numeroString));</code>
-                </div>
-
-                <!-- Resultado -->
-                <div>
-                    <code class="cont-resultado"></code>
-                </div>
-            </div>
         </div>
 
         </section>
