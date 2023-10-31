@@ -62,6 +62,8 @@ contenedorResultado[6].innerHTML += `Pedimos por parámetro un número y pasamos
 console.log(`%c#################### Dato NAN: `, "color: #71B1C1");
 console.log(`Pedimos por parámetro un número y pasamos un string, el resultado es: ${parseInt(numeroString)}.`);
 
+console.log("");
+
 // UNDEFINED
 let noDefinido;
 
@@ -78,57 +80,27 @@ resultadoNull.innerHTML += `Valor de la variable <b>'valorNull'</b> es: <b>'${va
 console.log(`%c#################### Dato NULL: `, "color: #71B1C1");
 console.log(`Valor de la variable 'valorNull' es: '${valorNull}'.`);
 
-// DATOS COMPUESTOS
-let persona;
-
-persona = {
-    nombre: "Luis",
-    apellido: "Torres",
-    telefono: ["12345", "67891"],
-    direccion: {
-        estado: "Principal",
-        ciudad: "Dorado",
-        calle: 7,
-        casa: 5,
-    }
-}
-
-persona.edad = 20;
-let clavesObjeto = Object.keys(persona);
-
-console.log(`%c#################### Datos Compuestos: `, "color: #71B1C1");
-console.log(`VARIABLE CON DATOS COMPUESTOS: `);
-console.log(persona);
-
 console.log("");
-
-console.log(`Dato del primer elemento de teléfonos: '${persona.telefono[0]}'.`);
-contenedorResultado[7].innerHTML += `Dato del primer elemento de teléfonos: '${persona.telefono[0]}'.`;
-
-console.log(`Elementos en el arreglo: ${persona.telefono.length}.`);
-contenedorResultado[8].innerHTML += `Elementos en el arreglo: ${persona.telefono.length}.`;
-
-console.log("");
-
-console.log(`Accediendo al valor de estado de la propiedad de tipo objeto llamada 'dirección': ${persona.direccion.estado}.`);
-contenedorResultado[9].innerHTML += `Accediendo al valor de estado de la propiedad de tipo objeto llamada 'dirección': ${persona.direccion.estado}.`;
-
-console.log(`Ahora la variable persona tiene una propiedad ${clavesObjeto[4]}. El valor de esa propiedad es: '${persona.edad}'.`);
-contenedorResultado[10].innerHTML += `Ahora la variable persona tiene una propiedad '${clavesObjeto[4]}'. El valor de esa propiedad es: '${persona.edad}'.`;
-
-console.log('');
 
 // CAMBIAR TIPO DE DATO CON PARSEINT()
 console.log(`%c#################### CAMBIAR TIPO DE DATO: `, "color: #71B1C1");
 
-let numeroTipoLetra = '25';
+let numeroLetra = '25';
 
-console.log(`Variable 'numeroTipoLetra' tiene valor: ${numeroTipoLetra} y es de tipo ${typeof numeroTipoLetra}.`);
-contenedorResultado[11].innerHTML += `${numeroTipoLetra} es tipo '${typeof(numeroTipoLetra)}'.`;
+// Convertimos 25 string por 25 int
+let numeroConvertido = parseInt(numeroLetra);
+let usandoNumber = Number(numeroLetra);
 
-let numeroTipoNumero = parseInt(numeroTipoLetra);
-console.log(`Variable 'numeroTipoLetra' fue ingresada al method 'parseInt()'. Ahora, ${numeroTipoNumero} es de tipo '${typeof numeroTipoNumero}'.`);
-contenedorResultado[12].innerHTML += `Variable 'numeroTipoLetra' fue ingresada al method 'parseInt()'. Ahora, ${numeroTipoNumero} es de tipo '${typeof numeroTipoNumero}'.`;
+contenedorResultado[7].innerHTML += `La variable <b>'numeroLetra'</b> con valor '${numeroLetra}' es tipo <b>'${typeof(numeroLetra)}</b>'.`;
+console.log(`La variable 'numeroLetra' con valor: '${numeroLetra}' es de tipo '${typeof numeroLetra}'.`);
+
+contenedorResultado[8].innerHTML += `La variable <b>'numeroLetra'</b> fue ingresada al method <b>'parseInt()'</b>. Ahora, <b>'${numeroConvertido}'</b> es de tipo <b>'${typeof numeroConvertido}'</b>.`;
+
+console.log(`La variable 'numeroLetra' fue ingresada al method 'parseInt()'. Ahora, '${numeroConvertido}' es de tipo '${typeof numeroConvertido}'.`);
+
+contenedorResultado[9].innerHTML += `La variable <b>'numeroLetra'</b> fue ingresada al method <b>'Number()'</b>. Ahora, <b>'${usandoNumber}'</b> es de tipo <b>'${typeof usandoNumber}'</b>.`;
+
+console.log(`La variable 'numeroLetra' fue ingresada al method 'Number()'. Ahora, '${usandoNumber}' es de tipo '${typeof usandoNumber}'.`);
 
 console.log('');
 

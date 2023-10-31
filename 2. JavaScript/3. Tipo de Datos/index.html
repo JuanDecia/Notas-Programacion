@@ -455,15 +455,13 @@
                             <br> <br>
 
                             <code>
-                                <code>
-                                    <span class="property-color">contNull</span>.<span class="property-color">innerHTML</span>
-                                    +=
-                                    <span class="value-color">`Valor de la variable 'valorNull' es de tipo '
-                                      <span class="function-color">${
-                                        <span class="property-color">valorNull</span>
-                                      }</span>'.`
-                                    </span>;
-                                </code>
+                                <span class="property-color">contNull</span>.<span class="property-color">innerHTML</span>
+                                +=
+                                <span class="value-color">`Valor de la variable 'valorNull' es de tipo '
+                                    <span class="function-color">${
+                                    <span class="property-color">valorNull</span>
+                                    }</span>'.`
+                                </span>;
                             </code>
 
                         </div>
@@ -473,139 +471,108 @@
                 </div>
 
             </article>
-        </div>
 
-        </section>
-
-        <hr>
-
-        <!-- Datos Compuestos -->
-        <section>
-            <h2>Datos Compuestos</h2>
-
-            <div>
-                <p>
-                    Vamos a elaborar el ejemplo con tipo de datos compuestos redefiniendo la variable “persona”, vamos
-                    a hacerlo definiendo una variable de tipo objeto en donde una de sus propiedades
-                    se llamará "telefonos" y su valor es de tipo <b>array</b> la cual contiene sus números de 
-                    teléfonos representados como strings.
-                </p>
-            </div>
-
-            <figure>
-                <img src="./img/datoCompuesto.png" alt="dato compuesto" />
-            </figure>
-
-            <div>
-                <p>
-                    Si consultamos las propiedades de “persona” utilizando “persona.telefonos[0]” nos retornara
-                    el primer teléfono en el arreglo “123123”. También, podemos imprimir “persona.telefonos.length”, 
-                    es decir, el <b>tamaño</b> del arreglo de “teléfonos” esto nos retornará la cantidad de elementos 
-                    que hay dentro del arreglo o es lo mismo decir la longitud del arreglo: “2”.
-                </p>
-
-                <p>
-                    <code class="cont-resultado fondo-color"></code>
-                </p>
-            </div>
-
-            <div class="fondo-color bloque-codigo">
-                <code>console.log(personas.telefonos.length);</code>
-                <code class="cont-resultado"></code>
-            </div>
-
-            <p>
-                Podemos anidar objetos más complejos dentro de otros objetos:
-            </p>
-
-            <figure>
-                <img src="./img/datoCompuestoDos.png" alt="dato compuesto 2" />
-            </figure>
-
-            <div>
-                <p>
-                    En este caso tenemos un atributo de “dirección” que, a su vez es otro objeto. Ahora tenemos un objeto 
-                    dentro de otro objeto que, adicionalmente también podría usar estructuras mas complejas como arreglos.
-                    La manera de acceder a las propiedades es similar a lo anteriormente realizado, para ilustrar el 
-                    proceso podemos imprimir:
-                </p>
-                
-                <p>Esto nos retornará <b>“principal”</b>.</p>
-            </div>
-
-            <div class="bloque-codigo fondo-color">
-                <code>console.log(persona.direccion.estado);</code>
-                <code class="cont-resultado"></code>
-            </div>
-
-            <div>
-                <p>
-                    Cuando trabajamos con objetos si llamamos a una propiedad que no existe (Ejemplo: persona.edad), 
-                    esto nos retornará “undefined”, es decir, que esa propiedad <b>no está declarada</b>. 
-                    Cuando nos retorna un valor <b>undefined</b>, se toma como valor el boolean <b>“false”</b>.
-                    Podemos asignar de forma dinámica sin alterar la estructura a “persona.edad” de la 
-                    siguiente manera:
-                </p>
-            </div>
-
-            <div class="fondo-color bloque-codigo">
-                <code>persona.edad = 20;</code>
-                <code class="cont-resultado"></code>
-            </div>
-
-            <div>
-                <p>
-                    Le decimos al objeto “persona" que tiene una <b>propiedad</b> con nombre <b>edad</b>
-                    y a su vez le asignamos el valor “20”. Haciendo un repaso sobre los <b>scopes</b>
-                    de las variables, debemos prestar atención que: si tenemos esta variable declarada (línea 16) pero 
-                    hacemos una impresión en una línea anterior a la declaración (ej: 15) nos seguirá 
-                    retornando “undefined”:
-                </p>
-            </div>
-
-            <figure>
-                <img src="./img/undefined.png" alt="undefined" />
-            </figure>
-        </section>
-
-        <hr />
-
-        <!-- Cambiar tipo de dato -->
-        <section>
+            <hr />
+            
+            <!-- Cambiar tipo de dato -->
             <article>
                 <h2>Cambiar el tipo de dato</h2>
-            </article>
 
-            <article>
                 <div>
                     <p>
-                        En algunas ocasiones deberemos pasar algún valor de un dato a otro, generalmente esto ocurre cuando 
-                        tenemos un valor numérico en str “25” y lo queremos pasar como valor “int”. Esto puede lograrse con la 
-                        función parseInt(). Para lograr el funcionamiento correcto de esta función debemos crear una nueva 
-                        variable o renombrar la ya existente y luego hacer el llamado de esta función y dentro de sus parámetros 
-                        colocar la variable a la que deseamos cambiar su tipo de dato.
+                        En algunas ocasiones deberemos pasar algún valor de un dato a otro, generalmente esto ocurre cuando tenemos un valor numérico en str “25” y lo queremos pasar como valor “int”.
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Esto puede lograrse con la <b>función parseInt()</b>. Para lograr el funcionamiento correcto de esta función debemos <b>crear una nueva variable o renombrar la ya existente</b> y luego hacer el llamado de esta función y <b>dentro de sus parámetros colocar la variable a la que deseamos cambiar su tipo de dato</b>.
                     </p>
                 </div>
 
-                <h4>Ejemplo</h4>
+                <div class="cont-ejemplo">
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="tag-color">let</span>
+                            <span class="property-color">numeroLetra</span>
+                            =
+                            <span class="value-color">'25'</span>;
+                        </code>
 
-                <div class="fondo-color">
-                    <div class="bloque-codigo">
-                        <code>let numeroTipoLetra = '25';</code>
-                        <code class="cont-resultado"></code>
+                        <br />
+
+                        <code>
+                            <span class="tag-color">let</span>
+                            <span class="property-color">numeroConvertido</span>
+                            =
+                            <span class="function-color">parseInt</span>
+                                <span class="parametro-color">
+                                    (
+                                        <span class="property-color">numeroLetra</span>
+                                    )
+                                </span>
+                            ;
+                        </code>
+
+                        <br><br>
+
+                        <code>
+                            <code>
+                                <span class="property-color">contResultado</span><span class="function-color">[<span class="number-color">7</span>]</span>.<span class="property-color">innerHTML</span>
+                                +=
+                                <span class="value-color">`La variable 'numeroLetra' con valor '
+                                  <span class="function-color">
+                                    ${
+                                      <span class="property-color">numeroLetra</span>
+                                    }
+                                  </span>
+                                  es de tipo:
+                                  <span class="function-color">
+                                    ${
+                                      <span class="tag-color">typeof</span>
+                                      <span class="property-color">numeroLetra</span>
+                                    }
+                                  </span>
+                                  '.`
+                                </span>;
+                            </code>
+                        </code>
+
+                    </div>
+                    
+                    <div class="cont-resultado"></div>
+                    <br>
+                    <div class="cont-resultado"></div>
+                </div>
+
+                <h3>Usando Number()</h3>
+
+                <p>
+                    Existe también un método llamado <b>“number()”</b> el cual nos transforma una variable de tipo string a una variable de tipo number:
+                </p>
+
+                <div class="cont-ejemplo">
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="tag-color">let</span>
+                            <span class="property-color">usandoNumber</span>
+                            =
+                            <span class="function-color">Number</span>
+                                <span class="parametro-color">
+                                    (
+                                        <span class="property-color">numeroLetra</span>
+                                    )
+                                </span>
+                            ;
+                        </code>
                     </div>
 
-                    <div>
-                        <p>Ahora convertimos el valor a número de tipo <b>int</b></p>
-
-                        <div class="fondo-codigo bloque-codigo">
-                            <code>let numeroTipoNumero = parseInt(numeroTipoLetra);</code>
-                            <code class="cont-resultado"></code>
-                        </div>
-                    </div>
-
-                 </div>
+                    <div class="cont-resultado"></div>
+                </div>
             </article>
+
+
+        </div>
 
         </section>
 
