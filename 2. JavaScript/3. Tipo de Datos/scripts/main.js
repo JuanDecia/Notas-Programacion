@@ -104,86 +104,10 @@ console.log(`La variable 'numeroLetra' fue ingresada al method 'Number()'. Ahora
 
 console.log('');
 
-// UNDEFINED & NULL
-console.log(`%c#################### NULL & UNDEFINED: `, "color: #71B1C1");
-
-let variableVacia;
-let variableNull = null;
-
-console.log(`Variable vacía: ${variableVacia}.`);
-contenedorResultado[13].innerHTML += `Variable vacía: ${variableVacia}.`
-
-console.log("");
-
-console.log(`Variable de tipo: ${variableNull}.`);
-contenedorResultado[14].innerHTML += `Variable de tipo: ${variableNull}.`;
-
-console.log('');
-
 // TYPEOF
 console.log(`%c#################### TYPEOF: `, "color: #71B1C1");
 
 let elementos = ['Fuego', 'Tierra', 'Agua', 'Aire'];
 
+contenedorResultado[10].innerHTML += `Variable <b>'elementos'</b> es de tipo: <b>${typeof elementos}</b>.`;
 console.log(`Variable 'elementos' es de tipo: ${typeof elementos}.`);
-contenedorResultado[15].innerHTML += `Variable 'elementos' es de tipo: ${typeof elementos}.`;
-
-console.log('');
-
-// COPIAR VALORES 
-console.log(`%c#################### COPIANDO VALORES: `, "color: #71B1C1");
-let color = 'Blanco';
-let copiaColor = color;
-
-console.log(`Valor de la variable 'color': ${color}.`);
-contenedorResultado[16].innerHTML += `Valor de la variable 'color': ${color}.`;
-
-console.log(`Valor de la variable 'copiaColor': ${copiaColor}.`);
-contenedorResultado[17].innerHTML += `Valor de la variable 'copiaColor': ${copiaColor}.`;
-
-console.log('');
-
-// ESTRUCTURA: VARIABLES COMPLEJAS
-console.log(`%c#################### ESTRUCTURA VARIABLE COMPLEJAS: `, "color: #71B1C1");
-
-let personas;
-personas = [
-    {
-        nombre: "Luis",
-    }
-];
-
-console.log(personas);
-console.log(`Valor en el arreglo: ${personas[0].nombre}.`);
-
-// Agregamos al arrego con el metodo push: {nombre: "Marcos", edad: "10"} //
-personas.push( 
-    {
-        nombre: "Marcos",
-        edad: 10,
-    }
-)
-
-// Agregamos al objeto donde se encuentra 'Marcos' otro dato llamado amigos con los valores de roberto y ana
-personas[1].amigos = ['Roberto', 'Ana']; 
-
-console.log("");
-
-console.log("Estructura del arreglo de personas luego de la declaración de 'amigos'.");
-console.log(personas);
-
-console.log("");
-
-// Asignamos a otra variable el contenido de "personas".
-let usuarios = personas;
-
-console.log("Resultado de la copia de personas en una variable llamada 'usuarios'.");
-console.log(usuarios);
-
-console.log("");
-
-// Cambiamos 'Pedro' por 'Marcos' solo en la variable usuarios.
-usuarios[1].amigos[0] = 'Pedro'; 
-
-console.log("Cambiamos pedro por marcos en la variable usuarios: ");
-console.log(usuarios[1].amigos);

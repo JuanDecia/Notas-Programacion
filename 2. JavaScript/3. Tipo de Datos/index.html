@@ -399,7 +399,7 @@
                     <h3>Undefined</h3>
 
                     <p>
-                        Es un tipo de dato primitivo que hace referencia a una variable que <b>ha sido declarada pero no ha sido asignada con un valor</b>. También será el valor por defecto al intentar acceder a una propiedad que no existe en un tipo de dato objeto.
+                        Es un tipo de dato primitivo que hace referencia a una variable que <b>ha sido declarada pero no ha sido asignada con un valor</b>. También será el valor por defecto al intentar acceder a una propiedad que no existe en un tipo de dato objeto. Otra ventana que nos puede salir que tiene el mismo resultado es "not defined". Puede ser probable que este cartel salga cuando estamos utilizando variables que no tienen valores dentro de funciones, bucles, etc. También, es un aspecto muy importante saber que un valor <b>undefined</b> nos retornará como resultado final un valor booleano <b>'false'</b>.
                     </p>
 
                     <h4>Ejemplo</h4>
@@ -440,7 +440,7 @@
                     <br>
 
                     <p>
-                        A diferencia de "undefined", qué se utiliza para representar la ausencia de un valor o propiedad indefinida, <b>"null" se utiliza para representar una ausencia intencional y se asigna explícitamente a una variable</b>, como vemos en el ejemplo:
+                        A diferencia de "undefined", qué se utiliza para representar la ausencia de un valor o propiedad indefinida, <b>"null" se utiliza para representar una ausencia intencional y se asigna explícitamente a una variable</b>, es decir, si reconoce la variable. A continuación, se presenta en el ejemplo:
                     </p>
 
                     <div class="cont-ejemplo">
@@ -467,7 +467,18 @@
                         </div>
 
                         <div class="cont-valorNull"></div>
+
                     </div>
+
+                    <p>
+                        Este tipo de dato es muy útil cuando no tenemos un valor inicial para una variable que luego la completamos con el valor del algoritmo que estemos creando. Por ejemplo:
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Primero podemos declarar que el botón de encendido de un programa es null y luego de un par de procesos ese botón de encendido cambie a True y el funcionamiento arranque. <b>Conclusión: </b>El valor null es voluntario lo cual es implementado por el programador, cuando estamos hablando de un valor undefined es un error que estamos cometiendo en nuestro código.
+                    </p>
                 </div>
 
             </article>
@@ -569,234 +580,52 @@
 
                     <div class="cont-resultado"></div>
                 </div>
-            </article>
-
-        </section>
-
-        <hr />
-
-        <!-- Undefined & Null -->
-        <section>
-            <h2>Undefined & Null</h2>
-
-            <article>
-
-                <h3>Undefined</h3>
-
-                <div>
-                    <p>
-                        Cuando nos aparece un valor undefined pueden ser dos aspectos:
-                    </p>
-
-                    <p>
-                        La variable que estamos especificando "no existe", es decir, no está declarada en el código que estamos 
-                        utilizando. Otra ventana que nos puede salir que tiene el mismo resultado es "not defined". Puede ser 
-                        probable que este cartel salga cuando estamos utilizando variables que no tienen valores dentro de funciones,
-                        bucles, etc.
-                    </p>
-                
-                </div>
-
-                <div class="fondo-color bloque-codigo">
-                    <code>let variableVacía;</code>
-                    <code>console.log(variableVacía)</code>
-                    <code class="cont-resultado"></code>
-                </div>
-
-                <div>
-                    <p>
-                        También, es un aspecto muy importante saber que un valor <b>undefined</b> nos retornará
-                        como resultado final un valor booleano <b>'false'</b>.
-                    </p>
-                </div>
 
             </article>
-
-            <article>
-                <h3>Null</h3>
-
-                <div>
-                    <p>
-                        La diferencia de Null y Undefined es que Null si reconoce la variable y su valor es Null, 
-                        es decir, vacío.
-                    </p>
-
-                    <p>
-                        Este tipo de dato es muy útil cuando no tenemos un valor inicial para una variable que 
-                        luego la completamos con el valor del algoritmo que estemos creando. Por ejemplo:
-                    </p>
-
-                    <p>
-                        Primero podemos declarar que el botón de encendido de un programa es null y luego de un 
-                        par de procesos ese botón de encendido cambie a True y el funcionamiento arranque.
-                    </p>
-
-                    <p>
-                        <b>Conclusión: </b>El valor null es voluntario lo cual es implementado por el programador, cuando estamos 
-                        hablando de un valor undefined es un error que estamos cometiendo en nuestro código.
-                    </p>
-                </div>
-
-                <div class="fondo-color bloque-codigo">
-                    <code>let variableNull = null;</code>
-                    <code>console.log(variableNull)</code>
-                    <code class="cont-resultado"></code>
-                </div>
-            </article>
-        </section>
-
-        <hr>
-
-        <!-- typeof() -->
-        <section>
+            
+            <hr />
+            
+            <!-- typeof() -->
             <article>
                 <h2>TypeOf</h2>
-            </article>
-
-            <article>
+                
                 <div>
                     <p>
-                        Este método (TypeOf) nos permite saber que tipo de dato es el valor de la variable que lo está 
-                        conteniendo. Si declaramos una variable tipo "array" y luego la hacemos pasar por typeof 
-                        nos retornará el tipo de valor:
+                        Este método nos permite saber que tipo de dato es el valor de la variable. Si declaramos una variable tipo "array" y luego la hacemos pasar por typeof nos retornará el tipo de valor:
                     </p>
 
-                    <div class="fondo-color bloque-codigo">
-                        <code>let elementos = ["Tierra", "Fuego", "Agua", "Aire"];</code>
-                        <code>console.log(typeof elementos);</code>
-                        <code class="cont-resultado"></code>
+                    <div class="cont-ejemplo">
+                        <div class="cont-codigo">
+                            <code>
+                                <span class="tag-color">let</span>
+                                <span class="property-color">elementos</span>
+                                =
+                                <span class="value-color">['Tierra', 'Fuego', 'Agua', 'Aire']</span>;
+                            </code>
+
+                            <br /> <br />
+
+                            <code>
+                                <span class="property-color">contResultado</span><span class="function-color">[<span class="number-color">10</span>]</span>.<span class="property-color">innerHTML</span>
+                                +=
+                                <span class="value-color">`La variable 'elementos' es de tipo:
+                                  <span class="function-color">
+                                    ${
+                                      <span class="tag-color">typeof</span>
+                                      <span class="property-color">elementos</span>
+                                    }
+                                  </span>'.`
+                                </span>;
+                            </code>
+
+                        </div>
+
+                        <div class="cont-resultado"></div>
                     </div>
-
-                    <div class="cont-code">
-                    </div>
-
-                    <p>Retorna en consola de JS: <code>Object</code></p>
-                </div>
-            </article>
-        </section>
-
-        <hr />
-
-        <!-- Tipos de Datos -->
-        <section>
-            <article>
-                <h2>Tipo de datos: Estructuras</h2>
-            </article>
-
-            <article>
-                <h3>Variables simples y variables complejas</h3>
-
-                <div>
-                    <p>
-                        Las variables simples son los strings, int, float. Las variables complejas están compuestas por más de 
-                        un valor tales como los arrays y objetos.
-                    </p>
-                </div>
-            </article>
-
-            <article>
-                <h3>Copiando Valores</h3>
-
-                <div>
-                    <p>
-                        En el ejemplo más adelante, declaramos una variable con nombre color que tiene asignado “blanco” y otra 
-                        llamada color2 que tiene asignado “color”. En este caso JS crea una copia del contenido de “color” y se 
-                        lo coloca a “color2”. Por lo que si imprimimos ambas variables nos retornará “blanco”.
-                    </p>
-                </div>
-
-                <div class="fondo-color bloque-codigo">
-                    <code>let color = blanco;</code>
-                    <code>let copiaColor = color;</code>
-                    <code class="cont-resultado"></code>
-                    <code class="cont-resultado"></code>
-                </div>
-
-                <div>
-                    <p>
-                        Como podemos observar la variable <b>copiaColor</b> se le ha asignado una copia del
-                        valor que tiene la variable <b>color</b>, es decir, 'blanco'.
-                    </p>
-                </div>
-            </article>
-
-            <article>
-                <h3>Variables Complejas</h3>
-
-                <div>
-                    <p>
-                        Cuando tenemos variables complejas no se copia el contenido, sino que se les asigna la misma referencia 
-                        en memoria.
-                    </p>
-
-                    <p>
-                        Tenemos una variable “personas” que es un array que contiene un objeto y dentro tiene una propiedad
-                        'nombre' con valor cuyo “Luis”.
-                    </p>
-                </div>
-
-                <figure>
-                    <img src="./img/ejemploLuis.png" alt="ejemplo luis" />
-                </figure>
-
-                <div>
-                    <p>
-                        Ahora vamos a agregar otro elemento objeto al array con el method para arrays ”push()”:
-                    </p>
-                </div>
-
-                <figure>
-                    <img src="./img/push.png" alt="push" />
-                </figure>
-
-                <div>
-                    <p>
-                        Si prestamos atención debemos crear una estructura de objeto al utilizar este método
-                        en este caso en específico. La anterior declaración nos retornará: 
-                    </p>
-
-                    <div class="fondo-color">
-                        <code>[{"nombre":"luis"},{"nombre":"marcos","edad": 10}]</code>
-                    </div>
-
-                    <p>
-                        Agregamos al objeto nuevo que hemos creado (que se encuentra en la posición [1]) 
-                        del array, una lista llamada “amigos” y con valor “Roberto” y “ana”.
-                    </p>
-
-                    <figure>
-                        <img src="./img/position1.png" alt="position1" />
-                    </figure>
-
-                    <p>
-                        Al correrlo podemos observar que la segunda posición del objeto que se encuentra en [1], tiene un 
-                        atributo que se llama “amigos” con valores “Roberto” y “Ana” (ver este resultado en consola).
-                    </p>
-
-                    <p>
-                        Asignemos otra variable con nombre “usuarios” y el valor le pasamos el contenido de lo que tiene “personas”.
-                        Entonces a la nueva variable “usuarios” le asignamos “personas” y si imprimimos “usarios” este tendrá los 
-                        mismos valores que “personas”.
-                    </p>
-
-                    <figure>
-                        <img src="./img/logUsuarios.png" alt="log usuarios" />
-                        <img src="./img/usuariosNuevos.png" alt="usuarios nuevos" />
-                    </figure>
-
-                    <p>
-                        Podemos modificar uno de los elementos dentro de “personas” con “usuario” por ejemplo, el nombre de “Marcos”. 
-                        Para ello en usuarios[1] (segundo elemento del arreglo) .nombre le asignamos “Pedro”.
-                    </p>
-
-                    <figure>
-                        <img src="./img/consoleLogFinal.png" alt="" />
-                    </figure>
                 </div>
 
             </article>
         </section>
-
     </main>
 
     <script src="./scripts/main.js"></script>
