@@ -1,36 +1,101 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
     box-sizing: border-box;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.2em;
-    background-color: aliceblue;
+}
+
+body {
+    background-image: url('../img/fondo-js.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    max-width: 85%;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
 }
 
 main {
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-h1 {
-    text-align: center;
-    color: rgb(55, 185, 55);
+    background-color: rgba(197, 201, 204, 0.836);
+    padding: 25px;
 }
 
 h2 {
-    color: rgb(59, 124, 184);
+    margin: 25px 0;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: slide-right 1.3s ease, fade 1.3s ease-in;
 }
 
 h3 {
-    color: rgb(224, 54, 11);
+    color: rgb(103, 45, 240);
+    margin: 20px 0;
 }
 
 h4 {
-    color: rgb(134, 93, 231);
+    color: rgb(143, 44, 224);
+    margin: 20px 0;
 }
 
-.texto-blanco {
-    color: aliceblue;
+figure {
+    margin: 20px 0;
     display: flex;
     justify-content: center;
+}
+
+.lista li {
+    padding: 10px;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.3em;
+}
+
+code {
+    color: #ffffff;
+}
+
+hr {
+    margin-top: 20px;
+}
+
+/* -- Animaciones-- */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-50px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* ======= HEADER ======= */
+
+h1 {
+    text-align: center;
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.3s ease-in, slide-down 1.3s ease-in-out;
 }
 
 a {
@@ -51,10 +116,6 @@ li {
 
 figure {
     text-align: center;
-}
-
-p {
-    text-align: justify;
 }
 
 /* ESTILOS ESPECÍFICOS */
@@ -91,19 +152,4 @@ button {
     border-radius: 10px;
     width: 50%;
     margin: auto;
-}
-
-    /* ############# CONTENEDOR EJEMPLO CODIGOS */
-
-.bloque-codigo > code{
-    display: block;
-    padding: 8px 0;
-}
-
-.margen-funcion {
-    margin-left: 30px;
-}
-
-.fondo-codigo {
-    background-color: bisque;
 }
