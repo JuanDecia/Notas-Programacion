@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Operadores</h1>
+        </header>
+
+        <section>
+
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        En programación debemos conocer los distintos tipos de operadores que pueden utilizarse, ya que, a la hora de la construcción de nuestro código son sumamente importantes y debemos saber con exactitud la definición y la función de cada uno de ellos.
+                    </p>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <!-- OPERADORES ARITMÉTICOS -->
+            <article>
+                <h2>Operadores Aritméticos</h2>
+
+                <div>
+                    <p>
+                        Los operadores aritméticos son utilizados generalmente para cuentas matemáticas, de concatenación y para los contadores en los ciclos de los bucles.
+                    </p>
+                </div>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Significado</th>
+                            <th>Ejemplo</th>
+                            <th>Es igual a</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>+</td>
+                            <td>Suma</td>
+                            <td>20 + 2</td>
+                            <td>22</td>
+                        </tr>
+
+                        <tr>
+                            <td>-</td>
+                            <td>Resta</td>
+                            <td>20 - 2</td>
+                            <td>18</td>
+                        </tr>
+
+                        <tr>
+                            <td>*</td>
+                            <td>Producto/ Multiplicar</td>
+                            <td>20 * 2</td>
+                            <td>40</td>
+                        </tr>
+
+                        <tr>
+                            <td>/</td>
+                            <td>División</td>
+                            <td>20 / 2</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>%</td>
+                            <td>Módulo</td>
+                            <td>20 % 2</td>
+                            <td>0</td>
+                        </tr>
+
+                        <tr>
+                            <td>++</td>
+                            <td>Incremento</td>
+                            <td>variable ++ ó ++ variable</td>
+                            <td>variable = variable + 1</td>
+                        </tr>
+
+                        <tr>
+                            <td>--</td>
+                            <td>Decremento</td>
+                            <td>variable -- ó -- variable</td>
+                            <td>variable = variable - 1</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="cont-link-ejemplos">
+                    <div class="cont-arrow">
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#000000" d="M16.175 13H5q-.425 0-.713-.288T4 12q0-.425.288-.713T5 11h11.175l-4.9-4.9q-.3-.3-.288-.7t.313-.7q.3-.275.7-.288t.7.288l6.6 6.6q.15.15.213.325t.062.375q0 .2-.063.375t-.212.325l-6.6 6.6q-.275.275-.687.275T11.3 19.3q-.3-.3-.3-.713t.3-.712L16.175 13Z"/></svg>
+                    </div>
+                    <a href="./html/operadoresAritmeticos.html">Ir a ejemplos</a>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- OPERADORES DE ASIGNACIÓN -->
+
+            <article>
+                <h2>Operadores de Asignación</h2>
+
+                <div>
+                    <p>
+                        Los operadores de asignación asignan valores a las variables de JavaScript.
+                    </p>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Significado</th>
+                            <th>Ejemplo (Sintaxis)</th>
+                            <th>Es igual a</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>=</td>
+                            <td>Asignación</td>
+                            <td>x = 1</td>
+                            <td>x tiene el valor de "1"</td>
+                        </tr>
+                        <tr>
+                            <td>+=</td>
+                            <td>
+                                <b>Asignación con suma</b>: Se utiliza para sumar un valor a una variable y asignar el resultado a la misma.
+                            </td>
+                            <td>x += 1</td>
+                            <td>x tiene el valor de "1" + 1 (x = x + 1)</td>
+                        </tr>
+                        <tr>
+                            <td>-=</td>
+                            <td>
+                                <b>Asignación con Resta: </b>Se utiliza para restar el valor a una variable y asignar el resultado a la misma.
+                            </td>
+                            <td>x -= 1</td>
+                            <td>x tiene el valor de "1" - 1 (x = x - 1)</td>
+                        </tr>
+                        <tr>
+                            <td>*=</td>
+                            <td>
+                                <b>Asignación con multiplicación: </b>Se utiliza para multiplicar un valor con una variable y asignarle el resultado a la misma.
+                            </td>
+                            <td>x *= 1</td>
+                            <td>x tiene el valor de "1" * 1 (x = x * 1)</td>
+                        </tr>
+                        <tr>
+                            <td>/=</td>
+                            <td>
+                                <b>Asignación con División: </b>Se utiliza para dividir una variable por un valor y asignar el resultado a la misma variable.
+                            </td>
+                            <td>x /= 1</td>
+                            <td>x tiene el valor de "1" / 1 (x = x / 1)</td>
+                        </tr>
+                        <tr>
+                            <td>%=</td>
+                            <td>
+                                <b>Asignación con Módulo: </b>Se utiliza para obtener el módulo de la división entre una variable y un valor y asignar el resultado a la misma.
+                            </td>
+                            <td> x %= 1</td>
+                            <td>x tiene el valor de "1" % 1 (x = x % 1)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <hr />
+
+            <!-- OPERADORES LÓGICOS -->
+            <article>
+
+                <h2>Operadores Lógicos</h2>
+
+                <div>
+                    <p>
+                        Hay tres operadores lógicos en JavaScript: || (Or), && (And), ?? (Fusión de nulos). En las notas de esta sección veremos solo los primeros dos. Aunque sean llamados lógicos, pueden ser aplicados a valores de cualquier tipo, no solo booleanos. El resultado también puede ser de cualquier tipo.
+                    </p>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Significado</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&&</td>
+                            <td>y (and)</td>
+                            <td>1 == 1 && 2 &#60 1 (es falso)</td>
+                        </tr>
+                        <tr>
+                            <td>||</td>
+                            <td>o (or)</td>
+                            <td>1 == 2 || 15 > 2 (es verdadero)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- And -->
+                <div>
+                    <h3 class="cont-and">&& (And)</h3>
+
+                    <p>
+                        Se utiliza para comprobar <b>si dos condiciones son verdaderas</b>. El resultado de la operación AND <b>es verdadero sólo si ambas condiciones son verdaderas</b>.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Todas las funciones que están unidas por <b>&& se tienen que cumplir</b>. El intérprete de JS <b>verifica si la primera condición se cumple</b> y luego <b>chequea la segunda pudiendo tener nosotros más de un “&&”</b>. Si en este proceso <b>se consigue alguna que no se cumpla</b>, la condición completa es falsa.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="tag-color">let</span>
+                            <span class="property-color">edadLucas</span>
+                            =
+                            <span class="number-color">15</span>;
+                        </code>
+
+                        <br>
+
+                        <code>
+                            <span class="tag-color">let</span>
+                            <span class="property-color">edadAbril</span>
+                            =
+                            <span class="number-color">11</span>;
+                        </code>
+
+                        <br><br>
+
+                        <code>
+                            <span class="parametro-color">if</span>
+                            <span class="function-color">
+                                (
+                                    <span class="property-color">edadLucas</span>
+                                    &&
+                                    <span class="property-color">edadAbril</span>
+                                    &#60
+                                    <span class="number-color">18</span>
+                                    )
+                                    &#123
+                            </span>
+                        </code>
+
+                        <br>
+
+                        <code class="margin-20">
+                            <span class="property-color">console</span>.<span class="function-color">log</span>(<span class="value-color">'Los chicos son menores de edad'</span>);
+                        </code>
+
+                        <br>
+
+                        <code>
+                            <span class="function-color">&#125</span>
+                            <span class="parametro-color">else</span>
+                            &#123
+                        </code>
+
+                        <br>
+
+                        <code class="margin-20">
+                            <span class="property-color">console</span>.<span class="function-color">log</span>(<span class="value-color">'Uno o ninguno de los chicos es mayor de edad.'</span>);
+                        </code>
+
+                        <br>
+
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <div class="cont-resultados">
+                        <div class="resultado-and"></div>
+                    </div>
+
+                    <br>
+
+                    <p>
+                        En el ejemplo anterior tenemos <b>una condición '&&' que nos retorna true</b>, porque, lucas y abril tienen un valor menor a 18 (15 y 11 respectivamente).
+                    </p>
+                </div>
+
+                <!-- Or -->
+                <div class="cont-or">
+                    <h3>|| (Or)</h3>
+
+                    <p>
+                        Se utiliza para comprobar si al menos <b>una de las dos condiciones es verdadera</b>. El resultado de la operación OR <b>es verdadero si alguna de las dos condiciones es verdadera</b>.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="tag-color">let</span>
+                            <span class="property-color">edadLucas</span>
+                            =
+                            <span class="number-color">15</span>;
+                        </code>
+
+                        <br>
+
+                        <code>
+                            <span class="tag-color">let</span>
+                            <span class="property-color">edadAbril</span>
+                            =
+                            <span class="number-color">11</span>;
+                        </code>
+
+                        <br>
+
+                        <code>
+                            <span class="tag-color">let</span>
+                            <span class="property-color">edadJuan</span>
+                            =
+                            <span class="number-color">28</span>;
+                        </code>
+
+                        <br><br>
+
+                        <code>
+                            <span class="parametro-color">if</span>
+                            <span class="function-color">
+                                (
+                                    <span class="property-color">edadLucas</span>
+                                    ||
+                                    <span class="property-color">edadAbril</span>
+                                    ||
+                                    <span class="property-color">edadJuan</span>
+                                    &#62
+                                    <span class="number-color">18</span>
+                                    )
+                                    &#123
+                            </span>
+                        </code>
+
+                        <br>
+
+                        <code class="margin-20">
+                            <span class="property-color">console</span>.<span class="function-color">log</span>(<span class="value-color">'Una de las personas es mayor de edad.'</span>);
+                        </code>
+
+                        <br>
+
+                        <code>
+                            <span class="function-color">&#125</span>
+                            <span class="parametro-color">else</span>
+                            &#123
+                        </code>
+
+                        <br>
+
+                        <code class="margin-20">
+                            <span class="property-color">console</span>.<span class="function-color">log</span>(<span class="value-color">'Ninguno es mayor de edad.'</span>);
+                        </code>
+
+                        <br>
+
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <div class="cont-resultados">
+                        <div class="resultado-or"></div>
+                    </div>
+                </div>
+
+                <!-- Not '!' -->
+                <div class="cont-not">
+                    <h3>! (not)</h3>
+
+                    <p>
+                        Se utiliza para <b>invertir el valor de una expresión booleana</b>. El resultado de la operación NOT <b>es verdadero si la expresión booleana es falsa, y falso si la expresión booleana es verdadera</b>.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="tag-color">let</span>
+                            <span class="property-color">edadJuan</span>
+                            =
+                            <span class="number-color">28</span>;
+                        </code>
+
+                        <br><br>
+
+                        <code>
+                            <span class="property-color">console</span>.<span class="function-color">log</span>( 
+                                ! (
+                                    <span class="property-color">edadJuan</span>
+                                    &#62
+                                    <span class="number-color">0</span>
+                                    ) 
+                            );
+                            <span class="comment-color">// edadJuan es mayor a 0, el resultado es false</span>
+                        </code>
+
+                        <br>
+
+                        <code>
+                            <span class="property-color">console</span>.<span class="function-color">log</span>( 
+                                ! (
+                                    <span class="property-color">edadJuan</span>
+                                    &#60
+                                    <span class="number-color">0</span>
+                                    ) 
+                            );
+                            <span class="comment-color">// edadJuan es mayor a 0, el resultado es true</span>
+                        </code>
+                    </div>
+
+                    <div class="cont-resultados">
+                        <div class="resultado-not"></div>
+                        <div class="resultado-not"></div>
+                    </div>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- OPERADORES CONDICIONALES -->
+            <article>
+                <h2>Operadores Comparativos</h2>
+
+                <div>
+                    <p>
+                        Los operadores de condición se utilizan en sentencias lógicas para determinar la igualdad o la diferencia 
+                        entre variables o valores.
+                    </p>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Significado</th>
+                            <th>Ejemplo (Sintaxis)</th>
+                            <th>Es igual a</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>==</td>
+                            <td>Es igual a</td>
+                            <td>5 == 9</td>
+                            <td>False</td>
+                        </tr>
+                        <tr>
+                            <td>===</td>
+                            <td>Es igual a (valor y tipo)</td>
+                            <td><span>5 === '5'</span> <br /> <span>5 === 5</span></td>
+                            <td><span>false</span> <br /> <span>true</span></td>
+                        </tr>
+                        <tr>
+                            <td>!=</td>
+                            <td>No es igual ó es diferente</td>
+                            <td>15 != 13</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td>Es mayor que</td>
+                            <td>15 > 10</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>&#60</td>
+                            <td>Es menor que</td>
+                            <td>15 &#60 10</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>>=</td>
+                            <td>Es mayor o igual</td>
+                            <td>15 >= 10</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>&#60=</td>
+                            <td>Es menor o igual</td>
+                            <td>15 &#60= 10</td>
+                            <td>false</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="cont-link-ejemplos">
+                    <div class="cont-arrow">
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#000000" d="M16.175 13H5q-.425 0-.713-.288T4 12q0-.425.288-.713T5 11h11.175l-4.9-4.9q-.3-.3-.288-.7t.313-.7q.3-.275.7-.288t.7.288l6.6 6.6q.15.15.213.325t.062.375q0 .2-.063.375t-.212.325l-6.6 6.6q-.275.275-.687.275T11.3 19.3q-.3-.3-.3-.713t.3-.712L16.175 13Z"/></svg>
+                    </div>
+                    <a href="./html/operadoresComparativos.html">Ir a ejemplos</a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+    <script src="./js/ejemplos/operadoresLogicos.js"></script>
+</body>
+</html>
