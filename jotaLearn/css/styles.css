@@ -17,22 +17,26 @@ main {
 
 /* HEADER STYLES */
 
+/* Header Container */
 header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 25vh;
+    height: 35vh;
+    border: 1px solid red;
 }
 
+/* Nav Element General Styles */
 nav {
     display: flex;
     width: 85%;
-    border: 1px solid green;
+    padding: 20px;
 }
 
+/* Ul children Nav Element */
 nav > ul {
     display: flex;
-    justify-content: end;
+    justify-content: space-evenly;
     align-items: center;
     gap: 45px;
     margin-right: 30px;
@@ -40,20 +44,18 @@ nav > ul {
     list-style: none;
 }
 
-.nav-list {
-    display: none;
-}
-
+/* List from nav */
 li > a {
     text-decoration: none;
+    font-size: 1.3em;
     color: black;
 }
 
 /* Menu Img Container */
-
 .cont-menuIcon {
-    display: flex;
+    display: none;
     align-items: center;
+    /* display: flex; put in small viewports */
 }
 
 .menu-btn {
@@ -67,13 +69,27 @@ li > a {
 /* ######## MAIN CONTENT STYLES */
 .main-content {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
     flex-wrap: wrap;
-    border: 1px solid red;
+    margin: 40px 0;
+    border: 1px solid blue;
 }
 
-article {
+/* Article Card Container */
+.card {
+    display: flex;
+    flex-direction: column;
+    width: calc((100% / 3) - 14px);
+    padding: 20px;
+    gap: 20px;
+    cursor: pointer;
     border: 1px solid black;
+}
+
+/* Styles for the children of .card */
+.card > * {
+    display: flex;
+    justify-content: center;
 }
 
 .icon {
