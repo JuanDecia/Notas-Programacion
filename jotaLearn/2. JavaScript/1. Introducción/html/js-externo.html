@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Usando JS en un archivo externo</h1>
+
+            <nav>
+                <a class="volver" href="../index.html">Volver a inicio</a>
+            </nav>
+        </header>
+
+        <section>
+
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    En esta página realizaremos el mismo ejercicio que en la página <span><a href="../html/js-interno.html">JS interno</a></span>, pero a diferencia en esta ocasión, enlazaremos el archivo externo <b>main.js</b> a esta página llamada <b>'js-externo.html</b>. El archivo <b>main.js</b> es el que tendrá el código que hará la dinámica, es decir, no va a estar dentro de las etiquetas <b>&#60script&#62</b>.
+                </p>
+            </article>
+
+            <!-- Enlazar js -->
+            <article>
+                <h2>Enlazar Js</h2>
+
+                <p>
+                    A continuación para esta práctica, dejaremos un ejemplo de como debemos enlazar el archivo <b>main.js</b> a esta página.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        &#60<span class="tag-color">script</span>
+                        <span class="property-color">src</span>=<span class="value-color">'../scripts/main.js'</span>&#62&#60/<span class="tag-color">script</span>&#62
+                    </code>
+                </div>
+
+                <p>
+                    Como se puede observar en el ejemplo anterior, hemos enlazado la ruta relativa del archivo a nuestra página. Ahora, debemos crear el código que utilizaremos para el funcionamiento de la misma. Para agilizar este concepto, utilizaremos el mismo ejemplo que en la página <b>JS interno</b>.
+                </p>
+            </article>
+
+            <!-- Práctica -->
+            <h3>Ejemplo práctico</h3>
+            <article class="cont-practica">
+                
+                <div class="cont-input">
+                    <label for="nombre">Ingrese su nombre: </label>
+                    <input id="nombre" type="text" placeholder="Ingrese su nombre" />
+                    <button class="button" onclick="renderNombre()">Aceptar</button>
+                </div>
+
+                <div class="cont-resultado">
+                    <div class="resultado"></div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

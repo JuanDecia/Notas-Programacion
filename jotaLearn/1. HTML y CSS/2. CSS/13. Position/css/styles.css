@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 85%;
+    margin: 0 auto;
+    background-image: url('https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y3NzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    padding: 25px;
+    background-color: rgba(206, 218, 218, 0.815);
+}
+
+h2 {
+    margin: 20px 0;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+h3 {
+    margin: 20px 0;
+    font-size: 1.3em;
+    color: rgb(103, 45, 240);
+}
+
+h4 {
+    margin: 20px 0;
+    color: #a826f3;
+    font-size: 1.1em;
+}
+
+figure {
+    margin: 25px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    text-align: justify;
+}
+
+hr {
+    margin: 20px;
+}
+
+/* --- Animaciones --- */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ######### HEADER */
+
+h1 {
+    margin: 30px 0;
+    text-align: center;
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+/* ######### MAIN CONTENT */
+
+/* --- Estilos Generales --- */
+
+/* Ejemplo en código */
+.cont-codigo {
+    background-color: rgb(56, 55, 55);
+    color: #ffffff;
+    margin: 20px auto;
+    padding: 7px;
+    width: 70%;
+    border-radius: 5px;
+}
+
+.margin-20 {
+    margin-left: 20px;
+}
+
+.margin-40 {
+    margin-left: 40px;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.property-color {
+    color: rgb(113, 209, 247);
+}
+
+.field-color {
+    color: #ffd311;
+}
+
+.value-color {
+    color: #f39658;
+}
+
+.comment-color {
+    color: rgb(41, 148, 31);
+}
+/* -- */
+
+/* --- Articulo Valores Position --- */
+.cont-links {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.cont-links div {
+    margin: 35px 0;
+}
+
+.link-position {
+    position: relative;
+    align-items: center;
+    padding: 5px;
+    text-decoration: none;
+    color: rgb(236, 103, 14);
+    font-weight: 600;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in;
+}
+
+.link-position::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    height: 2px;
+    color: rgb(236, 103, 14);
+    background-color: rgb(236, 103, 14);
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in;
+}
+
+.link-position:hover::after {
+    transform: scaleX(1);
+}
+
+/* ========== ESTILOS PÁGINA STATIC ========= */
+
+.cont-static {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+
+/* ========== ESTILOS PÁGINA RELATIVE ========= */
+
+.cont-relative {
+    border: 2px solid black;
+    margin: 80px 0;
+}
+
+.ejemplo-relative {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+    border: 1px solid blue;
+}
+
+/* ========== ESTILOS PÁGINA ABSOLUTE ========= */
+
+.cont-padre {
+    position: relative;
+    margin: 30px 0;
+    height: 150px;
+    border: 1px solid black;
+}
+
+.cont-absolute {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid cornflowerblue;
+}
+/* ========== ESTILOS FIXED ========= */
+
+.cont-fixed {
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 30px;
+    border: 1px solid gray;
+    background-color: aliceblue;
+    border-radius: 10px 10px 0 0;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    z-index: 2;
+}
+
+
+/* ========== ESTILOS STICKY ========= */
+
+.cont-sticky {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid cornflowerblue;
+    border-radius: 0 0 10px 10px;
+    height: 30px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-color: beige;
+    box-shadow: 
+        rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px 
+        inset;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+    
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Strings</h1>
+        </header>
+
+        <section>
+            
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        Las cadenas de caracteres o strings están conformados por texto, que pueden contener: letras, números, 
+                        símbolos, signos de puntuación, entre otros. Los valores de las variables tipo strings se expresan en sintaxis JavaScript con comillas, encerrando el 
+                        valor entre comillas simples ( ' ' ) o comillas dobles ( “ ” ).
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>'Esto es una cadena de texto.';</code>
+                    <code>"Esta es otra cadena de texto con comillas dobles.";</code>
+                </div>
+            </article>
+
+            <hr>
+
+            <article>
+                <h2>Textos con comillas dentros de las cadenas de caracteres</h2>
+
+                <p>
+                    Supongamos que intentamos utilizar comillas simples o dobles dentro de una cadena de texto, en este caso 
+                    deberemos usar las comillas opuestas a las que están contenidas dentro del string, para delimitar el inicio 
+                    y el fin de la cadena de caracteres. Eso significa que las cadenas que contienen comillas simples deben usar 
+                    comillas dobles como caracteres delimitadores y las cadenas que contienen comillas dobles deben usar 
+                    comillas simples como caracteres delimitadores del inicio y el fin del string, veámoslo en el siguiente 
+                    ejemplo:
+                </p>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>"Son las ‘ tres ’ en punto.";</code>
+                    <code>'Recuerde “ saludar ” al llegar a su destino';</code>
+                </div>
+
+                <p>
+                    Otra opción para adicionar comillas simples o sencillas es usando los caracteres de escape; con esta 
+                    opción podemos incluir tanto comillas simples como comillas dobles en nuestro string. Si queremos utilizar 
+                    una comilla simple anteponemos la barra invertida ( \ ) antes de la comilla simple ( ' ), para avisarle al 
+                    interpretador de JavaScript que queremos escapar el valor por defecto que tiene el carácter ' dentro de la 
+                    sintaxis y como consecuencia el interpretador sabe que queremos utilizar el caracter comilla simple, en vez 
+                    del símbolo que delimita el inicio o fin de una cadena de caracteres.
+                </p>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>'Son las \' tres \' en punto.';</code>
+                    <code>"Recuerde \" saludar \" al llegar a su destino";</code>
+                </div>
+
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- Concatenando Strings -->
+        <section>
+            <article>
+                <h2>Concatenando Strings</h2>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        Comenzaremos con un ejercicio concatenando 3 variables con valores string. Una variable llamada nombre, 
+                        una variable llamada apellido y otra curso. Luego, crearemos el mensaje de saludo con la 
+                        siguiente estructura:
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/ejemploUno.png" alt="ejemplo uno" />
+                </figure>
+
+                <div>
+                    <h3>Resultado</h3>
+
+                    <div class="fondo-codigo codigo-bloque">
+                        <code class="cont-resultado"></code>
+                    </div>
+
+                    <p>
+                        También, podemos declarar una función que nos permita cambiar las variables del mensaje de varias maneras.
+                        Para ello vamos a crear una función con el nombre “saludar” que esta recibe 3 parámetros o argumentos 
+                        (nombre, apellido y curso). Luego dentro de la función formaremos el string del saludo.
+                    </p>
+
+                    <figure>
+                        <img src="./img/ejemploDos.png" alt="ejemplo dos" />
+                    </figure>
+
+                    <h3>Resultado</h3>
+
+                    <div class="fondo-codigo codigo-bloque">
+                        <code class="cont-resultado"></code>
+                    </div>
+
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <section>
+            <article>
+                <h2>Propiedades y métodos</h2>
+
+                <div>
+                    <p>
+                        En JavaScript, las cadenas de caracteres tienen sus propios atributos y métodos integrados, a continuación, 
+                        estudiamos los más comúnes:
+                    </p>
+                </div>
+
+                <div class="cont-pagina-ejemplo">
+                    <a class="texto-blanco" href="../4. Strings/html/propiedadString.html">Ir a "Métodos para Strings"</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

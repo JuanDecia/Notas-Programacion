@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Variables en JavaScript</h1>
+        </header>
+
+        <section>
+
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        Una <b>variable</b> es un <b>espacio de memoria reservado para almacenar un valor que puede cambiar a lo largo del tiempo</b>. Es una entidad que se utiliza para almacenar y representar datos en un programa. Cada variable tiene un <b>nombre</b> que se utiliza para hacer referencia a ella en el código.
+                    </p>
+
+                    <br />
+                    
+                    <p>
+                        Las variables nos <b>permiten almacenar</b> valores numéricos, cadenas de caracteres o estructuras de datos como listas, arreglos de valores u objetos. La principal propiedad de las variables, como su nombre lo indica, es almacenar valores que pueden cambiar a lo largo de la ejecución del programa.
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Al utilizar variables, podemos hacer que nuestro código sea más <b>legible y fácil de mantener</b>, ya que podemos <b>asignar nombres significativos a los valores que almacenamos en ellas</b>. Además, son una herramienta que nos permitirá reutilizar código dentro de nuestra aplicación. Estos valores almacenados se pueden utilizar o acceder en cualquier momento de la ejecución de nuestro programa.
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Debemos saber que las variables en JS <b>no son fuertemente tipadas</b>, son <b>dinámicamente tipadas</b>, es decir, que no necesariamente tenemos que declarar qué <b>tipo de dato</b> es la variable, ya que el tipo se determina automáticamente en función del valor que se les asigna.
+                    </p>
+
+                </div>
+
+                <h3>Sintaxis</h3>
+    
+                <div class="cont-codigo">
+                    <code>
+                        <span class="tag-color">let</span>
+                        <span class="property-color">nombrePersona</span>
+                        =
+                        <span class="value-color">'juan'</span>;
+                    </code>
+                </div>
+                
+            </article>
+
+            <hr>
+
+            <!-- Variable Const -->
+            <article>
+                <h2>Const y Let</h2>
+
+                <!-- Bloque Const -->
+                <div>
+                    <h3>Const</h3>
+    
+                    <div>
+                        <p>
+                            Const no nos deja declarar una variable inicializarla porque nos retornaría el siguiente error: Uncaught 
+                            SyntaxError: Missing initializer in const declaration.
+                        </p>
+    
+                        <p>
+                            Cuando estamos utilizando este tipo de variable, no podrá ser reescrita en el tiempo. Es decir, si 
+                            declaramos una variable con valor "Juan", luego no podremos llamar a la variable para pasarle otro valor 
+                            porque nos retornará un error sobre que la variable llamada ya ha sido declarada anteriormente
+                        </p>
+                    </div>
+
+                    <h4>Sintaxis</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="tag-color">const</span>
+                            <span class="property-color">nombrePersona</span>
+                            =
+                            <span class="value-color">'juan'</span>;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Bloque Let -->
+                <div>
+                    <h3>Let</h3>
+
+                    <p>
+                        La instrucción let declara una variable de alcance local con ámbito de bloque (blockscope), la cual, opcionalmente, puede ser inicializada con algún valor.
+                    </p>
+
+                    <h4>Sintaxis</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="tag-color">let</span>
+                            <span class="property-color">nombrePersona</span>
+                            =
+                            <span class="value-color">'juan'</span>;
+                        </code>
+                    </div>
+                </div>
+
+            </article>
+
+            <hr>
+
+            <article>
+                <h2>Buenas Prácticas</h2>
+
+                <div>
+                    <p>
+                        Los nombres de las variables son muy flexibles, aunque te recomendamos estas buenas prácticas para nombrar tus variables:
+                    </p>
+                </div>
+
+                <ul class="lista">
+                    <li>
+                        Los nombres deben expresar el contenido de la variable, así hacemos nuestro código más entendible a otros programadores; por ejemplo, si en la variable almacenamos la edad de un estudiante entonces la 
+                        variable puede llamarse: edad, edadEstudiante o edadAlumno.
+                    </li>
+
+                    <li>
+                        El nombre de las variables puede contener los caracteres, underscore ( _ ), o signo de dólar ( $ ) al inicio, en medio o al final del nombre.
+                    </li>
+
+                    <li>
+                        El nombre de las variables debe iniciar con una letra ASCII sea mayúscula o minúscula, también puede empezar con un guión bajo (_) o un signo de dólar ($).
+                    </li>
+
+                    <li>
+                        Para separar las palabras que componen el nombre de la variable, JavaScript utiliza la convención camelCase, la cual indica que las variables empiezan en minúscula y cuando cambias de palabra inicias el primer carácter con letra mayúscula. Por ejemplo: para nombrar la variable color del carro puedes utilizar los siguientes nombres: colorCarro o colorDelCarro.
+                    </li>
+
+                    <li>
+                        No debes usar palabras reservadas de JavaScript para nombrar variables.
+                    </li>
+
+                    <li>
+                        El nombre de las variables no debe empezar con números.
+                    </li>
+
+                    <li>
+                        El nombre de las variables no puede contener caracteres especiales como: &, ~, %, #.
+                    </li>
+
+                    <li>
+                        Las variables en JavaScript nunca pueden iniciar con números, pero sí pueden contener números en la mitad o al final del nombre.
+                    </li>
+
+                </ul>
+
+                <h3>Ejemplos</h3>
+
+                <div>
+                    <p>A continuación, tienes unos ejemplos de nombres de variables válidos en JavaScript:</p>
+                </div>
+
+                <ul class="lista">
+                    <li>
+                        <code class="negro">let pizza2go = "pizza";</code>
+                    </li>
+                    <li>
+                        <code class="negro">let aprendo_JAVASCRIPT = true;</code>
+                    </li>
+                    <li>
+                        <code class="negro">let $_$ = "moneda";</code>
+                    </li>
+                    <li>
+                        <code class="negro">let _saludo = "Hola";</code>
+                    </li>
+                    <li>
+                        <code class="negro">let nombreVariable = "camel case";</code>
+                    </li>
+                </ul>
+
+                <div>
+                    <p>Aquí puedes ver algunos ejemplos de nombres inválidos para las variables:</p>
+                </div>
+
+                <ul class="lista">
+                    <li>
+                        <code class="negro">let function = true;</code>
+                    </li>
+                    <li>
+                        <code class="negro">let total% = 125</code>
+                    </li>
+                    <li>
+                        <code class="negro">let class = "variables";</code>
+                    </li>
+                    <li>
+                        <code class="negro">let 2nombre = "clase de variables";</code>
+                    </li>
+                </ul>
+            </article>
+
+            <hr />
+
+            <!-- Variables Sensibles -->
+            <article>
+                <h2>Variables sensibles</h2>
+
+                <div>
+                    <p>
+                        Las variables son sensibles a mayúsculas de manera que <b>miVar, MiVar, mivar</b> son variables completamente diferentes. Es una buena práctica de programación, <b>evitar nombres similares entre las variables</b>, o nombres que no nos den una referencia clara de cuál puede ser su contenido, por ejemplo:
+                    </p>
+
+                    <br />
+
+                    <p>
+                        <code class="negro">var x = true;</code>
+                    </p>
+                </div>
+                
+            </article>
+
+            <hr />
+
+            <!-- Scope -->
+            <article>
+                <h2>Scope o ámbito</h2>
+
+                <div>
+                    <p>
+                        El <b>scope</b> en JavaScript se refiere a la <b>accesibilidad de las variables y funciones en diferentes partes del código</b>. Cada vez que se declara una variable o función en JavaScript, <b>se asigna a un ámbito, lo que determina dónde y cuándo se puede acceder a ella</b>. Hay <b>dos tipos</b> principales de alcance en JavaScript: <b>alcance global y alcance local</b>.
+                    </p>
+                </div>
+
+                <h3>Global Scope</h3>
+
+                <p>
+                    El <b>alcance global es el ámbito más amplio en JavaScript</b> y se refiere a las <b>variables y funciones que se declaran fuera de una función o bloque de código</b>. Las variables globales son <b>accesibles en todo el código</b> y <b>pueden ser modificadas desde cualquier lugar</b>.
+                </p>
+
+                <h3>Local Scope</h3>
+
+                <p>
+                    El <b>alcance local</b> se refiere a las <b>variables y funciones que se declaran dentro de una función o bloque de código</b>. Las variables locales <b>sólo son accesibles dentro de la función o bloque en el que se declaran</b> y no pueden ser modificadas desde fuera.
+                </p>
+
+                <div class="cont-codigo">
+
+                    <!-- Bloque #1 -->
+                    <code>
+                        <span class="tag-color">let</span>
+                        <span class="property-color">global</span>
+                        =
+                        <span class="value-color">'Soy una variable global'</span>;
+                    </code>
+
+                    <br><br>
+
+                    <!-- Bloque #2 -->
+                    <code>
+                        <span class="tag-color">const</span>
+                        <span class="property-color">prueba</span>
+                        =
+                        <span class="function-color">()</span>
+                        =>
+                        &#123
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="tag-color">let</span>
+                        <span class="property-color">local</span>
+                        =
+                        <span class="value-color">'Soy una variable en ambito local'</span>;
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="tag-color">console</span>.<span class="function-color">log</span><span class="parametro-color">(<span class="property-color">local</span>)</span>;
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="tag-color">console</span>.<span class="function-color">log</span><span class="parametro-color">(<span class="property-color">global</span>)</span>;
+                    </code>
+
+                    <br>
+
+                    <code>&#125</code>
+
+                    <!-- Bloque #3 -->
+
+                    <br><br>
+
+                    <code>
+                        <span class="function-color">prueba</span>();
+                        <span class="comment-color">// 'Soy una variable local' y 'Soy una variable global'</span>
+                    </code>
+
+                    <br>
+
+                    <code>
+                        <span class="tag-color">console</span>.<span class="function-color">log</span><span class="parametro-color">(<span class="property-color">global</span>)</span>;
+                        <span class="comment-color">// 'Soy una variable global'</span>
+                    </code>
+
+                    <br>
+
+                    <code>
+                        <span class="tag-color">console</span>.<span class="function-color">log</span><span class="parametro-color">(<span class="property-color">local</span>)</span>;
+                        <span class="comment-color">// ReferenceError: local is not defined</span>
+                    </code>
+
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Concatenando Variables -->
+            <article>
+                <h2>Concatenando Variables</h2>
+
+                <div>
+                    <p>
+                        En el siguiente ejemplo se declaran dos variables <b>(valor1)</b> y <b>(valor2)</b> que luego son utilizadas en una suma; al sumar las dos variables, el resultado es 12.
+                    </p>
+                </div>
+
+                <table>
+                    <tr>
+                        <td><code class="negro">let valor1 = 5;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="negro">let valor2 = 7;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="negro">valor1 + valor2;</code></td>
+                    </tr>
+                    <tr>
+                        <td class="contenido-centro fondo-color">Resultado</td>
+                    </tr>
+                    <tr>
+                        <td class="contenido-centro">12</td>
+                    </tr>
+
+                </table>
+
+                <div>
+                    <p>
+                        También es posible hacer uso de variables cuando estamos declarando otras variables:
+                    </p>
+
+                    <br />
+
+                    <p>
+                        <code class="negro">let suma = valor1 + 95;</code>
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Debemos tener en cuenta que al concatenar variables que contienen solo strings estaremos concatenando las cadenas de caracteres.
+                    </p>
+                </div>
+
+            </article>
+            
+            <hr />
+            
+            <!-- Reasignar Valores -->
+            <article>
+                <h2>Reasignar valores en las variables</h2>
+                
+                <p>
+                    Después de declarar variables, podemos <b>re-asignar nuevos valores o datos</b> para que sean almacenados en dichas variables:
+                </p>
+                
+                <table>
+                    <tr>
+                        <td>
+                            <code class="negro">let nombre = "carlos";</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code class="negro">nombre = "pedro";</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code class="negro">nombre;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="contenido-centro fondo-color">
+                            Resultado
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="contenido-centro">
+                            pedro
+                        </td>
+                    </tr>
+                </table>
+                
+                <p>
+                    En JavaScript, otra manera de declarar variables se puede lograr usando los comandos <b>let y const</b>, palabras reservadas para el lenguaje, definidas en el estándar ECMAScript 6. Con el comando <b>let</b> declaramos variables <b>limitando su uso a un bloque de código determinado</b>; mientras que con el comando <b>const</b> definimos constantes o variables que <b>tendrán un valor que no podrá modificarse posteriormente</b>.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Hoisting -->
+            <article>
+                <h2>Hoisting</h2>
+
+                <p>
+                    El <b>hoisting o elevación</b> es un comportamiento de JavaScript en el cual <b>las declaraciones de variables y funciones se mueven automáticamente al principio del ámbito actual</b> (global o de función) durante la fase de compilación, antes de la ejecución del código.
+                </p>
+
+                <br>
+
+                <p>
+                    Por lo tanto, en JavaScript, es posible acceder a una variable o función antes de que sean declaradas en el código, debido al hoisting. Sin embargo, es importante tener en cuenta que solo las declaraciones se elevan, no las asignaciones. Por ejemplo: 
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="tag-color">console</span>.<span class="function-color">log</span><span class="parametro-color">(<span class="property-color">variable</span>)</span>;
+                        <span class="comment-color">// undefined</span>
+                    </code>
+
+                    <br>
+
+                    <code>
+                        <span class="tag-color">var</span>
+                        <span class="property-color">variable</span>
+                        =
+                        <span class="value-color">'Hola'</span>;
+                    </code>
+                </div>
+
+                <p>
+                    En este ejemplo, la variable "variable" se declara después de la llamada a console.log(), sin embargo, no produce un error sino que imprime "undefined" en la consola. Esto se debe al hoisting, que eleva la declaración de la variable al principio del ámbito actual, lo que significa que se ha declarado la variable, pero aún no se le ha asignado un valor.
+                </p>
+
+                <br>
+
+                <p>
+                    Es importante tener en cuenta que las asignaciones no se elevan, solo las declaraciones. Por lo tanto, si intentas acceder a una variable antes de su declaración y asignación, se producirá un error.
+                </p>
+
+                <h3>Hoisting utilizando let</h3>
+
+                <p>
+                    El uso de la palabra clave let en lugar de var evita el hoisting y produce un error de referencia en la consola porque la variable no ha sido declarada antes de su uso.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="tag-color">console</span>.<span class="function-color">log</span><span class="parametro-color">(<span class="property-color">variable</span>)</span>;
+                        <span class="comment-color">// ReferenceError: variable is not defined</span>
+                    </code>
+
+                    <br>
+
+                    <code>
+                        <span class="tag-color">let</span>
+                        <span class="property-color">variable</span>
+                        =
+                        <span class="value-color">'Hola'</span>;
+                    </code>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+
+    <main>
+
+        <header>
+            <h1>Propiedad Flex</h1>
+
+            <nav>
+                <div class="menu-toggle">
+                    <svg class="menu-img" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </div>
+                
+                <ul class="list-links">
+                    <li>
+                        <a class="link" href="#elementos-padre">1. Propiedades para elementos Padre</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#wrap">2. Flex Wrap</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#flex-flow">3. Flex Flow</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    <b>Flexbox</b> (también conocido como Flexible Box Layout) es un <b>modelo de diseño</b> en CSS que se utiliza para <b>organizar y distribuir elementos HTML dentro de un contenedor</b>. Permite crear diseños <b>flexibles y dinámicos</b> que se adaptan a diferentes tamaños de pantalla y dispositivos.
+                </p>
+
+                <h3>Funcionamiento de Flexbox</h3>
+
+                <p>
+                    El modelo de Flexbox funciona a través de un <b>contenedor (o elemento padre)</b> que envuelve a uno o más <b>elementos secundarios (o hijos)</b>. El contenedor se define con la propiedad CSS <b>"display: flex"</b>, lo que establece que se va a utilizar el modelo de Flexbox para organizar sus hijos. 
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        &#60<span class="tag-color">div</span>
+                        <span class="property-color">class</span>=<span class="value-color">padre</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">div</span>
+                        <span class="property-color">class</span>=<span class="value-color">hijo</span>&#62Elemento hijo 1&#60/<span class="tag-color">div</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">div</span>
+                        <span class="property-color">class</span>=<span class="value-color">hijo</span>&#62Elemento hijo 2&#60/<span class="tag-color">div</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">div</span>
+                        <span class="property-color">class</span>=<span class="value-color">hijo</span>&#62Elemento hijo 3&#60/<span class="tag-color">div</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#60/<span class="tag-color">div</span>&#62
+                    </code>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.padre</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">flex</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <p>
+                    Una vez que se ha establecido <b>"display: flex"</b> en el contenedor, se pueden aplicar diferentes propiedades a los elementos secundarios para controlar su <b>tamaño, posición y comportamiento</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    <b>Importante:</b> el uso de display flex en el elemento padre y las respectivas propiedades que se utilicen en él se aplicarán <b>únicamente</b> a los <b>hijos directos</b> del contenedor. Si quisiéramos aplicar <b>flexbox</b> a elementos dentro de alguno de los hijos, deberemos colocar <b>“display:flex”</b> al <b>contenedor hijo que sea padre de sus propios elementos hijos</b>. 
+                </p>
+
+                <br />
+
+                <p>
+                    Es importante destacar, aprender los conceptos de display <b>outside e inline</b> porque un elemento con la propiedad display-flex modifica su comportamiento dentro de su propio contenedor, por fuera tendrá la disposición de display-block.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Propiedades Flexbox -->
+            <article id="propiedades-flexbox">
+                <h2>Propiedades Flexbox</h2>
+
+                <p>
+                    Como mencionamos anteriormente, flexbox tiene una serie de propiedades que permiten controlar el tamaño, posición, dirección y comportamiento de los elementos. Existen propiedades de flexbox que se aplicarán a los elementos padre y otras que se aplicarán a los elementos hijos.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Propiedades elementos padre -->
+            <article id="elementos-padre">
+                <h2>Propiedades para elementos padre</h2>
+
+                <h3>propiedad: Flex-direction</h3>
+
+                <p>
+                    La propiedad <b>"flex-direction"</b> es una propiedad CSS que se utiliza para establecer la <b>dirección</b> en la que se colocan los elementos secundarios (o hijos) dentro de un contenedor en <b>Flexbox</b>. Esta propiedad define el <b>eje principal del contenedor</b> y afecta a la forma en que se distribuyen los elementos secundarios a lo largo de este eje.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.padre</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">flex</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">flex-direction</span>:
+                        <span class="comment-color">/* row | row-reverse | column | column-reverse */</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <p>
+                    En el diseño <b>“flex”</b>, los nodos hijos se pueden distribuir en <b>dirección vertical u horizontal</b> y se pueden "flexibilizar" sus tamaños, bien sea rellenando el espacio disponible o encogiéndose para evitar salirse del contorno del nodo padre.
+                </p>
+
+                <figure>
+                    <img src="./img/direcciones.png" alt="flex" />
+                </figure>
+
+                <p>
+                    Debemos tener en cuenta que al aplicar la propiedad 'flex', el comportamiento de los elementos hijos no llenarían todo el ancho del contenedor padre (width), pero sí estarán ocupando todo el height del contenedor. Es decir, la propiedad width de los elementos flex debemos estructurar manualmente.
+                </p>
+
+                <div class="cont-row">
+                    <h4>Flex direction: Row</h4>
+
+                    <p>
+                        Es el <b>valor por defecto de flex-direction</b>. Implica que los elementos hijos se colocarán en una <b>fila de izquierda a derecha</b>.
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="flex-row">
+                            <div class="caja">Caja 1</div>
+                            <div class="caja">Caja 2</div>
+                            <div class="caja">Caja 3</div>
+                            <div class="caja">Caja 4</div>
+                            <div class="caja">Caja 5</div>
+                            <div class="caja">Caja 6</div>
+                        </div>
+                    </div>
+
+                    <p>
+                        No suele ser necesario colocar esta propiedad con este valor ya que, como mencionamos antes, es el valor predeterminado que tomará un contenedor con la propiedad <b>display:flex</b>. No obstante, existen casos puntuales como cuando trabajemos en la adaptabilidad de nuestra página a todos los dispositivos en los cuales podemos llegar a tener que colocar este valor.
+                    </p>
+                </div>
+
+                <!-- Row-reverse -->
+                <div class="row-reverse">
+                    <h4>Flex direction: Row-reverse</h4>
+
+                    <p>
+                        Colocar este valor implica que los elementos hijos se colocarán en una <b>fila de derecha a izquierda</b>, a la inversa del valor row.
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="flex-row-reverse">
+                            <div class="caja">Caja 1</div>
+                            <div class="caja">Caja 2</div>
+                            <div class="caja">Caja 3</div>
+                            <div class="caja">Caja 4</div>
+                            <div class="caja">Caja 5</div>
+                            <div class="caja">Caja 6</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column -->
+                <div class="colum">
+                    <h4>Flex direction: Column</h4>
+
+                    <p>
+                        Colocar este valor implica que los elementos hijos se colocaran en <b>columna, de arriba hacia abajo</b> ocupando todo el ancho del elemento disponible.
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="flex-column">
+                            <div class="caja">Caja 1</div>
+                            <div class="caja">Caja 2</div>
+                            <div class="caja">Caja 3</div>
+                            <div class="caja">Caja 4</div>
+                            <div class="caja">Caja 5</div>
+                            <div class="caja">Caja 6</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column Reverse -->
+                <div class="column-reverse">
+                    <h4>Flex direction: Column-reverse</h4>
+
+                    <p>
+                        Colocar este valor implica que los elementos hijos se colocaran en columna, de abajo hacia arriba, a la inversa de column.
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="flex-column-reverse">
+                            <div class="caja">Caja 1</div>
+                            <div class="caja">Caja 2</div>
+                            <div class="caja">Caja 3</div>
+                            <div class="caja">Caja 4</div>
+                            <div class="caja">Caja 5</div>
+                            <div class="caja">Caja 6</div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Flex Wrap -->
+            <article id="wrap">
+                <h2>Flex Wrap</h2>
+                
+                <p>
+                    Esta propiedad especifica si los elementos “hijos” <b>son obligados a permanecer en una misma línea o pueden fluir en varias líneas</b>. Si la <b>'wrap'</b> está permitida, esta propiedad también permite controlar la dirección en la cual serán aplicados los elementos.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.padre</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">flex</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">flex-wrap</span>:
+                        <span class="comment-color">/* nowrap | wrap | wrap-reverse */</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <!-- no-wrap -->
+                <div class="no-wrap">
+                    <h3>Nowrap</h3>
+
+                    <p>
+                        Es el <b>valor por defecto de la propiedad flex-wrap</b>, los elementos hijos <b>se ajustarán automáticamente para intentar que todos ellos encajen en una sola línea</b>. Si no hay suficiente espacio en la línea, se <b>reducirán de tamaño para ajustarse</b>. Si este es el comportamiento que queremos que tengan por defecto los elementos hijos de nuestro contenedor, no es necesario ponerlo en el código.
+                    </p>
+                </div>
+
+                <!-- wrap -->
+                <div class="wrap">
+                    <h3>Wrap</h3>
+
+                    <p>
+                        Los elementos hijos se <b>distribuirán en líneas, si es necesario,</b> respetando la dirección establecida con la propiedad "flex-direction". Es decir, si la dirección es "row", los elementos se distribuirán en filas y si es "column", en columnas. Si alguno de los elementos <b> no cabe en la línea, se volcará a una nueva línea</b>.
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/wrap.png" alt="wrap" />
+                </figure>
+
+            </article>
+
+            <hr />
+
+            <!-- flex-flow -->
+            <article id="flex-flow">
+                <h2>Flex-flow</h2>
+
+                <p>
+                    Es una <b>propiedad abreviada</b> de CSS que combina las propiedades <b>flex-direction y flex-wrap</b>. Podemos utilizar cualquiera de los valores de cada una , separados por un espacio, siendo el <b>primer valor la dirección y el segundo el wrap</b>.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.padre</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">flex</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">flex-flow</span>:
+                        <span class="value-color">column wrap</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+            </article>
+
+        </section>
+    </main>
+    <script src="./js/main.js"></script>
+</body>
+</html>

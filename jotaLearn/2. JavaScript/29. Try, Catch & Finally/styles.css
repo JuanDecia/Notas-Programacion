@@ -1,0 +1,38 @@
+body {
+    background-color: aliceblue;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    max-width: 85%;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: rgb(28, 99, 99);
+}
+
+code {
+    display: block;
+    padding: 5px 0;
+}
+
+p {
+    text-align: justify;
+}
+
+/* ESTILOS CONTENEDORES */
+
+    /* Contenedor ejemplo */
+.fondo-codigo {
+    background-color: bisque;
+}
+
+.indentado-20 {
+    margin-left: 20px;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructores</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Constructores</h1>
+        </header>
+
+        <section>
+
+            <!--Introducción-->
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        Anteriormente hemos estado trabajando con <b>objetos</b>, hemos visto como es
+                        la construcción del dato de este tipo. Ahora, teniendo en cuenta que un objeto puede
+                        cambiar por un detalle lo que nos obligaría crear otro nuevo pero con prácticamente
+                        los mismos datos. Para evitar esta práctica y que el código sea tedioso existe un 
+                        método llamado <b>constructor</b> el cual nos da la oportunidad de crear distintos
+                        <b>objetos</b> sin tener que reescribir todo el bloque de código.
+                    </p>
+
+                    <p>
+                        Para utilizar estos constructores debemos utilizar la palabra reservada de JS <b>new</b>
+                        la cual nos guarda un <b>espacio en memoria</b> cada vez que realizamos la llamada
+                        de la misma para crear un nuevo objeto.
+                    </p>
+
+                    <p>
+                        Para realizar una <b>buena práctica</b> de un <b>método constructor</b> de objetos es
+                        recomendable realizar una <b>function</b> y el nombre de la función debe comenzar con
+                        <b>mayúsculas</b> (parecido a como se crea una clase). Dentro de los parámetros del
+                        constructor, colocaremos los atributos que tendrá el objeto. Posteriormente, en el cuerpo
+                        de la función usaremos la palabra reservada <b>this</b> para indicar que estamos trabajando
+                        con este <b>mismo objeto</b>. Es muy importante esta práctica porque al crear un nuevo
+                        objeto con <b>new</b> al ejecutar la función, <b>this</b> va a estar apuntando al objeto que
+                        se está creando.
+                    </p>
+
+                    <p>
+                        Luego de <b>this</b> debemos colocar un <b>punto (.)</b> seguido del <b>nombre de la propiedad</b>
+                        que va a ocupar el espacio del objeto y posteriormente le <b>asignamos</b> el valor del parámetro.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>function Persona (nombre, apellido, email) {</code>
+                    <code class="indentacion">this.nombre = nombre;</code>
+                </div>
+
+                <div>
+                    <p>
+                        La declaración anterior trabaja de la siguiente manera: <b>this.nombre</b> esta guardando el
+                        espacio para la propiedad <b>nombre</b> que va a ser creada y le asignamos el valor que se
+                        va a pasar por el <b>parámetro</b> cuando se <b>cree</b> el nuevo objeto.
+                    </p>
+                </div>
+                
+            </article>
+
+            <hr />
+
+            <!-- Sintaxis -->
+            <article>
+                <h2>Sintaxis</h2>
+
+                <div>
+                    <p>
+                        La sintaxis de la definición anterior quedaría de la siguiente manera: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>function Persona(nombre, apellido, mail) {</code>
+                    <code class="indentacion">this.nombre = nombre;</code>
+                    <code class="indentacion">this.apellido = apellido;</code>
+                    <code class="indentacion">this.mail = mail;</code>
+                    <code>};</code>
+                </div>
+
+                <div>
+                    <p>
+                        Lo que acabamos de definir es una <b>función constructor de Persona</b>.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Llamado constructor -->
+            <article>
+                <h2>Llamado constructor</h2>
+
+                <div>
+                    <p>
+                        Lo que nos resta por hacer es el llamado del constructor. Recordemos que debemos
+                        realizarlo con la palabra reservada <b>new</b> y al nombre del objeto debemos colocarlo
+                        con <b>mayúscula</b>. Para este ejemplo usaremos <b>padre</b> para el <b>objeto</b>
+                        creado por el constructor.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>let padre = new Persona('Juan', 'Decia', 'juan@gmail.com');</code>
+                </div>
+
+                <div>
+                    <p>
+                        Mostramos los valores del nuevo objeto: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+
+            </article>
+
+        </section>
+    </main>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

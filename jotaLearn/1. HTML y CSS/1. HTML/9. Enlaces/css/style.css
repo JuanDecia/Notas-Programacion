@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 80%;
+    margin: auto;
+    font-family: sans-serif;
+    background-image: url('../img/fondo-imagen.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    background-color: rgb(197, 201, 204, 0.9);
+    padding: 25px;
+}
+
+p {
+    text-align: justify;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+h3 {
+    color: rgb(103, 45, 240);
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.cont-codigo {
+    background-color: rgb(56, 55, 55);
+    margin: 20px auto;
+    padding: 7px;
+    text-align: center;
+    width: 70%;
+    border-radius: 5px;
+}
+
+.cont-codigo code {
+    color: rgb(22, 128, 250);
+}
+
+.color-propiedad {
+    color: rgb(90, 193, 252);
+}
+
+.color-valor {
+    color: rgb(252, 134, 38);
+}
+
+/* -- Animaciones -- */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(-30px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+/* ############ HEADER */
+
+header {
+    margin: 30px;
+}
+
+h1 {
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    gap: 20px;
+    padding-left: 0;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: rgb(236, 103, 14);
+    font-weight: 600;
+    font-size: 1.2em;
+    position: relative;
+}
+
+.arrow {
+    width: 35px;
+}
+
+/* Subrayado Dinámico */
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    height: 2px;
+    color: #ffffff;
+    background-color: #ffffff;
+    width: 50%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+/* -- Articulo Menú Toggle */
+
+.menu {
+    width: 45px;
+    display: none; /* Se muestra a partir de 768px */
+}
+
+/* ############ MAIN CONTENT */
+
+/* -- Articulo Introducción -- */
+
+.cont-introduccion {
+    display: flex;
+}
+
+/* -- Artículo Secciones Internas */
+
+.secciones-internas {
+    margin: 20px 0;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.img-ejemplo {
+    max-width: 90%;
+}
+
+.cont-codigo h3 {
+    margin: 10px;
+    color: rgb(155, 81, 224);
+}
+
+/* -- Articulo Anclas -- */
+
+.cont-anclas {
+    margin: 25px 0;
+}
+
+.cont-anclas h3 {
+    margin: 15px 0;
+}
+
+.ejemplo-ancla {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+/* ######### RESPONSIVE DESIGN */
+
+/* 778px */
+@media (max-width: 778px) {
+    
+    .menu {
+        display: flex; /* Se muestra menú que estaba oculto */
+    }
+
+    header {
+        margin: 0;
+    }
+
+    ul {
+        position: absolute;
+        left: 140px;
+        flex-direction: column;
+        width: 60%;
+        padding: 7px;
+        border-radius: 5px;
+        background-color: rgba(51, 50, 50, 0.938);
+        display: none;
+    }
+    
+    svg {
+        display: none;
+    }
+
+    a {
+        width: 60%;
+        padding: 10px;
+    }
+
+    a::after {
+        width: 90%;
+        left: 0;
+    }
+
+    /* Mostramos Menú desde JS */
+    .open-menu {
+        display: flex;
+        animation: fade 0.9s ease-in, slide-left 0.9s ease-in-out;
+    }
+}
+
+/* 576px */
+@media (max-width: 576px) {
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    li {
+        margin: 5px 0;
+    }
+}
+
+
+

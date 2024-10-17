@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+
+        <!-- Header -->
+        <header>
+            <h1>Prototype</h1>
+        </header>
+
+        <!-- Main Content -->
+        <section>
+
+            <article>
+                <p>
+                    Los <b>Prototype</b> son funciones <b>orientadas a objetos</b>. La declaración es la misma que utilizamos cuando creamos una función general, lo que cambia en su sintaxis es que a sus <b>parámetros</b> los llamamos como en los objetos con <b>this</b>, así que al momento de llenar los parámetros tome esos datos que estamos agregando al momento de la llamada.
+                </p>
+
+                <p>
+                    Debemos saber que aún no hemos declarado la function <b>prototype</b>, solo dimos una pequeña introducción de como armar una función para que pueda usarse luego con <b>prototype</b>.
+                </p>
+            </article>
+
+            <article>
+                <h2>Sintaxis:</h2>
+
+                <p>
+                    <code>
+                        function Tiburon(nombre, nombreCientifico) { <br>
+                            this.nombre = nombre; <br>
+                            this.nombreCientifico = nombreCientifico; <br>
+                        }
+                    </code>
+                </p>
+
+                <p>
+                    Una vez construida la functión debemos agregar los <b>methods</b> con <b>prototype</b>. Osea estamos creando una <b>method function para la clase Tiburon</b>. Este <b>method</b> se llamará "atacar".
+                </p>
+
+                <p>
+                    <code>
+                        Tiburon.prototype.atacar = function() { <br>
+                            console.log("cuidado fuera del agua") <br>
+                        }
+                    </code>
+                </p>
+
+                <p>
+                    Como podemos obserbar primero, se coloca el nombre de la <b>clase function</b> que es "Tiburon" luego, colocamos el method <b>prototype</b> y por último colocamos <b>el nombre que tendra este method dentro de la clase</b> que en este caso es "atacar". <br>
+                    A esta declaración que hemos armado nos queda declararle "=" que es una <b>function</b> y dentro de las llaves de <b>function</b> colocaremos el proceso de este method.
+                </p>
+            </article>
+
+            <article>
+                <h2>Instanciando la function class Tiburon</h2>
+                <p>
+                    Ahora para utilizar los <b>unos atributos específicos de la nueva clase que hemos hecho</b> debemos instanciarla. Para ello crearemos una nueva variable con nombre "martillo" y le instanciamos "Tiburon."
+                </p>
+
+                <p>
+                    <code>
+                        const martillo = new Tiburon('tiburon martillo', 'prionacle glauca');
+                    </code>
+                </p>
+            </article>
+
+        </section>
+
+        <section>
+
+            <article>
+                <h2>Herencia en los Prototypes</h2>
+
+                <p>
+                    Podemos heredar los Prototypes de una clase, y la sintaxis es muy similar a lo que venismos construyendo con las herencias de los objetos. Debemos saber que siempre tenemos que <b>crear una clase antes de hacer una herencia</b>.
+                </p>
+            </article>
+
+            <article>
+                <h2>Sintaxis:</h2>
+
+                <p>
+                    Para esta sintaxis crearemos un ejemplo creando una clase nueva llamada "TiburonToro" (recordemos que los nombres de las clases siempre están en mayúsculas). Esta clase tendrá atributos heredados (nombre, nombreCientifico) y atributos nuevos (peligrosidad).
+                </p>
+
+                <p>
+                    Para comenzar esta nueva construcción vamos a declarar que es una function (recordemos que los prototypes trabajan en base a este tipo de construcción de objetos) con nombre "TiburonToro" y dentro de los parametros los atributos que heredamos y nuevos que son: nombre, nombreCientifico y peligrosidad. Recordemos que primero se colocan los <b>atributo que vamos a heredar</b> y luego los <b>nuevos atributos</b>. Esta parte de la sintaxis quedaría de la siguiente manera:
+                </p>
+
+                <p>
+                    <code>function TiburonToro(nombre, nombreCientifico, peligrosidad) {}</code>
+                </p>
+
+                <p>
+                    A continuación con la palabra clave <b>this</b> porque estamos haciendo referencia a este constructor, y <b>super</b>, debemos colocar de qué <b>clase vamos a heredar los prototypes</b>, en nuestro caso es de la clase "Tiburon". Pero, un detalle muy importante es que en esta instancia <b>se declara como un valor</b> como si fueramos a copiar el valor de una variable:
+                </p>
+
+                <p>
+                    <code>this.super = Tiburon</code>
+                </p>
+
+                <p>
+                    Luego de realizar el paso anterior sí <b>colocamos los atributos que vamos a heredar de la clase tiburon</b> que en nuestro caso son "nombre" y "nombreCientifico". <br>
+                    Debemos colocar nuevamente <b>this</b> y <b>super</b> pero en este caso, si pasar como <b>parámetro</b> los <b>atributos que vamos a heredar</b>:
+                </p>
+
+                <p>
+                    <code>this.super(nombre, nombreCientifico)</code>
+                </p>
+
+                <p>
+                    Por último debemos crear el atributo interno de <b>peligrosidad</b> en la clase para que tome el valor del parámetro. La construcción de esta es como la venimos trabajando anteriormente:
+                </p>
+
+                <p>
+                    <code>this.peligrosidad = peligrosidad</code>
+                </p>
+
+                <p>
+                    El código hasta este punto quedaría de la siguiente manera:
+                </p>
+
+                <p>
+                    <code>
+                        function TiburonToro(nombre, nombreCientifico, peligrosidad) { <br>
+                            this.super = Tiburon <br>
+                            this.super(nombre, nombreCientifico) <br>
+                            this.peligrosidad = peligrosidad <br>
+                        } <br>
+                    </code>
+                </p>
+            </article>
+
+            <article>
+                <h2>Instancia de TiburonToro</h2>
+
+                <p>
+                    Luego de construir la herencia debemos proceder a crear la instancia de Tiburon Toro la cual le debemos dar el prototype como en los casos anteriores.
+                </p>
+
+                <p>
+                    La instancia se llamará "costero" y debemos tener en cuenta que al darle la instancia debemos colocar en su sintaxis <b>prototype</b>, ya que necesitamos heredar específicamente esa parte de la <b>clase tiburon</b>:
+                </p>
+
+                <p>
+                    Debemos prestar de todas maneras mucha atención en la sintaxis, ya que, debemos pasar <b>2 valores en la misma linea de código</b>. Porque, primero a "costero", le vamos a pasar el prototype de <b>TiburonToro.prototype</b> que a su vez le vamos a pasar el valor que es una <b>nueva instancia de "tiburon"</b>. Osea, que tenemos que copiar los datos de Tiburon.
+                </p>
+
+                <p>
+                    <code>const costero = TiburonToro.prototype = new Tiburon()</code>
+                </p>
+
+                <p>
+                    Ahora nos queda darle acceso a la clase tiburon para que termine de heredar los datos:
+                </p>
+
+                <p>
+                    <code>TiburonToro.prototype.constructor = Tiburon</code>
+                </p>
+
+            </article>
+
+        </section>
+
+        <section>
+
+            <article>
+                <h2>Sobreescritura de Métodos</h2>
+
+                <p>
+                    Esta práctica es muy útil cuando necesitamos heredar un <b>method</b> pero debemos hacer pequeños cambios en su contenido.
+                </p>
+
+                <p>
+                    Para nuestro ejemplo, sobreescribiremos el method que le hemos dado a la clase "Tiburon" para darle un contenido más específico a "TiburonToro".
+                </p>
+            </article>
+
+            <article>
+                <h2>Sintaxis:</h2>
+
+                <p>
+                    La construcción de la sobreescritura es muy sencilla, simplemente debemos hacer la llamada de la clase que estamos utilizando (en nuestro caso de ejemplo es "TiburonToro") y procedemos a acceder al prototype luego, al nombre de la function (en nuestro ejemplo el nombre de function es: atacar) y por último sobreescribir el contenido de <b>function</b>. Esto se hace de la siguiente manera:
+                </p>
+
+                <p>
+                    <code>
+                        TiburonToro.prototype.atacar = function() { <br>
+                            console.log('Cuidado fuera del agua, toro en las proximidades')
+                        }
+                    </code>
+                </p>
+
+                <p>
+                    Si prestamos atención simplemente lo que acabamos de hacer es literalmente llamar al prototype y sobreescribirlo.
+                </p>
+            </article>
+        </section>
+        
+    </main>
+</body>
+</html>

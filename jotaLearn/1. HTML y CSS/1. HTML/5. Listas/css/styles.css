@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: url('../img/fondo-imagen.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    max-width: 85%;
+    margin: auto;
+}
+
+main {
+    background-color: rgb(197, 201, 204, 0.9);
+    padding: 25px;
+}
+
+h2 {
+    margin: 20px 0;
+    color: rgb(38, 99, 231);
+}
+
+h3 {
+    margin: 20px;
+    color: rgb(103, 45, 240);
+}
+
+p {
+    text-align: justify;
+}
+
+img {
+    max-width: 90%;
+}
+
+/* -- Animaciones -- */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ######### HEADER */
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+/* ######### MAIN CONTENT */
+
+/* -- Article Ul -- */
+
+.cont-ul {
+    margin-bottom: 20px;
+}
+
+.cont-codigo {
+    margin: 20px 0 20px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+/* Contenedor Ul */
+.ejemplo-ul {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    width: 30%;
+}
+
+.resultado-ul {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    background-color: #ffffff;
+}
+
+.span-ul, .elemento-li {
+    color: rgb(54, 131, 233);
+}
+
+/* Contenedor li */
+.elemento-li {
+    margin-left: 10px;
+}
+
+.span-blanco {
+    color: #ffffff;
+}
+
+/* -- Articulo Listas Anidadas -- */
+
+.cont-anidadas {
+    margin-bottom: 20px;
+}
+
+.cont-instrucciones {
+    margin: 20px 0;
+}
+
+.cont-instrucciones ul li {
+    padding: 5px;
+}
+
+.cont-ejercicio {
+    display: flex;
+    gap: 30px;
+}
+
+.cont-resultado {
+    display: flex;
+    align-items: center;
+}
+
+/* -- Articulo Definiciones -- */
+.cont-definiciones {
+    margin-bottom: 20px;
+}
+
+/* ######### MEDIA QUERIES */
+
+@media (max-width: 570px) {
+    .imagenes-ejemplo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagenes-ejemplo img:first-child {
+        margin-bottom: 20px;
+        border: 1px solid blue;
+    }
+}

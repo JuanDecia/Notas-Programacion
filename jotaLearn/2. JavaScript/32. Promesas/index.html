@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesas</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Promesas</h1>
+        </header>
+
+        <section>
+            <article>
+                <div>
+                    <h2>Introducción</h2>
+                </div>
+
+                <div>
+                    <p>
+                        Trabajar con promesas es trabajar con las funciones asincronas, es decir, que no se ejecutan 
+                        línea por línea.
+                    </p>
+
+                    <p>
+                        Una promesa se instancia en una variable usando el method class "new" y la palabra clave "promise()". 
+                        Dentro de sus parámetros debemos crear una "function()" con parámetros "resolve" y "reject". 
+                        La sintaxis quedaría de la siguiente manera:
+                    </p>
+
+                    <p><code class="fondo-codigo">let promesa = New promise(function(resolve, reject){})</code></p>
+
+                    <p>
+                        Esta función en vez de retornar un resultado nos retorna una promesa, es decir, la función puede 
+                        ejecutarse (resolve) pero no estámos seguros si realmente sucederá, osea, la función es rechazada 
+                        (reject).
+                    </p>
+
+                    <p>
+                        Debemos saber que luego de construir la promise osea, de haber declarado las construcciones dentro 
+                        de resolve como de reject, debemos colocar un return de la variable que hemos instanciado (promesa). 
+                        Porque, esta es la que nos devolvera los resultados.
+                    </p>
+
+                    <p>
+                        El return se encuentra entre el cierre de la construccion de resolve y reject y el cierre del la 
+                        function donde se encuentra en este ejemplo:
+                    </p>
+
+                    <div class="fondo-codigo">
+                        <code>}) "cierre de resolve y reject"</code>
+                        <code>return promesa;</code>
+                        <code>) "cierre de function"</code>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Babel para ES6 -->
+        <section>
+            <article>
+                <div>
+                    <h2>Babel para ES6</h2>
+                </div>
+
+                <div>
+                    <p>
+                        Para trabajar con este método es necesario saber incluir la librería babel a nuestro código de JS, 
+                        ya que, vamos a trabajar con ES6 que podrá ser procesado incluso por navegadores que no soportan 
+                        esta version de JS.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Babel con etiquetas</h3>
+                </div>
+
+                <div>
+                    <p>
+                        Tenemos dos maneras de incluílo, creando lineas de código dentro de nuestro archivo de JS con las 
+                        etiquetas de script y especificando el siguiente atributo: 
+                    </p>
+
+                    <p>
+                        <code class="fondo-codigo">type="text/babel"</code>
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Babel en archivo externo</h3>
+                </div>
+
+                <div>
+                    <p>
+                        Para incluír babel en un archivo externo debemos crear un archivo llamado <span><b>babel.min.js</b></span> y debemos 
+                        incluírlo luego en la hoja de html.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Resolve, Then & Reject -->
+        <section>
+            <article>
+                <div>
+                    <h2>Resolve, Then & Reject</h2>
+                </div>
+
+                <div>
+                    <p>
+                        Como anteriormente hemos visto, cuando hablamos de resolve en una construcción de promise estamos 
+                        haciendo referencia a la parte de la función de si se cumple.
+                    </p>
+
+                    <p>
+                        Al instanciar promise, cuando estamos haciendo la construcción de la misma, podemos declarar 
+                        resolve y dentro de lo que esté en su declaración es lo que se ejecuta si la promesa se cumple. 
+                        Para dar un ejemplo pondremos:
+                    </p>
+
+                    <p><code class="fondo-codigo">resolve('Cuarto arreglado');</code></p>
+
+                    <p>
+                        Una vez hecha esta construcción debemos usar el method then(), el cual recibe como parámetro una 
+                        function(). Esta function también recibe un parámetro, este puede tener cualquier nombre, pero es 
+                        obligatorio utilizarlo ya que en él estará el resultado que le dimos de valor a resolve, osea en 
+                        este caso, contiene 'Cuarto arreglado'.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <div>
+                    <h3>Sintaxis y Descripción</h3>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>function arregarCuarto() {</code>
+                    <code class="indentado-20">let promesa = new Promise(function(resolve, reject){</code>
+                    <code class="indentado-40">resolve('Cuarto arreglado');</code>
+                    <code class="indentado-40">reject('No se arregló');</code>
+                    <code class="indentado-20">})</code>
+                    <code class="indentado-20">return promesa;</code>
+                    <code>};</code>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>arregarCuarto().then(function(resultado){</code>
+                    <code class="indentado-20">console.log(resultado);</code>
+                    <code>}).catch(function(error){</code>
+                    <code class="indentado-20">console.log(error); // No se imprime porque la promesa si se cumple //</code>
+                    <code>});</code>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>
+                            <b>Línea 2: </b>se instancia la promesa en una variable, pasandole como parámetro una <b>function()</b> y 
+                            dentro de los parámetros de function pasar <b>resolve</b> y <b>reject</b>.
+                        </li>
+                        <li>
+                            <b>Línea 3: </b>construímos <b>resolve</b> y <b>reject</b> de la promesa en donde es si lo prometido <b>se cumple</b>. Debemos 
+                            saber que debe estar dentro del method <b>then()</b> construido luego.
+                        </li>
+                        <li>
+                            <b>Línea 6: </b>retornamos el valor de la instancia de la <b>promesa</b>, tanto si se cumple como si no.
+                        </li>
+                        <li>
+                            <b>Línea 9: </b>hacemos la llamada de la function donde se encuentra la promesa, seguido del method 
+                            <b>then()</b> <span class="color-texto">"arreglarCuarto.then()"</span>, el cual <b>then()</b> nos retorna el resultado de la
+                            <b>promise</b> si se cumple. Osea, en donde anteriormente hemos declarado con reject. Como podemos 
+                            observar <b>then()</b> recibe un parámetro, ese parámetro que recibe es una <b>function()</b>: 
+                            <span class="color-texto">"then(function())"</span> al cual le debemos pasar obligatoriamente un parámetro con nombre 
+                            x (cualquiera) porque es el parámetro que contendrá el contenido que hemos declarado en resolve, 
+                            en este caso será <b>"contenidoResolve"</b>: <span class="color-texto">"then(function(contenidoResolve))"</span>.
+                        </li>
+                        <li>
+                            <b>Línea 10: </b>Imprimimos en consola el resultado de toda la construcción mencionada anteriormente.
+                        </li>
+                        <li>
+                            <b>Línea 11: </b>Realizamos la construcción de <b>catch()</b> en donde le pasamos un parametro <b>function()</b>
+                            con parámetro <b>error</b>. Este parámetro tendrá el contenido que se construye en <b>Reject</b>.
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p>
+                        Al ser una declaración simple, el resultado de de la promesa nos retornará true, por ende,
+                        vemos aparecer por consola el mensaje de 'Cuarto arreglado'.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Reject & Catch -->
+        <section>
+            <article>
+                <div>
+                    <h2>Reject & Catch</h2>
+                </div>
+
+                <div>
+                    <p>
+                        Las promises también pueden ser rechazadas, esto sucede cuando las promises no se cumplen. 
+                        Para aplicar esta parte de promise necesitamos usar la palabra clave reject.
+                    </p>
+
+                    <p>
+                        Reject cumple con las mismas características que Resolve, pero a diferencia que esta no se ejecuta 
+                        dentro de then(), si no que se ejecuta con "catch()".
+                    </p>
+
+                    <p>
+                        <code class="fondo-codigo">reject('No se arregló');</code>
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Catch</h3>
+                </div>
+
+                <div>
+                    <p>
+                        El method catch() también recibe una "fuction()" con parámetro "error", el cual nos describe el 
+                        nombre de la promesa que no se cumple. Este parámetro "error" contiene la construcción de  Reject.
+                    </p>
+
+                    <p>
+                        <code class="fondo-codigo">arreglarElCuarto.catch(function(error){console.log(error)});</code>
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="./babel/babel.min.js"></script>
+</body>
+</html>

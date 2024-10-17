@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Shadow</title>
+
+    <link rel="stylesheet" href="../css/box-shadow.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Box-Shadow</h1>
+        </header>
+    
+        <!-- Main Content -->
+        <section>
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+    
+                <p>
+                    La propiedad CSS <b>box-shadow añade efectos de sombra alrededor del marco de un elemento</b>. Se pueden definir múltiples efectos separados por comas. La caja de la sombra se describe por los desplazamientos en X e Y, los radios de desenfoque y dispersión, y el color relativo al elemento.
+                </p>
+
+                <br />
+
+                <p>
+                    La propiedad <b>box-shadow permite proyectar una sombra difuminada desde el marco de casi cualquier elemento</b>. Si border-radius es especificado en un elemento con la propiedad box-shadow, <b>la sombra adopta la misma curva en las esquinas</b>. El z-orden de múltiples cajas de sombra es la misma que de múltiples sombras de texto (la primera sombra definida se ubica hasta arriba).
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Sintaxis -->
+            <article>
+                <h2>Sintaxis</h2>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.ejemplo-shadow</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        /* offset-x | offset-y | blur-radius | spread-radius | color */
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">box-shadow</span>:
+                        <span class="value-color">2px 2px 2px 1px rgba(0, 0, 0, 0.2)</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <div class="lista-shadow">
+                    <ul>
+                        <li>
+                            <b>offset-x: </b>Posición horizontal de la sombra.
+                        </li>
+                        <li>
+                            <b>offset-y: </b>Posición vertical de la sombra.
+                        </li>
+                        <li>
+                            <b>blur-radius: </b>Distancia del desenfoque.
+                        </li>
+                        <li>
+                            <b>spread-radius: </b>Tamaño de la sombra.
+                        </li>
+                        <li>
+                            <b>color: </b>Color de la sombra.
+                        </li>
+                    </ul>
+                </div>
+
+                <p>
+                    De todos los anteriormente mencionados, los únicos valores obligatorios son los offset y el color.
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

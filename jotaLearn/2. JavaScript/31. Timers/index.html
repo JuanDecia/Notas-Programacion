@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timers</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Timers</h1>
+        </header>
+
+        <section>
+            <article>
+                <div>
+                    <h2>Introducción</h2>
+                </div>
+
+                <div>
+                    <p>
+                        Anteriormente hemos visto como trabajan las funciones <b>callback</b>. Este concepto
+                        es importante adquirirlo para continuar con el tema correspondiente <b>timers</b>.
+                        Los <b>timers</b> en JS trabajan a manera de <b>callback</b> y tenemos a disposición
+                        algunos de ellos. En estos ejemplos vamos a ver la practica de <b>setTimeOut()</b> y
+                        <b>setInterval()</b>.
+                    </p>
+                </div>
+            </article>
+
+            <!-- SetTimeOut -->
+            <article class="set-time-out">
+                <div>
+                    <h2>setTimeOut()</h2>
+                </div>
+
+                <div>
+                    <p>
+                        Cuando pase un tiempo determinado en el parámetro que declaramos se active una acción. Debemos
+                        tener en cuenta que, para el temporalizador de este method debemos declarar el timepo en
+                        <b>milisegundos</b>. 
+                    </p>
+
+                    <p>
+                        Debemos saber que <b>1 segundo</b> son <b>1000 milisegundos</b>. Nosotros debemos <b>multiplicar</b>
+                        los segundos <b>.1000</b> para obtener los segundos que estamos buscando. <br/>
+                        Por ejemplo, si queremos utilizar 10 segundos nuestra cuenta debe ser "10 x 1000", lo cual nos
+                        dará 10000 milisegundos que es lo que debemos declarar como tiempo.
+                    </p>
+
+                    <p>
+                        Debemos saber que tenemos que luego de uzar el temporalizador debemos <b>limpiarlo a 0</b>. Esto no realizará ningun cambio
+                        en el funcionamiento de la web, pero dejamos el temporalizador en 0 para poder volver a utilizarlo
+                        si lo deseamos. 
+                    </p>
+
+                    <p>
+                        El method para limpiar setTimeOut se llama <b>clearTimeout()</b> y dentro de los parámetros
+                        colocaremos la variable donde esta aplicado "setTimeOut". Para saber que este funcionamiento fue
+                        aplicado correctamente, podemos declarar un console log aplicando "el temporalizador se ha limpiado correctamente".
+                    </p>
+
+                    <p>
+                        Para este ejemplo vamos a construir un fondo para esta sección con un retardo de 10seg.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Ejemplo y Sintaxis</h3>
+                </div>
+
+                <div>
+                    <p>
+                        Como vamos a trabajar directamente sobre esta sección del documento, debemos 
+                        seleccionarlo y guardarlo en una variable:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo cont-ejemplo">
+                    <code class="letra-negra">const contSetTimeOut = document.querySelector('.set-time-out');</code>
+                </div>
+
+                <div>
+                    <p>
+                        A continuación, crearemos la función correspondiente de <b>setTimeOut</b> que va a
+                        modificar esta sección del documento.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo cont-ejemplo">
+                    <code class="letra-negra">let retardo = setTimeout ( () => {</code>
+                    <code class="indentado-20 letra-negra">contSetTimeOut.style.backgroundColor = 'aliceblue';</code>
+                    <code class="indentado-20 letra-negra">contSetTimeOut.style.backgroundColor = 'darkgrey';</code>
+                    <code class="indentado-20 letra-negra">contSetTimeOut.style.color = 'white';</code>
+                    <code class="indentado-20 letra-negra"></code>
+                    <code class="indentado-20 letra-negra">for (let i = 0; i < letraNegra.length; i++) {</code>
+                    <code class="indentado-40 letra-negra">letraNegra[i].style.color = 'black';</code>
+                    <code class="indentado-20 letra-negra">}</code>
+                    <code></code>
+                    <code class="indentado-20 letra-negra">clearTimeout(retardo);</code>
+                    <code class="indentado-20 letra-negra">console.log(`Se ha limpiado el retardo.`);</code>
+                    <code class="letra-negra">},3000);</code>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar en la práctica, hemos guardado dentro de una variable a la función
+                        para luego ser limpiada si se necesita volver a usar el timer. Además, le hemos cambiado
+                        el fondo y las letras a la sección para poder visualizar los cambios.
+                    </p>
+                </div>
+            </article>
+
+            <!-- setInterval -->
+            <article>
+                <div>
+                    <h2>SetInterval()</h2>
+                </div>
+
+                <div>
+                    <p>
+                        Este tipo de función también es de tipo <b>asíncrona</b> y trabaja como <b>callback</b>,
+                        El Set interval funciona por <b>"cada intervalo de tiempo"</b>, es un method que se 
+                        sigue ejecutando cada tiempo que se le indique. Si tenemos una declaración de 
+                        mostrar por pantalla el nombre "Juan" cada 5 seg, entonces, cada 5 segundos nos 
+                        mostrará una cadena de nombre "Juan".
+                    </p>
+
+                    <p>
+                        Para aplicar correctamente este method setinterval es recomendable crear una variable anteriormente
+                        con un valor numérico a "0" para luego dentro del method de setInterval poder usar ese contador
+                        sin valor numérico y poder agregarle el nuevo valor luego.
+                    </p>
+
+                    <p>
+                        La sintaxis de este intervalo es similar a la de setTimeOut(). Dentro del "callback" crearemos la condicion
+                        que vamos a declarar para aplicar este method.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>let contador = 0;</code>
+                    <code></code>
+                    <code>let newContador = setInterval(() => {</code>
+                    <code class="indentado-20">contador > 10 ?clearInterval();</code>
+                    <code class="">},1000);</code>
+                </div>
+
+                <div>
+                    <p>
+                        En la condición que estamos especificando dice: si "contador" es mayor que "10" ? 
+                        se limpie el "intervalo". Esto quiere decir que parará de contar. Cuando aplicamos 
+                        el method "clearInterval" en setInterval lo que estamos haciendo es que limpie el 
+                        contador y deje de contar, porque, a diferencia con setTimeout este contador 
+                        "setInterval" hasta no darle un "break" siempre seguira aplicando el method.
+                        Debemos saber que dentro de los parámetros de "clearInterval" tenemos que la 
+                        variable "newContador".
+                    </p>
+
+                    <p>
+                        Si prestamos atención, aún en la condición no hemos declarado que pasará mientras 
+                        "contador" es menor a "10". Para esto agregaremos ":" luego de los parametros de 
+                        "clearInterval" y crearemos un console log con valor "contador++". Con esto le 
+                        estamos diciendo a la condicion que sume a "contador" 1 hasta que llegue a 10.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>let contador = 0;</code>
+                    <code></code>
+                    <code>let newContador = setInterval(() => {</code>
+                    <code class="indentado-20">contador > 10 ? clearInterval(newContador) : contador++;</code>
+                    <code class="indentado-20">let fecha = new Date();</code>
+                    <code class="indentado-20">contInterval.innerHTML += `${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()} <br />`;</code>
+                    <code class="">},1000);</code>
+                    <code></code>
+                    <code><b>Resultado:</b></code>
+                    <code class="cont-interval"></code>
+                </div>
+            </article>
+
+            <!-- Window.requestAnimationFrame -->
+            <article>
+                <div>
+                    <h2>Window.requestAnimationFrame</h2>
+                </div>
+
+                <div>
+                    <p>
+                        Este method "window.requestAnimationFrame" sustituye el funcionamiendo de "setInterval", ya que, 
+                        es más óptimo para el navegador. 
+                    </p>
+
+                    <p>
+                        Lo más importante de este method que debemos saber es que se aplica dentro de una 
+                        función como valor de una variable local de la misma. Esto se debe porque va a ser 
+                        una función que nosotros quisieramos que se repita muchas veces hasta que le declaremos una condición de break. <br/>
+                        Dentro de los parámetros de "window"va a ir <b>el nombre de la 
+                        funcion que declaramos</b>.
+                    </p>
+                
+                    <p>
+                        Debemos saber que la funcion que construímos, para que el "window" tenga efecto, 
+                        debemos llamarla. Osea, debemos llamar la funcion que contiene a window.
+                        Recordemos que "window" no dispara una función, si no, hace repetir a la misma 
+                        muchas veces por segundo. Por eso, es necesario llamar a la funcion que la contiene. 
+                    </p>
+                
+                    <p>
+                        No olvidemos de declarar la condición de break, si no, estamos creando un bucle infinito. A diferencia de "setInterval" para detener este method debemos usar la clave "window.cancelAnimationFrame()". Recordemos que dentro del parámetro debemos colocar la variable donde se asienta el interval para limpiarla.
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="./main.js"></script>
+</body>
+</html>

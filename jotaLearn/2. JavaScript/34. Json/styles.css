@@ -1,0 +1,54 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    max-width: 85%;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: rgb(51, 143, 143);
+}
+
+h2 {
+    color: rgb(78, 145, 221);
+}
+
+article {
+    padding: 5px 30px;
+}
+
+code {
+    display: block;
+    padding: 5px 0;
+}
+
+p {
+    text-align: justify;
+}
+
+/* ESTILOS CONTENEDORES */
+
+    /* Contenedor ejemplo */
+    .fondo-codigo {
+        background-color: bisque;
+        padding: 10px;
+    }
+    
+    .color-texto {
+        color: rgb(127, 32, 168);
+    }
+    
+    .indentado-20 {
+        margin-left: 20px;
+    }
+    
+    .indentado-40 {
+        margin-left: 40px;
+    }

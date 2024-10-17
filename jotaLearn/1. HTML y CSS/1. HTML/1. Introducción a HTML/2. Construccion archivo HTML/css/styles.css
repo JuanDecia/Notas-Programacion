@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    max-width: 85%;
+    margin: auto;
+    background-image: url("../img/fondo-imagen.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    background-color: rgba(197, 201, 204, 0.85);
+    padding: 20px;
+}
+
+p {
+    text-align: justify;
+}
+
+    /*   Animaciones   */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ###### HEADER */
+
+h1 {
+    text-align: center;
+    color: rgb(15, 110, 110);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+/* ###### MAIN CONTENT */
+
+h2 {
+    margin: 30px 0;
+    color: rgb(38, 99, 231);
+}
+
+h3 {
+    color: rgb(103, 45, 240);
+}
+
+.cont-img {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    max-width: 80%;
+}
+
+.cont-link {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    padding: 15px;
+    background-color: rgba(141, 100, 236, 0.247);
+    text-decoration: none;
+    border: 1px solid rgb(103, 45, 240);
+    border-radius: 5px;
+}
+
+.parrafo-margen {
+    margin: 20px 0;
+}
+
+b {
+    color: rgb(115, 37, 170);
+}
+
+li {
+    margin: 15px 0;
+}

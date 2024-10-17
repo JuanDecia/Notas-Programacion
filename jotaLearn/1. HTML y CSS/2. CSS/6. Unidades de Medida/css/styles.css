@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 85%;
+    margin: 0 auto;
+    background-image: url('https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y3NzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    padding: 25px;
+    background-color: rgba(206, 218, 218, 0.815);
+}
+
+h2 {
+    margin: 20px 0;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+h3 {
+    margin: 20px 0;
+    font-size: 1.3em;
+    color: rgb(103, 45, 240);
+}
+
+h4 {
+    margin: 20px 0;
+    color: #a826f3;
+    font-size: 1.1em;
+}
+
+.cont-img {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    text-align: justify;
+}
+
+hr {
+    margin: 20px;
+}
+
+/* --- Animaciones --- */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ######### HEADER */
+
+h1 {
+    margin: 30px 0;
+    text-align: center;
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+/* ######### MAIN CONTENT */
+
+/* -- Ejemplo contenedor código 'General' */
+.cont-codigo {
+    background-color: rgb(56, 55, 55);
+    color: #ffffff;
+    margin: 20px auto;
+    padding: 7px;
+    width: 70%;
+    border-radius: 5px;
+}
+
+.margin-20 {
+    margin-left: 20px;
+}
+
+.margin-40 {
+    margin-left: 40px;
+}
+
+.margin-60 {
+    margin-left: 60px;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.tag-color {
+    color: rgb(37, 143, 241);
+}
+
+.property-color {
+    color: rgb(113, 209, 247);
+}
+
+.field-color {
+    color: #ffd311;
+}
+
+.value-color {
+    color: #f39658;
+}
+
+.comment-color {
+    color: rgb(41, 148, 31);
+}
+/* -- */
+
+/* --- Articulo Medidas Absolutas --- */
+.lista-medidas-absolutas {
+    margin: 20px 0;
+}
+
+.lista-medidas-absolutas ul li {
+    padding: 10px;
+}
+
+/* --- Articulo Medidas Relativas --- */
+.contenedor-ejemplo {
+    margin: 30px 0;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.contenedor-hijo {
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid blue;
+    background-color: rgb(168, 243, 218);
+}
+
+.contenedor-hijo-dos {
+    width: 400px;
+    border: 2px solid rgb(152, 28, 224);
+}
+
+.medida-absoluta {
+    width: 200px;
+}
+
+.medida-relativa {
+    width: 40%;
+}
+
+/* Contenedor medida viewport */
+.lista-viewport {
+    margin: 20px auto;
+}
+
+.lista-viewport ul li {
+    padding: 10px;
+}

@@ -1,0 +1,104 @@
+body {
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    background-color: aliceblue;
+}
+
+main {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(55, 185, 55);
+}
+
+h2 {
+    color: rgb(59, 124, 184);
+}
+
+h3 {
+    color: rgb(224, 54, 11);
+}
+
+h4 {
+    color: rgb(134, 93, 231);
+}
+
+a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(224, 162, 90);
+}
+
+a:hover {
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+
+code:hover {
+    font-size: 1.3em;
+}
+
+.fondo-codigo {
+    background-color: bisque;
+}
+
+li {
+    padding: 5px 0;
+}
+
+figure {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+ul {
+    display: flex;
+}
+
+ul > div {
+    width: 50%
+}
+
+/* ESTILOS ESPECÍFICOS */
+
+div[class~="fondo-codigo"] {
+    margin-bottom: 5px;
+}
+
+div[class~="cont-codigo"] {
+    padding-bottom: 10px;
+}
+
+code[class~="cont-codigo"] {
+    display: block;
+    padding-bottom: 15px;
+}
+
+code[class~="cont-funcion"] {
+    margin-left: 15px;
+}
+
+    /* ESTILOS PARA TABLA */
+
+.cont-table {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.inicio {
+    color: rgb(135, 135, 221);
+}
+
+.cont-inicio {
+    display: flex;
+    justify-content: center;
+}

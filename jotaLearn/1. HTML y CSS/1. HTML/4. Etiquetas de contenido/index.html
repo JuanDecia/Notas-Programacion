@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta name="keywords" content="etiquetas, meta, párrafos, h, negrita" />
+    <meta name="author" content="Juan Decia" />
+    <title>Etiquetas de Texto y Párrafos</title>
+
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1 id="title">Etiquetas de texto y párrafos</h1>
+
+        <div class="cont-headerLink">
+          <a class="link-header" href="./html/FormatoAdicionales.html">
+            Ir a etiquetas de formato de texto
+          </a>
+        </div>
+      </header>
+
+      <section>
+
+        <article class="cont-etiquetas">
+
+          <h2 class="sub">Etiquetas de Contenido</h2>
+
+          <p>
+            Las etiquetas de contenido en HTML son aquellas etiquetas que se utilizan para marcar el contenido de una página web. En esta sección vamos a ver algunas de las más relevantes, las cuales están relacionadas con los <strong>textos y párrafos</strong>.
+          </p>
+
+        </article>
+
+        <hr />
+
+        <!--Comentarios-->
+        <article class="cont-comentarios">
+          <h2 class="sub">Comentarios</h2>
+
+          <p>
+            En nuestro código podemos realizar comentarios que ayudan a organizar el trabajo que estamos realizando. Estos comentarios no se visualizan en el viewport del navegador, es decir, solo se pueden visualizar en el código donde estamos trabajando (tecla F12). A continuación, se muestra una imagen con código comentado:
+          </p>
+
+          <div class="cont-codigo">
+            <code>
+              <span class="etiqueta-comentario">&#60!--</span> <br />
+              <span class="etiqueta-comentario">&#60h1&#62CatPhotoApp&#60/h1&#62</span> <br />
+              <span class="etiqueta-comentario">&#60p&#62Kitty ipsum dolor sit amet, shed evertwhere shed&#60/p&#62</span> <br />
+              <span class="etiqueta-comentario">--&#62</span>
+            </code>
+          </div>
+
+          <p>
+            Como podemos observar, en código comentado se transforma a color verde y el contenido dentro de sus etiquetas no pueden ser visualizados en el navegador.
+          </p>
+
+          <div class="cont-atajo">
+            <h3>ATAJO: </h3>
+            <p>
+              Podemos utilizar el <b>comando rápido</b> para generar la estructura de un comentario, este comando es el siguiente "<b>ctrl + &#125</b>".
+            </p>
+          </div>
+        </article>
+
+        <hr />
+
+        <!-- Descripción H -->
+        <article id="h">
+          <h2 class="sub">Etiquetas de Encabezados (Headings)</h2>
+
+          <p>
+            Las etiquetas <b>"h"</b> se usan para escribir <b>encabezados o títulos</b>, esta etiqueta se acompaña de un número que va del <b>1 hasta el 6</b> (h1 a h6) para establecer jerarquías entre los títulos siendo <b>h1</b> el título principal. Son etiquetas muy útiles para dar estructura y jerarquía al contenido de una página web. Es importante utilizarlas de manera adecuada para facilitar la lectura y comprensión del contenido por parte de los usuarios.
+          </p>
+
+          <div class="ejemplos-headings">
+            <h2>&#60h2&#62Subtítulo "h2"&#60/h2&#62</h2>
+            <h3>&#60h3&#62Subtítulo "h3"&#60/h3&#62</h3>
+            <h4>&#60h4&#62Subtítulo "h4"&#60/h4&#62</h4>
+          </div>
+
+          <h3>Buenas prácticas relacionadas al uso de los headings</h3>
+
+          <div class="cont-buenasPracticas">
+            <ul>
+              <li>
+                Utilizar etiquetas de encabezado para dar jerarquía y estructura al contenido de la página web. Por ejemplo, utiliza <b>&#60h1&#62</b> para el título principal, <b>&#60h2&#62</b> para los títulos de sección, etc.
+              </li>
+              <li>
+                Mantener la jerarquía de las etiquetas de encabezado de forma coherente. Por ejemplo, no utilices una etiqueta <b>&#60h3&#62</b> antes de una etiqueta <b>&#60h2&#62</b>.
+              </li>
+              <li>
+                Utilizar una sola etiqueta <b>&#60h1&#62</b> por página. Esta etiqueta debe ser utilizada para el título principal de la página y no debe ser utilizada más veces.
+              </li>
+              <li>
+                Utilizar las etiquetas de encabezado para resaltar el contenido importante de la página. No utilices las etiquetas de encabezado simplemente para dar formato al texto. Esto lo haremos luego cuando veamos CSS.
+              </li>
+              <li>
+                Utilizar etiquetas de encabezado de manera coherente con el resto del diseño de la página. Por ejemplo, si has utilizado una etiqueta <b>&#60h2&#62</b> para dar formato a un título en una sección, asegúrate de utilizar la misma etiqueta para los títulos de sección en toda la página.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <hr />
+
+        <!-- Descripción P -->
+        <article id="p">
+          <h2 class="sub">Etiqueta P (Paragraph)</h2>
+
+          <p>
+            En las etiquetas <b>&#60p&#62</b> podemos dar <b>formato de párrafo en un modelo de caja</b> en el que ingresemos el texto que la página necesite, esta etiqueta cierra con  <b>&#60/p&#62</b>. Es importante utilizar las etiquetas de párrafo adecuadamente para darle estructura y sentido al contenido de la página web.
+          </p>
+
+          <h3>Buenas prácticas con el uso de párrafos</h3>
+
+          <p>
+            <b>IMPORTANTE</b>: Algunos de estos consejos van a cobrar sentido más adelante cuando veamos cómo darle estilo a las etiquetas HTML con CSS, pero es importante que vayan asimilando estos conceptos para tenerlos presente luego.
+          </p>
+
+          <div class="cont-buenasPracticas">
+            <ul>
+              <li>
+                Utilizar las etiquetas de párrafo para separar el contenido en bloques de texto lógicos y coherentes. Cada párrafo debe contener una sola idea o concepto.
+              </li>
+              <li>
+                No abusar de las etiquetas de párrafo. Evita crear párrafos muy pequeños o muy grandes, ya que esto puede dificultar la lectura y comprensión del contenido por parte de los usuarios.
+              </li>
+              <li>
+                Utilizar las etiquetas de párrafo adecuadamente en combinación con otras etiquetas de formato, como <b>&#60strong&#62</b> o <b>&#60b&#62 (bold)</b>, para dar énfasis o resaltar partes importantes del texto. Esto también vamos a poder hacerlo luego con CSS.
+              </li>
+              <li>
+                Utilizar las etiquetas de párrafo de manera coherente con el resto del diseño de la página. Por ejemplo, si has utilizado un tamaño de fuente y un estilo de letra determinado para un párrafo.
+              </li>
+            </ul>
+          </div>
+
+        <hr />
+
+        <!-- Formato de Texto en Línea -->
+        <article class="cont-formatoLinea">
+          <h2 class="sub">Formato de texto en línea</h2>
+
+          <h3>Formatos de Texto</h3>
+
+          <p>
+            También, es una buena herramienta para describir estilos específicos dentro de los párrafos. Estos estilos los podemos dar con las etiquetas <b>&#60b&#62 o &#60strong&#62</b> que ambas cierran <b>&#60/b&#62</b> o <b>&#60/strong&#62</b>. También, exite la etiqueta de formato <b>&#60em&#62</b> con su respectivo cierre <b>&#60/em&#62</b>. En caso de que debemos tener un salto de línea en el mismo párrafo podemos utilizar la etiqueta <b>&#60br /&#62</b> (break).
+          </p>
+
+          <h4 class="titulo-bold">Bold</h4>
+
+          <p>
+            La etiqueta <b>&#60b&#62</b> de HTML es utilizada para dar <b>formato en negrita a un fragmento de texto</b>, todo el texto que quieras resaltar en negrita debe ir entre estas etiquetas.
+          </p> <br />
+
+          <p>
+            Por ejemplo, si quieres resaltar en negrita la palabra "Hola" en un párrafo que dice "Hola mundo", podrías utilizar el siguiente código:
+          </p>
+
+          <div class="cont-codigo">
+            <p>
+              <code class="codigo">
+                <span class="color-etiqueta">&#60p&#62</span> Hola <span class="color-etiqueta">&#60b&#62</span>  Mundo <span class="color-etiqueta">&#60/b&#62</span><span class="color-etiqueta">&#60/p&#62</span>  
+              </code>
+            </p>
+          </div>
+
+          <p>
+            Otra cosa a tener en cuenta es que la etiqueta &#60b&#62 es una etiqueta de formato, lo que significa que no aporta ningún <strong>significado semántico</strong> adicional al contenido. Si quieres aportar significado semántico al contenido, es recomendable utilizar la etiqueta <strong>&#60strong&#62</strong> en lugar de &#60b&#62.
+          </p>
+
+          <p>
+            Otra cosa a tener en cuenta es que si bien la etiqueta <b>&#60strong&#62</b> da formato en negrita al texto, este no es su principal objetivo. Si solo quieres dar formato en negrita al texto sin aportar significado semántico, es recomendable utilizar la etiqueta <b>&#60b&#62</b> en lugar de <b>&#60b&#62</b>.
+          </p>
+
+          <h4 class="titulo-bold">Strong</h4>
+
+          <p>
+            La etiqueta <strong>&#60strong&#62</strong> de HTML es utilizada para dar <strong>formato en negrita y aportar significado semántico</strong> al contenido. La etiqueta strong se abre con <strong>&#60strong&#62</strong> y se cierra con <strong>&#60/strong&#62</strong>. Todo el texto que quieras resaltar en negrita y darle significado semántico debe ir entre estas etiquetas.
+          </p>
+
+          <h4 class="titulo-bold">Salto de Línea</h4>
+
+          <p>
+            La etiqueta <b>&#60br /&#62</b> de HTML es una etiqueta de <b>line break o salto de línea</b>. Esta etiqueta se utiliza para insertar un salto de línea o un espacio en blanco entre dos fragmentos de texto. La etiqueta <b>&#60br /&#62</b> no necesita cierre.
+          </p>
+
+          <h4 class="titulo-bold">Línea Divisoria</h4>
+
+          <p>
+            La etiqueta <b>&#60hr /&#62</b> de HTML es una etiqueta “horizontal rule” o línea horizontal. Al utilizar la etiqueta <b>&#60hr /&#62</b>, se inserta una línea horizontal en la página web que ocupa todo el ancho disponible. La línea horizontal se puede personalizar mediante estilos CSS, como el ancho, el color o el estilo de la línea. No necesita etiqueta de cierre.
+          </p>
+
+          <div class="cont-ejemplo">
+            <p class="centrar">Parte superior al separador</p>
+              <hr class="ejemplo-hr" />
+            <p class="centrar">Parte inferior del separador</p>
+          </div>
+
+          <h3>Ejemplo de párrafo con formatos de texto</h3>
+
+          <p>
+            El <strong>paintball</strong> o gotcha <em>(en español "bola de pintura")</em> es un juego de estrategia complejo en el que los participantes usan pistolas de paintball para disparar bolas de pintura contra los integrantes del otro equipo.<br /> Los jugadores alcanzados por bolas de pintura son <strong>eliminados</strong> del mismo a veces en forma transitoria y a veces en forma definitiva, dependiendo de la modalidad. Contrariamente a lo que se piensa, es uno de los deportes de aire libre más seguros.<br /> Las marcadoras, las cuales son accionadas por aire comprimido, CO2 u otros gases, en un comienzo se vendían en los catálogos agrícolas y también podían usarse para marcar árboles.
+          </p>
+
+          <p>
+            En algunas ocasiones debemos darle un formato de estilo a un texto que esta en la misma línea, esto lo podemos lograr con propiedades de CSS que agregaremos con palabras claves en nuestro texto. Para dar una generalización de estilo podemos utilizar la etiqueta <b>"Font"</b> dentro de ella utilizar las propiedades con los valores que deseemos para ilustrar nuestro contenido en línea. Font es una etiqueta que tiene cierre par.
+          </p>
+
+          <h3>Propiedades de Font</h3>
+
+          <div class="cont-buenasPracticas">
+                      <ul>
+                        <li><b>Face</b> (tipo de letra): Face="arial"</li>
+                        <li><b>Size</b> (Tamaño de letra): Size="22"</li>
+                        <li><b>Color</b> (Color de letras): Color:"blue"</li>
+                      </ul>
+          </div>
+        </article>
+
+        <hr />
+
+        <!-- Etiquetas de Formato Adicionales -->
+        <article>
+          <h2 class="sub">Etiquetas para formatos de texto adicionales</h2>
+
+          <p>
+            A continuación, hay un link donde nos lleva a una página donde
+            encontraremos diferentes formatos de texto para escribir en nuestro
+            HTML.
+          </p>
+
+          <div class="cont-link">
+            <a href="./html/FormatoAdicionales.html"
+              >Ir a Etiquetas de formato de texto</a
+            >
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

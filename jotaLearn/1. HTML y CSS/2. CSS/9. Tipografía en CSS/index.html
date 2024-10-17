@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos para texto</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <main>
+
+        <header>
+            <h1>Estilos para textos</h1>
+        </header>
+
+        <section>
+
+            <!-- Introducción -->
+            <article>
+
+                <h2>Introducción</h2>
+
+                <p>
+                    Cuando estamos trabajando en CSS tenemos la posibilidad de cambiar el formato estándar del texto que nos ofrece el navegador, estos estilos pueden ser la <b>posición, diseño y propiedades</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    Se puede controlar la tipografía de un texto especificando <b>atributos como el tipo de letra, el tamaño, el estilo (negrita, cursiva, etc.), la alineación, el color, entre otros</b>. Las fuentes varían mucho en los diferentes sistemas operativos y puede ser posible que una fuente no esté disponible de un sistema operativo a otro. Hay un conjunto de tipografías mínimas existentes (Arial, Georgia y Verdana) son los estándares de internet y están soportadas para todos los sistemas operativos que existen.
+                </p>
+
+            </article>
+
+            <hr />
+
+            <!-- Font Properties -->
+            <article>
+                <h2>Font Properties</h2>
+
+                <div class="cont-font-family">
+                    <h3>Font-Family</h3>
+
+                    <p>
+                        Comenzamos por la propiedad font-family que define una <b>fuente o familia de fuentes</b>, con un orden de prioridad, para utilizar en un elemento seleccionado. En el caso de aplicar más de un valor se separa por “,” (comas).
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">body</span>
+                            &#123
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">font-family</span>:
+                            <span class="value-color">'Open Sans', sans-serif</span>;
+                        </code>
+
+                        <br />
+
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                </div>
+
+                <!-- Font Style -->
+                <div class="cont-font-style">
+                    <h3>Font Style</h3>
+
+                    <p>
+                        Esta propiedad permite definir el <b>aspecto de una familia tipográfica</b> entre los valores: normal, italic, oblique, entre otros.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">p</span>
+                            &#123
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">font-style</span>:
+                            <span class="value-color">italic</span>;
+                        </code>
+
+                        <br />
+
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <div class="cont-ejemplo">
+                        <p>
+                            <span class="p-italic">Soy un párrafo en italics.</span>
+                        </p>
+                    </div>
+
+                    <p>
+                        El estilo <b>"normal"</b> es el <b>estilo de fuente predeterminado y no incluye inclinación</b>. El estilo "italic" incluye una inclinación hacia la derecha y es comúnmente utilizado para destacar texto o dar una sensación más relajada a la tipografía. El estilo "oblique" es similar al "italic", pero es generado automáticamente por el software en lugar de estar disponible como una fuente independiente.
+                    </p>
+                </div>
+
+                <!-- Font Weight -->
+                <div class="cont-font-weight">
+                    <h3>Font Weight</h3>
+
+                    <p>
+                        Esta propiedad agrega una anchura a los caracteres, <b>por defecto el valor de esta propiedad es de 400</b> en el caso que deseemos convertir las letras a “negrita” con esta propiedad podemos usar el valor recomendado de <b>700 </b>o usar el valor de <b>“bold”</b>.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">p</span>
+                            &#123
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">font-weight</span>:
+                            <span class="value-color">700</span>;
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">font-weight</span>:
+                            <span class="value-color">bold</span>;
+                        </code>
+
+                        <br />
+
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <div class="cont-ejemplo">
+                        <p class="parrafo-negrito">
+                            <span>Soy un párrafo con un font weight en 700.</span>
+                        </p>
+                    </div>
+
+                    <p>
+                        Los números que se utilizan para especificar el grosor de la fuente varían de <b>100 a 900</b>, donde <b>100 es muy delgado y 900 es muy grueso</b>. Las palabras clave <b>"normal" y "bold" son sinónimos de 400 y 700</b>, respectivamente. Algunos otros valores comunes incluyen "lighter" y "bolder", que ajustan el grosor de la fuente en relación al grosor predeterminado del elemento.
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Es importante tener en cuenta que no todas las fuentes tienen todos los valores de grosor de fuente disponibles. Por lo tanto, es importante elegir una fuente que tenga el grosor de fuente deseado.
+                    </p>
+                </div>
+
+                <!-- Font Size -->
+                <div class="cont-font-size">
+                    <h3>Font Size</h3>
+
+                    <p>
+                        Esta propiedad modifica el <b>tamaño de la fuente</b>, los valores que puede recibir son en <b>pixeles, em, tallas o porcentaje</b>. Debemos tener en cuenta que en MAC la tipografía se renderiza más pequeña que en Windows. Es importante cuando trabajamos en diseños adaptativos colocar los <b>valores de las letras en em</b>, ya que siempre se adaptarán a su viewport.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">p</span>
+                            &#123
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">font-size</span>:
+                            <span class="value-color">20px</span>;
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">font-size</span>:
+                            <span class="value-color">1.5rem</span>;
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">font-size</span>:
+                            <span class="value-color">10%</span>;
+                        </code>
+
+                        <br />
+
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <div class="cont-ejemplo">
+                        <p class="fuente-grande"> 
+                            <span>Soy un parrafo con un tamaño de 1.3em</span>
+                        </p>
+                    </div>
+
+                    <p>
+                        Es importante tener en cuenta que el tamaño de la fuente también puede ser influenciado por otros factores, como la configuración del usuario o las preferencias de accesibilidad en el navegador. Recomendamos que al elegir la fuente se elija un tamaño de fuente que sea legible y accesible para la mayoría de los usuarios , sin exagerar en el tamaño de la misma.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Text Align -->
+            <article>
+
+                <h2>Text Align</h2>
+
+                <p>
+                    Esta propiedad de texto nos permite alinear el texto en <b>orientación horizontal</b> dentro de un elemento HTML. La propiedad cuenta con los siguientes valores a aplicar:
+                </p>
+
+                <ul class="lista">
+                    <li>
+                        <b>Left</b>: Alinea el texto a la izquierda del contenedor.
+                    </li>
+                    <li>
+                        <b>Right</b>: Alinea el texto a la derecha del contenedor.
+                    </li>
+                    <li>
+                        <b>Center</b>: Alinea el texto al centro del contenedor.
+                    </li>
+                    <li>
+                        <b>Justify</b>: Justifica el texto en el contenedor.
+                    </li>
+                    <li>
+                        <b>Inherit</b>: Hereda la alineación de texto del elemento padre.
+                    </li>
+                </ul>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">div</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">text-align</span>:
+                        <span class="value-color">justify</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <div class="cont-ejemplo ejemplo-alineado">
+                    <p>Soy un texto alineado por defecto en <b>izquierda</b>.</p>
+                    <p class="align-right">Soy un texto alineado en <b>derecha</b>.</p>
+                    <p class="align-center">Soy un texto alineado al <b>centro</b>.</p>
+                    <p class="align-justify">
+                        Soy un texto <b>justificado</b>, ocupo siempre el 100% del renglón.
+                    </p>
+                    <p class="align-inherit">Soy un texto alineado en relación al <b>elemento padre</b>.</p>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <!-- Vertical Align -->
+            <article>
+                <h2>Vertical Align</h2>
+
+                <p>
+                    Esta propiedad se utiliza para establecer la <b>alineación vertical</b> de un elemento en relación a su elemento padre o contenedor. Los valores más comunes de esta propiedad son <b>top, middle y bottom</b>.
+                </p>
+
+                <div class="cont-codigo">
+                    <!-- Top -->
+                    <code>
+                        <span class="field-color">.top</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">vertical-align</span>:
+                        <span class="value-color">top</span>;
+                    </code>
+                    
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+
+                    <br><br>
+
+                    <!-- Middle -->
+
+                    <code>
+                        <span class="field-color">.middle</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">vertical-align</span>:
+                        <span class="value-color">middle</span>;
+                    </code>
+                    
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+
+                    <br><br>
+
+                    <!-- Bottom -->
+
+                    <code>
+                        <span class="field-color">.bottom</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">vertical-align</span>:
+                        <span class="value-color">bottom</span>;
+                    </code>
+                    
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <p>
+                    En este ejemplo, los elementos con la clase .top tendrán una alineación vertical en la parte superior, los elementos con la clase .middle tendrán una alineación vertical en el medio y los elementos con la clase .bottom tendrán una alineación vertical en la parte inferior.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Text Shadow -->
+            <article>
+                <h2>Text Shadow</h2>
+                
+                <p>
+                    La <b>sombra de texto</b> en CSS es una repetición o copia del texto, pero con un leve desplazamiento para generar el efecto usando preferiblemente un tono de color distinto del original. Este efecto se crea a través de la propiedad CSS llamada <b>text-shadow</b> y viene acompañada de varios parámetros.
+                </p>
+
+                <br />
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.texto-sombra</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="comment-color">/* offset-x | offset-y | blur | color */</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">text-shadow</span>:
+                        <span class="value-color">1px 2px 3px red</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <p>
+                    Para que esta copia generada sea visible debemos desplazarla hacia algún sentido y lo haremos con los <b>dos primeros argumentos</b> que tiene esta propiedad. Si escribimos <b>1px</b> en <b>primer parámetro</b> la copia generada se <b>desplazará hacia la derecha</b>. En <b>2px</b> (segundo) se generará un desplazamiento <b>vertical hacia abajo</b>. El <b>3px</b> hace referencia al <b>blur o desenfoque</b> que en este caso será de 3px. El argumento final (red) especifica un color. Cabe destacar que si queremos más copias del argumento principal (ej: 5.), no será necesario agregar la propiedad <b>text-shadow</b> 5 veces. Solamente colocaremos una coma después de los valores de la primera sombra y repetiremos los argumentos tantas veces como se requiera.
+                </p>
+
+                <div class="cont-ejemplo ejemplo-sombra">
+                    <p class="texto-sombra">Soy un texto sombreado</p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Text Transform -->
+
+            <article>
+                <h2>Text Transform</h2>
+
+                <p>
+                    Esta propiedad especifica el cambio entre <b>mayúsculas y minúsculas del texto</b> de un elemento. Puede ser usada para que un texto aparezca completamente en mayúsculas, en minúsculas o con la primera letra de cada en mayúscula. Los valores para estos cambios son los siguientes:
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.texto-transformado</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">text-transform</span>:
+                        <span class="value-color">uppercase</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">text-transform</span>:
+                        <span class="value-color">lowercase</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">text-transform</span>:
+                        <span class="value-color">capitalize</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <div class="cont-ejemplo ejemplo-alineado">
+                    <p class="parrafo-mayus">Soy un párrafo convertido a <b>mayúsculas</b>.</p>
+                    <p>soy un párrafo en <b>lowercase</b> por defecto.</p>
+                    <p class="parrafo-capitalize">soy un párrafo con cada <b>primera letra en mayúscula</b>.</p>
+                </div>
+
+                <p>
+                    El valor “uppercase” convertirá el texto a mayúsculas, el valor “lowercase” a minúsculas y “capitalize” transformará en mayúscula la primera letra de cada palabra.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Text Decoration -->
+            <article>
+                <h2>Text Decoration</h2>
+
+                <p>
+                    Esta propiedad se utiliza para aplicar o quitar decoraciones al texto de un elemento html, como <b>subrayados, tachados y líneas</b> por encima.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.texto-decorado</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">text-decoration</span>:
+                        <span class="value-color">underline</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">text-decoration</span>:
+                        <span class="value-color">none</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">text-decoration</span>:
+                        <span class="value-color">overline</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">text-decoration</span>:
+                        <span class="value-color">line-through</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <ul class="lista">
+                    <li>
+                        <b>Underline</b>: Subraya el texto del contenedor seleccionado con una línea recta.
+                    </li>
+                    <li>
+                        <b>Overline</b>: Subraya la parte superior del texto seleccionado con una línea recta.
+                    </li>
+                    <li>
+                        <b>Line-through</b>: Tacha el texto del contenedor seleccionado.
+                    </li>
+                    <li>
+                        <b>None: </b>Decoración por defecto.
+                    </li>
+                </ul>
+
+                <div class="cont-ejemplo ejemplo-alineado">
+                    <p class="p-subrayado">Soy un párrafo <b>subrayado</b>.</p>
+                    <p class="p-overline">Soy un párrafo con <b>overline</b>.</p>
+                    <p class="p-line-through">Soy un párrafo con <b>line-through</b>.</p>
+                </div>
+
+                <p>
+                    Hay varias decoraciones más para los textos pero en los ejemplos vistos son lo más utilizados.
+                </p>
+
+                <div class="decoracion-vinculo">
+                    <h3>Decoración para Vínculos</h3>
+
+                    <p>
+                        Cuando utilizamos vínculos el navegador les establece unos estilos ya definidos para que el usuario sepa identificarlos, por ejemplo, este tipo de texto aparece <b>decorado</b> con un <b>text-decoration</b> en <b>underline</b> y un <b>color</b> <b>blue</b>. Si deseamos dejar este texto como si fuera <b>'normal</b>, debemos aplicarle los siguientes estilos: 
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">a</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">text-decoration</span>:
+                            <span class="value-color">none</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">color</span>:
+                            <span class="value-color">black</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>
+                            &#125
+                        </code>
+
+                        <br /><br />
+
+                        <code>
+                            <span class="field-color">a:visited</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">color</span>:
+                            <span class="value-color">black</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <p>
+                        Primero, debemos seleccionar el <b>elemento</b> que se encuentra el texto con el vínculo (usar el selector más adecuado) y luego aplicar los estilos que tenemos en el ejemplo anterior. De esta manera el contenido que se encuentra con los estílos del vínculo quedan igual que el texto de un elemento normal.
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <p><a href="#">Vínculo con estilos del navegador</a></p>
+                    </div>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Letter Spacing -->
+            <article>
+                <h2>Letter Spacing</h2>
+
+                <p>
+                    Para controlar el <b>espacio existente entre las letras</b> se usa la propiedad <b>letter-spacing</b> y su medida debe entregarse en píxeles (px).
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.p-letter-spacing</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">letter-spacing</span>:
+                        <span class="value-color">5px</span>;
+                    </code>
+
+                    <br>
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <div class="cont-ejemplo">
+                    <p class="p-letter-spacing">Soy un párrafo con <b>letras separadas</b> en 5px.</p>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <!-- Word Spacing -->
+            <article>
+                <h2>Word Spacing</h2>
+
+                <p>
+                    Esta propiedad permite controlar el <b>espacio entre las palabras</b> en un elemento HTML. Se utiliza para ajustar el espacio entre las palabras en una línea de texto, de manera que pueda verse más legible o estética. Podemos utilizar como valor las diferentes unidades de medida que vimos anteriormente.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.p-word-spacing</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">word-spacing</span>:
+                        <span class="value-color">20px</span>;
+                    </code>
+
+                    <br>
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <div class="cont-ejemplo">
+                    <p class="p-word-spacing">Soy un párrafo con las <b>palabras separadas</b> en 20px.</p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Line Height -->
+            <article>
+                <h2>Line Height</h2>
+
+                <p>
+                    La propiedad <b>line-height</b> en CSS permite controlar la <b>altura de línea</b> de un elemento HTML. Esta propiedad se utiliza para ajustar la altura de la línea de texto, de manera que pueda verse más legible o estética.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.p-line-height</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">line-height</span>:
+                        <span class="value-color">1.9</span>;
+                    </code>
+
+                    <br>
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <p>
+                    En este ejemplo, se establece la altura de línea de los párrafos en 1.9 veces el alto de la fuente utilizada. Podemos utilizar como valor las diferentes unidades de medida que vimos anteriormente. Es importante tener en cuenta que la altura de línea puede afectar la legibilidad del texto, por lo que es necesario utilizarla con cuidado. Una altura de línea demasiado baja puede hacer que el texto sea difícil de leer, mientras que una altura de línea demasiado alta puede hacer que el texto se vea demasiado espaciado.
+                </p>
+
+                <div class="cont-ejemplo">
+                    <p class="p-line-height">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptate vitae possimus quidem? Est, impedit quis voluptatum aperiam dolor soluta distinctio facere laudantium saepe delectus ut, perspiciatis nostrum voluptate minus, eos quia esse iure. Exercitationem sapiente atque debitis similique quo inventore facilis nisi est ducimus, dolorem omnis eaque rerum ab cupiditate unde dignissimos deserunt magnam sint dicta, laboriosam ex praesentium distinctio ipsum esse? Nostrum ratione inventore dolore eveniet maiores sed et recusandae! Consequatur voluptate ex sapiente ipsa natus? Officiis architecto laboriosam dicta? Doloribus esse sed beatae magni maiores a facere distinctio animi ratione officiis. Tempora aliquam rerum libero quaerat ipsam!
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Google Fonts -->
+            <article>
+                <h2>Google Fonts</h2>
+
+                <p>
+                    <b>Google Fonts</b> es una <b>colección gratuita de fuentes tipográficas</b> que se pueden usar en proyectos web y de diseño gráfico. Fue lanzado por Google en 2010 y desde entonces se ha convertido en una de las fuentes más populares de fuentes en línea. 
+                </p>
+
+                <br />
+
+                <p>
+                    Google Fonts incluye más de <b>900 fuentes de diferentes</b> estilos y categorías, desde fuentes serif y sans-serif hasta fuentes con símbolos y emojis. Las fuentes están disponibles para su uso gratuito en proyectos personales y comerciales, lo que las hace ideales para sitios web, folletos, tarjetas de visita y otros proyectos de diseño.
+                </p>
+
+                <h3>Importando Google Fonts</h3>
+
+                <p>
+                    Primero debemos ingresar a la página de: <a href="https://fonts.google.com/">google fonts</a>. Una vez que ingresamos, podemos seleccionar las fuentes que deseamos aplicar en nuestra página web. Para este ejemplo vamos a escoger la fuente <b>roboto</b>.
+                </p>
+
+                <figure>
+                    <img class="imagen-muestra" src="./img/roboto-selected.png" alt="roboto-selected" />
+                </figure>
+
+                <p>
+                    Al seleccionarla, luego, vamos a estar seleccionando cuáles son los <b>pesos</b> (weight) <b>de fuente de la fuente “Roboto”</b> que nos interesa tener en nuestro proyecto. Esto lo hacemos clickeando en el botón de <b>más</b> ('+') que aparece en cada opción. El <b> valor del peso</b> que debemos seleccionar para las fuentes es de <b>400</b> y <b>700</b> (regular 400 y bold 700).
+                </p>
+
+                <figure>
+                    <img src="./img/boton-mas.png" alt="boton-mas" class="imagen-muestra">
+                </figure>
+
+                <p>
+                    Ahora debemos visualizar en el <b>borde superior derecho</b> de la página un <b>ícono</b> donde estará toda la información que hemos seleccionado. Debemos clickear en ese ícono para llevarnos la información a nuestro código.
+                </p>
+
+                <figure>
+                    <img class="imagen-muestra" src="./img/icono-fonts.png" alt="icono-fonts" />
+                </figure>
+
+                <p>
+                    Al desplegarse la barra, tendremos <b>dos opciones de importación</b>.
+                </p>
+
+                <h4>Link</h4>
+
+                <p>
+                    La primera es la opción de <b>etiquetas &#60link&#62</b>, la cual debemos copiar su contenido <b>dentro del elemento header</b> en nuestra hoja HTML.
+                </p>
+
+                <figure class="cont-link">
+                    <img class="imagen-muestra" src="./img/link.png" alt="img-link" />
+
+                    <div class="cont-codigo">
+                        <code>
+                            &#60<span class="tag-color">header</span>&#62
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            &#60<span class="tag-color">link</span>
+                            <span class="property-color">Ruta-de-fonts</span> /&#62
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            &#60<span class="tag-color">link</span>
+                            <span class="property-color">Ruta-de-fonts</span> /&#62
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            &#60<span class="tag-color">link</span>
+                            <span class="property-color">Ruta-de-fonts</span> /&#62
+                        </code>
+
+                        <br />
+
+                        <code>
+                            &#60/<span class="tag-color">header</span>&#62
+                        </code>
+                    </div>
+                </figure>
+
+                <h4>@import</h4>
+
+                <p>
+                    La segunda es <b>@import</b>, la cual podremos <b>copiar y pegar</b> en nuestro archivo Css para importar la fuente. Debemos colocarla <b>arriba de todo en nuestra hoja de estilos</b>.
+                </p>
+
+                <figure>
+                    <img class="imagen-muestra" src="./img/import.png" alt="import-css" />
+                </figure>
+
+                <p>
+                    <b>Importante</b>: Debemos quitar las etiquetas style que nos da esta opción, ya que están puestas por si queremos pegarlo dentro de nuestro html, lo cual no recomendamos.
+                </p>
+
+                <h4>Aplicar Fuente en CSS</h4>
+
+                <p>
+                    Finalmente debemos declarar la fuente en el elemento que deseamos utilizarla en nuestro caso va a ser en un elemento párrafo donde su texto tendrá el estilo que seleccionamos.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.parrafo-roboto</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">font-family</span>:
+                        <span class="value-color">'Roboto', sans-serif</span>;
+                    </code>
+
+                    <br>
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <div class="cont-ejemplo">
+                    <p class="parrafo-roboto">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias maiores sint architecto accusamus, possimus hic ipsam! Tempora dolores eius sit fuga alias nemo nostrum nesciunt optio incidunt eveniet, eaque ipsa harum! Perferendis impedit temporibus odio, qui voluptatum ipsa quidem harum nulla veritatis commodi amet. Asperiores qui voluptas dolorum? Aspernatur, similique.
+                    </p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+</body>
+</html>

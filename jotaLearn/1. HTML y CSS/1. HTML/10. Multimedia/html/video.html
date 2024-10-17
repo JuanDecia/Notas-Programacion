@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+
+    <link rel="stylesheet" href="../css/video.css" />
+</head>
+<body>
+    
+    <main>
+
+        <header>
+            <h1>Video Digital</h1>
+
+            <nav>
+                <div class="cont-volver-inicio">
+                    <!-- Flecha -->
+                    <a class="flecha-link" href="../index.html">
+                        <img
+                          class="flecha"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEvtlNsNgzAQBIcO0gkpgZSQSmgh6SgdQAnQSUpAJ4F0imLfGsMf/rZmbtePhpNXczKfSxA2XFLRDeiBd0h1G1SBwQfgvgpeqkQRePgMdMD3KEEV3IbIJaiG5wSHwFMCD1erTg77ryITjEBbQk/VnToDL5mAR8nN8YNFh7wl2S2J3kF1kkhgaaskiuBX8gQ+6gVQBZvEvgkZHr1kdcjsvpIEu4SXIKxtAb+eIBmkl/3TAAAAAElFTkSuQmCC"
+                        />
+                    </a>
+    
+                    <a href="../index.html">Volver a Inicio</a>
+                </div>
+    
+                <div class="estructura-enlaces">
+                    <a href="./etiquetaVideo.html">Ir a etiqueta video</a>
+                    <a href="./audio.html">Ir a Audio</a>
+                </div>
+            </nav>
+        </header>
+
+        <section>
+
+            <!-- Introducción -->
+            <article class="cont-introduccion">
+
+                <h2>Introducción</h2>
+
+                <p>
+                    El video digital es un tipo de sistema de grabación de video que funciona usando una representación 
+                    digital de la señal del video, en vez de la señal analógica. Un video digital es un tipo de archivo que normalmente consiste en un formato contenedor, 
+                    que contiene “flujos” (stream) de datos de video y de audio comprimidos.
+                </p>
+    
+            </article>
+
+            <!-- Funcionamiento de video -->
+            <article class="cont-funcionamiento">
+                <h2>Introducción a los códecs de video</h2>
+
+                <h3>Funcionamiento de los códecs de video "Compensación de movimiento"</h3>
+
+                <ol class="lista-funcionamientos">
+                    <li>
+                        <b>Codecs de Video: </b> El sistema busca si alguna parte de la imagen se repite en imágenes anteriores (frecuencia de ocurrencia).
+                    </li>
+                    <li>
+                        <b>Aproximaciones de la señal: </b>Para reducir el bitrate de la señal al ser transmitida se hacen aproximaciones a la señal.
+                    </li>
+                    <li>
+                        <b>Se envía la información: </b>Busca el modo más eficiente para enviar la señal.
+                    </li>
+                    <li>
+                        <b>Bitrate: </b>Es la cantidad de datos que se guardarán por unidad de tiempo, generalmente expresada en Mbps (Megabits por segundo, no confundir con megabytes).
+                    </li>
+                    <li>
+                        <b>Resolución de pantalla: </b>Es la cantidad de píxeles de una pantalla que está dada por la multiplicación de los valores del ancho y alto.
+                    </li>
+                    <li>
+                        <b>Relación de aspecto (X:Y): </b>Es el valor que resulta de la división entre el ancho y el alto de una imagen.
+                    </li>
+                </ol>
+
+                <figure class="cont-img">
+                    <img class="img-tamaño-pantalla" src="../img/tamañoPantalla.jpg" alt="tamaño de pantalla" />
+                </figure>
+            </article>
+
+            <!-- Etiqueta Video -->
+            <article class="cont-etiqueta-video">
+
+                <h2>Etiqueta Video</h2>
+
+                <p>
+                    Esta etiqueta tiene el mismo comportamiento que la etiqueta audio con la diferencia que cuenta con algunos atributos más, pero, al igual que el audio este necesita una herramienta de controles para poder manipularlo en el navegador. Los atributos adicionales son: 
+                </p>
+
+                <ul class="atributos-video">
+                    <li>
+                        <b>Poster: </b>Es utilizado para poner la ruta de una imagen que será mostrada en caso que el navegador no sea capaz de reproducir el video.
+                    </li>
+                    <li>
+                        <b>Width: </b>Tamaño de ancho de la ventana del video.
+                    </li>
+                    <li>
+                        <b>Height: </b>Tamaño del alto de la ventana del video.
+                    </li>
+                </ul>
+
+                <p>
+                    Estos últimos reciben un valor numérico en pixeles, como primer ejemplo podemos poner 500px de width & height. Definimos el elemento y vemos el resultado en el navegador. Si no lo definimos el navegador creará un valor por defecto.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        &#60<span class="tag-color">video</span>
+                        <span class="property-color">controls</span>
+                        <span class="property-color">poster</span>=<span class="value-color">'../img/everest.jpg'</span>
+                        <span class="property-color">width</span>=<span class="value-color">'500px'</span>
+                        <span class="property-color">heigth</span>=<span class="value-color">'500px'</span>&#62
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">source</span>
+                        <span class="property-color">src</span>=<span class="value-color">'../video/Mountains.mp4'</span>
+                        <span class="property-color">type</span>=<span class="value-color">'video/ogg'</span>/&#62
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">source</span>
+                        <span class="property-color">src</span>=<span class="value-color">'../video/Mountains.mp4'</span>
+                        <span class="property-color">type</span>=<span class="value-color">'video/webm'</span>/&#62
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">source</span>
+                        <span class="property-color">src</span>=<span class="value-color">'../video/Mountains.mp4'</span>
+                        <span class="property-color">type</span>=<span class="value-color">'video/mp4'</span>/&#62
+                    </code>
+
+                    <br>
+
+                    <code class="margin-40">Tu navegador no soporta ninguno de los videos</code>
+
+                    <br>
+
+                    <code>
+                        &#60/<span class="tag-color">video</span>&#62
+                    </code>
+                </div>
+            </article>
+            
+            <!-- Práctica etiqueta video -->
+            <article class="cont-practica">
+                <h2>Práctica etiqueta video</h2>
+        
+                <div class="cont-video">
+                    <video controls poster="../img/everest.jpg" width="500px" height="500px">
+                        <source src="../video/Mountains.mp4" type="video/ogg" />
+                        <source src="../video/Mountains.mp4" type="video/webm" />
+                        <source src="../video/Mountains.mp4" type="video/mp4" />
+                            Tu navegador no soporta ninguno de los videos.
+                    </video>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

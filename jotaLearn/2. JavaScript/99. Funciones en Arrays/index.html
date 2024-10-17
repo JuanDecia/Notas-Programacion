@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones en Arrays</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Funciones en Arrays</h1>
+
+            <nav>
+                <ul>
+                    <div>
+                        <li><a href="#concat">Concat</a></li>
+                        <li><a href="#lenght">Lenght</a></li>
+                        <li><a href="#pop">Pop</a></li>
+                        <li><a href="#push">Push</a></li>
+                        <li><a href="#splice">Splice</a></li>
+                        <li><a href="#sort">Sort</a></li>
+                        <li><a href="#every">Every</a></li>
+                        <li><a href="#some">Some</a></li>
+                        <li><a href="#filter">Filter</a></li>
+                    </div>
+                    <div>
+                        <li><a href="#find">Find</a></li>
+                        <li><a href="#forEach">ForEach</a></li>
+                        <li><a href="#includes">Includes</a></li>
+                        <li><a href="#indexOf">IndexOf</a></li>
+                        <li><a href="#lastIndexOf">LastIndexOf</a></li>
+                        <li><a href="#map">Map</a></li>
+                        <li><a href="#reduce">Reduce</a></li>
+                        <li><a href="#reverse">Reverse</a></li>
+                        <li><a href="#join">Join</a></li>
+                    </div>
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        Los arreglos son colecciones de datos que pueden ser extensas y es importante saber una básica manipulación
+                        de los mismos. Para ello, tenemos una serie de funciones que nos ofrece JavaScript para realizar filtros y obtener
+                        los datos que necesitemos de estos arreglos. A continuación, comenzaremos a ver algunas funciones con ejemplos
+                        prácticos para comprender mejor el funcionamiento.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Concat() -->
+        <section id="concat">
+            <article>
+                <h2>Concat()</h2>
+
+                <div>
+                    <p>
+                        El método concat () se usa para unir dos o más arrays. Este método no cambia los arrays existentes, 
+                        sino que devuelve un nuevo array.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Sintaxis</h3>
+
+                    <div class="fondo-codigo">
+                        <code>let nuevo_array = viejo_array.concat(valor1[, valor2[, ...[, valorN]]]);</code>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Ejemplo: </h3>
+                </div>
+
+                <div class="fondo-codigo"><code class="cont-lista"></code></div>
+                <div class="fondo-codigo"><code class="cont-lista"></code></div>
+                <div class="fondo-codigo"><code class="cont-concat"></code></div>
+
+                <div>
+                    <p>
+                        Como podemos observar en el ejemplo unimos las dos listas con el metodo de <b>concat()</b>. También, se puede
+                        ver el resultado de la lista en la consola (línea 25).
+                    </p>
+                </div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- Lenght() -->
+        <section id="lenght">
+            <h2>Lenght()</h2>
+
+            <div>
+                <p>
+                    Nos permite saber los elementos en valor numérico que tiene un array. Recordemos que tenemos que restarle 
+                    -1 al valor ya que los elementos comienzan desde 0.
+                </p>
+
+                <p>
+                    Para aplicar este método debemos primero colocar el nombre del arreglo al que vamos a acceder seguido de 
+                    un “.” Y luego el nombre de este método. Como resultado, nos retorna la longitud de elementos que tiene el 
+                    arreglo.
+                </p>
+            </div>
+
+            <h3>Sintaxis</h3>
+
+            <div class="fondo-codigo"><code class="cont-lista"></code></div>
+            <div class="fondo-codigo"><code>personas.lenght;</code></div>
+            <div class="fondo-codigo"><code class="cont-lista"></code></div>
+
+            <div class="cont-inicio">
+                <a href="#" class="inicio">Ir a inicio</a>
+            </div>
+
+        </section>
+
+        <hr />
+
+<!-- Pop() -->
+        <section id="pop">
+            <article>
+                <h2>Pop</h2>
+
+                <div>
+                    <p>El método pop elimina el último elemento de un array.</p>
+
+                    <p>
+                        Primero debemos colocar el nombre de la variable que contiene el array seguido de un punto (“.”) Y luego el 
+                        método pop().
+                    </p>
+                </div>
+
+                <h3>Sintaxis</h3>
+
+                <div class="fondo-codigo"><code class="cont-lista"></code></div>
+                <div class="fondo-codigo"><code>personas.pop();</code></div>
+                <div class="fondo-codigo"><code class="cont-lista"></code></div>
+
+                <div>
+                    <p>
+                        Como podemos observar tenemos la lista de nombres y con el método pop() <b>eliminamos el último elemento</b>
+                        (Joan). También, lo podemos ver en la consola (línea 56). En el caso que volvamos a repetir el metodo, vamos
+                        a continuar eliminando el último elemento de la lista.
+                    </p>
+                </div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- Push() -->
+        <section id="push">
+            <article>
+                <h2>Push</h2>
+
+                <div>
+                    <p>
+                        El método push agrega un elemento declarado como parámetro en la lista en la <b>última posición.</b>
+                    </p>
+
+                    <p>
+                        Primero colocaremos el nombre de la variable que contiene el arreglo seguido de “.” Y luego el método 
+                        push (). Dentro de los parámetros colocaremos el valor que agregaremos al array, debemos recordar que si 
+                        es un string debe estar entre comillas, si es otro valor no.
+                    </p>
+                </div>
+
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+
+                <div class="fondo-codigo">
+                    <p>
+                        <code>Tenemos el siguiente arreglo de "personas": const personas = ["Juan", "Joan"];</code>
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <p>
+                        <code>personas.push("Sol");</code>
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <p>
+                        <code>Resultado en consola: [“Juan”, “Sol”, “Joan”];</code>
+                    </p>
+                </div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Splice() -->
+        <section id="splice">
+            <article>
+                <h2>Splice</h2>
+
+                <div>
+                    <p>
+                        El método Splice nos permite agregar o eliminar elementos en las posiciones que deseemos de un array.
+                    </p>
+
+                    <p>
+                        Para aplicar este método primero debemos llamar al nombre de la variable que contiene el arreglo a 
+                        modificar, seguido de “.” Para acceder a los objetos de la variable por último debemos colocar el método 
+                        splice ().
+                    </p>
+                </div>
+
+                <h3>Sintaxis</h3>
+
+                <div class="fondo-codigo">
+                    <code>let personas = ["Juan", "Sol", "Joan", "Abril"];</code>
+                </div>
+                <div class="fondo-codigo">
+                    <code>personas.splice</code>
+                </div>
+
+                <div>
+                    <p>
+                        Dentro de los parámetros de splice colocaremos los argumentos de los valores que estamos modificando.
+                    </p>
+
+                    <p>
+                        Debemos saber que dentro de los argumentos existen posiciones separadas por coma “,” cuando estamos 
+                        construyendo que cada posición tiene una característica. Supongamos que tenemos la siguiente construcción 
+                        dentro de los parámetros:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>personas.splice(3, 1, 27, 27, 2);</code>
+                </div>
+
+                <div>
+                    <p>
+                        La primera posición del parámetro que la ocupa “3” significa a partir de qué índice comienzan los cambios, 
+                        en nuestro ejemplo comenzaría desde “Abril”.
+                    </p>
+
+                    <p>
+                        La segunda posición del parámetro que la ocupa “1” es la cantidad de valores que se eliminan comenzando 
+                        del índice 0 seleccionado por “3”. En nuestro ejemplo la posición “0” es “Abril” , ósea que el único 
+                        elemento (está declarado con 1 en la segunda posición del parámetro de splice) que se eliminará es “Abril”.
+                    </p>
+
+                    <p>
+                        Desde la tercera posición en adelante se ubicarán los elementos que se agregarán en el arreglo a 
+                        partir del índice seleccionado en la primera posición (3). Esta declaración nos retornara:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>['Juan', 'Sol', 'Joan', 27, 27, 2];</code>
+                </div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+                
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Sort() -->
+        <section id="sort">
+            <article>
+                <h2>Sort()</h2>
+
+                <div>
+                    <p>
+                        El método sort () ordena los elementos de un arreglo (array) localmente y devuelve el arreglo ordenado. 
+                        La ordenación no es necesariamente estable. El modo de ordenación por defecto responde a la posición del 
+                        valor del string de acuerdo a su valor Unicode.
+                    </p>
+
+                    <p>
+                        Debemos tener en cuenta que las mayúsculas tienen prioridad ante las minúsculas. Por ejemplo, "Cherry" 
+                        viene antes que "banana". También, en Unicode los números vienen antes que las mayúsculas.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+
+                <div class="fondo-codigo">
+                    <code>arr.sort([compareFunction]);</code>
+                </div>
+            </article>
+
+            <article>
+                <h3>Parámetros</h3>
+
+                <div>
+                    <p>
+                        Opcional. Especifica una función que define el modo de ordenamiento. Si se omite, el array es ordenado 
+                        atendiendo a la posición del valor Unicode de cada carácter, según la conversión a string de cada elemento.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Parámetros del orden de elementos</h3>
+
+                <div>
+                    <p>
+                        Debemos tener en cuenta que el orden estándar de sort es el de Unicode. Esta aclaración es para tener en 
+                        cuenta que sort no ordena automáticamente de manera ascendente los números. Para ello debemos usar el 
+                        parámetro pasándole unas condiciones específicas según el orden que estemos necesitando.
+                    </p>
+
+                    <p>
+                        Este es un ejemplo con un orden numérico standard:
+                    </p>
+
+                    <p class="fondo-codigo">
+                        <code>let puntos = [1, 10, 2, 21];</code>
+                    </p>
+
+                    <p class="fondo-codigo">
+                        <code>puntos.sort(); // [1, 10, 2, 21]</code>
+                    </p>
+
+                    <p>
+                        <b>Como podemos observar, 10 se ubica antes que 2.</b>
+                    </p>
+
+                    <p>
+                        Para modificar este orden debemos utilizar el parámetro de sort, donde, si se provee compareFunction 
+                        dentro del parámetro, los elementos del array son ordenados de acuerdo al valor que retorna dicha función 
+                        de comparación. Siendo a y b dos elementos comparados, entonces:
+                    </p>
+
+                    <ul>
+                        <li>
+                            Si, compareFunction (a, b) es menor que 0, se sitúa a en un índice menor que b. Es decir, “a” viene primero.
+                        </li>
+
+                        <li>
+                            Si, compareFunction(a, b) retorna 0, se deja a y b sin cambios entre ellos, pero ordenados con respecto 
+                            a todos los elementos diferentes. Nota: el estándar ECMAscript no garantiza este comportamiento, por 
+                            esto no todos los navegadores (p.ej.  Mozilla en versiones que datan hasta el 2003) respetan esto.
+                        </li>
+
+                        <li>
+                            Si, compareFunction(a, b) es mayor que 0, se sitúa b en un indice menor que a.
+                        </li>
+
+                        <li>
+                            compareFunction(a, b) siempre debe retornar el mismo valor dado un par especifico de elementos a y b 
+                            como sus argumentos. Si se retornan resultados inconsistentes entonces el orden de ordenamiento es 
+                            indefinido.
+                        </li>
+                    </ul>
+
+                    <p>
+                        Entonces, la función de comparación tiene la siguiente forma:
+                    </p>
+                </div>
+
+                <div>
+                    <figure>
+                        <img src="./img/function.png" alt="funcion" />
+                    </figure>
+                </div>
+
+                <div>
+                    <p>
+                        Para comparar números en lugar de strings, la función de comparación puede simplemente restar b de a. 
+                        La siguiente función ordena el array de modo ascendente:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>function compareNumbers(a, b) {</code> <br>
+                    <code style="margin-left: 30px">return a - b;</code> <br>
+                    <code>}</code>
+                </div>
+            </article>
+
+            <article>
+                <h4>Ejemplo sort en un array de strings:</h4>
+
+                <div class="fondo-codigo">
+                    <div class="cont-codigo"><code>Array de elementos: let elementos = ["Fuego", "Agua", "Tierra", "Aire"];</code></div>
+                    <div class="cont-codigo"><code>elementosOrdenado = elementos.sort()</code></div>
+                    <div class="cont-codigo"><code>console.log(`Elementos ordenados: ${elementosOrdenado.join(", ")}.`);</code></div>
+                    <div><code class="cont-resultado"></code></div>
+                </div>
+                
+            </article>
+
+            <article>
+                <h4>Ejemplo sort en un array de números sin parámetro: </h4>
+
+                <div class="fondo-codigo">
+                    <div class="cont-codigo"><code>Array de números: let arrayNumeros = [2, 222, 543, 345, 15];</code></div>
+                    <div class="cont-codigo"><code>numerosOrdenado = numeros.sort();</code></div>
+                    <div class="cont-codigo"><code>console.log(`Numeros ordenado estandar: ${numerosOrdenado.join(", ")}.`);</code></div>
+                    <div><code class="cont-resultado"></code></div>
+                </div>
+            </article>
+
+            <article>
+                <h4>Ejemplo en un array de números con parámetro dentro de sort(): </h4>
+
+                <div class="fondo-codigo">
+                    <div class="cont-codigo"><code>Array de números: let arrayNumeros = [2, 222, 543, 345, 15];</code></div>
+                    <div class="cont-codigo"><code>numerosOrdenado.sort((a, b) => a - b)</code></div>
+                    <div class="cont-codigo"><code>console.log(numerosOrdenado.join(", "));</code></div>
+                    <div><code class="cont-resultado"></code></div>
+                </div>
+            </article>
+
+            <article>
+                <h4>Ejemplo en un array de números con función fuera de sort(): </h4>
+
+                <div class="fondo-codigo">
+                    <div class="cont-codigo"><code>Array de números: let arrayNumeros = [2, 222, 543, 345, 15];</code></div>
+                    <div class="cont-codigo">
+                        <code>function ordenarDecreciente(a, b) {</code> <br>
+                        <code style="margin-left: 30px;">return b - a;</code> <br>
+                        <code>}</code>
+                    </div>
+                    <div class="cont-codigo"><code>console.log(numerosOrdenado.sort(ordenarDecreciente));</code></div>
+                    <div><code class="cont-resultado"></code></div>
+                </div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+            </article>
+
+        </section>
+
+        <hr>
+
+        <!-- Every() -->
+        <section id="every">
+            <article>
+                <h2>Every()</h2>
+
+                <div>
+                    <p>
+                        Este método revisa que todos los valores de un arreglo cumplan con lo que indica lo que pasemos dentro del 
+                        ámbito de la función, teniendo en cuenta este aspecto nos devuelve un valor booleano.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+
+                <div class="fondo-codigo">
+                    <div class="cont-codigo"><code>const ages = [32, 33, 16, 40];</code></div>
+                    <div class="cont-codigo"><code>console.log(ages.every((age) => {return age > 10}));</code></div>
+                    <div class="cont-codigo"><code class="cont-resultado"></code></div>
+                </div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Some() -->
+        <section id="some">
+            <article>
+                <h2>Some()</h2>
+
+                <div>
+                    <p>
+                        El método <b>some()</b> nos devuelve un Boolean por cada elemento del array según la condición que vamos a pasar
+                        dentro del ámbito de la función.
+                    </p>
+
+                    <p>
+                        Primero debemos hacer la llamada del arreglo a cual le vamos a aplicar el method some(). Luego, debemos hacer
+                        la llamada de la función <b>some()</b>, seguido de la construcción que tendrá el ámbito de la función
+                        que será la condición que filtró el arreglo.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+
+                <div class="fondo-codigo">
+                    <div class="cont-codigo"><code>let elementos = ["Agua", "Aire", "Fuego", "Tierra"];</code></div>
+                    <div class="cont-codigo"><code>elementos.some((elemento) => elemento === "Aire");</code></div>
+                    <div class="cont-codigo"><code>Resultado esperado: true</code></div>
+                    <div><code class="cont-resultado"></code></div>
+                </div>
+
+                <div>
+                    <p>
+                        En el caso del DOM nos retornará el booleando que <b>estamos comparando</b>, pero, en consola nos retornará todos
+                        los resultados que comparó el method. Es decir, el resultado en consola es el siguiente: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <div class="cont-codigo"><code>Resultado esperado: false, true, 2 false</code></div>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar, nos retornó un valor booleano para <b>cada uno de los elementos</b> del arreglo.
+                    </p>
+                </div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- Filter() -->
+        <section id="filter">
+            <article>
+                <h2>Filter()</h2>
+
+                <div>
+                    <p>
+                        El method <b>filter() nos recorre un array</b> y nos <b>devuelve un array nuevo</b> con los elementos que 
+                        cumplan lo establecido en el <b>ámbito</b> de la función del respectivo método.
+                    </p>
+
+                    <p>
+                        Para usar este method, primero realizamos la <b>llamada del array que recorreremos</b>, seguido del method 
+                        <b>filter()</b>. Dentro de los parámetros construiremos la <b>condición</b> que recorrerá el array llamado, 
+                        para devolvernos un <b>nuevo array</b> con las condiciones que hemos indicado anteriormente.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+
+                <div class="fondo-codigo">
+                    <div><code>elementos.filter(elemento => {construcción de la condición})</code></div>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar, dentro de los <b>parámetros de filter()</b> primero colocamos una <b>variable en el ámbito</b> 
+                        del parámetro del método, con nombre que se adapte al proyecto y a la condición que estamos por realizar 
+                        (en nuestro caso "elemento").
+                    </p>
+
+                    <p>
+                        Luego, colocamos la nueva sintaxis para ES6 que es conocida como <b>función flecha</b> que se identifica 
+                        como <b>"=>"</b>, seguido de <b>llaves "{}"</b> en las cuales colocaremos la condición de <b>filter</b>.
+                    </p>
+
+                    <p>
+                        A continuación, realizaremos la condición para que filter nos retorne los <b>elementos que tengan más de 5 
+                        caracteres</b>. Recordemos que para recorrer los caracteres de un elemento debemos utilizar otro 
+                        method conocido como <b>length()</b>.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <div class="cont-codigo"><code>let elementosNuevos = ["Fuego", "Agua", "Tierra", "Aire", "Sonido", "Hielo", "Sombra", "Luz"];</code></div>
+                    <div class="cont-codigo"><code>elementos.filter(elemento => {</code></div>
+                    <div class="cont-codigo"><code class="cont-funcion">if (elemento.length > 5) {</code></div>
+                    <div class="cont-codigo"><code class="cont-funcion">console.log(`"${elemento}" tiene más de 5 caracteres.`);</code></div>
+                    <div class="cont-codigo"><code class="cont-funcion">else {</code></div>
+                    <div class="cont-codigo"><code class="cont-funcion">console.log(`"${elemento}" tiene menos de 5 caracteres.`);</code></div>
+                    <div class="cont-codigo"><code class="cont-funcion">}</code></div>
+                    <div class="cont-codigo"><code>});</code></div>
+                </div>
+
+                <div>
+                    <p>
+                        En la condición estamos diciendo que si la variable del ámbito nombrada "elemento" es mayor que el largo, de caracteres a 5, al resultado lo muestre en consola con el nombre de ese elemento.
+                        Si, el elemento tiene menos de 5 caracteres que muestre ese elemento que corresponde en la consola también.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+
+            </article>
+
+            <article>
+                <h3>Filter en una lista con objeto</h3>
+
+                <div>
+                    <p>
+                        A continuación, trabajaremos con el method <b>filter()</b> en un objeto. El objetivo es similar 
+                        que trabajar con un arreglo, <b>sacar los datos que necesitemos</b> en un nuevo arreglo. La lista de
+                        tipo objeto es la siguiente: 
+                    </p>
+
+                    <figure>
+                        <img src="../6. Funciones en Arrays/img/filterObjeto.png" alt="filterObjeto" />
+                    </figure>
+
+                    <p>
+                        Para nuestro ejemplo vamos a trabajar con un arreglo con tipos de dato <b>objetos</b>. Los 
+                        cuales tienen nombre y edad como claves y sus respectivos valores como contenido. La sintáxis para
+                        esta práctica es la siguiente: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>filtroEdad = objetoPersonas.filter(x => {return x.edad > 19});</code>
+                </div>
+
+                <div>
+                    <p>
+                        La condición nos dice que nos realize un filtro de las personas que tengan una edad menor de 19. 
+                        Donde recorremos el objeto con la <b>variable local "x"</b> y especificamos que recorra la 
+                        <b>clave "edad"</b>. Ahora, tenemos un arreglo nuevo de tipo objeto con los elementos que hayan
+                        cumplido el filtro especificado anteriormente, es decir, solo estarán los datos de "Luis" y 
+                        "Marcos" que son las personas que cumplieron el requisito del filtro.
+                    </p>
+
+                    <p>
+                        Ahora, se mostrará en consola y en pantalla las personas que han sido filtradas. Para ello, debemos
+                        realizar un bucle donde nos deje acceder a la posición "0" del arreglo y a cada una de las posiciones del
+                        objeto, dandonos solamente los nombres de las personas que cumplieron con el filtro. La declaración que realizamos
+                        es la siguiente para mostrar por consola: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <div class="cont-codigo"><code>for (persona in mayorEdad) {</code></div>
+                    <div class="cont-codigo"><code class="cont-funcion">console.log(mayorEdad[persona].nombre);</code></div>
+                    <div class="cont-codigo"><code>}</code></div>
+                </div>
+
+                <div>
+                    <p>
+                        La siguiente declaración es para que nos muestre los resultados en el DOM: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <div class="cont-codigo"><code>for (persona in mayorEdad) {</code></div>
+                    <div class="cont-codigo"><code class="cont-function">contResultado[7].innerHTML += mayorEdad[persona].nombre + ", ";</code></div>
+                    <div class="cont-codigo"><code>}</code></div>
+                </div>
+
+                <div class="fondo-codigo"><code class="cont-resultado"></code></div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- Find() -->
+        <section id="find">
+            <article>
+                <h2>Find()</h2>
+
+                <div>
+                    <p>
+                        El método find() nos retorna el primer elemento encontrado que coincida con la condición en el callback. 
+                        Si no existe una condición, el método nos retorna undefined. Para ejemplificar este concepto, volvemos a 
+                        trabajar con la lista de elementos:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>let elementos = ["Fuego", "Tierra", "Agua", "Aire", "Metal", "Roca", "Lava", "Hielo"];</code>
+                </div>
+
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+
+                <div>
+                    <p>
+                        Primero llamaremos al arreglo que vamos a filtrar, seguido del method "find()", dentro de sus parámetros 
+                        construiremos el ámbito de la función y dentro de esta la condición que filtrará el array.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>elementos.find(elemento => {</code> <br>
+                    <code class="cont-funcion">if (elemento != 'Aire') {</code> <br>
+                    <code class="cont-funcion">console.log(elemento)</code> <br>
+                    <code class="cont-funcion">}</code> <br>
+                    <code>})</code>
+                </div>
+
+                <div>
+                    <p>
+                        La condición dice: que nos muestre en consola todos los elementos en el arreglo que no sean "Aire", 
+                        en este caso nos salen todos los elementos menos aire.
+                    </p>
+
+                    <p>
+                        <code class="fondo-codigo cont-resultado"></code>
+                    </p>
+
+                    <p>
+                        Como podemos observar el method "find()" no nos retorna todos los elementos como "filter", si no, que 
+                        solo específicamente los que cumplan con la condición.
+                    </p>
+
+                    <p>
+                        En el caso contrario qué "elemento" sea igual que "aire" nos lo muestre en consola y esta condición sólo 
+                        nos retornará "Aire" en la consola.
+                    </p>
+
+                    <div class="fondo-codigo">
+                        <code>elementos.find(elemento => {</code> <br>
+                        <code class="cont-funcion">if (elemento === 'Aire') {</code> <br>
+                        <code class="cont-funcion">console.log(elemento)</code> <br>
+                        <code class="cont-funcion">}</code> <br>
+                        <code>})</code>
+                    </div>
+
+                    <code class="fondo-codigo cont-resultado"></code>
+                </div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- ForEach() -->
+        <section id="forEach">
+            <article>
+                <h2>ForEach()</h2>
+
+                <div>
+                    <p>
+                        El method ForEach nos recorre un array por cada elemento que lo contiene. Volvemos a trabajar con el arreglo
+                        de elementos: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>let elementos = ["Fuego", "Tierra", "Agua", "Aire", "Metal", "Roca", "Lava", "Hielo"];</code>
+                </div>
+
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+
+                <div>
+                    <p>
+                        Comenzamos con el llamado del arreglo que vamos a recorrer, seguido de el method ForEach.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>elementos.forEach(elemento => {</code> <br>
+                    <code class="cont-funcion">console.log(elemento)</code> <br>
+                    <code>})</code>
+                </div>
+
+                <div>
+                    <p>
+                        Donde el resultado de la siguiente declaración es la siguiente: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar este method nos retorna "cada elemento" que se encuentra en el array. También, 
+                        podemos agregar una condición al method:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>elementos.forEach(elemento => {</code> <br>
+                    <code class="cont-funcion">if( elemento.length (menor a) 5 ) {</code> <br>
+                    <code class="cont-funcion">console.log(elemento)</code> <br>
+                    <code class="cont-funcion">}</code> <br>
+                    <code>})</code>
+                </div>
+
+                <div>
+                    <p>
+                        En este caso estamos diciendo en la condición que nos recorra todo el array y solo nos retorne en consola 
+                        los elementos que tengan más de 4 caracteres.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- Includes() -->
+
+        <section id="includes">
+            <article>
+                <h2>Includes()</h2>
+
+                <div>
+                    <p>
+                        El method Includes nos retorna true or false si el elemento indicado existe en el arreglo.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+
+                <div>
+                    <p>
+                        Sigamos trabajando con el arreglo de elementos: 
+                    </p>
+
+                    <p>
+                        <code class="fondo-codigo">let elementos = ["Fuego", "Tierra", "Agua", "Aire", "Metal", "Roca", "Lava", "Hielo"];</code>
+                    </p>
+
+                    <p>
+                        Comenzamos haciendo la llamada del arreglo que deseamos verificar si existe cierto elemento en 
+                        el seguido del method y dentro de sus parámetros colocamos el elemento a verificar. En este caso
+                        realizaremos la salida del resultado en la consola y en el DOM.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>contResultado[12].innerHTML += `Este arreglo contiene 'Aire'?: ${elementosIncludes.includes('Aire')}.`</code> <br />
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>contResultado[13].innerHTML += `Este arreglo contiene 'Rayo'?: ${elementosIncludes.includes('Rayo')}.`;</code> <br />
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- INDEXOF() -->
+        <section id="indexOf">
+            <article>
+                <h2>IndexOf()</h2>
+
+                <div>
+                    <p>
+                        El method "indexOf()" nos retorna un número negativo si el elemento especificado en el parámetro 
+                        no se encuentra en el array que estamos recorriendo con este method. Si lo encuentra, nos retorna 
+                        la posición donde se encuentra dentro del array.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+
+                <div>
+                    <p>
+                        Continuamos trabajando para ejemplificar con el arreglo de elementos.
+                    </p>
+
+                    <div class="fondo-codigo">
+                        <code>let elementos = ["Fuego", "Tierra", "Agua", "Aire", "Metal", "Roca", "Lava", "Hielo"];</code>
+                    </div>
+                </div>
+
+                <div>
+                    <p>
+                        A continuación, realizaremos un ejemplo para que nos retorne un número negativo y luego vamos a detectar
+                        la posición de "Metal":
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>contResultado[14].innerHTML += `La posición de 'Rayo' es: ${elementosIndexOf.indexOf('Rayo')}.`;</code> <br />
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>contResultado[15].innerHTML += `La posición de 'Metal' es: ${elementosIndexOf.indexOf('Metal')}.`;</code> <br />
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- LASTINDEXOF() -->
+
+        <section id="lastIndexOf">
+            <article>
+                <h2>LastIndexOf()</h2>
+
+                <div>
+                    <p>
+                        Este method nos busca dentro de un array el último elemento indicado. Es muy útil utilizarlo 
+                        cuando nos encontramos con elementos duplicados ya que siempre nos buscará el último que se 
+                        encuentre en el parámetro de "lastIndexOf".
+                    </p>
+                </div>
+
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+
+                <div>
+                    <p>
+                        Para seguir con las prácticas trabajaremos con el arreglo de los elementos:
+                    </p>
+
+                    <div class="fondo-codigo">
+                        <code>let elementos = ["Fuego", "Tierra", "Agua", "Aire", "Metal", "Roca", "Lava", "Hielo", "Tierra"];</code>
+                    </div>
+                </div>
+
+                <div>
+                    <p>
+                        Primero llamamos el array que vamos a recorrer seguido del nombre del method y dentro de los 
+                        parámetros el elemento que se buscará dentro del array.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-codigo">
+                        contResultado[16].innerHTML += `La primera posición del elemento duplicado ('Tierra') es: 
+                        ${elementosLast.indexOf('Tierra')}. La posición del elemento duplicado es: 
+                        ${elementosLast.lastIndexOf('Tierra')}.`;
+                    </code>
+                    <code class="cont-resultado cont-codigo"></code>
+                </div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+            </article>
+
+        </section>
+
+        <hr />
+
+        <!-- Map() -->
+        <section id="map">
+            <article>
+                <h2>Map()</h2>
+
+                <div>
+                    <p>
+                        El method "map()" nos itera arrays y arrays de objetos y nos retorna un nuevo arreglo con la función que 
+                        especifiquemos en la construcción del callback.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+
+                <div>
+                    <p>
+                        Podemos utilizar este method para recorrer un arreglo, por ejemplo: 
+                    </p>
+
+                    <p>
+                        Como la construcción del arreglo con objetos dentro de los índices se hace extenso para el ejemplo
+                        práctico, este lo pueden ver en la herramienta para desarrolladores (F12) en el apartado de "source".
+                        A continuación, solo visualizaremos los ejemplos realizados con map().
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <p>
+                        En este ejemplo utilizaremos <b>map()</b> para recorrer el objeto y que nos retorne todos los datos
+                        que contiene:
+                    </p>
+
+                    <div class="cont-resultado">
+
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        A continuación sacaremos información de un objeto usando el method <b>map()</b>, trabaja de manera 
+                        similar a <b>filter()</b>. Pero, <b>map()</b> transforma la estructura completamente sobre la 
+                        condición que le estemos pidiendo.
+                    </p>
+
+                    <p>
+                        Para este ejemplo tenemos un objeto de "personas" las cuales tienen claves y valores como nombres y edades como claves y sus respectivos valores como valor.
+                        Utilizaremos <b>map()</b> para que nos retorne del objeto <b>solo los nombres</b>. A continuación,
+                        vamos a agregar valor al resultados que tenemos por la condición, por ejemplo, le agregaremos +50 a 
+                        las edades que obtenemos del objeto.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <div class="fondo-codigo">
+                    <code class="cont-codigo">Las personas de la empresa cumplieron 10 años</code>
+                    <code class="cont-resultado"></code>
+                </div>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        Debemos recordar un aspecto importante de este method, es que, siempre que lo utilicemos estamos realizando
+                        <b>una copia</b> del arreglo original.
+                    </p>
+                </div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- REDUCE() -->
+        <section id="reduce">
+            <article>
+                <h2>Reduce()</h2>
+
+                <div>
+                    <p>
+                        El método reduce() ejecuta una función reductora sobre cada elemento de un array, devolviendo como 
+                        resultado un único valor. Este único valor es el resultado acumulado de la función que se pasa como 
+                        parámetros en el callback. Este método no funciona para arreglos de listas vacías, también debemos 
+                        tener en cuenta que no modifica el arreglo original.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+
+                <div class="fondo-codigo">
+                    <code>arr.reduce(callback(acumulador, valorActual[, índice[, array]])[, valorInicial])</code>
+                </div>
+
+                <div>
+                    <p>
+                        Primero haremos la llamada del array que vayamos a modificar, seguido del method "reduce" y dentro de 
+                        los parámetros construimos el callback que tendrá la condición para reducir el arreglo.
+                    </p>
+
+                    <div>
+                        <ul>
+                            <li>
+                                Callback: Función a ejecutar sobre cada elemento del array (excepto para el primero, si no se proporciona 
+                                valorInicial), que recibe cuatro parámetros:
+                            </li>
+                            <li>
+                                Acomulador: El acumulador acumula el valor devuelto por la función callback. Es el valor acumulado 
+                                devuelto en la última invocación de callback, o el valorInicial, si se proveyó. (Ver a continuación).
+                            </li>
+                            <li>
+                                Índice: El elemento actual que está siendo procesado en el array.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p>
+                        Dentro de los parámetros podemos usar opcionalmente un valor inicial del cual se ejecutará el acumulador. 
+                        Es decir, si usamos un valor inicial de “2” el acumulador comienza en “2”.
+                    </p>
+
+                    <p>
+                        Es decir: La primera vez que se llama la función, valorAnterior y valorActual pueden tener uno de dos 
+                        valores. Si se proveyó un valorInicial al llamar a reduce, entonces valorAnterior será igual al 
+                        valorInicial y valorActual será igual al primer elemento del array. Si no se proveyó un valorInicial, 
+                        entonces valorAnterior será igual al primer valor en el array y valorActual será el segundo.
+                    </p>
+
+                    <p>
+                        Si el array está vacío y no se proveyó un valorInicial lanzará un TypeError. Si el array tiene un sólo 
+                        elemento (sin importar la posición) y no se proveyó un valorInicial, o si se proveyó un valorInicial pero 
+                        el arreglo está vacío, se retornará ese único valor sin llamar a la función.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Ejemplos</h3>
+
+                <div>
+                    <p>Tenemos el siguiente arreglo para utilizar el method reduce(): </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>const numerosLista = [175, 50, 25];</code>
+                </div>
+
+                <div>
+                    <p>Aplicamos el method reduce con el callback para restar los elementos partiendo del primer índice: </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>let totalResta = numerosLista.reduce((acomulador, indice) => {return acomulador - indice} );</code>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-codigo">Imprimimos por pantalla el resultado: </code>
+                    <code class="cont-codigo">contResultado[19].innerHTML += `Resultado esperado: ${totalResta}`;</code>
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div>
+                    <p>
+                        En el caso de que necesitemos un número inicial para realizar el method debemos construir la siguiente
+                        sintaxis:
+                    </p> 
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>let totalSuma = numerosLista.reduce((acomulador, indice) => acomulador + indice, 20);</code>
+                </div>
+
+                <div>
+                    <p>
+                        Imprimimos por pantalla el resultado: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-codigo">contResultado[20].innerHTML += `Resultado esperado: ${totalSuma}.`;</code>
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- Reverse() -->
+        <section id="reverse">
+            <article>
+                <h2>Reverse()</h2>
+
+                <div>
+                    <p>
+                        El method "reverse" cambia el orden del arreglo convirtiendo el último elemento en el primero 
+                        continuando con el anteúltimo y así sucesivamente hasta llegar al inicio del arreglo.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+
+                <div>
+                    <p>
+                        Trabajamos con el arreglo de los elementos: 
+                    </p>
+
+                    <div class="fondo-codigo">
+                        <code>let elementos = ["Fuego", "Agua", "Tierra", "Aire", "Metal"];</code>
+                    </div>
+
+                    <p>
+                        Aplicamos el method reverse: 
+                    </p>
+
+                    <div class="fondo-codigo">
+                        <code class="cont-codigo">listaReverse.reverse();</code>
+                        <code class="cont-codigo">contResultado[21].innerHTML += `Resultado esperado: ${listaReverse.join(", ")}.`;</code>
+                        <code class="cont-resultado"></code>
+                    </div>
+
+                    <div>
+                        <p>
+                            Debemos prestar mucha atención que este método <b>sobreescribe</b> el arreglo original.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- JOIN() -->
+        <section id="join">
+            <article>
+                <h2>Join()</h2>
+
+                <div>
+                    <p>
+                        El método join () une todos los elementos de una matriz (o un objeto similar a una matriz) en una 
+                        cadena y devuelve una variable de tipo <b>string</b> separando cada <b>índice</b> segun el <b>separador</b>
+                        seleccionado dentro de los parametros de este method.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+
+                <div class="fondo-codigo">
+                    <code>arr.join([separator])</code>
+                </div>
+            </article>
+
+            <article>
+                <h3>Parámetro separador</h3>
+
+                <div>
+                    <p>
+                        Es una cadena usada para separar cada uno de los elementos del arreglo. El separador es convertido a 
+                        una cadena si es necesario. Si este se omite, los elementos del arreglo son separados con una coma (","). 
+                        Si el separador es una cadena vacía todos los elementos son unidos sin ningún carácter entre ellos.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Ejemplos</h3>
+
+                <div class="fondo-codigo">
+                    <code>let elementos = ["Fuego", "Agua", "Tierra", "Aire", "Metal"];</code>
+                </div>
+
+                <div>
+                    <p>
+                        A continuación, trabajaremos con la lista con nombre elementos y los cambios se podrán
+                        ver con mejor especifidad en la consola. También, podemos usar <b>typeOf</b> para saber
+                        de que tipo es nuestra lista.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code> <br />
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div class="cont-inicio">
+                    <a href="#" class="inicio">Ir a inicio</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

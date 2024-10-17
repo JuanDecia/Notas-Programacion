@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../img/fondo-js.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    max-width: 85%;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+main {
+    background-color: rgba(197, 201, 204, 0.836);
+    padding: 25px;
+}
+
+h2 {
+    margin: 25px 0;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: slide-right 1.3s ease, fade 1.3s ease-in;
+}
+
+h3 {
+    color: rgb(103, 45, 240);
+    margin: 20px 0;
+}
+
+h4 {
+    color: rgb(143, 44, 224);
+    margin: 20px 0;
+}
+
+a {
+    position: relative;
+    padding: 7px;
+    font-size: 1.3em;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(231, 108, 25);
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    color: rgb(231, 108, 25);
+    background-color: rgb(231, 108, 25);
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+p {
+    text-align: justify;
+    line-height: 1.3em;
+}
+
+code {
+    color: #ffffff;
+}
+
+hr {
+    margin-top: 20px;
+}
+
+/* -- Animaciones-- */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-50px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* ======= HEADER ======= */
+
+h1 {
+    text-align: center;
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.3s ease-in, slide-down 1.3s ease-in-out;
+}
+
+/* ======= MAIN CONTENT ======= */
+
+figure {
+    display: flex;
+    justify-content: center;
+}
+
+/* Bloque Código */
+
+.cont-codigo {
+    background-color: rgb(56, 55, 55);
+    margin: 20px auto;
+    padding: 7px;
+    max-width: 70%;
+    border-radius: 10px;
+}
+
+.margin-20 {
+    margin-left: 20px;
+}
+
+.margin-40 {
+    margin-left: 40px;
+}
+
+.margin-60 {
+    margin-left: 60px;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.tag-color {
+    color: rgb(37, 143, 241);
+}
+
+.variable-color {
+    color: rgb(66, 158, 245);
+}
+
+.property-color {
+    color: rgb(113, 209, 247);
+}
+
+.value-color {
+    color: #f39658;
+}
+
+.number-color {
+    color: rgb(146, 192, 137);
+}
+
+.function-color {
+    color: rgb(245, 213, 107);
+}
+
+.parametro-color {
+    color: rgb(233, 90, 247);
+}
+
+.comment-color {
+    color: rgb(41, 148, 31);
+}
+/* -- */

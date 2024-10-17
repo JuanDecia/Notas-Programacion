@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    
+    <main>
+        <header>
+            <h1>Media Queries</h1>
+        </header>
+
+        <section>
+
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        Los <b>Media queries</b> son una extensión muy útil de CSS que permiten detectar las características de los dispositivos que accedan a nuestra web, y a partir de esos datos crear hojas de estilo más personalizadas, que llevan finalmente a aumentar y mejorar la experiencia del cliente en nuestro sitio.
+                    </p>
+
+                    <br />
+
+                    <p>                       
+                        Los <b>media queries</b>, permiten que el browser decida cómo mostrar contenido dependiendo de las condiciones que encuentre en el dispositivo y esas condiciones se dan a través de unos <b>media types</b> los cuales podemos
+                        agrupar en:
+                    </p>
+                </div>
+
+                <div class="lista">
+                    <ul>
+                        <li>
+                            <b>Print</b>: Vista de impresión.
+                        </li>
+                        <li>
+                            <b>min-width</b>: tamaño mínimo en horizontal.
+                        </li>
+                        <li>
+                            <b>max-width</b>: tamaño máximo en horizontal.
+                        </li>
+                        <li>
+                            <b>min-height</b>: tamaño mínimo en vertical.
+                        </li>
+                        <li>
+                            <b>max-height</b>: tamaño máximo en vertical.
+                        </li>
+                        <li>
+                            <b>orientation</b>: Posición en la que se encuentre el dispositivo.
+                        </li>
+                        <li>
+                            <b>resolution</b>: Tamaño ocupado por el browser en pixeles.
+                        </li>
+                        <li>
+                            <b>color</b>: detecta si la pantalla en que se visualiza el sitio es a color o en blanco y negro.
+                        </li>
+                        <li>
+                            <b>light-level</b>: densidad de luz del dispositivo.
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p>
+                        Dependiendo de los media types deben crearse estilos individuales que se ajusten a las condiciones detectadas. El dispositivo renderizará los estilos creados específicamente para cada condición.
+                    </p>
+                </div>
+
+                <div class="cont-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ventajas</th>
+                                <th>Desventajas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Permite Ajustar el sitio web a cualquier dispositivo.</td>
+                                <td>Se requiere escribir repetidamente algunas de las reglas css que deseen aplicarse por cada dispositivo agregado.</td>
+                            </tr>
+                            <tr>
+                                <td>Aparecen para mejorar la visualización del diseño adaptable.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Sintaxis -->
+            <article>
+                <h2>Sintaxis</h2>
+
+                <p>
+                    Las mediaqueries se definen utilizando la regla @media, seguida de una condición que especifica las características de la pantalla para las que se aplicarán las reglas de estilo. Veamos un ejemplo:
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.contenedor</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">width</span>:
+                        <span class="value-color">1200px</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="function-color">@media ( <span class="property-color">max-width: </span><span class="value-color">992px</span> )</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="field-color">.contenedor</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="property-color">width</span>:
+                        <span class="value-color">1200px</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">&#125</code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <p>
+                    En este ejemplo, tenemos un enfoque desktop-first de diseño responsive, en el cual tenemos una caja con un ancho de 1200px. Como queremos que la caja se adapte a dispositivos más chicos, utilizamos la sintaxis de mediaqueries para indicar que hasta un ancho máximo de 992px, queremos que nuestra caja tenga un ancho del 90% del que sea su contenedor. Es importante notar que debemos especificar las reglas que queremos modificar dentro de la declaración de mediaqueries, indicando cuales son los elementos del HTML que queremos que se vea distinto y cuales son las propiedades que se modificarán.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Mobile First -->
+            <article>
+                <h2>Mobile First</h2>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.contenedor</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">width</span>:
+                        <span class="value-color">1200px</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background</span>:
+                        <span class="value-color">red</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">font-size</span>:
+                        <span class="value-color">20px</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="function-color">@media ( <span class="property-color">max-width: </span><span class="value-color">992px</span> )</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="field-color">.contenedor</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="property-color">width</span>:
+                        <span class="value-color">1200px</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">&#125</code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <p>
+                    En este caso, hemos agregado algunas propiedades más a nuestra caja para poder ejemplificar otras características del uso de mediaqueries. Podemos ver que nuestro elemento tendrá, en resoluciones pequeñas, un ancho de 90% de su elemento contenedor, un color de fondo rojo y un tamaño de fuente de 20px. Aplicando mediaqueries para resoluciones más grandes, le indicamos a CSS que a partir de un ancho mínimo de 992px, se modifiquen tanto el ancho de nuestra caja como el tamaño de la fuente.
+                </p>
+
+                <br />
+
+                <p>
+                    Por su parte, el color de fondo, seguirá siendo rojo, ya que aquellas propiedades que no se reemplacen en una determinada resolución se mantendrán tal como venían declaradas desde la resolución anterior. En este caso, al no tener otra resolución previa a los 992px que se haya modificado, se mantendrá con el color rojo declarado como base en el archivo CSS.
+                </p>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+
+    <link rel="stylesheet" href="../css/boxSizing.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Box Sizing</h1>
+
+            <nav>
+                <a class="link" href="../index.html">Volver a Inicio</a>
+            </nav>
+        </header>
+
+        <section>
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    Esta propiedad establece cómo se calcula el ancho y alto total de un elemento. Puede tomar dos valores:
+                </p>
+
+                <div class="content-box">
+                    <h3>1. Content Box</h3>
+
+                    <p>
+                        Es el valor <b>por defecto</b> de esta propiedad. Hace que se calcule el <b>ancho o alto original</b> del elemento <b>sumando el padding y el border</b> (separación del borde con el contenido) que se coloque al elemento. Por ejemplo: Si tengo un elemento con 200px de ancho y de alto, y un padding de 10px , el ancho y alto de nuestro elemento será de <b>220px</b> (200px de ancho/alto original más los 10px de padding en la derecha e izquierda o abajo y arriba). 
+                    </p>
+                </div>
+
+                <div class="border-box">
+                    <h3>2. Border Box</h3>
+
+                    <p>
+                        A diferencia de content-box este valor <b>incluirá el padding y el border dentro del tamaño</b> que especificamos a nuestro elemento. Por ejemplo: Si tengo un elemento con 200px de ancho y de alto, y un padding de 10px , el ancho y alto de nuestro elemento será de <b>200px</b> (El padding será “absorbido” por el tamaño original del elemento, incluyendo los 10px de padding en cada costado de nuestra caja en esos 200px de tamaño).
+                    </p>
+                </div>
+
+                <figure>
+                    <img class="img-muestra" src="../img/border-box.png" alt="ejemplo-borderBox" />
+                </figure>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

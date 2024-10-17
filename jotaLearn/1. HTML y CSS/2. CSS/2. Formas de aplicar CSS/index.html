@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicando CSS</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Formas de aplicar CSS</h1>
+        </header>
+
+        <section>
+
+            <!-- CSS en encabezado -->
+            <article>
+                <h2>CSS como etiqueta &#60style&#62</h2>
+
+                <p>
+                    Para hacer uso de CSS podemos utilizar una etiqueta llamada <strong>&#60style&#62</strong> la cual debe estar ubicada dentro de la etiqueta <strong>&#60head&#62</strong> y luego de la etiqueta <b>&#60title&#62</b> dentro de nuestro archivo HTML. Es decir, Podemos agregar estilos a todas las páginas de un sitio web agregando una sección de estilos en el encabezado de cada página, utilizando la etiqueta <b>&#60style&#62</b> en el mismo.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        &#60<span class="tag-color">head</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">title</span>&#62Título del Navegador&#60/<span class="tag-color">title</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">style</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="field-color">p</span>
+                        <span class="field-color">&#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-60">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">red</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="field-color">&#125</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60/<span class="tag-color">style</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#60/<span class="tag-color">head</span>&#62
+                    </code>
+                </div>
+
+                <p>
+                    Como podemos observar en el ejemplo práctico, estamos aplicando <b>estilos CSS</b> desde el encabezado de la página, dentro de las <b>etiquetas 'style'</b>. En este ejemplo específico le damos a las <b>etiquetas &#60p&#62</b> un color de texto <b>rojo</b>.
+                </p>
+            </article>
+
+            <!-- CSS como atributo -->
+            <article>
+                <h2>CSS como atributo</h2>
+
+                <p>
+                    CSS puede ser aplicado como un atributo desde el <b>elemento (etiqueta)</b> en el mismo archivo HTML donde estamos trabajando. Este debe ser aplicado dentro de la <b>apertura de la etiqueta</b> usando el atributo llamado ‘style’.
+                </p>
+
+                <br />
+
+                <p>
+                    Para conceptuar la descripción anterior, cambiaremos el color del texto que se encuentra como contenido en la etiqueta “&#60p&#62”, lo que tendremos que hacer en esta ocasión es lo siguiente:
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        &#60<span class="tag-color">p</span>
+                        <span class="property-color">style</span>=<span class="value-color">'color: red'</span>&#62Hola mundo en un párrafo HTML&#60/<span class="tag-color">p</span>&#62
+                    </code>
+                </div>
+
+                <p>
+                    A la etiqueta de apertura <b>&#60p&#62</b> le debemos agregar el atributo <b>“style”</b>, luego aplicaremos los estilos que deseamos para ese elemento, en este caso son la propiedad “color” y el valor “red”. Guardamos los cambios para ver el resultado en el navegador. Este tipo de estilos son llamados estilos en línea (in line), porque estamos agregando los contenidos dentro de la misma etiqueta.
+                </p>
+
+            </article>
+
+            <!-- Diferencias -->
+            <article>
+                <h2>Diferencias entre estilos en encabezado y estilo en linea.</h2>
+
+                <p>
+                    Cuando aplicamos los estilos de CSS en línea, es decir dentro de la etiqueta, <b>solo afectamos al elemento que hemos aplicado el estilo</b>. Por ejemplo, si tenemos varios elementos <b>&#60p&#62</b>, sólo se modificará el elemento <b>&#60p&#62</b> que hemos seleccionado con el con el atributo style. Si usamos este método en todo el documento y necesitamos que todos los párrafos tengan las mismas características deberemos agregar a cada uno el atributo style, lo cual hace el procedimiento largo y poco eficiente. Como podemos notar este procedimiento no es una buena práctica en el desarrollo web.
+                </p>
+
+                <br />
+
+                <p>
+                    En el caso de la etiqueta <b>&#60style&#62</b> en el encabezado, <b>las reglas que se escriban en su interior afectarán a todos los elementos seleccionados</b> del archivo HTML. De todas maneras, esta forma de aplicar los estilos de CSS tampoco es la correcta. A continuación, veremos cual es el método que se eligió para aplicar correctamente los estilos de CSS a nuestro documento HTML.
+                </p>
+            </article>
+
+            <!-- CSS archivo externo -->
+            <article>
+                <h2>CSS en un archivo externo</h2>
+
+                <p>
+                    Nos queda saber el último paso de como conectar los estilos de CSS a nuestro documento de HTML. Este método es el más recomendado, ya que, nos genera una estructura de trabajo mucho más limpia y ordenada. En este archivo externo de tipo CSS estarán escritas las reglas necesarias para mejorar el aspecto de nuestro sitio Web.
+                </p>
+
+                <br />
+
+                <p>
+                    Para tener un directorio ordenado y mantenible, primero, agregaremos una carpeta llamada “CSS”, que será el lugar donde guardaremos las hojas de estilo que sean necesarias para nuestra página. Luego, en nuestro editor en la carpeta nueva creada anteriormente crearemos un archivo con nombre “styles.css” y lo guardaremos. Este archivo, representará la estructura principal de estilos de la página web donde estemos trabajando.
+                </p>
+
+                <figure class="cont-img-estilos">
+                    <img src="./img/styles.png" alt="imagen-estilos" />
+                </figure>
+
+                <p>
+                    Ahora es necesario conectar ambos archivos, es decir, que estén comunicados entre sí para que los cambios que apliquemos en el archivo de CSS sean impactados en el archivo HTML y ver los cambios que vamos realizando en el navegador. Para efectuar esta comunicación de ambos archivos, debemos utilizar una etiqueta llamada <b>&#60link /&#62</b> desde el código HTML que se ubicará dentro de la etiqueta <b>&#60head&#62</b> luego de la etiqueta <b>&#60title&#62</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    La etiqueta <b>&#60link&#62</b> debe tener un atributo llamado <b>“rel”</b> con el valor <b>'stylesheet'</b> y otro atributo llamado <b>“href”</b> con el valor de la <b>ruta relativa</b> de nuestro directorio de trabajo en donde se encuentra el archivo que vamos a conectar. El atributo <b>“rel”</b> especifica el <b>tipo de código</b> que se encontrará en el archivo externo. En esta ocasión son las reglas CSS, y el atributo href se refiere a la <b>ruta donde se encuentra dicho archivo</b> que es una hoja de estilos nombrada <b>“styles.css”</b>.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        &#60<span class="tag-color">head</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">title</span>&#62Aplicando CSS&#60/<span class="tag-color">title</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">link</span>
+                        <span class="property-color">rel</span>=<span class="value-color">'stylesheet'</span>
+                        <span class="property-color">href</span>=<span class="value-color">'./css/styles.css'</span>
+                        /&#62
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#60/<span class="tag-color">head</span>&#62
+                    </code>
+                </div>
+
+                <p>
+                    Debemos saber también que esta etiqueta no tiene una etiqueta de cierre, porque, al estar en la etiqueta head estamos referenciando que es solo una etiqueta de información. Además, es una etiqueta que no tiene contenido que se muestre en el viewport del navegador (ej: párrafo).
+                </p>
+
+                <br />
+
+                <p>
+                    Un archivo de HTML puede tener varias etiquetas “link” con diferentes enlaces de archivos de tipo “.css”. Esto puede ocurrir ya que tal vez cada uno de ellos nos proporcionarán diferentes estilos y funcionalidades de estilos para nuestra web. Estos links nuevos que podemos conectar externos pueden ser por ejemplo una fuente de “Google fonts”, una página de íconos, etc..
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        &#60<span class="tag-color">head</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">title</span>&#62Aplicando CSS&#60/<span class="tag-color">title</span>&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">link</span>
+                        <span class="property-color">rel</span>=<span class="value-color">'stylesheet'</span>
+                        <span class="property-color">href</span>=<span class="value-color">'./css/styles.css'</span>
+                        /&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="comment-color">&#60!-- Fonts --&#62</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">link</span>
+                        <span class="property-color">rel</span>=<span class="value-color">'preconnect'</span>
+                        <span class="property-color">href</span>=<span class="value-color">'https://fonts.googleapis.com'</span>
+                        /&#62
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        &#60<span class="tag-color">link</span>
+                        <span class="property-color">rel</span>=<span class="value-color">'preconnect'</span>
+                        <span class="property-color">href</span>=<span class="value-color">'https://fonts.gstatic.com'</span>
+                        <span class="property-color">crossorigin</span>
+                        /&#62
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#60/<span class="tag-color">head</span>&#62
+                    </code>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

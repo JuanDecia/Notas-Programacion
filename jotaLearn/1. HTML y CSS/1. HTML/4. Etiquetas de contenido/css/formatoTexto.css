@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    max-width: 85%;
+    margin: auto;
+    background-image: url('../img/fondo-imagen.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    background-color: rgb(197, 201, 204, 0.9);
+    padding: 25px;
+}
+
+p {
+    text-align: justify;
+}
+
+/* -- Animaciones -- */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes move {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-1px, 0) scale(1.2);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+}
+
+/* ######### HEADER */
+
+h1 {
+    
+    text-align: center;
+    color: rgb(15, 122, 122);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+.cont-volver-inicio {
+    display: flex;
+    margin-left: 15px;
+    gap: 20px;
+    align-items: center;
+}
+
+.flecha-link {
+    display: flex;
+}
+
+.cont-volver-inicio:hover .flecha { 
+    animation: move 1s linear infinite; /* Animación Flecha */
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: rgb(236, 103, 14);
+    text-shadow: 2px 1px 7px rgba(0, 0, 0, 0.308);
+}
+
+/* ######### MAIN CONTENT */
+
+article {
+    margin: 20px 0;
+}
+
+h2 {
+    color: rgb(38, 99, 231);
+    margin-bottom: 20px;
+}
+
+/* -- Articulo Samp */
+
+h3 {
+    margin: 20px 0;
+    color: rgb(103, 45, 240);
+}
+
+.cont-samp p:last-of-type {
+    margin-bottom: 20px;
+}
+
+#codigo {
+    border: 1px solid black;
+    margin-bottom: 30px;
+}
+
+/* -- Articulo Más Etiquetas */
+
+.cont-tabla {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    padding: 15px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+th {
+    color: #fff;
+    background-color: #1d3557;
+}
+
+tr > td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f1faee ;
+}
+
+tr:nth-child(odd) {
+    background-color: #a8dadc;
+}
+
+
+

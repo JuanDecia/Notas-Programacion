@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('../img/fondo-imagen.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 85%;
+    margin: auto;
+}
+
+main {
+    background-color: rgba(197, 201, 204, 0.85);
+    padding: 25px;
+}
+
+h2 {
+    color: rgb(38, 99, 231);
+    margin: 20px 0;
+}
+
+h3 {
+    color: rgb(103, 45, 240);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cont-img {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+img {
+    max-width: 80%;
+    box-shadow: 3px 5px 9px 3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 5px 9px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 5px 9px 3px rgba(0,0,0,0.75);
+}
+
+p {
+    text-align: justify;
+}
+
+.fondo-codigo {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(37, 35, 35);
+}
+
+.etiqueta {
+    color: rgb(57, 114, 189);
+    font-weight: 600;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.etiqueta-comentario {
+    color: rgb(37, 99, 18);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Animation */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: rgb(15, 122, 122);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+/* Contenido Principal */
+
+/* -- Articulo Introducción -- */
+
+.cont-etiquetas {
+    margin-bottom: 20px;
+}
+
+/* -- Articulo Body -- */
+
+.cont-body {
+    margin-bottom: 20px;
+}
+
+.cont-body p:nth-child(3) {
+    margin: 15px 0;
+}
+
+/* -- Articulo Header -- */
+
+.cont-header p:nth-child(odd) {
+    margin: 20px 0;
+}
+
+/* -- Articulo Main y Section -- */
+
+.cont-mainSection p:nth-child(odd) {
+    margin: 20px 0;
+}
+
+/* -- Articulo Footer -- */
+
+.cont-footer {
+    margin-bottom: 20px;
+}
+
+.cont-footer p{
+    margin-bottom: 20px;
+}
+
+/* -- Articulo Etiquetas Adicionales */
+
+.cont-etiquetasAdicionales {
+    margin: 30px 0;
+}
+
+.cont-etiquetasAdicionales p {
+    margin-bottom: 20px;
+}
+
+.cont-link {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(240, 112, 27, 0.089);
+    border: 2px solid rgb(236, 103, 14);
+    border-radius: 10px;
+    width: 25%;
+}
+
+a {
+    color: rgb(218, 89, 3);
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 10px;
+    text-decoration: none;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.19);
+}

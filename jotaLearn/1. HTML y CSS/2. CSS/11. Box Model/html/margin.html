@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin</title>
+
+    <link rel="stylesheet" href="../css/margin.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <main>
+
+        <header>
+            <h1>Margin</h1>
+
+            <nav>
+                <a class="link" href="../index.html">Volver a inicio</a>
+            </nav>
+        </header>
+
+        <section>
+
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    Es el <b>espacio que existe del borde de la caja hacia afuera</b>. Margin tiene un comportamiento especial, al ser una propiedad con característica <b>shorthand</b> puede recibir como <b>mínimo un valor</b> y como <b>máximo cuatro</b>. Los <b>valores</b> de margin pueden estar en <b>px</b> (pixeles), <b>vw/ vh</b> (escala de viewport) o <b>porcentaje</b> (%). La sintaxis sería la siguiente:
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">h2</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">margin</span>:
+                        <span class="value-color">20px 0 20px 0</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+
+                </div>
+
+                <p>
+                    Como podemos observar en la sintaxis están declarados los <b>cuatro valores</b> de margin los cuales comienzan desde <b>top</b> y siguiendo la <b>orientación del reloj</b> hacia la izquierda (top - right- bottom- left).
+                </p>
+
+                <figure>
+                    <img src="../img/margin2.png" alt="margin 2" />
+                </figure>
+
+                <p>
+                    La caja contenedora tiene lugar desde el <b>borde de “padding”</b> (amarillo) siendo que <b>margin</b> (celeste) es el espacio que este nos ofrece para <b>separar los bordes</b> de los elementos que se encuentren agrupados alrededor.
+                </p>
+
+            </article>
+
+            <hr />
+
+            <article>
+
+                <h2>Margin: Valores</h2>
+
+                <!-- Auto -->
+                <div class="cont-valor-auto">
+                    <h3>Margin: auto</h3>
+
+                    <p>
+                        Además de los valores numéricos que recibe margin también, nos encontramos con el valor <b>“auto”</b>. Toma como referencia las posiciones <b>“right” y “left”</b> del <b>viewport</b> para <b>centrar el contenedor</b> (no utiliza como referencia top y bottom). Es decir, que la orientación de esta propiedad es <b>horizontal</b>.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">h2</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">margin</span>:
+                            <span class="value-color">auto</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <p>
+                        Si deseamos utilizar ambas orientaciones (posición horizontal y posición vertical), debemos declarar <b>dos valores</b> en margin. Es decir, <b>primero</b> debemos colocar el valor que corresponde a las posiciones de <b>top y bottom</b> y <b>segundo</b> el valor que corresponde a los valores de <b>rigth y left</b>. Nos quedaría una sintaxis como la siguiente:
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">h2</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">margin</span>:
+                            <span class="value-color">25px</span>
+                            <span class="value-color">auto</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Inherit -->
+                <div class="cont-inherit">
+                    <h3>Margin: inherit</h3>
+
+                    <div>
+                        <p>
+                            Este valor aplica una <b>heredación de propiedad</b>, es decir, se debe aplicar esta propiedad a un elemento <b>hijo</b> y este tomará la propiedad del elemento <b>padre</b>. Para ejemplificar este concepto, vamos a crear un <b>elemento "div"</b> con un <b>margin de 20px</b> y vamos a crear dentro de este elemento, un elemento <b>"p"</b> al cual le vamos a declarar <b>margin: inherit</b> para que este tome el <b>mismo valor</b> que el elemento padre.
+                        </p>
+                    </div>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">.contenedor-parrafo</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">margin</span>:
+                            <span class="value-color">20px</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>
+                            &#125
+                        </code>
+
+                        <br><br>
+
+                        <!-- Estilo #2 -->
+                        <code>
+                            <span class="field-color">.parrafo-inherit</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">margin</span>:
+                            <span class="value-color">inherit</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <h4>Ejemplo</h4>
+
+                    <div class="cont-ejemplo">
+                        <div class="contenedor-parrafo">
+                            <p class="parrafo-inherit">Soy un párrafo.</p>
+                        </div>
+                    </div>
+    
+    
+                    <div>
+                        <p>
+                            Ambos tienen un margin general de 20px.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Un Valor -->
+                <div class="cont-un-valor">
+                    <h3>Margin: un valor</h3>
+
+                    <p>
+                        Si colocamos un <b>único valor</b> en margin este tomará el mismo para todas las coordenadas (top - right - bottom - left). Existen diferentes formas para colocar un valor a una coordenada.
+                    </p>
+
+                    <h4>Primer Forma</h4>
+
+                    <p>
+                        Una de las maneras que aplicamos <b>un solo valor</b> a la propiedad de margin es declarando un <b>único valor</b> el cual toma como referencia <b>a todas las coordenadas</b> del elemento seleccionado.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">h2</span>
+                            &#123
+                        </code>
+
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="comment-color">/* Aplica 25px en todos los bordes externos */</span>
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">margin</span>:
+                            <span class="value-color">25px</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <h4>Segunda Forma</h4>
+
+                    <p>
+                        Como anteriormente hemos nombrado, margin es una propiedad <b>shorthand</b>. Esta aclaración es adecuada en este momento porque como hemos visto que si declaramos <b>un solo valor</b> éste toma como referencia a <b>todos los lados del elemento</b>.
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Para que esto no suceda, debemos aplicar la <b>siguiente manera</b> de declarar un solo valor para margin. Para aplicar <b>un valor</b> y que <b>solo tome de referencia</b> ese único valor, debemos declarar <b>los demás valores</b> pero en <b>0</b>. A continuación podrán ver un ejemplo de referencia:
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">h2</span>
+                            &#123
+                        </code>
+
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="comment-color">/* Aplica 25px solo en bottom */</span>
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">margin</span>:
+                            <span class="value-color">0 0 25px 0</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <h4>Tercera Forma</h4>
+
+                    <p>
+                        La tercera forma que vamos a aplicar es <b>no utilizando</b> la <b>shorthand</b> que nos ofrece la propiedad <b>margin</b>. Es decir, vamos a utilizar la <b>propiedad específica</b> que apunta la coordenada que deseamos modificar. A continuación, podremos ver un ejemplo:
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">h2</span>
+                            &#123
+                        </code>
+
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="comment-color">/* Aplica 25px solo en bottom */</span>
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">margin-bottom</span>:
+                            <span class="value-color">25px</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <p>
+                        Como podemos observar, con margin podemos especificar la <b>coordenada</b> seguido de la palabra <b>margin</b>. En este caso, también estamos aplicando sólo un valor y si tratamos de agregar otro valor en este tipo de declaración <b>ninguno</b> será tomado porque no lo reconocería el navegador, es decir, se genera un error.
+                    </p>
+                </div>
+
+                <!-- Dos Valores -->
+                <div class="dos-valores">
+                    <h3>Margin: dos valores</h3>
+
+                    <p>
+                        Si hacemos el uso de <b>dos valores</b> en margin las coordenadas especificadas son: <b>primero “vertical”</b> (top y bottom) y <b>segundo “horizontal”</b> (right y left). Al declarar un valor en respectivas posiciones, éstas aplican ese dicho valor tanto en la posición vertical como horizontal, es decir, si tenemos margin 20px 40px la posición vertical separa los contenidos (top y bottom) en 20px y la posición horizontal (right y left) separa los contenidos en 40px.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">h2</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">margin</span>:
+                            <span class="value-color">20px 40px</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <p>
+                        También, tenemos la posibilidad o podemos encontrarnos con el valor “auto” en uno de los dos valores lo cual centraría el contenido en el que especifiquemos.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">h2</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">margin</span>:
+                            <span class="value-color">20px auto</span>;
+                        </code>
+    
+                        <br />
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Ejemplos Margin -->
+            <article>
+                
+                <h2>Ejemplo Aplicando Margin</h2>
+
+                <h3>Contenedores sin margin</h3>
+
+                <div class="cont-ejemplo ejemplo-cajas">
+                    <div class="caja caja-1"></div>
+                    <div class="caja caja-2"></div>
+                    <div class="caja caja-3"></div>
+                </div>
+
+                <p>
+                    A continuación, vamos a ver el mismo ejemplo, pero le hemos aplicado a los elementos con clase <b>‘caja’</b> un <b>margin left</b> de <b>20px</b> para correr los márgenes exteriores a la izquierda y también le hemos agregado un <b>margin top</b> de <b>20px</b> para separar en la parte superior. Para visualizar los elementos aplicamos una propiedad border border.
+                </p>
+
+                <div class="cont-ejemplo ejemplo-cajas">
+                    <div class="caja caja-1 margin-aplicado"></div>
+                    <div class="caja caja-2 margin-aplicado"></div>
+                    <div class="caja caja-3 margin-aplicado"></div>
+                </div>
+
+            </article>
+        </section>
+
+    </main>
+
+</body>
+</html>

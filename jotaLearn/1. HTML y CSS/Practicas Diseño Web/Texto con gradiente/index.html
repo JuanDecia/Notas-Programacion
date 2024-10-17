@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto con gradiente</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Añadiendo gradientes a un texto</h1>
+        </header>
+
+        <!-- Main Content -->
+        <section>
+            <!-- Introducción -->
+            <article>
+                <p>
+                    Para añadir <b>gradiente a un texto</b>, debemos utilizar, además del gradiente en sí, algunas propiedades extra que nos permitiran que el background utilizado se vincule únicamente al texto.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        &#60<span class="tag-color">div</span>
+                        <span class="property-color">class</span>=<span class="value-color">'contenedor'</span>&#62texto&#60/<span class="tag-color">div</span>&#62
+                    </code>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.contenedor</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background</span>:
+                        <span class="field-color">linear-gradient</span>(<span class="value-color">to right, white, red</span>);
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">transparent</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-clip</span>:
+                        <span class="value-color">text</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">-webkit-background-clip</span>:
+                        <span class="value-color">text</span>;
+                    </code>
+
+                    <br />
+
+                    &#125
+                </div>
+
+                <div class="cont-lista">
+                    <ol>
+                        <li>
+                            <b>Color: </b>Colocando el valor del <b>color de texto en transparente</b>, nos aseguramos de que el mismo, en principio, parezca invisible.
+                        </li>
+                        <li>
+                            <b>Background-clip: </b>Esta propiedad se utiliza para definir hasta dónde se extiende el fondo de un elemento HTML. En otras palabras, nos permite controlar el recorte del fondo de un elemento. Utilizando el valor <b>text</b>, le estamos indicando a CSS que queremos que el fondo se extienda hasta el borde exterior del texto. Utilizar sólo esta propiedad si el <b>color del texto no fuera transparente no daría resultado</b>, puesto que el texto está por encima del background de su contenedor.
+                        </li>
+                        <li>
+                            <b> -webkit-background-clip: </b>Esta propiedad es la misma que la anterior, pero tiene un prefijo de proveedor. Estos prefijos son necesarios ya que a veces algunas propiedades no son compatibles con todos los navegadores, y es necesario colocar este tipo de prefijos para poder utilizarlos y no preocuparnos por esa incompatibilidad.
+                        </li>
+                    </ol>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Ejemplo -->
+            <article>
+                <h2>Ejemplo práctico</h2>
+
+                <div class="cont-ejemplo">
+                    <div class="contenedor">
+                        Texto con gradiente
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

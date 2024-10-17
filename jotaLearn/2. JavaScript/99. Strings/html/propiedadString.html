@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srings: Propiedades</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Strings: Métodos</h1>
+
+            <div class="cont-regresar">
+                <div class="cont-flecha"><img class="flecha" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAASlJREFUSEu1le0xBFEQRc9GYDMgAzYCMkAGREAGyIAIyAARIIOVARkQAXWqelTXYKfmTU//mppXdc/tr/cWzByLmfWpAOwBt2F01Tc8FXAJXCTRX3qtgB3gHtB9jhLAebheAu/ACfAUlEkABXV9EGKPIf4BfE0FHEUjhXyG8EOqTTNAQSdEgPES37rO0QSwFIrbUF07Mdf/7M0ogK4dPZtpvIbrtw1LOQqwBnZD7CqcDy18M8CyCBmKUQBLpPBZqJrRMVBWos6tTb4DtgGnRuhNRZOzhtkIOYyfz5FNyZhmkHsgaCuyOQVKFq2fjaL78dNvQSVXRQa5H/bDbGy8kJLLLkPcbjPo9qU7m3Sb/jVAsz04Geaj4wAY/Qeo5E3euOWtT+bQ1fFz/g3z2joZKcKcfAAAAABJRU5ErkJggg=="/></div>
+                <a class="cont-link" href="../index.html"><button>Volver a inicio</button></a>
+            </div>
+        </header>
+
+        <section>
+
+            <!-- Seccion length-->
+            <article>
+                <h2>Length</h2>
+
+                <div>
+                    <p>
+                        Length es una propiedad de todos los objetos de tipo String, que nos retorna un valor numérico del tamaño 
+                        de la cadena de caracteres que estamos almacenando en la variable de tipo string. Como es una propiedad 
+                        no se requiere accederla finalizando con paréntesis; para acceder a esta propiedad ponemos el nombre de la 
+                        variable o el valor del string y finalizamos con un punto y a continuación sin ningún espacio extra la 
+                        palabra length.
+                    </p>
+                </div>
+
+                <h3>Ejemplo</h3>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>let cadenaTexto = "Cadena de texto";</code>
+                    <code>cadenaTexto.length;</code>
+                    <code class="cont-resultado"></code>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- Seccion tolowercase-->
+        <section>
+
+            <article>
+
+                <h2>toLowerCase</h2>
+
+                <div>
+                    <p>
+                        El método toLowerCase de los objetos tipo string, nos permite obtener la cadena de caracteres convertida a 
+                        caracteres en minúscula; los números, símbolos y otros caracteres no se ven afectados. Recordemos que la 
+                        manera de llamar un método o una función es el nombre de la función finalizado con los parámetros que 
+                        recibe el método, separados por comas y encerrados entre paréntesis.
+                    </p>
+
+                    <p>
+                        Para nuestro caso, ponemos el valor del string, continuamos con un punto, seguido de apertura y cierre de 
+                        los paréntesis (esta función no recibe ningún parámetro, con lo cual dejamos este espacio vacío) y 
+                        terminamos con un punto y coma. A continuación, puedes ver un ejemplo:
+                    </p>
+                </div>
+
+                <h3>Resultado</h3>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>let textoMayus = 'TEXTO EN MAYUS';</code>
+                    <code>console.log(`Convertimos 'TEXTO EN MAYUS' a minúscula: ${textoMayus.toLowerCase()}.`);</code>
+                    <code class="cont-resultado"></code>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- toUpperCase -->
+        <section>
+            <article>
+                <h2>toUpperCase</h2>
+
+                <div>
+                    <p>
+                        El método toUpperCase nos devuelve el contenido del string en mayúsculas.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                   <code>let textoMinuscula = 'texto en minúscula';</code>
+                   <code>console.log(`Convertimos el 'texto en minúscula' a mayúscula; ${textoMinuscula.toUpperCase()}.`);</code>
+                   <code class="cont-resultado"></code>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Split -->
+        <section>
+            <article>
+                <h2>Split</h2>
+
+                <p>
+                    Vamos a utilizar el procesamiento de strings llamado Split el cual crea un arreglo nuevo y nos permite 
+                    dividir un string en función de un carácter divisor. Entonces, por cada división que crea este “caracter 
+                    divisor” se crea una posición en el arreglo.
+                </p>
+
+                <h3>Parámetros</h3>
+
+                <h4>split.(separador)</h4>
+
+                <div>
+                    <p>
+                        Especifica el carácter a usar para la separación de la cadena. El separador es tratado como una cadena o 
+                        como una expresión regular. Si se omite el separador, el array devuelto contendrá un sólo elemento con la 
+                        cadena completa. 
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Cuando se encuentra, el separador es eliminado de la cadena y las subcadenas obtenidas se devuelven en un 
+                        array. Si el separador no es encontrado o se omite, el array contendrá un único elemento con la cadena 
+                        original completa. Si el separador es una cadena vacía la cadena es convertida en un array de carácteres.
+                    </p>
+
+                    <p>
+                        Es recomendable crear una variable para usar con el separador, es decir:
+                    </p>
+
+                    <h3>Resultado</h3>
+
+                    <div>
+                        <p>
+                            Crearemos una cadena de caracteres para divirla en un arreglo según el parámetro
+                            que elegimos con <b>split()</b>.
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>const espacio = " ";</code>
+                        <code>const coma = ",";</code>
+                        <code>let nombreApellido = 'Luis Blanco';</code>
+                        <code>let arregloNombreApellido = nombreApellido.split(espacio);</code>
+                        <code></code>
+                    </div>
+
+                    <div>
+                        <p>
+                            A este momento tenemos una variable con 2 arreglos un arreglo [Luis] y otro
+                            [Blanco]. Para verificar este resultado es recomendable verlo en la consola.
+                        </p>
+
+                        <p>
+                            Para realizar una buena práctica podemos crear una función que realice este
+                            proceso para cada vez que tengamos que dividir una cadena. La sintaxis de la 
+                            función sería la siguiente: 
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>function dividirCadena(cadenaADividir, separador) {</code>
+                        <code class="margen-funcion">let arrayDeCadenas = cadenaADividir.split(separador);</code>
+                        <code class="margen-funcion">return arrayDeCadenas.join(" ");</code>
+                        <code>}</code>
+                    </div>
+
+                    <div>
+                        <p>
+                            Con la construcción de esta función, lo único que debemos realizar a seguir
+                            es la llamada de la misma y pasarle los parámetros que esta pide. Es decir,
+                            una <b>variable</b> que contenga una <b>cadena de texto</b> que va a ser
+                            dividida y un parámetro que funciona como <b>separador.</b>
+                        </p>
+
+                        <p>
+                            En el cuerpo de la función, se declara una variable la cual va a trabajar
+                            con la cadena a dividir y el method de split(). Esta misma nos retorna la
+                            variable con los arreglos correspondientes.
+                        </p>
+
+                        <p>
+                            A continuación, realizaremos la llamada de la función y le pasaremos una variable
+                            que será con la que trabajará.
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>let nombre = "Juan Marcelo Decia";</code>
+                        <code>let espacio = " ";</code>
+                        <code>console.log(dividirCadena(nombre, espacio));</code>
+                        <code class="cont-resultado"></code>
+                    </div>
+                    
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- Trim -->
+        <section>
+            <article>
+                <h2>Trim</h2>
+
+                <div>
+                    <p>
+                        El método trim devuelve el valor del string, eliminando los caracteres en blanco que estén al <b>inicio</b> y al 
+                        <b>final</b> de la cadena, sin importar la cantidad de caracteres en blanco que contenga. Por ejemplo:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code class="cont-resultado"></code>
+                    <code>console.log(frase.trim());</code>
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar no necesitamos especificar un argumento en los parámetros de este método para 
+                        que funcione. Para una mejor experiencia para el ejemplo, se puede ver en la consola
+                        que la frase tiene muchos espacios por eliminar.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        También, es importante destacar que, de esta manera sólo estamos “mostrando” el resultado con la función 
+                        de trim() pero, no lo estamos guardando. Para guardar el resultado, debemos instanciarlo en una nueva 
+                        variable, es decir, en vez de utilizar console.log() lo que debemos hacer es crear una variable con nombre 
+                        “resultado” y en su valor aplicar el método trim.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <p><code>let resultado = frase.trim();</code></p>
+                    <p><code>console.log(resultado);</code></p>
+                </div>
+
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- CharAt-->
+        <section>
+            <article>
+                <h2>charAt</h2>
+
+                <div>
+                    <p>
+                        El método CharAt selecciona una posición en una cadena de caracteres para devolver un nuevo string.
+                    </p>
+                </div>
+
+                <h3>Parámetros</h3>
+
+                <h4>Índice: charAt(indice)</h4>
+
+                <div>
+                    <p>
+                        Un entero entre 0 y 1 menos que la longitud de la cadena. Si no se proporciona ningún índice charAt() 
+                        utilizará 0.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Los caracteres de una cadena se indexan de izquierda a derecha. El índice del primer carácter es 0, y el 
+                        índice del último carácter en una cadena es - 1. Si el índice que usted proporciona está fuera del rango, 
+                        JavaScript devuelve una cadena vacía.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        La función CharAt es útil cuando estamos trabajando con un procesamiento de líneas y debemos crear una 
+                        función para cambiar algún carácter específico de alguna palabra ingresada por un usuario.
+                    </p>
+                </div>
+
+                <h3>Resultado</h3>
+
+                <div>
+                    <div>
+                        <p>
+                            Para este ejemplo práctico vamos a crear una variable con nombre "nombre" y le vamos a asignar el valor de 
+                            "juan decia" (sin mayúsculas). El objetivo de esta práctica es que luego en la consola, nos retorne el 
+                            nombre y apellido con mayúsculas respecivamente.
+                        </p>
+
+                        <p>
+                            A continuación, realizaremos una serie de pasos para que este string tenga las mayúsculas correspondientes.
+                            Uno de estos pasos es el <b>charAt()</b> el cual nos dejará cambiar la letra gracias a que nos podemos
+                            ubicar en la posición que deseemos.
+                        </p>
+                    </div>
+    
+                    <div class="fondo-codigo bloque-codigo">
+                        <p>Función para colocar una mayúscula: </p>
+
+                        <code>function mayusculas(palabra) {</code>
+                        <code class="margen-funcion">return palabra.charAt(0).toLocaleUpperCase() + palabra.slice(1).toLocaleLowerCase()</code>
+                        <code>}</code>
+                    </div>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <p>Función para dividir nombre-apellido y limpiar espcios. Retorna la función que coloca mayus.</p>
+
+                        <code>function procesarFila(fila){</code>
+                        <code class="margen-funcion">const arreglo = fila.split(" ");</code>
+                        <code class="margen-funcion">const nombre = arreglo[0].trim();</code>
+                        <code class="margen-funcion">const apellido = arreglo[1].trim();</code>
+                        <code class="margen-codigo">return mayusculas(nombre) + " " + mayusculas(apellido);</code>
+                        <code>}</code>
+                    </div>
+    
+                    <div>
+                        <p>
+                            A continuación, procederemos a realizar la llamada de la función para verificar
+                            que el nombre a resolver se le coloquen las letras correspondientes en 
+                            mayúsculas:
+                        </p>
+                    </div>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>let nombrePersona = "juan decia";</code>
+                        <code class="cont-resultado"></code>
+                    </div>
+                </div>
+
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- Slice -->
+        <section>
+            <article>
+                <h2>Slice</h2>
+            </article>
+
+            <article>
+                <div>
+                    <p>
+                        El método slice() devuelve una <b>copia</b> de una parte del array dentro de un nuevo array empezando por inicio 
+                        hasta fin (fin no incluido). El array original <b>no</b> se modificará.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Sintaxis</h3>
+
+                <div>
+                    <p><code>arr.slice([inicio [, fin]]);</code></p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Parámetros</h3>
+
+                <h4>Inicio</h4>
+
+                <div>
+                    <p>
+                        Índice donde empieza la extracción. El primer elemento corresponde con el índice 0. Si inicio es omitido 
+                        el valor por defecto es 0. Si inicio es mayor a la longitud del array, se devuelve un array vacío.
+                    </p>
+                </div>
+
+                <h4>Fin</h4>
+
+                <div>
+                    <p>
+                        Índice que marca el final de la extracción. Slice() extrae hasta el índice indicado, pero sin incluir el 
+                        final. Osea que, si slice indica (1,4), extrae desde el segundo elemento hasta el cuarto (los elementos 
+                        con índices 1, 2,  y 3) recordemos que el último no entra.
+                    </p>
+                </div>
+
+            </article>
+
+            <article>
+                <div>
+                    <h3>Ejemplo</h3>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>let nombreSlice = 'Juan';</code>
+                        <code>console.log(nombre.slice(1));</code>
+                        <code class="cont-resultado"></code>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    </main>
+    <script src="../scripts/propiedadString.js"></script>
+</body>
+</html>

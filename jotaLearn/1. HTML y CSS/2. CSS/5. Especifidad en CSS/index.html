@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidad en CSS</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Especificidad en CSS</h1>
+        </header>
+
+        <!-- Main Content -->
+        <section>
+            <article class="cont-introduccion">
+                <h2>Introducción</h2>
+
+                <p>
+                    En las hojas de estilo en cascada, los estilos se aplican en el orden en que aparecen en el código. Por ejemplo, si definimos un estilo para la clase párrafo al principio de nuestro CSS pero sobre el final de nuestro documento volvemos a estilarla cambiando las mismas propiedades que utilizamos arriba, estos nuevos estilos van a sobreescribir a los anteriores.
+                </p>
+
+                <br />
+
+                <p>
+                    Por otra parte, los estilos más específicos anulan a los estilos menos específicos. Aquí es donde entra en juego el concepto de <b>especificidad</b>. La <b>especificidad</b> en CSS se refiere a la <b>prioridad</b> que se le da a un estilo determinado en el caso de que existan varios estilos que se aplican al mismo elemento. En otras palabras, la especificidad determina <b>qué estilo se aplicará en caso de conflicto</b>.
+                </p>
+
+                <h3>Los niveles de especificidad en orden descedente en CSS son:</h3>
+
+                <div class="lista-especificidad">
+                    <ol>
+                        <li>Estilos por defecto del navegador</li>
+                        <li>Estilos inline (estilos aplicados directamente en un elemento a través del atributo "style")</li>
+                        <li>Selectores de ID</li>
+                        <li>Selectores de clase, atributos y pseudoclases</li>
+                        <li>Selectores de etiqueta</li>
+                    </ol>
+                </div>
+
+                <p>
+                    Teniendo en cuenta esto, un estilo aplicado en una hoja de estilos externa tendrá menos especificidad que un estilo inline, por lo tanto, los estilos que se aplicarán al elemento en cuestión son los que estarán especificados en los estilos inline del propio elemento dentro de nuestro archivo HTML.
+                </p>
+            </article>
+
+            <!-- Niveles Especificidad -->
+            <article class="cont-niveles">
+                <h2>Niveles Especificidad</h2>
+
+                <p>
+                    La especificidad se mide en una escala de <b>4 niveles de números separados por puntos</b>, donde cada nivel representa uno de los tipos de selectores mencionados anteriormente. Por ejemplo, un selector de ID tiene una especificidad de 0,1,0,0, mientras que un selector de etiqueta tiene una especificidad de 0,0,0,1.
+                </p>
+
+                <div class="tabla-niveles">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nivel</th>
+                                <th>Selector</th>
+                                <th>Especificidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Estilo por defecto del navegador</td>
+                                <td>0,0,0,0</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Estilo Inline</td>
+                                <td>1,0,0,0</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Selector de ID</td>
+                                <td>0,1,0,0</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Selector de clase, atributos y pseudoclases</td>
+                                <td>0,0,1,0</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Selector de etiqueta</td>
+                                <td>0,0,0,1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    Si hay varios estilos que se aplican a un mismo elemento, se aplicará el estilo con la especificidad más alta.
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

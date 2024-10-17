@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Await</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Promesa Await</h1>
+        </header>
+
+        <section>
+
+            <article>
+                <div>
+                    <p>
+                        Cuando hablamos de <b>Await</b> estamos haciendo referencia a las funciones 
+                        asíncronas, lo que nos ofrece en este caso <b>await</b> es una <b>sintaxis 
+                        diferente y más clara</b>. También utilizaremos los methods <b>try</b> y 
+                        <b>catch</b> para depurar las promesas. Como habiamos visto anteriormente 
+                        con <b>try{}</b> que en este caso es nuevo, recorremos la promesa y luego 
+                        con <b>catch()</b> construímos si no se ha cumplido la promesa.
+                    </p>
+        
+                    <p>
+                        Podemos tener proyectos en los cuales trabajaremos con varias funciones dentro 
+                        de la construccion de una <b>función asincrona</b>,lo cual, si solo utilizamos 
+                        las promesas con la sintaxis del <b>then()</b> podria volverse engorroso y poco 
+                        legible el código. Además, el orden en el que vamos construyendo las funciones 
+                        dentro de la promesa se irán ejecutando linea por linea a medida que las promesas 
+                        se vayan cumpliendo.
+                    </p>
+        
+                    <p>
+                        Para evitar ese sistema tendremos que hacer el uso del <b>await</b> y <b>async</b>.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Await -->
+        <section>
+
+            <article>
+                <div>
+                    <h2>Await</h2>
+                </div>
+
+                <div>
+                    <p>
+                        <b>Await</b> le indica al interpretador que debe esperar a que la promesa se 
+                        cumpla y deja el resultado de la promesa en la variable que la hemos colocado, 
+                        por ejemplo:
+                    </p>
+                </div>
+
+                <div>
+                    <code>let resultado = await arreglarCuarto()</code>
+                </div>
+
+                <div>
+                    <p>
+                        Entonces podemos concluir que esta sinxtaxis es más sencilla que la que usa el 
+                        then().
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Construcción promesa</h3>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>function arreglarCuarto() {</code>
+                    <code class="indentado-20">let promesa = new Promise(function (resolve, reject) {</code>
+                    <code class="indentado-40">resolve('Cuarto Arreglado');</code>
+                    <code>});</code>
+                    <code>return promesa;</code>
+                    <code>};</code>
+                </div>
+
+            </article>
+        </section>
+        <section>
+
+            <article>
+                <div>
+                    <h2>Async</h2>
+                </div>
+
+                <div>
+                    <p>
+                        Debemos tener en cuenta que al usar await en una función también, debemos hacer 
+                        el uso del <b>async</b>, que le indica al interpretador que internamente 
+                        utilizaremos <b>las esperas por als funciones asincronas</b>.
+                    </p>
+
+                    <p>
+                        <code>async function procesar(){}</code>
+                    </p>
+
+                    <p>
+                        En resumen esta sintaxis es más simple porque si tenemos funciones que deben 
+                        llamarse encadenadamente, la sintaxis de <b>Await</b> solo ocupa una línea. 
+                        Debemos tener en cuenta que esto solo está disponible en ES6.
+                    </p>
+                </div>
+                
+            </article>
+        </section>
+        
+        <!-- Try & Catch -->
+        <section>
+            
+            <article>
+                <div>
+                    <h2>Try & Catch</h2>
+                </div>
+                
+                <div>
+                    <p>
+                        El último paso que nos resta construír es que sucede si la <b>promesa no se 
+                            cumple</b>, para este debemos usar <b>catch()</b> como lo hemos hecho anteriormente.
+                            A diferencia que en este caso en vez de usar un <b>then()</b> para cada promesa 
+                            solo debemos usar un <b>try{}</b> y dentro de el todos los <b>await</b> que sean 
+                            necesarios que serán depurados por si la promesa se cumple, de lo contrario, 
+                            pasarán por el <b>catch()</b> y dentro del mismo se construirá el resultado a 
+                            devolver al no cumplirse la promesa.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3>Promesa con Async & Await</h3>
+                    </div>
+
+                    <div class="fondo-codigo">
+                        <code>async function procesar() {</code>
+                            <code class="indentado-20">try {</code>
+                                <code class="indentado-40">let resultado = await arreglarCuarto();</code>
+                                <code class="indentado-40">console.log(`Resultado: ${resultado}.`);</code>
+                                <code class="indentado-20">}</code>
+                                <code></code>
+                                <code class="indentado-20">catch(error) {</code>
+                                    <code class="indentado-40">console.log(`Resultado: ${error}`);</code>
+                        <code class="indentado-20">};</code>
+                        <code>};</code>
+                        <code></code>
+                        <code>procesar();</code>
+                    </div>
+                    
+                </article>
+            </section>
+        </main>
+        
+        <script src="scripts/main.js"></script>
+        <script type="text/babel" src="scripts/babel.min.js"></script>
+    </body>
+    </html>

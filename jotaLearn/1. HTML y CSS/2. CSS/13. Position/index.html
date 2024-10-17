@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    
+    <main>
+        <header>
+            <h1>Propiedad Position</h1>
+        </header>
+
+        <section>
+
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    La propiedad <b>position</b> nos permite manipular una <b>posición fija en relación a su elemento contenedor</b> en el DOM. La propiedad position puede recibir cinco valores, es decir, tenemos <b>cinco maneras diferentes de posicionar</b> los elementos según nuestro sitio web lo requiera.
+                </p>
+
+                <h3>Sintaxis</h3>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.position-element</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">position</span>:
+                        <span class="value-color">static</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">position</span>:
+                        <span class="value-color">relative</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">position</span>:
+                        <span class="value-color">fixed</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">position</span>:
+                        <span class="value-color">absolute</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">position</span>:
+                        <span class="value-color">sticky</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+            </article>
+
+            <hr />
+            <!-- Z-index -->
+            <article>
+                <h2>Z-index</h2>
+
+                <p>
+                    Esta propiedad de CSS es útil cuando necesitamos <b>superponer un contenedor sobre otro</b>, haciendo que el contenedor con <b>z-index más elevado</b> siempre esté visible por encima de todos los demás elementos. Esto es posible ya que podemos manejar los <b>ejes que posicionan los elementos</b>. Por ejemplo, el eje horizontal es el eje x-axis; el eje vertical corresponde a y-axis y finalizando tenemos el <b>eje z-index</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    Entonces al utilizar la propiedad de <b>z-index</b> estamos utilizando <b>la posición en relación de 3d del elemento</b>. Esta propiedad <b>recibe un valor numérico</b> y mientras <b>más grande sea este valor, estará el elemento más superpuesto a los demás</b>. Es decir, el valor de z-index más alto es el que se va a mostrar por encima de los demás. El <b>valor por defecto de esta propiedad es de 0 o auto</b> el siguiente valor sería 1. Esto no significa que podemos también colocar valores como -1. Estos elementos estarían por detrás de los elementos posicionados con el valor de z-index por defecto, es decir, estarán ocultos.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.position-element</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">z-index</span>:
+                        <span class="value-color">1</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+
+            </article>
+
+            <hr />
+
+            <!-- Valores Position -->
+            <article>
+                <h2>Valores Position</h2>
+
+                <p>
+                    A continuación, se encuentran los links que nos llevan a cada uno de los valores que puede recibir esta propiedad. Se ha separado a cada uno, ya que, se puede lograr una mejor lectura y experiencia para el usuario porque el contenido queda más limpio y ordenado para ejemplificar con prácticas los posicionamientos de los elementos.
+                </p>
+
+                <div class="cont-links">
+                    <div>
+                        <a class="link-position" href="./html/static.html">Ir a valor "Static"</a>
+                    </div>
+    
+                    <div>
+                        <a class="link-position" href="./html/relative.html">Ir a valor "Relative"</a>
+                    </div>
+    
+                    <div>
+                        <a class="link-position" href="./html/absolute.html">Ir a valor "Absolute"</a>
+                    </div>
+
+                    <div>
+                        <a class="link-position" href="./html/fixed.html">Ir a valor "Fixed"</a>
+                    </div>
+    
+                    <div>
+                        <a class="link-position" href="./html/sticky.html">Ir a valor "Sticky"</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

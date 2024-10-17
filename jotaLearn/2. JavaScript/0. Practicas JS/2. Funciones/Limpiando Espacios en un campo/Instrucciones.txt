@@ -1,0 +1,10 @@
+Te solicitamos implementar las siguientes funciones: encabezadoEvento() y limpiarNombreParticipante(). 
+
+A continuación describimos cada una de éstas:
+
+    * encabezadoEvento() {Es una función que dado el nombre del evento y lugar, crea un string para la 
+    interfaz de usuario.}
+
+    * limpiarNombreParticipante(): Es una función que dado el nombre y apellido del participante lo 
+    transforma al apellido en mayúsculas, seguido de coma y luego el nombre en minúsculas. 
+    Esta función limpia los caracteres en blanco al inicio o final del nombre o apellido.

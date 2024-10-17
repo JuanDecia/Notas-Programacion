@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+        <title>Keyframes</title>
+        <style media="screen">
+            #contenedor {
+                width: 1000px;
+                height: 600px;
+                border: 2px solid;
+                margin: 0 auto;
+                background-color: #DBFFF1;
+                text-align: center;
+                transition: background 1s;
+                animation: miAnimacion 3s infinite; /* Si agregamos el valor "infinite" la acción se ejecutara infinitamente */
+            }
+            /* keyframe */
+            @-webkit-keyframes miAnimacion { /* Usamos -webkit- porque los keyframes no son soportados por todos los navegadores */
+                from {
+                    transform: rotate(45deg);
+                }
+                to {
+                    height: 0 ;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section id="contenedor">
+
+        </section>
+    </body>
+</html>

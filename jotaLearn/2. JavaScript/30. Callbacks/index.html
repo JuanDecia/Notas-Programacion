@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Callbacks</h1>
+        </header>
+
+        <section>
+            <article>
+                <div>
+                    <h2>Introducción</h2>
+                </div>
+
+                <div>
+                    <p>
+                        Este tipo de funciones son conocidas porque son <b>funciones</b> que son pasadas
+                        como <b>parámetros a otra función</b>. Es decir, que dentro de una función podemos
+                        realizar el llamado a <b>otra función</b>.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <div>
+                    <h2>Ejemplos</h2>
+                </div>
+
+                <div>
+                    <p>
+                        Comenzaremos creando una función de "imprimirMensaje" que trabajará como tipo
+                        <b>callback</b>:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>function imprimirMensaje(mensaje) {</code>
+                    <code class="indentado-20">console.log(mensaje);</code>
+                    <code>}</code>
+                </div>
+
+                <div>
+                    <p>
+                        A continuación, crearemos la función a la que llamaremos como <b>callback</b> a
+                        la función creada anteriormente:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>function operacionSumar(op1, op2, funcionCallback) {</code>
+                    <code class="indentado-20">let res = op1 + op2;</code>
+                    <code class="indentado-20">funcionCallback(res); // Función del callback</code>
+                    <code>}</code>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar es una función donde se le van a pasar dos parámetros para 
+                        que realice una operación matemática y luego, por la funcion callback llamada
+                        'imprimirMensaje' podemos imprimir el mensaje del resultado. A continuación,
+                        realizaremos los llamados necesarios para visualizar los resultados: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="">sumar(5, 3, imprimir);</code>
+                    <code class="cont-resultado"></code>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+        <title>Formularios con JS</title>
+    </head>
+    <body>
+        <header>
+            <h1>Formularios con JS</h1>
+        </header>
+        <section>
+            <!-- Cada entrada del formulario debe tener "name" a través del cual accedemos al valor que tiene esa entrada -->
+            <form>
+
+                <p>
+                    <label id="nombre">*Nombre: </label>
+                    <input id="nombre" name="nombre" type="text" placeholder="Ej: Juan" /> 
+                </p>
+
+                <p>
+                    <label id="email">*Email: </label>
+                    <input id="email" name="email" type="email" placeholder="Ej: juan@gmail.com" />
+                </p>
+
+                <p>
+                    <label id="contraseña">*Contraseña: </label>
+                    <input id="contraseña" name="contraseña" type="password" />
+                </p>
+
+                <p>
+                    <label id="confirma_contraseña">Contraseña (Confirmación) </label>
+                    <input id="confirma_contraseña" name="confirma" type="password" />
+                </p>
+
+                <p>
+                    <p>Género: </p>
+                    <input type="radio" name="genero" id="m" value="m" />
+                    <label for="m">Masculino</label>
+                    <input type="radio" name="genero" id="f" value="f" />
+                    <label for="f">Femenino</label>
+                </p>
+
+                <p>
+                    <label id="pais">País: </label>
+                    <select id="pais" name="pais">
+                        <option value="">Seleccione</option>
+                        <option value="1">Colombia</option>
+                        <option value="2">Brasil</option>
+                        <option value="3">México</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="terminos">
+                        <input type="checkbox" name="terminos" id="terminos" value="acepta"> Acepta términos y condiciones
+                    </label>
+                </p>
+
+                <!-- Aplicamos el atributo "onclick" para traer la funcion que valida el formulario desde JS -->
+                <p>
+                    <input type="submit" value="Continuar" onclick="return validar(this.form)" />
+                </p>
+
+            </form>
+        </section>
+
+        <script src="Scripts/main.js"></script>
+    </body>
+</html>

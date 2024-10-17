@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Secuencial</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Salon de Clase</h1>
+        </header>
+        <article>
+            <table>
+
+                <tr>
+                    <td>Cantidad de niños</td>
+                    <td>Cantidad de niñas</td>
+                </tr>
+
+                <tr>
+                    <td><input id="niñosCantidad" type="text"></td>
+                    <td><input id="niñasCantidad" type="text"></td>
+                </tr>
+
+                <tr>
+                    <td>Porcentaje de niños</td>
+                    <td>Porcentaje de niñas</td>
+                </tr>
+
+                <tr>
+                    <td id="niñosHTML">% 0</td>
+                    <td id="niñasHTML">% 0</td>
+                </tr>
+
+            </table>
+        </article>
+
+        <div id="total-alumnos"></div>
+
+        <div class="button">
+            <button id="button">Calcular Porcentajes</button>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

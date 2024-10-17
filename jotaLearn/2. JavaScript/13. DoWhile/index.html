@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoWhile</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Bucle Do-While</h1>
+        </header>
+
+        <section>
+            <h2>Introducción</h2>
+
+            <div>
+                <p>
+                    La sentencia (hacer mientras) crea un bucle que ejecuta una sentencia especificada, hasta que la 
+                    condición de comprobación se evalúa como falsa. La condición se evalúa después de ejecutar la sentencia, 
+                    dando como resultado que la sentencia especificada se ejecute al menos una vez.
+                </p>
+            </div>
+
+            <hr />
+
+            <h2>Sintaxis</h2>
+
+            <div class="fondo-codigo bloque-codigo">
+                <code>do {</code>
+                <code>sentencia</code>
+                <code>} while (condicion);</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Sección Sentencia</h2>
+
+            <div>
+                <p>
+                    Una sentencia que se ejecuta al menos una vez y es re-ejecutada cada vez que la condición se evalúa a verdadera. 
+                    Para ejecutar múltiples sentencias dentro de un bucle, utilice la sentencia block ({ ... }) para agrupar 
+                    aquellas sentencias.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ejemplo</h2>
+
+            <div class="fondo-codigo bloque-codigo">
+                <code>do {</code>
+                <code class="indentacion">i += 1</code>
+                <code class="indentacion">console.log(i)</code>
+                <code>} while (i < 5);</code>
+            </div>
+
+            <div>
+                <p>
+                    En el siguiente ejemplo, el bucle do-while itera al menos una vez y se reitera hasta que “i” ya no sea menor que 5.
+                </p>
+            </div>
+
+            <div class="fondo-codigo">
+                <code class="cont-resultado"></code>
+            </div>
+        </section>
+    </main>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

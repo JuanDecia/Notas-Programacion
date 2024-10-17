@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../img/git.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 85%;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    background-color: rgba(197, 201, 204, 0.9);
+    padding: 25px;
+}
+
+h2 {
+    margin: 30px 0;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+h3 {
+    color: rgb(103, 45, 240);
+    margin: 25px 0;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+p {
+    text-align: justify;
+}
+
+hr {
+    margin-top: 20px;
+}
+
+/* -- Animaciones -- */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ######### HEADER */
+
+h1 {
+    text-align: center;
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.3s ease-in, slide-down 1.3s ease-in-out;
+}
+
+/* ######### MAIN CONTENT */
+
+.cont-lista {
+    margin: 20px 0;
+}
+
+.cont-lista ol li {
+    padding: 10px;
+}
+
+.cont-img {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 70%;
+    max-width: 100%;
+}

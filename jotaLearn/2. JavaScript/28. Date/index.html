@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Objeto Date</h1>
+    </header>
+
+    <p>
+        Date es un objeto el cual contiene información sobre el calendario y el tiempo en hs. 
+        Para utilizarlo debebemos siempre <b>instanciarlo en una variable</b> porque <b>new Date()</b>
+        se trata de un objeto, que luego podemos hacer su llamada y acceder a las claves y valores 
+        que <b>Date</b> contiene.
+    </p>
+
+    <p>
+        Debemos hacer uso del objeto nativo, este es llamado <b>new Date()</b> al cual vamos a 
+        instanciar en una variable let. Debemos saber que <b>new Date()</b> tiene muchos metodos 
+        que podemos utilizar para dar su información.
+    </p>
+
+    <p>
+        <code>let time = new Date();</code>
+    </p>
+
+    <hr/>
+            
+    <!-- Día Número -->
+    <h2>Día número</h2>
+
+        <p>
+            Si queremos saber el <span class="background"><b>día del mes en número</b></span> 
+            debemos llamar a la variable que instanciamos y seguido usamos el method <b>getDate()</b>: 
+            <span id="getDate" class="background"></span>.
+        </p>
+
+        <p>
+            <code>time.getDate();</code>
+        </p>
+
+    <hr/>
+
+    <!-- Día semana en número -->
+    <h2>Día semana en número</h2>
+    
+        <p>
+            Si queremos saber el <span class="background"><b>día de la semana en número</b></span> 
+            siendo que lúnes es "1", debemos llamar a la variable que instanciamos y seguido usamos 
+            el method <b>getDay()</b>: <span id="getDay" class="background"></span>.
+        </p>
+
+        <p>
+            <code>time.getDay();</code>
+        </p>
+
+    <hr/>
+
+    <!-- Mes Número -->
+    <h2>Mes número</h2>
+
+        <p>
+            Si queremos saber el <span class="background"><b>número del mes</b></span> siendo que Enero es "0", debemos llamar a la variable que instanciamos y seguido usamos el method <b>getMonth()</b>: <span id="Month" class="background"></span>. <br/>
+            Como para el usuario necesitamos que vea el mes real ya que siempre nos retorna un valor menos que el mes en el que estamos actualmente, lo que debemos hacer es agregarle <b>+1</b> al valor del mes. Esto lo podemos realizar con la siguiente sintaxis:
+
+            <p>
+                <span class="background">(time.getMonth()+1)</span>
+            </p>
+            
+            <p>
+                Como podemos observar, <b>debemos guardar entre paréntesis toda la declaración para realizar la suma del mes.</b>
+            </p>
+        </p>
+
+    <hr/>
+
+    <!-- Mes Número -->
+    <h2>Año número:</h2>
+
+        <p>
+            Si queremos saber el <span class="background"><b>número del año</b></span>, debemos llamar 
+            a la variable que instanciamos y seguido usamos el method <b>getFullYear()</b>: 
+            <span id="year" class="background"></span>.
+        </p>
+
+        <p>
+            <code>time.getFullYear()</code>
+        </p>
+
+    <hr/>
+
+    <!-- Fecha Siempre Actualizada -->
+    <h2>Fecha Siempre Actualizada</h2>
+
+        <p>
+            Si queremos realizar una fecha que <span class="background"><b>siempre este en la fecha del 
+            día</b></span>, debemos llamar a la variable que instanciamos y seguido usaremos los 
+            method que anteriormente utilizamos <b>getDate(), getMonth() y getFullYear()</b>: 
+            <span id="real_time" class="background"></span>.
+        </p>
+
+        <p>
+            <code>time.getDay()}/ ${(time.getMonth()+1)}/ ${time.getFullYear();</code>
+        </p>
+
+    <hr/>
+
+    <!-- Fecha en string -->
+    <h2>Fecha en string</h2>
+
+        <p>
+            Si queremos colocar <span class="background"><b>la informacion completa de la fecha 
+                y hora en string</b></span>, debemos llamar a la variable que instanciamos y 
+                seguido usaremos el method <b>toString()</b>: <span id="string" class="background"></span>.
+        </p>
+
+        <p>
+            <code>time.toString();</code>
+        </p>
+
+    <hr/>
+
+    <!-- Fecha local en string, no hora -->
+    <h2>Fecha local en string, no hora</h2>
+
+        <p>
+            Si queremos colocar <span class="background"><b>la informacion de la fecha local</b></span>, 
+            debemos llamar a la variable que instanciamos y seguido usaremos el method 
+            <b>toDateString()</b>: <span id="date_string" class="background"></span>.
+        </p>
+
+        <p>
+            <code>time.toDateString();</code>
+        </p>
+
+    <hr/>
+
+    <!-- Fecha y hora local -->
+    <h2>Fecha y hora local:</h2>
+    
+        <p>
+            Si queremos colocar <span class="background"><b>la informacion de la fecha y hora local
+            </b><span>, debemos llamar a la variable que instanciamos y seguido usaremos el method 
+            <b>toLocaleString()</b>: <span id="locale_string" class="background"></span>.
+        </p>
+
+        <p>
+            <code>time.toLocaleString();</code>
+        </p>
+
+    <hr />
+
+    <h2>Datos a tener en cuenta</h2>
+
+    <div>
+        <p>
+            Si la fecha no tiene argumentos entonces el sistema toma la fecha en curso si le pasamos un número 
+            entonces el sistema toma eso como cantidad de milisegundos a partir de la fecha base.
+        </p>
+
+        <p>
+            Podemos pasar un string con una estructura específica “primero de marzo” donde el sistema transforma 
+            el string en una fecha. Pero la forma más estándar de usar esta función para asignar fechas es pasando 
+            varios int:
+        </p>
+
+        <p>
+            <code>let fecha = new Date(2022, 10, 24, 10, 18, 0, 1000);</code>
+        </p>
+
+        <p>
+            Donde el primero es el año, seguidamente el mes, luego el dia, luego la hora, los minutos, 
+            los segundos y milisegundos. Todos estos parámetros son opcionales. Entonces si solo pasamos 
+            1 int lo toma como “segundos”. Desde la fecha base si pasamos dos enteros se asume que es 
+            “el año y el mes”, si pasamos 3 enteros se asume que pasamos “año, mes y dia” y así 
+            sucesivamente.
+        </p>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

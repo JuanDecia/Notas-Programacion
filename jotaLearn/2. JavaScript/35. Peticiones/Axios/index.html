@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <title>Petición Axios</title>
+</head>
+<body>
+    <header>
+        <h1>Peticiones con Axios</h1>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <div>
+                    <p>
+                        Primero debemos entrar a la página de axios para poder importarlo
+                        <a href="https://axios-http.com/docs/intro"><button>Ir a Página Axios</button></a>
+                        . Luego, si estamos trabajando con el HTML básico debemos importar el “jsDeliver CDN”
+                        a nuestro HTML. Un aspecto muy importante a destacar es que <b>primero debemos
+                        importar la etiqueta de axios</b> y luego debemos colocar la etiqueta del archivo
+                        externo de JS.
+                    </p>
+
+                    <p>
+                        Para utilizar <b>axios</b> debemos realizar una estructura muy parecia a cuando
+                        utilizamos <b>fetch</b>, a diferencia de esta vez, debemos cambiar un poco la sintaxis.
+                        Para comenzar debemos usar <b>async - await</b> y <b>try - catch</b>.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>const getUsers = async () => {</code>
+                    <code class="indentado-20">try {</code>
+                    <code class="indentado-40">const peticion = await axios('https://jsonplaceholder.typicode.com/users');</code>
+                    <code class="indentado-40">const users = await peticion.data;</code>
+                    <code class="indentado-20">}</code>
+                </div>
+
+                <div>
+                    <p>
+                        Con esa instrucción estamos <b>importando y utilizando axios</b>. Luego, debemos crear el
+                        código necesario para mostrar los resultados que necesitemos, en nuestro caso realizamos un
+                        bucle for para mostrar los atributos de cada uno de ellos.
+                    </p>
+
+                    <p>
+                        Notemos que lo único que cambia es que debemos utilizar <b>axios</b> en vez de "fetch" y 
+                        luego, utilizamos <b>data</b> en vez de "json()".
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <div id="resultado"></div>
+            </article>
+        </section>
+    </main>
+
+    <script src=""></script>
+
+    <!--Axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

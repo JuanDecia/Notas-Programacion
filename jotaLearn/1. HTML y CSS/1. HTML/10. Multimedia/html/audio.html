@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Digital</title>
+
+    <link rel="stylesheet" href="../css/audio.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Audio Digital</h1>
+    
+            <nav>
+                <div class="cont-volver-inicio">
+                    <!-- Flecha -->
+                    <a class="flecha-link" href="../index.html">
+                        <img
+                          class="flecha"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEvtlNsNgzAQBIcO0gkpgZSQSmgh6SgdQAnQSUpAJ4F0imLfGsMf/rZmbtePhpNXczKfSxA2XFLRDeiBd0h1G1SBwQfgvgpeqkQRePgMdMD3KEEV3IbIJaiG5wSHwFMCD1erTg77ryITjEBbQk/VnToDL5mAR8nN8YNFh7wl2S2J3kF1kkhgaaskiuBX8gQ+6gVQBZvEvgkZHr1kdcjsvpIEu4SXIKxtAb+eIBmkl/3TAAAAAElFTkSuQmCC"
+                        />
+                    </a>
+    
+                    <a href="../index.html">Volver a Inicio</a>
+                </div>
+    
+                <div class="estructura-enlaces">
+                    <a href="./etiquetaVideo.html">Ir a etiqueta video</a>
+                    <a href="./video.html">Ir a teoría video</a>
+                </div>
+    
+            </nav>
+        </header>
+    
+        <section>
+            <!-- Introducción -->
+            <article class="cont-introduccion">
+                <h2>Introducción</h2>
+                <p>
+                    El audio digital es la codificación digital de una señal eléctrica que representa una onda sonora. Consiste en una secuencia de valores enteros y se obtienen de dos procesos: el muestreo y la cuantificación digital de la señal eléctrica.
+                </p>
+            </article>
+    
+            <!-- Etiqueta audio -->
+            <article>
+                <h2>Etiqueta Audio</h2>
+    
+                <p>
+                    Comenzaremos por la etiqueta <b>"audio"</b>, esta etiqueta debe definirse junto con el atributo <b>"src"</b> que representa el archivo a reproducir en el navegador. Para que sea posible reproducir el audio y que sea visible en nuestra web necesitamos ciertos controles, como un botón para pausar e iniciar la reproducción, un control de volumen, y una barra de progreso. Existe un atributo que hace posible que nos representa esta barra de reproducción, su nombre es: controls. Este se define dentro de la etiqueta <b>"audio"</b>. Al incluir este atributo podemos usar este elemento en cualquiera de nuestros proyectos.
+                </p>
+
+                <h3>Atributos de la etiqueta &#60audio&#62</h3>
+    
+                <p>
+                    Existen otros atributos que pueden cambiar el comportamiento de esta etiqueta. Estos son: 
+                </p>
+    
+                <div class="cont-atributos-audio">
+                    <ul>
+                        <li>
+                            <b>Autoplay: </b>reproduce el video automáticamente se abre la Web, sin necesidad de dar click en el botón del reproductor
+                        </li>
+        
+                        <li>
+                            <b>Loop: </b>Este atributo se encarga automáticamente de reproducir el audio siempre que termine.
+                        </li>
+        
+                        <li>
+                            <b>preload: </b>Este atributo tiene un comportamiento especial. Cuando estamos trabajando con archivos multimedia que son muy pesados, nuestro sitio Web tiende a ponerse lento y la carga puede ser un proceso demorado. Este atributo se encarga de almacenar nuestros archivos de audio en una memoria temporal después de ser cargado la primera vez, dependiendo del valor que especifiquemos.
+                        </li>
+        
+                        <li>
+                            <b>none: </b>No almacenar nuestros archivos.
+                        </li>
+        
+                        <li>
+                            <b>auto: </b>Almacena temporalmente el archivo multimedia.
+                        </li>
+                    </ul>
+                </div>
+    
+                <figure class="cont-img-audio">
+                    <img src="../img/atributoAudio.jpg" alt="Atributos de audio" />
+                </figure>
+            </article>
+    
+        </section>
+    
+        <hr>
+    
+        <!-- Sección Etiqueta Audio -->
+        <section class="seccion-practica">
+    
+            <article>
+                <h2>Práctica con la etiqueta audio</h2>
+    
+                <div class="cont-audio">
+                    <audio src="../audio/Cancion Eve.mp3" controls></audio>
+                </div>
+    
+            </article>
+    
+        </section>
+
+    </main>
+    
+</body>
+</html>

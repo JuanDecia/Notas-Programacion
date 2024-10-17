@@ -1,0 +1,13 @@
+1- Define una variable tipo arreglo con las recetas para menús vegetarianos.
+2- Define una variable tipo arreglo con las recetas para menús no vegetarianos.
+3- Define una variable para identificar el tipo de menú, del tipo booleano, donde verdad se refiera a menú vegetariano y falso se refiere al menú no vegetariano.
+4- Define una función que recibe como parámetros el tipo de menú (vegetariano o no vegetariano) y 
+    las recetas vegetarianas y no vegetarianas. 
+
+La función muestra las recetas vegetarianas si el parámetro es verdad y las no vegetarianas si el 
+parámetro es falso. 
+
+Imprime un título que diga “Menús” concatenado con la palabra Vegetarianos o no Vegetarianos 
+según corresponda. Esto se puede imprimir como parte de la función definida en (4).
+
+Invoca a la función definida en (4) pasándole como argumentos las variables definidas en (1) a (3).

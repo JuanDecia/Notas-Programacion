@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    max-width: 80%;
+    margin: auto;
+    padding: 25px;
+    background-color: rgba(240, 248, 255, 0.753);
+}
+
+p {
+    text-align: justify;
+}
+
+/* ====== HEADER ====== */
+header {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+h1 {
+    color: #2b6b85;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+h2 {
+    margin: 20px 0;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+/* ====== MAIN CONTENT ====== */
+
+/* Estilos Generales */
+.cont-lista {
+    margin: 30px 0;
+}
+
+.cont-lista ol li {
+    padding: 10px;
+    text-align: justify;
+}
+
+/* Ejemplo en código */
+.cont-codigo {
+    background-color: rgb(56, 55, 55);
+    color: #ffffff;
+    margin: 20px auto;
+    padding: 7px;
+    width: 70%;
+    border-radius: 5px;
+}
+
+.margin-20 {
+    margin-left: 20px;
+}
+
+.margin-40 {
+    margin-left: 40px;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.tag-color {
+    color: rgb(37, 143, 241);
+}
+
+.property-color {
+    color: rgb(113, 209, 247);
+}
+
+.field-color {
+    color: #ffd311;
+}
+
+.value-color {
+    color: #f39658;
+}
+
+.comment-color {
+    color: rgb(41, 148, 31);
+}
+/* -- */
+
+/* Articulo Ejemplo */
+
+.cont-ejemplo {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+.contenedor {
+    padding: 10px;
+    background: linear-gradient(to right, black, red);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}

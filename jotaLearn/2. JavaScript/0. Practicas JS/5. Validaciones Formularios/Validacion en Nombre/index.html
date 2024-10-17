@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Nombre</title>
+
+    <!-- HOJA DE ESTILO -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Formulario y Validación Ejercicio</h1>
+        </header>
+
+        <section id="content">
+            <article class="cont-tareas">
+                <h2>Realiza las siguientes tareas</h2>
+
+                <ol>
+                    <li>Crea un formulario con un campo de texto para "nombre".</li>
+                    <li>Crea una etiqueta "span" al lado del campo de texto con letra de color roja para los errores</li>
+                    <li>Crea una función que valide que: 
+                        <ul>
+                            <li>El nombre debe ser obligatorio.</li>
+                            <li>Debe contener más de dos caracteres.</li>
+                            <li>No debe tener números.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Enlaza la función definida con el campo de texto e indica un error en la sección del span cuando sea necesario. Esta función debe ser llamada cada vez que el usuario presione una tecla
+                    </li>
+                </ol>
+            </article>
+
+            <article class="cont-actividad">
+                <form action="">
+
+                    <!-- Campo para ingresar nombre -->
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" name="nombre" id="nombre" required>
+
+                    <input type="submit" value="Validar" onclick="return validarCampoNombre(this.form)">
+
+                    <!-- Espacio para el error -->
+                    <span class="error"></span>
+                </form>
+            </article>
+        </section>
+    </main>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="keywords" content="taller, python, tutorial, html" />
+    <meta name="author" content="Juan Decia" />
+    <title>Formatos adicionales</title>
+
+    <link rel="stylesheet" href="../css/formatoTexto.css" />
+
+</head>
+
+<body>
+    
+    <main>
+        <header>
+            <h1>Comenzando con Python</h1>
+    
+            <nav>
+                <div class="cont-volver-inicio">
+    
+                    <!-- Flecha -->
+                    <a class="flecha-link" href="../index.html">
+                        <img
+                          class="flecha"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEvtlNsNgzAQBIcO0gkpgZSQSmgh6SgdQAnQSUpAJ4F0imLfGsMf/rZmbtePhpNXczKfSxA2XFLRDeiBd0h1G1SBwQfgvgpeqkQRePgMdMD3KEEV3IbIJaiG5wSHwFMCD1erTg77ryITjEBbQk/VnToDL5mAR8nN8YNFh7wl2S2J3kF1kkhgaaskiuBX8gQ+6gVQBZvEvgkZHr1kdcjsvpIEu4SXIKxtAb+eIBmkl/3TAAAAAElFTkSuQmCC"
+                        />
+                    </a>
+        
+                    <a class="volver-inicio-txt" href="../index.html">Volver a Inicio</a>
+                </div>
+            </nav>
+        </header>
+    
+        <!-- Contenido Principal -->
+        <section class="cont-mainContent">
+    
+            <p>
+                Existen etiquetas especiales cuando queremos representar <b>código fuente</b> en nuestro HTML. En esta ocasión realizaremos un mini tutorial de python usando las etiquetas de formato de html y las etiquetas para códigos fuentes. Para ello vamos a necesitar utilizar algunas etiquetas que cumplen una función de formato de texto específico.
+            </p>
+    
+            <article class="cont-var">
+    
+                <h2>Etiqueta var</h2>
+    
+                <p>
+                    Esta etiqueta crea un contenedor en línea, en los que puede contener cero o más elementos. Al ser una etiqueta que puede
+                    contener elementos debemos <b>cerrarla</b> con su respectiva <b>etiqueta de cierre</b>. Solo cumple con la función
+                    de <b>formatear el texto</b> a itálica en representación de la <b>instancia de una variable o el argumento de un programa</b>.
+                </p>
+    
+                <p>
+                    Para esta ocasión la vamos a utilizar cuando representemos la variable <b>"x"</b>.
+                </p>
+    
+            </article>
+    
+            <article class="cont-code">
+    
+                <h2>Etiqueta code</h2>
+    
+                <p>
+                    El elemento HTML code inserta texto que representa código de computadora. Puede ser útil para mostrar funciones, 
+                    código de programación o variables. En nuestro elemplo utilizaremos el <b>formato de la etiqueta code</b> para representar
+                    el código que escribiremos en python.
+                </p>
+    
+            </article>
+    
+            <article class="cont-pre">
+    
+                <h2>Etiqueta pre</h2>
+    
+                <p>
+                    El texto en este elemento típicamente se muestra en una fuente fija, no proporcional, exactamente como es mostrado en el archivo. 
+                    Los espacios dentro de este elemento también son mostrados como están escritos. Para nuestro ejemplo es muy importante que apliquemos
+                    esta etiqueta ya que debemos respetar los espaciados del código como si estuvieramos en la sección de python.
+                </p>
+    
+            </article>
+    
+            <article class="cont-samp">
+    
+                <h2>Etiqueta Samp</h2>
+    
+                <p>
+                    El elemento HTML Sample (samp) se utiliza para incluir texto en línea que representa una muestra (o cita) de la salida de 
+                    un programa de ordenador. El contenido de esta etiqueta es renderizado generalmente usando la tipografía monoespaciada 
+                    por defecto del navegador.
+                </p>
+    
+                <p>
+                    Para nuestro ejemplo utilizaremos esta etiqueta para mostrar el <b>retorno del programa</b>.
+                </p>
+    
+            
+    
+            <h3>Ejemplo:</h3>
+    
+            <p>
+                Definimos la variable <var>x</var> y usamos la instrucción <code>print()</code>
+            </p>
+    
+            <div id="codigo">
+    
+                <code>
+                    <pre>
+        
+    x = "Hola Mundo"
+    print(x)
+        
+                    </pre>
+                </code>
+        
+                <h3>Salida de consola</h3>
+        
+                <samp>
+                    Hola Mundo
+                </samp>
+    
+            </div>
+            </article>
+    
+            <article>
+    
+                    <h2>Más etiquetas de formato</h2>
+    
+                    <p>
+                        Así como existen las etiquetas de formato común, tales como "h1", "h2", "p". . 
+                        Existen muchas otras que indican un formato específico. Estas son las siguientes:
+                    </p>
+
+                    <div class="cont-tabla">
+                        <table>
+                            <thead>
+                                <th>Etiqueta</th>
+                                <th>Descripción</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>&#60abbr&#62</td>
+                                    <td>Para abreviaciones</td>
+                                </tr>
+                                <tr>
+                                    <td>&#60b&#62</td>
+                                    <td>En negrita</td>
+                                </tr>
+                                <tr>
+                                    <td>&#60blockquote&#62</td>
+                                    <td>Referencia de un texto</td>
+                                </tr>
+                                <tr>
+                                    <td>&#60cite&#62</td>
+                                    <td>Cita</td>
+                                </tr>
+                                <tr>
+                                    <td>&#60del&#62</td>
+                                    <td>Texto eliminado (tachado)</td>
+                                </tr>
+                                <tr>
+                                    <td>&#60em&#62</td>
+                                    <td>Énfasis</td>
+                                </tr>
+                                <tr>
+                                    <td>&#60ins&#62</td>
+                                    <td>Texto insertado</td>
+                                </tr>
+                                <tr>
+                                    <td>&#60meter&#62</td>
+                                    <td>Medida</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+    
+            </article>         
+        </section> 
+        
+    </main>
+
+</body>
+
+</html>

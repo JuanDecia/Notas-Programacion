@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionamiento</title>
+
+    <link rel="stylesheet" href="../css/funcionamiento.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main id="inicio">
+        <header>
+            <h1>Subir un proyecto a GitHub: Funcionamiento de Git</h1>
+
+            <nav>
+                <ul class="cont-li">
+                    <li>
+                        <a class="link-header underlined" href="../index.html">Introducción</a>
+                    </li>
+                    <li>
+                        <a class="link-header underlined" href="./control-versiones.html">Sistema de control de versiones</a>
+                    </li>
+                    <li>
+                        <a class="link-header underlined" href="./repositorios.html">Repositorio</a>
+                    </li>
+                    <li>
+                        <a class="link-header active" href="#">Funcionamiento</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <section>
+
+            <!-- Boton ir arriba -->
+            <div class="cont-arriba">
+                <a href="#inicio">
+                  <svg fill="#878787" viewBox="0 0 24 24" id="up-direction-square" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color" stroke="#878787"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><rect id="primary" x="2" y="2" width="20" height="20" rx="2" style="fill: #c9c9c9;"></rect><path id="secondary" d="M14,12v4a1,1,0,0,1-1,1H11a1,1,0,0,1-1-1V12H9.18a1,1,0,0,1-.76-1.65l2.82-3.27a1,1,0,0,1,1.52,0l2.82,3.27A1,1,0,0,1,14.82,12Z" style="fill: #111212;"></path></g></svg>
+                </a>
+            </div>
+
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    Al iniciar un proyecto de cero, normalmente lo primero que haremos es <b>crear una carpeta en nuestro disco duro</b> en la cual vayamos a contener todos los archivos necesarios de nuestro proyecto. Esta sección es donde <b>colocamos los archivos que queremos guardar en cada commit</b>, así, le indicamos a GIT que son los archivos que deseamos almacenar en el repositorio.
+                </p> <br />
+
+                <p>
+                    Por otro lado, tendremos que crear un repositorio en GITHUB en el cual podamos almacenar nuestro proyecto de forma remota.
+                </p>
+            </article>
+
+            <!-- Carpeta del Proyecto -->
+            <article>
+                <h2>1. Posicionarse en la carpeta del proyecto</h2>
+
+                <p>
+                    Para poder subir proyectos a la nube vamos a estar utilizando mucho la consola. En este caso, tal como mencionamos anteriormente, utilizaremos <strong>Git Bash</strong>.
+                </p> <br />
+
+                <p>
+                    La consola no sabe donde nosotros queremos inicializar un repositorio con <strong>GIT</strong>, por lo tanto, es nuestro deber asegurarnos de que dentro de la consola estamos posicionados dentro de la carpeta que queremos manejar mediante nuestro sistema de versiones. La mejor manera de asegurarnos de esto es abriendo en el explorador de archivos nuestra carpeta , hacer click derecho y presionar la opción <b>“Git Bash here”</b>. Esto hará que se abra la aplicación de Gitbash y que la misma comience a trabajar a partir del directorio de nuestro proyecto.
+                </p>
+
+                <div class="cont-img">
+                    <img src="../img/open-gitBash.png" alt="gitbash" title="gitbash" />
+                </div>
+            </article>
+
+            <!-- Git init -->
+            <article>
+                <h2>2. Git init</h2>
+
+                <p>
+                    Este comando convertirá nuestro almacenamiento local en un repositorio de git. Creará una carpeta <b>“.git”</b> dentro de la carpeta de nuestro proyecto (Es una carpeta que por defecto se encuentra oculta, si quieren verla deberán habilitar la opción de ver las carpetas ocultas en su explorador de archivos).  Este comando se utiliza sólo la <b>primera vez</b> que se quiere subir el repositorio a la nube.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">$ git init</span>
+                    </code>
+                </div>
+            </article>
+
+            <!-- Git add -->
+            <article>
+                <h2>3. Git add</h2>
+
+                <p>
+                    Este comando se utiliza para <b>preparar archivos</b> para la <b>etapa de confirmación (commit)</b> en el <b>repositorio local</b>. Se puede <b>agregar un archivo</b> a esta etapa de <b>manera individual</b> o bien podemos <b>agregar múltiples archivos a la vez</b>, pero normalmente vamos a estar agregando todos los archivos directamente a esta etapa de preparación, conocida también como stage.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+
+                        <span class="txt-white">$ git add *nombre-del-archivo*</span>
+                        <span class="comment-git">//Subida de solo un archivo a la etapa de preparación.</span> <br /> <br />
+
+                        <span class="txt-white">$ git add *archivo-1* *archivo-2*</span>
+                        <span class="comment-git">//Subida de múltiples archivos a la etapa de preparación.</span> <br /> <br />
+
+                        <span class="txt-white">$ git add .</span>
+                        <span class="comment-git">//Subida de todos los archivos a la etapa de preparación.</span> <br /> <br />
+                    </code>
+                </div>
+
+                <p>
+                    Es importante mencionar que una vez que un archivo se haya subido a la etapa de preparación, en caso de hacerle una modificación, se deberá volver a añadir a esta etapa.
+                </p>
+            </article>
+
+            <!-- git commit -->
+            <article>
+                <h2>4. Git commit</h2>
+
+                <p>
+                    Este comando es una de las herramientas más importantes en el flujo de trabajo de Git. Es el comando que utilizamos para <b>confirmar los cambios realizados</b> en el <b>repositorio local y registrarlos</b> en la <b>historia de versiones de Git</b>. Al ejecutarlo, Git toma una instantánea de todos los archivos agregados a la <b>zona de preparación (staging area)</b> y los <b>registra en la historia del repositorio</b>. Cada <strong>commit</strong> es un punto de referencia en la historia del proyecto que se puede consultar en cualquier momento.
+                </p> <br />
+
+                <p>
+                    Además, al realizar un <b>commit</b> es importante <b>incluir un mensaje que describa</b> los <b>cambios realizados</b> en el repositorio. Esto ayuda a los demás desarrolladores a comprender que es lo que se realizó en dicho commit.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">$ git commit -m 'Mi primer commit'</span>
+                        <span class="comment-git">//Commit que refiere a que se ha añadido el archivo al repositorio.</span>
+                    </code>
+                </div>
+            </article>
+
+            <!-- git remote add -->
+            <article>
+                <h2>5. Git remote add</h2>
+
+                <p>
+                    Este comando lo utilizaremos para <b>agregar un repositorio remoto a un repositorio local de GIT</b>, por lo tanto, este comando es el que nos permitirá establecer un vínculo entre ambos , de manera tal que se puedan <b>sincronizar</b> los cambios entre ambos repositorios, <b>subir</b> los cambios locales al repositorio remoto, <b>descargar</b> los cambios del remoto a local, etc. Este comando se utiliza sólo la primera vez que se quiere subir el repositorio a la nube.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">$ git remote add origin *link del remoto*</span>
+                    </code>
+                </div>
+            </article>
+
+            <!-- Git Push -->
+            <article>
+                <h2>6. Git push</h2>
+
+                <p>
+                    Este comando se utiliza para enviar los cambios de un repositorio local a otro en línea, como lo es <b>Github</b>. Se utiliza luego de haber hecho un <b>commit</b> a los cambios que estaban en la zona de preparación con el fin de transferir dichos cambios al repositorio remoto. Al utilizarlo por primera vez en un repositorio, debemos colocarlo de la siguiente manera:
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">$ git push -u origin main</span>
+                    </code>
+                </div>
+
+                <p>
+                    Luego, al subir más cambios al mismo repositorio, bastará con colocar <strong>git push</strong>. Este es el último paso a realizar para subir un proyecto a nuestro repositorio remoto. A partir de este punto, podemos seguir realizando cambios a nuestro repositorio local y subiendo dichos cambios a github utilizando los mismos comandos con la excepción de <b>git init y git remote add</b>, ya que, solo son necesarios la primera vez que se realice la subida.
+                </p>
+            </article>
+
+            <!-- Git Status -->
+            <article>
+                <h2>Extra: Git status</h2>
+
+                <p>
+                    Si bien no es un paso obligatorio para subir nuestro repositorio a Github, es importante conocer este comando. El mismo nos permite ver el <b>estado actual del repositorio local</b>. Cuando se ejecuta nos muestra una lista de archivos que han sido modificados o agregados al repositorio local <b>desde el último commit</b>.
+                </p> <br />
+
+                <p>
+                    También, nos muestra si existen archivos que <b>aún no han sido agregados a la zona de preparación</b>, y si <b>hay conflictos</b> entre las versiones local y remota del repositorio. Por último, también nos indica <b>si hay cambios que aún no se han confirmado</b> (No se ha realizado un commit) en el repositorio local. 
+                </p>
+            </article>
+
+            <!-- Git Clone -->
+            <article>
+                <h2>Extra: Git clone, descargar un proyecto en el local</h2>
+
+                <p>
+                    Muchas veces vamos a tener que llevar un proyecto <b>desde la nube a nuestra computadora</b>, si bien <strong>Github</strong> nos permite descargar el proyecto directamente con un botón de descarga, la mejor opción es utilizar el comando <strong>git clone</strong>, que se utiliza para crear una <b>copia exacta</b> de un repositorio de Git en el ámbito de trabajo local.  
+                </p> <br />
+
+                <p>
+                    Este comando descarga todo el <b>historial de versiones, archivos y metadatos del repositorio</b> remoto a la máquina local, lo que permite a los desarrolladores trabajar en el proyecto de forma local y actualizar el proyecto con los cambios que se realicen (en caso de tener los permisos para hacerlo). Este comando es una buena opción cuando trabajamos en un proyecto de una empresa y nos piden que usemos el código que se encuentra en producción.
+                </p> <br />
+
+                <p>
+                    Para utilizarlo, debemos tener la url que apunta al repositorio del remoto que se quiere clonar, que lo podemos sacar clickeando en el botón verde <b>&#60&#62 code</b> de nuestro repositorio en Github y copiando el link que nos aparece en el desplegable. Finalmente, copiamos ese link luego de colocar git clone en la línea de comandos.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">$ git clone *ruta absoluta del repositorio remoto a clonar*</span>
+                    </code>
+                </div>
+
+                <p>
+                    <b>Importante:</b> Si utilizamos la opción “Download Zip” se nos decargará el proyecto en local pero no mantendrá la vinculación al repositorio, lo cual implica que no podremos hacer ningún tipo de modificación al proyecto y subirla a la nube (en caso de que tuviéramos acceso y permiso para hacerlo).
+                </p>
+            </article>
+
+            <!-- Git pull -->
+            <article>
+                <h2>Extra: Git pull - Actualizando en el local desde la nube</h2>
+
+                <p>
+                    Puede suceder también, en especial si estamos trabajando entre varias personas en un mismo repositorio, que tengamos desactualizado el repositorio local vinculado a ese remoto que tiene cambios nuevos. 
+                </p> <br />
+
+                <p>
+                    Para poder traernos esos cambios nuevos y no volver a descargar el repositorio, arriesgándonos a perder los cambios que nosotros hicimos en local, debemos utilizar el comando git pull. 
+                </p> <br />
+
+                <p>
+                    Este comando se utiliza para <b>descargar y fusionar</b> cambios de un repositorio remoto en un repositorio local. Es una combinación entre el comando <strong>git fetch</strong> (que se utiliza para descargar los cambios del repositorio remoto) y <strong>git merge</strong> ( se utiliza para fusionar los cambios del proyecto en la nube con el proyecto local). 
+                </p> <br />
+
+                <p>
+                    Es una herramienta muy útil cuando se trabaja en un proyecto con varios desarrolladores y es necesario asegurarse de tener la versión más actualizada del código antes de empezar a trabajar en él.
+                </p>
+            </article>
+
+            <!-- Clear -->
+            <article>
+                <h2>Clear - Limpiar la consola de Gitbash</h2>
+
+                <p>
+                    En ocasiones estaremos trabajando en un proyecto donde nuestra consola de Git ha tenido mucha actividad, esto puede dificultar algunas lecturas o llegar a ser molesto visualmente. Para limpiar la consola de Git, debemos utilizar el comando ‘clear’.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="txt-white">clear</span>
+                    </code>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get y Set</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Getter & Setter</h1>
+        </header>
+
+        <section>
+
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    A continuación veremos ejemplos acerca de <b>Getter</b> y <b>Setter</b>, pero antes de eso aclararemos un poco el significado para mejorar el entendimiento de estas funciones.
+                </p>
+    
+                <p>
+                    Si prestamos atencion <b>Getter</b> viene de la palabra en ingles <b>"Get"</b> la cual significa <b>tomar</b> en español. Así que, esta función lo que hace es <b>tomar un valor</b>. <br>
+                    En cambio, <b>Setter</b> que en inglés es <b>Set</b> y significa <b>colocar</b>, nos está refiriendo que esta función lo que hace es poner un valor.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Get -->
+            <article>
+                <h2>Get</h2>
+
+                <p>
+                    <b>Getter</b> es una función que nos ofrece JavaScript para mejorar la sintaxis de los
+                    methods en los objetos. Debemos tener en cuenta que tanto <b>Getter</b> debe estar 
+                    dentro de un objeto <b>Clase</b>.
+                </p>
+
+                <h3>Sintaxis</h3>
+
+                <p>
+                    Para utilizar este concepto debemos primero declarar "<b>get</b>"", reemplaza la palabra
+                    clave <b>function</b> por lo que seguido debemos colocar el <b>nombre del método</b> del
+                    objeto. Luego, colocaremos los <b>paréntesis</b> "()" y para finalizar las <b>llaves</b>
+                    que es donde va el cuerpo de la función.
+                </p>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>get nombreCompleto() {</code>
+                    <code class="indentacion">return this.nombre + this.apellido;</code>
+                    <code>},</code>
+                </div>
+
+                <div>
+                    <p>
+                        Gracias a <b>get</b> al llamar la función para mostrar el resultado, no debemos aclarar
+                        con los paréntesis que estamos llamando a una función. La sintaxis quedaría finalizada
+                        de la siguiente manera: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>console.log(arregloPersonas.nombreCompleto) // Juan Decia</code>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Set -->
+
+            <article>
+                <h2>Setter</h2>
+
+                <p>
+                    Esta propiedad puede modificar los valores de nuestro objeto. Para este ejemplo, agregaremos
+                    una propiedad llamada "lang" la cual vamos a modificar posteriormente con <b>set</b>.
+                </p>
+
+                <p>
+                    La sintaxis es muy parecida a la de "get", aunque, debemos hacer unos pequeños cambios. 
+                </p>
+
+                <p>
+                    Para comenzar la declaración debemos colocar <b>set</b>, luego, el nombre correspondiente al <b>método</b>
+                    que va a cambiar los valores y dentro del parametro, debemos colocar el elemento que hemos tomado.
+                    Posteriormente debemos construir el cuerpo de la función, en este caso, seleccionaremos la propiedad
+                    "idioma" con <b>this.idioma</b> y le asignaremos el <b>parámetro de la función</b>. La construcción
+                    en código quedaría de la siguiente manera: 
+                </p>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>set lang(lang) {</code>
+                    <code class="indentacion">this.idioma = lang.toUpperCase();</code>
+                    <code>},</code>
+                </div>
+
+                <div>
+                    <p>
+                        Para finalizar este ejemplo, solo nos quedaría realizar la llamada del método y
+                        este paso también es similar al de get. En manera que al llamar el method, no debemos
+                        colocar los paréntesis, ya que, esto nos retornaría un error. Recordemos que este
+                        método modifica el valor de nuestro objeto. La sintaxis sería la siguiente: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>objetoPersona.lang = 'en';</code>
+                </div>
+
+                <div>
+                    <p>Ahora lo mistramos en consola: </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>console.log(objetoPersona.idioma);</code>
+                </div>
+            </article>
+            
+        </section>
+
+        <section>
+            
+
+            
+
+            <h3>Sintaxis</h3>
+
+            
+
+            
+
+            <p>
+                Dentro de las llaves de esta declaración colocaremos: <span>this.color = color</span>, porque, le estamos pasando a <b>setter</b> un color y ese color <b>se va a pasar al constructor</b>. Lo que <b>nos cambiaría el color</b> que teníamos por defecto anteriormente en el constructor.
+            </p>
+        </section>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

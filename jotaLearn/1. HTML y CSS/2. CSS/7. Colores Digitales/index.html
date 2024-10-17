@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores Digitales</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <main>
+
+        <header>
+            <h1>Colores Digitales</h1>
+        </header>
+
+        <section>
+
+            <!-- Introducción -->
+            <article>
+
+                <h2>Introducción</h2>
+
+                <p>
+                    El <b>color digital</b> son números en computadores ordenados de tal forma que al ser representados en dispositivos como monitores (RGB) o dispositivos de salida como impresoras (CMYK) y son percibidos con un color. <b>CSS</b> nos ofrece diferentes propiedades para agregar <b>colores</b> a los elementos que existen en el DOM de nuestro documento. En CSS, hay varias formas de especificar un color, entre ellas son: 
+                </p>
+
+                <div class="lista-colores">
+                    <ul>
+                        <li>
+                            <b>Nombre de colores: </b>CSS tiene una lista de nombres de colores predefinidos que se pueden usar para especificar un color. Por ejemplo: <b>"red", "blue", "green"</b>, etc.
+                        </li>
+                        <li>
+                            <b>Hexadecimal: </b>Es un sistema de codificación de colores que usa una combinación de números y letras para representar un color. Por ejemplo: <b>"#FF0000"</b> representa el rojo.
+                        </li>
+                        <li>
+                            <b>RGB: </b>Este sistema especifica un color en términos de valores de intensidad de los componentes rojo, verde y azul. Por ejemplo: <b>"rgb(255, 0, 0)"</b> representa el rojo.
+                        </li>
+                        <li>
+                            <b>RGBA: </b>Es similar a RGB, pero también incluye un valor de opacidad, que controla la transparencia del color. Por ejemplo: <b>"rgba(255, 0, 0, 0.5)"</b> representa un rojo semitransparente.
+                        </li>
+                        <li>
+                            <b>HSL: </b>Este sistema especifica un color en términos de tono, saturación y
+                            luminosidad. Por ejemplo: <b>"hsl(0, 100%, 50%)"</b> representa el rojo.
+                        </li>
+                        <li>
+                            <b>HSLA: </b>Es similar a HSL, pero también incluye un valor de opacidad.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contenedor RGB -->
+                <div class="cont-rgb">
+                    <h3>RGB</h3>
+
+                    <p>
+                        Cuando aplicamos un color en RGB estamos aplicando una combinación de colores que estos colores son (en inglés) red, green, blue. La medición de estos colores es numérica y dependiendo el valor numérico que le demos a estos valores es la graduación que aplica a la combinación. 
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Para aplicar esta propiedad debemos colocar la palabra clave <b>'rgb()'</b> y dentro los paréntesis colocaremos los <b>valores numéricos separados por coma (",")</b>. Debemos tener en cuenta que los colores respetan el orden del nombre de la propiedad (red, green, blue).
+                    </p>
+
+                    <br /> 
+
+                    <p>
+                        En el caso que tengamos el valor (0, 0, 0) estamos diciendo que no hay combinaciones de colores y por ende nos retornaría el color “negro”, es decir, estamos aplicando una ausencia de color. Debemos saber que estos colores van de 0 hasta el 255 siendo el 255 la tonalidad más fuerte, es decir, que si colocamos este valor a uno de RGB y los demás los dejamos en 0 nos retornaría el color natural que lo representa. Ejemplo: 0, 0, 255 (retorna blue).
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">.caja</span>
+                            &#123
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">background-color</span>:
+                            <span class="value-color">rgb(0, 0, 255)</span>;
+                        </code>
+
+                        <br />
+
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Contenedor RGBA -->
+                <div class="cont-rgba">
+                    <h3>RGBA</h3>
+    
+                    <p>
+                        Esta propiedad de color que puede ser implementada en la hoja de estilos CSS permite añadirle transparencia (representa la letra a “Alpha”) al texto en el último valor agregado con “.”. Por ejemplo: rgba(68, 241, 15, 0.5) el último valor puede ser de 0 a 1. Teniendo en cuenta que 0 es totalmente transparente (el texto no se va a ver) y 1 no hay transparencia (se ve igual). Los valores que deberíamos manejar son decimales como por ejemplo 0.5 que es una trasparencia media.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">.caja</span>
+                            &#123
+                        </code>
+
+                        <br />
+
+                        <code class="margin-20">
+                            <span class="property-color">background-color</span>:
+                            <span class="value-color">rgba(70, 70, 194, 0.404)</span>;
+                        </code>
+
+                        <br />
+
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+    
+                    <div class="caja color-rgba"></div>
+                </div class="cont-rgba">
+            </article>
+
+            <hr />
+
+            <!-- Color para Fuentes -->
+            <article class="color-fuente">
+                <h2>Color para Fuentes</h2>
+
+                <h3>Propiedad: Color</h3>
+
+                <p>
+                    Es la propiedad que se utiliza para cambiar el color de la fuente de un elemento. Podemos usar todos los formatos de colores que vimos anteriormente. Para ejemplificar esta teoría, crearemos un contenedor con una estructura cuadrada y le aplicaremos un color al texto que se encuentra dentro.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.parrafo-ejemplo-color</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">#4c26f3</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <div class="ejemplo-fuente">
+                    <p class="parrafo-ejemplo-color">
+                        Soy un párrafo de ejemplo, por defecto soy de color negro. En este ejemplo me cambiaron de color gracias a la propiedad 'color' de CSS.
+                    </p>
+                </div>
+
+                <h4>Importante propiedad Color</h4>
+
+                <p>
+                    Es común, salvo en casos muy puntuales que al poner la propiedad color en un elemento que contiene otros, los elementos internos tomen el color de letra que se le colocó al elemento padre, es decir, los elementos hijos van a heredar la propiedad color del elemento que los contiene. Es decir, le hemos aplicado directamente al contenido del elemento 'p' la propiedad de 'color', hubiera sido el mismo resultado si le colocamos la propiedad al contenedor padre 'div' con clase 'ejemplo-fuente'.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.contenedor-color</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">#4c26f3</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <div class="ejemplo-fuente contenedor-color">
+                    <p>
+                        Soy un párrafo de ejemplo, por defecto soy de color negro. En este ejemplo me cambiaron de color gracias a la propiedad 'color' de CSS.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Color para elementos -->
+            <article class="color-elemento">
+
+                <h2>Colores para elementos del DOM</h2>
+
+                <h3>Propiedad Background</h3>
+
+                <p>
+                    Es la propiedad que se utiliza para definir el fondo de un elemento. Con ella, podemos establecer el color de fondo, agregar una imagen de fondo, y controlar cómo se repetirá o se ajustará esa imagen. En esta ocasión, como solo estamos especificando como colocar colores a los elementos mediante esta propiedad, solo veremos cómo utilizar background para darle color a un elemento.
+                </p>
+
+                <br />
+
+                <p>
+                    Para ejemplificar esta teoría, crearemos un contenedor con una estructura cuadrada y le aplicaremos un color base de fondo en RGB.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.ejemplo-color-rgb</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">background-color</span>:
+                        <span class="value-color">rgb(70, 70, 194)</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <div class="caja ejemplo-color-rgb"></div>
+            </article>
+
+            <hr />
+
+            <!-- Artículo Gradientes -->
+            <article>
+                <h2>Gradientes</h2>
+
+                <p>
+                    Los <b>gradientes</b> en CSS permiten crear <b>efectos de transición de color suaves y personalizados</b> en un elemento HTML. Esta propiedad es útil para crear fondos, efectos de texto o bordes decorativos en un diseño web.
+                </p>
+
+                <br />
+
+                <p>
+                    Se definen utilizando la propiedad <b>background-image</b> o el <b>shorthand background</b> seguidos del <b>tipo de gradiente</b> y luego <b>entre paréntesis</b> '()' colocamos el <b>valor que queremos que tome nuestro gradiente</b>. Veamos algunos ejemplos:
+                </p>
+
+                <h3>Sintaxis</h3>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.gradiente-grado</span>
+                        &#123
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="property-color">background</span>:
+                        <span class="field-color">linear-gradient(<span class="value-color">70deg, black, white</span>)</span>;
+                    </code>
+
+                    <br>
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <div class="ejemplos-gradientes">
+                    <h3>Gradientes Lineal: Ejemplos</h3>
+
+                    <p>
+                        En este ejemplo, lo primero que vemos son los <b>gradientes lineales</b>, que se extienden en una dirección específica (desde arriba hacia abajo o de izquierda a derecha, por ejemplo). Además, podemos especificar que se vaya extendiendo con una inclinación de “x” grados y tener más de un color.
+                    </p>
+
+                    <h4>Gradiente por grado</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">.gradiente-grado</span>
+                            &#123
+                        </code>
+    
+                        <br>
+    
+                        <code class="margin-20">
+                            <span class="property-color">background</span>:
+                            <span class="field-color">linear-gradient(<span class="value-color">70deg, black, white</span>)</span>;
+                        </code>
+    
+                        <br>
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+    
+                    <!-- Ejemplo -->
+                    <div class="caja gradiente-grado"></div>
+                </div>
+
+                <!-- Una dirección -->
+                <div class="ejemplo-una-direccion">
+                    <h4>Gradiente en una dirección</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">.una-direccion</span>
+                            &#123
+                        </code>
+    
+                        <br>
+    
+                        <code class="margin-20">
+                            <span class="property-color">background</span>:
+                            <span class="field-color">linear-gradient(<span class="value-color">to right, #d7d2cc, #304352</span>)</span>;
+                        </code>
+    
+                        <br>
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <!-- Ejemplo -->
+                    <div class="caja una-direccion"></div>
+                </div>
+
+                <!-- Una dirección, varios colores -->
+                <div class="ejemplo-varios-colores">
+                    <h4>Gradiente en una dirección, con varios colores</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">.varios-colores</span>
+                            &#123
+                        </code>
+    
+                        <br>
+    
+                        <code class="margin-20">
+                            <span class="property-color">background</span>:
+                            <span class="field-color">linear-gradient(<span class="value-color">to top, #0f0c29, #302b63, #24243e</span>)</span>;
+                        </code>
+    
+                        <br>
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <!-- Ejemplo -->
+                    <div class="caja varios-colores"></div>
+                </div>
+
+                <!-- Radial -->
+                <div class="gradiente-radial">
+                    <h3>Gradiente radial</h3>
+
+                    <p>
+                        Por otro lado, tenemos los <b>gradientes radiales</b>, que permiten crear efectos de transición de color suave y personalizados en un elemento HTML en forma circular.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">.radial</span>
+                            &#123
+                        </code>
+    
+                        <br>
+    
+                        <code class="margin-20">
+                            <span class="property-color">background</span>:
+                            <span class="field-color">radial-gradient(<span class="value-color">#f69d3c, #3f87a6</span>)</span>;
+                        </code>
+    
+                        <br>
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+    
+                    <!-- Ejemplo -->
+                    <div class="caja radial"></div>
+                </div>
+
+                <!-- Gradiente Repetición -->
+                <div class="cont-repeticion-gradiente">
+                    <h3>Gradiente con repetición</h3>
+
+                    <p>
+                        Finalmente, Tenemos los <b>gradientes repetitivos</b>, que hará que la extensión de nuestro gradiente ocupe , en el caso de ejemplo, <b>50px</b> y luego comenzará de nuevo y se repetirá las veces que sea necesario hasta cubrir todo nuestro elemento HTML.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">.repeticion-gradiente</span>
+                            &#123
+                        </code>
+    
+                        <br>
+    
+                        <code class="margin-20">
+                            <span class="property-color">background</span>:
+                            <span class="field-color">repeating-linear-gradient(<span class="value-color">#f69d3c, #3f87a6 50px</span>)</span>;
+                        </code>
+    
+                        <br>
+    
+                        <code>
+                            &#125
+                        </code>
+                    </div>
+
+                    <!-- Ejemplo -->
+                    <div class="caja repeticion-gradiente"></div>
+                </div>
+            
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 80%;
+    margin: auto;
+    font-family: sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1589666685762-afbbee29cd08?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHZpa2luZ29zfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60');
+    background-position: center center;
+}
+
+main {
+    background-color: rgb(197, 201, 204, 0.9);
+    padding: 25px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* Animaciones */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes move {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-1px, 0) scale(1.2);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+}
+
+/* ############ HEADER */
+
+h1 {
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Efecto de subrayado */
+nav a {
+    position: relative;
+    margin: 10px;
+    padding: 10px 0;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.cont-volver-inicio {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.cont-volver-inicio:hover img.flecha {
+    animation: move 1s linear infinite;
+}
+
+.volver-inicio-txt {
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: rgb(236, 103, 14);
+}
+
+.link {
+    text-decoration: none;
+    padding: 5px;
+    color: rgb(236, 103, 14);
+    font-weight: 600;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in;
+}
+
+.link:hover {
+    color: #ffffff;
+}
+
+/* Icono menú oculto para mostrar solo en responsive */
+.menu {
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+    /* Input Oculto */
+#menu-toggle {
+    display: none;
+}
+
+/* ############ MAIN CONTENT */
+
+/* -- Articulo Contenido Uno */
+
+.cont-uno {
+    margin: 20px 0;
+}
+
+/* ######### MEDIA QUERIES */
+
+/* -- 992px -- */
+
+@media (max-width: 992px) {
+    
+    .cont-menu {
+        position: absolute;
+        top: 155px;
+        left: 190px;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.658);
+        width: 60%;
+        border-radius: 10px;
+        padding: 10px;
+        animation: fade 1.3s ease;
+        z-index: 2;
+        display: none;
+    }
+
+    .link:hover {
+        color: #fff;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    /* Se muestra el icono del menú */
+    .menu {
+        z-index: 2;
+        display: flex;
+    }
+
+    .open-menu {
+        display: flex;
+    }
+}
+
+/* -- 778px -- */
+
+@media (max-width: 778px) {
+    .cont-menu {
+        top: 160px;
+        left: 150px;
+        width: 50%;
+    }
+}
+
+/* -- 576px -- */
+
+@media (max-width: 576px) {
+    .cont-menu {
+        top: 156px;
+        left: 30%;
+    }
+
+    .overlay {
+        height: 100vh;
+    }
+}
+
+/* -- 420px -- */
+
+@media (max-width: 420px) {
+    .cont-link {
+        width: 50%;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deployar un proyecto</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Fonts -->
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Deployar un proyecto</h1>
+        </header>
+
+        <section>
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    Deployar un proyecto significa <b>publicar o desplegar una aplicación o sitio web en un servidor o plataforma en línea para que esté disponible públicamente</b>. Es decir, deployar es el proceso de tomar el código de tu proyecto y colocarlo en un servidor donde se ejecutará y estará disponible para el público.
+                </p> <br />
+
+                <p>
+                    El proceso de deployar un proyecto web incluye tareas como la <b>configuración del servidor</b>, la subida de archivos y la configuración de la base de datos. La forma en que se deploya un proyecto web depende de la tecnología y plataforma utilizadas, pero en general es un proceso que requiere un conocimiento técnico y un proceso detallado.
+                </p> <br />
+
+                <p>
+                    Por suerte, para personas que recién se están iniciando en este mundo, existen plataformas como Vercel que facilitan ese proceso.
+                </p>
+            </article>
+
+            <!-- Vercel -->
+            <article>
+                <h2>¿Qué es Vercel?</h2>
+
+                <p>
+                    <strong>Vercel</strong> es una plataforma de desarrollo web y hospedaje que permite a los desarrolladores <b>crear y desplegar fácilmente aplicaciones web y sitios estáticos</b>. Ofrece una variedad de herramientas y recursos para ayudar a los desarrolladores a optimizar su flujo de trabajo y mejorar la velocidad y la experiencia de carga de sus aplicaciones. Vercel es conocido por su <b>integración con Git</b> y su enfoque en el desarrollo de aplicaciones con <b>tecnologías modernas</b>, como React y Next.js. También ofrece opciones de hospedaje de alto rendimiento y escalabilidad para proyectos de cualquier tamaño.
+                </p>
+            </article>
+
+            <!-- Error 404 -->
+            <article>
+                <h2>Error 404 en Vercel</h2>
+
+                <p>
+                    Un error común con el que nos podemos encontrar al tratar de deployar nuestra primera página en Vercel es el <b>error 404</b>. Este error implica que el servidor no pudo encontrar la página que estás buscando. Normalmente, este problema se debe a un problema con el archivo <strong>index.html</strong>.
+                </p> <br />
+
+                <p>
+                    Este archivo es el archivo principal que se carga cuando un usuario accede a la raíz de tu sitio web en Vercel. Si el archivo index.html no existe o está mal configurado, puede causar un error 404. Para solucionar esto, debemos asegurarnos de dos cosas:
+                </p>
+
+                <div class="cont-lista">
+                    <ol>
+                        <li>
+                            <b>Tiene que existir si o si un archivo index.html en nuestro proyecto</b>. Vercel lo tomará como <b>punto de entrada a la aplicación</b> y por lo tanto será la primera página que intentará renderizar. Por ejemplo, si estuviéramos haciendo una página institucional con varias sub-páginas (y en consecuencia, varios archivos html), debemos asegurarnos que la <b>landing page (página principal) se realice en el archivo index.html</b>. En caso de no existir este archivo, Vercel nos arroja el error.
+                        </li>
+                        <li>
+                            <b>El archivo index.html debe estar en la carpeta raíz de nuestro proyecto</b>. No debemos colocarlo dentro de subcarpetas que están en nuestro proyecto, debemos ponerlo en el nivel principal, conocido como la raíz del proyecto
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="cont-img">
+                    <img src="./img/carpeta-raíz.png" alt="img-carpeta-raiz" title="carpeta-raiz" />
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

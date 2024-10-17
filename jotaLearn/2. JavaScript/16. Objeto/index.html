@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Tipo de dato Objeto</h1>
+        </header>
+
+        <section>
+
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+
+                    <p>
+                        Este lenguaje está orientado a prototipos que es un tipo específico de programación orientada a objetos. 
+                        La POO es una abstracción de los objetos de la realidad plasmado en nuestro código y es aquella programación 
+                        donde el sistema que estamos implementando se representa como un conjunto de objetos interactuando entre sí. 
+                        Para ello, necesitamos identificar los mismos y que hacen dichos objetos.
+                    </p>
+
+                    <p>
+                        Para crear un dato de tipo objeto debemos crear una variable y asignarles una “clave” y “valor”. El objeto 
+                        debe estar encerrado entre llaves "{}" y separados por coma entre ellos. Ejemplo:
+                    </p>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>let objeto = {</code>
+                        <code class="indentacion">clave1: "valor1", </code>
+                        <code class="indentacion">clave2: 4444,</code>
+                        <code class="indentacion">clave3: "valor3",</code>
+                        <code>};</code>
+                    </div>
+
+                    <p>
+                        Un ejemplo más real de un objeto puede ser el siguiente:
+                    </p>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>let objetoPersona = {</code>
+                        <code class="indentacion">nombre: 'Juan',</code>
+                        <code class="indentacion">apellido: 'Decia',</code>
+                        <code class="indentacion">edad: 29,</code>
+                        <code>};</code>
+                    </div>
+
+                    <p>
+                        Esto nos permite crear una variable que tenga distintos tipos de datos, que es equivalente a lo que en otros 
+                        lenguajes se conoce como registros o una estructura de datos, que puede representarse en una clase objeto.
+                    </p>
+
+                    <p>
+                        Una clase objeto es un elemento de la realidad representado abstractamente en nuestro código. Este, va a tener 
+                        todas las características que sean necesarias representar.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- AGREGAR ATRIBUTOS -->
+            <article>
+
+                <h2>Agregar atributos a un objeto</h2>
+
+                <div>
+                    <p>
+                        Nuestro siguiente paso es saber agregar atributos a nuestro objeto. Para ello debemos tener en cuenta que la 
+                        sintaxis es muy sencilla: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>objeto.clave4 = ‘valor4’;</code>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar, tenemos que realizar el llamado de dicho objeto y luego agregar el nombre del atributo 
+                        que se agregará al objeto, seguido del operador de asignación “=” y finalizando el valor correspondiente a la 
+                        nueva propiedad, en este caso, “valor4”. Ahora, el objeto nos quedaría de la siguiente manera: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>let objeto = {</code>
+                    <code class="indentacion">clave1: "valor1", </code>
+                    <code class="indentacion">clave2: 4444,</code>
+                    <code class="indentacion">clave3: "valor3",</code>
+                    <code class="indentacion">clave4: "valor4",</code>
+                    <code>};</code>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <!-- ELIMINAR UN ATRIBUTO -->
+            <article>
+                <h2>Eliminar un atributo de un objeto</h2>
+
+                <div>
+                    <p>
+                        Para eliminar un atributo de un objeto debemos usar la palabra reservada delete y la sintaxis sería la siguiente:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>delete objeto.clave4;</code>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar luego de la palabra clave debemos seleccionar el objeto y luego acceder al atributo que 
+                        deseamos borrar. Con esta declaración, el objeto que habíamos agregado un atributo, ahora vuelve a estar como en el 
+                        principio.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- ACCEDIENDO A VALORES -->
+            <article>
+                <h2>Accediendo a los valores de un objeto</h2>
+
+                <!-- Opcion 1 -->
+                <div>
+
+                    <h3>Opcion 1</h3>
+
+                    <p>
+                        Podemos acceder a los valores de los objetos llamándolos por los nombres de su clave. Primero, debemos colocar el
+                        nombre de la variable objeto y luego, debemos colcar entre corchetes ([]) el nombre de la clave a la cual queremos
+                        acceder a su respectivo valor. Este nombre debe estar colocado entre 
+                        <b>comillas dobles o simples</b> (" " o ' ').
+                    </p>
+
+                    <p>
+                        Para este ejemplo, vamos a utlizar el objeto llamado 'objetoPersona' y vamos a acceder al primer
+                        valor, es decir, <b>al valor de la propiedad nombre</b> que como resultado nos debe retornar
+                        <b>'Juan'</b>.
+                    </p>
+
+                    <p><code class="fondo-codigo">console.log(objetoPersona['nombre']); // Retorna: Juan</code></p>
+
+                    <h4>Resultado desde JS:</h4>
+
+                    <div class="fondo-codigo">
+                        <code class="cont-resultado"></code>
+                    </div>
+
+                    <p>
+                        Cabe mencionar que esta no es la manera de seleccionar los valores de las propiedades, ya que,
+                        existe una sintaxis mucho más sencilla y eficiente que la vamos a ver a continuación.
+                    </p>
+                    
+                </div>
+
+                <!-- Opcion 2 -->
+                <div>
+
+                    <h3>Opcion 2</h3>
+
+                    <p>
+                        También, accedemos a los valores siguiendo la estructura <b>“nombreVariable.clave”</b>. Para este ejemplo, 
+                        vamos a utilizar el ejemplo del objeto creado anteriormente llamado <b>'objetoPersona'</b> y colocaremos
+                        “persona.nombre” para acceder al valor de la propiedad de 'nombre'. Esto nos deberá retornar 
+                        como resultado “Juan”.
+                    </p>
+
+                    <p><code class="fondo-codigo">console.log(objetoPersona.nombre) // Resultado: Juan</code></p>
+
+                    <h4>Resultado desde JS:</h4>
+
+                    <div class="fondo-codigo">
+                        <code class="cont-resultado"></code>
+                    </div>
+
+                    <p>Si realizamos la misma práctica con apellido, la sintaxis y el resultado sería el mismo: </p>
+
+                    <p><code class="fondo-codigo">console.log(objetoPersona.apellido) // Decia </code></p>
+
+                    <h4>Resultado desde JS:</h4>
+
+                    <div class="fondo-codigo">
+                        <code class="cont-resultado"></code>
+                    </div>
+                </div>
+
+                <!-- Opcion 3: Imprimiendo el objeto -->
+                <div>
+
+                    <h3>Imprimiendo el Objeto</h3>
+
+                    <p>Si, solo colocamos el nombre del objeto: </p>
+
+                    <p><code class="fondo-codigo">console.log (objetoPersona);</code></p>
+
+                    <p>Este nos imprime todo el objeto: </p>
+
+                    <h4>Resultado desde JS:</h4>
+
+                    <div class="fondo-codigo">
+                        <code class="cont-resultado"></code>
+                    </div>
+
+                    <p>
+                        Como podemos observar, en el DOM solo nos aparece el resultado de <b>[object Object]</b>, en cambio,
+                        en la consola se nos muestra el objeto completo, parecido a como se muestra un arreglo.
+                        Esto es a causa a que el DOM espera <b>el valor</b> del objeto y no va a mostrar el
+                        objeto como dato.
+                    </p>
+
+                    <p>
+                        Para corregir este error, podemos <b>iterar</b> los <b>valores</b> o las <b>propiedades</b>.
+                        Más adelante, realizaremos ejemplos para ver como realizar esta práctica con éxito.
+                    </p>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <!-- Cambiar claves y valores -->
+            <article>
+                <h2>Cambiando las claves y valores de un objeto</h2>
+
+                <div>
+                    <p>
+                        Si llegamos a cambiar en algún momento el nombre de la clave de un objeto nos desplegará 
+                        los <b>mismos valores</b> aún así habiendo reemplazado los nombres de las claves anteriores.
+                    </p>
+                </div>
+
+                <h3>Copiando el valor de una clave en una nueva variable</h3>
+
+                <div>
+
+                    <p>
+                        Vamos a colocar el valor de la clave “nombre” del objeto persona en una variable nueva
+                        (a esta la vamos a llamar “propiedad”). Y luego, realizar el llamado del objeto y la variable nueva, 
+                        la cual nos debe retornar <b>una copia del “valor”</b> que le hemos declarado a la nueva variable.
+                    </p>
+
+                    <p>
+                        Para realizar el llamado y que nos retorne el resultado que esperamos (el nombre del valor del objeto)
+                        debemos escribir la siguiente declaración: 
+                    </p>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>let propiedad = ‘nombre’;</code>
+                        <code>console.log(objetoPersona['propiedad']); // Resultado: 'Juan'</code>
+                    </div>
+
+                    <h4>Resultado desde JS:</h4>
+
+                    <div class="fondo-codigo">
+                        <code class="cont-resultado"></code>
+                    </div>
+                </div>
+
+                <div>
+                    <p>
+                        Donde debemos hacer la llamada del objeto (en este caso “persona”) y luego entre corchetes ([]), 
+                        la llamada de la variable la cual realizamos una copia de la clave-valor del objeto. Se aclara este 
+                        paso porque, si realizamos nuevamente la llamada de “persona[‘nombre´]” nos retorna el resultado esperado, 
+                        osea, Luisa. Otro detalle importante para tener en cuenta es que si llamamos por consola el valor de 
+                        propiedad nos retornará la cadena de string declarada ‘nombre’.
+                    </p>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code>let propiedad = ‘nombre’;</code> <br />
+                        <code>console.log(objetoPersona[propiedad]); // Resultado: Juan.</code>
+                        <code>console.log(propiedad); // Resultado: nombre.</code>
+                        <code>console.log(objetoPersona.nombre); // Resultado: Juan.</code>
+                    </div>
+
+                    <h4>Resultado desde JS:</h4>
+
+                    <div class="fondo-codigo bloque-codigo">
+                        <code class="cont-resultado"></code>
+                        <code class="cont-resultado"></code>
+                        <code class="cont-resultado"></code>
+                    </div>
+                </div>
+
+                <h3>Cambiando valores</h3>
+
+                <div>
+                    <p>
+                        Podemos <b>cambiar los valores</b> dentro del objeto nombrando su respectiva ”clave”. Primero, debemos colocar 
+                        el nombre de la variable objeto; seguido del nombre de la clave a cambiar que debe estar encerrada entre 
+                        corchetes (<b>[]</b>) y entre comillas (<b>['']</b>). Luego, debemos colocar un igual (<b>=</b>), porque estamos declarando un nuevo valor 
+                        y por último, el nuevo valor que le daremos a la clave que anteriormente escogimos. 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>objetoPersona['nombre'] = "Joan";</code>
+                    <code>console.log(objetoPersona.nombre); // Joan</code>
+                </div>
+
+                <h4>Resultado desde JS:</h4>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Crear objeto con new -->
+            <article>
+                <h2>Creando un objeto con la palabra reservada new</h2>
+
+                <div>
+                    <p>
+                        En los ejemplos anteriores vimos cómo podíamos crear un objeto y luego manipular los atributos que tiene el mismo. 
+                        En esta ocasión, vamos a realizar otra forma de crear un objeto. Esta manera es avisando al sistema que nos guarde 
+                        en memoria un espacio para el objeto creado y la sintaxis es la siguiente: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>let objetoPersona = new Object();</code>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar, en este caso estamos utilizando la palabra clave “new Object()”, donde el sistema nos guarda 
+                        en memoria espacio para este dicho objeto. Ahora, para agregar los atributos correspondientes el proceso es muy similar 
+                        a uno de los que hemos visto anteriormente, la sintaxis sería la siguiente:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>objetoPersona.nombre = 'Juan';</code>
+                    <code>objetoPersona.apellido = 'Decia';</code>
+                    <code>objetoPersona.edad = 28;</code>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- RECORRIENDO OBJETOS -->
+            <article>
+                <h2>Recorriendo objetos</h2>
+
+                <h3>Con for in</h3>
+
+                <div>
+                    <p>
+                        Como los objetos son una colección de datos similar a los arreglos, podemos aplicar bucles 
+                        para recorrer el contenido que estos tienen en pocas líneas de código. En este ejemplo vamos 
+                        a utilizar para recorrer un objeto un bucle "for in".
+                    </p>
+
+                    <p>
+                        En el siguiente ejemplo vamos a construir el bucle donde utilizaremos un contador llamado ‘clave’, 
+                        seguido de la palabra clave ‘in’ y finalizando con el nombre del objeto del que vamos a recorrer.
+                    </p>
+                </div>
+
+                <h4>Imprimiendo solo claves</h4>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>for (clave in objeto) {</code>
+                    <code class="indentacion">console.log(clave);</code>
+                    <code>};</code>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <h4>Imprimiendo los valores</h4>
+
+                <div>
+                    <p>
+                        Como lo explica la sintaxis, en este caso solo podremos imprimir el nombre de las claves del objeto. 
+                        Para imprimir los valores debemos acceder a su valor y esto lo realizamos de la siguiente manera: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>for (clave in objeto) {</code>
+                    <code class="indentacion">console.log(objeto[clave]);</code>
+                    <code>};</code>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div>
+                    <p>
+                        Donde al imprimir los resultados seleccionamos primero el objeto a recorrer y luego, la posición. 
+                        Esto debe estar entre corchetes, el resultado de esta sintaxis nos retornará el valor de cada una de las claves.
+                    </p>
+                </div>
+
+                <h3>Con object.values</h3>
+
+                <div>
+                    <p>
+                        Otra forma de recorrer un objeto es utilizando el method “Object.values()”. Este method convierte el objeto 
+                        en un arreglo, así que para utilizar esta práctica es recomendable guardar una copia del objeto en una variable 
+                        nueva. Para realizar esta práctica la sintaxis sería la siguiente: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>let personaArreglo = Object.values(objetoPersona);</code>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <h3>Con JSON</h3>
+
+                <div>
+                    <p>
+                        En este caso utilizaremos un tipo de archivo JSON con el method stringify para convertir nuestro objeto en un 
+                        string de tipo JSON. Más adelante veremos como es el uso correcto de JSON. Pero, ahora simplemente vamos a conocer 
+                        que es una alternativa más para el uso de nuestros objetos. ya que, este tipo de archivo (JSON) es el más útil 
+                        para trabajar con objetos.
+                    </p>
+
+                    <p>
+                        El primer paso que debemos realizar es guardar el objeto dentro de una variable usando JSON y stringify. 
+                        La sintaxis sería la siguiente:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>let personaJson = JSON.stringify(objetoPersona);</code>
+                </div>
+
+                <div>
+                    <p>
+                        Si imprimimos esta variable de tipo JSON nos retornará las claves y los valores como una cadena string de tipo JSON.
+                    </p>
+                </div>
+
+            </article>
+
+        </section>
+    </main>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

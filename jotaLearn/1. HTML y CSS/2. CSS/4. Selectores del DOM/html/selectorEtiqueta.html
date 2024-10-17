@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de etiqueta</title>
+
+    <link rel="stylesheet" href="../css/selectorEtiqueta.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Selector de etiqueta</h1>
+
+            <nav>
+                <svg class="arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+
+                <a class="link-volver" href="../index.html">Volver a Inicio</a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <section>
+            <article>
+
+                <h2>Introducción</h2>
+
+                <p>
+                    Los <b>selectores de etiqueta</b> son aquellos que <b>buscan</b> directamente un <b>elemento</b> en el <b>DOM</b> según el <b>nombre de la etiqueta que deseamos seleccionar</b>. Este selector tiene un <b>comportamiento general</b>, ya que, al aplicar a <b>una etiqueta específica</b> los estilos que le coloquemos a este selector se aplicarán a <b>todas las demás etiquetas del mismo tipo</b>, es decir, si seleccionamos una etiqueta &#60p&#62 para cambiar el color a rojo, todas las demás etiquetas &#60p&#62 también cambiarán su comportamiento. Por eso, hay que prestar mucha atención al usar un selector tan general como este.
+                </p>
+            </article>
+
+            <!-- Ejemplo práctico -->
+            <article class="cont-ejemplo">
+                <h2>Ejemplo práctico</h2>
+
+                <p>
+                    Para ejemplificar el concepto anterior, crearemos <b>tres headings</b> de nivel <b>h3</b> a los cuales les daremos unos valores específicos.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">h3 &#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">margin</span>:
+                        <span class="value-color">30px 0</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="value-color">rgb(103, 45, 240)</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">font-size</span>:
+                        <span class="value-color">1.3em</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        <span class="field-color">&#125</span>
+                    </code>
+                </div>
+
+                <div class="cont-h3">
+                    <h3>Subtitulo ejemplo #1</h3>
+                    <h3>Subtitulo ejemplo #2</h3>
+                    <h3>Subtitulo ejemplo #3</h3>
+                </div>
+
+                <p>
+                    Como podemos observar hemos creado los elementos del ejemplo y todos respetaron la misma estructura de estilos que le hemos especificado al selector de la etiqueta.
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

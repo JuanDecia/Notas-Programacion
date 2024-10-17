@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejes</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Ejes en Flexbox</h1>
+
+            <nav>
+                <div class="menu-toggle">
+                    <svg class="menu-img" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </div>
+
+                <ul class="list-links">
+                    <li>
+                        <a class="link" href="#justify-content">Justify-content</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#align-items">Align-items</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#align-content">Align-Content</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#gap">Gap</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#order">Order</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#flex-grow">Flew-Grow</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#flex-shrink">Flex-Shrink</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#flex-basis">Flex-Basis</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    Ahora que ya vimos las propiedades más básicas de flexbox, y antes de avanzar hacia otras más complejas, es buena idea que entendamos que son los <b>ejes de flexbox</b>. En Flexbox, hay <b>dos ejes</b> que son importantes para el posicionamiento y alineación de elementos hijos dentro del contenedor: <b>el eje principal y el eje transversal</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    El <b>eje principal</b> es el eje a lo largo del cual se establece la dirección de los elementos hijos dentro del contenedor. Esto se define mediante la propiedad <b>"flex-direction"</b>. El <b>eje transversal</b> es <b>perpendicular al eje principal</b> y <b>se extiende en la dirección opuesta</b>. Su dirección es determinada por la dirección establecida por <b>"flex-direction"</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    Por ejemplo, si establecemos la propiedad <b>"flex-direction" en "row"</b>, los elementos hijos se colocarán uno al lado del otro en el <b>eje X (horizontal)</b>, siendo este el <b>eje principal</b> y siendo el <b>eje Y (vertical) el eje transversal</b>. Si, en cambio, establecemos la propiedad <b>"flex-direction" en "column"</b>, los elementos secundarios se colocarán uno debajo del otro en el <b>eje Y (vertical)</b>, siendo este el eje principal y pasando el <b>eje X (vertical)</b> a ser el eje transversal.
+                </p>
+
+                <br />
+
+                <p>
+                    <b>IMPORTANTE</b>: Antes de que pasemos a ver algunas propiedades que se colocan en los elementos hijos de flex, creemos que es necesario aclarar que, para que las mismas funcionen, el contenedor padre debe ser un contenedor con <b>display:flex</b>;
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Justify-Content -->
+            <article id="justify-content">
+                <h2>Propiedad Justify-Content</h2>
+
+                <p>
+                    La propiedad <b>"justify-content"</b> es una propiedad de CSS que se utiliza para <b>alinear los elementos hijos</b> dentro del contenedor en el <b>eje principal</b> (ya sea horizontal o vertical, dependiendo de la dirección establecida por <b>"flex-direction"</b>). Esta propiedad se aplica sólo a los elementos secundarios que no ocupan todo el espacio disponible en el contenedor. Los posibles valores para esta propiedad son:
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.padre</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">flex</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">justify-content</span>:
+                        <span class="comment-color">/* flex-start | center | flex-end | space-between | space-around | space-evenly */</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <!-- Flex-start -->
+                <div class="cont-flex-start">
+                    <h3>Flex-start</h3>
+
+                    <p>
+                        Este valor alinea los elementos hijos al <b>inicio del contenedor en el eje principal</b> (izquierda si "flex-direction" es "row" o arriba si "flex-direction" es "column"). Es el valor por defecto de la propiedad <b>justify-content</b>.
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="ejemplo-flex-start">
+                            <div class="caja">Elemento 1</div>
+                            <div class="caja">Elemento 2</div>
+                            <div class="caja">Elemento 3</div>
+                            <div class="caja">Elemento 4</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flex-end -->
+                <div class="cont-flex-end">
+                    <h3>Flex-end</h3>
+
+                    <p>
+                        Este valor alinea los elementos hijos al <b>final del eje principal del contenedor</b>, es decir, en el extremo derecho si el valor de "flex-direction" es "row" o en el extremo inferior si es "column".
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="ejemplo-flex-end">
+                            <div class="caja">Elemento 1</div>
+                            <div class="caja">Elemento 2</div>
+                            <div class="caja">Elemento 3</div>
+                            <div class="caja">Elemento 4</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- center -->
+                <div class="cont-center">
+                    <h3>Center</h3>
+
+                    <p>
+                        Este valor alinea los elementos hijos en el <b>centro del eje principal del contenedor</b>.
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="ejemplo-center">
+                            <div class="caja">Elemento 1</div>
+                            <div class="caja">Elemento 2</div>
+                            <div class="caja">Elemento 3</div>
+                            <div class="caja">Elemento 4</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- space-between -->
+                <div class="cont-space-between">
+                    <h3>Space-between</h3>
+
+                    <p>
+                        Este valor <b>distribuye</b> los elementos hijos de <b>manera uniforme a lo largo del eje principal del contenedor</b>, con el <b>primer elemento al comienzo</b> y el <b>último elemento al final</b> del contenedor.
+
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="ejemplo-space-between">
+                            <div class="caja">Elemento 1</div>
+                            <div class="caja">Elemento 2</div>
+                            <div class="caja">Elemento 3</div>
+                            <div class="caja">Elemento 4</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- space-around -->
+                <div class="cont-space-around">
+                    <h3>Space-around</h3>
+
+                    <p>
+                        Este valor también <b>distribuye los elementos hijos de manera uniforme a lo largo del eje principal del contenedor</b>, pero con un <b>espacio entre el primer y último elemento respecto de los extremos del eje principal</b>.
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="ejemplo-space-around">
+                            <div class="caja">Elemento 1</div>
+                            <div class="caja">Elemento 2</div>
+                            <div class="caja">Elemento 3</div>
+                            <div class="caja">Elemento 4</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- space-evenly -->
+                <div class="cont-space-evenly">
+                    <h3>Space-evenly</h3>
+
+                    <p>
+                        Este valor distribuye los elementos hijos de manera uniforme a lo largo del eje principal del contenedor, incluyendo el espacio antes del primer elemento y después del último elemento. La <b>diferencia con space-around</b> radica en que será <b>idéntico el espacio entre el primer y último elemento con los extremos del eje principal y el espacio entre elementos</b>.
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="ejemplo-space-evenly">
+                            <div class="caja">Elemento 1</div>
+                            <div class="caja">Elemento 2</div>
+                            <div class="caja">Elemento 3</div>
+                            <div class="caja">Elemento 4</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Align-items -->
+            <article id="align-items">
+                <h2>Align Items</h2>
+
+                <p>
+                    La propiedad <b>"align-items"</b> se utiliza para <b>alinear los elementos hijos a lo largo del eje transversal</b> del contenedor. Los posibles valores para esta propiedad son:
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.padre</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">flex</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">align-items</span>:
+                        <span class="comment-color">/* stretch | flex-start | flex-end | center | baseline */</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <!-- Stretch -->
+                <div class="cont-stretch">
+                    <h3>Stretch</h3>
+                    <p>
+                        Este es el <b>valor por defecto de "align-items"</b> y <b>estira los elementos hijos</b> para que se ajusten al alto del contenedor a lo largo del eje transversal.
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="ejemplo-stretch">
+                            <div class="caja">Elemento 1</div>
+                            <div class="caja">Elemento 2</div>
+                            <div class="caja">Elemento 3</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flex start -->
+                <div class="cont-flex-start">
+                    <h3>Flex-start</h3>
+                    <p>
+                        Este valor alinea los elementos hijos al <b>inicio del contenedor en el eje transversal del contenedor</b>
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="ejemplo-flex-start">
+                            <div class="caja">Elemento 1</div>
+                            <div class="caja">Elemento 2</div>
+                            <div class="caja">Elemento 3</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flex end -->
+                <div class="cont-flex-end">
+                    <h3>Flex-end</h3>
+                    <p>
+                        Este valor alinea los elementos hijos al <b>final del eje transversal del contenedor</b>.
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="ejemplo-end">
+                            <div class="caja">Elemento 1</div>
+                            <div class="caja">Elemento 2</div>
+                            <div class="caja">Elemento 3</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center -->
+                <div class="cont-center">
+                    <h3>Center</h3>
+                    <p>
+                        Este valor alinea los elementos hijos en el <b>centro del eje transversal del contenedor</b>.
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="ejemplo-center">
+                            <div class="caja">Elemento 1</div>
+                            <div class="caja">Elemento 2</div>
+                            <div class="caja">Elemento 3</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baseline -->
+                <div class="cont-baseline">
+                    <h3>Baseline</h3>
+                    <p>
+                        Este valor alinea los elementos hijos en su <b>línea base común</b>, es decir, en la <b>línea imaginaria donde descansan las letras en un texto</b>.
+                    </p>
+
+                    <div class="cont-ejemplo">
+                        <div class="ejemplo-baseline">
+                            <div class="caja">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime veritatis vitae eius nihil ut? Accusamus quae rem mollitia dolores recusandae deserunt nisi ratione, magnam earum minus quasi id adipisci voluptatem iusto. Accusamus officia at similique!
+                            </div>
+                            <div class="caja">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus magni perferendis sed ducimus ab cumque velit, asperiores dignissimos beatae illo. Deserunt magnam amet, dignissimos ab cum laudantium est beatae! Delectus sed numquam, sint saepe dolore ad tenetur quae, aliquid in facere nostrum facilis provident reiciendis libero obcaecati fuga nam vero!
+                            </div>
+                            <div class="caja">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ullam similique, facere vitae cumque porro eveniet distinctio iure aut corporis.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <!-- Align Content -->
+            <article id="align-content">
+                <h2>Align-Content</h2>
+
+                <p>
+                    La propiedad <b>"align-content"</b> en Flexbox controla la <b>alineación de varias líneas de elementos hijos dentro de un contenedor en el eje transversal</b>. Esta propiedad se aplica solo <b>cuando hay varias líneas de elementos en un contenedor Flexbox</b>, es decir, cuando la propiedad <b>"flex-wrap"</b> está establecida en <b>"wrap"</b> o <b>"wrap-reverse"</b>. Puede tomar los siguientes valores:
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.padre</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">flex</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">align-content</span>:
+                        <span class="comment-color">/* flex-start | flex-end | center | stretch | space-around | space-between | space-evenly */</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <ul class="list-align-content">
+                    <li>
+                        <b>"flex-start"</b>: Alinea las líneas de elementos al comienzo del eje transversal del contenedor.
+                    </li>
+                    <li>
+                        <b>"flex-end"</b>: Alinea las líneas de elementos al final del eje transversal del contenedor.
+                    </li>
+                    <li>
+                        <b>"center"</b>: Alinea las líneas de elementos en el centro del eje transversal del contenedor.
+                    </li>
+                    <li>
+                        <b>"space-between"</b>: Distribuye uniformemente el espacio adicional entre las líneas de elementos, dejando un espacio en blanco en los bordes superior e inferior del contenedor.
+                    </li>
+                    <li>
+                        <b>"space-around"</b>: Distribuye uniformemente el espacio adicional alrededor de las líneas de elementos, incluyendo los bordes superior e inferior del contenedor.
+                    </li>
+                    <li>
+                        <b>"stretch"</b>: Estira las líneas de elementos para llenar todo el espacio disponible en el eje transversal del contenedor.
+                    </li>
+                    <li>
+                        <b>“space-evenly”</b>: Distribuye uniformemente el espacio disponible tanto entre las líneas de elementos como alrededor de los bordes superior e inferior del contenedor en el eje transversal.
+
+                    </li>
+                </ul>
+            </article>
+            
+            <hr />
+
+            <!-- Gap -->
+            <article id="gap">
+                <h2>Gap</h2>
+
+                <p>
+                    La propiedad "gap" es una propiedad de Flexbox que define el espacio entre los elementos de un contenedor. Para determinar el valor de esta propiedad, podemos aplicar las distintas unidades de medida que vimos anteriormente, que representan la cantidad de espacio que deseamos dejar entre los elementos.
+                </p>
+
+                <br />
+
+                <p>
+                    Es importante destacar que, como en el caso del resto de las propiedades de los elementos padres, la propiedad "gap" solo se aplica a los elementos que se encuentran en el contenedor directo de Flexbox (hijos directos), no a los elementos anidados dentro de ellos.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.padre</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">flex</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">justify-content</span>:
+                        <span class="value-color">center</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">align-items</span>:
+                        <span class="value-color">center</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">gap</span>:
+                        <span class="value-color">30px</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <p>
+                    En este caso de ejemplo, nuestros elementos van a alinearse en el centro de nuestro contenedor, pero tendrán un espacio de 30px entre sí. <b>Gap</b> suele ser <b>más útil</b> que utilizar margin o padding para <b>separar elementos internos</b> de un contenedor ya que no importa si los elementos están uno a la derecha del otro o uno abajo del otro, ya que el <b>espacio siempre será entre medio de ellos</b>.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Order -->
+            <article id="order">
+                <h2>Order</h2>
+
+                <p>
+                    La propiedad <b>"order"</b> es una propiedad de Flexbox que permite <b>especificar el orden de visualización de los elementos dentro de un contenedor, independientemente del orden en que aparecen en el código HTML</b>. El <b>valor predeterminado</b> de la propiedad "order" <b>es 0</b>. Si deseamos cambiar el orden de visualización de un elemento, debemos establecer un valor numérico <b>diferente a 0</b>. Los elementos se ordenan de <b>menor a mayor</b>, es decir, los elementos con un <b>valor menor</b> aparecen <b>antes que los elementos con un valor mayor</b>
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.padre</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">flex</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.hijo2</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">order</span>:
+                        <span class="value-color">1</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.hijo1</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">order</span>:
+                        <span class="value-color">2</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-ejemplo">
+                    <div class="ejemplo-order">
+                        <div class="hijo1 caja">Hijo 1</div>
+                        <div class="hijo2 caja">Hijo 2</div>
+                    </div>
+                </div>
+
+                <p>
+                    En este ejemplo, podemos ver que, según la ubicación en el documento HTML, el elemento con clase <b>hijo1</b> se vería primero en la página que el elemento con la clase <b>hijo2</b>. Utilizando la propiedad order lo que logramos es cambiar dicho orden, haciendo que el elemento con la clase <b>hijo2</b> aparezca primero en nuestra página.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Flex Grow -->
+            <article id="flex-grow">
+                <h2>Flex grow</h2>
+
+                <p>
+                    La propiedad <b>flex-grow</b> es una propiedad de Flexbox que se utiliza para especificar cómo se <b>distribuyen los espacios disponibles entre los elementos flexibles</b> dentro de un contenedor. Esta propiedad <b>controla la capacidad de un elemento para crecer en relación con otros elementos flexibles dentro del mismo contenedor</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    El <b>valor de flex-grow</b> determina <b>cuánto espacio adicional puede ocupar un elemento flexible dentro del contenedor en relación con otros elementos flexibles</b>. Si todos los elementos tienen el mismo valor de flex-grow, entonces el espacio adicional se distribuye entre ellos de manera uniforme. Si un elemento tiene un valor mayor de flex-grow qué otros elementos, entonces se le asignará más espacio adicional en relación con los demás.
+                </p>
+
+                <br />
+
+                <p>
+                    Por ejemplo, si tenemos un contenedor con tres elementos flexibles, y el primer elemento tiene un valor de <b>flex-grow de 2</b>, mientras que los <b>otros dos elementos</b> tienen un valor de <b>flex-grow de 0 por defecto</b>, entonces el <b>primer elemento tendrá el doble de espacio adicional</b> en relación con los otros dos elementos. Es importante aclarar que 0 es el valor por defecto, por lo tanto, no es necesario colocarlo.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.padre</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">flex</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.hijo1</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">flex-grow</span>:
+                        <span class="value-color">2</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="comment-color">/* Hijo 2 y 3 tienen valor 0 que es por defecto */</span>:
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-ejemplo">
+                    <div class="ejemplo-flex-grow">
+                        <div class="hijo-grow-1 caja">Hijo 1</div>
+                        <div class="hijo-grow-2 caja">Hijo 2</div>
+                        <div class="hijo-grow-3 caja">Hijo 3</div>
+                    </div>
+                </div>
+            </article> 
+
+            <hr />
+
+            <!-- Flex-shrink -->
+            <article id="flex-shrink">
+                <h2>Flex-shrink</h2>
+
+                <p>
+                    La propiedad <b>flex-shrink</b> se utiliza en flexbox para definir cómo se <b>deben encoger los elementos flexibles en un contenedor flexible si no hay suficiente espacio disponible</b>. La propiedad acepta un valor numérico que representa el <b>factor de encogimiento</b> de un elemento. Por ejemplo, si el <b>factor de encogimiento</b> de un elemento es 2 y el de otro es 1, el primer elemento se encogerá el doble que el segundo si es necesario.
+                </p>
+
+                <br />
+
+                <p>
+                    Por defecto, el valor de flex-shrink es 1, lo que significa que el elemento se <b>encogerá en proporción a los demás elementos si no hay suficiente espacio disponible</b>. Si se establece en 0, el elemento no se encogerá y mantendrá su tamaño original, incluso si no hay suficiente espacio disponible.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.padre</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">flex</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.hijo1</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">flex-shrink</span>:
+                        <span class="value-color">0</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.hijo2</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">flex-shrink</span>:
+                        <span class="value-color">2</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-ejemplo">
+                    <div class="ejemplo-flex-shrink">
+                        <div class="hijo-shrink-1 caja">Hijo 1</div>
+                        <div class="hijo-shrink-2 caja">Hijo 2</div>
+                        <div class="hijo-shrink-3 caja">Hijo 3</div>
+                    </div>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Flex-Basis -->
+            <article id="flex-basis">
+                <h2>Flex-basis</h2>
+
+                <p>
+                    Es una propiedad de Flexbox que <b>establece el tamaño base de un elemento flexible antes de que se distribuya el espacio sobrante entre los elementos</b>. Es similar a la propiedad width o height, ya que <b>define el tamaño inicial del elemento</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    El valor por defecto de flex-basis es <b>auto</b>, lo que significa que el <b>tamaño inicial del elemento se basará en el tamaño contenido en su interior o en su ancho o alto establecido por otras propiedades CSS</b>. Si se desea establecer un tamaño base específico para el elemento, se debe utilizar un valor diferente a auto.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.padre</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">flex</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.hijo1</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">flex-basis</span>:
+                        <span class="value-color">200px</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.hijo2</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">flex-basis</span>:
+                        <span class="value-color">350px</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-ejemplo">
+                    <div class="ejemplo-basis">
+                        <div class="hijo-basis-1 caja">Hijo 1</div>
+                        <div class="hijo-basis-2 caja">Hijo 2</div>
+                    </div>
+                </div>
+
+                <p>
+                    Es importante aclarar que cada elemento va a ocupar esa base siempre y cuando pueda ocupar esa cantidad de píxeles.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Flex -->
+            <article id="flex">
+                <h2>Flex</h2>
+
+                <p>
+                    La propiedad flex es una <b>shorthand</b> de CSS que permite establecer de manera fácil y rápida las tres propiedades de flexbox mencionadas anteriormente: <b>flex-grow, flex-shrink y flex-basis</b>. Se colocarán las 3 opciones separadas por un espacio.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.padre</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">display</span>:
+                        <span class="value-color">flex</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.hijo1</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">flex</span>:
+                        <span class="comment-color">/* flex-grow | flex-shrink | flex-basis */</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+            </article>
+
+            <hr />
+
+            <article id="align-self">
+                <h2>Align-Self</h2>
+
+                <p>
+                    La propiedad <b>align-self</b> se utiliza en Flexbox para <b>alinear individualmente un elemento hijo a lo largo del eje transversal</b> (eje perpendicular) del contenedor. Es similar a la propiedad align-items, pero se aplica <b>solo a un elemento específico</b> en lugar de a todos los elementos hijos del contenedor.
+                </p>
+            </article>
+        </section>
+    </main>
+    <script src="./js/main.js"></script>
+</body>
+</html>

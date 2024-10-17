@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables en CSS</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Variables en CSS</h1>
+        </header>
+
+        <section>
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    Las variables en CSS son valores que se pueden asignar a un nombre específico y luego usar en todo el documento.
+                </p>
+
+                <br />
+
+                <p>
+                    Las variables en CSS tienen varias ventajas. En primer lugar, <b>permiten una mayor flexibilidad y mantenibilidad del código</b>, ya que si se necesita cambiar un valor en todo el documento, solo se necesita <b>cambiar el valor de la variable en una sola línea de código</b>. En segundo lugar, las variables <b>permiten escribir un código más limpio y legible</b>, ya que se pueden usar <b>nombres significativos</b> para las variables en lugar de valores duros y repetitivos. No obstante, las variables no se limitan solo a colores, también se pueden utilizar para tipografías, tamaños, y demás valores que se puedan reutilizar
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Sintaxis -->
+            <article>
+                <h2>Sintaxis</h2>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">:root</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">--title-color</span>:
+                        <span class="value-color">#0250e</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">h1</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">color</span>:
+                        <span class="tag-color">var<span class="field-color">(<span class="value-color">--title-color</span>)</span></span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <p>
+                    Las variables suelen declararse en el elemento raíz “:root” del proyecto para que todo el resto del entorno del documento tenga acceso a ellas. Se definen colocando dos guiones medios y el nombre de la variable, para luego colocar el valor que deseamos almacenar en dicha variable.
+                </p>
+
+                <br />
+
+                <p>
+                    Luego, para utilizarlas, utilizamos la palabra clave var y paréntesis, dentro de los cuales pondremos el nombre de la variable, precedido aquí también por los dos guiones medios.
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+}
+
+body {
+    max-width: 80%;
+    margin: auto;
+    font-family: sans-serif;
+    background-image: url('https://i.pinimg.com/originals/cd/cf/fc/cdcffc575c7d8c6a2323b4ba0d01ff18.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    background-color: rgba(196, 176, 85, 0.664);
+    padding: 25px;
+}
+
+p {
+    text-align: justify;
+}
+
+/* -- Animaciones -- */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(50px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes move {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-1px, 0) scale(1.2);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+}
+
+/* ######### HEADER */
+
+h1 {
+    margin: 30px auto;
+    margin-bottom: 20px;
+    padding: 7px;
+    color: #ffffff;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    text-align: center;
+    border-bottom: 1px solid white;
+    width: 45%;
+    animation: fade 1s ease-in, slide-left 1.3s ease-in-out;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cont-volver-inicio {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.cont-volver-inicio a:first-child {
+    display: flex;
+}
+
+a {
+    margin-left: 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #fff;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+.cont-volver-inicio:hover img.flecha {
+    animation: move 1s linear infinite;
+}
+
+/* Efecto de subrayado dinámico */
+
+nav a {
+    position: relative;
+    padding: 10px 0;
+    transition: transform 0.3 ease-in-out;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    border: 1px solid white;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.estructura-enlaces {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0px;
+    width: 100%;
+}
+
+    /* Menu Oculto */
+
+.menu {
+    width: 10%;
+    display: none; /* Se muestra a partir de 768px */
+}
+
+/* ######### MAIN CONTENT */
+
+#cont-imagen {
+    margin: 20px auto;
+    text-align: center;
+}
+
+#cont-imagen img {
+    max-width: 100%;
+}
+
+/* ######### RESPONSIVE DESIGN */
+
+    /* 768px */
+
+.menu {
+    display: flex;
+    margin: 20px 0;
+}
+
+.cont-menu {
+    position: absolute;
+    top: 200px;
+    left: 140px;
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.712);
+    width: 65%;
+    border-radius: 10px;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.open-menu {
+    display: flex;
+    animation: fade 0.9s ease-in, slide-left 0.9s ease-in-out;
+}
+
+nav a {
+    padding: 15px;
+}
+
+nav a::after {
+    width: 80%;
+    margin-left: 15px;
+}
+
+p {
+    text-align: justify;
+}
+
+/* ######### QUERIES */
+
+@media (max-width: 992px) {
+    .estructura-enlaces {
+        top: 190px;
+        left: 180px;
+    }
+}

@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 85%;
+    margin: auto;
+    font-family: sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    background-color: rgb(197, 201, 204, 0.9);
+    padding: 25px;
+}
+
+h2 {
+    margin: 20px 0;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+h3 {
+    color: rgb(103, 45, 240);
+    margin: 20px 0;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    padding-bottom: 7px;
+    text-decoration: none;
+    color: rgb(236, 103, 14);
+    font-weight: 600;
+    font-size: 1.2em;
+    position: relative;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+a:visited {
+    color: rgb(236, 103, 14);
+}
+
+p {
+    text-align: justify;
+}
+
+/* -- Animaciones -- */
+
+/* Subrayado Dinámico */
+
+.volver a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    height: 2px;
+    color: #ffffff;
+    background-color: #ffffff;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in;
+}
+
+.volver a:hover::after {
+    transform: scaleX(1);
+}
+
+/* -- */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ############ HEADER */
+
+h1 {
+    margin: 20px 0;
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    text-align: center;
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.volver-inicio {
+    display: flex;
+}
+
+.volver {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* ############ MAIN CONTENT */
+
+/* -- Artículo Introducción -- */
+
+.cont-arriba {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+}
+
+svg {
+    width: 60px;
+}
+
+/* Bloque Código */
+
+.cont-codigo {
+    background-color: rgb(56, 55, 55);
+    margin: 20px auto;
+    padding: 7px;
+    width: 70%;
+    border-radius: 5px;
+}
+
+.margin-20 {
+    margin-left: 20px;
+}
+
+.margin-40 {
+    margin-left: 40px;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.tag-color {
+    color: rgb(37, 143, 241);
+}
+
+.property-color {
+    color: rgb(113, 209, 247);
+}
+
+.value-color {
+    color: #f39658;
+}
+
+.comment-color {
+    color: rgb(41, 148, 31);
+}
+
+/* -- */
+
+/* -- Artículo Type -- */
+
+h4 {
+    color: #da476c;
+    margin: 10px 0;
+}
+
+.cont-input {
+    margin: 15px 0;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+/* Text */
+
+.link-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 7px;
+    font-size: 1em;
+}
+
+/* -- Articulo Propiedades Input -- */
+
+/* Introduccion */
+
+.can-i-use {
+    color: black;
+    font-size: initial;
+    display: inline;
+}
+
+.can-i-use:visited {
+    color: black;
+}
+
+.can-i-use:hover {
+    color: #f37f32;
+}
+
+/* -- */
+
+/* Disable */
+
+.cont-disable input {
+    text-align: center;
+    width: 30%;
+}
+/* -- */
+
+/* -- Artículo Validar Campos -- */
+
+.form-contacto {
+    margin: 25px 0;
+}
+
+/* -- Artículo Captura de Datos */
+
+.burger {
+    width: 30px;
+}
+
+.textarea {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* -- Articulo Buenas Prácticas -- */
+
+li {
+    padding: 7px;
+}

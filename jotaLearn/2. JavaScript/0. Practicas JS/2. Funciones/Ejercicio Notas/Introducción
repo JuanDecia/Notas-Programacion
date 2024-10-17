@@ -1,0 +1,5 @@
+Se crea un script sencillo para utilizar las funciones. El objetivo del programa es realizar un promedio
+de notas de un estudiante y que este se pueda mostrar por pantalla.
+
+Para ello, se crean dos funciones, la primera es donde se va a calcular el promedio de las notas para luego
+en la segunda funcion podamos realizar el mensaje que nos pide la práctica.

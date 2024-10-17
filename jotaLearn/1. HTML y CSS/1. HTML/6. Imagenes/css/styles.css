@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('../img/fondo-imagen.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+main {
+    padding: 25px;
+    background-color: rgb(197, 201, 204, 0.9);
+}
+
+h2 {
+    margin: 20px 0;
+    color: rgb(38, 99, 231);
+}
+
+p {
+    text-align: justify;
+}
+
+/* -- Animaciones -- */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ######### HEADER */
+
+header {
+    margin: 20px 0;
+}
+
+h1 {
+    color: rgb(15, 110, 110);
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+nav {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #fff;
+    font-weight: 600;
+}
+
+.arrow {
+    margin-right: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 20px;
+}
+
+/* ######### MAIN CONTENT */
+
+/* -- Article Absolute -- */
+
+.cont-absoluta {
+    margin-bottom: 25px;
+}
+
+.cont-h3 {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+h3 {
+    color: rgb(103, 45, 240);
+    width: 20%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(103, 45, 240, 0.116);
+    border:1px solid rgb(103, 45, 240);
+}
+
+/* Bloque ejemplo de código */
+
+.cont-ejemplo-absoluto {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 70px;
+}
+
+.cont-ejemploCodigo {
+    background-color: rgb(22, 22, 22);
+    width: 40%;
+    padding: 10px;
+}
+
+.ejemplo-codigo {
+    color: #FFFFFF;
+}
+
+.color-etiqueta {
+    color: #2f6ef5;
+}
+
+.color-propiedad {
+    color: #6DD5FA;
+}
+
+.color-string {
+    color: #f36615;
+}
+
+.img-river {
+    width: 250px;
+}
+
+/* -- Articulo Relativo -- */
+
+.cont-imagenRelativa {
+    margin-bottom: 25px;
+}
+
+.cont-ejemploRelativo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px;
+}
+
+.cont-ejemploRelativo > .cont-ejemploCodigo {
+    width: 80%;
+    padding: 10px;
+    margin: 20px;
+}
+
+.cont-imgRelativo {
+    display: flex;
+    justify-content: center;
+}
+
+.img-ejemplo {
+    max-width: 70%;
+}
+
+@media (max-width: 768px) {
+    .cont-link {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .cont-link {
+        width: 100%;
+    }
+}

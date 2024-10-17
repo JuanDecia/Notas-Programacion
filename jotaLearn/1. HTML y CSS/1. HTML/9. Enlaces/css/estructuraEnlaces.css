@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 80%;
+    margin: auto;
+    font-family: sans-serif;
+    background-image: url('../img/fondo-imagen.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    background-color: rgb(197, 201, 204, 0.9);
+    padding: 25px;
+}
+
+p {
+    text-align: justify;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+/* Animaciones */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ############ HEADER */
+
+h1 {
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+a {
+    position: relative;
+    display: flex;
+    padding: 7px;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: rgb(236, 103, 14);
+    font-weight: 600;
+    font-size: 1.2em;
+    transition: color 0.2s ease-in;
+}
+
+/* Subrayado Dinámico */
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    height: 2px;
+    color: #ffffff;
+    background-color: #ffffff;
+    width: 90%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+/* ############ MAIN CONTENT */
+
+.main-container {
+    margin: 30px 0;
+}
+
+/* -- Articulo Cards -- */
+
+.cont-cards {
+    margin: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Card Vikingos */
+.card-vikingos {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-image: url('https://images.unsplash.com/photo-1628968415499-a27a3aa09289?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dmlraW5nb3N8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.link-vikingos {
+    font-size: 1.4em;
+    padding-bottom: 10px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.575);
+    border: 1px solid black;
+    border-radius: 10px
+}
+
+/* Card Kimetsu */
+.card-kimetsu {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-image: url('https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YW5pbWV8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.link-kimetsu {
+    font-size: 1.4em;
+    padding-bottom: 10px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.575);
+    border: 1px solid black;
+    border-radius: 10px
+}
+
+/* Card Fairy Tail */
+.card-fairy {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-image: url('https://i.pinimg.com/564x/22/10/a0/2210a01080505c3958de80b7cf13c44d.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.link-fairy {
+    font-size: 1.4em;
+    padding-bottom: 10px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.575);
+    border: 1px solid black;
+    border-radius: 10px
+}
+
+/* -- Articulo Mail -- */
+
+.cont-mail {
+    display: flex;
+    justify-content: center;
+}
+
+/* ######### MEDIA QUERIES */
+
+@media (max-width: 778px) {
+    nav {
+        margin: 20px 0;
+    }
+}

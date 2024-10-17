@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instance of</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>InstanceOf</h1>
+        </header>
+
+        <section>
+            <article>
+                <div class="titulo">
+                    <h2>Introducción</h2>
+                </div>
+
+                <div>
+                    <p>
+                        Hay ocasiones que debemos saber al trabajar con <b>polimorfismo</b> a que tipo estamos
+                        referenciando y este proceso lo podemos lograr gracias a la palabra reservada <b>instanceof</b>.
+                        Lo que podemos hacer con este proceso es <b>preguntar si el tipo que estamos recibiendo pertenece a
+                        cierta clase</b>
+                    </p>
+
+                    <p>
+                        Para poder ejemplificar este concepto vamos a trabajar con las clases de empleado y gerente que
+                        hemos creado anteriormente. Recordemos, que tenemos una <b>función</b> que habíamos creado
+                        la cual imprimía el resultado de dicha clase. Ahora, a esta función le agregaremos
+                        un condicional <b>if</b> para preguntar si pertenece a cierta clase y modificar el resultado
+                        que se muestra en el DOM y la consola. La construcción de la función quedaría de la siguiente forma:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>function imprimir(tipoClase) {</code>
+                    <code class="indentado-20">console.log(tipo.obtenerDetalles());</code>
+                    <code class="indentado-20">if (tipoClase instanceof Empleado) {</code>
+                    <code class="indentado-40">console.log('Es un objeto de tipo Empleado');</code>
+                    <code class="indentado-20">};</code>
+                    <code>};</code>
+                </div>
+
+                <div>
+                    <p>
+                        El resultado de este proceso nos retorna: <b>Es un objeto de tipo Empleado</b> en
+                        la clase <b>Empleado</b> y recordemos que tenemos la clase <b>Gerente</b> y este 
+                        también va a retornarnos el mismo mensaje. Esto se debe a la relación de clases 
+                        que tenemos entre <b>Empleado</b> y <b>Gerente</b>. La clase <b>Padre</b> es 
+                        <b>Empleado</b> y la clase <b>hija</b> es <b>Gerente</b>.
+                    </p>
+
+                    <p>
+                        Entonces al utilizar la palabra reservada <b>instanceof</b> en la clase <b>Empleado</b>
+                        nos retorna <b>True</b> ya que tiene una relación con la <b>clase padre</b>. Si realizamos
+                        la misma práctica, pero, le colocamos el <b>if</b> a la clase hija <b>Gerente</b>, éste
+                        nos va a retornar solo el mensaje de la clase <b>Gerente</b>. Esto sucede porque <b>instanceof</b>
+                        toma las <b>clases del mismo tipo</b> o las <b>clases de tipo padre</b>.
+                    </p>
+
+                    <p>
+                        Si queremos realizar una práctica para preguntar por ambos debemos realizar la siguiente estructura,
+                        donde la primer condición debe ser la clase de <b>menor jerarquía</b>:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>function determinarTipo(tipoClase) {</code>
+                        <code class="indentado-20">console.log(tipo.obtenerDetalles());</code>
+                        <code class="indentado-20">if (tipoClase instanceof Gerente) {</code>
+                            <code class="indentado-40">console.log('Es un objeto de tipo Gerente');</code>
+                        <code class="indentado-20">};</code>
+                        <code class="indentado-20">else if (tipoClase instanceof Empleado) {</code>
+                            <code class="indentado-40">console.log('Es un objeto de tipo Empleado');</code>
+                        <code class="indentado-20">};</code>
+                    <code>};</code>
+                </div>
+
+                <div>
+                    <p>
+                        Los resultados serían los siguientes:
+                    </p>
+                </div>
+
+            </article>
+
+            <article>
+                <div>
+                    <code class="cont-resultado"></code>
+                    <code class="cont-resultado"></code>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

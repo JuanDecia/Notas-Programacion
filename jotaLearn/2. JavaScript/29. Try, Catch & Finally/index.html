@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try, Catch & Finally</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Try, Catch & Finally</h1>
+        </header>
+
+        <section>
+            <article>
+
+                <div>
+                    <h2>Introducción</h2>
+                </div>
+
+                <div>
+                    <p>
+                        En esta ocasión realizaremos el espacio de <b>corrección de errores</b> llamado
+                        <b>try, catch & finally</b> para javascript. Este entorno de trabajo es muy útil
+                        para que nuestro programa continue a pesar de que se halla generado un error. A
+                        continuación lo veremos más en detalle para saber como es su correcto funcionamiento.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <div>
+                    <h2>Sintaxis</h2>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>try {</code>
+                        <code class="indentado-20">x = 10;</code>
+                    <code>}</code>
+                </div>
+
+                <div>
+                    <p>
+                        Primero comenzaremos con el bloque de <b>try</b>, donde, el codigo busca y captura el
+                        posible error que pueda contener. Si esto sucede, lo guarda dentro de una variable
+                        (no la debemos declarar) que la pasamos como parámetro dentro de la siguiente sintaxis
+                        que corresponde a <b>catch</b>. Si pretamos atención, la declaración que hemos hecho
+                        nos retornaría un error, por lo cual, esto entraría en la sección de <b>catch</b> que
+                        vamos a construír a continuación.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>try {</code>
+                        <code class="indentado-20">x = 10;</code>
+                    <code>}</code>
+                    <code>catch (error) {</code>
+                    <code class="indentado-20">console.log(error);</code>
+                    <code>}</code>
+                    <code>console.log('El programa continua a pesar del error, gracias al fragmento de try y catch.');</code>
+                </div>
+
+                <div>
+                    <p>
+                       En el fragmento de código anterior, hemos declarado una variable que nos retorna el
+                       error, y esta, va a ser procesada por el fragmento de <b>catch</b> donde podemos
+                       ver el resultado en la consola:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                    <code class="cont-resultado"></code>
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div>
+                    <p>
+                        Podemos observar 2 situaciones en el mensaje impreso en consola. Primero, nos
+                        define <b>el tipo de error</b> que contiene la variable y segundo nos retorna
+                        el <b>mensaje del error</b>, es decir: <b>ReferenceError</b> (tipo de error) y
+                        <b>x is not defined</b> (mensaje del error).
+                    </p>
+
+                    <p>
+                        Traduciendo el mensaje nos está indicando que es un error de <b>referencia</b> y 
+                        en el mensaje nos dice que la variable 'x' <b>no está definida</b>. Eso no es todo lo que
+                        debemos observar, si prestamos atención notaremos que a pesar del error, el programa continúa
+                        su flujo imprimiendo el mensaje correspondiente en la línea del mensaje. 
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Existe un bloque más que podemos agregar a esta sentencia y es conocido como <b>finally</b>.
+                        Este bloque de código al declararlo <b>siempre se va a ejecutar</b>, independientemente
+                        del bloque de código que se encuentre en <b>try</b>.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>try {</code>
+                        <code class="indentado-20">x = 10;</code>
+                    <code>}</code>
+                    <code>catch (error) {</code>
+                        <code class="indentado-20">console.log(error);</code>
+                    <code>}</code>
+                    <code>finally {</code>
+                        <code class="indentado-20">console.log('Termina la revisión de errores.');</code>
+                    <code>}</code>
+                    <code>console.log('El programa continua a pesar del error, gracias al fragmento de try y catch.');</code>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>

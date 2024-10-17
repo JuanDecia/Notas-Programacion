@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    
+    <main>
+
+        <header>
+            <h1>Box Model</h1>
+        </header>
+
+        <section>
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <p>
+                    Uno de los conceptos fundamentales del lenguaje CSS es el <b>Box Model</b> (Modelo de Cajas), debido a que todos los elementos HTML <b>son tratados como si fueran cajas</b>  que se organizan jerárquicamente unas al lado o dentro de otras, siendo la caja principal la que corresponde a la etiqueta <b>html</b> del DOM.
+                </p>
+
+                <div class="cont-ejemplo">
+                    <p>Este elemento tiene un borde de ejemplo para poder visualizarlo</p>
+                </div>
+
+                <p>
+                    Los elementos HTML presentan unas propiedades especiales que son fundamentales a la hora de realizar los posicionamientos en el DOM. Estas propiedades son: 
+                </p>
+
+                <div class="cont-lista">
+                    <ul>
+                        <li>
+                            <b>Margin</b>: Es el espacio que se genera desde el borde de la caja hacia afuera.
+                        </li>
+                        <li>
+                            <b>Border</b>: Es la línea que se genera alrededor de la caja. En orden jerárquico, border se encuentra abajo o dentro de margin.
+                        </li>
+                        <li>
+                            <b>Padding</b>: El padding o relleno es el espacio que se genera dentro de la caja, entre el borde y el contenido del elemento.
+                        </li>
+                        <li>
+                            <b>Width & Height</b>: representan el ancho y alto de la caja respectivamente.
+                        </li>
+                    </ul>
+                </div>
+
+
+                <figure>
+                    <img class="img-muestra" src="./img/modeloCaja2.jpg" alt="Modelo Caja 2" />
+                </figure>
+
+                <p>
+                    Estas propiedades son útiles para <b>separar y unir elementos</b>, para <b>agregar espacios</b> entre el <b>contenido de una caja de su borde</b> y para <b>configurar los bordes de las cajas</b> con el fin de mejorar la visualización del contenido de la página.
+                </p>
+
+                <br />
+
+                <p>
+                    Algunos de los elementos ya tienen su <b>box model establecidos por el navegador</b>, etiquetas como <b>p</b>, <b>etiquetas de heading</b> (h1 a h6), etc. En sí son los elementos que generan espacio porque se les debe <b> agregar contenido en ellos</b>. Por otro lado, las etiquetas <b>semánticas</b> como pueden ser <b>div, section, article, entre otras</b>, generalmente no tienen un estilo definido por el navegador.
+                </p>
+
+            </article>
+
+            <hr />
+
+            <!-- Suma de Valores -->
+            <article class="cont-suma-valores">
+                <h2>Suma de valores del contenido del contenido del elemento</h2>
+
+                <p>
+                    Según el modelo de caja, el width (ancho) y el alto (height) de un elemento no corresponden solamente al valor de las propiedades width y height, sino que están determinados por la <b>suma de los valores</b> del margen, el relleno, los bordes y el ancho o el alto, según el caso. Así, por ejemplo, el <b>ancho total</b> del elemento será:
+                </p>
+
+                <figure>
+                    <img src="./img/modeloCaja3.jpg" alt="Modelo Caja 3" />
+                </figure>
+
+                <p>
+                    <code>
+                        margin-left: 30px + border: 10px + padding-left: 50px + width: 300px + padding-right:  50px + border: 10px + margin-right: 30px = 480px (total de ancho).
+                    </code>
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Sacando Estilos -->
+            <article>
+                <h2>Sacando estilos establecidos por el navegador</h2>
+            </article>
+
+            <hr />
+
+            <!-- Más de Box Model -->
+            <article class="cont-mas">
+                <h2>Más acerca de los modelos de caja</h2>
+
+                <ul>
+                    <li>
+                        <svg class="img-flecha" viewBox="-8.16 -8.16 40.32 40.32" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.8640000000000001"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#000000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+
+                        <a class="link" href="./html/boxSizing.html">Box Sizing</a>
+                    </li>
+                    <li>
+                        <svg class="img-flecha" viewBox="-8.16 -8.16 40.32 40.32" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.8640000000000001"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#000000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+
+                        <a class="link" href="./html/margin.html">Ver conceptos de Margin</a>
+                    </li>
+                    <li>
+                        <svg class="img-flecha" viewBox="-8.16 -8.16 40.32 40.32" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.8640000000000001"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#000000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+
+                        <a class="link" href="./html/padding.html">Ver conceptos de Padding</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Selectores del DOM</h1>
+        </header>
+
+        <!-- Main Content -->
+        <section>
+
+            <!-- Introducción -->
+            <article class="cont-introduccion">
+
+                <h2>Introducción</h2>
+
+                <p>
+                    Cuando trabajamos con <strong>CSS</strong> es necesario <b>identificar el elemento del DOM</b> al que se le aplicarán los estilos necesarios para nuestra página. Para ejecutar esta práctica conoceremos a los <b>selectores que son un conjunto de expresiones que sirven para referirnos a los elementos</b> existentes en el DOM. Existen muchos tipos de selectores, son una poderosa característica que ofrece CSS para darles estilos a las páginas web.
+                </p>
+
+            </article>
+
+            <!-- Selector Universal -->
+            <article>
+                <h2>Selector Universal</h2>
+
+                <p>
+                    El primer selector que debemos conocer es el <b>selector universal asterisco (*)</b>. Cuando se define una regla usando solamente el selector universal se <b>aplicará a todos los elementos de un documento HTML</b>.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">* &#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">margin</span>:
+                        <span class="value-color">0</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">box-sizing</span>:
+                        <span class="value-color">border-box</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        <span class="field-color">&#125</span>
+                    </code>
+                </div>
+
+                <p>
+                    En este ejemplo hemos aplicado a todos los elementos del documento html un margen de 0px y que los bordes de los elementos de las cajas sean parte del tamaño del elemento.
+                </p>
+            </article>
+        </section>
+        
+        <!-- Selectores -->
+        <section>
+            <article>
+                <h2>Selectores específicos</h2>
+
+                <p>
+                    En esta sección, estarán divididos por páginas los diferentes tipos de selectores que podemos encontrar en el DOM, esto es debido a que al ser varios y con mucha teoría puede ser un poco dificil la busqueda del selector que necesitamos leer. Además, de también ofrecer un orden más limpio y específico a los conceptos de los selectores.
+                </p>
+            </article>
+
+            <!-- Contenedor Links -->
+            <article class="cont-selectores">
+                <h3>Selectores: </h3>
+                <nav>
+                    <ul class="cont-links">
+                        <li>
+                            <svg class="arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+
+                            <a href="../4. Selectores del DOM/html/selectorEtiqueta.html">
+                                Selector de Etiqueta
+                            </a>
+                        </li>
+                        <li>
+                            <svg class="arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+
+                            <a href="../4. Selectores del DOM/html/SelectorIdClase.html">
+                                Selector de Id y Clase
+                            </a>
+                        </li>
+                        <li>
+                            <svg class="arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                            
+                            <a href="./html/selectoresAvanzados.html">
+                                Selectores Avanzados
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

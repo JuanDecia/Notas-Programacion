@@ -1,0 +1,57 @@
+Paso 1:
+
+Crearemos una carpeta para este ejemplo y dentro de ella la estructura que vamos utilizar.
+
+Esta estructura esta compuesta por un archivo principal llamado “index.html” en donde estará la página principal; 
+y una carpeta “css” en donde se alojarán todos nuestros estilos css.
+
+
+Paso 2: 
+
+Continuaremos con la construcción base de nuestra página principal de “index.httml”.
+
+
+Paso 3:
+
+A continuación, creamos un título para nuestra página y luego crearemos la etiqueta “iframe” la cual le agregaremos 
+un contenido de una página externa creada por nosotros mismos.
+
+La página se llamará “textos.html”.
+
+
+Paso 4:
+
+Es momento de crear la estructura de nuestra página “textos.html” que se mostrará en la etiqueta “iframe”. 
+Creamos el archivo en la misma raíz que “index.html” para que se pueda visualizar y agregaremos un título y un párrafo 
+para hacer la muestra de que nuestro “iframe” funcione correctamente.
+
+Al finalizar agregamos la ruta a nuestro archivo principal “index.html” en la etiqueta iframe en el atributo src y 
+comprobamos que funcione correctamente. También, debemos agregarle un “name” a esta etiqueta por si queremos enlazarla 
+a un link con la etiqueta <a> y deseemos que se muestre en la caja de iframe.
+
+
+Paso 5:
+
+Agregaremos estilos CSS para modificar el marco que compone el “iframe” por defecto.
+
+Primero lo que vamos a realizar es darles estilos a los títulos creando una clase “titulo” y luego aplicarle un color 
+y alineando el texto con “text-align”.
+
+Para modificar el “iframe” crearemos una clase “marco” y lo más importante que debemos modificar es el ancho a un 
+100% y cambiaremos el “border” que tiene por defecto con la propiedad avanzada “border” y valor “1px solid” el color 
+usamos el que tenemos en el heading. Opcionalmente podemos darle un alto con “height”.
+
+Una vez creado este estilo debemos aplicarlo a la etiqueta de iframe con la clase “marco”.
+
+
+Paso 6:
+
+Agregaremos un link para que se abra en el Iframe, para ello deberemos usar una etiqueta <a>. Antes de construir 
+esta etiqueta vamos a colocarla dentro de un contenedor <div>. Para linkear ambos contenidos a la etiqueta a le pasamos 
+el name que le pusimos a la etiequeta iframe, para ello, usaremos el atributo “target” y como valor le pasamos el 
+name de iframe.
+
+
+Paso 7:
+
+Por último, nos queda darle un lindo diseño a la etiqueta que acabamos de agregar para que luzca como un botón.

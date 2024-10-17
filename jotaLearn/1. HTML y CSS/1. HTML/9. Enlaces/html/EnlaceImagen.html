@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="keywords" content="hipervinculos" />
+    <meta name="author" content="Juan Decia" />
+    <title>Enlaces en Imagenes</title>
+
+    <link rel="stylesheet" href="../css/enlaceImagen.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+
+            <h1>Enlace con imágenes</h1>
+
+            <nav>
+                <div class="cont-volver-inicio">
+    
+                    <!-- Flecha -->
+                    <a class="flecha-link" href="../index.html">
+                        <img
+                          class="flecha"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEvtlNsNgzAQBIcO0gkpgZSQSmgh6SgdQAnQSUpAJ4F0imLfGsMf/rZmbtePhpNXczKfSxA2XFLRDeiBd0h1G1SBwQfgvgpeqkQRePgMdMD3KEEV3IbIJaiG5wSHwFMCD1erTg77ryITjEBbQk/VnToDL5mAR8nN8YNFh7wl2S2J3kF1kkhgaaskiuBX8gQ+6gVQBZvEvgkZHr1kdcjsvpIEu4SXIKxtAb+eIBmkl/3TAAAAAElFTkSuQmCC"
+                        />
+                    </a>
+        
+                    <a class="volver-inicio-txt" href="../index.html">Volver a Inicio</a>
+
+                    <a class="volver-inicio-txt" href="./atributoEnEnlaces.html">Ir a atributo en 'Enlaces'</a>
+                </div>
+            </nav>
+
+        </header>
+
+        <!-- Main Content -->
+        <section>
+
+            <article>
+
+                <h2>Introducción</h2>
+
+                <p>
+                    En múltiples ocasiones deberemos crear enlaces a partir de imágenes, para este paso podemos tener disponible algunas imágenes en la carpeta img o a través de su ruta absoluta conseguir una imagen de algún servidor en la red.
+                </p>
+
+                <p>
+                    Para agregar un enlace a una imagen usaremos la etiqueta <b>"a"</b> abarcando la etiqueta <b>"img"</b>:
+                </p>
+
+                <div class="cont-codigo">
+                    <!-- Línea 1 -->
+                    <code>
+                        <span class="txt-white">&#60</span>
+                        <span class="tag-color">a</span>
+                        <span class="property-color">href=</span>
+                        <span class="value-color">"https://www3.animeflv.net/anime/naruto"</span>
+                        <span class="property-color">target=</span><span class="value-color">"_blank"</span>
+                        <span class="txt-white">&#62</span>
+                    </code> <br />
+
+                    <!-- Línea 2 -->
+                    <code class="margin-20">
+                        <span class="txt-white">&#60</span><span class="tag-color">img</span>
+                    </code>
+
+                    <br />
+
+                    <!-- Línea 3 -->
+                    <code class="margin-40">
+                        <span class="property-color">src=</span><span class="value-color">"https://i.pinimg.com/236x/ac/ed/d9/acedd9ea999f602f77371b53af9f9f52.jpg"</span>
+                    </code>
+
+                    <br />
+
+                    <!-- Línea 4 -->
+                    <code class="margin-40">
+                        <span class="property-color">alt=</span><span class="value-color">"pain"</span>
+                    </code>
+
+                    <br />
+
+                    <!-- Línea 5 -->
+                    <code class="margin-40">
+                        <span class="property-color">title=</span><span class="value-color">"pain"</span>
+                    </code>
+
+                    <br />
+
+                    <!-- Línea 6 -->
+                    <code class="margin-20">
+                        <span class="txt-white">/&#62</span>
+                    </code>
+
+                    <br />
+
+                    <!-- Línea 7 -->
+                    <code>
+                        <span class="txt-white">&#60/</span><span class="tag-color">a</span><span class="txt-white">&#62</span>
+                    </code>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <!-- Ejemplo Práctico -->
+            <article class="cont-practica">
+
+                <h2 id="sub-naruto">Mirate ese naruto papá</h2>
+
+                <div class="cont-link-img">
+                    <a class="link-img" href="https://www3.animeflv.net/anime/naruto" target="_blank">
+                        <img
+                            src="https://i.pinimg.com/236x/ac/ed/d9/acedd9ea999f602f77371b53af9f9f52.jpg"
+                            alt="pain"
+                            title="pain"
+                            width=""
+                        />
+                    </a>
+                </div>
+            
+                <div id="sinopsis">
+                    <p>
+                        Es una serie Manga que cuenta la historia de un joven ninja hiperactivo llamado Naruto Uzumaki que hará todo lo posible por ascender al máximo grado ninja de su aldea con el propósito de ser reconocido como alguien importante dentro de su aldea.
+                    </p>
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    
+
+</body>

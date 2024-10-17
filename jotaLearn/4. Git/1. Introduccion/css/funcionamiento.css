@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 85%;
+    margin: auto;
+    background-image: url('../img/git.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    background-color: rgba(197, 201, 204, 0.9);
+    padding: 25px;
+}
+
+h2 {
+    margin: 30px 0;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+h3 {
+    color: rgb(103, 45, 240);
+    margin: 25px 0;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+h4 {
+    color: rgb(216, 114, 19);
+    font-size: 1.2em;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.288);
+}
+
+p {
+    text-align: justify;
+}
+
+/* -- Animaciones -- */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ######### HEADER */
+
+header {
+    display: flex;
+    flex-wrap: wrap; /* Para que h1 este por encima de nav. h1 debe estar al 100% del ancho */
+    gap: 35px;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.3s ease-in, slide-down 1.3s ease-in-out;
+}
+
+ul {
+    margin: 20px 0;
+}
+
+li {
+    padding: 7px 0;
+}
+
+/* -- Nav -- */
+
+nav {
+    background-color: rgba(15, 110, 110, 0.486);
+    width: 100%;
+}
+
+.cont-li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.link-header {
+    text-decoration: none;
+    width: 100%;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.active {
+    color: black;
+    font-weight: 600;
+}
+
+/* Efecto Subrayado */
+
+.underlined {
+    position: relative;
+}
+
+.underlined::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    color: #ffffff;
+    background-color: #ffffff;
+    width: 100%;
+    transform: scaleX(0); /* Ocultamos contenedor */
+    transition: transform 0.3s ease-in; /* Preparamos el efecto */
+}
+
+.underlined:hover::after {
+    transform: scaleX(1); /* Aplicamos el efecto */
+} /* -- Fin efecto subrayado */
+
+/* ######### MAIN CONTENT */
+
+/* Boton ir arriba */
+
+.cont-arriba {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+}
+
+svg {
+    width: 60px;
+}
+/* -- */
+
+/* Bloque Código */
+
+.cont-codigo {
+    background-color: rgb(56, 55, 55);
+    margin: 15px auto;
+    padding: 7px;
+    width: 70%;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+.com-git {
+    color: rgb(243, 57, 104);
+}
+
+.value-git {
+    color: rgb(247, 144, 27);
+}
+
+.comment-git {
+    color: rgb(50, 163, 35);
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.txt-purple {
+    color: rgb(157, 82, 228);
+}
+
+/* -- */
+
+.cont-img {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* ######### MEDIA QUERIES */
+
+/* 778px */
+
+@media (max-width: 778px) {
+    .cont-li {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cont-li li {
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .cont-arriba {
+        right: 0px;
+    }
+
+    svg {
+        width: 35px;
+    }
+}

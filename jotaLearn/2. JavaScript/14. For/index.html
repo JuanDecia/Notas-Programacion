@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Bucle For</h1>
+        </header>
+
+        <!-- Contendor cuerpo -->
+        <section>
+            
+            <!-- Introduccion -->
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        Los ciclos o bucles permiten crear un conjunto de instrucciones múltiples veces, son necesarias para automatizar 
+                        tareas que requieren la ejecución de ciertas operaciones más de una vez. El bucle más usado en JS es el “for” 
+                        y funciona similarmente a como trabaja en otros lenguajes.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Sintaxis -->
+            <article>
+                <h2>Sintaxis</h2>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>for (variableContadora = 0; condición del bucle; aumento del contador) {</code>
+                    <code class="indentacion">sentencia</code>
+                    <code>}</code>
+                </div>
+
+                <div>
+                    <p>
+                        La primera es una inicialización que es una variable local o global y puede contener cualquier nombre como valor, 
+                        por ejemplo: for (“i = 0”). La segunda es la condición que tiene el bucle para ejecutarse y es de parada del 
+                        ciclo (i = 0; i < 10;) y la tercera en que se modifica la variable que controla el ciclo y se ejecuta en cada 
+                        interacción (i = 0; i < 10; i++).
+                    </p>
+                </div>
+
+                <h3>1° Parámetro</h3>
+
+                <div>
+                    <p>
+                        Se inicia la variable local “i = 0” esta variable puede contener cualquier nombre, pero es la encargada de 
+                        tener el valor inicial de la iteración. Generalmente se usa “i” ya que es la inicial de “iteración”;
+                    </p>
+                </div>
+
+                <h3>2° Parámetro</h3>
+
+                <div>
+                    <p>
+                        Luego “i < 10” (es la condición que se va a evaluar). Es la condición que tiene que cumplirse para finalizar 
+                        la iteración, ósea, cuando deje de cumplirse el bucle para;
+                    </p>
+                </div>
+
+                <h3>3° Parámetro</h3>
+
+                <div>
+                    <p>
+                        Finalmente “i++” que es la expresión que va a ir aumentando cada vez que se repita la condición para que llegue 
+                        a su límite y cumpla el bucle (incrementa i en 1 para cuando llegue al límite establecido la iteración se termine).
+                    </p>
+                </div>
+
+                <h3>Ejemplo</h3>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>for (let i = 0; i < 10; i++) {</code>
+                    <code class="indentacion">console.log(i);</code>
+                    <code>};</code>
+                </div>
+
+                <div>
+                    <p>
+                        Al ejecutarlo se imprimirán los números del 0 al 9 porque el “for” comienza en 0 y termina en 9 porque 
+                        cuando “i” toma el valor de 10 ya no se cumple la condición ocasionando que nos salgamos del ciclo.
+                    </p>
+                </div>
+
+                <div>
+                    <p>Resultado esperado del bucle for: </p>
+
+                    <div class="fondo-codigo">
+                        <code class="cont-resultado"></code>
+                    </div>
+                </div>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>For para Arreglos</h2>
+
+                <div>
+                    <p>
+                        Una de las utilidades de for es para manipular arrays. Para ver su uso, construiremos un ejemplo donde vamos a sumar
+                        el valor de cada posición del arreglo, estos representarían los valores de las facturas del mes de una empresa.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>let facturas = [3, 4, 5, 6, 7];</code>
+                    <code>let suma = 0;</code>
+                    <code>for (let i = 0; i < facturas.length; i++) {</code>
+                    <code class="indentacion">suma += facturas[i];</code>
+                    <code>};</code>
+                </div>
+
+                <div>
+                    <p>
+                        En la variable “facturas” se encuentran los valores que vamos a adicionar en la variable suma.
+                    </p>
+
+                    <p>
+                        En la variable “suma” definimos 0, porque, va a acomular la suma de cada valor de cada posición del arreglo 
+                        y va a trabajar como variable acomuladora. Para que cumpla esta respectiva función debemos insertarla dentro 
+                        del ciclo para que este pueda depositar el valor de la posición dentro de la variable acomuladora cada vez que
+                        el proceso se repita.
+                    </p>
+
+                    <p>
+                        Esto funciona de la siguiente manera: comienza con el valor de "i = 0" dentro de la contrucción de la condición de for, 
+                        que es el <b>valor inicial</b> de la <b>variable local</b> que funciona como <b>contador</b> para recorrer
+                        todas las posiciones del arreglo y para acceder desde la primera posición del arreglo. Como la primera posición en un
+                        arreglo es <b>"0"</b>, "i" debe iniciarse en 0.
+                    </p>
+
+                    <p>
+                        Ahora viene una parte importante para la construcción de este proceso. Cuando trabajamos con un ciclo for
+                        tenemos un <b>method</b> muy útil para <b>recorrer cada una de las posiciones</b> sin tener que contar o saber
+                        cuantas tiene el arreglo. Esto lo logramos gracias al method para arreglos <b>length</b>. Con length 
+                        recorreremos todo el arreglo y establecemos la condición de parada a la <b>longitud máxima</b> del arreglo 
+                        (nos devuelve el largo del mismo) en este caso el largo es “5” por lo que el ciclo comienza en 0 y continúa 
+                        iterando mientras “i” sea menor que “5” es decir (0, 1, 2, 3, 4).
+                    </p>
+
+                    <p>
+                        Por último declaramos que “i” se va a ir incrementando de 1 en 1. El funcionamiento que va a realizar ese bucle es el siguiente: 
+                    </p>
+
+                    <p>
+                        Tomamos la variable global “suma” y la colocamos dentro del bucle for la cual va a tener el siguiente 
+                        estado; La variable global “suma” va a tomar el resultado de cada valor de cada posición del arreglo y lo va a sumar
+                        al valor que esta tenía anteriormente (+=), la declaración <b>facturas[i]</b> nos permite iterar todas las 
+                        posiciones del mismo. Es decir, que a “suma” con valor “0” le agregaremos el valor de cada posición de “facturas” 
+                        recorrido por [i].
+                    </p>
+
+                    <p>
+                        En el último paso imprimimos la variable suma para ver los resultados.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <p>Resultado esperado: </p>
+                    <code class="cont-resultado"></code>
+                    <code class="cont-resultado"></code>
+                </div>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Recorriendo con: For in</h2>
+
+                <div>
+                    <p>
+                        El for tiene otras formas de recorrer un arreglo, en este caso veremos el ejemplo de “for in”:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>for (let i in arreglo) {</code>
+                    <code class="indentacion">suma += arreglo[i];</code>
+                    <code>};</code>
+                </div>
+
+                <div>
+                    <p>
+                        Supongamos que queremos realizar el mismo ejercicio del ejemplo anterior pero, esta vez utilizamos
+                        for in:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div>
+                    <p>
+                        En este caso “i” es el nombre de la variable que funciona como contador y va a ir tomando cada uno de los 
+                        valores de los índices del arreglo que vamos a recorrer. Como “i” va a ir adquiriendo el valor de cada índice 
+                        del arreglo este ejemplo es equivalente al ejemplo anterior con la diferencia que se construyó con un “for in”. 
+                    </p>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Recorriendo un arreglo con For of</h2>
+
+                <div>
+                    <p>
+                        En el caso de ECMA6 tenemos una sintaxis más simple, donde definimos una instrucción, por ejemplo, 
+                        elemento de arreglo (elemento of arreglo):
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>for(elemento of arreglo) {</code>
+                    <code>suma += elemento</code>
+                    <code>};</code>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <div>
+                    <p>
+                        Lo que estamos haciendo es por cada elemento que hay en el arreglo. Elemento toma el valor que 
+                        contiene cada posición del mismo en vez del “índice”, por lo cual necesitamos cambiar la 
+                        instrucción para indicar que debemos sumar el elemento. Así en la primera iteración “elemento” 
+                        toma el valor de “3” y así sucesivamente... El resultado que se obtiene es el mismo, pero con 
+                        una sintaxis diferente solo disponible en EcmaScript 6.
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

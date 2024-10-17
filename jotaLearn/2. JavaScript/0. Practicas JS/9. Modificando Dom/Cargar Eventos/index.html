@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plantillas Ejercicio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body>
+    <!-- Contenedor principal-->
+    <main>
+      <!-- Header -->
+      <header>
+        <h1>Plantilla Ejercicio</h1>
+      </header>
+
+      <!-- Contenido -->
+      <section>
+
+        <!-- Descripción del Ejercicio-->
+        <article>
+
+          <p>
+            A continuación llenaremos una lista de eventos, pero lo haremos
+            progresivamente en la medida que el usuario lo solicite.
+            Inicialmente se cargan <b>5 eventos</b> y se tiene un
+            <b>boton de "cargar mas"</b>. Cada vez que se presione el botón se
+            cargarán los próximos 5 eventos.
+          </p>
+
+          <h2>Tareas a Realizar:</h2>
+
+          <ol>
+
+            <li>
+              Utiliza el arreglo inicial con 200 eventos. Fíjate que cada evento
+              debe tener un nombre y una descripción, como se muestra
+              seguidamente:
+
+              <ul>
+                <span>Evento 1</span>
+
+                <ol>
+                  <li>Nombre: Evento 1</li>
+                  <li>Descripción Esta es la descripción del Evento 1</li>
+                </ol>
+
+              </ul>
+
+            </li>
+
+            <li>
+              Define una variable global que indique cuántos eventos se han
+              mostrado hasta el momento.
+            </li>
+            <li>
+              Define una función que dada la cantidad de eventos cargue 5 más y
+              los agregue al DOM.
+            </li>
+          </ol>
+
+          <p>
+            Recuerda que inicialmente solo se deben desplegar los primeros 5
+            eventos.
+          </p>
+        </article>
+
+        <!-- Contenedor del Ejercicio -->
+        <article>
+
+          <!-- Contenedor de los eventos -->
+          <div class="contenedor-eventos">
+            <h2>Eventos</h2>
+
+            <a href="#" id="cargar-eventos" class="btn">Cargar Eventos</a>
+
+            <div id="eventos"></div>
+            <div id="mas-eventos"></div>
+
+            <!-- Botón cargar más eventos -->
+            <div><button id="cargar-mas">Cargar Más</button></div>
+          </div>
+        </article>
+
+      </section>
+    </main>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

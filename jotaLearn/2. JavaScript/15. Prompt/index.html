@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Prompt</h1>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        La función prompt dentro de JavaScript nos permite almacenar un dato que ingrese un usuario dentro de una variable.
+                    </p>
+
+                    <p>
+                        Al usuario le aparecerá una ventana de alerta en el navegador donde se le solicita que ingrese datos y 
+                        esos datos estarán dentro de la variable para luego ser utilizados en el código de JavaScript
+                    </p>
+
+                    <p>
+                        Dentro de los parámetros de prompt podemos dejar un string que será el mensaje que verá el usuario cuando le 
+                        aparezca el cartel en el navegador, esto es útil para darle una pista al usuario sobre que dato debería ingresar.
+                    </p>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Sintaxis</h2>
+
+                <div class="fondo-codigo">
+                    <code>let variable = prompt("Texto que le aparecerá al usuario");</code>
+                </div>
+
+                <div>
+                    <p>
+                        Lo que ingrese el usuario se guardará en variable. Tengamos en cuenta que el usuario puede colocar
+                        en esta ocasión, cualquier tipo de dato. Lo adecuado sería, que nosotros construyamos una función en la que
+                        el usuario solo pueda ingresar <b>un solo tipo de dato</b>. En el caso contrario, que este proceso se repita
+                        hasta que el usuario ingrese el dato correcto.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Ejemplo</h2>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Práctico</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>JS en página interna</h1>
+
+            <nav>
+                <a class="volver" href="../index.html">Volver a inicio</a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <section>
+            <article>
+
+                <h2>Explicación Práctica</h2>
+
+                <div class="cont-parrafo">
+                    <p>
+                        El primer ejemplo es usando código JavaScript dentro de las etiquetas <b>script</b> en el archivo HTML, es decir, podemos colocar nuestro código JS dentro de este elemento. A manera de ejemplo, le pediremos al usuario que ingrese un nombre y luego lo mostraremos con un mensaje utilizando el mismo.
+                    </p> <br />
+
+                    <p>
+                        El código toma algunos elementos del DOM que son necesarios para su funcionamiento, uno de ellos es el <b>input</b> y otro es el <b>contenedor donde mostraremos el resultado</b>.
+                    </p> <br />
+
+                    <p>
+                        Luego, usamos una función llamada <b>renderNombre</b> donde está vinculada al elemento <b>button</b> del html. Esto es necesario porque la función activa cuando se presiona el botón.
+                    </p> <br />
+
+                    <p>
+                        Lo que realiza la función es lo siguiente, en la variable <b>nombrePersona</b> capturamos lo que el usuario <b>ingresa en el input</b> y le colocamos una función <b>trim()</b> que elimina los espacios. Luego, declaramos una variable <b>contieneNumeros</b> como <b>false</b> porque esta va a ser utilizada en una condición para verificar que el <b>input</b> no se ingrese números, si no, que solo texto.
+                    </p> <br />
+
+                    <p>
+                        Realizamos un bucle <b>for</b> donde la condición es que si encuentra algún número, interrumpa la iteración y que <b>convierta a la variable 'contieneNumeros' en true</b>.
+                    </p> <br />
+
+                    <p>
+                        Realizamos una condición final donde el primer <b>if</b> es una validación del valor que captura el input y este no debe estar vacío. La segunda condición, verifica que si la variable <b>contieneNumeros</b> es <b>true</b> no puede ser posible enviar los datos, ya que, no se pueden ingresar números. La última condición si esta todo correctamente, muestra en la pantalla el mensaje para el usuario.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Cont-muestra -->
+            <article>
+                <h2>Código realizado</h2>
+
+                <div class="cont-codigo">
+                    <!-- get input -->
+                    <code>
+                        <span class="tag-color">const</span>
+                        <span class="variable-color">getInput</span>
+                        =
+                        <span class="property-color">document</span><span class="txt-white">.</span><span class="function-color">getElementById</span><span class="parametro-color">(<span class="value-color">'nombre'</span>)</span>;
+                    </code>
+                        <br />
+                    <!-- get .resultado -->
+                    <code>
+                        <span class="tag-color">const</span>
+                        <span class="variable-color">mostrarResultado</span>
+                        =
+                        <span class="property-color">document</span><span class="txt-white">.</span><span class="function-color">querySelector</span><span class="parametro-color">(<span class="value-color">'.resultado'</span>)</span>;
+                    </code>
+                        <br /> <br />
+                    <!-- function -->
+
+                        <!-- Name function -->
+                    <code>
+                        <span class="tag-color">const</span>
+                        <span class="function-color">renderNombre</span>
+                        =
+                        <span class="parametro-color">()</span>
+                        <span class="tag-color">=></span>
+                        <span class="parametro-color">{</span>
+                            <br />
+
+                        <!-- Body function -->
+                        <code class="margin-20">
+                            <span class="tag-color">let</span>
+                            <span class="property-color">nombrePersona</span>
+                            =
+                            <span class="variable-color">getInput</span>.<span class="property-color">value</span>.<span class="function-color">trim</span><span class="tag-color">()</span>;
+                                
+                            <br />
+
+                            <code class="margin-20">
+                                <span class="tag-color">let</span>
+                                <span class="property-color">contieneNumeros</span>
+                                =
+                                <span class="tag-color">false</span>;
+                            </code>
+
+                            <br /> <br />
+
+                            <!-- Bucle for -->
+                            <code class="margin-20">
+                                <span class="parametro-color">for</span>
+                                <span class="parametro-color">(</span><span class="tag-color">let</span>
+                                <span class="property-color">i</span>
+                                =
+                                0;
+                                <span class="property-color">i</span>
+                                &#60
+                                <span class="property-color">nombrePersona</span>.<span class="property-color">length</span>;
+                                <span class="property-color">i</span>++<span class="parametro-color">)</span>
+                                <span class="function-color">{</span>
+                            </code>
+
+                            <br />
+
+                            <!-- Condicional -->
+                            <code class="margin-40">
+                                <span class="parametro-color">if</span>
+                                <span class="tag-color">(</span>!<span class="function-color">isNaN</span><span class="parametro-color">(</span><span class="property-color">nombrePersona</span><span class="variable-color">[</span><span class="property-color">i</span><span class="variable-color">]</span><span class="parametro-color">)</span><span class="tag-color">)</span>
+                                <span class="parametro-color">{</span>
+                                    
+                                    <br />
+
+                                    <code class="margin-60">
+                                        <span class="property-color">contieneNumeros</span>
+                                        =
+                                        <span class="variable-color">true</span>;
+                                        <br />
+                                        <span class="parametro-color margin-60">break;</span>
+                                    </code>
+                                    <br />
+                                <span class="parametro-color margin-40">}</span>
+                            </code>
+                            
+                            <br>
+
+                            <span class="function-color margin-20">}</span>
+                        </code>
+
+                        <br /> <br />
+
+                        <!-- Condicional #1-->
+                        <code class="margin-20">
+                            <span class="parametro-color">if</span>
+                            <span class="function-color">(</span><span class="property-color">nombrePersona</span>
+                            ==
+                            <span class="value-color">''</span><span class="function-color">)</span>
+                            <span class="function-color">{</span>
+                        </code>
+
+                        <br />
+
+                        <code class="margin-40">
+                            <span class="variable-color">mostrarResultado</span>.<span class="property-color">style</span>.<span class="property-color">color</span>
+                            =
+                            <span class="value-color">'red'</span>;
+                        </code>
+                        
+                        <br />
+
+                        <code class="margin-40">
+                            <span class="variable-color">mostrarResultado</span>.<span class="property-color">innerHTML</span>
+                            =
+                            <span class="value-color">`No ha ingresado un nombre válido, intente nuevamente por favor.`</span>;
+                        </code>
+
+                        <br />
+
+                        <code class="margin-40">
+                            <span class="variable-color">mostrarResultado</span>.<span class="property-color">style</span>.<span class="property-color">animation</span>
+                            =
+                            <span class="value-color">'none'</span>;
+                        </code>
+
+                        <br />
+
+                        <code class="margin-40">
+                            <span class="tag-color">void</span>
+                            <span class="variable-color">mostrarResultado</span>.<span class="property-color">offsetWidth</span>;
+                            <span class="comment-color">// Reinicia la animación</span>
+                        </code>
+
+                        <br />
+
+                        <code class="margin-40">
+                            <span class="variable-color">mostrarResultado</span>.<span class="property-color">style</span>.<span class="property-color">animation</span>
+                            =
+                            <span class="value-color">'fade 1.3s ease-in-out'</span>;
+                        </code>
+
+                        <br />
+
+                        <span class="margin-20 function-color">}</span>
+
+                        <br />
+
+                        <!-- Condicional #2 -->
+                        <code class="margin-20">
+                            <span class="parametro-color">else if</span>
+                            <span class="function-color">(</span><span class="property-color">contieneNumeros</span><span class="function-color">)</span>
+                            <span class="function-color">{</span>
+                        </code>
+
+                        <br />
+
+                        <code class="margin-40">
+                            <span class="variable-color">mostrarResultado</span>.<span class="property-color">style</span>.<span class="property-color">color</span>
+                            =
+                            <span class="value-color">'red'</span>;
+                        </code>
+                        
+                        <br />
+
+                        <code class="margin-40">
+                            <span class="variable-color">mostrarResultado</span>.<span class="property-color">innerHTML</span>
+                            =
+                            <span class="value-color">`No se puede ingresar números, intente nuevamente utilizando solo letras.`</span>;
+                        </code>
+
+                        <br />
+
+                        <code class="margin-40">
+                            <span class="variable-color">mostrarResultado</span>.<span class="property-color">style</span>.<span class="property-color">animation</span>
+                            =
+                            <span class="value-color">'none'</span>;
+                        </code>
+
+                        <br />
+
+                        <code class="margin-40">
+                            <span class="tag-color">void</span>
+                            <span class="variable-color">mostrarResultado</span>.<span class="property-color">offsetWidth</span>;
+                            <span class="comment-color">// Reinicia la animación</span>
+                        </code>
+
+                        <br />
+
+                        <code class="margin-40">
+                            <span class="variable-color">mostrarResultado</span>.<span class="property-color">style</span>.<span class="property-color">animation</span>
+                            =
+                            <span class="value-color">'fade 1.3s ease-in-out'</span>;
+                        </code>
+
+                        <br />
+
+                        <span class="margin-20 function-color">}</span>
+
+                        <br />
+
+                        <!-- Condicional #3 -->
+                        <code class="margin-20">
+                            <span class="parametro-color">else</span>
+                            <span class="function-color">{</span>
+                        </code>
+
+                        <br />
+
+                        <code class="margin-40">
+                            <span class="variable-color">mostrarResultado</span>.<span class="property-color">style</span>.<span class="property-color">color</span>
+                            =
+                            <span class="value-color">'black'</span>;
+                        </code>
+                        
+                        <br />
+
+                        <code class="margin-40">
+                            <span class="variable-color">mostrarResultado</span>.<span class="property-color">innerHTML</span>
+                            =
+                            <span class="value-color">`Su nombre es: '<span class="tag-color">${</span><span class="property-color">nombrePersona</span><span class="tag-color">}'</span>`</span>;
+                        </code>
+
+                        <br />
+
+                        <code class="margin-40">
+                            <span class="variable-color">mostrarResultado</span>.<span class="property-color">style</span>.<span class="property-color">animation</span>
+                            =
+                            <span class="value-color">'none'</span>;
+                        </code>
+
+                        <br />
+
+                        <code class="margin-40">
+                            <span class="tag-color">void</span>
+                            <span class="variable-color">mostrarResultado</span>.<span class="property-color">offsetWidth</span>;
+                            <span class="comment-color">// Reinicia la animación</span>
+                        </code>
+
+                        <br />
+
+                        <code class="margin-40">
+                            <span class="variable-color">mostrarResultado</span>.<span class="property-color">style</span>.<span class="property-color">animation</span>
+                            =
+                            <span class="value-color">'fade 1.3s ease-in-out'</span>;
+                        </code>
+
+                        <br />
+
+                        <span class="margin-20 function-color">}</span>
+
+                        <br />
+
+                        <span class="parametro-color">}</span>
+                    </code>
+                </div>
+            </article>
+
+            <!-- Contenedor ejercicio -->
+            <article class="cont-practica">
+                <div class="cont-input">
+                    <label for="nombre">Ingrese su nombre: </label>
+                    <input id="nombre" type="text" placeholder="Ingrese su nombre" />
+                    <button class="button" onclick="renderNombre()">Aceptar</button>
+                </div>
+
+                <div class="cont-resultado">
+                    <div class="resultado"></div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+    <script>
+        const getInput = document.getElementById('nombre');
+        const mostrarResultado = document.querySelector('.resultado');
+
+        const renderNombre = () => {
+            let nombrePersona = getInput.value.trim();
+            let contieneNumeros = false;
+            console.log(nombrePersona);
+
+            for (let i = 0; i < nombrePersona.length; i++) {
+                if (!isNaN(nombrePersona[i])) {
+                    contieneNumeros = true;
+                    break;
+                }
+            }
+
+            if (nombrePersona == '') {
+                mostrarResultado.style.color = 'red';
+                mostrarResultado.innerHTML = `No ha ingresado un nombre válido, intente nuevamente por favor.`;
+                mostrarResultado.style.animation = 'none';
+                void mostrarResultado.offsetWidth; // Reinicia la animación
+                mostrarResultado.style.animation = 'fade 1.3s ease-in-out';
+            }
+            else if (contieneNumeros) {
+                mostrarResultado.style.color = 'red';
+                mostrarResultado.innerHTML = `No está permitido ingresar números en el campo. Por favor, intente nuevamente utilizando solo letras.`;
+                mostrarResultado.style.animation = 'none';
+                void mostrarResultado.offsetWidth; // Reinicia la animación
+                mostrarResultado.style.animation = 'fade 1.3s ease-in-out';
+            }
+            else {
+                mostrarResultado.style.color = 'black';
+                mostrarResultado.innerHTML = `Su nombre es: '${nombrePersona}'`;
+                mostrarResultado.style.animation = 'none';
+                void mostrarResultado.offsetWidth; // Reinicia la animación
+                mostrarResultado.style.animation = 'fade 1.3s ease-in-out';
+            }
+        }
+    </script>
+</body>
+</html>

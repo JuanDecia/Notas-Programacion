@@ -1,0 +1,82 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="keywords" content="hipervinculos" />
+    <meta name="author" content="Juan Decia" />
+    <title>Estructura Enlaces</title>
+
+    <link rel="stylesheet" href="../css/estructuraEnlaces.css" />
+</head>
+
+<body>
+
+    <main>
+        <header>
+    
+            <h1>Estructura de Enlaces</h1>
+    
+            <nav>
+                <div>
+                    <img class="flecha" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEvtlNsNgzAQBIcO0gkpgZSQSmgh6SgdQAnQSUpAJ4F0imLfGsMf/rZmbtePhpNXczKfSxA2XFLRDeiBd0h1G1SBwQfgvgpeqkQRePgMdMD3KEEV3IbIJaiG5wSHwFMCD1erTg77ryITjEBbQk/VnToDL5mAR8nN8YNFh7wl2S2J3kF1kkhgaaskiuBX8gQ+6gVQBZvEvgkZHr1kdcjsvpIEu4SXIKxtAb+eIBmkl/3TAAAAAElFTkSuQmCC"/>
+                </div>
+    
+                <ul>
+                    <li><a href="../index.html">Volver a Inicio</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!-- Contenido Principal -->
+        <section class="main-container">
+    
+            <article class="cont-introduccion">
+                <h2>Introducción</h2>
+    
+                <p>
+                    A continuación, se estará observando una estructura de <strong>enlaces</strong> donde podremos navegar dentro de esta misma página <b>sin utilizar</b> enlaces externos, es decir, que nos dirija a otro sitio web.
+                </p>
+            </article>
+    
+            <!-- Contenedor Imágenes -->
+            <article class="cont-cards">
+                
+                <!-- 
+                    Estos enlaces absolutos nos guiarán a través de nuestra página web a páginas internas de la misma. También, debemos tener en cuenta que debemos crear los archivos de dichas rutas dentro de la carpeta.
+                -->
+
+                <!-- Contenedor Vikingos -->
+                <div class="card-vikingos">
+                    <a class="link-vikingos" href="./estructuraEnlaces/pagina_vikingos.html">
+                        Ir a página 'Vikingos'
+                    </a>
+                </div>
+
+                <!-- Contenedor Kimetsu -->
+                <div class="card-kimetsu">
+                    <a class="link-kimetsu" href="./estructuraEnlaces/pagina_kimetsunoyaiba.html">
+                        Ir a página 'Kimetsu'
+                    </a>
+                </div>
+
+                <!-- Contenedor Fairy -->
+                <div class="card-fairy">
+                    <a href="./estructuraEnlaces/pagina_fairytail.html" class="link-fairy">
+                        Ir a página 'Fairy Tail'
+                    </a>
+                </div>
+
+            </article>
+
+            <article class="cont-mail">
+                <div>
+                    <a id="contacto" href="mailto:juan.decia@gmail.com?Subject=Peticion%20de%20contacto">
+                        Contactame vía mail
+                    </a>
+                </div>
+            </article>
+            
+        </section>
+    </main>
+
+</body>
+</html>

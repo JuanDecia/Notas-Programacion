@@ -1,0 +1,62 @@
+body {
+    box-sizing: border-box;
+}
+
+/* Alineamiento del contenido a todo el ancho de la página */
+#contenedor {
+    display: flex;
+    flex-wrap: wrap; /* Cuando se termina el ancho, continua en el siguiente renglon */
+}
+
+/* Tamaño de todas las imagenes */
+img {
+    width: 250px;
+}
+
+/* Efecto desenfoque imagen 1 */
+.img1 {
+    -webkit-filter: blur(30px);
+    filter: blur(30px);
+}
+
+/* Efecto gris imagen 2 */
+.img2 {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+/* Efecto sepia imagen 3 */
+.img3 {
+    -webkit-filter: sepia(100%);
+    filter: sepia(100%);
+}
+
+/* Efecto brillo imagen 4 */
+.img4 {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+}
+
+/* Hue Rotate */
+.img5 {
+    -webkit-filter: hue-rotate(80%);
+    filter: hue-rotate(80%);
+}
+
+/* Efecto opacidad imagen 6 */
+.img6 {
+    -webkit-filter: opacity(80%);
+    filter: opacity(80%);
+}
+
+/* Efecto sombreado de fondo imagen 7 */
+.img7 {
+    -webkit-filter: drop-shadow(15px 20px 25px blue);
+    filter: drop-shadow(15px 20px 25px blue);
+}
+
+/* Efecto invert imagen 8 */
+.img8 {
+    -webkit-filter: invert(80%);
+    filter: invert(80%);
+}

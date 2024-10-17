@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 80%;
+    margin: auto;
+    font-family: sans-serif;
+    background-image: url('../img/fondo-imagen.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    background-color: rgb(197, 201, 204, 0.9);
+    padding: 25px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: rgb(38, 99, 231);
+    font-size: 1.6em;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+p {
+    text-align: justify;
+}
+
+/* Animaciones */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes move {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-1px, 0) scale(1.2);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+}
+
+/* ######### HEADER */
+
+nav {
+    display: flex;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 2.2em;
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    margin: 30px 0;
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+/* Enlaces */
+.cont-volver-inicio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.cont-volver-inicio:hover img.flecha {
+    animation: move 1s linear infinite;
+}
+
+.flecha-link {
+    display: flex;
+    align-items: center;
+}
+
+.volver-inicio-txt {
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 10px;
+    color: rgb(236, 103, 14);
+    font-size: 1.3em;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease-in;
+}
+
+.volver-inicio-txt:hover {
+    color: #fff;
+}
+
+/* Enlaces Subrayado Dinámico */
+
+.volver-inicio-txt::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 1px solid white;
+    height: 1px;
+    background-color: #fff;
+    margin-left: 13px;
+    width: 80%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.volver-inicio-txt:hover::after {
+    transform: scaleX(1);
+}
+
+/* #########  MAIN CONTENT   */
+
+/* -- Artículo Introducción */
+
+/* Contenedor Código */
+
+.cont-codigo {
+    background-color: rgb(56, 55, 55);
+    margin: 20px auto;
+    padding: 7px;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+code > span {
+    display: inline-block;
+}
+
+.margin-20 {
+    margin-left: 20px;
+}
+
+.margin-40 {
+    margin-left: 40px;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.tag-color {
+    color: rgb(37, 143, 241);
+}
+
+.property-color {
+    color: rgb(113, 209, 247);
+}
+
+.value-color {
+    color: #f39658;
+}
+
+/* -- */
+
+/* -- Articulo Contenedor Práctica */
+
+.cont-practica {
+    margin: 25px 0;
+}
+
+#sub-naruto {
+    text-align: center;
+}
+
+#sinopsis {
+    margin: 10px auto;
+    width: 50%;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+}
+
+.cont-link-img {
+    display: flex;
+    justify-content: center;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 992px) {
+
+    .link-img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    img {
+        width: 70%;
+    }
+
+    #sinopsis {
+        width: 70%;
+    }
+
+}

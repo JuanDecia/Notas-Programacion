@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trancisiones y Animaciones</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Trancisiones y Animaciones</h1>
+        </header>
+
+        <section>
+
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción: Concepto de ejes.</h2>
+
+                <p>
+                    El concepto de <b>ejes</b> es muy importante para comprender <b>cómo los elementos de una página web pueden moverse y cambiar de forma dinámica</b> mediante código CSS. Los ejes son los <b>puntos de referencia</b> que se utilizan para <b>determinar la dirección y la velocidad</b> de los cambios que se aplican a un elemento. 
+                </p>
+
+                <br />
+
+                <p>
+                    Hay <b>dos tipos</b> principales de ejes que se utilizan en CSS: el <b>eje X</b> y el <b>eje Y</b>. El <b>eje X</b> representa la <b>dirección horizontal</b>, mientras que el <b>eje Y representa la dirección vertical</b>. Juntos, estos dos ejes forman un plano cartesiano que se utiliza para representar la posición de un elemento en una página web. 
+                </p>
+
+                <br />
+
+                <p>
+                    Cuando se aplican animaciones y transiciones a un elemento utilizando CSS, se pueden definir los ejes de movimiento para controlar la dirección y la velocidad del cambio. Por ejemplo, se puede utilizar el <b>eje X</b> para <b>mover un elemento de izquierda a derecha</b>, o el <b>eje Y</b> para <b>moverlo de arriba a abajo</b>.
+                </p>
+
+                <br />
+
+                <p>
+                    Los ejes también pueden ser utilizados para <b>controlar la rotación</b> y <b>la escala de un elemento</b>. En estos casos, se utilizan los <b>ejes Z</b> y <b>XYZ</b> para <b>representar la dirección en la que el elemento está siendo transformado</b>.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Transform -->
+            <article>
+                <h2>Propiedad Transform</h2>
+
+                <p>
+                    Las transformaciones en CSS son una herramienta útil que <b>nos permite cambiar la apariencia y posición de elementos HTML sin modificar su estructura</b>. Con las transformaciones, podemos girar, mover, escalar y deformar elementos de manera dinámica y fluida.
+                </p>
+
+                <br />
+
+                <p>
+                    Para poder utilizar estas herramientas debemos aplicarla con la <b>propiedad</b> que nos proporciona la hoja de estilos CSS llamada <b>transform</b>. En esta propiedad, le colocaremos el valor que tomará el comportamiento del elemento seleccionado.
+                </p>
+
+                <br />
+
+                <p>
+                    Existen diferentes tipos de transformaciones que se pueden aplicar a los elementos HTML, veamos las más importantes.
+                </p>
+
+                <!-- Translate -->
+                <div class="cont-translate">
+                    <h3>Translate</h3>
+
+                    <p>
+                        Esta propiedad nos permite <b>mover o trasladar</b> un elemento en una web. Este método se encarga de alterar la ubicación de un elemento a partir de su posición original. Esta propiedad recibe <b>dos valores</b>: el <b>valor del desplazamiento horizontal y el valor del desplazamiento vertical</b>, los cuales determinan los valores de la nueva posición del elemento trasladado. Estos valores pueden ser en cualquier unidad de medida.
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Cuando usamos un valor <b>positivo</b> en la <b>unidad horizontal</b> los elementos se trasladarán hacia la <b>derecha</b>. Si usamos <b>números negativos</b> será hacia la <b>izquierda</b>. Cuando usamos un <b>valor positivo</b> en la unidad <b>vertical</b> los elementos se trasladarán <b>hacia abajo</b>. Si usamos <b>números negativos será hacia arriba</b>.
+                    </p>
+
+                    <br />
+
+                    <p>
+                        Si deseamos trasladar hacia una dirección sola podemos hacer uso de translate + X, Y o Z y definir dentro del paréntesis la medida del desplazamiento. En el ejemplo lo trasladaremos horizontalmente con el método translateX(). 
+                    </p>
+
+                    <h4>Sintaxis y ejemplo</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">elemento</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">transform</span>:
+                            <span class="value-color">translate<span class="field-color">(<span class="number-color">x, y</span>)</span></span>;
+                        </code>
+
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="comment-color">/*  Donde x e y son valores numéricos que indican cuánto deberá moverse un elemento en cada uno de esos ejes. */</span>
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+                    </div>
+
+                    <div class="cont-ejemplo">
+                        <div class="elemento-translate"></div>
+                    </div>
+                </div>
+
+                <!-- Scale -->
+                <div class="cont-scale">
+                    <h3>Scale</h3>
+
+                    <p>
+                        La transformación Scale nos <b>permite aumentar o disminuir el tamaño de un elemento
+                        HTML</b>. Podemosescalar en ambasdirecciones (X e Y) o sólo en una de ellas. La sintaxis para aplicar esta transformación es:
+                    </p>
+
+                    <h4>Sintaxis</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">elemento</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">transform</span>:
+                            <span class="value-color">scale<span class="field-color">(<span class="number-color">x, y</span>)</span></span>;
+                        </code>
+
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="comment-color">/*  Donde x e y son valores numéricos que indican cuánto deberá crecer un elemento en cada uno de esos ejes. */</span>
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+                    </div>
+                </div>
+
+                <!-- Skew -->
+                <div class="cont-skew">
+                    <h3>Skew</h3>
+                    
+                    <p>
+                        La transformación Skew nos <b>permite inclinar o deformar un elemento HTML</b>. La sintaxis para aplicar esta transformación es:
+                    </p>
+
+                    <h4>Sintaxis</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">elemento</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">transform</span>:
+                            <span class="value-color">skew<span class="field-color">(<span class="number-color">x, y</span>)</span></span>;
+                        </code>
+
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="comment-color">/*  Donde x e y son valores numéricos que indican cuánto se deformará un elemento en cada uno de esos ejes. */</span>
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+                    </div>
+                </div>
+
+                <!-- Rotate -->
+                <div class="cont-rotate">
+                    <h3>Rotate</h3>
+
+                    <p>
+                        Esta transformación nos permite <b>girar un elemento HTML en un ángulo determinado</b>. La sintaxis para aplicar esta transformación es:
+                    </p>
+
+                    <h4>Sintaxis</h4>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="field-color">elemento</span>
+                            &#123
+                        </code>
+    
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="property-color">transform</span>:
+                            <span class="value-color">rotate<span class="field-color">(<span class="number-color">angulo</span>)</span></span>;
+                        </code>
+
+                        <br />
+    
+                        <code class="margin-20">
+                            <span class="comment-color">/*  Donde el ángulo es un valor en grados (deg) que indican la rotación. */</span>
+                        </code>
+    
+                        <br />
+    
+                        <code>&#125</code>
+                    </div>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Transition -->
+            <article>
+                <h2>Propiedad Transition</h2>
+
+                <p>
+                    La propiedad <b>transition</b> en CSS es <b>una forma abreviada (shorthand) de definir las cuatro propiedades relacionadas con las transiciones: transition-property, transition-duration, transition-timing-function y transition-delay</b>. Esta propiedad abreviada permite definir todas las propiedades de transición en una sola declaración.
+                </p>
+
+                <h3>Sintaxis</h3>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">elemento</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">transition</span>:
+                        <span class="value-color">[property]</span>
+                        <span class="value-color">[duration]</span>
+                        <span class="value-color">[timing-function]</span>
+                        <span class="value-color">[delay]</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Animaciones -->
+            <article>
+                <h2>Animaciones en CSS</h2>
+
+                <p>
+                    Las <b>animaciones</b> en CSS <b>permiten crear efectos visuales en una página web al cambiar gradualmente los valores de las propiedades CSS de un elemento a lo largo del tiempo</b>. Se pueden animar una ovarias propiedades a la vez, y la duración y el tipo de animación se pueden especificar con CSS.
+                </p>
+
+                <h3>Keyframes</h3>
+
+                <p>
+                    Las animaciones se definen utilizando la regla <b>@keyframes seguida del nombre de la
+                    animación</b>. Luego, entre llaves, se especifican los valores que tendrán las propiedades que se quieren animar en los distintos puntos de la animación.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="function-color">@keyframes</span>
+                        <span class="property-color">nombreAnimacion</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="comment-color">/* Animaciones */</span>
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <p>
+                    En el keyframe <b>se suele utilizar el porcentaje</b> para indicar los <b>distintos efectos que sucederán durante el 100% (total)</b> de la animación.
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="function-color">@keyframes</span>
+                        <span class="property-color">nombreAnimacion</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="">0%</span>
+                        <span class="field-color">&#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="property-color">transform</span>:
+                        <span class="tag-color">translateX</span><span class="field-color">(<span class="value-color">0</span>)</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="">50%</span>
+                        <span class="field-color">&#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="property-color">transform</span>:
+                        <span class="tag-color">translateX</span><span class="field-color">(<span class="value-color">100%</span>)</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="">100%</span>
+                        <span class="field-color">&#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="property-color">transform</span>:
+                        <span class="tag-color">translateX</span><span class="field-color">(<span class="value-color">0%</span>)</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+
+                <div class="cont-ejemplo">
+                    <div class="elemento-transform"></div>
+                </div>
+
+                <p>
+                    A parte de definir a través de los porcentajes exactamente los tiempos en lo que queremos que se realice los cambios, podemos simplemente decir que la animación irá <b>desde el valor de una propiedad hasta otro valor de la misma propiedad</b>:
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="function-color">@keyframes</span>
+                        <span class="property-color">nombreAnimacion</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="">from</span>
+                        <span class="field-color">&#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="property-color">transform</span>:
+                        <span class="tag-color">translateX</span><span class="field-color">(<span class="value-color">0</span>)</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="">to</span>
+                        <span class="field-color">&#123</span>
+                    </code>
+
+                    <br />
+
+                    <code class="margin-40">
+                        <span class="property-color">transform</span>:
+                        <span class="tag-color">translateX</span><span class="field-color">(<span class="value-color">100%</span>)</span>;
+                    </code>
+
+                    <br />
+
+                    <code>&#125</code>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Propiedades -->
+            <article>
+                <h2>Propiedades en las animaciones</h2>
+
+                <p>
+                    Ahora que yavimos cómocrearlas, debemos colocarlas en un elemento de nuestro HTML. Para esto, existen varias propiedades que se pueden aplicar. A continuación vamos a ver una por una.
+                </p>
+
+                <!-- Animation -->
+                <div>
+                    <h3>Animation</h3>
+
+                    <p>
+                        La propiedad <b>animation</b> es un shorthand que nos permite definir varias propiedades de una animación en unamismalínea de código. Es importante recordar que <b>la única propiedad que es obligatoria es la propiedad name</b>. El resto, pueden colocarse o no, en el siguiente orden:
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation</span>:
+                            <span class="field-color">nombreAnimacion</span>
+                            <span class="tag-color">duration</span>
+                            <span class="tag-color">timing-function</span>
+                            <span class="tag-color">delay</span>
+                            <span class="tag-color">iteration-count</span>
+                            <span class="tag-color">direction</span>
+                            <span class="tag-color">fill-mode</span>
+                            <span class="tag-color">play-state</span>;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Animation name -->
+                <div>
+                    <h3>Animation-name</h3>
+
+                    <p>
+                        La propiedad <b>animation-name</b> nos permite <b>definir el nombre de la propiedad que queremos aplicar</b> a un elemento. Es la única propiedad obligatoria a la hora de colocar una animación a unelemento.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation-name</span>:
+                            <span class="value-color">nombreAnimacion</span>;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Animation-duration -->
+                <div>
+                    <h3>Animation-duration</h3>
+
+                    <p>
+                        La propiedad <b>animation-duration</b> nos permite <b>definir la duración de la animación</b>, especificada en segundos(s) o milisegundos(ms).
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation-duration</span>:
+                            <span class="value-color">tiempo</span>;
+                        </code>
+
+                        <br />
+
+                        <code>
+                            <span class="comment-color">/* Ej: 2s, 9ms, etc. */</span>
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Timing-function -->
+                <div>
+                    <h3>Animatimation-timing-function</h3>
+
+                    <p>
+                        La propiedad <b>animation-timing-function</b> nos permite definir la <b>curva de velocidad de la animación</b>. Puede ser <b>ease (predeterminada), linear, ease-in,ease-out o ease-in-out</b> (valores que ya vimos con la propiedad transition-timing-function).
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation-timing-function</span>:
+                            <span class="value-color">curvaDeVelocidad</span>;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- delay -->
+                <div>
+                    <h3>Animation-delay</h3>
+
+                    <p>
+                        La propiedad <b>animation-delay</b> nos permite <b>especificar el tiempo que debe esperar una animación antes de que comience</b>, especificada en segundos(s) o milisegundos(ms).
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation-delay</span>:
+                            <span class="value-color">tiempo</span>;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- iteration-count -->
+                <div>
+                    <h3>Animation-iteration-count</h3>
+
+                    <p>
+                        La propiedad <b>animation-iteration-count</b> permite <b>indicar el número de veces que se debe repetir una animación</b>. Puede ser un número determinado de veces, <b>infinite</b>, para repetir la animación infinitamente, o <b>alternate</b>, para repetir la animación de ida y vuelta.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation-iteration-count</span>:
+                            <span class="value-color">numeroVeces</span>;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Direction -->
+                <div>
+                    <h3>Animation-direction</h3>
+
+                    <p>
+                        La propiedad <b>animation-direction determina la dirección en la que debe reproducirse la animación</b>. Su valor puede ser <b>normal (predeterminado), reverse (del final al principio), alternate (de principio a fin y viceversa) o alternate-reverse (de fin a principio y viceversa)</b>.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation-direction</span>:
+                            <span class="value-color">direccion</span>;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- fill-mode -->
+                <div>
+                    <h3>Animation-fill-mode</h3>
+
+                    <p>
+                        La propiedad <b>animation-fill-mode</b> permite <b>especificar cómo deben ser los valores de las propiedades antes y después de la animación</b>. Estos valores pueden ser:
+                    </p>
+
+                    <div class="lista">
+                        <ul>
+                            <li>
+                                <b>none</b>: el elemento mantiene su estilo original antes y después de la animación.
+                            </li>
+                            <li>
+                                <b>fowards</b>:  el elemento mantiene el último estilo de la animación después de que se complete.
+                            </li>
+                            <li>
+                                <b>backwards</b>: el elemento toma el primer estilo de la animación antes de que comience.
+                            </li>
+                            <li>
+                                <b>both</b>: el elemento aplica tanto forwards como backwards.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation-fill-mode</span>:
+                            <span class="value-color">estilo</span>;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Play State -->
+                <div>
+                    <h3>Animation-play-state</h3>
+
+                    <p>
+                        La propiedad <b>animation-play-state</b> permite <b>pausar y reanudar una animación en CSS sin tener que detenerla y volver a iniciarla</b>. Sus valores pueden ser <b>running o paused</b>.  Esta propiedad normalmente se usa de manera dinámica, pudiendo alterar su valor para parar y reanudar una animación desde Javascript.
+                    </p>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">animation-play-state</span>:
+                            <span class="value-color">state</span>;
+                        </code>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+</body>
+</html>

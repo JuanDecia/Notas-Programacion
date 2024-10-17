@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras Condicionales</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Estructuras Condicionales</h1>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        Las <b>estructuras condicionales</b> son un tipo de <b>estructura de control de flujo</b> que se utilizan en programación para <b>ejecutar un bloque de código</b> si se cumple una condición específica. Básicamente, se trata de una forma de programar una <b>serie de instrucciones para que se ejecuten sólo si se cumple cierta condición</b>.
+                    </p>
+                </div>
+
+                <figure>
+                    <img src="./img/ifelse.gif" alt="if else" width="400px">
+                </figure>
+            </article>
+
+            <hr />
+
+            <!-- Estructura if -->
+            <article>
+                <h2>Estructura If</h2>
+
+                <div>
+                    <p>
+                        La estructura if en JavaScript es una sentencia condicional que permite <b>ejecutar un bloque de código si se cumple una determinada condición</b>. Su sintaxis es la siguiente:
+                    </p>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="parametro-color">if</span>
+
+                        (
+                            <span class="property-color">condicion</span>
+                        )
+
+                        {
+                        <br>
+                            <span class="comment-color margin-20">// Código a ejecutar si la condición es verdadera.</span>
+                        <br>
+                        }
+                    </code>
+                </div>
+
+                <div>
+                    <p>
+                        En la línea del if, se evalúa la condición entre paréntesis. Si esta condición es verdadera, se ejecuta el bloque de código que se encuentra dentro de las llaves ('{ }') que le siguen.
+                    </p>
+                </div>
+
+                <div class="cont-codigo">
+
+                    <code>
+                        <span class="tag-color">let</span>
+                        <span class="property-color">numero</span>
+                        =
+                        <span class="number-color">5</span>;
+                    </code>
+
+                    <br><br>
+
+                    <code>
+                        <span class="parametro-color">if</span>
+
+                        (
+                            <span class="property-color">numero</span>
+                            >
+                            <span class="number-color">0</span>
+                        )
+
+                        &#123
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="property-color">console</span>.<span class="function-color">log</span>
+                        (<span class="value-color">'El número es mayor que cero'</span>);
+                    </code>
+
+                    <br>
+
+                    <code>
+                        <span class="txt-white">&#125</span>
+                    </code>
+                </div>
+
+                <div>
+                    <p>
+                        Aquí vemos que si se cumple la condición de que el número sea mayor a 0, se ejecutará el console.log.
+                    </p>
+                </div>
+
+            <hr />
+
+            <!-- If - Else -->
+            <article>
+                <h2>Estructura If / else</h2>
+
+                <div>
+                    <p>
+                        La estructura if...else en JavaScript es similar a la estructura if, pero <b>nos permite definir un bloque de código alternativo que se ejecutará en caso de que la condición evaluada en el if sea falsa</b>. Su sintaxis es la siguiente:
+                    </p>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="parametro-color">if</span>
+
+                        (
+                            <span class="property-color">condicion</span>
+                        )
+
+                        &#123
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="comment-color">// Código a ejecutar si la condición es verdadera.</span>
+                    </code>
+
+                    <br>
+
+                    <code class="margin">
+                        <span class="txt-white">&#125</span>
+                        <span class="parametro-color">else</span>
+                        <span class="txt-white">&#123</span>
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="comment-color">// Código a ejecutar si la condición es falsa.</span>
+                    </code>
+
+                    <br>
+
+                    <code class="txt-white">
+                        &#125
+                    </code>
+                </div>
+
+                <div>
+                    <p>
+                        En la línea del <b>if</b>, se evalúa la condición entre paréntesis. Si esta condición es verdadera, se ejecuta el bloque de código que se encuentra dentro de las llaves ('{ }') que le siguen. Si la condición es falsa, se ejecuta el bloque de código que se encuentra dentro de las llaves ('{ }') que siguen a la palabra <b>else</b>.
+                    </p>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="tag-color">let</span>
+                        <span class="property-color">numero</span>
+                        =
+                        <span class="number-color">-2</span>;
+                    </code>
+
+                    <br><br>
+
+                    <code>
+                        <span class="parametro-color">if</span>
+
+                        (
+                            <span class="property-color">numero</span>
+                            >
+                            <span class="number-color">0</span>
+                        )
+
+                        &#123
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="property-color">console</span>.<span class="function-color">log</span>
+                        (<span class="value-color">'El número es mayor que cero.'</span>);
+                    </code>
+
+                    <br>
+
+                    <code class="margin">
+                        <span class="txt-white">&#125</span>
+                        <span class="parametro-color">else</span>
+                        <span class="txt-white">&#123</span>
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="property-color">console</span>.<span class="function-color">log</span>
+                        (<span class="value-color">'El número es menor o igual que cero.'</span>);
+                    </code>
+
+                    <br>
+
+                    <code class="txt-white">
+                        &#125
+                    </code>
+
+                </div>
+
+                <div>
+                    <p>
+                        En este ejemplo vemos que si el número es mayor a 0 se ejecutará lo que está dentro del bloque <b>if</b>, mientras que en el caso contrario se ejecutará lo que está dentro del bloque del else. Al ser la variable <b>'numero = -2'</b> se ejecutará lo del bloque <b>else</b>.
+                    </p>
+                </div>
+
+            </article>
+
+            <hr>
+
+            <!-- if/else if/else -->
+            <article>
+                <h2>Estructura if/else if/else</h2>
+
+                <p>
+                    La estructura if...else if...else en JavaScript nos permite evaluar múltiples condiciones y ejecutar distintos bloques de código en función de cada una de ellas. Su sintaxis es la siguiente:
+                </p>
+
+                <!-- Codigo Ejemplo #1 -->
+                <div class="cont-codigo">
+                    <code>
+                        <span class="parametro-color">if</span>
+
+                        (
+                            <span class="property-color">condicion</span>
+                        )
+
+                        &#123
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="comment-color">// Código a ejecutar si la condición es verdadera.</span>
+                    </code>
+
+                    <br>
+
+                    <code class="margin">
+                        <span class="txt-white">&#125</span>
+                        <span class="parametro-color">else if</span>
+                        (
+                            <span class="property-color">condicion2</span>
+                        )
+                        <span class="txt-white">&#123</span>
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="comment-color">// Código a ejecutar si la condición es falsa y condicion2 es verdadera.</span>
+                    </code>
+
+                    <br>
+
+                    <code class="margin">
+                        <span class="txt-white">&#125</span>
+                        <span class="parametro-color">else if</span>
+                        (
+                            <span class="property-color">condicion3</span>
+                        )
+                        <span class="txt-white">&#123</span>
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="comment-color">// Código a ejecutar si la condición es falsa y condicion2 es falta y condicion3 es verdadera.</span>
+                    </code>
+
+                    <br>
+
+                    <code class="margin">
+                        <span class="txt-white">&#125</span>
+                        <span class="parametro-color">else</span>
+                        <span class="txt-white">&#123</span>
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="comment-color">// Código a ejecutar si todas las condiciones son falsas.</span>
+                    </code>
+
+                    <br>
+
+                    <code class="txt-white">
+                        &#125
+                    </code>
+                </div>
+
+                <p>
+                    En esta estructura, <b>primero se evalúa la condición1</b>. Si esta condición es <b>verdadera</b>, se <b>ejecuta el bloque de código correspondiente y se omite el resto de las condiciones</b>. Si la condición1 es <b>falsa, se evalúa la condición2</b>. Si esta condición es <b>verdadera, se ejecuta el bloque de código correspondiente y se omite el resto de las condiciones</b>. Si la condición2 es <b>falsa, se evalúa la condición3</b>, y así sucesivamente. <b>Si ninguna de las condiciones es verdadera, se ejecuta el bloque de código que se encuentra dentro de las llaves {} que siguen a la palabra else.</b>
+                </p>
+            </article>
+
+            <hr>
+
+            <!-- Estructura Switch -->
+            <article>
+                <h2>Estructura Switch</h2>
+
+                <p>
+                    La estructura switch en JavaScript es una alternativa a la estructura if-else que se utiliza cuando <b>se necesitan múltiples condiciones para evaluar una variable o expresión.</b> Esta estructura <b>toma una expresión como entrada y la compara con diferentes casos.</b> Si la expresión <b>coincide con un caso específico, se ejecuta el código asociado a ese caso.</b>
+                </p>
+
+                <h3>Sintaxis Switch</h3>
+
+                <!-- Código Ejemplo Sintaxis -->
+                <div class="cont-codigo">
+
+                    <!-- Línea Condición -->
+                    <code>
+                        <span class="parametro-color">switch</span>
+
+                        (
+                            <span class="property-color">expresion</span>
+                        )
+
+                        &#123
+                    </code>
+
+                    <br>
+
+                    <!-- Bloque Case -->
+                    <code class="margin-20">
+                        <span class="parametro-color">case</span>
+                        <span class="property-color">valor1</span>:
+                    </code>
+
+                    <br>
+
+                    <code class="margin-40">
+                        <span class="comment-color">// Código a ejecutar si la expresión es igual a 'valor1'.</span>
+                    </code>
+
+                    <br>
+                    
+                    <code class="margin-40">
+                        <span class="parametro-color">break</span>;
+                    </code>
+
+                    <br>
+
+                    <!-- Bloque Case -->
+                    <code class="margin-20">
+                        <span class="parametro-color">case</span>
+                        <span class="property-color">valor2</span>:
+                    </code>
+
+                    <br>
+
+                    <code class="margin-40">
+                        <span class="comment-color">// Código a ejecutar si la expresión es igual a 'valor2'.</span>
+                    </code>
+
+                    <br>
+                    
+                    <code class="margin-40">
+                        <span class="parametro-color">break</span>;
+                    </code>
+
+                    <br>
+
+                    <!-- Bloque Default -->
+                    <code class="margin-20">
+                        <span class="parametro-color">default</span>:
+                    </code>
+                    
+                    <br>
+                    
+                    <code class="margin-20">
+                        <span class="comment-color">// Código a ejecutar si la expresión no coincide con ninguno de los casos anteriores. </span>
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="parametro-color">break</span>;
+                    </code>
+
+                    <br>
+
+                    <code>
+                        <span class="txt-white">&#125</span>
+                    </code>
+                    
+                </div>
+
+                <p>
+                    La <b>expresión que se evalúa</b> puede ser <b>cualquier tipo de dato</b>, incluyendo números, cadenas, booleanos, entre otros. Cada caso dentro de la estructura switch debe tener un valor específico que se comparará con la expresión.
+                </p>
+
+                <br>
+
+                <p>
+                    Es importante destacar que la instrucción <b>break</b> se utiliza para salir del switch una vez que se ha encontrado una coincidencia. Si no se utiliza la instrucción break, el switch seguirá ejecutando el código de todos los casos siguientes, incluso si no se cumplen las condiciones. La cláusula <b>default</b> es opcional y se ejecuta si <b>la expresión no coincide con ninguno de los casos anteriores</b>.
+                </p>
+            </article>
+
+            <hr>
+
+            <!-- Operador Ternario -->
+            <article>
+                <h2>Operador Ternario</h2>
+
+                <p>
+                    El operador ternario en JavaScript es <b>una forma concisa de escribir una estructura condicional if-else en una sola línea de código</b>. Este operador <b>se utiliza comúnmente para asignar un valor a una variable en función de una condición</b>. La sintaxis básica del operador ternario en JavaScript es la siguiente:
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="property-color">condicion</span>
+                        ?
+                        <span class="property-color">valorSiTrue</span>
+                        :
+                        <span class="property-color">valorSiFalse</span>;
+                    </code>
+                </div>
+
+                <p>
+                    Donde <b>"condicion"</b> es una expresión que se evalúa como verdadera o falsa, <b>"valorSiTrue"</b> es el valor que se asignará si la condición es verdadera y <b>"valorSiFalse"</b> es el valor que se asignará si la condición es falsa.
+                </p>
+
+                <p>
+                    Por ejemplo, podemos usar el operador ternario para asignar un valor a una variable "esMayor" que indica si un número "edad" es mayor o menor que 18 años:
+                </p>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="tag-color">let</span>
+                        <span class="property-color">edad</span>
+                        =
+                        <span class="number-color">20</span>;
+                    </code>
+
+                    <br><br>
+
+                    <code>
+                        <span class="tag-color">let</span>
+                        <span class="property-color">esMayor</span>
+                        =
+                        <span class="property-color">edad</span>
+                        &#62=
+                        <span class="number-color">18</span>
+                        ?
+                        <span class="value-color">'Mayor de edad'</span>
+                        :
+                        <span class="value-color">'Menor de edad'</span>;
+                    </code>
+                </div>
+
+                <p>
+                    También es posible anidar operadores ternarios para evaluar múltiples condiciones:
+                </p>
+
+                <div class="cont-codigo">
+
+                    <code>
+                        <span class="tag-color">let</span>
+                        <span class="property-color">esMayor</span>
+                        =
+                        <span class="property-color">edad</span>
+                        &#62=
+                        <span class="number-color">18</span>
+                        <br>
+                        ?
+                        <span class="value-color">'Mayor de edad'</span>
+                        <br>
+                        <span class="property-color">edad</span>
+                        &#62=
+                        <span class="number-color">13</span>
+                        <br>
+                        ?
+                        <span class="value-color">'Adolescente'</span>
+                        <br>
+                        : 
+                        <span class="value-color">'Niño'</span>;
+                    </code>
+                </div>
+
+                <p>
+                    En este ejemplo, se evalúa primero si la "edad" es mayor o igual a 18 años. Si es verdadero, se asigna el valor "Mayor de edad". Si es falso, se evalúa si "edad" es mayor o igual a 13 años. Si es verdadero, se asigna el valor "Adolescente". De lo contrario, se asigna el valor "Niño".
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

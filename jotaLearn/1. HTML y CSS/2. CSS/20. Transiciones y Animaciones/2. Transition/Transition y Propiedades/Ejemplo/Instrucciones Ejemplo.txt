@@ -1,0 +1,18 @@
+Para nuestro ejemplo crearemos un contenedor principal con las siguientes características:
+
+width: 1000px;
+height: 600px;
+border: 2px solid black;
+margin: 0 auto; (para centrar el contenedor)
+background: blue;
+
+Luego de estas declaraciones en nuestra hoja de CSS aplicaremos la transición:
+
+transition: background 1s;
+
+Debemos recordar que al aplicar la propiedad transition primero debemos colocar a la propiedad a la que se la estamos aplicando, que en nuestro caso,
+es "background" y luego agregamos el tiempo que tomará cambiar esa transición.
+
+Para terminar de aplicar esta función es importante declarar el evento que la active o determine, generalmente es usada la psudoclase :hover.
+Como anteriormente hemos declarado una transition a "background" si aplicamos un "background" a hover, la transición anteriormente declarada
+que transforma el elemento en 1s se cambiara en ese tiempo.

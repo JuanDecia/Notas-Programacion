@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+}
+
+body {
+    max-width: 85%;
+    margin: auto;
+    font-family: sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1516384100354-0e0bbc0d2e00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    background-color: rgb(197, 201, 204, 0.9);
+    padding: 25px;
+}
+
+h2 {
+    margin: 20px 0;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+a {
+    display: flex;
+    align-items: center;
+    padding-bottom: 7px;
+    text-decoration: none;
+    color: rgb(236, 103, 14);
+    font-weight: 600;
+    font-size: 1.2em;
+    position: relative;
+    transition: color 0.3s ease-in;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+p {
+    text-align: justify;
+}
+
+/* -- Animaciones -- */
+
+/* Subrayado Dinámico */
+
+.cont-link a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    height: 2px;
+    color: #ffffff;
+    background-color: #ffffff;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ######### HEADER */
+
+h1 {
+    color: rgb(15, 110, 110);
+    text-align: center;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap: 15px;
+}
+
+/* ######### MAIN CONTENT */
+
+/* -- Articulo Sintaxis -- */
+
+.cont-sintaxis {
+    margin: 30px 0;
+}
+
+/* Bloque Código */
+
+.cont-codigo {
+    background-color: rgb(56, 55, 55);
+    margin: 20px auto;
+    padding: 7px;
+    width: 70%;
+    border-radius: 5px;
+}
+
+.margin-20 {
+    margin-left: 20px;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.tag-color {
+    color: rgb(37, 143, 241);
+}
+
+.property-color {
+    color: rgb(113, 209, 247);
+}
+
+.value-color {
+    color: #f39658;
+}
+
+.comment-color {
+    color: rgb(41, 148, 31);
+}
+
+/* -- */
+
+/* -- Artículo Ejemplo */
+
+.ejemplo-label {
+    margin: 15px 0;
+}

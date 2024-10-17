@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout CSS</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Layout CSS</h1>
+        </header>
+
+        <section>
+            <!-- Introducción -->
+            <article class="cont-introduccion">
+                <h2>Introducción</h2>
+
+                <p>
+                    El <b>CSS Layout</b> es una técnica de diseño de páginas web que permite definir cómo se deben organizar los elementos de una página en la pantalla. Se pueden usar diferentes tipos de layout en CSS, como el <b>layout de flujo, el layout de caja y el layout flexible</b>, entre otros.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Tipos de layout -->
+            <article>
+                <h2>Tipos de Layout</h2>
+
+                <h3>Layout de flujo</h3>
+
+                <p>
+                    El <b>layout de flujo</b> es el tipo de layout que se utiliza de forma predeterminada en la mayoría de los navegadores. En este tipo de layout, los elementos se organizan uno detrás de otro en una secuencia lineal, desde la parte superior hasta la parte inferior de la página. 
+                </p>
+
+                <h3>Layout de caja</h3>
+
+                <p>
+                    El <b>layout de caja</b>, por otro lado, permite organizar los elementos en una serie de cajas que se colocan una al lado de la otra. Este tipo de layout es útil para crear estructuras más complejas, como menús de navegación y columnas laterales. 
+                </p>
+
+                <h3>Layout Flexible</h3>
+
+                <p>
+                    El layout flexible es un tipo de layout que permite que los elementos se ajusten automáticamente a diferentes tamaños de pantalla y resoluciones. Este tipo de layout es especialmente útil en la era de los dispositivos móviles, ya que permite que la página se vea bien en diferentes tipos de dispositivos.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Tipos de elementos -->
+            <article class="tipos-elementos">
+                <h2>Tipos de elementos</h2>
+
+                <h3>Elementos en bloque</h3>
+
+                <p>
+                    Los elementos en bloque son elementos que <b>por defecto ocupan todo el ancho disponible</b> de la página y <b>crean un nuevo bloque de contenido</b>. Por lo general, estos elementos tienen un margen por defecto y un salto de línea antes y después de ellos, lo que significa que no se pueden colocar otros elementos a su lado. Algunos ejemplos de elementos en bloque son los elementos <b>div, h1, p y ul</b>. 
+                </p>
+
+                <div class="cont-ejemplo">
+                    <div class="bloque bloque-1">Elemento en Bloque 1</div>
+                    <div class="bloque bloque-2">Elemento en Bloque 2</div>
+                    <div class="bloque bloque-3">Elemento en Bloque 3</div>
+                </div>
+
+                <h3>Elementos en Línea</h3>
+
+                <p>
+                    Los elementos en línea son elementos que por defecto <b>solo ocupan el ancho necesario para mostrar su contenido</b> y <b>no crean un nuevo bloque de contenido</b>. Estos elementos se colocan <b>uno al lado del otro en la misma línea</b>, y <b>no tienen margen ni salto de línea antes o después de ellos</b>. Algunos ejemplos de elementos en línea son el elemento <b>span, a y strong</b>.
+                </p>
+
+                <div class="cont-ejemplo cont-inline">
+                    <span class="ejemplo-span span-1">Soy un span en línea</span>
+                    <span class="ejemplo-span span-2">Soy un span en línea</span>
+                    <span class="ejemplo-span span-3">Soy un span en línea</span>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Overflow -->
+            <article>
+                <h2>Overflow</h2>
+
+                <p>
+                    La propiedad <b>overflow</b> es una propiedad CSS que determina qué hacer con el contenido que sobrepasa los límites de un elemento contenedor. Es especialmente útil cuando se trata de elementos con un tamaño fijo.
+                </p>
+
+                <h3>Sintaxis</h3>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="field-color">.ejemplo-overflow</span>
+                        &#123
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">overflow</span>:
+                        <span class="value-color">visible</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">overflow</span>:
+                        <span class="value-color">hidden</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">overflow</span>:
+                        <span class="value-color">scroll</span>;
+                    </code>
+
+                    <br />
+
+                    <code class="margin-20">
+                        <span class="property-color">overflow</span>:
+                        <span class="value-color">auto</span>;
+                    </code>
+
+                    <br />
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

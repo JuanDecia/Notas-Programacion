@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('../img/fondo-imagen.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+main {
+    padding: 25px;
+    background-color: rgb(197, 201, 204, 0.9);
+}
+
+ul {
+    list-style: none;
+}
+
+/* -- Animaciones -- */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes move {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-1px, 0) scale(1.2);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+}
+
+/* Header */
+
+h1 {
+    color: rgb(15, 110, 110);
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin: 25px;
+}
+
+li {
+    position: relative;
+    padding: 10px;
+}
+
+nav:hover .flecha {
+    animation: move 1s linear infinite;
+}
+
+a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: rgb(236, 103, 14);
+    font-weight: 600;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    color: black;
+    background-color: black;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+a:visited {
+    color: rgb(236, 103, 14);
+}
+
+.flecha {
+    margin-top: 5px;
+}
+
+/* Estilos Contenido */
+
+.cont-img {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.cont-img img:first-child {
+    max-width: 90%;
+    border: 1px solid black;
+}

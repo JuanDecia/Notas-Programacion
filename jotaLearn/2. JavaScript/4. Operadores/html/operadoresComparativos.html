@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Comparativos</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <h1>Ejemplos: Operadores Condicionales</h1>
+
+            <nav>
+                <!-- Contenedor Flecha -->
+                <div class="cont-flecha">
+                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#000000" d="m7.825 13l4.9 4.9q.3.3.288.7t-.313.7q-.3.275-.7.288t-.7-.288l-6.6-6.6q-.15-.15-.213-.325T4.425 12q0-.2.063-.375T4.7 11.3l6.6-6.6q.275-.275.688-.275t.712.275q.3.3.3.713t-.3.712L7.825 11H19q.425 0 .713.288T20 12q0 .425-.288.713T19 13H7.825Z"/></svg>
+                </div>
+                <a href="../index.html">Volver a Inicio</a>
+            </nav>
+        </header>
+
+        <section>
+            <article>
+                <h2>Ejemplo es igual (==)</h2>
+
+                <div>
+                    <p>
+                        El operador <b>"=="</b> <b>compara</b> si los dos elementos <b>son del mismo valor</b> o si son iguales <b>sin importar el tipo de dato</b>.
+                    </p>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="tag-color">let</span>
+                        <span class="property-color">edadJuan</span>
+                        =
+                        <span class="number-color">28</span>;
+                    </code>
+
+                    <br>
+
+                    <code>
+                        <span class="tag-color">let</span>
+                        <span class="property-color">edadSol</span>
+                        =
+                        <span class="number-color">38</span>;
+                    </code>
+
+                    <br><br>
+
+                    <code>
+                        <span class="parametro-color">if</span>
+                        <span class="function-color">
+                            (
+                                <span class="property-color">edadJuan</span>
+                                ==
+                                <span class="property-color">edadSol</span>
+                            )
+                        </span>
+                        &#123
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="property-color">console</span>.<span class="function-color">log</span>(<span class="value-color">`Juan y Sol tienen la misma edad, la condición retorna 'true'.`</span>);
+                    </code>
+
+                    <br>
+
+                    <code>
+                        &#125
+                        <span class="parametro-color">else</span>
+                        &#123
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="property-color">console</span>.<span class="function-color">log</span>(<span class="value-color">`Juan y Sol tienen diferentes edades, por lo que la condición retorna 'false'.`</span>);
+                    </code>
+
+                    <br>
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <div class="cont-resultados">
+                    <div class="cont-resultado"></div>
+                </div>
+
+                <div>
+                    <p>
+                        Si el valor de “Juan” es igual al valor de “Sol” la condición nos retorna true lo que entraría en la primera sentencia donde el resultado nos daría “ambos tienen la misma edad”. Como la edad es diferente la condición nos retorna false y la condición entra en la sentencia de else donde el cuerpo dice que las edades son “diferentes”.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- IGUALDAD ESTRICTA -->
+            <article>
+
+                <h2>Igualdad Estricta (===)</h2>
+
+                <div>
+                    <p>
+                        El operador <b>"==="</b> no solo compara <b>si es del mismo tipo</b>, sino que <b>también compara si es del mismo valor</b>. Es muy recomendado usar esta expresión, ya que, si tenemos que <b>comparar entre un valor “4” de tipo number y un valor “4” de tipo string</b>.
+                    </p>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="tag-color">let</span>
+                        <span class="property-color">edadJuan</span>
+                        =
+                        <span class="number-color">28</span>;
+                    </code>
+
+                    <br>
+
+                    <code>
+                        <span class="tag-color">let</span>
+                        <span class="property-color">edadString</span>
+                        =
+                        <span class="value-color">'28'</span>;
+                    </code>
+
+                    <br><br>
+
+                    <code>
+                        <span class="parametro-color">if</span>
+                        <span class="function-color">
+                            (
+                                <span class="property-color">edadJuan</span>
+                                ===
+                                <span class="property-color">edadString</span>
+                            )
+                        </span>
+                        &#123
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="property-color">console</span>.<span class="function-color">log</span>(<span class="value-color">`Los valores de las edades son iguales.`</span>);
+                    </code>
+
+                    <br>
+
+                    <code>
+                        &#125
+                        <span class="parametro-color">else</span>
+                        &#123
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="property-color">console</span>.<span class="function-color">log</span>(<span class="value-color">`Los valores de las edades son diferentes.`</span>);
+                    </code>
+
+                    <br>
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <div class="cont-resultados">
+                    <div class="cont-resultado"></div>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- DESIGUALDAD -->
+            <article>
+                <h2>Operador Desigualdad (!=)</h2>
+
+                <div>
+                    <p>Compara dos valores, retorna <b>true</b> si son diferentes.</p>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="tag-color">let</span>
+                        <span class="property-color">edadJuan</span>
+                        =
+                        <span class="number-color">28</span>;
+                    </code>
+
+                    <br>
+
+                    <code>
+                        <span class="tag-color">let</span>
+                        <span class="property-color">edadSol</span>
+                        =
+                        <span class="number-color">38</span>;
+                    </code>
+
+                    <br><br>
+
+                    <code>
+                        <span class="parametro-color">if</span>
+                        <span class="function-color">
+                            (
+                                <span class="property-color">edadJuan</span>
+                                !=
+                                <span class="property-color">edadSol</span>
+                            )
+                        </span>
+                        &#123
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="property-color">console</span>.<span class="function-color">log</span>(<span class="value-color">`Las edades son diferentes.`</span>);
+                    </code>
+
+                    <br>
+
+                    <code>
+                        &#125
+                        <span class="parametro-color">else</span>
+                        &#123
+                    </code>
+
+                    <br>
+
+                    <code class="margin-20">
+                        <span class="property-color">console</span>.<span class="function-color">log</span>(<span class="value-color">`Las edades son iguales.`</span>);
+                    </code>
+
+                    <br>
+
+                    <code>
+                        &#125
+                    </code>
+                </div>
+
+                <div class="cont-resultados">
+                    <div class="cont-resultado"></div>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <!-- DESIGUALDAD ESTRICTA -->
+            <article>
+                <h2>Operador Desigualdad Estricta (!==)</h2>
+
+                <div>
+                    <p>Compara dos valores, retorna <b>true</b> si son diferentes. También, discrimina el tipo de dato</p>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="tag-color">let</span>
+                        <span class="property-color">edadJuan</span>
+                        =
+                        <span class="number-color">28</span>;
+                    </code>
+
+                    <br>
+
+                    <code>
+                        <span class="tag-color">let</span>
+                        <span class="property-color">edadString</span>
+                        =
+                        <span class="value-color">'28'</span>;
+                    </code>
+
+                    <br><br>
+
+                    <code>
+                        <span class="property-color">console</span>.<span class="function-color">log</span>
+                        (
+                            <span class="number-color">28</span>
+                            !==
+                            <span class="property-color">edadJuan</span>
+                        );
+                            <span class="comment-color">// False</span>
+                    </code>
+
+                    <br>
+
+                    <code>
+                        <span class="property-color">console</span>.<span class="function-color">log</span>
+                        (
+                            <span class="value-color">'28'</span>
+                            !==
+                            <span class="property-color">edadJuan</span>
+                        );
+                            <span class="comment-color">// True</span>
+                    </code>
+                </div>
+
+                <div class="cont-resultados">
+                    <div class="cont-resultado"></div>
+                    <div class="cont-resultado"></div>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <!-- MAYOR QUE -->
+            <article>
+                <h2>Operador ">" (Mayor que)</h2>
+
+                <div>
+                    <p>
+                        Se utiliza para determinar si el <b>valor que antecede</b> a la condición es <b>mayor al que precede</b>. Si la condición se cumple retorna <b>true</b>.
+                    </p>
+                </div>
+
+                <div class="cont-codigo">
+
+                    <code>
+                        <span class="property-color">console</span>.<span class="function-color">log</span>
+                        (
+                            <span class="property-color">edadJuan</span>
+                            >
+                            <span class="property-color">edadSol</span>
+                        );
+                            <span class="comment-color">// False</span>
+                    </code>
+
+                </div>
+
+                <div class="cont-resultados">
+                    <div class="cont-resultado"></div>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- MENOR QUE -->
+            <article>
+                <h2>Operador "&#60" (Menor que)</h2>
+
+                    <div>
+                        <p>
+                            Se utiliza para determinar si el <b>valor que antecede</b> a la condición es <b>menor a la que precede</b>. Si la condición se cumple retorna true.
+                        </p>
+                    </div>
+
+                    <div class="cont-codigo">
+                        <code>
+                            <span class="property-color">console</span>.<span class="function-color">log</span>
+                            (
+                                <span class="property-color">edadJuan</span>
+                                &#60
+                                <span class="property-color">edadSol</span>
+                            );
+                                <span class="comment-color">// True</span>
+                        </code>
+                    </div>
+
+                    <div class="cont-resultados">
+                        <div class="cont-resultado"></div>
+                    </div>
+            </article>
+
+            <hr />
+
+            <!-- MAYOR O IGUAL -->
+            <article>
+                <h2>Operador ">=" (Mayor o igual que)</h2>
+
+                <div>
+                    <p>
+                        Se utiliza para determinar <b>si un valor es 'mayor' o 'igual'</b> a otro. Si la condición se cumple, retorna true.
+                    </p>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="property-color">console</span>.<span class="function-color">log</span>
+                        (
+                            <span class="property-color">edadJuan</span>
+                            &#62=
+                            <span class="number-color">28</span>
+                        );
+                            <span class="comment-color">// True</span>
+                    </code>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <!-- MENOR O IGUAL -->
+            <article>
+                <h2>Operador "&#60=" (Menor o igual que)</h2>
+
+                <div>
+                    <p>
+                        Se utiliza para determionar si <b>un valor es 'menor' o 'igual'</b> a otro. Si la condición se cumple, retorna true.
+                    </p>
+                </div>
+
+                <div class="cont-codigo">
+                    <code>
+                        <span class="property-color">console</span>.<span class="function-color">log</span>
+                        (
+                            <span class="property-color">edadJuan</span>
+                            &#60=
+                            <span class="number-color">28</span>
+                        );
+                            <span class="comment-color">// True</span>
+                    </code>
+                </div>
+                
+            </article>
+        </section>
+    </main>
+    <script src="../js/ejemplos/operadoresComparativos.js"></script>
+</body>
+
+</html>

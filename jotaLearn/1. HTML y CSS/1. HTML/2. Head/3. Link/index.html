@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link & Script</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <!-- Contenedor Principal -->
+    <main>
+
+        <!-- Header -->
+        <header>
+            <h1>Link & Script</h1>
+        </header>
+
+        <!-- Contenido Principal -->
+        <section>
+
+            <!-- Link -->
+            <article class="cont-link">
+                <h2>Link</h2>
+
+                <p>
+                    La etiqueta <b>link</b> es importante reconocerla ya que es la que nos permite <b>conectar</b>
+                    la <b><em>hoja de estilos</em></b> (CSS) o todo lo que esté relacionado con <b>CSS</b> en nuestro código de HTML.
+                </p>
+
+                <p>
+                    Es una etiqueta que genera información al navegador y se ubica en la <b>sección de la etiqueta "head"</b>
+                    , con esto se quiere decir que es una etiqueta que no contiene contenido para mostrar en el navegador
+                    por lo que es una etiqueta simple y todo su contenido se pasa por las <b>propiedades</b> y <b>atributos</b>
+                    cada uno con sus <b>respectivos valores</b>.
+                </p>
+
+                <p>
+                    La <b>propiedad</b> que necesitamos saber utilizar que contiene esta etiqueta es la llamada <b><em>"rel"</em></b> , la que recibe como valor <b><em>"stylesheet"</em></b> (hoja de estilo). De esta manera estamos indicando que nuestro documento se <b>conectará</b> (link) a una <b><em>hoja de estilos</em></b> (stylesheet).
+                </p>
+
+                <div class="cont-code">
+                    <code class="code-stylesheet">rel='stylesheet'</code>
+                </div>
+
+                <p>
+                    El atributo <b>"rel"</b> no es el único que vamos a utilizar dentro de la etiqueta <b>link</b>, si no,
+                    que también vamos a utilizar el atributo <b>"href"</b> que es donde colocaremos <b>la ruta donde se encuentra
+                    dicho documento</b>. Generalmente usamos documentos que se encuentran en nuestro directorio
+                    y para acceder a ellos utilizamos el siguiente comando: 
+                </p>
+
+                <div class="cont-code">
+                    <code>
+                        href="./css/styles.css"
+                    </code>
+                </div>
+
+                <p>
+                    Donde <b>"./</b> se refiere a la ubicación donde estamos navegando en el directorio. Luego,
+                    entontramos el directorio de <b>css</b>, que es una <b>carpeta</b> para <b>los archivos de tipo css</b>
+                    que nuestro documento tiene, es decir, ahí colocaremos todos los archivos que vayamos a utilizar.
+                    Por último, tenemos <b>el nombre del archivo</b> que en este caso es <b><em>styles.css</em></b>. Se
+                    utiliza este nombre genérico o alguno parecido para los estilos de la página principal.
+                </p>
+
+                <div class="cont-code">
+                    <code>&#60link rel="stylesheet" href="./css/styles.css" /&#62</code>.
+                </div>
+            </article>
+
+            <!-- Link 2 -->
+            <article>
+                <h2>Estilos en barra de herramienta</h2>
+
+                <p>
+                    Un estilo adicional que debemos saber y es muy util a la hora de crear sitios webs, es el estilo
+                    que podemos <b>agregar una imagen</b> al lado de nuestro título en la barra de herramientas.
+                    Esto lo podemos lograr gracias al <b>valor</b> en el <b>atributo de "rel"</b>.
+                </p>
+
+                <p>
+                    En este caso, en vez de colocar stylesheet debemos colocar, <b>"icon"</b> seguido del atributo
+                    <b>href</b> que es donde se encuentra el archivo que vamos a conectar a nuestro sitio.
+                </p>
+
+                <div class="cont-code">
+                    <code>&#60link rel="icon" href="./img/nombrearchivo.png" /&#62</code>
+                </div>
+            </article>
+
+            <!-- Script -->
+            <article class="cont-script">
+                <h2>Script</h2>
+
+                <p>
+                    La etiqueta <b>"script"</b> cumple un objetivo muy similar al de la etiqueta link, los aspectos que la diferencia es que la función de <b>"script"</b> es para <b>insertar un código construído en JavaScript</b>. Además, es una etiqueta que puede contener contenido, esto quiere decir que necesitamos cerrar la declaración con una etiqueta de cierre.
+                </p>
+
+                <div class="cont-code">
+                    <code>&#60script&#62&#60/script&#62</code>
+                </div>
+
+                <p>
+                    Ahora, para enlazar la página donde construímos el JavaScript debemos colocarla dentro de un atributo llamado <b><em>"src"</em></b>. Seguido de la ubicación del archivo dentro del directorio.
+                </p>
+
+                <div class="cont-code">
+                    <code>&#60script src="./js/scripts.js"&#62&#60/script&#62</code>
+                </div>
+
+                <p>
+                    Donde <b>./</b> es la ubicación del directorio, <b>js</b> es la carpeta donde se encuentra el archivo y todos
+                    los archivos que construiremos con el formato <b><em>"js"</em></b> y por último, encontramos el <b>nombre del archivo</b>
+                    <b><em>"scripts.js"</em></b>.
+                </p>
+            </article>
+        </section>
+
+    </main>
+
+
+</body>
+</html>

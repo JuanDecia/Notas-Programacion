@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta Meta</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5c75cb074f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <!-- Contenedor Principal-->
+    <main>
+
+        <!-- Header -->
+        <header id="inicio">
+            <h1>Etiqueta Meta</h1>
+
+            <nav>
+                <!-- Boton Hamburguesa -->
+                <div class="menu-toggle">
+                    <img class="menu-img" src="./img/bars-solid.svg" alt="menu" />
+                </div>
+
+                <ul class="navegacion">
+                    <li><a class="link-header" href="#introduccion">Introducción</a></li>
+                    <li><a class="link-header" href="#meta">Sintaxis Meta</a></li>
+                    <li><a class="link-header" href="#charset">Propiedad Charset</a></li>
+                    <li><a class="link-header" href="#name">Propiedad Name</a></li>
+                    <li><a class="link-header" href="#content">Propiedad Content</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Contenido Principal -->
+        <section>
+
+            <!-- Introducción -->
+            <article id="Introduccion" class="cont-introduccion">
+
+                <h2>Introducción</h2>
+
+                <p>
+                    La etiqueta <b>meta</b> son las que nos permite definir el comportamiento de nuestra página y que también ayudan a posicionar mejor a la página dentro de las búsquedas del navegador. Estas etiquetas no tienen <b>etiqueta de cierre</b> por lo que solo se colocan <b>propiedades</b> o <b>atributos</b> con sus respectivos <b>valores</b>. Como hemos visto anteriormente, estas etiquetas son colocadas dentro de la <b>estructura de la etiqueta head</b>.
+                </p>
+
+            </article>
+
+            <hr />
+
+            <!-- Sintaxis meta -->
+            <article id="meta" class="cont-meta">
+
+                <h2>Sintaxis de meta</h2>
+
+                <p>
+                    Generalmente la etiqueta meta se contruyen con una propiedad llamada <b>"name"</b>, la cual contiene <b>un valor</b> que <b>representará el comportamiento de dicha etiqueta</b>. Al valor lo debemos colocar dentro de una <b>propiedad</b> llamada <b>"content"</b> la cual se le asigna el valor que realmente <b>modificará la etiqueta</b>.
+                </p>
+
+                <p>
+                    En el siguiente ejemplo podremos ver una <b>sintaxis</b> de como construir la etiqueta meta:
+                </p>
+
+                <div class="code">
+                    <code>&#60meta name="viewport" content="width=device-width" /&#62</code> 
+                </div>  
+
+                <p>
+                    Debemos tener en cuenta que existen diferentes <b>tipos de valores</b> para las propiedades de <b>name</b> y <b>content</b>.
+                </p>
+
+            </article>
+
+            <hr />
+
+            <!-- Propiedades y valores -->
+            <article class="cont-meta">
+
+                <h2>Propiedades y valores de la etiqueta Meta</h2>
+
+                <p>
+                    A continuación, se describen algunos atributos o propiedades con sus respectivas funciones para tener en cuenta en los proyectos.
+                </p>
+
+                <!-- propiedad charset -->
+                <div id="charset" class="cont-charset">
+
+                    <h3>Propiedad Charset</h3>
+
+                    <p>
+                        La propiedad <b>charset</b> indica el <b>formato de caracteres</b> que va a ser renderizado por nuestro sitio web. Como valor debemos especificar <b>los caracteres</b> como nuestro formato de caracter es el latín, debemos usar el siguiente <b>valor: "UTF-8"</b>.
+                    </p>
+
+                    <p>
+                        La sintaxis de esta propiedad en la etiqueta sería la siguiente: 
+                    </p>
+
+                    <div class="code">
+                        <code>&#60meta charset = "UTF-8" /&#62</code>
+                    </div>
+                    
+                </div>
+
+                <!-- Propiedad name -->
+                <div id="name" class="cont-name">
+                    <h3>Propiedad Name</h3>
+
+                    <p>
+                        La propiedad <b>name</b> recibe el valor que modificará la etiqueta y el comportamiento de nuestra página y el navegador. <b>Name</b> puede recibir los siguientes valores:
+                    </p>
+
+                    <ul>
+                        <li>
+                            <b>Viewport: </b>Este <b>valor</b> declarado en la propiedad de <b>name</b> trabaja sobre el <b>viewport</b> de <b>nuestra página</b>, es decir, el espacio visible del navegador.
+                        </li>
+                        <li>
+                            <b>Author: </b>Este <b>valor</b> especifica quién es el propietario del sitio web.
+                        </li>
+                        <li>
+                            <b>Keywords: </b>Este valor identifica las palabras claves que corresponden al sitio web. Su funcionalidad es ayudar a la página a que sea encontrada más facilmente.
+                        </li>
+                        <li>
+                            <b>Description: </b>Este valor nos permite crear una <b>descripción breve</b> del sitio web
+                        </li>
+                    </ul>
+
+                    <div class="cont-link">
+                        <a class="acerca-viewport" href="./html/viewport.html">
+                            Lee más acerca del viewport
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Propiedad Content -->
+                <div id="content" class="cont-content">
+                    <h3>Propiedad Content</h3>
+
+                    <p>
+                        Esta <b>propiedad</b> se coloca despues de la propiedad <b>name</b>, ya que, <b>content</b> recibe el <b>valor</b> que va a modificar el comportamiento de la etiqueta <b>&#60meta /&#62</b>. Esta propiedad puede recibir <b>más de un valor</b> declarado.
+                    </p>
+
+                    <div class="code">
+                        <code>
+                            &#60meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        </code>
+                    </div>
+
+
+                    <p>
+                        A continuación, se especificarán los valores que generalmente puede recibir la propiedad <b>content</b>:
+                    </p>
+
+                    <!-- Valores de content -->
+                    <p>
+                        En la propiedad <b>name</b> que recibe el valor de <b>viewport</b>, podemos declarar en la propiedad de <b>content</b> (recordemos que este modifica el comportamiento de name) los siguientes valores en la lista: 
+                    </p>
+
+                    <ul class="content-viewport">
+                        <li>width</li>
+                        <li>initial-scale</li>
+                        <li>user-scalable</li>
+                    </ul>
+
+                    <p>
+                        Cada uno de estos <b>valores</b> se comportan como un <b>atributo</b> diferente, porque, ellos también deben recibir un valor específico. Por eso es que se los separa por <b>","</b> y llevan un símbolo de <b>"="</b> para <b>asignar</b> el atributo declarado. A continuación, especificaremos cada uno de ellos cual es el comportamiento o la modificación que genera en la etiqueta "meta".
+                    </p>
+
+                    <div class="cont-valoresViewport">
+
+                        <h4>Width</h4>
+
+                        <p>
+                            <b>Width</b> recibe como valor <b>"device-width"</b>, esto se traduce a que el <b>viewport</b> del <b>dispositivo</b> (nombrado como device) tendrá el <b>ancho</b> (nombrado como width) de la pantalla donde se esté visualizando la página.
+                        </p>
+
+                        <h4>Initial-scale</h4>
+
+                        <p>
+                            Este atributo dentro de la propiedad <b>content</b>, refiere al <b>zoom</b> que tendrá el sitio web al iniciarse o refrescar la página. El valor que generalmente se coloca es de <b>1.0</b>.
+                        </p>
+
+                        <h4>user-scalable</h4>
+
+                        <p>
+                            Este valor-atributo, refiere a que si el usuario puede o no <b>hacer zoom</b> en el sitio. Generalmente, el valor que recibe es <b>no</b>, ya que, si está activado podría ser una experiencia negativa la visita del usuario en el sitio que se está navegando.
+                        </p>
+
+                        <p>
+                            A continuación, se colocará una sintaxis que contendrá a todos estos valores dentro de la misma etiqueta de meta.
+                        </p>
+
+                        <div class="code">
+                            <code>
+                                &#60meta name = "viewport" content = "width = device - width, initial-scale = 1.0, user-scalable = no" /&#62
+                            </code>
+                        </div>
+
+                        <p>
+                            También se deja una imágen ilustrativa de como sería un sitio sin esta etiqueta meta con la propiedad de viewport declarada, y como sería, si la tuviera:
+                        </p>
+
+                        <div class="cont-img">
+                            <img src="./img/viewport.jpg" alt="viewport" title="viewport" />
+                        </div>
+                    </div>
+
+                    <!-- Valores Author -->
+                    <div>
+
+                        <h4>Author</h4>
+
+                        <p>
+                            En la propiedad de <b>name</b> que recibe el valor de <b>author</b>, debemos indicar en el <b>valor</b> de la propiedad <b>content</b> el <b>dueño del propietario de la página</b>. Por ejemplo, Juan Decia.
+                        </p>
+
+                        <div class="code">
+                            <code>&#60meta name = "author" content = "Juan Decia" /&#62</code>
+                        </div>
+
+                    </div>
+
+                    <!-- Valores Keywords -->
+                    <div>
+                        <h4>Keywords</h4>
+
+                        <p>
+                            En el valor de <b>content</b> de esta construcción meta debemos colocar <b>palabras clave</b> que estén relacionadas con el sitio.
+                        </p>
+
+                        <div class="code">
+                            <code>
+                                &#60meta name = "keywords" content = "etiqueta meta, notas, aprendizaje, html" /&#62
+                            </code>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Valores Description -->
+                    <div>
+                        <h4>Description</h4>
+
+                        <p>
+                            El valor que le debemos pasar a <b>content</b> de esta construcción de la etiqueta meta debe ser un breve titulo a lo que se refiere la página.
+                        </p>
+
+                        <div class="code">
+                            <code>
+                                &#60meta name = "description" content = "construcción de metadatos en html" /&#62
+                            </code>
+                        </div>
+
+                    </div>
+
+                    <div class="cont-volver-arriba">
+                        <a class="link-volver-arriba" href="#inicio">Volver Arriba</a>
+                    </div>
+                    
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <script src="./scripts/index.js"></script>
+</body>
+</html>

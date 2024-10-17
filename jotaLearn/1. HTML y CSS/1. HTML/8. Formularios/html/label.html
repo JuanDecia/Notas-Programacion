@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="keywords" content="formulario, etiquetas, form">
+    <meta name="author" content="Juan Decia">
+
+    <link rel="stylesheet" href="../css/label.css">
+
+    <title>Etiqueta Label</title>
+
+</head>
+<body>
+
+  <main>
+
+    <header>
+  
+      <h1>Etiqueta Label</h1>
+  
+      <nav>
+  
+        <!-- Flecha -->
+        <div>
+          <a href="../index.html">
+            <img
+              class="flecha"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEvtlNsNgzAQBIcO0gkpgZSQSmgh6SgdQAnQSUpAJ4F0imLfGsMf/rZmbtePhpNXczKfSxA2XFLRDeiBd0h1G1SBwQfgvgpeqkQRePgMdMD3KEEV3IbIJaiG5wSHwFMCD1erTg77ryITjEBbQk/VnToDL5mAR8nN8YNFh7wl2S2J3kF1kkhgaaskiuBX8gQ+6gVQBZvEvgkZHr1kdcjsvpIEu4SXIKxtAb+eIBmkl/3TAAAAAElFTkSuQmCC"
+            />
+          </a>
+        </div>
+  
+        <div class="cont-link">
+          <a href="../index.html">Volver a Inicio</a>
+        </div>
+      </nav>
+  
+    </header>
+  
+    <section>
+
+      <!-- Introducción -->
+      <article class="cont-introduccion">
+        <h2>Introducción</h2>
+  
+        <p>
+          La etiqueta <strong>label</strong> cuenta con un <b>atributo</b> que es fundamental <b>para asociarla</b> a la <b>etiqueta input</b>. El atributo <b>“for”</b> se utiliza para <b>vincular</b> una etiqueta <b>&#60label&#62</b> con el elemento al que está describiendo, permitiendo que el usuario haga clic en la etiqueta para seleccionar el elemento correspondiente (como una caja de texto o una casilla de verificación). Es importante para hacer accesible el formulario a personas con discapacidades, ya que esto les permite seleccionar elementos de un formulario mediante el teclado.
+        </p>
+  
+      </article>
+
+      <!-- Sintaxis -->
+
+      <article class="cont-sintaxis">
+        <h2>Sintaxis para usar Label</h2>
+
+        <div class="cont-codigo">
+          <!-- Línea 1 -->
+          <code>
+            <span class="txt-white">&#60</span><span class="tag-color">form</span><span class="txt-white">&#62</span>
+          </code>
+
+          <br />
+
+          <!-- Línea 2 -->
+          <code class="margin-20">
+            <span class="txt-white">&#60</span><span class="tag-color">label</span>
+            <span class="property-color">for=</span><span class="value-color">'nombre'</span><span class="txt-white">&#62Ingrese su Nombre: </span><span class="txt-white">&#60/</span><span class="tag-color">label</span><span class="txt-white">&#62</span>
+          </code>
+
+          <br />
+
+          <!-- Línea 3 -->
+          <code class="margin-20">
+            <span class="txt-white">&#60</span><span class="tag-color">input</span>
+            <span class="property-color">type=</span><span class="value-color">'text'</span>
+            <span class="property-color">name=</span><span class="value-color">'nombre'</span>
+            <span class="property-color">id=</span><span class="value-color">'nombre'</span>
+            <span class="property-color">placeholder=</span><span class="value-color">'Ej: Juan'</span>
+          </code>
+
+          <br />
+
+          <!-- Línea 4 -->
+          <code>
+            <span class="txt-white">&#60/</span><span class="tag-color">form</span><span class="txt-white">&#62</span>
+          </code>
+
+        </div>
+      </article>
+
+      <!-- Ejemplo -->
+
+      <article class="cont-ejemplo">
+        <h2>Ejemplo Label</h2>
+
+        <p>
+          A continuación crearemos un ejemplo con un label con valor "Ingrese su nombre" el cual estará  conectado con la etiqueta de "input". Donde <b>Ingrese su nombre</b> estará dentro de la etiqueta <b>label</b> y se conectará con el campo de <b>input</b> gracias al atributo <b>for.</b>.
+        </p>
+      
+        <div class="ejemplo-label">
+          <label for="nombre">Ingrese su nombre: </label> <!-- Colocamos "nombre" en la propiedad "for" -->
+          <input type="text" name="nombre" id="nombre" placeholder="Ej: Juan"> <!-- Conectamos <label> llamando el mismo valor en el "id" que "for", en este caso "nombre" -->
+        </div>
+
+        <p>
+          Si <b>presionamos</b> o hacemos <b>click</b> sobre el <b>texto</b> que dice <b>'Ingrese su nombre</b>, automáticamente el cursor nos pondrá sobre el campo del input para dejar preparado el ingreso del texto.
+        </p>
+
+      </article>
+    </section>
+  
+  </main>
+</body>
+</html>

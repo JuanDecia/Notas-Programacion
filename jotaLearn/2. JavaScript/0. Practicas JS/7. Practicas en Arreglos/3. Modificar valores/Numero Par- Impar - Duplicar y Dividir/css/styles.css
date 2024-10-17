@@ -1,0 +1,49 @@
+/* ESTILOS ETIQUETAS */
+
+body {
+    max-width: 80%;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    color: rgb(33, 141, 127);
+}
+
+h2 {
+    color: rgb(22, 174, 201);
+}
+
+h3 {
+    color: rgb(189, 59, 59);
+}
+
+code {
+    display: block;
+}
+
+/* ESTILOS CLASES */
+
+.fondo-codigo {
+    background-color: blanchedalmond;
+}
+
+.fondo-codigo code:first-child {
+    margin-bottom: 10px;
+}
+
+.indentacion-20 {
+    margin-left: 20px;
+}
+
+.indentacion-40 {
+    margin-left: 40px;
+}
+
+.indentacion-60 {
+    margin-left: 60px;
+}

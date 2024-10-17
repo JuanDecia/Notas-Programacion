@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    
+    <main>
+        <header>
+            <h1>Funciones</h1>
+
+            <nav></nav>
+        </header>
+
+        <section>
+
+            <!-- Introducción -->
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        Son un conjunto de instrucciones que al ser ejecutadas realizan las instrucciones especificadas dentro de 
+                        su campo. Esta puede retornar en la finalización de la instrucción, un valor específico para luego 
+                        utilizarlo en algún fragmento de nuestro código. Como ejemplo, podemos tomar los methods de los arreglos 
+                        en el que construímos una función para una tarea determinada, en algunos casos necesitamos que nos devuelva 
+                        el valor y en otros que sencillamente se ejecute la instrucción.
+                    </p>
+                
+                    <p>
+                        Una función puede requerir ser llamada pasándole cierta información o no requerir información. 
+                        Esto quiere decir que algunas pueden llevar parámetros (requiere información) y otras que no 
+                        llevan parámetros (no requieren información).
+                    </p>
+                
+                    <p>
+                        Una función puede recibir tantos parámetros como sea necesario, aunque no es buena práctica que la misma 
+                        lleve 4 o más parámetros.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Parámetros -->
+            <article>
+                <h2>Parámetros</h2>
+
+                <div>
+                    <p>
+                        Cuando una función recibe un parámetro, dicho parámetro funciona como si se tratara de una variable 
+                        disponible para la función (variable de ámbito local). Los parámetros predeterminados de función, 
+                        permiten que los parámetros con nombre se inicien con valores predeterminados si no se pasa ningún valor. 
+                        En JavaScript, los parámetros de función están predeterminados en undefined cuando estos no están declarados 
+                        explícitamente. Sin embargo, a menudo es útil establecer un valor predeterminado diferente.                        
+                    </p>
+
+                    <p>
+                        En el siguiente ejemplo, si no se proporciona ningún valor para  ”b” cuando se llama a
+                        ”cuentaSumar”, el valor de ”b” sería <b>undefined</b>, al evaluar ”a + b” 
+                        y el resultado que nos retornaría "cuentaSumar" sería <b>Nan en consola</b> y 
+                        <b>undefined en el DOM</b>.
+                    </p>
+                </div>
+
+                <!-- Código Cuenta -->
+                <div class="cont-codigo fondo-codigo">
+                    <code>const cuentaSumar = (a, b) => {</code>
+                    <code class="indentacion-20">console.log(`El resultado de la suma es: ${a + b}.`)</code>
+                    <code class="indentacion-20">return a + b;</code>
+                    <code>}</code>
+                    <code>console.log(cuentaSumar(5, 2)); <span class="cont-resultado"></span></code>
+                </div>
+
+                <div>
+                    <p>
+                        Como es una función que no <b>retorna</b> un valor, es decir, que no nos está devolviendo
+                        un resultado, el mismo no puede ser colocado en el DOM porque es como que estamos
+                        tratando de colocar el fragmento de la función completa y no solo el resultado
+                        que estamos buscando. Por eso el resultado que nos muestra el DOM es <b>undefined</b>.
+                    </p>
+
+                    <p>
+                        Por lo contrario, si buscamos el resultado de esta operación en la consola, vamos a encontrar
+                        que se efectua correctamente la función. Esto sucede porque en la consola no necesitamos
+                        que muestre <b>un valor</b> específico, si no, que podemos pasar la función como argumento
+                        de "console.log()" para mostrar el resultado, esto nos debería retornar "7".
+                    </p>
+                </div>
+
+            </article>
+
+            <hr />
+
+            <!-- Return -->
+            <article>
+                <h2>Return</h2>
+
+                <div>
+                    <p>
+                        Una función en JavaScript puede devolver un resultado si se le introduce la palabra clave return, donde 
+                        return es aquello que queremos sacar de la función. Una vez se llega a la sentencia return se produce la 
+                        devolución del resultado y se interrumpe la ejecución (finaliza) de la función. Por ello, estructuralmente 
+                        return es la última instrucción dentro de la función. En JS una variable puede tener el valor de una función. 
+                    </p>
+                </div>
+
+                <!-- Código Multiplicar -->
+                <div class="cont-codigo fondo-codigo">
+                    <code>cuentaMultiplicar = (a, b) => {</code>
+                    <code class="indentacion-20">return a * b;</code>
+                    <code>}</code>
+                    <code>console.log(cuentaMultiplicar(5, 2)); <span class="cont-resultado"></span></code>
+                </div>
+
+                <div>
+                    <p>
+                        A diferencia del ejemplo anterior, en este caso podemos visualizar el resultado
+                        que nos devuelve la función. Esto se debe porque dentro de la misma, gracias a la
+                        palabra reservada <b>return</b>, ésta nos está guardando un resultado que nosotros le
+                        hemos asignado. Por eso, en esta ocasión pudimos visualizar el resultado.
+                    </p>
+                </div>
+
+                <h3>Falta de parámetro</h3>
+
+                <div>
+                    <p>
+                        Si colocamos la llamada de la función y luego nos olvidamos un <b>parámetro</b>, nos retorna
+                        el mismo resultado que en la función anterior. Más adelante, vamos a ver una de las maneras
+                        que podemos evitar obtener ese resultado.
+                    </p>
+                </div>
+
+                <h3>Parámetro Establecido Por Defecto</h3>
+
+                <div>
+                    <p>
+                        Con los parámetros predeterminados en EC2015, puedes asignar 1 como valor predeterminado para b en el 
+                        encabezado de la función lo cual en esta ocasión de multiplicar si solo pasamos un parámetro nos puede 
+                        retornar de todas maneras el resultado:
+                    </p>
+                </div>
+
+                <!-- Código Multiplicar -->
+                <div class="cont-codigo fondo-codigo">
+                    <code>cuentaMultiplicar = (a, b = 1) => {</code>
+                    <code class="indentacion-20">return a * b;</code>
+                    <code>}</code>
+                    <code>console.log(cuentaMultiplicar(5, 2)); <span class="cont-resultado"></span></code>
+                    <code>console.log(cuentaMultiplicar(5)); <span class="cont-resultado"></span></code>
+                    <code>console.log(cuentaMultiplicar(5, undefined)); <span class="cont-resultado"></span></code>
+                </div>
+
+                <div>
+                    <p>
+                        En esta ocasión pudimos lograr evitarnos el error de que la consola y el DOM nos arroje
+                        un error. Esto fue gracias que en el caso de esta operación matemática podemos escojer
+                        el valor de uno de los parámetros, en este caso <b>b = 1</b>.
+                    </p>
+
+                    <p>
+                        Como <b>b</b> siempre tiene el valor de "1", aunque el parámetro se encuentre <b>vacío</b>
+                        o <b>indefinido</b> al momento de hacer la llamada de la función <b>no nos retorna el error</b>.
+                    </p>
+                </div>
+
+            <article>
+
+            <hr />
+
+            <!-- Sintaxis -->
+            </article>
+                <h2>Sintaxis</h2>
+
+                <div>
+                    <p>
+                        Primero, debemos declarar la palabra reservada “function” seguida del nombre que le daremos a la función. 
+                        Luego, de ser necesario colocaremos los paréntesis en donde se encuentran los parámetros de la función y 
+                        si son más de uno, estos deben estar separados por coma. Por último, debemos saber que las declaraciones 
+                        que definen la función deben estar encerradas entre {}.
+                    </p>
+
+                    <p>
+                        <code class="cont-codigo fondo-codigo">function nombreFuncion() {}</code>
+                    </p>
+
+                    <p>
+                        En el caso que necesitemos que la función nos retorne un resultado en específico, en la última línea de 
+                        la construcción de la misma debemos declarar la palabra clave reservada  “return”, seguido del valor que 
+                        necesitemos que nos tiene que dar.
+                    </p>
+
+                    <div class="cont-codigo fondo-codigo">
+                        <code>function nombreFuncion {</code>
+                        <code class="indentacion-20">return</code>
+                        <code>};</code>
+
+                    </div>
+                </div>
+
+                <!-- Ejemplos sintaxis -->
+                <div class="">
+                    <h3>Ejemplo: </h3>
+
+                    <div>
+                        <p>
+                            Crearemos una variable con el nombre “resultado”, el valor que le agregaremos a la variable es el
+                            nombre de nuestra función “sumar()” dentro de los paréntesis pondremos los parámetros que vamos a 
+                            desear sumar.
+                        </p>
+
+                        <div class="cont-codigo fondo-codigo">
+                            <code>function operacionSumar(a, b) {</code>
+                            <code class="indentacion-20">return a + b;</code>
+                            <code>}</code>
+                            <code>let resultado = operacionSumar(4, 5);</code>
+                            <code>console.log(resultado); <span id="ejemplo-suma"></span></code>
+                        </div>
+
+                        <h3>Función en una variable</h3>
+
+                        <div>
+                            <p>
+                                Podemos colocar una función en una variable y luego llamarla por el nombre
+                                de la misma. Esta práctica la vamos a conocer como <b>función de tipo flecha</b>
+                                y es con la que <b>vamos a comenzar a trabajar</b> de ahora en adelante.
+                            </p>
+
+                            <p>
+                                En JavaScript se comenzó a utilizar este tipo de funciones porque se guardan en una
+                                variable que hemos visto anteriormente llamadas <b>constantes</b> (const). Si recordamos
+                                un poco de sus características, estas constantes <b>no pueden ser cambiadas</b> en el
+                                futuro de nuestro código, es decir, si declaramos <span class="fondo-codigo">const numeroTres = 3;</span>
+                                luego no nodemos declarar que <b>numeroTres</b> tiene otro valor. 
+                            </p>
+
+                            <p>
+                                Pasando esto a las funciones, nuestras páginas quedarán más seguras, ya que, los resultados (return)
+                                no van a poder cambiarse su valor en tiempo real, porque, están protegidas por la declaración de
+                                la función flecha.
+                            </p>
+                        </div>
+
+                        <div class="fondo-codigo cont-codigo">
+                            <code>const operacionSumarFlecha = (a, b) => a + b;</code>
+                        </div>
+
+                        <div>
+                            <p>
+                                En este momento no vamos a entrar en detalles en la sintaxis (lo veremos más
+                                en detalle en el siguiente tema) pero si prestamos atención practicamente
+                                estamos realizando los mismos pasos de la función, aunque cambia un poco 
+                                la sintaxis.
+                            </p>
+
+                            <p>
+                                Cuando realizamos la llamada, debemos colocar el <b>nombre</b> que le dimos a la
+                                <b>variable const</b>, es decir, <b>operacionSumarFlecha</b>.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <p>
+                            Una variable también puede ser de tipo función la cual podemos usar posteriormente en cualquier 
+                            parte del código, pudiendo ser esta variable asignada a otras variables o ser colocada como argumento 
+                            en otra función.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Valores en Variables -->
+            <article>
+                <h2>Valores en Variables</h2>
+
+                <div>
+                    <p>
+                        En el caso anterior vimos una <b>función flecha</b> que nos da una mejor protección
+                        a la vulnerabilidad de nuestro código. También, podemos lograr algo similar usando
+                        variables para almacenar los valores que deseamos retornar. Para ejemplificar este
+                        concepto lo vamos a pasar a código: 
+                    </p>
+                </div>
+
+                <div class="cont-codigo fondo-codigo">
+                    <code>function NombreCompleto (nombre, apellido) {</code>
+                    <code class="indentacion-20">const nombreCompleto = `${nombre} ${apellido}.`;</code>
+                    <code class="indentacion-20">return nombreCompleto;</code>
+                    <code>}</code>
+                </div>
+
+                <div>
+                    <p>
+                        Como podemos observar en el ejemplo hemos utilizado una variable para <b>guardar el valor del resultado</b>
+                        de nuestra función, que, posteriormente la <b>declaramos</b> en la línea donde usamos <b>return</b>,
+                        para que nuestra función nos <b>retorne lo que se encuentra en la variable "NombreCompleto"</b>.
+                    </p>
+                </div>
+
+            </article>
+
+            <!-- Ambito -->
+            <article>
+
+                <div>
+                    <h2>Ámbito de variables en las funciones</h2>
+                </div>
+
+                <div>
+                    <p>
+                        En este sub-tema vamos a conocer un poco mejor sobre el ámbito de las variables
+                        y como se realcionan con las funciones.
+                    </p>
+
+                    <p>
+                        En el primer caso de este tema, vamos a tener una variable <b>fuera de la función</b>
+                        que posteriormente va a ser <b>utilizada dentro de la función</b>, el objetivo de esta
+                        práctica es ver el resultado de si es posible o no utilizar una variable de <b>ámbito global</b>
+                        dentro de la función.
+                    </p>
+                </div>
+
+                <div class="cont-codigo fondo-codigo">
+                    <code>let numeroDiez = 10;</code>
+                    <code>const restaNumero = (a, b) => {</code>
+                    <code class="indentacion-20">let a = numeroDiez</code>
+                    <code class="indentacion-20">let b = 5;</code>
+                    <code class="indentacion-20">return a - b</code>
+                    <code>}</code>
+                </div>
+
+                <div>
+                    <p>
+                        El resultado de esta operación debería ser <b>5</b>. A continuación, vamos a llamar
+                        la función y veremos reflejado el resultado: <span id="resultado-resta" class="fondo-codigo"></span>
+                    </p>
+
+                    <P>
+                        En el siguiente caso, vamos a ver si queremos simplemente utilizar una variable que este
+                        en <b>ámbito local</b> en una función y queremos utilizar su valor fuera de ella. Para
+                        esta práctica vamos a realizar una sintaxis sencilla solo para visualizar este resultado.
+                    </P>
+                </div>
+
+                <div class="fondo-codigo cont-codigo">
+                    <code>const dividirNumero = (a, b) => {</code>
+                    <code class="indentacion-20">const numeroVeinte = 20;</code>
+                    <code class="indentacion-20">b = 2;</code>
+                    <code class="indentacion-20">return a / b;</code>
+                    <code>}</code>
+                </div>
+
+                <div>
+                    <p>
+                        Ahora, si realizamos la llamada de <b>"numeroVeinte"</b> que está <b>dentro de la función</b>
+                        el código nos retornará un error de que <b>la variable 'numeroVeinte' no está definida</b> y
+                        no podremos continuar visualizando el código.
+                    </p>
+
+                    <p>
+                        Para realizar correctamente esta práctica podremos utilizar <b>try - catch</b> para que
+                        nos capture el error correctamente. Esta práctica también la vamos a utilizar más adelante
+                        cuando estemos capturando datos con promesas desde las API's en la web.
+                    </p>
+                </div>
+
+
+
+            </article>
+
+            <!-- Self Invoking-->
+            <article>
+                <h2>Self Invoking</h2>
+
+                <div>
+                    <p>
+                        Este tipo de función puede llamarse con tan solo poner los parámetros luego de terminar de construir 
+                        la función.
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code>(function (a, b){</code> <br />
+                    <code style="margin-left: 10px;">console.log(`Ejecutando la función: ${a + b}.`);</code> <br />
+                    <code>}) (3, 4); // Resultado 7</code>
+                </div>
+            </article>
+        </section>
+
+        <footer>
+
+        </footer>
+    </main>
+    <script src="./js/main.js"></script>
+</body>
+</html>

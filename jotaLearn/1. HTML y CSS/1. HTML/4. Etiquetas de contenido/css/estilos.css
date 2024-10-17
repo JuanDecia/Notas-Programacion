@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: url('../img/fondo-imagen.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    max-width: 85%;
+    margin: auto;
+}
+
+main {
+    background-color: rgb(197, 201, 204, 0.9);
+    padding: 25px;
+}
+
+.sub {
+    color: rgb(38, 99, 240);
+    margin: 20px 0;
+}
+
+h3 {
+    color: rgb(103, 45, 240);
+}
+
+p {
+    text-align: justify;
+}
+
+.cont-codigo {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    background-color: rgb(37, 35, 35);
+}
+
+code {
+    text-align: center;
+}
+
+.etiqueta-comentario {
+    color: rgb(71, 133, 52);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+b {
+    color: rgb(115, 37, 170);
+}
+
+
+/* Imagen Responsiva */
+
+figure {
+    text-align: center;
+}
+
+img {
+    max-width: 70%;
+}
+
+/* -- Animaciones -- */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ========== Estilos Header */
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+#title {
+    color: rgb(15, 122, 122);
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+.cont-headerLink {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    background-color: rgba(207, 120, 21, 0.233);
+    width: 27%;
+    border: 1px solid rgb(236, 103, 14);
+    border-radius: 5px;
+}
+
+.link-header {
+    color: rgb(236, 103, 14);
+    font-weight: 600;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* ========= MAIN CONTENT */
+
+/* -- Articulo Etiquetas de Contenido */
+
+.cont-etiquetas {
+    margin-bottom: 25px;
+}
+
+/* -- Articulo Comentarios -- */
+
+.cont-comentarios {
+    margin: 20px 0;
+}
+
+.cont-atajo {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* -- Articulo Headings */
+
+.ejemplos-headings {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.cont-buenasPracticas {
+    margin: 20px 0;
+}
+
+.cont-buenasPracticas ul li {
+    padding: 5px;
+}
+
+/* -- Articulo Parrafos */
+
+#p h3 {
+    margin: 20px 0;
+}
+
+/* -- Articulo Formato de Texto */
+
+.titulo-bold {
+    margin: 20px 0;
+    color: rgb(255, 94, 0);
+    font-size: 1.1em;
+}
+
+.cont-codigo p {
+    padding: 10px;
+    text-align: center;
+}
+
+.codigo {
+    font-size: 1.2em;
+    color: aliceblue;
+}
+
+.color-etiqueta {
+    color: rgb(81, 140, 248);
+}
+
+.cont-formatoLinea p:last-of-type {
+    margin-top: 20px;
+}
+
+/* -- Articulo HR -- */
+
+.cont-ejemplo {
+    border: 1px solid black;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.centrar {
+    padding: 10px;
+}
+
+.ejemplo-hr {
+    border: 1px solid blue;
+    width: 50%;
+}
+
+/* -- Articulo Etiquetas Adicionales */
+
+.cont-link {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    border: 1px solid rgb(236, 103, 14);
+    background-color: rgba(236, 103, 14, 0.137);
+    border-radius: 10px;
+}
+
+.cont-link a {
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(236, 103, 14);
+    font-weight: 600;
+    font-size: 1.1em;
+}

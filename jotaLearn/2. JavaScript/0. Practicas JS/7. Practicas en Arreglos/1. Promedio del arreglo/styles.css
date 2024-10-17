@@ -1,0 +1,28 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    max-width: 85%;
+    margin: auto;
+    background-color: aliceblue;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: rgb(37, 117, 117);
+}
+
+section {
+    margin: 0 10px;
+}
+
+/* ESTILOS LISTA */
+
+li {
+    padding: 5px;
+}

@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 80%;
+    margin: auto;
+    font-family: sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1584985429630-15c40d3cff92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80');
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main {
+    padding: 25px;
+    background-color: rgba(197, 201, 204, 0.9);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+h3 {
+    margin: 20px 0;
+    color: rgb(103, 45, 240);
+}
+
+p {
+    text-align: justify;
+}
+
+/* -- Animaciones -- */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes flecha {
+    0% {
+        transform: translate(0,0) scale(1) ;
+    }
+    50% {
+        transform: translate(-1px) scale(1.2);
+    }
+    100% {
+        transform: translate(0,0) scale(1);
+    }
+}
+
+/* ######### HEADER */
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 30px 0;
+    text-align: center;
+    color: rgb(21, 117, 117);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1s ease-in, slide-down 1s ease-in-out;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-volver-inicio {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.flecha-link {
+    margin-right: 20px;
+}
+
+.cont-volver-inicio:hover .flecha-link {
+    animation: flecha 1s linear infinite;
+}
+
+a {
+    position: relative;
+    font-size: 1.3em;
+    text-decoration: none;
+    color: rgb(236, 103, 14);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    font-weight: 600;
+}
+
+.estructura-enlaces {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.estructura-enlaces a {
+    padding: 10px;
+}
+
+.estructura-enlaces a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: rgb(236, 103, 14);
+    color: rgb(236, 103, 14);
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.estructura-enlaces a:hover::after {
+    transform: scaleX(1);
+}
+
+/* ######### MAIN CONTENT */
+
+.cont-introduccion {
+    margin: 30px 0;
+}
+
+.cont-atributos-audio {
+    margin: 20px 0;
+}
+
+.cont-atributos-audio ul li {
+    padding: 7px;
+}
+
+.cont-img-audio {
+    margin: 20px 0;
+}
+
+figure {
+    text-align: center;
+    margin-top: 40px;
+}
+
+figure img {
+    max-width: 80%;
+}
+
+.cont-audio {
+    margin-top: 40px;
+}
+
+/* SECCIÓN PRÁCTICA DE AUDIO */
+
+.seccion-practica {
+    margin: 30px 0;
+}
+
+.cont-audio {
+    display: flex;
+    justify-content: center;
+}
+
+/* ######### MEDIA QUERIES */
+
+@media (max-width: 576px) {
+    
+    .cont-volver-inicio {
+        justify-content: center;
+    }
+
+    .estructura-enlaces {
+        flex-direction: column;
+        gap: 30px;
+        margin: auto;
+    }
+}

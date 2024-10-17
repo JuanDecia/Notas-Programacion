@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 80%;
+    margin: auto;
+    font-family: sans-serif;
+    background-image: url('../img/fondo-imagen.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    padding: 25px;
+    background-color: rgba(197, 201, 204, 0.9);
+}
+
+h2 {
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+p {
+    text-align: justify;
+}
+
+/* -- Animaciones -- */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-50px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* ######### HEADER */
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(21, 117, 117);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.5s ease, slide-down 1.5s ease-in-out;
+}
+
+nav {
+    display: flex;
+}
+
+.cont-links {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(209, 87, 5);
+    font-weight: 600;
+    position: relative;
+    font-size: 1.3em;
+    animation: slide-right 1.5s ease;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: rgb(236, 103, 14);
+    background-color: rgb(236, 103, 14);
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+/* -- Menu Oculto en pantalla completa -- */
+
+.menu-label {
+    display: none;
+}
+
+.menu-button {
+    width: 10%;
+}
+
+/* ######### RESPONSIVE DESIGN */
+
+@media (max-width: 992px) {
+
+    .menu-label {
+        display: flex;
+        margin: 30px 0;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .cont-links {
+        position: absolute;
+        flex-direction: column;
+        left: 155px;
+        top: 125px;
+        width: 55%;
+        border: 2px solid rgb(236, 103, 14);
+        background-color: rgba(0, 0, 0, 0.637);
+        display: none; /* Ocultamos para luego mostrar con JS */
+    }
+
+    .open-menu {
+        display: flex;
+    }
+
+    a {
+        font-size: 1.1em;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .cont-links {
+        top: 40%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    /* Estilos para pantallas entre 320px y 480px */
+    .cont-links {
+        top: 180px;
+        left: 110px;
+    }
+  }
+  

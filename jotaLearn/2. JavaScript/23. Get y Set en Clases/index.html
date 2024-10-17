@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get y Set en Clases</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Get y Set en Clases</h1>
+        </header>
+
+        <section>
+            <article>
+                <h2>Introducción</h2>
+
+                <div>
+                    <p>
+                        Como anteriormente habíamos trabajado en objetos, también, habíamos visto los conceptos
+                        de <b>get y set</b>. Ambos son métodos para simplificar el llamado de las propiedades
+                        de los objetos. En esta ocasión veremos como trabajar este concepto en las <b>clases</b>,
+                        la sintaxis que comparte es similar y su funcionamiento también. Lo importante de este
+                        punto es destacar que es una <b>buena práctica</b> realizar este paso en las plantillas
+                        para facilitar luego los llamados de los valores cuando instanciemos en un objeto.
+                    </p>
+
+                    <p>
+                        Para los ejemplos seguiremos trabajando con el ejemplo de <b>Persona</b> y sus instancias.
+                    </p>
+                </div>
+            </article>
+
+            <hr />
+
+            <article>
+                <h2>Sintaxis</h2>
+
+                <div>
+                    <p>
+                        Repasemos la sintaxis y el funcionamiento de ambos métodos. Anteriormente colocabamos
+                        el <b>nombre</b> de la propiedad, según correspondía. Ahora, para mejorar la práctica
+                        le agregaremos un <b>guión bajo</b> "_" por delante del nombre. La construcción de la
+                        clase quedaría de la siguiente manera:
+                    </p>
+                </div>
+
+                <h3>Get</h3>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>class Persona {</code>
+                    <code class="indentacion">constructor (nombre, apellido, edad, mail) {</code>
+                    <code class="indentacion-40">this._nombre = nombre;</code>
+                    <code class="indentacion-40">this._apellido = apellido;</code>
+                    <code class="indentacion-40">this._edad = edad;</code>
+                    <code class="indentacion-40">this._email = email;</code>
+                    <code class="indentacion">}</code>
+                </div>
+
+                <div>
+                    <p>
+                        Esto es debido a que al usar los métodos <b>get y set</b> vamos a necesitar
+                        utilizar los nombres sín los guiones. A continuación, nos corresponde crear el
+                        método <b>get</b>: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>get nombre() {</code>
+                    <code class="indentacion">return this._nombre;</code>
+                    <code>}</code>
+                </div>
+
+                <div>
+                    <p>
+                        Recordemos que la declaración anterior, nos retorna el valor del atributo de la clase.
+                        Ahora, llamemos al valor del objeto instanciado para verificar los resultados: 
+                    </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+
+                <h3>Set</h3>
+
+                <div>
+                    <p>
+                        Recordemos que este método es para poder cambiar el valor de un objeto y su sintaxis
+                        es muy similar a la de get, a diferencia que a <b>set</b> debemos pasarle la propiedad:
+                        como parámetro:
+                    </p>
+                </div>
+
+                <div class="fondo-codigo bloque-codigo">
+                    <code>set nombre(nombre) {</code>
+                    <code class="indentacion">this._nombre = nombre;</code>
+                    <code>}</code>
+                </div>
+
+                <div>
+                    <p>Para verificar los resultados cambiaremos el valor de "Juan" a "Sol": </p>
+                </div>
+
+                <div class="fondo-codigo">
+                    <code class="cont-resultado"></code>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

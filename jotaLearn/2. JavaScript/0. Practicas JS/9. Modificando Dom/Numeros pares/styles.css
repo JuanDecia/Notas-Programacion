@@ -1,0 +1,19 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    background-color: aliceblue;
+}
+
+main {
+    max-width: 85%;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: rgb(41, 105, 105);
+}

@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 85%;
+    margin: 0 auto;
+    background-image: url('https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y3NzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    padding: 25px;
+    background-color: rgba(206, 218, 218, 0.815);
+}
+
+h2 {
+    margin: 20px 0;
+    color: rgb(38, 99, 231);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+h3 {
+    margin: 20px 0;
+    font-size: 1.3em;
+    color: rgb(103, 45, 240);
+}
+
+h4 {
+    margin: 20px 0;
+    color: #a826f3;
+    font-size: 1.1em;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    text-align: justify;
+}
+
+hr {
+    margin: 20px;
+}
+
+/* --- Animaciones --- */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ######### HEADER */
+
+h1 {
+    margin: 30px 0;
+    text-align: center;
+    color: rgb(15, 110, 110);
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.42);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+}
+
+/* NAV */
+
+nav {
+    position: relative;
+}
+
+.menu-img {
+    width: 5%;
+}
+
+.list-links {
+    position: absolute;
+    top: 0;
+    left: 7%;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.774);
+    list-style: none;
+    border-radius: 10px;
+    display: none;
+    animation: fade 1.1s ease;
+}
+
+.link {
+    position: relative;
+    padding: 15px;
+    color: rgb(240, 127, 52);
+    text-decoration: none;
+}
+
+.link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    color: rgb(240, 127, 52);
+    background-color: rgb(240, 127, 52);
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.link:hover::after {
+    transform: scaleX(1);
+}
+
+.open-menu {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* ######### MAIN CONTENT */
+
+/* --- Estilos Generales --- */
+
+.cont-ejemplo {
+    margin: 30px 0;
+    padding: 5px;
+    background-color: rgba(255, 228, 196, 0.418);
+    border: 2px solid black;
+}
+
+.caja {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+/* Ejemplo en código */
+.cont-codigo {
+    background-color: rgb(56, 55, 55);
+    color: #ffffff;
+    margin: 20px auto;
+    padding: 7px;
+    width: 70%;
+    border-radius: 5px;
+}
+
+.margin-20 {
+    margin-left: 20px;
+}
+
+.margin-40 {
+    margin-left: 40px;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.tag-color {
+    color: rgb(37, 143, 241);
+}
+
+.property-color {
+    color: rgb(113, 209, 247);
+}
+
+.field-color {
+    color: #ffd311;
+}
+
+.value-color {
+    color: #f39658;
+}
+
+.comment-color {
+    color: rgb(41, 148, 31);
+}
+/* -- */
+
+/* --- Articulo Justify-Content --- */
+.ejemplo-flex-start {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.ejemplo-flex-end {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.ejemplo-center {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.ejemplo-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ejemplo-space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ejemplo-space-evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* --- Articulo Align Items --- */
+.ejemplo-stretch {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    height: 20vh;
+}
+
+.ejemplo-flex-start {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    height: 10vh;
+    align-items: flex-start;
+}
+
+.ejemplo-end {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    height: 10vh;
+    align-items: flex-end;
+}
+
+.ejemplo-center {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    height: 10vh;
+    align-items: center;
+}
+
+.ejemplo-baseline {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: baseline;
+}
+
+/* --- Articulo Align Content --- */
+.list-align-content {
+    list-style: none;
+}
+
+.list-align-content li {
+    padding: 10px;
+}
+
+/* --- Articulo Order --- */
+.ejemplo-order {
+    display: flex;
+    gap: 20px;
+}
+
+.hijo2 {
+    order: 1;
+}
+
+.hijo1 {
+    order: 2;
+}
+
+/* --- Articulo Flex Grow --- */
+.ejemplo-flex-grow {
+    display: flex;
+    gap: 30px;
+
+}
+
+.hijo-grow-1 {
+    flex-grow: 2;
+}
+
+/* --- Articulo Flex Shrink --- */
+.ejemplo-flex-shrink {
+    display: flex;
+    gap: 30px;
+
+}
+
+.hijo-shrink-1 {
+    flex-shrink: 0;
+}
+
+.hijo-shrink-2 {
+    flex-shrink: 2;
+}
+
+/* --- Articulo Flex Basis --- */
+.ejemplo-basis {
+    display: flex;
+    gap: 30px;
+}
+
+.hijo-basis-1 {
+    flex-basis: 200px;
+}
+
+.hijo-basis-2 {
+    flex-basis: 350px;
+}

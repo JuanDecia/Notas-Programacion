@@ -1,0 +1,154 @@
+<!-- En esta práctica los comentarios están en los conceptos principales al tema descripto a continuación.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Etiqueta Head-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura principal</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<!--Etiqueta Body-->
+<body>
+    <main>
+
+        <!-- Header -->
+        <header>
+            <h1>Estructura de un código HTML</h1>
+        </header>
+
+        <!-- Contenido principal -->
+        <section>
+
+            <!-- Seccion Introduccion -->
+            <article>
+                <p>La estructura de un archivo de HTML debe tener: </p>
+
+                <ul>
+                    <li>
+                        El identificador de la versión del documento que es la etiqueta <b>&#60!DOCTYPE html&#62</b>.
+                    </li>
+                    <li>La etiqueta <b>html</b> que contiene las dos estructuras importantes que son: <b>head</b> y <b>body</b>.</li>
+                </ul>
+
+                <p>
+                    En nuestra práctica encontraremos la <b>versión del documento</b> en la <b>línea 3</b>.
+                    Seguido se crea la estructura de <b>html</b> que inicia en la <b>línea 4</b> y finaliza
+                    por el momento en la última etiqueta de nuestro documento.
+                </p>
+
+                <div class="cont-img">
+                    <img src="./img/Estructura.png" alt="estructura-de-html" />
+                </div>
+            </article>
+
+            <hr />
+
+            <!-- Articulo Head-->
+            <article>
+                <h2>Head</h2>
+
+                <p>
+                    En la estructura de esta etiqueta <b>agregaremos metadatos</b> e información complementaria
+                    de nuestra página para el render del navegador.
+                </p>
+
+                <p>
+                    Los <b>metadados</b> son información específica que <b>modifican el comportamiento</b> en algunos
+                    aspectos de nuestra página.
+                </p>
+
+                <p>
+                    Un ejemplo de <b>metadatos</b> es la aplicación de los <b>caracteres especiales</b> que existen
+                    en los diferentes idiomas y que puedan ser renderizados de una manera <b>estándar</b> por el
+                    navegador, este tipo de caracteres especial es conocido como <b>UTF-8</b>. Estos caracteres
+                    podemos aplicarlos a nuestra página gracias a la <b>etiqueta meta</b> que podemos visualizarla
+                    en la <b>línea 4</b> del ejemplo de la imagen anterior.
+                </p>
+
+                <p>
+                    Otro ejemplo de meta información es la funcionalidad de <b>adaptar visualmente</b> nuestra página
+                    a el <b>viewport</b> de cualquier dispositivo. <br />
+                    El viewport es el <b>área visual</b> del <b>navegador</b> en la <b>pantalla</b> del <b>dispositivo</b> en el que
+                    el usuario está visitando la página. <br />
+                    Para realizar esto debemos usar la <b>etiqueta meta</b> con una serie de <b>propiedades y valores</b> que son
+                    indicados en la <b>línea 5</b> del ejemplo que se encuentra en la imagen anterior.
+                </p>
+
+                <p>
+                    Al escribir la propiedad con el valor <b>width=device-width</b> le ordenamos al navegador que el <b>viewport</b>
+                    debe ser <b>igual del ancho de la pantalla del dispositivo</b> donde se está cargando la página.
+                </p>
+
+                <p>
+                    También, en esta sección se utiliza la <b>etiqueta "title"</b> que es la encargada de asignar el <b>título</b>
+                    que aparecerá en la <b>pestaña del navegador</b>. Esta se encuentra indicada en la <b>línea 6</b> del ejemplo.
+                </p>
+
+                <p>
+                    Con estos sencillos pasos tendremos una <b>estructura básica</b> de la construcción de <b>head</b> de nuestro
+                    documento html.
+                </p>
+            </article>
+
+            <hr />
+
+            <!-- Articulo Body -->
+            <article>
+                <h2>Body</h2>
+
+                <p>
+                    En la etiqueta <b>body</b> escribimos el contenido del documento HTML que se visualizará en nuestra página web.
+                </p>
+
+                <p>
+                    Para que el contenido de nuestra página sea visible debemos utilizar la etiqueta <b>body</b>, en la cual, 
+                    agregaremos todas las etiquetas que sean necesarias para que el navegador las <b>renderice y sean visibles</b>  
+                    por el usuario. La cantidad, estructura y diferentes etiquetas que utilizaremos son de acuerdo a las 
+                    necesidades de la página que estamos construyendo. Podemos visualizar esta etiqueta en el ejemplo 
+                    anterior, comienza en la <b>línea 8 y finaliza en la línea 10.</b>
+                </p>
+
+                <p>
+                    En el contenido del ejemplo, solo hay un texto “bienvenido” que no contiene ninguna etiqueta (mala práctica) 
+                    y que se encuentra en la línea 9. Esto se debe a que solo es un ejemplo ilustrativo, en realidad a partir 
+                    de la línea 8 se colocarán todas las etiquetas que conformen el contenido visible de nuestra página web.
+                </p>
+
+                <p>
+                    Para finalizar es importante saber que dentro de <b>“body”</b> encontraremos etiquetas que realizan una 
+                    función <b>semántica</b>, es decir, solo crean contenedores. También, recordemos el uso de la indentación 
+                    para mantener el código ordenado y entender mejor su estructura.
+                </p>
+            </article>
+
+            <!-- Construcción Automática -->
+            <article>
+                <h2>Tip! Construcción Automática</h2>
+            </article>
+
+            <p>
+                Utilizando Visual Studio Code, al abrir un archivo HTML vacío , si escribimos <b>“!”</b> o <b>“html:5”</b> y seleccionamos la opción que nos da el editor generada automáticamente llamada <b>emmet</b>, podremos crear la estructura básica para empezar a trabajar en nuestro código.
+            </p>
+
+            <div class="cont-img">
+                <img src="./img/!.png" alt="estructura-principal" title="estructura-principal" />
+            </div>
+
+            <p>
+                Al apretar <b>“enter”</b> o <b>“tab”</b>, nos generará la siguiente estructura base:
+            </p>
+
+            <div class="cont-img">
+                <img src="./img/estructuraBasica.png" alt="estructura-basica" title="estructura-basica" />
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

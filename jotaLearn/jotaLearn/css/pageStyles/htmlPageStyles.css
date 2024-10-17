@@ -1,0 +1,122 @@
+/* ANIMATIONS */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* GENERAL STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1542762933-ab3502717ce7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzR8fHBjfGVufDB8fDB8fHww);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    margin: auto;
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(250, 235, 215, 0.708);
+}
+
+/* HEADER STYLES */
+
+header {
+    border: 1px solid red;
+}
+
+header > * {
+    display: flex;
+}
+
+nav {
+    padding: 30px;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    font-size: 1.5em;
+    border: 1px solid black;
+}
+
+/* MAIN CONTENT STYLES */
+
+section {
+    margin: 40px 0;
+    border: 1px solid black;
+}
+
+.cont-title {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.24);
+    animation: fade 1.2s ease-in, slide-down 1.5s ease-in-out;
+    color: #045F62;
+}
+
+/* STYLES DINAMIC MENU */
+body.blur {
+    filter: blur(5px);
+    transition: filter 0.3s ease; /* Suaviza el efecto de blur */
+}
+
+.scroll-container {
+    position: fixed;
+    top: 0;
+    left: 0; /* Cambiar a 0 para que se posicione a la izquierda */
+    width: 250px; /* Ancho del menú */
+    height: 100%; /* Ocupar todo el alto */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    transform: translateX(-100%); /* Comienza fuera de la vista a la izquierda */
+    transition: transform 0.5s ease; /* Suaviza el desplazamiento */
+    z-index: 999; /* Asegúrate de que esté encima de otros elementos */
+}
+
+.scroll-container.active {
+    transform: translateX(0); /* Mueve el contenedor a la vista */
+}
+
+.dropRight-menu {
+    position: absolute; /* Asegúrate de que el menú se posicione correctamente */
+    background: white; /* Color de fondo del menú */
+    z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
+    display: none; /* Ocultar por defecto */
+}
+
+.dropRight-menu.show {
+    display: block; /* Mostrar al activar */
+}
+
+.hidden {
+    display: none; /* Oculta el menú por defecto */
+}
+
+/* Puedes agregar más estilos según sea necesario */
