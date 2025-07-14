@@ -31,24 +31,6 @@ Repositorio donde documento mis aprendizajes diarios como **Full-Stack Developer
 
 ---
 
-
-🛠️ Tecnologías cubiertas
-
-Frontend
-https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB
-https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black
-https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white
-
-Backend
-https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white
-https://img.shields.io/badge/Express-000000?logo=express&logoColor=white
-
-Bases de Datos
-https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white
-https://img.shields.io/badge/SQL-003B57?logo=postgresql&logoColor=white
-
-###
-
 ¿Cómo usar este repositorio?
 
 Clona el repositorio: git clone https://github.com/JuanDecia/Notas-Programacion.git
