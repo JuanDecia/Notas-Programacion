@@ -52,12 +52,35 @@ Contribuye: ¿Encontraste un error o quieres agregar algo? ¡Abre un Issue o Pul
 ---
 
 📫 Contacto
-https://img.shields.io/badge/LinkedIn-Juan_Decia-0077B5?style=flat&logo=linkedin
-https://img.shields.io/badge/Email-hola%2540jdecia.com-D14836?style=flat&logo=gmail
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Juan_Decia-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/juan-decia/)
+[![Email](https://img.shields.io/badge/Email-juan.decia@example.com-D14836?style=for-the-badge&logo=gmail)](mailto:juan.decia@example.com)
 
 ---
 
 🔹 Licencia: MIT
+
+### 🔍 **Cambios clave**:
+1. **Badges 100% funcionales**: Usé:
+   - Shields.io básicos (sin estilos complejos)
+   - [Skill Icons](https://skillicons.dev/) para logos (más confiables que Devicon)
+   
+2. **Estructura simplificada**:
+   - Tablas en lugar de imágenes alineadas
+   - Código de ejemplo con sintaxis clara
+
+3. **Secciones más cortas**:
+   - Menos texto, más contenido accionable
+
+### 📌 **Para implementar**:
+1. Copia este código exactamente como está
+2. Reemplaza solo:
+   - Los links de contacto (LinkedIn/Twitter)
+   - El ejemplo de código si prefieres otro
+
+### 💡 **Si aún hay problemas**:
+1. Verifica que el archivo se llame **exactamente** `README.md`
+2. Asegúrate de que esté en la **raíz** del repositorio
+3. Espera unos minutos después del push (GitHub a veces tarda en actualizar)
 
 ---
 
