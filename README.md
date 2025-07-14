@@ -71,17 +71,6 @@ Contribuye: ¿Encontraste un error o quieres agregar algo? ¡Abre un Issue o Pul
 3. **Secciones más cortas**:
    - Menos texto, más contenido accionable
 
-### 📌 **Para implementar**:
-1. Copia este código exactamente como está
-2. Reemplaza solo:
-   - Los links de contacto (LinkedIn/Twitter)
-   - El ejemplo de código si prefieres otro
-
-### 💡 **Si aún hay problemas**:
-1. Verifica que el archivo se llame **exactamente** `README.md`
-2. Asegúrate de que esté en la **raíz** del repositorio
-3. Espera unos minutos después del push (GitHub a veces tarda en actualizar)
-
 ---
 
 💡 **Por qué funciona este README**:
