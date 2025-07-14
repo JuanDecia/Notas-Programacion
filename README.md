@@ -1,8 +1,8 @@
 # 📚 Notas de Programación
 
-![GitHub last commit](https://img.shields.io/github/last-commit/JuanDecia/Notas-Programacion?color=blue&logo=github)
-![GitHub repo size](https://img.shields.io/github/repo-size/JuanDecia/Notas-Programacion?label=tama%C3%B1o)
-![GitHub](https://img.shields.io/github/license/JuanDecia/Notas-Programacion?color=green)
+[![Última actualización](https://img.shields.io/github/last-commit/JuanDecia/Notas-Programacion?color=blue)](https://github.com/JuanDecia/Notas-Programacion/commits/main)
+[![Tamaño del repo](https://img.shields.io/github/repo-size/JuanDecia/Notas-Programacion)](https://github.com/JuanDecia/Notas-Programacion)
+[![Licencia](https://img.shields.io/github/license/JuanDecia/Notas-Programacion?color=green)](https://github.com/JuanDecia/Notas-Programacion/blob/main/LICENSE)
 
 Repositorio donde documento mis aprendizajes diarios como **Full-Stack Developer**. Ideal para repasar conceptos, compartir conocimiento y crecer junto a la comunidad.
 
