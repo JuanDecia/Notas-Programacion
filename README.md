@@ -19,6 +19,19 @@ Repositorio donde documento mis aprendizajes diarios como **Full-Stack Developer
 └── /recursos.md       # Libros, cursos y enlaces recomendados
 ```
 
+---
+
+## 🛠️ Tecnologías
+
+| Frontend         | Backend          | Bases de Datos   |
+|------------------|------------------|------------------|
+| ![React](https://skillicons.dev/icons?i=react) | ![Node.js](https://skillicons.dev/icons?i=nodejs) | ![MongoDB](https://skillicons.dev/icons?i=mongodb) |
+| ![JavaScript](https://skillicons.dev/icons?i=js) | ![Express](https://skillicons.dev/icons?i=express) | ![PostgreSQL](https://skillicons.dev/icons?i=postgresql) |
+| ![TypeScript](https://skillicons.dev/icons?i=typescript) |  |  |
+
+---
+
+
 🛠️ Tecnologías cubiertas
 
 Frontend
