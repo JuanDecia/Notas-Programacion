@@ -11,7 +11,6 @@ Repositorio donde documento mis aprendizajes diarios como **Full-Stack Developer
 ## 🗂️ Estructura del repositorio
 
 ```bash
-.
 ├── /frontend          # Notas sobre React, JavaScript, TypeScript
 ├── /backend           # APIs, Node.js, Express, bases de datos
 ├── /algoritmos        # Ejercicios de lógica y estructuras de datos
@@ -33,7 +32,9 @@ Repositorio donde documento mis aprendizajes diarios como **Full-Stack Developer
 
 ¿Cómo usar este repositorio?
 
-Clona el repositorio: git clone https://github.com/JuanDecia/Notas-Programacion.git
+```bash
+git clone https://github.com/JuanDecia/Notas-Programacion.git
+```
 
 Navega por categorías: Usa la estructura de directorios para encontrar temas específicos
 
