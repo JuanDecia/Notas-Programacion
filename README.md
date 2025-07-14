@@ -36,28 +36,30 @@ Repositorio donde documento mis aprendizajes diarios como **Full-Stack Developer
 git clone https://github.com/JuanDecia/Notas-Programacion.git
 ```
 
+---
+
 Navega por categorías: Usa la estructura de directorios para encontrar temas específicos
 
 Contribuye: ¿Encontraste un error o quieres agregar algo? ¡Abre un Issue o Pull Request!
 
-###
+---
 
 🤝 ¿Por qué este repositorio?
 ✔️ Aprendizaje organizado: Notas claras y concisas
 ✔️ Ejemplos prácticos: Código real listo para implementar
 ✔️ Recursos curados: Solo contenido útil y verificado
 
-###
+---
 
 📫 Contacto
 https://img.shields.io/badge/LinkedIn-Juan_Decia-0077B5?style=flat&logo=linkedin
 https://img.shields.io/badge/Email-hola%2540jdecia.com-D14836?style=flat&logo=gmail
 
-###
+---
 
 🔹 Licencia: MIT
 
-###
+---
 
 💡 **Por qué funciona este README**:
 1. **Badges visuales**: Muestran actividad y tecnologías de un vistazo
@@ -65,7 +67,7 @@ https://img.shields.io/badge/Email-hola%2540jdecia.com-D14836?style=flat&logo=gm
 3. **Ejemplos de código**: Demuestran tu conocimiento técnico
 4. **Llamados a acción**: Invitan a clonar y contribuir
 
-### 
+--- 
 
 📌 **Pasos para implementarlo**:
 1. Copia este código Markdown
