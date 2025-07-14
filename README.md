@@ -78,15 +78,3 @@ Contribuye: ¿Encontraste un error o quieres agregar algo? ¡Abre un Issue o Pul
 2. **Estructura clara**: Cualquiera puede navegar fácilmente
 3. **Ejemplos de código**: Demuestran tu conocimiento técnico
 4. **Llamados a acción**: Invitan a clonar y contribuir
-
---- 
-
-📌 **Pasos para implementarlo**:
-1. Copia este código Markdown
-2. Crea/edita el archivo `README.md` en tu repositorio
-3. Haz commit y push:
-   ```bash
-   git add README.md
-   git commit -m "Agrega README profesional"
-   git push
-   ```
