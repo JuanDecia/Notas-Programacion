@@ -75,41 +75,17 @@ Haz push a tu rama:
 Abre un Pull Request y describe tus cambios
 
 **🌟 Recompensas:**
-¡Tu perfil será destacado en la sección de colaboradores!
-
-Aprenderemos juntos resolviendo problemas reales
+* ¡Tu perfil será destacado en la sección de colaboradores!
+* Aprenderemos juntos resolviendo problemas reales
 
 **🛠 Temas prioritarios para contribuir:**
-Ejemplos prácticos con TypeScript
-
-Soluciones a errores comunes en React/Node.js
-
-Diagramas de arquitectura o flujos de trabajo
+* Ejemplos prácticos con TypeScript
+* Soluciones a errores comunes en React/Node.js
+* Diagramas de arquitectura o flujos de trabajo
 
 https://img.shields.io/badge/Chat_en_Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white
 
-¿Prefieres coordinar por otro medio? ¡Abre un issue!
-
----
-
-### 🔍 **Por qué funciona**:
-1. **Llamado claro a la acción**: Explicitas qué tipo de ayuda necesitas (errores, docs, ejemplos).  
-2. **Guía paso a paso**: Haces fácil el proceso para nuevos contribuidores.  
-3. **Incentivos**: Ofreces reconocimiento (sección de colaboradores).  
-4. **Canales de comunicación**: Opciones como Discord o Issues.  
-
----
-
-### 💡 **Tips para mayor engagement**:
-1. **Añade una etiqueta** `good first issue` en GitHub para tareas simples.  
-2. **Crea un ARCHIVO.md** con normas de contribución detalladas.  
-3. **Reconoce públicamente** a los colaboradores (ej: en redes sociales).  
-
-¿Quieres que desarrollemos alguno de estos extras? 😊
-
-Navega por categorías: Usa la estructura de directorios para encontrar temas específicos
-
-Contribuye: ¿Encontraste un error o quieres agregar algo? ¡Abre un Issue o Pull Request!
+¿Prefieres coordinar por otro medio? ¡Abre un issue! 
 
 ---
 
