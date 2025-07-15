@@ -91,8 +91,6 @@ https://img.shields.io/badge/Chat_en_Discord-5865F2?style=for-the-badge&logo=dis
 
 ¿Prefieres coordinar por otro medio? ¡Abre un issue!
 
-text
-
 ---
 
 ### 🔍 **Por qué funciona**:
