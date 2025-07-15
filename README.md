@@ -111,7 +111,4 @@ https://img.shields.io/badge/Chat_en_Discord-5865F2?style=for-the-badge&logo=dis
 
 ---
 
-💡 **Por qué funciona este README**:
-1. **Badges visuales**: Muestran actividad y tecnologías de un vistazo
-2. **Estructura clara**: Cualquiera puede navegar fácilmente
-3. **Llamados a acción**: Invitan a clonar y contribuir
+⭐ ¡Dale estrellita al repo si te resulta útil!
