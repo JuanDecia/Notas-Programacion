@@ -62,12 +62,16 @@ Este repositorio está **abierto a contribuciones** de otros desarrolladores. Si
    git checkout -b mi-contribucion
 Haz commit de tus cambios:
 
-bash
-git commit -m "feat: añade notas sobre hooks personalizados"
+   ```bash
+   git commit -m "feat: añade notas sobre hooks personalizados"
+   ```
+
 Haz push a tu rama:
 
-bash
-git push origin mi-contribucion
+   ```bash
+   git push origin mi-contribucion
+   ```
+
 Abre un Pull Request y describe tus cambios
 
 🌟 Recompensas:
@@ -84,6 +88,7 @@ Soluciones a errores comunes en React/Node.js
 Diagramas de arquitectura o flujos de trabajo
 
 https://img.shields.io/badge/Chat_en_Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white
+
 ¿Prefieres coordinar por otro medio? ¡Abre un issue!
 
 text
