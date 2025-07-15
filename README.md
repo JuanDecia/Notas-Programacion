@@ -74,13 +74,13 @@ Haz push a tu rama:
 
 Abre un Pull Request y describe tus cambios
 
-🌟 Recompensas:
+##🌟 Recompensas:
 
 ¡Tu perfil será destacado en la sección de colaboradores!
 
 Aprenderemos juntos resolviendo problemas reales
 
-🛠 Temas prioritarios para contribuir:
+##🛠 Temas prioritarios para contribuir:
 Ejemplos prácticos con TypeScript
 
 Soluciones a errores comunes en React/Node.js
