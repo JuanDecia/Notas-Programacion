@@ -89,9 +89,10 @@ https://img.shields.io/badge/Chat_en_Discord-5865F2?style=for-the-badge&logo=dis
 
 ---
 
-📫 Contacto
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Juan_Decia-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/juan-decia/)
-[![Email](https://img.shields.io/badge/Email-juandecia94@gmail.com-D14836?style=for-the-badge&logo=gmail)](mailto:juan.decia@example.com)
+📫 Contacto  
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Juan_Decia-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/juan-decia/)  
+[![Email](https://img.shields.io/badge/Email-juandecia94@gmail.com-D14836?style=for-the-badge&logo=gmail)](mailto:juan.decia@example.com)  
 
 ---
 
